@@ -12,7 +12,7 @@ window.LESSON_INDEX = [
    "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm."
   },
   "problems": 50,
-  "sections": 7
+  "sections": 12
  },
  {
   "n": 2,

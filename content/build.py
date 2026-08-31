@@ -60,7 +60,39 @@ def load(n):
     extra = ROOT / 'content' / ('problems_%02d.py' % n)
     if extra.exists():
         lesson['problems'] = lesson['problems'] + _module(extra, 'problems_%02d' % n).EXTRA
+
+    # The theory grows the same way.  theory_NN.py may add whole sections and
+    # may append blocks to sections the lesson file already defines, so the
+    # deeper material can sit exactly where it belongs rather than in a heap
+    # at the end.
+    deep = ROOT / 'content' / ('theory_%02d.py' % n)
+    if deep.exists():
+        lesson['sections'] = merge_theory(lesson['sections'],
+                                          _module(deep, 'theory_%02d' % n))
     return lesson
+
+
+def merge_theory(sections, mod):
+    """Weave theory_NN.py into a lesson's own sections.
+
+    INTO     {index: [block, ...]}   blocks appended to an existing section
+    SECTIONS [(index, section), ...] a new section inserted *before* index
+                                     (an index past the end appends)
+    """
+    into = getattr(mod, 'INTO', {})
+    added = getattr(mod, 'SECTIONS', [])
+    out = []
+    for i, sec in enumerate(sections):
+        for at, new_sec in added:
+            if at == i:
+                out.append(new_sec)
+        if i in into:
+            sec = dict(sec, blocks=sec['blocks'] + into[i])
+        out.append(sec)
+    for at, new_sec in added:
+        if at >= len(sections):
+            out.append(new_sec)
+    return out
 
 
 # --------------------------------------------------------------------------
