@@ -123,7 +123,7 @@ window.LESSON_INDEX = [
    "ru": "Углы, три признака равенства, равнобедренный треугольник, средняя линия, подобие и медианы.",
    "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 6
  },
  {
@@ -137,7 +137,7 @@ window.LESSON_INDEX = [
    "ru": "Формулы площади, отношения площадей как главный инструмент, теорема Чевы и формула Пика.",
    "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {
@@ -151,7 +151,7 @@ window.LESSON_INDEX = [
    "ru": "Вписанный угол, касательные, вписанные и описанные четырёхугольники, степень точки и теорема Птолемея.",
    "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {
