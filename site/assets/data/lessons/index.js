@@ -167,5 +167,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 4
+ },
+ {
+  "n": 13,
+  "cat": "comb",
+  "title": {
+   "ru": "Комбинаторика: как считать",
+   "en": "Counting principles"
+  },
+  "sub": {
+   "ru": "Правила суммы и произведения, перестановки и сочетания, треугольник Паскаля, включения-исключения и двойной подсчёт.",
+   "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
