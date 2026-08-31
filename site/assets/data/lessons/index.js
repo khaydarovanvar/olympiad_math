@@ -97,5 +97,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 8,
+  "cat": "alg",
+  "title": {
+   "ru": "Текстовые задачи и системы",
+   "en": "Word problems and systems"
+  },
+  "sub": {
+   "ru": "Движение, работа, смеси и проценты: как перевести условие в уравнения и как решать получившиеся системы.",
+   "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
