@@ -211,6 +211,209 @@ window.LESSONS[5] = {
       "ru": "Обратите внимание на самый первый шаг примера: громоздкое число заменили буквой. Это стоит делать **всегда**, когда в задаче фигурирует большое число вместе с соседними: $2023,2024,2025$ — это $a-1,a,a+1$. После замены задача обычно становится школьной.",
       "en": "Notice the very first step of the example: an awkward number was renamed by a letter. Do this **whenever** a problem features a large number together with its neighbours: $2023,2024,2025$ are $a-1,a,a+1$. After the rename the problem usually becomes routine."
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Тождество Софи Жермен",
+      "en": "The Sophie Germain identity"
+     },
+     "text": {
+      "ru": "$$a^{4}+4b^{4}=\\left(a^{2}-2ab+2b^{2}\\right)\\left(a^{2}+2ab+2b^{2}\\right).$$",
+      "en": "$$a^{4}+4b^{4}=\\left(a^{2}-2ab+2b^{2}\\right)\\left(a^{2}+2ab+2b^{2}\\right).$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Дополним до полного квадрата, прибавив и вычтя $4a^{2}b^{2}$: $$a^{4}+4b^{4}=a^{4}+4a^{2}b^{2}+4b^{4}-4a^{2}b^{2}=\\left(a^{2}+2b^{2}\\right)^{2}-(2ab)^{2} .$$\n\nТеперь это разность квадратов: $$\\left(a^{2}+2b^{2}-2ab\\right)\\left(a^{2}+2b^{2}+2ab\\right). \\qquad\\blacksquare$$",
+      "en": "Complete the square by adding and subtracting $4a^{2}b^{2}$: $$a^{4}+4b^{4}=\\left(a^{2}+2b^{2}\\right)^{2}-(2ab)^{2} ,$$ a difference of squares, hence $$\\left(a^{2}+2b^{2}-2ab\\right)\\left(a^{2}+2b^{2}+2ab\\right). \\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Приём **«прибавить и вычесть»** — главный в этом разделе. Выражение не раскладывается? Добавьте недостающий член до полного квадрата и тут же вычтите его: часто получается разность квадратов.\n\nЧастный случай $b=1$ даёт $a^{4}+4$ и объясняет, почему это число составное при $a>1$.",
+      "en": "The **add-and-subtract** move is the heart of this section. An expression will not factor? Add the term missing from a perfect square and subtract it again: a difference of squares often appears.\n\nThe case $b=1$ gives $a^{4}+4$ and explains why that number is composite for $a>1$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Тождество для трёх кубов",
+      "en": "The three-cube identity"
+     },
+     "text": {
+      "ru": "$$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right).$$",
+      "en": "$$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right).$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Раскроем правую часть, умножая каждое слагаемое первой скобки на вторую.\n\nЧлены с $a$: $$a^{3}+ab^{2}+ac^{2}-a^{2}b-abc-a^{2}c .$$ Аналогично для $b$ и $c$. Сложим все девять групп.\n\nКубы дают $a^{3}+b^{3}+c^{3}$. Смешанные члены вида $a^{2}b$ встречаются дважды с противоположными знаками (один раз из группы $a$, другой из группы $b$) и уничтожаются — и так для всех шести таких членов. Остаются три члена $-abc$, по одному из каждой группы: $$-3abc .$$\n\nИтого правая часть равна $a^{3}+b^{3}+c^{3}-3abc$ ✓ $\\blacksquare$\n\n**Два важных следствия.** Если $a+b+c=0$, то $a^{3}+b^{3}+c^{3}=3abc$. А поскольку вторая скобка равна $\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ge0$, при неотрицательных $a,b,c$ получаем $a^{3}+b^{3}+c^{3}\\ge3abc$ — это неравенство о среднем для трёх чисел.",
+      "en": "Expand the right-hand side, multiplying each term of the first bracket by the second.\n\nThe terms containing $a$ are $$a^{3}+ab^{2}+ac^{2}-a^{2}b-abc-a^{2}c ,$$ and similarly for $b$ and $c$. Add all nine groups.\n\nThe cubes give $a^{3}+b^{3}+c^{3}$. Mixed terms such as $a^{2}b$ occur twice with opposite signs (once from the $a$ group, once from the $b$ group) and cancel — likewise for all six of them. What remains is three copies of $-abc$: $$-3abc .$$\n\nSo the right side equals $a^{3}+b^{3}+c^{3}-3abc$ ✓ $\\blacksquare$\n\n**Two important consequences.** If $a+b+c=0$ then $a^{3}+b^{3}+c^{3}=3abc$. And since the second bracket equals $\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ge0$, for non-negative $a,b,c$ we get $a^{3}+b^{3}+c^{3}\\ge3abc$ — the AM–GM inequality for three numbers."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Разложение $a^{n}\\pm b^{n}$",
+    "en": "Factoring $a^{n}\\pm b^{n}$"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Разность квадратов и сумма кубов — частные случаи двух общих формул. Стоит выучить их в общем виде: именно они превращают вопросы о делимости больших степеней в устные.",
+      "en": "The difference of squares and the sum of cubes are special cases of two general formulas. They are worth learning in full: they turn questions about divisibility of large powers into one-liners."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Разность одинаковых степеней",
+      "en": "Difference of equal powers"
+     },
+     "text": {
+      "ru": "Для любого натурального $n$ $$a^{n}-b^{n}=(a-b)\\left(a^{\\,n-1}+a^{\\,n-2}b+a^{\\,n-3}b^{2}+\\dots+ab^{\\,n-2}+b^{\\,n-1}\\right).$$ В частности, $a-b$ **всегда** делит $a^{n}-b^{n}$.",
+      "en": "For every positive integer $n$ $$a^{n}-b^{n}=(a-b)\\left(a^{\\,n-1}+a^{\\,n-2}b+\\dots+ab^{\\,n-2}+b^{\\,n-1}\\right).$$ In particular $a-b$ **always** divides $a^{n}-b^{n}$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Обозначим вторую скобку через $S=\\sum_{k=0}^{n-1}a^{\\,n-1-k}b^{k}$ и раскроем произведение.\n\nУмножение на $a$ даёт $$aS=a^{n}+a^{\\,n-1}b+a^{\\,n-2}b^{2}+\\dots+ab^{\\,n-1} .$$\n\nУмножение на $-b$ даёт $$-bS=-a^{\\,n-1}b-a^{\\,n-2}b^{2}-\\dots-ab^{\\,n-1}-b^{n} .$$\n\nСложим: все средние слагаемые встречаются дважды с противоположными знаками и уничтожаются, остаётся $$aS-bS=a^{n}-b^{n} . \\qquad\\blacksquare$$\n\nЭто «телескопическое» сокращение — та же идея, что и в телескопических суммах.",
+      "en": "Write the second bracket as $S=\\sum_{k=0}^{n-1}a^{\\,n-1-k}b^{k}$ and expand the product.\n\nMultiplying by $a$: $$aS=a^{n}+a^{\\,n-1}b+\\dots+ab^{\\,n-1} .$$\n\nMultiplying by $-b$: $$-bS=-a^{\\,n-1}b-\\dots-ab^{\\,n-1}-b^{n} .$$\n\nAdd: every middle term appears twice with opposite signs and cancels, leaving $$aS-bS=a^{n}-b^{n} . \\qquad\\blacksquare$$\n\nThis \"telescoping\" cancellation is the same idea as in telescoping sums."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Сумма нечётных степеней",
+      "en": "Sum of odd powers"
+     },
+     "text": {
+      "ru": "Если $n$ **нечётно**, то $$a^{n}+b^{n}=(a+b)\\left(a^{\\,n-1}-a^{\\,n-2}b+a^{\\,n-3}b^{2}-\\dots-ab^{\\,n-2}+b^{\\,n-1}\\right),$$ то есть $a+b$ делит $a^{n}+b^{n}$. При **чётном** $n$ это неверно.",
+      "en": "If $n$ is **odd** then $$a^{n}+b^{n}=(a+b)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots-ab^{\\,n-2}+b^{\\,n-1}\\right),$$ so $a+b$ divides $a^{n}+b^{n}$. For **even** $n$ this fails."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Подставим $-b$ вместо $b$ в предыдущую формулу: $$a^{n}-(-b)^{n}=\\left(a-(-b)\\right)\\left(a^{\\,n-1}+a^{\\,n-2}(-b)+\\dots+(-b)^{\\,n-1}\\right).$$\n\nПри нечётном $n$ имеем $(-b)^{n}=-b^{n}$, значит слева стоит $a^{n}+b^{n}$, а первая скобка справа равна $a+b$. Знаки во второй скобке чередуются, а последний член $(-b)^{\\,n-1}=b^{\\,n-1}$ положителен, потому что $n-1$ чётно ✓\n\n**Почему для чётного $n$ не работает.** При чётном $n$ подстановка даёт $a^{n}-b^{n}$, а не сумму. И действительно, $a+b$ обычно не делит $a^{n}+b^{n}$: например, $2+1=3$ не делит $2^{2}+1^{2}=5$. $\\blacksquare$",
+      "en": "Substitute $-b$ for $b$ in the previous formula: $$a^{n}-(-b)^{n}=\\left(a+b\\right)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots+(-b)^{\\,n-1}\\right).$$\n\nFor odd $n$ we have $(-b)^{n}=-b^{n}$, so the left side is $a^{n}+b^{n}$ and the first bracket is $a+b$. The signs alternate, and the last term $(-b)^{\\,n-1}=b^{\\,n-1}$ is positive because $n-1$ is even ✓\n\n**Why even $n$ fails.** For even $n$ the substitution produces $a^{n}-b^{n}$, not the sum. And indeed $a+b$ usually does not divide $a^{n}+b^{n}$: $2+1=3$ does not divide $2^{2}+1^{2}=5$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Выражение",
+       "Делится на",
+       "Условие"
+      ],
+      "en": [
+       "Expression",
+       "Divisible by",
+       "Condition"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "$a^{n}-b^{n}$",
+        "$a-b$",
+        "всегда"
+       ],
+       [
+        "$a^{n}-b^{n}$",
+        "$a+b$",
+        "$n$ чётно"
+       ],
+       [
+        "$a^{n}+b^{n}$",
+        "$a+b$",
+        "$n$ нечётно"
+       ],
+       [
+        "$a^{n}+b^{n}$",
+        "$a-b$",
+        "никогда (при $a\\ne b$)"
+       ]
+      ],
+      "en": [
+       [
+        "$a^{n}-b^{n}$",
+        "$a-b$",
+        "always"
+       ],
+       [
+        "$a^{n}-b^{n}$",
+        "$a+b$",
+        "$n$ even"
+       ],
+       [
+        "$a^{n}+b^{n}$",
+        "$a+b$",
+        "$n$ odd"
+       ],
+       [
+        "$a^{n}+b^{n}$",
+        "$a-b$",
+        "never (for $a\\ne b$)"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Докажите, что $3^{105}+4^{105}$ делится на $7$.",
+      "en": "Prove that $3^{105}+4^{105}$ is divisible by $7$."
+     },
+     "steps": {
+      "ru": [
+       "Показатель $105$ нечётен, значит применима формула суммы нечётных степеней.",
+       "Она даёт делимость на $a+b=3+4=7$ ✓",
+       "Проверка идеи на маленьком показателе: $3^{3}+4^{3}=27+64=91=7\\cdot13$ ✓"
+      ],
+      "en": [
+       "The exponent $105$ is odd, so the sum-of-odd-powers formula applies.",
+       "It gives divisibility by $a+b=3+4=7$ ✓",
+       "A small check: $3^{3}+4^{3}=27+64=91=7\\cdot13$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "Делится, поскольку $7=3+4$.",
+      "en": "It is divisible, because $7=3+4$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Критерий делимости степеней",
+      "en": "When one power difference divides another"
+     },
+     "text": {
+      "ru": "Для целого $a>1$ и натуральных $m,n$ $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{m}-1\\right)\\quad\\Longleftrightarrow\\quad n\\mid m .$$",
+      "en": "For an integer $a>1$ and positive integers $m,n$ $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{m}-1\\right)\\quad\\Longleftrightarrow\\quad n\\mid m .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Если $n\\mid m$,** скажем $m=nq$, то по формуле разности степеней с основанием $x=a^{n}$ $$a^{m}-1=\\left(a^{n}\\right)^{q}-1=\\left(a^{n}-1\\right)\\left(\\dots\\right) \\quad\\checkmark$$\n\n**Обратно.** Разделим с остатком: $m=nq+r$, $0\\le r<n$. Тогда $$a^{m}-1=a^{r}\\left(a^{nq}-1\\right)+\\left(a^{r}-1\\right).$$ Первое слагаемое делится на $a^{n}-1$ по уже доказанному. Значит из $\\left(a^{n}-1\\right)\\mid\\left(a^{m}-1\\right)$ следует $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{r}-1\\right).$$ Но $0\\le a^{r}-1<a^{n}-1$, поэтому это возможно лишь при $a^{r}-1=0$, то есть $r=0$ ✓ $\\blacksquare$",
+      "en": "**If $n\\mid m$,** say $m=nq$, apply the difference formula with base $x=a^{n}$: $$a^{m}-1=\\left(a^{n}\\right)^{q}-1=\\left(a^{n}-1\\right)\\left(\\dots\\right) \\quad\\checkmark$$\n\n**Conversely.** Divide with remainder: $m=nq+r$, $0\\le r<n$. Then $$a^{m}-1=a^{r}\\left(a^{nq}-1\\right)+\\left(a^{r}-1\\right),$$ and the first term is divisible by $a^{n}-1$ by the above. So $\\left(a^{n}-1\\right)\\mid\\left(a^{m}-1\\right)$ forces $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{r}-1\\right).$$ But $0\\le a^{r}-1<a^{n}-1$, which is possible only if $a^{r}-1=0$, i.e. $r=0$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Отсюда мгновенно следует, что число $2^{k}-1$ может быть простым только при простом $k$: составное $k=mn$ давало бы делитель $2^{m}-1$. Это первый шаг в охоте за простыми Мерсенна.",
+      "en": "This instantly shows $2^{k}-1$ can be prime only for prime $k$: a composite $k=mn$ would produce the divisor $2^{m}-1$. It is the first step in the hunt for Mersenne primes."
+     }
     }
    ]
   },
@@ -460,6 +663,245 @@ window.LESSONS[5] = {
      "text": {
       "ru": "Теорема о рациональных корнях ищет только **рациональные** корни. Многочлен $x^{2}-2$ не имеет ни одного рационального корня, но это не значит, что он «не раскладывается» — просто не раскладывается на множители с рациональными коэффициентами. В олимпиадных задачах, где ответ обязан быть целым, это как раз то, что нужно.",
       "en": "The rational root theorem finds only **rational** roots. The polynomial $x^{2}-2$ has no rational root at all, which does not mean it \"does not factor\" — only that it does not factor over the rationals. In olympiad problems where the answer must be an integer, that is exactly what you want."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Бином Ньютона",
+    "en": "The binomial theorem"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Формулы $(a+b)^{2}$ и $(a+b)^{3}$ — начало бесконечного списка. Общая формула не только избавляет от заучивания, но и объясняет, почему коэффициенты образуют треугольник Паскаля.",
+      "en": "The formulas for $(a+b)^{2}$ and $(a+b)^{3}$ start an infinite list. The general formula saves memorisation and explains why the coefficients form Pascal’s triangle."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Биномиальный коэффициент",
+      "en": "Binomial coefficient"
+     },
+     "text": {
+      "ru": "$$\\binom nk=\\frac{n!}{k!\\,(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!}$$ — число способов выбрать $k$ предметов из $n$ без учёта порядка. По соглашению $\\binom n0=\\binom nn=1$.",
+      "en": "$$\\binom nk=\\frac{n!}{k!\\,(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!}$$ — the number of ways to choose $k$ objects from $n$ without regard to order. By convention $\\binom n0=\\binom nn=1$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Правило Паскаля",
+      "en": "Pascal’s rule"
+     },
+     "text": {
+      "ru": "$$\\binom nk=\\binom{n-1}{k-1}+\\binom{n-1}{k}\\qquad(1\\le k\\le n-1).$$",
+      "en": "$$\\binom nk=\\binom{n-1}{k-1}+\\binom{n-1}{k}\\qquad(1\\le k\\le n-1).$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Комбинаторно.** Выделим один предмет — скажем, первый. Всякий выбор $k$ предметов из $n$ либо содержит его, либо нет.\n\nЕсли содержит, остаётся выбрать $k-1$ предмет из остальных $n-1$: это $\\binom{n-1}{k-1}$ способов.\n\nЕсли не содержит, надо выбрать все $k$ предметов из остальных $n-1$: это $\\binom{n-1}{k}$ способов.\n\nСлучаи не пересекаются и покрывают всё, значит их количества складываются. $\\blacksquare$\n\n**Именно это правило** порождает треугольник Паскаля: каждое число равно сумме двух стоящих над ним.",
+      "en": "**Combinatorially.** Single out one object — say the first. Every choice of $k$ objects from $n$ either contains it or not.\n\nIf it does, we still choose $k-1$ from the other $n-1$: that is $\\binom{n-1}{k-1}$ ways.\n\nIf it does not, we choose all $k$ from the other $n-1$: that is $\\binom{n-1}{k}$ ways.\n\nThe cases are disjoint and exhaustive, so the counts add. $\\blacksquare$\n\n**This rule** is what generates Pascal’s triangle: each entry is the sum of the two above it."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Формула бинома Ньютона",
+      "en": "The binomial theorem"
+     },
+     "text": {
+      "ru": "$$(a+b)^{n}=\\sum_{k=0}^{n}\\binom nk a^{\\,n-k}b^{k}=a^{n}+\\binom n1a^{\\,n-1}b+\\binom n2a^{\\,n-2}b^{2}+\\dots+b^{n} .$$",
+      "en": "$$(a+b)^{n}=\\sum_{k=0}^{n}\\binom nk a^{\\,n-k}b^{k}=a^{n}+\\binom n1a^{\\,n-1}b+\\dots+b^{n} .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Комбинаторное доказательство.** Запишем $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{скобок}} .$$\n\nРаскрывая скобки, мы из каждой берём либо $a$, либо $b$, и перемножаем взятое. Каждый выбор даёт одночлен $a^{\\,n-k}b^{k}$, где $k$ — число скобок, из которых взяли $b$.\n\n**Сколько раз возникает $a^{\\,n-k}b^{k}$?** Ровно столько, сколькими способами можно выбрать $k$ скобок из $n$, то есть $\\binom nk$ раз. Собирая подобные, получаем формулу. $\\blacksquare$\n\n**Через индукцию** доказательство тоже короткое: умножая $(a+b)^{n}$ на $(a+b)$ и собирая коэффициент при $a^{\\,n+1-k}b^{k}$, получаем $\\binom nk+\\binom n{k-1}=\\binom{n+1}{k}$ — то есть в точности правило Паскаля.",
+      "en": "**Combinatorial proof.** Write $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{brackets}} .$$\n\nExpanding, from each bracket we take either $a$ or $b$ and multiply. Each choice gives a monomial $a^{\\,n-k}b^{k}$, where $k$ is the number of brackets contributing $b$.\n\n**How often does $a^{\\,n-k}b^{k}$ arise?** Exactly as often as one can choose $k$ brackets out of $n$, i.e. $\\binom nk$ times. Collecting like terms gives the formula. $\\blacksquare$\n\n**By induction** it is short too: multiplying $(a+b)^{n}$ by $(a+b)$ and collecting the coefficient of $a^{\\,n+1-k}b^{k}$ gives $\\binom nk+\\binom n{k-1}=\\binom{n+1}{k}$ — precisely Pascal’s rule."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Три следствия из бинома",
+      "en": "Three consequences"
+     },
+     "text": {
+      "ru": "(1) $\\displaystyle\\sum_{k=0}^{n}\\binom nk=2^{n}$; $\\;$ (2) $\\displaystyle\\sum_{k=0}^{n}(-1)^{k}\\binom nk=0$ при $n\\ge1$; $\\;$ (3) $\\displaystyle\\sum_{k\\ \\text{чётн}}\\binom nk=\\sum_{k\\ \\text{нечётн}}\\binom nk=2^{\\,n-1}$ при $n\\ge1$.",
+      "en": "(1) $\\displaystyle\\sum_{k=0}^{n}\\binom nk=2^{n}$; $\\;$ (2) $\\displaystyle\\sum_{k=0}^{n}(-1)^{k}\\binom nk=0$ for $n\\ge1$; $\\;$ (3) $\\displaystyle\\sum_{k\\ \\text{even}}\\binom nk=\\sum_{k\\ \\text{odd}}\\binom nk=2^{\\,n-1}$ for $n\\ge1$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**(1)** Подставим $a=b=1$: слева $(1+1)^{n}=2^{n}$, справа сумма коэффициентов ✓ (Комбинаторно: подмножеств у $n$-элементного множества ровно $2^{n}$.)\n\n**(2)** Подставим $a=1$, $b=-1$: слева $(1-1)^{n}=0$ при $n\\ge1$ ✓\n\n**(3)** Сложив равенства (1) и (2), получаем удвоенную сумму по чётным $k$, то есть $2^{n}$; значит она равна $2^{\\,n-1}$. Вычитая — то же для нечётных. $\\blacksquare$",
+      "en": "**(1)** Put $a=b=1$: the left side is $2^{n}$, the right the sum of the coefficients ✓ (Combinatorially: an $n$-element set has $2^{n}$ subsets.)\n\n**(2)** Put $a=1$, $b=-1$: the left side is $(1-1)^{n}=0$ for $n\\ge1$ ✓\n\n**(3)** Adding (1) and (2) gives twice the sum over even $k$, namely $2^{n}$; so that sum is $2^{\\,n-1}$. Subtracting gives the same for odd $k$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Найдите коэффициент при $x^{5}$ в разложении $\\left(2x-3\\right)^{8}$.",
+      "en": "Find the coefficient of $x^{5}$ in the expansion of $\\left(2x-3\\right)^{8}$."
+     },
+     "steps": {
+      "ru": [
+       "Общий член: $\\binom8k(2x)^{\\,8-k}(-3)^{k}$.",
+       "Степень $x$ равна $8-k$, значит нужно $8-k=5$, то есть $k=3$.",
+       "Коэффициент: $\\binom83\\cdot2^{5}\\cdot(-3)^{3}$.",
+       "$\\binom83=56$, $2^{5}=32$, $(-3)^{3}=-27$.",
+       "Итого $56\\cdot32\\cdot(-27)=-48\\,384$."
+      ],
+      "en": [
+       "The general term is $\\binom8k(2x)^{\\,8-k}(-3)^{k}$.",
+       "The power of $x$ is $8-k$, so we need $8-k=5$, i.e. $k=3$.",
+       "The coefficient is $\\binom83\\cdot2^{5}\\cdot(-3)^{3}$.",
+       "$\\binom83=56$, $2^{5}=32$, $(-3)^{3}=-27$.",
+       "Altogether $56\\cdot32\\cdot(-27)=-48\\,384$."
+      ]
+     },
+     "ans": {
+      "ru": "$-48\\,384$.",
+      "en": "$-48\\,384$."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Докажите, что при простом $p$ и $0<k<p$ коэффициент $\\binom pk$ делится на $p$, и выведите отсюда малую теорему Ферма.",
+      "en": "Prove that $\\binom pk$ is divisible by a prime $p$ for $0<k<p$, and deduce Fermat’s little theorem."
+     },
+     "steps": {
+      "ru": [
+       "Из определения $k!\\,(p-k)!\\cdot\\binom pk=p!$, и правая часть делится на $p$.",
+       "Все множители в $k!$ и $(p-k)!$ строго меньше $p$, значит $p$ не делит их произведение (лемма Евклида).",
+       "Значит $p$ обязан делить $\\binom pk$ ✓",
+       "**Следствие.** Раскроем $(a+1)^{p}$ по биному: все средние слагаемые кратны $p$, поэтому $(a+1)^{p}\\equiv a^{p}+1\\pmod p$.",
+       "Индукцией по $a$ (база $a=0$ очевидна) получаем $a^{p}\\equiv a\\pmod p$ для всех целых $a\\ge0$."
+      ],
+      "en": [
+       "From the definition $k!\\,(p-k)!\\cdot\\binom pk=p!$, and the right side is divisible by $p$.",
+       "All factors in $k!$ and $(p-k)!$ are strictly below $p$, so $p$ does not divide their product (Euclid’s lemma).",
+       "Hence $p$ must divide $\\binom pk$ ✓",
+       "**Consequence.** Expand $(a+1)^{p}$: every middle term is a multiple of $p$, so $(a+1)^{p}\\equiv a^{p}+1\\pmod p$.",
+       "Induction on $a$ (the base $a=0$ is clear) gives $a^{p}\\equiv a\\pmod p$ for all integers $a\\ge0$."
+      ]
+     },
+     "ans": {
+      "ru": "$p\\mid\\binom pk$, и отсюда $a^{p}\\equiv a\\pmod p$.",
+      "en": "$p\\mid\\binom pk$, and hence $a^{p}\\equiv a\\pmod p$."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Симметрические многочлены и формулы Ньютона",
+    "en": "Symmetric polynomials and Newton’s identities"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Выражение вида $a^{5}+b^{5}+c^{5}$ выглядит устрашающе — пока не заметить, что оно **симметрично**. Любое симметрическое выражение выражается через три базовых, и есть рекуррентная формула, которая это делает автоматически.",
+      "en": "An expression like $a^{5}+b^{5}+c^{5}$ looks forbidding — until one notices it is **symmetric**. Every symmetric expression can be written through three basic ones, and a recursion does the work automatically."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Элементарные симметрические многочлены",
+      "en": "Elementary symmetric polynomials"
+     },
+     "text": {
+      "ru": "Для трёх переменных $$e_1=a+b+c,\\qquad e_2=ab+bc+ca,\\qquad e_3=abc .$$ Степенными суммами называют $$p_k=a^{k}+b^{k}+c^{k} .$$",
+      "en": "For three variables $$e_1=a+b+c,\\qquad e_2=ab+bc+ca,\\qquad e_3=abc ,$$ and the power sums are $$p_k=a^{k}+b^{k}+c^{k} .$$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Теорема Виета для кубического уравнения",
+      "en": "Vieta for a cubic"
+     },
+     "text": {
+      "ru": "Если $a,b,c$ — корни многочлена $t^{3}+pt^{2}+qt+r$, то $$e_1=-p,\\qquad e_2=q,\\qquad e_3=-r .$$ Обратно, по любым трём числам $e_1,e_2,e_3$ многочлен восстанавливается: $$t^{3}-e_1t^{2}+e_2t-e_3 .$$",
+      "en": "If $a,b,c$ are the roots of $t^{3}+pt^{2}+qt+r$ then $$e_1=-p,\\qquad e_2=q,\\qquad e_3=-r .$$ Conversely, from any $e_1,e_2,e_3$ the polynomial is recovered as $$t^{3}-e_1t^{2}+e_2t-e_3 .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Многочлен с корнями $a,b,c$ и старшим коэффициентом $1$ раскладывается как $$(t-a)(t-b)(t-c).$$\n\nРаскроем скобки шаг за шагом: $$(t-a)(t-b)=t^{2}-(a+b)t+ab ,$$ и умножая на $(t-c)$: $$t^{3}-(a+b)t^{2}+abt-ct^{2}+(a+b)ct-abc .$$\n\nСобирая по степеням, $$t^{3}-(a+b+c)t^{2}+(ab+bc+ca)t-abc=t^{3}-e_1t^{2}+e_2t-e_3 .$$\n\nСравнение с $t^{3}+pt^{2}+qt+r$ даёт объявленные равенства. $\\blacksquare$",
+      "en": "A monic polynomial with roots $a,b,c$ factors as $$(t-a)(t-b)(t-c).$$\n\nExpand step by step: $$(t-a)(t-b)=t^{2}-(a+b)t+ab ,$$ and multiplying by $(t-c)$ and collecting powers, $$t^{3}-(a+b+c)t^{2}+(ab+bc+ca)t-abc=t^{3}-e_1t^{2}+e_2t-e_3 .$$\n\nComparing with $t^{3}+pt^{2}+qt+r$ gives the stated identities. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Формулы Ньютона",
+      "en": "Newton’s identities"
+     },
+     "text": {
+      "ru": "Для трёх переменных степенные суммы удовлетворяют рекуррентности $$p_k=e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}\\qquad(k\\ge3),$$ с начальными значениями $$p_0=3,\\qquad p_1=e_1,\\qquad p_2=e_1^{2}-2e_2 .$$",
+      "en": "For three variables the power sums satisfy the recursion $$p_k=e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}\\qquad(k\\ge3),$$ with initial values $$p_0=3,\\qquad p_1=e_1,\\qquad p_2=e_1^{2}-2e_2 .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Рекуррентность.** Числа $a,b,c$ — корни многочлена $t^{3}-e_1t^{2}+e_2t-e_3$, значит каждое из них удовлетворяет $$t^{3}=e_1t^{2}-e_2t+e_3 .$$\n\nУмножим это равенство на $t^{\\,k-3}$: $$t^{k}=e_1t^{\\,k-1}-e_2t^{\\,k-2}+e_3t^{\\,k-3} .$$\n\nПодставим по очереди $t=a$, $t=b$, $t=c$ и сложим три полученных равенства. Слева получится $p_k$, справа — $e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}$ ✓\n\n**Начальные значения.** $p_0=1+1+1=3$ и $p_1=e_1$ очевидны. Для $p_2$ возведём $e_1$ в квадрат: $$e_1^{2}=(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2(ab+bc+ca)=p_2+2e_2 ,$$ откуда $p_2=e_1^{2}-2e_2$. $\\blacksquare$",
+      "en": "**The recursion.** The numbers $a,b,c$ are roots of $t^{3}-e_1t^{2}+e_2t-e_3$, so each satisfies $$t^{3}=e_1t^{2}-e_2t+e_3 .$$\n\nMultiply by $t^{\\,k-3}$: $$t^{k}=e_1t^{\\,k-1}-e_2t^{\\,k-2}+e_3t^{\\,k-3} .$$\n\nSubstitute $t=a$, $t=b$, $t=c$ in turn and add the three. The left side gives $p_k$, the right $e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}$ ✓\n\n**Initial values.** $p_0=3$ and $p_1=e_1$ are clear. For $p_2$ square $e_1$: $$e_1^{2}=p_2+2e_2 ,$$ hence $p_2=e_1^{2}-2e_2$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Числа $a,b,c$ удовлетворяют $a+b+c=2$, $ab+bc+ca=-1$, $abc=-2$. Найдите $a^{4}+b^{4}+c^{4}$.",
+      "en": "Numbers $a,b,c$ satisfy $a+b+c=2$, $ab+bc+ca=-1$, $abc=-2$. Find $a^{4}+b^{4}+c^{4}$."
+     },
+     "steps": {
+      "ru": [
+       "Здесь $e_1=2$, $e_2=-1$, $e_3=-2$.",
+       "$p_0=3$, $p_1=2$, $p_2=e_1^{2}-2e_2=4+2=6$.",
+       "$p_3=e_1p_2-e_2p_1+e_3p_0=2\\cdot6+1\\cdot2-2\\cdot3=12+2-6=8$.",
+       "$p_4=e_1p_3-e_2p_2+e_3p_1=2\\cdot8+1\\cdot6-2\\cdot2=16+6-4=18$.",
+       "**Проверка.** Многочлен $t^{3}-2t^{2}-t+2=(t-1)(t+1)(t-2)$, значит корни — это $1,-1,2$.",
+       "И действительно $1^{4}+(-1)^{4}+2^{4}=1+1+16=18$ ✓"
+      ],
+      "en": [
+       "Here $e_1=2$, $e_2=-1$, $e_3=-2$.",
+       "$p_0=3$, $p_1=2$, $p_2=e_1^{2}-2e_2=6$.",
+       "$p_3=e_1p_2-e_2p_1+e_3p_0=12+2-6=8$.",
+       "$p_4=e_1p_3-e_2p_2+e_3p_1=16+6-4=18$.",
+       "**Check.** The polynomial $t^{3}-2t^{2}-t+2=(t-1)(t+1)(t-2)$, so the roots are $1,-1,2$.",
+       "And indeed $1+1+16=18$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$a^{4}+b^{4}+c^{4}=18$.",
+      "en": "$a^{4}+b^{4}+c^{4}=18$."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Когда $a+b+c=0$**, рекуррентность резко упрощается: $e_1=0$, значит $$p_k=-e_2p_{k-2}+e_3p_{k-3} .$$ Отсюда мгновенно получаются знаменитые тождества $$p_3=3e_3=3abc,\\qquad \\frac{p_5}{5}=\\frac{p_2}{2}\\cdot\\frac{p_3}{3},\\qquad \\frac{p_7}{7}=\\frac{p_2}{2}\\cdot\\frac{p_5}{5} .$$ Если в задаче дано условие $a+b+c=0$ — почти наверняка нужны формулы Ньютона.",
+      "en": "**When $a+b+c=0$** the recursion collapses: $e_1=0$, so $$p_k=-e_2p_{k-2}+e_3p_{k-3} .$$ The famous identities follow at once: $$p_3=3abc,\\qquad \\frac{p_5}{5}=\\frac{p_2}{2}\\cdot\\frac{p_3}{3},\\qquad \\frac{p_7}{7}=\\frac{p_2}{2}\\cdot\\frac{p_5}{5} .$$ If a problem hands you $a+b+c=0$, Newton’s identities are almost certainly the tool."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "**Основная теорема о симметрических многочленах** утверждает: любой симметрический многочлен от $a,b,c$ с целыми коэффициентами единственным образом записывается как многочлен от $e_1,e_2,e_3$ — тоже с целыми коэффициентами. Именно поэтому «страшные» симметрические выражения всегда поддаются: они лишь замаскированные комбинации трёх базовых величин.",
+      "en": "**The fundamental theorem on symmetric polynomials** says: every symmetric polynomial in $a,b,c$ with integer coefficients is uniquely a polynomial in $e_1,e_2,e_3$ — again with integer coefficients. That is why frightening symmetric expressions always yield: they are disguised combinations of the three basic quantities."
      }
     }
    ]

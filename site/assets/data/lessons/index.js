@@ -54,7 +54,7 @@ window.LESSON_INDEX = [
    "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent."
   },
   "problems": 50,
-  "sections": 6
+  "sections": 9
  },
  {
   "n": 5,
@@ -68,7 +68,7 @@ window.LESSON_INDEX = [
    "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product."
   },
   "problems": 50,
-  "sections": 6
+  "sections": 9
  },
  {
   "n": 6,
