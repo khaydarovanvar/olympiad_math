@@ -138,7 +138,7 @@ window.LESSON_INDEX = [
    "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 7
  },
  {
   "n": 11,
@@ -152,7 +152,7 @@ window.LESSON_INDEX = [
    "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 7
  },
  {
   "n": 12,

@@ -117,6 +117,71 @@ window.LESSONS[11] = {
   },
   {
    "h": {
+    "ru": "Все углы, связанные с окружностью",
+    "en": "Every angle a circle can make"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Вписанный угол — частный случай общего правила. Ниже собраны все четыре положения вершины относительно окружности; в каждом случае угол выражается через дуги, и все четыре формулы — одна формула с разными знаками.",
+      "en": "The inscribed angle is a special case of one general rule. Below are all four possible positions of the vertex relative to the circle; in each case the angle is expressed through arcs, and the four formulas are really one formula with different signs."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Четыре положения вершины",
+      "en": "Four positions of the vertex"
+     },
+     "text": {
+      "ru": "Пусть две прямые пересекают окружность и высекают на ней дуги $\\alpha$ и $\\beta$ (дуга $\\alpha$ заключена внутри угла, дуга $\\beta$ — внутри вертикального угла). Тогда угол между прямыми равен:\n\n- **вершина в центре:** $\\alpha$;\n- **вершина на окружности:** $\\dfrac{\\alpha}{2}$;\n- **вершина внутри окружности:** $\\dfrac{\\alpha+\\beta}{2}$;\n- **вершина вне окружности:** $\\dfrac{\\left|\\alpha-\\beta\\right|}{2}$.",
+      "en": "Let two lines cut the circle and intercept arcs $\\alpha$ and $\\beta$ ($\\alpha$ inside the angle, $\\beta$ inside the vertical angle). The angle between the lines is:\n\n- **vertex at the centre:** $\\alpha$;\n- **vertex on the circle:** $\\dfrac{\\alpha}{2}$;\n- **vertex inside the circle:** $\\dfrac{\\alpha+\\beta}{2}$;\n- **vertex outside the circle:** $\\dfrac{\\left|\\alpha-\\beta\\right|}{2}$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Оба нецентральных случая сводятся к вписанному углу теоремой о внешнем угле треугольника.\n\n**Вершина внутри.** Пусть хорды $AB$ и $CD$ пересекаются в точке $P$, и рассматривается угол $\\angle APC$. Проведём хорду $AD$. В треугольнике $APD$ угол $\\angle APC$ — внешний при вершине $P$, значит $$\\angle APC=\\angle PAD+\\angle PDA=\\angle BAD+\\angle ADC .$$ Оба слагаемых — вписанные углы, они равны половинам дуг $BD$ и $AC$. Значит $$\\angle APC=\\frac{\\smallsmile AC+\\smallsmile BD}{2} \\quad\\checkmark$$\n\n**Вершина снаружи.** Пусть секущие из точки $P$ пересекают окружность в парах $A,B$ и $C,D$ (ближние точки — $A$ и $C$). Проведём хорду $AD$. Теперь **вписанный** угол $\\angle BAD$ является внешним для треугольника $APD$, поэтому $$\\angle BAD=\\angle APD+\\angle ADP ,$$ откуда $$\\angle APD=\\angle BAD-\\angle ADC=\\frac{\\smallsmile BD}{2}-\\frac{\\smallsmile AC}{2} \\quad\\checkmark\\qquad\\blacksquare$$\n\nОдин и тот же приём — «переведи угол в вписанный через внешний угол треугольника» — работает в обоих случаях; разница лишь в том, по какую сторону оказывается вершина.",
+      "en": "Both non-central cases reduce to the inscribed angle via the exterior angle theorem.\n\n**Vertex inside.** Let the chords $AB$ and $CD$ meet at $P$ and consider $\\angle APC$. Draw the chord $AD$. In the triangle $APD$ the angle $\\angle APC$ is exterior at $P$, so $$\\angle APC=\\angle BAD+\\angle ADC .$$ Both terms are inscribed angles, equal to half the arcs $BD$ and $AC$. Hence $$\\angle APC=\\frac{\\smallsmile AC+\\smallsmile BD}{2} \\quad\\checkmark$$\n\n**Vertex outside.** Let two secants from $P$ meet the circle in the pairs $A,B$ and $C,D$ (with $A$ and $C$ nearer to $P$). Draw the chord $AD$. Now the **inscribed** angle $\\angle BAD$ is exterior to the triangle $APD$, so $$\\angle BAD=\\angle APD+\\angle ADP ,$$ giving $$\\angle APD=\\frac{\\smallsmile BD}{2}-\\frac{\\smallsmile AC}{2} \\quad\\checkmark\\qquad\\blacksquare$$\n\nOne and the same move — turn the angle into an inscribed one through the exterior angle theorem — settles both cases; only the side on which the vertex falls differs."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Угол между касательной и хордой — предельный случай «вершины на окружности», когда вторая точка пересечения сливается с первой; отсюда его величина $\\tfrac12\\smallsmile$. Угол между двумя касательными — предельный случай «вершины снаружи»: $$\\angle=\\frac{\\smallsmile_{\\text{дальняя}}-\\smallsmile_{\\text{ближняя}}}{2}=180^{\\circ}-\\smallsmile_{\\text{ближняя}} .$$",
+      "en": "The tangent–chord angle is the limiting case of \"vertex on the circle\" when the second intersection merges with the first; hence its value $\\tfrac12\\smallsmile$. The angle between two tangents is the limiting case of \"vertex outside\": $$\\angle=\\frac{\\smallsmile_{\\text{far}}-\\smallsmile_{\\text{near}}}{2}=180^{\\circ}-\\smallsmile_{\\text{near}} .$$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Признак четырёх точек на окружности",
+      "en": "When four points are concyclic"
+     },
+     "text": {
+      "ru": "Точки $A$, $B$, $C$, $D$ лежат на одной окружности тогда и только тогда, когда выполнено любое из условий:\n\n- $C$ и $D$ лежат по одну сторону от прямой $AB$ и $\\angle ACB=\\angle ADB$ (**отрезок виден под равными углами**);\n- $ABCD$ — выпуклый четырёхугольник и $\\angle A+\\angle C=180^{\\circ}$;\n- прямые $AB$ и $CD$ пересекаются в точке $P$, и $PA\\cdot PB=PC\\cdot PD$.",
+      "en": "Points $A$, $B$, $C$, $D$ lie on one circle if and only if any of the following holds:\n\n- $C$ and $D$ are on the same side of the line $AB$ and $\\angle ACB=\\angle ADB$ (**a segment subtending equal angles**);\n- $ABCD$ is a convex quadrilateral with $\\angle A+\\angle C=180^{\\circ}$;\n- the lines $AB$ and $CD$ meet at $P$ and $PA\\cdot PB=PC\\cdot PD$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Докажем первый критерий; остальные сводятся к нему.\n\n**Необходимость** — это теорема о вписанном угле: оба угла опираются на одну дугу $AB$ ✓\n\n**Достаточность.** Проведём окружность через $A$, $B$, $C$ (она существует и единственна). Пусть точка $D$ ей не принадлежит. Луч $AD$ пересекает окружность в некоторой точке $D_1$, лежащей по ту же сторону от $AB$.\n\nЕсли $D$ **внутри** окружности, то вершина $D$ угла $\\angle ADB$ лежит внутри, и по формуле для внутренней вершины $$\\angle ADB=\\frac{\\smallsmile AB+\\smallsmile\\left(\\dots\\right)}{2}>\\frac{\\smallsmile AB}{2}=\\angle ACB ,$$ то есть угол строго больше. Если $D$ **снаружи**, точно так же получается строго меньший угол.\n\nЗначит равенство $\\angle ADB=\\angle ACB$ возможно только тогда, когда $D$ лежит на окружности ✓ $\\blacksquare$",
+      "en": "We prove the first criterion; the others reduce to it.\n\n**Necessity** is the inscribed angle theorem: both angles subtend the same arc $AB$ ✓\n\n**Sufficiency.** Draw the circle through $A$, $B$, $C$ (it exists and is unique) and suppose $D$ is not on it.\n\nIf $D$ is **inside** the circle then the vertex of $\\angle ADB$ lies inside, and by the interior-vertex formula $$\\angle ADB>\\frac{\\smallsmile AB}{2}=\\angle ACB ,$$ so the angle is strictly larger. If $D$ is **outside**, the same computation makes it strictly smaller.\n\nHence $\\angle ADB=\\angle ACB$ forces $D$ onto the circle ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Поиск вписанного четырёхугольника — главный приём планиметрии.** Увидев на чертеже два равных угла, опирающихся на общий отрезок, или два прямых угла, опирающихся на общий отрезок (тогда все четыре точки лежат на окружности с диаметром этого отрезка), немедленно проводите окружность: она свяжет между собой углы, которые иначе никак не связаны.",
+      "en": "**Spotting a cyclic quadrilateral is the central move in plane geometry.** Whenever a figure shows two equal angles subtending a common segment, or two right angles on a common segment (then all four points lie on the circle with that segment as diameter), draw the circle at once: it links angles that are otherwise unrelated."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
     "ru": "Касательная",
     "en": "Tangents"
    },
@@ -405,6 +470,174 @@ window.LESSONS[11] = {
      "text": {
       "ru": "Проведём через вершину $B$ диаметр описанной окружности и обозначим через $B^{\\prime}$ его второй конец. Угол $\\angle BCB^{\\prime}$ опирается на диаметр, значит равен $90^\\circ$.\n\nУглы $\\angle BB^{\\prime}C$ и $\\angle BAC$ — вписанные и опираются на одну и ту же дугу $BC$, поэтому $\\angle BB^{\\prime}C=A$.\n\nВ прямоугольном треугольнике $BCB^{\\prime}$ катет $BC=a$ лежит против угла $A$, а гипотенуза равна $2R$, значит $$a=2R\\sin A\\quad\\Longrightarrow\\quad \\frac{a}{\\sin A}=2R .$$ То же рассуждение для двух других вершин завершает доказательство. $\\blacksquare$",
       "en": "Through the vertex $B$ draw the diameter of the circumcircle and call its far end $B^{\\prime}$. The angle $\\angle BCB^{\\prime}$ subtends a diameter, hence equals $90^\\circ$.\n\nThe angles $\\angle BB^{\\prime}C$ and $\\angle BAC$ are inscribed on the same arc $BC$, so $\\angle BB^{\\prime}C=A$.\n\nIn the right triangle $BCB^{\\prime}$ the leg $BC=a$ lies opposite the angle $A$ and the hypotenuse is $2R$, so $$a=2R\\sin A\\quad\\Longrightarrow\\quad \\frac{a}{\\sin A}=2R .$$ The same argument at the other two vertices finishes the proof. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Формулы вписанной и вневписанных окружностей",
+      "en": "Formulas for the incircle and the excircles"
+     },
+     "text": {
+      "ru": "Пусть $p$ — полупериметр, $S$ — площадь. Тогда $$r=\\frac{S}{p},\\qquad r=\\left(p-a\\right)\\tan\\frac{A}{2},\\qquad R=\\frac{abc}{4S} .$$ Вневписанная окружность, касающаяся стороны $a$, имеет радиус $$r_a=\\frac{S}{p-a},$$ и выполняется $$\\frac1r=\\frac1{r_a}+\\frac1{r_b}+\\frac1{r_c} .$$",
+      "en": "Let $p$ be the semiperimeter and $S$ the area. Then $$r=\\frac{S}{p},\\qquad r=\\left(p-a\\right)\\tan\\frac{A}{2},\\qquad R=\\frac{abc}{4S} .$$ The excircle touching the side $a$ has radius $$r_a=\\frac{S}{p-a},$$ and $$\\frac1r=\\frac1{r_a}+\\frac1{r_b}+\\frac1{r_c} .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Формула $r=\\dfrac{S}{p}$ получается разбиением треугольника на три с вершиной в центре $I$ и высотами $r$.\n\nВторая формула — из прямоугольного треугольника, образованного центром $I$, вершиной $A$ и точкой касания на стороне $AB$: касательная из $A$ имеет длину $p-a$, а угол при вершине равен $\\tfrac{A}{2}$, поэтому $r=\\left(p-a\\right)\\tan\\tfrac{A}{2}$ ✓\n\nДля вневписанной окружности с центром $I_a$ разобьём фигуру иначе: $$S=S_{ABI_a}+S_{ACI_a}-S_{BCI_a}=\\frac{c\\,r_a}{2}+\\frac{b\\,r_a}{2}-\\frac{a\\,r_a}{2}=r_a\\cdot\\frac{b+c-a}{2}=r_a\\left(p-a\\right) \\quad\\checkmark$$\n\nПоследнее равенство проверяется подстановкой: $$\\frac1{r_a}+\\frac1{r_b}+\\frac1{r_c}=\\frac{\\left(p-a\\right)+\\left(p-b\\right)+\\left(p-c\\right)}{S}=\\frac{3p-2p}{S}=\\frac{p}{S}=\\frac1r \\quad\\checkmark\\qquad\\blacksquare$$",
+      "en": "The formula $r=\\dfrac{S}{p}$ comes from splitting the triangle into three with apex $I$ and altitude $r$.\n\nThe second comes from the right triangle formed by $I$, the vertex $A$ and the point of tangency on $AB$: the tangent length from $A$ is $p-a$ and the half-angle is $\\tfrac{A}{2}$, so $r=\\left(p-a\\right)\\tan\\tfrac{A}{2}$ ✓\n\nFor the excircle with centre $I_a$ split the figure differently: $$S=S_{ABI_a}+S_{ACI_a}-S_{BCI_a}=r_a\\cdot\\frac{b+c-a}{2}=r_a\\left(p-a\\right) \\quad\\checkmark$$\n\nThe last identity is a substitution: $$\\frac1{r_a}+\\frac1{r_b}+\\frac1{r_c}=\\frac{\\left(p-a\\right)+\\left(p-b\\right)+\\left(p-c\\right)}{S}=\\frac{p}{S}=\\frac1r \\quad\\checkmark\\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Формула Эйлера и неравенство $R\\ge2r$",
+      "en": "The formula of Euler and the inequality $R\\ge2r$"
+     },
+     "text": {
+      "ru": "Расстояние между центрами вписанной и описанной окружностей удовлетворяет $$OI^{2}=R^{2}-2Rr .$$ Отсюда сразу следует $R\\ge2r$, с равенством только в равностороннем треугольнике.",
+      "en": "The distance between the incentre and the circumcentre satisfies $$OI^{2}=R^{2}-2Rr .$$ Hence $R\\ge2r$ at once, with equality only for the equilateral triangle."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Продолжим биссектрису $AI$ до пересечения с описанной окружностью в точке $M$ — середине дуги $BC$.\n\n**Ключевая лемма (о трилистнике):** $MI=MB=MC$. Действительно, $$\\angle MBI=\\angle MBC+\\angle CBI=\\frac{A}{2}+\\frac{B}{2},$$ поскольку $\\angle MBC$ опирается на ту же дугу $MC$, что и $\\angle MAC=\\tfrac{A}{2}$. С другой стороны, $\\angle MIB$ — внешний угол треугольника $ABI$ при вершине $I$, значит $$\\angle MIB=\\frac{A}{2}+\\frac{B}{2}.$$ Углы равны, поэтому треугольник $MBI$ равнобедренный и $MI=MB$ ✓\n\nТеперь применим степень точки $I$ относительно описанной окружности: она равна $OI^{2}-R^{2}$ и одновременно $-AI\\cdot IM$ (точка внутри, знак отрицательный). Значит $$R^{2}-OI^{2}=AI\\cdot IM=AI\\cdot MB .$$\n\nОсталось вычислить оба множителя. Из прямоугольного треугольника с катетом $r$ и углом $\\tfrac{A}{2}$ при вершине $A$ получаем $AI=\\dfrac{r}{\\sin\\frac{A}{2}}$. По теореме синусов в описанной окружности $MB=2R\\sin\\dfrac{A}{2}$.\n\nПеремножим: $$AI\\cdot MB=\\frac{r}{\\sin\\frac{A}{2}}\\cdot2R\\sin\\frac{A}{2}=2Rr \\quad\\checkmark$$\n\nЗначит $R^{2}-OI^{2}=2Rr$, то есть $OI^{2}=R^{2}-2Rr$ ✓ Так как левая часть неотрицательна, $R^{2}\\ge2Rr$ и $R\\ge2r$; равенство означает $O=I$, то есть равносторонний треугольник $\\blacksquare$",
+      "en": "Extend the bisector $AI$ to meet the circumcircle at $M$, the midpoint of the arc $BC$.\n\n**Key lemma (the trillium lemma):** $MI=MB=MC$. Indeed $$\\angle MBI=\\angle MBC+\\angle CBI=\\frac{A}{2}+\\frac{B}{2},$$ since $\\angle MBC$ subtends the same arc $MC$ as $\\angle MAC=\\tfrac{A}{2}$. On the other hand $\\angle MIB$ is exterior to the triangle $ABI$ at $I$, so $$\\angle MIB=\\frac{A}{2}+\\frac{B}{2}.$$ The angles agree, so $MBI$ is isosceles and $MI=MB$ ✓\n\nNow use the power of $I$ with respect to the circumcircle: it equals $OI^{2}-R^{2}$, and also $-AI\\cdot IM$ (the point is inside, hence the sign). So $$R^{2}-OI^{2}=AI\\cdot MB .$$\n\nBoth factors are easy. The right triangle with leg $r$ and half-angle $\\tfrac{A}{2}$ at $A$ gives $AI=\\dfrac{r}{\\sin\\frac{A}{2}}$, and the law of sines in the circumcircle gives $MB=2R\\sin\\dfrac{A}{2}$.\n\nMultiplying, $$AI\\cdot MB=2Rr \\quad\\checkmark$$\n\nHence $OI^{2}=R^{2}-2Rr$ ✓ The left side is non-negative, so $R\\ge2r$; equality means $O=I$, i.e. an equilateral triangle $\\blacksquare$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Лемма о трилистнике («середина дуги равноудалена от двух вершин и от центра вписанной окружности») — один из самых частых вспомогательных фактов на олимпиадах. Стоит запомнить её отдельно от доказательства формулы Эйлера.",
+      "en": "The trillium lemma (\"the arc midpoint is equidistant from two vertices and from the incentre\") is one of the most frequently used auxiliary facts at olympiads. It is worth remembering separately from the formula of Euler."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Птолемей, радикальная ось и окружность девяти точек",
+    "en": "Ptolemy, the radical axis and the nine-point circle"
+   },
+   "blocks": [
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Теорема Птолемея",
+      "en": "Ptolemy theorem"
+     },
+     "text": {
+      "ru": "Для вписанного четырёхугольника $ABCD$ $$AC\\cdot BD=AB\\cdot CD+BC\\cdot AD ,$$ то есть произведение диагоналей равно сумме произведений противоположных сторон. Для произвольного четырёхугольника выполняется **неравенство** $AC\\cdot BD\\le AB\\cdot CD+BC\\cdot AD$, с равенством лишь в случае вписанного.",
+      "en": "For a cyclic quadrilateral $ABCD$ $$AC\\cdot BD=AB\\cdot CD+BC\\cdot AD ,$$ so the product of the diagonals equals the sum of the products of opposite sides. For an arbitrary quadrilateral the **inequality** $AC\\cdot BD\\le AB\\cdot CD+BC\\cdot AD$ holds, with equality only in the cyclic case."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Отметим на диагонали $AC$ такую точку $K$, что $$\\angle ABK=\\angle DBC .$$\n\n**Первая пара подобных треугольников.** В треугольниках $ABK$ и $DBC$ равны углы при вершине $B$ (по построению) и углы $\\angle BAK=\\angle BAC=\\angle BDC$ (вписанные, опираются на дугу $BC$). Значит $\\triangle ABK\\sim\\triangle DBC$, откуда $$\\frac{AK}{DC}=\\frac{AB}{DB}\\quad\\Longrightarrow\\quad AK\\cdot BD=AB\\cdot CD .$$\n\n**Вторая пара.** Прибавив к обеим частям равенства $\\angle ABK=\\angle DBC$ угол $\\angle KBD$, получаем $\\angle ABD=\\angle KBC$. Кроме того, $\\angle ADB=\\angle ACB=\\angle KCB$ (опираются на дугу $AB$). Значит $\\triangle ABD\\sim\\triangle KBC$, откуда $$\\frac{KC}{AD}=\\frac{BC}{BD}\\quad\\Longrightarrow\\quad KC\\cdot BD=BC\\cdot AD .$$\n\nСложим два полученных равенства: $$\\left(AK+KC\\right)BD=AB\\cdot CD+BC\\cdot AD .$$ Точка $K$ лежит на отрезке $AC$, поэтому $AK+KC=AC$ ✓ $\\blacksquare$",
+      "en": "Mark on the diagonal $AC$ the point $K$ with $$\\angle ABK=\\angle DBC .$$\n\n**First pair of similar triangles.** In $ABK$ and $DBC$ the angles at $B$ agree by construction, and $\\angle BAK=\\angle BAC=\\angle BDC$ (inscribed on the arc $BC$). So $\\triangle ABK\\sim\\triangle DBC$ and $$\\frac{AK}{DC}=\\frac{AB}{DB}\\quad\\Longrightarrow\\quad AK\\cdot BD=AB\\cdot CD .$$\n\n**Second pair.** Adding $\\angle KBD$ to both sides of $\\angle ABK=\\angle DBC$ gives $\\angle ABD=\\angle KBC$. Also $\\angle ADB=\\angle ACB=\\angle KCB$ (inscribed on the arc $AB$). So $\\triangle ABD\\sim\\triangle KBC$ and $$\\frac{KC}{AD}=\\frac{BC}{BD}\\quad\\Longrightarrow\\quad KC\\cdot BD=BC\\cdot AD .$$\n\nAdd the two results: $$\\left(AK+KC\\right)BD=AB\\cdot CD+BC\\cdot AD ,$$ and $K$ lies on the segment $AC$, so $AK+KC=AC$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Точка $P$ лежит на дуге $BC$ описанной окружности равностороннего треугольника $ABC$. Докажите, что $PA=PB+PC$.",
+      "en": "A point $P$ lies on the arc $BC$ of the circumcircle of an equilateral triangle $ABC$. Prove that $PA=PB+PC$."
+     },
+     "steps": {
+      "ru": [
+       "Четырёхугольник $ABPC$ вписанный (все четыре точки на окружности), его диагонали — $AP$ и $BC$.",
+       "По теореме Птолемея $$AP\\cdot BC=AB\\cdot PC+AC\\cdot PB .$$",
+       "Треугольник равносторонний, поэтому $AB=AC=BC=a$: $$AP\\cdot a=a\\cdot PC+a\\cdot PB .$$",
+       "Разделим на $a>0$: $AP=PB+PC$ ✓",
+       "Обратите внимание, насколько коротким стало решение: без Птолемея пришлось бы поворачивать треугольник на $60^{\\circ}$."
+      ],
+      "en": [
+       "The quadrilateral $ABPC$ is cyclic and its diagonals are $AP$ and $BC$.",
+       "Ptolemy gives $$AP\\cdot BC=AB\\cdot PC+AC\\cdot PB .$$",
+       "The triangle is equilateral, so $AB=AC=BC=a$: $$AP\\cdot a=a\\cdot PC+a\\cdot PB .$$",
+       "Divide by $a>0$: $AP=PB+PC$ ✓",
+       "Note how short this is: without Ptolemy one would have to rotate the triangle by $60^{\\circ}$."
+      ]
+     },
+     "ans": {
+      "ru": "$PA=PB+PC$ по теореме Птолемея.",
+      "en": "$PA=PB+PC$, by Ptolemy."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Степень точки",
+      "en": "The power of a point"
+     },
+     "text": {
+      "ru": "**Степенью точки $P$ относительно окружности** с центром $O$ и радиусом $R$ называется число $$\\operatorname{pow}(P)=OP^{2}-R^{2}.$$ Она отрицательна внутри окружности, равна нулю на ней и положительна снаружи.",
+      "en": "The **power of a point $P$** with respect to a circle of centre $O$ and radius $R$ is the number $$\\operatorname{pow}(P)=OP^{2}-R^{2}.$$ It is negative inside the circle, zero on it and positive outside."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Единая формулировка",
+      "en": "One statement for all cases"
+     },
+     "text": {
+      "ru": "Для любой прямой через $P$, пересекающей окружность в точках $A$ и $B$, произведение $\\overline{PA}\\cdot\\overline{PB}$ **ориентированных** длин равно $\\operatorname{pow}(P)$ и не зависит от выбора прямой. Если прямая касается окружности в точке $T$, то $\\operatorname{pow}(P)=PT^{2}$.",
+      "en": "For every line through $P$ meeting the circle at $A$ and $B$, the product $\\overline{PA}\\cdot\\overline{PB}$ of **signed** lengths equals $\\operatorname{pow}(P)$ and does not depend on the line. If the line touches the circle at $T$ then $\\operatorname{pow}(P)=PT^{2}$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Проведём через $P$ прямую, проходящую **через центр**: она пересекает окружность в точках, удалённых от $P$ на $\\left|OP-R\\right|$ и $OP+R$ (для внешней точки). Произведение равно $$\\left(OP-R\\right)\\left(OP+R\\right)=OP^{2}-R^{2} \\quad\\checkmark$$\n\nДля произвольной прямой воспользуемся уже доказанными теоремами о пересекающихся хордах (вершина внутри) и о двух секущих (вершина снаружи): в обоих случаях произведение одно и то же для всех прямых через $P$. Значит оно равно значению, найденному для прямой через центр ✓ $\\blacksquare$",
+      "en": "Take the line through $P$ that passes **through the centre**: it meets the circle at distances $\\left|OP-R\\right|$ and $OP+R$ from $P$ (for an exterior point). Their product is $$\\left(OP-R\\right)\\left(OP+R\\right)=OP^{2}-R^{2} \\quad\\checkmark$$\n\nFor an arbitrary line use the already proved theorems on intersecting chords (interior vertex) and on two secants (exterior vertex): in both cases the product is the same for all lines through $P$. So it equals the value computed for the line through the centre ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Радикальная ось",
+      "en": "The radical axis"
+     },
+     "text": {
+      "ru": "Геометрическое место точек, имеющих равные степени относительно двух неконцентрических окружностей, есть **прямая**, перпендикулярная линии центров. Она называется радикальной осью пары окружностей.",
+      "en": "The locus of points having equal powers with respect to two non-concentric circles is a **line**, perpendicular to the line of centres. It is called the radical axis of the pair."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Введём координаты, направив ось $Ox$ по линии центров: пусть $O_1=(0,0)$, $O_2=(d,0)$ с $d\\ne0$, радиусы $R_1$ и $R_2$.\n\nУсловие равенства степеней для точки $\\left(x,y\\right)$: $$x^{2}+y^{2}-R_1^{2}=\\left(x-d\\right)^{2}+y^{2}-R_2^{2}.$$\n\nКвадраты $x^{2}$ и $y^{2}$ сокращаются — это и есть суть дела: $$0=-2dx+d^{2}-R_2^{2}+R_1^{2}\\quad\\Longrightarrow\\quad x=\\frac{d^{2}+R_1^{2}-R_2^{2}}{2d}.$$\n\nПолучилось уравнение вертикальной прямой, то есть прямой, перпендикулярной линии центров ✓ $\\blacksquare$\n\n**Следствие (радикальный центр).** Для трёх попарно неконцентрических окружностей три радикальные оси либо параллельны, либо пересекаются в одной точке: если точка лежит на двух из них, её степени относительно всех трёх окружностей равны, значит она лежит и на третьей.",
+      "en": "Set up coordinates with $Ox$ along the line of centres: $O_1=(0,0)$, $O_2=(d,0)$ with $d\\ne0$, radii $R_1$ and $R_2$.\n\nEqual powers at $\\left(x,y\\right)$ means $$x^{2}+y^{2}-R_1^{2}=\\left(x-d\\right)^{2}+y^{2}-R_2^{2}.$$\n\nThe squares $x^{2}$ and $y^{2}$ cancel — that is the whole point: $$x=\\frac{d^{2}+R_1^{2}-R_2^{2}}{2d}.$$\n\nThis is the equation of a vertical line, i.e. one perpendicular to the line of centres ✓ $\\blacksquare$\n\n**Corollary (the radical centre).** For three pairwise non-concentric circles the three radical axes are either parallel or concurrent: a point on two of them has equal powers with respect to all three circles, hence lies on the third as well."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Если окружности пересекаются, радикальная ось — это прямая, содержащая их общую хорду (в точках пересечения обе степени равны нулю). Если касаются — общая касательная в точке касания. Приём «радикальная ось» решает задачи вида «докажите, что три прямые пересекаются в одной точке» в одну строку.",
+      "en": "If the circles intersect, the radical axis is the line of their common chord (at the intersection points both powers vanish). If they are tangent, it is the common tangent at the point of contact. The radical-axis argument settles \"prove these three lines concur\" problems in a single line."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Окружность девяти точек",
+      "en": "The nine-point circle"
+     },
+     "text": {
+      "ru": "В любом треугольнике одна окружность проходит через девять точек: три середины сторон, три основания высот и три середины отрезков от вершин до ортоцентра. Её радиус равен $\\dfrac{R}{2}$, а центр — середина отрезка $OH$.",
+      "en": "In every triangle one circle passes through nine points: the three midpoints of the sides, the three feet of the altitudes and the three midpoints of the segments from the vertices to the orthocentre. Its radius is $\\dfrac{R}{2}$ and its centre is the midpoint of $OH$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Обозначим через $M_a,M_b,M_c$ середины сторон, через $H_a,H_b,H_c$ основания высот, через $N_a,N_b,N_c$ середины отрезков $AH$, $BH$, $CH$.\n\n**Шаг 1.** Отрезок $M_bM_c$ — средняя линия треугольника $ABC$, значит $M_bM_c\\parallel BC$. Отрезок $N_bN_c$ — средняя линия треугольника $HBC$, значит тоже параллелен $BC$ и равен ему по длине в том же отношении: $M_bM_c=N_bN_c=\\tfrac12 BC$. Следовательно $M_bM_cN_bN_c$ — параллелограмм.\n\n**Шаг 2.** Кроме того, $M_bN_b$ — средняя линия, параллельная $AH$, а $AH\\perp BC$. Значит соседние стороны нашего параллелограмма перпендикулярны — это **прямоугольник**. Его вершины лежат на окружности с диаметром $M_bN_b$.\n\n**Шаг 3.** Такое же рассуждение с другой парой индексов даёт прямоугольник $M_aM_cN_aN_c$, вписанный в окружность с диаметром $M_aN_a$. Две окружности имеют общие точки $M_c$ и $N_c$ и общий центр — середину каждого из диаметров $M_bN_b$ и $M_aN_a$; значит это одна и та же окружность, и на ней лежат все шесть точек $M_a,M_b,M_c,N_a,N_b,N_c$.\n\n**Шаг 4.** Наконец, $\\angle M_aH_aN_a=90^{\\circ}$, поскольку $H_a$ — основание высоты, а $M_aN_a$ — диаметр этой окружности. Точка, из которой диаметр виден под прямым углом, лежит на окружности ✓ Аналогично для $H_b$ и $H_c$ $\\blacksquare$\n\nРадиус равен половине $R$, потому что треугольник середин сторон подобен исходному с коэффициентом $\\tfrac12$.",
+      "en": "Write $M_a,M_b,M_c$ for the midpoints of the sides, $H_a,H_b,H_c$ for the feet of the altitudes, and $N_a,N_b,N_c$ for the midpoints of $AH$, $BH$, $CH$.\n\n**Step 1.** $M_bM_c$ is a midline of $ABC$, so $M_bM_c\\parallel BC$ with length $\\tfrac12 BC$. $N_bN_c$ is a midline of $HBC$, so it too is parallel to $BC$ with length $\\tfrac12 BC$. Hence $M_bM_cN_bN_c$ is a parallelogram.\n\n**Step 2.** Moreover $M_bN_b\\parallel AH$ and $AH\\perp BC$, so adjacent sides of the parallelogram are perpendicular: it is a **rectangle**, and its vertices lie on the circle with diameter $M_bN_b$.\n\n**Step 3.** The same argument with another pair of indices gives the rectangle $M_aM_cN_aN_c$ inscribed in the circle with diameter $M_aN_a$. The two circles share the points $M_c$ and $N_c$ and have the same centre — the midpoint of each of the diameters $M_bN_b$ and $M_aN_a$ — so they are one circle, carrying all six points $M_a,M_b,M_c,N_a,N_b,N_c$.\n\n**Step 4.** Finally $\\angle M_aH_aN_a=90^{\\circ}$, because $H_a$ is the foot of an altitude and $M_aN_a$ is a diameter of that circle. A point seeing a diameter at a right angle lies on the circle ✓ Similarly for $H_b$ and $H_c$ $\\blacksquare$\n\nThe radius is half of $R$ because the medial triangle is similar to the original with ratio $\\tfrac12$."
      }
     }
    ]
