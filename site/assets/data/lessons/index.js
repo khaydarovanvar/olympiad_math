@@ -195,5 +195,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 15,
+  "cat": "comb",
+  "title": {
+   "ru": "Логика, доказательства и инварианты",
+   "en": "Logic, proofs and invariants"
+  },
+  "sub": {
+   "ru": "Отрицание и импликация, доказательство от противного, индукция, инварианты и раскраски — язык, на котором пишут решения.",
+   "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in."
+  },
+  "problems": 20,
+  "sections": 6
  }
 ];
