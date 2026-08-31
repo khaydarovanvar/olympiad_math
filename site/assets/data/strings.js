@@ -29,8 +29,8 @@ window.STRINGS = {
   metaCoversVal: { ru: 'Теория чисел · Алгебра<br>Геометрия · Комбинаторика',
                    en: 'Number theory · Algebra<br>Geometry · Combinatorics' },
   metaInside:    { ru: 'Внутри',   en: 'Inside' },
-  metaInsideVal: { ru: '16 тем · 320 задач<br>320 отобранных ресурсов',
-                   en: '16 topics · 320 problems<br>320 curated resources' },
+  metaInsideVal: { ru: '16 тем · 800 задач<br>320 отобранных ресурсов',
+                   en: '16 topics · 800 problems<br>320 curated resources' },
 
   footAbout:    { ru: 'Продуманный маршрут по олимпиадной математике для 7–11 классов, построенный вокруг туров Узбекистана.',
                   en: 'A curated route through olympiad mathematics for Grades 7–11, built around the Uzbekistan rounds.' },
@@ -55,13 +55,13 @@ window.STRINGS = {
   /* ---------------- home page ---------------- */
   homeTitle: { ru: 'Олимпиадная математика — 7–11 классы · Узбекистан',
                en: 'Olympiad Mathematics — Grades 7–11 · Uzbekistan' },
-  homeDesc:  { ru: 'Курс олимпиадной математики для 7–11 классов Узбекистана: 16 тем по теории чисел, алгебре, геометрии и комбинаторике, 320 разобранных задач и 320 отобранных ресурсов.',
-               en: 'A curated olympiad mathematics course for Grades 7–11 in Uzbekistan: 16 topics across number theory, algebra, geometry and combinatorics, with 320 solved problems and 320 hand-picked resources.' },
+  homeDesc:  { ru: 'Курс олимпиадной математики для 7–11 классов Узбекистана: 16 тем по теории чисел, алгебре, геометрии и комбинаторике, 800 разобранных задач и 320 отобранных ресурсов.',
+               en: 'A curated olympiad mathematics course for Grades 7–11 in Uzbekistan: 16 topics across number theory, algebra, geometry and combinatorics, with 800 solved problems and 320 hand-picked resources.' },
 
   heroKicker: { ru: '7–11 классы · Узбекистан', en: 'Grades 7–11 · Uzbekistan' },
   heroTitle:  { ru: 'Олимпиадная математика',   en: 'Olympiad Mathematics' },
-  heroLead:   { ru: 'Шестнадцать тем, четыре раздела, триста двадцать разобранных задач и столько же отобранных ресурсов — теория, видео, PDF и материалы на узбекском, — выстроенные в том порядке, в каком они нужны участнику олимпиады.',
-                en: 'Sixteen topics, four branches, three hundred and twenty solved problems and as many hand-picked resources — theory, video, PDFs and Uzbek-language material — arranged in the order a competitor actually needs them.' },
+  heroLead:   { ru: 'Шестнадцать тем, четыре раздела, восемьсот разобранных задач и триста двадцать отобранных ресурсов — теория, видео, PDF и материалы на узбекском, — выстроенные в том порядке, в каком они нужны участнику олимпиады.',
+                en: 'Sixteen topics, four branches, eight hundred solved problems and three hundred and twenty hand-picked resources — theory, video, PDFs and Uzbek-language material — arranged in the order a competitor actually needs them.' },
   heroCta1:   { ru: 'Открыть уроки',   en: 'Open the lessons' },
   heroCta2:   { ru: 'Посмотреть темы', en: 'Browse the topics' },
   hmTopics:   { ru: 'тем',        en: 'topics' },
@@ -83,8 +83,8 @@ window.STRINGS = {
 
   s2eyebrow: { ru: 'Все темы', en: 'All topics' },
   s2title:   { ru: 'Выберите тему — получите урок и полку ресурсов', en: 'Pick a topic, get the lesson and its shelf' },
-  s2lead:    { ru: 'В каждой теме — полный урок с теорией, доказательствами и двадцатью задачами, а рядом двадцать ресурсов, разложенных по видам: теория, видео, PDF, онлайн-практика и материалы на узбекском.',
-               en: 'Each topic carries a full lesson — theory, proofs and twenty problems — alongside twenty resources sorted by kind: theory, video, PDF, online practice and Uzbek-language material.' },
+  s2lead:    { ru: 'В каждой теме — полный урок с теорией, доказательствами и пятьюдесятью задачами, а рядом двадцать ресурсов, разложенных по видам: теория, видео, PDF, онлайн-практика и материалы на узбекском.',
+               en: 'Each topic carries a full lesson — theory, proofs and fifty problems — alongside twenty resources sorted by kind: theory, video, PDF, online practice and Uzbek-language material.' },
 
   s3eyebrow: { ru: 'Как заниматься', en: 'How to use it' },
   s3title:   { ru: 'Маршрут, который доводит задачу до конца', en: 'A study path that finishes problems' },
@@ -97,7 +97,7 @@ window.STRINGS = {
   st2h: { ru: 'Разберите примеры с закрытым решением', en: 'Work the examples with the solution covered' },
   st2p: { ru: 'Сначала попробуйте сами, потом сверьтесь по шагам. Разница между «понял» и «решил» именно здесь.',
           en: 'Try each one first, then check step by step. The difference between "I follow it" and "I solved it" lives here.' },
-  st3h: { ru: 'Решите двадцать задач темы', en: 'Solve the twenty problems' },
+  st3h: { ru: 'Решите пятьдесят задач темы', en: 'Solve the fifty problems' },
   st3p: { ru: 'От разминки до уровня IMO, письменно и до конца. Подсказку открывайте только после честной попытки.',
           en: 'From warm-up to IMO level, in writing and to the end. Open the hint only after an honest attempt.' },
   st4h: { ru: 'Напишите пробный тур на время', en: 'Sit a timed mock round' },
@@ -105,8 +105,8 @@ window.STRINGS = {
           en: 'Topic 16 holds four ready papers. Time yourself and mark yourself honestly.' },
 
   bandTitle: { ru: 'Все шестнадцать тем написаны полностью', en: 'All sixteen topics are written out in full' },
-  bandText:  { ru: 'Теория с каждым доказательством, разобранные примеры и 320 задач с подсказками и полными решениями — на русском и английском.',
-               en: 'Theory with every proof, worked examples and 320 problems with hints and full solutions — in Russian and English.' },
+  bandText:  { ru: 'Теория с каждым доказательством, разобранные примеры и 800 задач с подсказками и полными решениями — на русском и английском.',
+               en: 'Theory with every proof, worked examples and 800 problems with hints and full solutions — in Russian and English.' },
   bandCta1:  { ru: 'Открыть уроки', en: 'Open the lessons' },
   bandCta2:  { ru: 'Библиотека',    en: 'Library' },
 
@@ -173,8 +173,8 @@ window.STRINGS = {
   topNext:      { ru: 'Далее →',   en: 'Next →' },
 
   bandLesson:      { ru: 'По этой теме есть полный урок', en: 'There is a full lesson for this topic' },
-  bandLessonText:  { ru: 'Полная теория с каждым доказательством, разобранные примеры и двадцать задач с олимпиад — на русском и английском. Начните с урока, а уже потом выбирайте из списка ниже.',
-                     en: 'Complete theory with every proof, worked examples and twenty problems from real olympiads — in Russian and English — before you go shopping in the list below.' },
+  bandLessonText:  { ru: 'Полная теория с каждым доказательством, разобранные примеры и пятьдесят задач с олимпиад — на русском и английском. Начните с урока, а уже потом выбирайте из списка ниже.',
+                     en: 'Complete theory with every proof, worked examples and fifty problems from real olympiads — in Russian and English — before you go shopping in the list below.' },
   bandOpenLesson:  { ru: 'Открыть урок', en: 'Open the lesson' },
   bandTheoryGuide: { ru: 'Конспект теории', en: 'Theory guide' },
 
