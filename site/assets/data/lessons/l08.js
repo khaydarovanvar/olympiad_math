@@ -158,6 +158,31 @@ window.LESSONS[8] = {
       "ru": "Ту же задачу решают устно. Если бы все $35$ животных были фазанами, ног было бы $70$. Лишних ног $94-70=24$, и каждый кролик добавляет ровно две лишние ноги. Значит кроликов $24:2=12$. Такие рассуждения «от избытка» часто заменяют целую систему.",
       "en": "The same problem can be done in your head. If all $35$ animals were pheasants there would be $70$ legs. The surplus is $94-70=24$, and each rabbit contributes exactly two extra legs. So there are $24:2=12$ rabbits. Arguments \"from the surplus\" often replace a whole system."
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Что значит «решить текстовую задачу»",
+      "en": "What solving a word problem means"
+     },
+     "text": {
+      "ru": "Решение текстовой задачи всегда состоит из четырёх шагов:\n\n1. **Выбрать неизвестные** и назвать их буквами, явно указав единицы измерения.\n2. **Выразить через них все величины**, встречающиеся в условии (удобно таблицей).\n3. **Записать уравнения** — по одному на каждое утверждение условия.\n4. **Решить систему и проверить ответ по смыслу задачи**, отбросив посторонние корни.",
+      "en": "Solving a word problem always has four steps:\n\n1. **Choose the unknowns** and name them, stating the units explicitly.\n2. **Express every quantity of the story through them** (a table helps).\n3. **Write the equations** — one for each statement in the text.\n4. **Solve, then check the answer against the story**, discarding roots that make no sense."
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "Четвёртый шаг пропускают чаще всего, а он обязателен. Алгебра не знает, что число людей целое, что время положительно, а концентрация не превосходит $100\\%$. Отрицательный корень квадратного уравнения — не ошибка вычислений, а посторонний ответ, который нужно отбросить, **указав причину**.",
+      "en": "Step four is skipped most often and is mandatory. Algebra does not know that a number of people is an integer, that a time is positive, or that a concentration is at most $100\\%$. A negative root of a quadratic is not an arithmetic slip but an extraneous answer to be discarded — **with the reason stated**."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Сколько уравнений нужно?** Обычно столько же, сколько неизвестных. Но это не закон: иногда одно уравнение с двумя неизвестными решается, если добавить условие целочисленности (как в задаче про кроликов и фазанов), а иногда лишнее уравнение оказывается следствием остальных.\n\nЕсли уравнений меньше, чем неизвестных, ищите **скрытое условие**: «все числа натуральные», «время не может быть отрицательным», «в классе не больше $40$ человек».",
+      "en": "**How many equations are needed?** Usually as many as there are unknowns. But that is not a law: sometimes one equation in two unknowns is solvable once integrality is added (as in the rabbits-and-pheasants problem), and sometimes an extra equation turns out to follow from the others.\n\nIf you have fewer equations than unknowns, look for a **hidden condition**: \"all numbers are positive integers\", \"a time cannot be negative\", \"a class has at most $40$ pupils\"."
+     }
     }
    ]
   },
@@ -225,6 +250,205 @@ window.LESSONS[8] = {
      "text": {
       "ru": "Классическая ловушка: «половину пути автомобиль ехал со скоростью $60$, вторую половину — со скоростью $40$; какова средняя скорость?» Ответ **не** $50$. Пусть весь путь равен $2s$. Время равно $\\tfrac{s}{60}+\\tfrac{s}{40}=\\tfrac{2s+3s}{120}=\\tfrac{5s}{120}$, поэтому $$v_{\\text{ср}}=\\frac{2s}{\\frac{5s}{120}}=\\frac{240}{5}=48 .$$ Это гармоническое среднее — а оно всегда меньше арифметического.",
       "en": "The classic trap: \"a car drove half the distance at $60$ and the other half at $40$; what is the average speed?\" The answer is **not** $50$. Let the whole distance be $2s$. The time is $\\tfrac{s}{60}+\\tfrac{s}{40}=\\tfrac{2s+3s}{120}=\\tfrac{5s}{120}$, so $$v_{\\text{avg}}=\\frac{2s}{\\frac{5s}{120}}=\\frac{240}{5}=48 .$$ That is the harmonic mean — always less than the arithmetic one."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Относительное движение: правила и формулы",
+    "en": "Relative motion: the rules and the formulas"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Задачи на движение кажутся бесконечно разнообразными, но за ними стоит всего несколько утверждений. Если сформулировать их как теоремы и доказать один раз, дальше остаётся только подставлять числа.",
+      "en": "Motion problems look endlessly varied, yet only a handful of statements lie behind them. Once these are written down as theorems and proved, everything after that is substitution."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Скорость сближения и удаления",
+      "en": "Closing and separating speed"
+     },
+     "text": {
+      "ru": "Пусть два тела движутся по прямой с постоянными скоростями $u$ и $v$.\n\n**Навстречу друг другу:** расстояние между ними убывает со скоростью $u+v$, поэтому начальное расстояние $d$ они покрывают за время $$t=\\frac{d}{u+v}.$$\n\n**В одном направлении** (догоняющий быстрее, $u>v$): разрыв сокращается со скоростью $u-v$, и на его ликвидацию нужно $$t=\\frac{d}{u-v}.$$",
+      "en": "Let two bodies move along a line with constant speeds $u$ and $v$.\n\n**Towards each other:** the distance between them shrinks at rate $u+v$, so an initial gap $d$ closes in time $$t=\\frac{d}{u+v}.$$\n\n**In the same direction** (the chaser is faster, $u>v$): the gap shrinks at rate $u-v$, so it takes $$t=\\frac{d}{u-v}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Поместим начало координат в стартовую точку первого тела и направим ось к второму. Тогда координаты равны $$x_1(t)=ut,\\qquad x_2(t)=d-vt$$ в случае встречного движения. Расстояние между телами равно $$x_2(t)-x_1(t)=d-\\left(u+v\\right)t ,$$ то есть линейная функция с угловым коэффициентом $-\\left(u+v\\right)$: разрыв убывает именно со скоростью $u+v$. Он обращается в нуль при $t=\\dfrac{d}{u+v}$ ✓\n\nПри движении в одну сторону $x_2(t)=d+vt$, разность равна $d-\\left(u-v\\right)t$, и она обращается в нуль при $t=\\dfrac{d}{u-v}$; при $u\\le v$ разрыв не убывает и встречи не происходит ✓ $\\blacksquare$",
+      "en": "Put the origin at the first body and point the axis towards the second. For a head-on approach the coordinates are $$x_1(t)=ut,\\qquad x_2(t)=d-vt .$$ The distance between them is $$x_2(t)-x_1(t)=d-\\left(u+v\\right)t ,$$ a linear function of slope $-\\left(u+v\\right)$: the gap shrinks at exactly rate $u+v$, reaching zero at $t=\\dfrac{d}{u+v}$ ✓\n\nFor motion in the same direction $x_2(t)=d+vt$, the difference is $d-\\left(u-v\\right)t$, zero at $t=\\dfrac{d}{u-v}$; if $u\\le v$ the gap never shrinks and no meeting occurs ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Переход в систему отсчёта одного из тел.** Вместо двух движущихся объектов рассматривайте один: «остановите» второе тело и добавьте его скорость (со знаком) первому. Все задачи про догоняющих, встречающихся и пассажира, идущего по движущемуся эскалатору, — это одна задача.",
+      "en": "**Move into the frame of one body.** Instead of two moving objects consider one: \"stop\" the second body and give its speed (with sign) to the first. Chasing problems, meeting problems and the passenger walking on a moving escalator are all one problem."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Средняя скорость — среднее гармоническое",
+      "en": "Average speed is a harmonic mean"
+     },
+     "text": {
+      "ru": "Если одну и ту же дистанцию тело прошло туда со скоростью $u$ и обратно со скоростью $v$, то средняя скорость всего пути равна $$\\bar{w}=\\frac{2uv}{u+v},$$ и всегда $\\bar{w}\\le\\dfrac{u+v}{2}$, причём равенство лишь при $u=v$.",
+      "en": "If a body covers the same distance at speed $u$ one way and $v$ the other, the average speed for the whole trip is $$\\bar{w}=\\frac{2uv}{u+v},$$ and always $\\bar{w}\\le\\dfrac{u+v}{2}$, with equality only when $u=v$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Пусть длина одного участка равна $s$. Время туда — $\\dfrac{s}{u}$, обратно — $\\dfrac{s}{v}$. По определению средней скорости (весь путь, делённый на всё время) $$\\bar{w}=\\frac{2s}{\\dfrac{s}{u}+\\dfrac{s}{v}}=\\frac{2}{\\dfrac1u+\\dfrac1v}=\\frac{2uv}{u+v} \\quad\\checkmark$$\n\nЗаметим: $s$ сократилось — ответ не зависит от длины участка.\n\nВторая часть — это неравенство $H\\le A$ для двух чисел: $$\\frac{u+v}{2}-\\frac{2uv}{u+v}=\\frac{\\left(u+v\\right)^{2}-4uv}{2\\left(u+v\\right)}=\\frac{\\left(u-v\\right)^{2}}{2\\left(u+v\\right)}\\ \\ge\\ 0 \\quad\\checkmark\\qquad\\blacksquare$$",
+      "en": "Let each leg have length $s$. The times are $\\dfrac{s}{u}$ and $\\dfrac{s}{v}$. By definition (total distance over total time) $$\\bar{w}=\\frac{2s}{\\dfrac{s}{u}+\\dfrac{s}{v}}=\\frac{2}{\\dfrac1u+\\dfrac1v}=\\frac{2uv}{u+v} \\quad\\checkmark$$\n\nNote that $s$ cancels — the answer does not depend on the length of the leg.\n\nThe second part is the inequality $H\\le A$ for two numbers: $$\\frac{u+v}{2}-\\frac{2uv}{u+v}=\\frac{\\left(u-v\\right)^{2}}{2\\left(u+v\\right)}\\ \\ge\\ 0 \\quad\\checkmark\\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "Самая частая ошибка в задачах на движение — усреднить скорости арифметически. Проехать половину пути со скоростью $60$ и половину со скоростью $40$ — это **не** $50$ км/ч, а $$\\frac{2\\cdot60\\cdot40}{100}=48 \\text{ км/ч}.$$ Причина проста: с меньшей скоростью тело едет **дольше**, поэтому она весит больше.\n\nАрифметическое усреднение верно в другой задаче: если равны не расстояния, а **времена** движения.",
+      "en": "The most common mistake in motion problems is averaging speeds arithmetically. Half the distance at $60$ and half at $40$ is **not** $50$ km/h but $$\\frac{2\\cdot60\\cdot40}{100}=48\\text{ km/h}.$$ The reason is simple: the body spends **longer** at the lower speed, so that speed carries more weight.\n\nArithmetic averaging is right in a different problem: when the equal quantities are the **times**, not the distances."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Задача о встрече и остатке пути",
+      "en": "The meeting problem and the remaining legs"
+     },
+     "text": {
+      "ru": "Два пешехода одновременно вышли навстречу друг другу из точек $A$ и $B$. После встречи первому осталось идти $t_1$ часов до $B$, второму — $t_2$ часов до $A$. Тогда отношение их скоростей равно $$\\frac{u}{v}=\\sqrt{\\frac{t_2}{t_1}} .$$",
+      "en": "Two walkers set out simultaneously towards each other from $A$ and $B$. After meeting, the first needs $t_1$ more hours to reach $B$ and the second $t_2$ more hours to reach $A$. Then their speeds satisfy $$\\frac{u}{v}=\\sqrt{\\frac{t_2}{t_1}} .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Пусть встреча произошла через время $T$ после старта. К этому моменту первый прошёл $uT$, второй — $vT$.\n\nПосле встречи первому остаётся ровно тот участок, который прошёл второй, то есть $vT$; он тратит на него $t_1$ часов: $$vT=u\\,t_1 .$$\n\nСимметрично второму остаётся участок $uT$, и $$uT=v\\,t_2 .$$\n\nПеремножим оба равенства: $uvT^{2}=uv\\,t_1t_2$, откуда $T=\\sqrt{t_1t_2}$.\n\nТеперь разделим второе равенство на первое: $$\\frac{u}{v}=\\frac{v\\,t_2}{u\\,t_1}\\quad\\Longrightarrow\\quad \\frac{u^{2}}{v^{2}}=\\frac{t_2}{t_1}\\quad\\Longrightarrow\\quad \\frac{u}{v}=\\sqrt{\\frac{t_2}{t_1}} \\quad\\checkmark\\qquad\\blacksquare$$",
+      "en": "Say the meeting happens $T$ hours after the start. By then the first has walked $uT$ and the second $vT$.\n\nAfter the meeting the first must cover exactly what the second has walked, namely $vT$, and it takes $t_1$ hours: $$vT=u\\,t_1 .$$\n\nSymmetrically the second must cover $uT$, so $$uT=v\\,t_2 .$$\n\nMultiplying the two: $uvT^{2}=uv\\,t_1t_2$, hence $T=\\sqrt{t_1t_2}$.\n\nDividing the second by the first: $$\\frac{u}{v}=\\frac{v\\,t_2}{u\\,t_1}\\quad\\Longrightarrow\\quad \\frac{u^{2}}{v^{2}}=\\frac{t_2}{t_1}\\quad\\Longrightarrow\\quad \\frac{u}{v}=\\sqrt{\\frac{t_2}{t_1}} \\quad\\checkmark\\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Два велосипедиста выехали одновременно навстречу друг другу. После встречи первый доехал до конца за $1$ час, второй — за $4$ часа. Во сколько раз первый быстрее и через сколько часов после старта они встретились?",
+      "en": "Two cyclists set out simultaneously towards each other. After meeting, the first reached the far end in $1$ hour and the second in $4$ hours. How many times faster is the first, and how long after the start did they meet?"
+     },
+     "steps": {
+      "ru": [
+       "Здесь $t_1=1$, $t_2=4$.",
+       "По теореме $\\dfrac{u}{v}=\\sqrt{\\dfrac{4}{1}}=2$: первый вдвое быстрее ✓",
+       "Время до встречи $T=\\sqrt{t_1t_2}=\\sqrt{4}=2$ часа.",
+       "Проверка: пусть $v=1$, $u=2$. За $2$ часа первый прошёл $4$, второй $2$; всего $6$ — это вся трасса. После встречи первому осталось $2$ при скорости $2$ — ровно $1$ час ✓, второму осталось $4$ при скорости $1$ — ровно $4$ часа ✓"
+      ],
+      "en": [
+       "Here $t_1=1$, $t_2=4$.",
+       "The theorem gives $\\dfrac{u}{v}=\\sqrt{\\dfrac{4}{1}}=2$: the first is twice as fast ✓",
+       "The time to the meeting is $T=\\sqrt{t_1t_2}=\\sqrt{4}=2$ hours.",
+       "Check: take $v=1$, $u=2$. In $2$ hours the first covers $4$ and the second $2$; the route is $6$ long. After the meeting the first has $2$ left at speed $2$ — exactly $1$ hour ✓, the second has $4$ left at speed $1$ — exactly $4$ hours ✓"
+      ]
+     },
+     "ans": {
+      "ru": "В $2$ раза быстрее; встретились через $2$ часа.",
+      "en": "Twice as fast; they met after $2$ hours."
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Ситуация",
+       "Что складывать",
+       "Формула"
+      ],
+      "en": [
+       "Situation",
+       "What to combine",
+       "Formula"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "лодка по течению",
+        "скорости складываются",
+        "$v_{\\text{соб}}+v_{\\text{теч}}$"
+       ],
+       [
+        "лодка против течения",
+        "скорости вычитаются",
+        "$v_{\\text{соб}}-v_{\\text{теч}}$"
+       ],
+       [
+        "плот",
+        "своей скорости нет",
+        "$v_{\\text{теч}}$"
+       ],
+       [
+        "идти по движущемуся эскалатору",
+        "скорости складываются",
+        "$v_{\\text{чел}}+v_{\\text{эск}}$"
+       ],
+       [
+        "догонять",
+        "разность скоростей",
+        "$u-v$"
+       ],
+       [
+        "идти навстречу",
+        "сумма скоростей",
+        "$u+v$"
+       ],
+       [
+        "круговая трасса, один круг разрыва",
+        "разность скоростей",
+        "$t=\\dfrac{L}{u-v}$"
+       ]
+      ],
+      "en": [
+       [
+        "boat downstream",
+        "speeds add",
+        "$v_{\\text{own}}+v_{\\text{flow}}$"
+       ],
+       [
+        "boat upstream",
+        "speeds subtract",
+        "$v_{\\text{own}}-v_{\\text{flow}}$"
+       ],
+       [
+        "a raft",
+        "it has no speed of its own",
+        "$v_{\\text{flow}}$"
+       ],
+       [
+        "walking on a moving escalator",
+        "speeds add",
+        "$v_{\\text{walk}}+v_{\\text{esc}}$"
+       ],
+       [
+        "chasing",
+        "difference of speeds",
+        "$u-v$"
+       ],
+       [
+        "head-on",
+        "sum of speeds",
+        "$u+v$"
+       ],
+       [
+        "circular track, one lap behind",
+        "difference of speeds",
+        "$t=\\dfrac{L}{u-v}$"
+       ]
+      ]
      }
     }
    ]
@@ -311,6 +535,56 @@ window.LESSONS[8] = {
       "ru": "Найдя корни квадратного уравнения, **всегда** проверяйте их на осмысленность. Отрицательное время, отрицательная масса, концентрация больше $100\\%$ — всё это посторонние корни, и за неотброшенный посторонний корень снимают баллы.",
       "en": "Having found the roots of a quadratic, **always** test them against the story. A negative time, a negative mass, a concentration above $100\\%$ — these are extraneous roots, and leaving one in costs marks."
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Производительности складываются",
+      "en": "Work rates add"
+     },
+     "text": {
+      "ru": "Если первый исполнитель делает всю работу за $a$ единиц времени, а второй за $b$, то вместе они справятся за $$t=\\frac{ab}{a+b}$$ единиц времени — среднее гармоническое, делённое на $2$.",
+      "en": "If the first worker finishes the whole job in $a$ units of time and the second in $b$, together they need $$t=\\frac{ab}{a+b}$$ units — half of the harmonic mean."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Примем всю работу за $1$. Тогда производительность (доля работы в единицу времени) первого равна $\\dfrac1a$, второго $\\dfrac1b$.\n\nЗа время $t$ совместной работы будет выполнено $$\\frac{t}{a}+\\frac{t}{b}$$ долей работы. Приравняем это к $1$: $$t\\left(\\frac1a+\\frac1b\\right)=1\\quad\\Longrightarrow\\quad t=\\frac{1}{\\frac1a+\\frac1b}=\\frac{ab}{a+b} \\quad\\checkmark\\qquad\\blacksquare$$\n\n**Почему производительности складываются, а времена — нет.** Работа за время $t$ аддитивна: сделанное первым плюс сделанное вторым. Время же — величина обратная, а обратные величины не складываются.",
+      "en": "Call the whole job $1$. Then the rate (fraction of the job per unit time) of the first is $\\dfrac1a$ and of the second $\\dfrac1b$.\n\nIn time $t$ of joint work they complete $$\\frac{t}{a}+\\frac{t}{b}$$ of the job. Set this equal to $1$: $$t\\left(\\frac1a+\\frac1b\\right)=1\\quad\\Longrightarrow\\quad t=\\frac{ab}{a+b} \\quad\\checkmark\\qquad\\blacksquare$$\n\n**Why rates add but times do not.** Work done in time $t$ is additive: what the first did plus what the second did. Time is the reciprocal quantity, and reciprocals do not add."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Формула $t=\\dfrac{ab}{a+b}$ — та же, что для сопротивления двух параллельных проводников и для фокусного расстояния тонкой линзы. Всюду, где складываются «обратные величины», работает одна и та же арифметика.\n\nДля $n$ исполнителей: $$\\frac1t=\\frac1{a_1}+\\frac1{a_2}+\\dots+\\frac1{a_n}.$$ Если кто-то мешает (вытекающая труба), его производительность входит со знаком минус.",
+      "en": "The formula $t=\\dfrac{ab}{a+b}$ is the same as for two resistors in parallel and for the focal length of a thin lens. Wherever reciprocals add, the arithmetic is identical.\n\nFor $n$ workers: $$\\frac1t=\\frac1{a_1}+\\frac1{a_2}+\\dots+\\frac1{a_n}.$$ If one of them works against the others (a draining pipe), its rate enters with a minus sign."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Первая труба наполняет бассейн за $3$ часа, вторая за $6$ часов, а третья (сливная) опорожняет полный бассейн за $4$ часа. За сколько наполнится бассейн, если открыть все три?",
+      "en": "The first pipe fills a pool in $3$ hours, the second in $6$, and a third (a drain) empties a full pool in $4$. How long does filling take with all three open?"
+     },
+     "steps": {
+      "ru": [
+       "Производительности: $\\dfrac13$, $\\dfrac16$ и $-\\dfrac14$ бассейна в час.",
+       "Суммарная производительность: $$\\frac13+\\frac16-\\frac14=\\frac{4+2-3}{12}=\\frac{3}{12}=\\frac14 .$$",
+       "Значит бассейн наполнится за $t=\\dfrac{1}{1/4}=4$ часа ✓",
+       "Проверка: за $4$ часа первая нальёт $\\tfrac43$, вторая $\\tfrac23$, третья выльет $1$; итого $\\tfrac43+\\tfrac23-1=1$ ✓"
+      ],
+      "en": [
+       "The rates are $\\dfrac13$, $\\dfrac16$ and $-\\dfrac14$ pools per hour.",
+       "Total rate: $$\\frac13+\\frac16-\\frac14=\\frac{4+2-3}{12}=\\frac14 .$$",
+       "So the pool fills in $t=\\dfrac{1}{1/4}=4$ hours ✓",
+       "Check: in $4$ hours the first adds $\\tfrac43$, the second $\\tfrac23$, the drain removes $1$; total $\\tfrac43+\\tfrac23-1=1$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "За $4$ часа.",
+      "en": "In $4$ hours."
+     }
     }
    ]
   },
@@ -396,6 +670,161 @@ window.LESSONS[8] = {
       "ru": "Удобный язык: изменение на $p\\%$ — это умножение на коэффициент $1+\\tfrac{p}{100}$. Несколько изменений подряд — это произведение коэффициентов. Например, три подорожания по $10\\%$ дают коэффициент $1{,}1^{3}=1{,}331$, то есть рост на $33{,}1\\%$, а вовсе не на $30\\%$.",
       "en": "A convenient language: a change of $p\\%$ means multiplying by the factor $1+\\tfrac{p}{100}$. Several changes in a row multiply their factors. Three successive rises of $10\\%$ give the factor $1.1^{3}=1.331$, a rise of $33.1\\%$ rather than $30\\%$."
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Что сохраняется, а что нет",
+      "en": "What is conserved and what is not"
+     },
+     "text": {
+      "ru": "При смешивании растворов **аддитивны** масса раствора и масса чистого вещества. Концентрация **не аддитивна**: её нельзя складывать, а только усреднять с весами.",
+      "en": "When solutions are mixed, the mass of the solution and the mass of the pure substance are **additive**. Concentration is **not**: it may only be averaged with weights, never added."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Универсальный совет для всей темы.** Заведите таблицу с тремя столбцами: «масса раствора», «доля вещества», «масса вещества», и по строке на каждый раствор плюс строку «итого». Третий столбец есть произведение первых двух, а строка «итого» суммируется по первому и третьему столбцам — **но не по второму**. Эта таблица решает почти любую задачу на смеси.",
+      "en": "**One piece of advice for the whole topic.** Draw a table with three columns — \"mass of solution\", \"fraction of substance\", \"mass of substance\" — one row per solution plus a \"total\" row. The third column is the product of the first two, and the total row sums the first and third columns — **but never the second**. This table solves nearly every mixture problem."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Смеси и проценты: правило креста и повторные операции",
+    "en": "Mixtures and percentages: alligation and repeated operations"
+   },
+   "blocks": [
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Концентрация смеси",
+      "en": "The concentration of a mixture"
+     },
+     "text": {
+      "ru": "Если смешать $m_1$ раствора концентрации $c_1$ и $m_2$ раствора концентрации $c_2$, то концентрация смеси равна $$c=\\frac{c_1m_1+c_2m_2}{m_1+m_2},$$ то есть **взвешенному среднему** исходных концентраций. В частности, $c$ всегда лежит между $c_1$ и $c_2$.",
+      "en": "Mixing $m_1$ of a solution of concentration $c_1$ with $m_2$ of concentration $c_2$ gives a mixture of concentration $$c=\\frac{c_1m_1+c_2m_2}{m_1+m_2},$$ the **weighted average** of the two. In particular $c$ always lies between $c_1$ and $c_2$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Считаем чистое вещество. В первом растворе его $c_1m_1$, во втором $c_2m_2$; при смешивании оно не исчезает и не появляется, поэтому в смеси его $c_1m_1+c_2m_2$. Общая масса смеси равна $m_1+m_2$, и концентрация есть отношение ✓\n\nТо, что $c$ лежит между $c_1$ и $c_2$, видно из записи $$c=\\lambda c_1+\\left(1-\\lambda\\right)c_2,\\qquad \\lambda=\\frac{m_1}{m_1+m_2}\\in\\left[0,1\\right],$$ — это точка отрезка с концами $c_1$ и $c_2$ ✓ $\\blacksquare$",
+      "en": "Count the pure substance. The first solution holds $c_1m_1$ of it, the second $c_2m_2$; mixing neither creates nor destroys it, so the mixture holds $c_1m_1+c_2m_2$. Its total mass is $m_1+m_2$, and the concentration is the ratio ✓\n\nThat $c$ lies between $c_1$ and $c_2$ is clear from $$c=\\lambda c_1+\\left(1-\\lambda\\right)c_2,\\qquad \\lambda=\\frac{m_1}{m_1+m_2}\\in\\left[0,1\\right],$$ a point of the segment with endpoints $c_1$ and $c_2$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Правило креста (правило смешения)",
+      "en": "The rule of alligation"
+     },
+     "text": {
+      "ru": "Чтобы получить концентрацию $c$ из растворов с концентрациями $c_1<c<c_2$, их надо взять в отношении $$\\frac{m_1}{m_2}=\\frac{c_2-c}{c-c_1}.$$ Иначе говоря, **массы обратно пропорциональны расстояниям от искомой концентрации**.",
+      "en": "To obtain a concentration $c$ from solutions of concentrations $c_1<c<c_2$, take them in the ratio $$\\frac{m_1}{m_2}=\\frac{c_2-c}{c-c_1}.$$ In words: **the masses are inversely proportional to the distances from the target concentration**."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Запишем условие $\\dfrac{c_1m_1+c_2m_2}{m_1+m_2}=c$ и умножим на знаменатель: $$c_1m_1+c_2m_2=c\\,m_1+c\\,m_2 .$$\n\nСоберём члены с $m_1$ слева, с $m_2$ справа: $$m_1\\left(c-c_1\\right)=m_2\\left(c_2-c\\right),$$ откуда и следует требуемое отношение ✓ $\\blacksquare$\n\nОбе скобки положительны, поскольку $c$ лежит строго между $c_1$ и $c_2$ — иначе задача неразрешима.",
+      "en": "Write the condition $\\dfrac{c_1m_1+c_2m_2}{m_1+m_2}=c$ and clear the denominator: $$c_1m_1+c_2m_2=c\\,m_1+c\\,m_2 .$$\n\nCollect the $m_1$ terms on the left and the $m_2$ terms on the right: $$m_1\\left(c-c_1\\right)=m_2\\left(c_2-c\\right),$$ which is the stated ratio ✓ $\\blacksquare$\n\nBoth brackets are positive because $c$ lies strictly between $c_1$ and $c_2$ — otherwise the task is impossible."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Сколько литров $10\\%$-го и $40\\%$-го растворов нужно взять, чтобы получить $12$ литров $25\\%$-го?",
+      "en": "How many litres of a $10\\%$ and a $40\\%$ solution are needed to make $12$ litres of a $25\\%$ solution?"
+     },
+     "steps": {
+      "ru": [
+       "Расстояния от цели: $25-10=15$ и $40-25=15$.",
+       "По правилу креста $\\dfrac{m_1}{m_2}=\\dfrac{15}{15}=1$ — растворы берутся поровну.",
+       "Значит по $6$ литров каждого.",
+       "Проверка: чистого вещества $0{,}1\\cdot6+0{,}4\\cdot6=3$ литра, а $\\dfrac{3}{12}=0{,}25$ ✓"
+      ],
+      "en": [
+       "Distances from the target: $25-10=15$ and $40-25=15$.",
+       "Alligation gives $\\dfrac{m_1}{m_2}=\\dfrac{15}{15}=1$ — equal parts.",
+       "So $6$ litres of each.",
+       "Check: the pure substance is $0.1\\cdot6+0.4\\cdot6=3$ litres, and $\\dfrac{3}{12}=0.25$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "По $6$ литров каждого раствора.",
+      "en": "$6$ litres of each."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Повторное разбавление",
+      "en": "Repeated dilution"
+     },
+     "text": {
+      "ru": "Из сосуда объёма $V$, полностью заполненного раствором концентрации $c_0$, отливают $k$ литров и доливают столько же чистой воды. После $n$ таких операций концентрация равна $$c_n=c_0\\left(1-\\frac{k}{V}\\right)^{n}.$$",
+      "en": "A vessel of volume $V$ is full of a solution of concentration $c_0$. Each operation removes $k$ litres and replaces them with pure water. After $n$ such operations the concentration is $$c_n=c_0\\left(1-\\frac{k}{V}\\right)^{n}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Проследим за одной операцией. Пусть перед ней концентрация равна $c$, значит чистого вещества $cV$.\n\nОтливая $k$ литров **раствора** (а не воды!), мы убираем долю $\\dfrac{k}{V}$ всего содержимого, в том числе долю $\\dfrac{k}{V}$ вещества. Остаётся $$cV\\left(1-\\frac{k}{V}\\right).$$\n\nДоливание воды не меняет количество вещества, но возвращает объём к $V$. Значит новая концентрация равна $$c\\left(1-\\frac{k}{V}\\right).$$\n\nКаждая операция умножает концентрацию на один и тот же множитель $q=1-\\dfrac{k}{V}$: концентрации образуют геометрическую прогрессию. После $n$ шагов получаем $c_0q^{\\,n}$ ✓ $\\blacksquare$",
+      "en": "Follow one operation. Before it the concentration is $c$, so the vessel holds $cV$ of the substance.\n\nRemoving $k$ litres of **solution** (not of water) removes the fraction $\\dfrac{k}{V}$ of everything inside, the substance included. What remains is $$cV\\left(1-\\frac{k}{V}\\right).$$\n\nAdding water changes no amount of substance but restores the volume to $V$. So the new concentration is $$c\\left(1-\\frac{k}{V}\\right).$$\n\nEvery operation multiplies the concentration by the same factor $q=1-\\dfrac{k}{V}$: the concentrations form a geometric progression. After $n$ steps it is $c_0q^{\\,n}$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Из бочки в $40$ литров спирта отлили $4$ литра и долили водой; операцию повторили ещё дважды. Какова концентрация спирта в конце?",
+      "en": "From a $40$-litre barrel of pure alcohol, $4$ litres are drawn off and replaced by water; the operation is repeated twice more. What is the final concentration?"
+     },
+     "steps": {
+      "ru": [
+       "Здесь $c_0=1$, $V=40$, $k=4$, значит множитель $q=1-\\dfrac{4}{40}=0{,}9$.",
+       "Операций три, поэтому $c_3=0{,}9^{3}=0{,}729$.",
+       "То есть $72{,}9\\%$, в бочке осталось $40\\cdot0{,}729=29{,}16$ литра спирта.",
+       "Обратите внимание: ответ **не** $100\\%-3\\cdot10\\%=70\\%$ — со второй операции вместе со спиртом отливается уже и вода."
+      ],
+      "en": [
+       "Here $c_0=1$, $V=40$, $k=4$, so the factor is $q=1-\\dfrac{4}{40}=0.9$.",
+       "Three operations give $c_3=0.9^{3}=0.729$.",
+       "That is $72.9\\%$; the barrel holds $40\\cdot0.729=29.16$ litres of alcohol.",
+       "Note the answer is **not** $100\\%-3\\cdot10\\%=70\\%$ — from the second operation onwards the liquid drawn off already contains water."
+      ]
+     },
+     "ans": {
+      "ru": "$72{,}9\\%$ ($29{,}16$ литра спирта).",
+      "en": "$72.9\\%$ ($29.16$ litres of alcohol)."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Композиция процентных изменений",
+      "en": "Composing percentage changes"
+     },
+     "text": {
+      "ru": "Изменение величины на $p\\%$, а затем на $q\\%$ равносильно однократному изменению на $$\\left(p+q+\\frac{pq}{100}\\right)\\%.$$ В частности, повышение на $x\\%$ с последующим понижением на $x\\%$ всегда даёт **убыток** $\\dfrac{x^{2}}{100}\\%$.",
+      "en": "Changing a quantity by $p\\%$ and then by $q\\%$ is the same as a single change by $$\\left(p+q+\\frac{pq}{100}\\right)\\%.$$ In particular, a rise of $x\\%$ followed by a fall of $x\\%$ always leaves a **loss** of $\\dfrac{x^{2}}{100}\\%$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Изменение на $p\\%$ — это умножение на $\\left(1+\\dfrac{p}{100}\\right)$. Два изменения подряд — умножение на произведение: $$\\left(1+\\frac{p}{100}\\right)\\left(1+\\frac{q}{100}\\right)=1+\\frac{p+q}{100}+\\frac{pq}{10000}=1+\\frac{p+q+\\frac{pq}{100}}{100} \\quad\\checkmark$$\n\nПри $q=-p$ произведение равно $$\\left(1+\\frac{p}{100}\\right)\\left(1-\\frac{p}{100}\\right)=1-\\frac{p^{2}}{10000}<1 ,$$ то есть величина уменьшилась на $\\dfrac{p^{2}}{100}\\%$ ✓ $\\blacksquare$\n\nЭто разность квадратов: убыток возникает всегда, независимо от порядка операций.",
+      "en": "A change by $p\\%$ is multiplication by $\\left(1+\\dfrac{p}{100}\\right)$. Two changes multiply: $$\\left(1+\\frac{p}{100}\\right)\\left(1+\\frac{q}{100}\\right)=1+\\frac{p+q}{100}+\\frac{pq}{10000} \\quad\\checkmark$$\n\nFor $q=-p$ the product is $$\\left(1+\\frac{p}{100}\\right)\\left(1-\\frac{p}{100}\\right)=1-\\frac{p^{2}}{10000}<1 ,$$ a loss of $\\dfrac{p^{2}}{100}\\%$ ✓ $\\blacksquare$\n\nIt is a difference of squares: the loss appears whatever the order of the two operations."
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "Проценты **не складываются**, потому что берутся от разных баз. Скидка $50\\%$, а затем ещё $50\\%$ — это не «бесплатно», а $$0{,}5\\cdot0{,}5=0{,}25 ,$$ то есть скидка $75\\%$. Всегда переводите проценты в множители.",
+      "en": "Percentages **do not add**, because they are taken of different bases. A $50\\%$ discount followed by another $50\\%$ is not \"free\" but $$0.5\\cdot0.5=0.25 ,$$ a $75\\%$ discount. Always turn percentages into multipliers."
+     }
     }
    ]
   },
@@ -474,6 +903,207 @@ window.LESSONS[8] = {
      "text": {
       "ru": "Для симметричных систем от трёх переменных работают величины $$\\sigma_1=x+y+z,\\qquad\\sigma_2=xy+yz+zx,\\qquad\\sigma_3=xyz,$$ а сами числа восстанавливаются как корни кубического уравнения $$t^{3}-\\sigma_1t^{2}+\\sigma_2t-\\sigma_3=0 .$$ Если коэффициенты целые, целые корни ищут среди делителей $\\sigma_3$.",
       "en": "For symmetric systems in three variables the working quantities are $$\\sigma_1=x+y+z,\\qquad\\sigma_2=xy+yz+zx,\\qquad\\sigma_3=xyz,$$ and the numbers themselves are the roots of the cubic $$t^{3}-\\sigma_1t^{2}+\\sigma_2t-\\sigma_3=0 .$$ With integer coefficients, look for integer roots among the divisors of $\\sigma_3$."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Системы: теория и приёмы",
+    "en": "Systems: theory and techniques"
+   },
+   "blocks": [
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Число решений линейной системы",
+      "en": "How many solutions a linear system has"
+     },
+     "text": {
+      "ru": "Рассмотрим систему $$\\begin{cases}a_1x+b_1y=c_1,\\\\ a_2x+b_2y=c_2.\\end{cases}$$ Обозначим $D=a_1b_2-a_2b_1$.\n\n- Если $D\\ne0$, решение существует и единственно: $$x=\\frac{c_1b_2-c_2b_1}{D},\\qquad y=\\frac{a_1c_2-a_2c_1}{D}.$$\n- Если $D=0$, то система либо не имеет решений, либо имеет их бесконечно много.",
+      "en": "Consider the system $$\\begin{cases}a_1x+b_1y=c_1,\\\\ a_2x+b_2y=c_2.\\end{cases}$$ Put $D=a_1b_2-a_2b_1$.\n\n- If $D\\ne0$ there is exactly one solution: $$x=\\frac{c_1b_2-c_2b_1}{D},\\qquad y=\\frac{a_1c_2-a_2c_1}{D}.$$\n- If $D=0$ the system has either no solutions or infinitely many."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Умножим первое уравнение на $b_2$, второе на $b_1$ и вычтем: члены с $y$ уничтожаются, остаётся $$\\left(a_1b_2-a_2b_1\\right)x=c_1b_2-c_2b_1 ,\\qquad\\text{то есть}\\qquad Dx=c_1b_2-c_2b_1 .$$\n\nСимметрично (умножив на $a_2$ и $a_1$ и вычтя) получаем $Dy=a_1c_2-a_2c_1$.\n\nПри $D\\ne0$ обе величины определены однозначно, и прямая подстановка показывает, что найденная пара действительно является решением ✓\n\nПри $D=0$ левые части обоих равенств равны нулю. Если хотя бы одна правая часть отлична от нуля, решений нет. Если обе равны нулю, то строки коэффициентов пропорциональны, оба уравнения задают одну и ту же прямую (или одно из них тривиально), и решений бесконечно много ✓ $\\blacksquare$\n\n**Геометрически:** два уравнения — это две прямые. Они либо пересекаются в одной точке ($D\\ne0$), либо параллельны (решений нет), либо совпадают (решений бесконечно много).",
+      "en": "Multiply the first equation by $b_2$, the second by $b_1$ and subtract: the $y$ terms cancel, leaving $$\\left(a_1b_2-a_2b_1\\right)x=c_1b_2-c_2b_1 ,\\qquad\\text{i.e.}\\qquad Dx=c_1b_2-c_2b_1 .$$\n\nSymmetrically (multiplying by $a_2$ and $a_1$) we get $Dy=a_1c_2-a_2c_1$.\n\nIf $D\\ne0$ both are determined uniquely, and substituting back shows the pair really is a solution ✓\n\nIf $D=0$ the left sides both vanish. If either right side is non-zero there is no solution. If both vanish the coefficient rows are proportional, the two equations describe the same line (or one is trivial), and there are infinitely many solutions ✓ $\\blacksquare$\n\n**Geometrically:** the two equations are two lines. They either meet in one point ($D\\ne0$), or are parallel (no solutions), or coincide (infinitely many)."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Симметрические системы и теорема Виета",
+      "en": "Symmetric systems and Vieta theorem"
+     },
+     "text": {
+      "ru": "Числа $x$ и $y$ с $$x+y=s,\\qquad xy=p$$ существуют (как вещественные) тогда и только тогда, когда $s^{2}\\ge4p$, и являются корнями квадратного уравнения $$t^{2}-st+p=0 .$$",
+      "en": "Numbers $x$ and $y$ with $$x+y=s,\\qquad xy=p$$ exist (as reals) if and only if $s^{2}\\ge4p$, and they are the roots of $$t^{2}-st+p=0 .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Рассмотрим многочлен $$\\left(t-x\\right)\\left(t-y\\right)=t^{2}-\\left(x+y\\right)t+xy=t^{2}-st+p .$$ Его корни — в точности $x$ и $y$ ✓\n\nОбратно, если $t^{2}-st+p=0$ имеет корни $t_1,t_2$, то по теореме Виета $t_1+t_2=s$ и $t_1t_2=p$, то есть пара $\\left(t_1,t_2\\right)$ подходит ✓\n\nВещественные корни существуют тогда и только тогда, когда дискриминант $s^{2}-4p$ неотрицателен ✓ $\\blacksquare$",
+      "en": "Consider the polynomial $$\\left(t-x\\right)\\left(t-y\\right)=t^{2}-\\left(x+y\\right)t+xy=t^{2}-st+p ,$$ whose roots are exactly $x$ and $y$ ✓\n\nConversely, if $t^{2}-st+p=0$ has roots $t_1,t_2$ then Vieta gives $t_1+t_2=s$ and $t_1t_2=p$, so the pair $\\left(t_1,t_2\\right)$ works ✓\n\nReal roots exist precisely when the discriminant $s^{2}-4p$ is non-negative ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Стандартная замена.** В любой системе, симметричной относительно $x$ и $y$, вводите $s=x+y$ и $p=xy$. Все симметрические выражения через них выражаются: $$x^{2}+y^{2}=s^{2}-2p,\\qquad x^{3}+y^{3}=s^{3}-3ps,\\qquad \\frac1x+\\frac1y=\\frac{s}{p},\\qquad \\left(x-y\\right)^{2}=s^{2}-4p .$$ Система из двух уравнений с $x,y$ превращается в систему с $s,p$, обычно гораздо более простую.",
+      "en": "**The standard substitution.** In any system symmetric in $x$ and $y$, introduce $s=x+y$ and $p=xy$. Every symmetric expression is a function of them: $$x^{2}+y^{2}=s^{2}-2p,\\qquad x^{3}+y^{3}=s^{3}-3ps,\\qquad \\frac1x+\\frac1y=\\frac{s}{p},\\qquad \\left(x-y\\right)^{2}=s^{2}-4p .$$ A system in $x,y$ turns into a system in $s,p$, usually far simpler."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Решите систему $$x+y+xy=11,\\qquad x^{2}y+xy^{2}=30 .$$",
+      "en": "Solve the system $$x+y+xy=11,\\qquad x^{2}y+xy^{2}=30 .$$"
+     },
+     "steps": {
+      "ru": [
+       "Положим $s=x+y$, $p=xy$. Второе уравнение равно $xy\\left(x+y\\right)=ps$.",
+       "Система принимает вид $$s+p=11,\\qquad sp=30 .$$",
+       "Это снова симметрическая пара! По теореме Виета $s$ и $p$ — корни уравнения $t^{2}-11t+30=0$, то есть $t=5$ и $t=6$.",
+       "**Случай 1:** $s=5$, $p=6$. Тогда $x,y$ — корни $t^{2}-5t+6=0$, то есть $\\left\\{2,3\\right\\}$.",
+       "**Случай 2:** $s=6$, $p=5$. Тогда $x,y$ — корни $t^{2}-6t+5=0$, то есть $\\left\\{1,5\\right\\}$.",
+       "Проверка пары $\\left(1,5\\right)$: $1+5+5=11$ ✓ и $1\\cdot5\\cdot6=30$ ✓"
+      ],
+      "en": [
+       "Put $s=x+y$, $p=xy$. The second equation is $xy\\left(x+y\\right)=ps$.",
+       "The system becomes $$s+p=11,\\qquad sp=30 .$$",
+       "That is a symmetric pair again! By Vieta, $s$ and $p$ are the roots of $t^{2}-11t+30=0$, namely $5$ and $6$.",
+       "**Case 1:** $s=5$, $p=6$. Then $x,y$ are the roots of $t^{2}-5t+6=0$, i.e. $\\left\\{2,3\\right\\}$.",
+       "**Case 2:** $s=6$, $p=5$. Then $x,y$ are the roots of $t^{2}-6t+5=0$, i.e. $\\left\\{1,5\\right\\}$.",
+       "Check $\\left(1,5\\right)$: $1+5+5=11$ ✓ and $1\\cdot5\\cdot6=30$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$\\left(2,3\\right)$, $\\left(3,2\\right)$, $\\left(1,5\\right)$, $\\left(5,1\\right)$.",
+      "en": "$\\left(2,3\\right)$, $\\left(3,2\\right)$, $\\left(1,5\\right)$, $\\left(5,1\\right)$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Однородные системы",
+      "en": "Homogeneous systems"
+     },
+     "text": {
+      "ru": "Уравнение вида $$Ax^{2}+Bxy+Cy^{2}=0$$ при $y\\ne0$ равносильно квадратному уравнению относительно отношения $k=\\dfrac{x}{y}$: $$Ak^{2}+Bk+C=0 .$$ Поэтому оно задаёт не более двух прямых $x=k_1y$ и $x=k_2y$.",
+      "en": "An equation of the form $$Ax^{2}+Bxy+Cy^{2}=0$$ is, for $y\\ne0$, equivalent to a quadratic in the ratio $k=\\dfrac{x}{y}$: $$Ak^{2}+Bk+C=0 .$$ Hence it describes at most two lines $x=k_1y$ and $x=k_2y$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Все слагаемые имеют одну степень $2$, поэтому деление на $y^{2}\\ne0$ даёт $$A\\left(\\frac{x}{y}\\right)^{2}+B\\frac{x}{y}+C=0 \\quad\\checkmark$$\n\nСлучай $y=0$ проверяется отдельно: тогда уравнение сводится к $Ax^{2}=0$, что при $A\\ne0$ даёт $x=0$ ✓ $\\blacksquare$",
+      "en": "Every term has the same degree $2$, so dividing by $y^{2}\\ne0$ gives $$A\\left(\\frac{x}{y}\\right)^{2}+B\\frac{x}{y}+C=0 \\quad\\checkmark$$\n\nThe case $y=0$ is checked separately: the equation becomes $Ax^{2}=0$, forcing $x=0$ when $A\\ne0$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "В системе из двух уравнений второй степени часто удаётся **исключить свободные члены**, умножив уравнения на подходящие числа и вычтя. Остаётся однородное уравнение, оно даёт $x=ky$, и подстановка в любое исходное уравнение заканчивает решение.",
+      "en": "In a system of two quadratic equations one can often **eliminate the constant terms** by scaling and subtracting. What remains is homogeneous, it yields $x=ky$, and substituting into either original equation finishes the job."
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Вид системы",
+       "Приём"
+      ],
+      "en": [
+       "Shape of the system",
+       "Technique"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "симметрична относительно $x,y$",
+        "замена $s=x+y$, $p=xy$"
+       ],
+       [
+        "меняется знак при $x\\leftrightarrow y$",
+        "замена $u=x+y$, $v=x-y$"
+       ],
+       [
+        "все члены одной степени",
+        "разделить на $y^{2}$, искать $k=x/y$"
+       ],
+       [
+        "есть свободные члены",
+        "исключить их, получив однородное уравнение"
+       ],
+       [
+        "циклическая: $f(x)=y$, $f(y)=z$, $f(z)=x$",
+        "сложить или вычесть уравнения, использовать монотонность"
+       ],
+       [
+        "произведение и сумма заданы",
+        "теорема Виета"
+       ]
+      ],
+      "en": [
+       [
+        "symmetric in $x,y$",
+        "substitute $s=x+y$, $p=xy$"
+       ],
+       [
+        "antisymmetric under $x\\leftrightarrow y$",
+        "substitute $u=x+y$, $v=x-y$"
+       ],
+       [
+        "all terms of the same degree",
+        "divide by $y^{2}$ and solve for $k=x/y$"
+       ],
+       [
+        "constant terms present",
+        "eliminate them to get a homogeneous equation"
+       ],
+       [
+        "cyclic: $f(x)=y$, $f(y)=z$, $f(z)=x$",
+        "add or subtract the equations, use monotonicity"
+       ],
+       [
+        "a sum and a product are given",
+        "Vieta theorem"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Решите систему $$x^{2}+xy=12,\\qquad xy+y^{2}=24 .$$",
+      "en": "Solve the system $$x^{2}+xy=12,\\qquad xy+y^{2}=24 .$$"
+     },
+     "steps": {
+      "ru": [
+       "Исключим свободные члены: умножим первое уравнение на $2$ и вычтем второе: $$2x^{2}+2xy-xy-y^{2}=24-24=0 ,$$ то есть $2x^{2}+xy-y^{2}=0$.",
+       "Это однородное уравнение. Разделим на $y^{2}$ (случай $y=0$ даёт $x=0$, что не подходит по второму уравнению) и обозначим $k=\\dfrac{x}{y}$: $$2k^{2}+k-1=0 .$$",
+       "Корни: $k=\\dfrac12$ и $k=-1$.",
+       "**Если $x=-y$,** первое уравнение даёт $y^{2}-y^{2}=0\\ne12$ — не подходит.",
+       "**Если $y=2x$,** первое уравнение даёт $x^{2}+2x^{2}=12$, то есть $x^{2}=4$ и $x=\\pm2$.",
+       "Ответ: $\\left(2,4\\right)$ и $\\left(-2,-4\\right)$. Проверка: $4+8=12$ ✓ и $8+16=24$ ✓"
+      ],
+      "en": [
+       "Eliminate the constants: multiply the first equation by $2$ and subtract the second: $$2x^{2}+xy-y^{2}=0 .$$",
+       "This is homogeneous. Divide by $y^{2}$ (the case $y=0$ forces $x=0$, which fails the second equation) and set $k=\\dfrac{x}{y}$: $$2k^{2}+k-1=0 .$$",
+       "The roots are $k=\\dfrac12$ and $k=-1$.",
+       "**If $x=-y$,** the first equation gives $y^{2}-y^{2}=0\\ne12$ — impossible.",
+       "**If $y=2x$,** the first equation gives $x^{2}+2x^{2}=12$, so $x^{2}=4$ and $x=\\pm2$.",
+       "Answer: $\\left(2,4\\right)$ and $\\left(-2,-4\\right)$. Check: $4+8=12$ ✓ and $8+16=24$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$\\left(2,4\\right)$ и $\\left(-2,-4\\right)$.",
+      "en": "$\\left(2,4\\right)$ and $\\left(-2,-4\\right)$."
      }
     }
    ]

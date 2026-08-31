@@ -110,7 +110,7 @@ window.LESSON_INDEX = [
    "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 8
  },
  {
   "n": 9,
@@ -124,7 +124,7 @@ window.LESSON_INDEX = [
    "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians."
   },
   "problems": 50,
-  "sections": 6
+  "sections": 10
  },
  {
   "n": 10,

@@ -117,6 +117,172 @@ window.LESSONS[9] = {
       "ru": "$40^\\circ$, $60^\\circ$, $80^\\circ$.",
       "en": "$40^\\circ$, $60^\\circ$, $80^\\circ$."
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство треугольника",
+      "en": "The triangle inequality"
+     },
+     "text": {
+      "ru": "В любом треугольнике каждая сторона меньше суммы двух других: $$a<b+c,\\qquad b<c+a,\\qquad c<a+b .$$ Обратно, для любых трёх положительных чисел, удовлетворяющих этим неравенствам, существует треугольник с такими сторонами.",
+      "en": "In any triangle each side is shorter than the sum of the other two: $$a<b+c,\\qquad b<c+a,\\qquad c<a+b .$$ Conversely, any three positive numbers satisfying these inequalities are the sides of some triangle."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Продолжим сторону $AB$ за точку $B$ и отложим отрезок $BD=BC$. Тогда $AD=c+a$.\n\nТреугольник $BCD$ равнобедренный, поэтому $\\angle BDC=\\angle BCD$. Но луч $CB$ лежит **внутри** угла $ACD$, значит $$\\angle ACD>\\angle BCD=\\angle BDC=\\angle ADC .$$\n\nВ треугольнике $ACD$ против большего угла лежит большая сторона, поэтому $$AD>AC,\\qquad\\text{то есть}\\qquad c+a>b \\quad\\checkmark$$\n\nОстальные два неравенства получаются перестановкой обозначений ✓ $\\blacksquare$\n\n**Обратное утверждение** доказывается построением: окружности радиусов $b$ и $c$ с центрами в концах отрезка длины $a$ пересекаются в точности тогда, когда расстояние между центрами меньше суммы и больше разности радиусов — а это и есть три данных неравенства.",
+      "en": "Extend the side $AB$ beyond $B$ and mark $BD=BC$. Then $AD=c+a$.\n\nThe triangle $BCD$ is isosceles, so $\\angle BDC=\\angle BCD$. But the ray $CB$ lies **inside** the angle $ACD$, hence $$\\angle ACD>\\angle BCD=\\angle BDC=\\angle ADC .$$\n\nIn the triangle $ACD$ the larger angle faces the larger side, so $$AD>AC,\\qquad\\text{i.e.}\\qquad c+a>b \\quad\\checkmark$$\n\nThe other two inequalities follow by relabelling ✓ $\\blacksquare$\n\n**The converse** is proved by construction: the circles of radii $b$ and $c$ centred at the ends of a segment of length $a$ meet exactly when the distance between the centres is less than the sum and greater than the difference of the radii — which is precisely the three inequalities."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Три неравенства удобно свернуть в одно: $$\\left|b-c\\right|<a<b+c .$$ Именно в такой форме их применяют, когда две стороны известны, а третья ищется.",
+      "en": "The three inequalities collapse into one: $$\\left|b-c\\right|<a<b+c .$$ That is the form to use when two sides are known and the third is being found."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Против большей стороны — больший угол",
+      "en": "The longer side faces the larger angle"
+     },
+     "text": {
+      "ru": "В треугольнике $ABC$ выполнено $$AB>AC\\quad\\Longleftrightarrow\\quad \\angle C>\\angle B .$$",
+      "en": "In a triangle $ABC$ $$AB>AC\\quad\\Longleftrightarrow\\quad \\angle C>\\angle B .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Прямое утверждение.** Пусть $AB>AC$. Отложим на стороне $AB$ точку $D$ с $AD=AC$. Треугольник $ACD$ равнобедренный, значит $\\angle ACD=\\angle ADC$.\n\nУгол $\\angle ADC$ — внешний для треугольника $BDC$, поэтому по теореме о внешнем угле $\\angle ADC>\\angle B$.\n\nНаконец, луч $CD$ лежит внутри угла $C$, значит $\\angle C>\\angle ACD=\\angle ADC>\\angle B$ ✓\n\n**Обратное** доказывается «от противного»: если бы $AB\\le AC$, то по уже доказанному (или по свойству равнобедренного треугольника) получилось бы $\\angle C\\le\\angle B$ — противоречие ✓ $\\blacksquare$",
+      "en": "**Forward.** Suppose $AB>AC$. Mark $D$ on $AB$ with $AD=AC$. The triangle $ACD$ is isosceles, so $\\angle ACD=\\angle ADC$.\n\nThe angle $\\angle ADC$ is exterior to the triangle $BDC$, so the exterior angle theorem gives $\\angle ADC>\\angle B$.\n\nFinally the ray $CD$ lies inside the angle $C$, so $\\angle C>\\angle ACD=\\angle ADC>\\angle B$ ✓\n\n**Converse** by contradiction: if $AB\\le AC$ then the forward statement (or the isosceles property) would give $\\angle C\\le\\angle B$ — a contradiction ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Сумма углов многоугольника",
+      "en": "The angle sum of a polygon"
+     },
+     "text": {
+      "ru": "Сумма внутренних углов выпуклого $n$-угольника равна $$\\left(n-2\\right)\\cdot180^{\\circ},$$ а сумма его внешних углов, взятых по одному при каждой вершине, всегда равна $360^{\\circ}$ — независимо от $n$.",
+      "en": "The interior angles of a convex $n$-gon add up to $$\\left(n-2\\right)\\cdot180^{\\circ},$$ while its exterior angles, one at each vertex, always add up to $360^{\\circ}$ — whatever $n$ is."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Проведём из одной вершины все диагонали. Они разбивают $n$-угольник ровно на $n-2$ треугольника (каждая новая диагональ добавляет один треугольник, а всего диагоналей из вершины $n-3$). Сумма углов всех треугольников равна сумме углов многоугольника, значит она равна $\\left(n-2\\right)\\cdot180^{\\circ}$ ✓\n\nВнешний угол при вершине дополняет внутренний до $180^{\\circ}$, поэтому сумма всех внешних равна $$n\\cdot180^{\\circ}-\\left(n-2\\right)\\cdot180^{\\circ}=360^{\\circ} \\quad\\checkmark\\qquad\\blacksquare$$\n\nВторое утверждение имеет наглядное объяснение: обходя многоугольник по периметру, мы поворачиваемся ровно на один полный оборот.",
+      "en": "Draw all the diagonals from one vertex. They cut the $n$-gon into exactly $n-2$ triangles (each new diagonal adds one triangle, and there are $n-3$ diagonals from a vertex). The angles of all these triangles make up the angles of the polygon, so the sum is $\\left(n-2\\right)\\cdot180^{\\circ}$ ✓\n\nAn exterior angle completes its interior angle to $180^{\\circ}$, so all of them add to $$n\\cdot180^{\\circ}-\\left(n-2\\right)\\cdot180^{\\circ}=360^{\\circ} \\quad\\checkmark\\qquad\\blacksquare$$\n\nThe second statement has a vivid explanation: walking once around the polygon you turn through exactly one full revolution."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Признаки равенства: полный список",
+    "en": "The congruence criteria in full"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Треугольник определяется шестью величинами — тремя сторонами и тремя углами. Признак равенства говорит, какие **три** из них достаточно совпасть, чтобы совпали и остальные три. Ниже — все работающие наборы и один знаменитый неработающий.",
+      "en": "A triangle is described by six quantities — three sides and three angles. A congruence criterion says which **three** of them need to agree for the other three to follow. Below are all the sets that work, and one famous set that does not."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Первый признак (две стороны и угол между ними)",
+      "en": "SAS — two sides and the included angle"
+     },
+     "text": {
+      "ru": "Если $AB=A_1B_1$, $AC=A_1C_1$ и $\\angle A=\\angle A_1$, то $\\triangle ABC=\\triangle A_1B_1C_1$.",
+      "en": "If $AB=A_1B_1$, $AC=A_1C_1$ and $\\angle A=\\angle A_1$ then $\\triangle ABC\\cong\\triangle A_1B_1C_1$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Наложим один треугольник на другой. Совместим вершину $A$ с $A_1$ и направим луч $AB$ вдоль луча $A_1B_1$. Так как $AB=A_1B_1$, точка $B$ попадёт в $B_1$.\n\nУглы при вершинах равны, поэтому луч $AC$ ляжет вдоль луча $A_1C_1$ (при необходимости отразив треугольник относительно прямой $A_1B_1$). Так как $AC=A_1C_1$, точка $C$ попадёт в $C_1$.\n\nВсе три вершины совместились, значит совместились и треугольники ✓ $\\blacksquare$",
+      "en": "Superimpose one triangle on the other. Put $A$ on $A_1$ and the ray $AB$ along the ray $A_1B_1$. Since $AB=A_1B_1$, the point $B$ lands on $B_1$.\n\nThe angles at the vertices are equal, so the ray $AC$ falls along $A_1C_1$ (reflecting in the line $A_1B_1$ first if necessary). Since $AC=A_1C_1$, the point $C$ lands on $C_1$.\n\nAll three vertices coincide, hence so do the triangles ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Второй признак (сторона и два прилежащих угла)",
+      "en": "ASA — a side and the two angles on it"
+     },
+     "text": {
+      "ru": "Если $AB=A_1B_1$, $\\angle A=\\angle A_1$ и $\\angle B=\\angle B_1$, то треугольники равны.",
+      "en": "If $AB=A_1B_1$, $\\angle A=\\angle A_1$ and $\\angle B=\\angle B_1$ then the triangles are congruent."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Третий признак (три стороны)",
+      "en": "SSS — three sides"
+     },
+     "text": {
+      "ru": "Если $AB=A_1B_1$, $BC=B_1C_1$ и $CA=C_1A_1$, то треугольники равны.",
+      "en": "If $AB=A_1B_1$, $BC=B_1C_1$ and $CA=C_1A_1$ then the triangles are congruent."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Четвёртый признак (сторона и два угла, один из которых не прилежит)",
+      "en": "AAS — a side and two angles, one of them opposite"
+     },
+     "text": {
+      "ru": "Если $AB=A_1B_1$, $\\angle A=\\angle A_1$ и $\\angle C=\\angle C_1$, то треугольники равны.",
+      "en": "If $AB=A_1B_1$, $\\angle A=\\angle A_1$ and $\\angle C=\\angle C_1$ then the triangles are congruent."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Это следствие второго признака и теоремы о сумме углов. Действительно, $$\\angle B=180^{\\circ}-\\angle A-\\angle C=180^{\\circ}-\\angle A_1-\\angle C_1=\\angle B_1 ,$$ значит совпадают оба угла, прилежащие к стороне $AB=A_1B_1$, и работает второй признак ✓ $\\blacksquare$\n\nПолезное следствие: **два угла определяют форму треугольника**, а одна сторона задаёт его размер.",
+      "en": "This follows from ASA together with the angle sum. Indeed $$\\angle B=180^{\\circ}-\\angle A-\\angle C=180^{\\circ}-\\angle A_1-\\angle C_1=\\angle B_1 ,$$ so both angles on the side $AB=A_1B_1$ agree and ASA applies ✓ $\\blacksquare$\n\nA useful consequence: **two angles fix the shape** of a triangle, and one side fixes its size."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Признак для прямоугольных треугольников (катет и гипотенуза)",
+      "en": "HL — hypotenuse and a leg"
+     },
+     "text": {
+      "ru": "Два прямоугольных треугольника равны, если равны их гипотенузы и по одному катету.",
+      "en": "Two right triangles are congruent if their hypotenuses are equal and one pair of legs is equal."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "По теореме Пифагора второй катет определяется однозначно: $$b=\\sqrt{c^{2}-a^{2}} .$$ Значит все три стороны совпадают, и работает третий признак ✓ $\\blacksquare$",
+      "en": "By the Pythagorean theorem the second leg is determined: $$b=\\sqrt{c^{2}-a^{2}} .$$ So all three sides agree and SSS applies ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "**Признака «две стороны и угол, не заключённый между ними» не существует.** Возьмём $\\angle A=30^{\\circ}$, $AB=10$ и $BC=6$. Из точки $B$ окружность радиуса $6$ пересекает вторую сторону угла в **двух** точках, потому что $6$ больше расстояния от $B$ до этой стороны ($10\\sin30^{\\circ}=5$), но меньше $AB=10$. Получаются два разных, неравных треугольника с одними и теми же тремя элементами.\n\nИсключения, когда набор «SSA» всё же работает: если угол прямой или тупой, а также если сторона, противолежащая известному углу, не меньше второй известной стороны.",
+      "en": "**There is no \"two sides and a non-included angle\" criterion.** Take $\\angle A=30^{\\circ}$, $AB=10$ and $BC=6$. The circle of radius $6$ about $B$ meets the other arm of the angle in **two** points, because $6$ exceeds the distance from $B$ to that arm ($10\\sin30^{\\circ}=5$) but is smaller than $AB=10$. Two different, non-congruent triangles share the same three elements.\n\nSSA does work in two special cases: when the known angle is right or obtuse, and when the side opposite the known angle is at least as long as the other known side."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Как искать равные треугольники в задаче.** Отметьте на чертеже всё, что дано: равные отрезки — одинаковыми штрихами, равные углы — одинаковыми дужками. Затем ищите пару треугольников, у которых набралось три помеченных элемента. Общая сторона и вертикальные углы — «бесплатные» равенства, о которых чаще всего забывают.",
+      "en": "**How to find congruent triangles in a problem.** Mark everything given on the figure: equal segments with matching ticks, equal angles with matching arcs. Then look for a pair of triangles with three marked elements. A shared side and a pair of vertical angles are the \"free\" equalities that people most often overlook."
+     }
     }
    ]
   },
@@ -358,6 +524,136 @@ window.LESSONS[9] = {
   },
   {
    "h": {
+    "ru": "Подобие: признаки и следствия",
+    "en": "Similarity: criteria and consequences"
+   },
+   "blocks": [
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Теорема Фалеса о пропорциональных отрезках",
+      "en": "The intercept theorem of Thales"
+     },
+     "text": {
+      "ru": "Если прямая, параллельная стороне $BC$ треугольника $ABC$, пересекает стороны $AB$ и $AC$ в точках $M$ и $N$, то $$\\frac{AM}{MB}=\\frac{AN}{NC}\\qquad\\text{и}\\qquad \\frac{AM}{AB}=\\frac{AN}{AC}=\\frac{MN}{BC}.$$",
+      "en": "If a line parallel to the side $BC$ of a triangle $ABC$ meets $AB$ at $M$ and $AC$ at $N$ then $$\\frac{AM}{MB}=\\frac{AN}{NC}\\qquad\\text{and}\\qquad \\frac{AM}{AB}=\\frac{AN}{AC}=\\frac{MN}{BC}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Сравним площади. Треугольники $AMN$ и $MBN$ имеют общую высоту из вершины $N$ на прямую $AB$, поэтому $$\\frac{S_{AMN}}{S_{MBN}}=\\frac{AM}{MB}.$$\n\nТочно так же треугольники $AMN$ и $MNC$ имеют общую высоту из $M$ на прямую $AC$, поэтому $$\\frac{S_{AMN}}{S_{MNC}}=\\frac{AN}{NC}.$$\n\nОсталось заметить, что $S_{MBN}=S_{MNC}$: у этих треугольников общее основание $MN$, а вершины $B$ и $C$ лежат на прямой $BC$, параллельной $MN$, значит высоты к $MN$ у них одинаковы ✓\n\nЗначит правые части двух пропорций равны, откуда $\\dfrac{AM}{MB}=\\dfrac{AN}{NC}$ ✓ $\\blacksquare$",
+      "en": "Compare areas. The triangles $AMN$ and $MBN$ share the altitude from $N$ to the line $AB$, so $$\\frac{S_{AMN}}{S_{MBN}}=\\frac{AM}{MB}.$$\n\nLikewise $AMN$ and $MNC$ share the altitude from $M$ to the line $AC$, so $$\\frac{S_{AMN}}{S_{MNC}}=\\frac{AN}{NC}.$$\n\nNow note that $S_{MBN}=S_{MNC}$: these triangles share the base $MN$, and their apexes $B$ and $C$ lie on the line $BC$ parallel to $MN$, so their altitudes to $MN$ are equal ✓\n\nHence the two right-hand sides agree, giving $\\dfrac{AM}{MB}=\\dfrac{AN}{NC}$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Три признака подобия",
+      "en": "The three similarity criteria"
+     },
+     "text": {
+      "ru": "Треугольники $ABC$ и $A_1B_1C_1$ подобны, если выполнено любое из условий:\n\n- **по двум углам:** $\\angle A=\\angle A_1$ и $\\angle B=\\angle B_1$;\n- **по двум сторонам и углу между ними:** $\\dfrac{AB}{A_1B_1}=\\dfrac{AC}{A_1C_1}$ и $\\angle A=\\angle A_1$;\n- **по трём сторонам:** $\\dfrac{AB}{A_1B_1}=\\dfrac{BC}{B_1C_1}=\\dfrac{CA}{C_1A_1}$.",
+      "en": "Triangles $ABC$ and $A_1B_1C_1$ are similar if any one of the following holds:\n\n- **AA:** $\\angle A=\\angle A_1$ and $\\angle B=\\angle B_1$;\n- **SAS:** $\\dfrac{AB}{A_1B_1}=\\dfrac{AC}{A_1C_1}$ and $\\angle A=\\angle A_1$;\n- **SSS:** $\\dfrac{AB}{A_1B_1}=\\dfrac{BC}{B_1C_1}=\\dfrac{CA}{C_1A_1}$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Разберём признак по двум углам; остальные доказываются так же.\n\nПусть $k=\\dfrac{AB}{A_1B_1}$. Отложим на луче $AB$ отрезок $AM=A_1B_1$, а на луче $AC$ — отрезок $AN=A_1C_1$. Тогда $\\triangle AMN=\\triangle A_1B_1C_1$ по первому признаку равенства (две стороны и угол между ними).\n\nИз $\\angle AMN=\\angle B_1=\\angle B$ следует, что прямые $MN$ и $BC$ образуют с секущей $AB$ равные соответственные углы, значит $MN\\parallel BC$.\n\nТеперь по теореме Фалеса $$\\frac{AB}{AM}=\\frac{AC}{AN}=\\frac{BC}{MN},$$ то есть все три стороны $ABC$ в одно и то же число раз больше сторон $AMN=A_1B_1C_1$ ✓ $\\blacksquare$",
+      "en": "We prove the AA criterion; the others go the same way.\n\nLet $k=\\dfrac{AB}{A_1B_1}$. Mark $AM=A_1B_1$ on the ray $AB$ and $AN=A_1C_1$ on the ray $AC$. Then $\\triangle AMN\\cong\\triangle A_1B_1C_1$ by SAS.\n\nFrom $\\angle AMN=\\angle B_1=\\angle B$ the lines $MN$ and $BC$ make equal corresponding angles with the transversal $AB$, so $MN\\parallel BC$.\n\nThales now gives $$\\frac{AB}{AM}=\\frac{AC}{AN}=\\frac{BC}{MN},$$ so all three sides of $ABC$ exceed those of $AMN\\cong A_1B_1C_1$ by the same factor ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Сравните с равенством: там требовалось **три** совпадения, здесь достаточно **двух** углов. Причина в том, что подобие не фиксирует размер — одна степень свободы остаётся свободной.",
+      "en": "Compare with congruence: there three agreements were needed, here **two** angles suffice. The reason is that similarity does not fix the size — one degree of freedom stays free."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Отношение площадей подобных фигур",
+      "en": "The area ratio of similar figures"
+     },
+     "text": {
+      "ru": "Если фигуры подобны с коэффициентом $k$, то отношение их площадей равно $k^{2}$, а отношение объёмов (для тел) равно $k^{3}$. Отношение любых соответственных длин — высот, медиан, радиусов вписанных окружностей, периметров — равно $k$.",
+      "en": "If two figures are similar with ratio $k$ then their areas are in the ratio $k^{2}$ and (for solids) their volumes in the ratio $k^{3}$. Any pair of corresponding lengths — altitudes, medians, inradii, perimeters — are in the ratio $k$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Для треугольников: пусть стороны относятся как $k$, тогда и высоты, опущенные на соответственные стороны, относятся как $k$ (они соответственные длины в подобных прямоугольных треугольниках). Значит $$\\frac{S}{S_1}=\\frac{\\tfrac12 a h_a}{\\tfrac12 a_1 h_{a_1}}=k\\cdot k=k^{2} \\quad\\checkmark$$\n\nПроизвольная фигура приближается объединением треугольников, каждый из которых меняет площадь в $k^{2}$ раз, значит и вся фигура ✓ $\\blacksquare$",
+      "en": "For triangles: if the sides are in the ratio $k$ then so are the altitudes to corresponding sides (they are corresponding lengths in similar right triangles). Hence $$\\frac{S}{S_1}=\\frac{\\tfrac12 a h_a}{\\tfrac12 a_1 h_{a_1}}=k\\cdot k=k^{2} \\quad\\checkmark$$\n\nAn arbitrary figure is approximated by a union of triangles, each scaling its area by $k^{2}$, hence so does the whole figure ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Свойство биссектрисы",
+      "en": "The angle bisector theorem"
+     },
+     "text": {
+      "ru": "Биссектриса угла $A$ треугольника $ABC$ делит противоположную сторону в отношении прилежащих сторон: если она пересекает $BC$ в точке $L$, то $$\\frac{BL}{LC}=\\frac{AB}{AC}.$$",
+      "en": "The bisector of the angle $A$ of a triangle $ABC$ divides the opposite side in the ratio of the adjacent sides: if it meets $BC$ at $L$ then $$\\frac{BL}{LC}=\\frac{AB}{AC}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Сравним площади треугольников $ABL$ и $ACL$ двумя способами.\n\n**Способ 1: общая высота из вершины $A$** на прямую $BC$. Тогда $$\\frac{S_{ABL}}{S_{ACL}}=\\frac{BL}{LC}.$$\n\n**Способ 2: общая сторона $AL$.** Расстояния от $B$ и от $C$ до прямой $AL$ равны $AB\\sin\\alpha$ и $AC\\sin\\alpha$, где $\\alpha=\\tfrac12\\angle A$ — половина угла (здесь и работает то, что $AL$ — биссектриса: оба угла равны $\\alpha$). Значит $$\\frac{S_{ABL}}{S_{ACL}}=\\frac{AB\\sin\\alpha}{AC\\sin\\alpha}=\\frac{AB}{AC}.$$\n\nПриравняем два выражения ✓ $\\blacksquare$",
+      "en": "Compare the areas of $ABL$ and $ACL$ in two ways.\n\n**Way 1: the common altitude from $A$** to the line $BC$ gives $$\\frac{S_{ABL}}{S_{ACL}}=\\frac{BL}{LC}.$$\n\n**Way 2: the common side $AL$.** The distances from $B$ and from $C$ to the line $AL$ are $AB\\sin\\alpha$ and $AC\\sin\\alpha$, where $\\alpha=\\tfrac12\\angle A$ (this is exactly where the bisector hypothesis is used: both half-angles equal $\\alpha$). So $$\\frac{S_{ABL}}{S_{ACL}}=\\frac{AB\\sin\\alpha}{AC\\sin\\alpha}=\\frac{AB}{AC}.$$\n\nEquating the two expressions finishes the proof ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "В треугольнике $ABC$ известно $AB=8$, $AC=6$, $BC=7$. Биссектриса угла $A$ пересекает $BC$ в точке $L$. Найдите $BL$ и $LC$.",
+      "en": "In a triangle $ABC$ we have $AB=8$, $AC=6$, $BC=7$. The bisector from $A$ meets $BC$ at $L$. Find $BL$ and $LC$."
+     },
+     "steps": {
+      "ru": [
+       "По свойству биссектрисы $\\dfrac{BL}{LC}=\\dfrac{AB}{AC}=\\dfrac{8}{6}=\\dfrac43$.",
+       "Значит $BL=4t$, $LC=3t$ для некоторого $t$.",
+       "Сумма равна стороне: $4t+3t=7$, откуда $t=1$.",
+       "Итак $BL=4$ и $LC=3$ ✓"
+      ],
+      "en": [
+       "The bisector theorem gives $\\dfrac{BL}{LC}=\\dfrac{AB}{AC}=\\dfrac{8}{6}=\\dfrac43$.",
+       "So $BL=4t$ and $LC=3t$ for some $t$.",
+       "Their sum is the side: $4t+3t=7$, hence $t=1$.",
+       "Therefore $BL=4$ and $LC=3$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$BL=4$, $LC=3$.",
+      "en": "$BL=4$, $LC=3$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Соотношения в прямоугольном треугольнике",
+      "en": "Relations in a right triangle"
+     },
+     "text": {
+      "ru": "Пусть $CH$ — высота, опущенная из прямого угла $C$ на гипотенузу $AB$, и пусть $AH=p$, $BH=q$ — проекции катетов. Тогда $$CH^{2}=pq,\\qquad AC^{2}=p\\cdot AB,\\qquad BC^{2}=q\\cdot AB .$$",
+      "en": "Let $CH$ be the altitude from the right angle $C$ to the hypotenuse $AB$, and let $AH=p$, $BH=q$ be the projections of the legs. Then $$CH^{2}=pq,\\qquad AC^{2}=p\\cdot AB,\\qquad BC^{2}=q\\cdot AB .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Высота разбивает треугольник на два, и все три треугольника — $ABC$, $ACH$, $CBH$ — подобны по двум углам: у каждого есть прямой угол, а острый угол $A$ (соответственно $B$) общий с исходным.\n\nИз подобия $\\triangle ACH\\sim\\triangle CBH$ (у них $\\angle ACH=\\angle CBH$, поскольку оба дополняют $\\angle A$ до $90^{\\circ}$) получаем $$\\frac{AH}{CH}=\\frac{CH}{BH}\\quad\\Longrightarrow\\quad CH^{2}=AH\\cdot BH=pq \\quad\\checkmark$$\n\nИз подобия $\\triangle ACH\\sim\\triangle ABC$ получаем $$\\frac{AH}{AC}=\\frac{AC}{AB}\\quad\\Longrightarrow\\quad AC^{2}=AH\\cdot AB=p\\cdot AB \\quad\\checkmark$$ и симметрично для $BC$ ✓ $\\blacksquare$\n\n**Следствие — теорема Пифагора.** Сложим два последних равенства: $$AC^{2}+BC^{2}=\\left(p+q\\right)AB=AB\\cdot AB=AB^{2} \\quad\\checkmark$$",
+      "en": "The altitude splits the triangle into two, and all three triangles — $ABC$, $ACH$, $CBH$ — are similar by AA: each has a right angle, and each shares an acute angle with the original.\n\nFrom $\\triangle ACH\\sim\\triangle CBH$ (they satisfy $\\angle ACH=\\angle CBH$, both being the complement of $\\angle A$) we get $$\\frac{AH}{CH}=\\frac{CH}{BH}\\quad\\Longrightarrow\\quad CH^{2}=AH\\cdot BH=pq \\quad\\checkmark$$\n\nFrom $\\triangle ACH\\sim\\triangle ABC$ we get $$\\frac{AH}{AC}=\\frac{AC}{AB}\\quad\\Longrightarrow\\quad AC^{2}=p\\cdot AB \\quad\\checkmark$$ and symmetrically for $BC$ ✓ $\\blacksquare$\n\n**Corollary — the Pythagorean theorem.** Add the last two equalities: $$AC^{2}+BC^{2}=\\left(p+q\\right)AB=AB^{2} \\quad\\checkmark$$"
+     }
+    }
+   ]
+  },
+  {
+   "h": {
     "ru": "Медианы и приём удвоения",
     "en": "Medians and the doubling trick"
    },
@@ -438,6 +734,107 @@ window.LESSONS[9] = {
   },
   {
    "h": {
+    "ru": "Четыре замечательные точки",
+    "en": "The four classical centres"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "В треугольнике три серединных перпендикуляра, три биссектрисы, три высоты и три медианы. В каждой четвёрке троек прямые пересекаются в одной точке — факт вовсе не очевидный: три случайные прямые общей точки не имеют. Ниже каждое из четырёх утверждений доказано.",
+      "en": "A triangle has three perpendicular bisectors, three angle bisectors, three altitudes and three medians. In each of these four families the three lines pass through one point — a fact that is far from obvious: three lines chosen at random share no common point. All four statements are proved below."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Центр описанной окружности",
+      "en": "The circumcentre"
+     },
+     "text": {
+      "ru": "Серединные перпендикуляры к сторонам треугольника пересекаются в одной точке $O$, равноудалённой от всех трёх вершин. Она является центром единственной окружности, проходящей через $A$, $B$ и $C$.",
+      "en": "The perpendicular bisectors of the sides of a triangle meet at one point $O$, equidistant from all three vertices. It is the centre of the unique circle through $A$, $B$ and $C$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Ключевое свойство серединного перпендикуляра: точка лежит на нём **тогда и только тогда**, когда она равноудалена от концов отрезка.\n\nПусть $O$ — точка пересечения серединных перпендикуляров к $AB$ и к $BC$ (они не параллельны, так как перпендикулярны непараллельным прямым). Тогда $$OA=OB\\quad\\text{и}\\quad OB=OC ,$$ значит $OA=OC$. Но это в точности условие принадлежности серединному перпендикуляру к $AC$ — значит и третья прямая проходит через $O$ ✓\n\nОкружность радиуса $R=OA=OB=OC$ с центром $O$ проходит через все три вершины. Единственность: центр любой такой окружности равноудалён от вершин, значит лежит на всех трёх серединных перпендикулярах, то есть совпадает с $O$ ✓ $\\blacksquare$",
+      "en": "The key property of a perpendicular bisector: a point lies on it **if and only if** it is equidistant from the two endpoints.\n\nLet $O$ be the intersection of the perpendicular bisectors of $AB$ and $BC$ (they are not parallel, being perpendicular to non-parallel lines). Then $$OA=OB\\quad\\text{and}\\quad OB=OC ,$$ hence $OA=OC$. That is exactly the condition for lying on the perpendicular bisector of $AC$, so the third line passes through $O$ too ✓\n\nThe circle of radius $R=OA=OB=OC$ centred at $O$ passes through all three vertices. Uniqueness: the centre of any such circle is equidistant from the vertices, so it lies on all three perpendicular bisectors and coincides with $O$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Положение $O$ зависит от формы треугольника: в остроугольном — внутри, в прямоугольном — в середине гипотенузы (отсюда следствие: **медиана прямоугольного треугольника, проведённая к гипотенузе, равна её половине**), в тупоугольном — снаружи.",
+      "en": "Where $O$ sits depends on the shape: inside an acute triangle, at the midpoint of the hypotenuse of a right triangle (hence the corollary that **the median to the hypotenuse equals half of it**), and outside an obtuse triangle."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Центр вписанной окружности",
+      "en": "The incentre"
+     },
+     "text": {
+      "ru": "Биссектрисы углов треугольника пересекаются в одной точке $I$, равноудалённой от всех трёх сторон. Она является центром единственной окружности, вписанной в треугольник.",
+      "en": "The angle bisectors of a triangle meet at one point $I$, equidistant from all three sides. It is the centre of the unique circle inscribed in the triangle."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Ключевое свойство биссектрисы: точка внутри угла лежит на биссектрисе **тогда и только тогда**, когда она равноудалена от сторон угла.\n\nПусть $I$ — точка пересечения биссектрис углов $A$ и $B$. Обозначим через $d_a,d_b,d_c$ расстояния от $I$ до прямых $BC$, $CA$, $AB$. Из биссектрисы угла $A$ следует $d_b=d_c$, из биссектрисы угла $B$ следует $d_a=d_c$. Значит $d_a=d_b$, а это условие принадлежности биссектрисе угла $C$ ✓\n\nОкружность радиуса $r=d_a=d_b=d_c$ с центром $I$ касается всех трёх сторон ✓ $\\blacksquare$",
+      "en": "The key property of an angle bisector: a point inside an angle lies on the bisector **if and only if** it is equidistant from the two arms.\n\nLet $I$ be the intersection of the bisectors from $A$ and from $B$. Write $d_a,d_b,d_c$ for the distances from $I$ to the lines $BC$, $CA$, $AB$. The bisector from $A$ gives $d_b=d_c$, the bisector from $B$ gives $d_a=d_c$. Hence $d_a=d_b$, which is the condition for lying on the bisector from $C$ ✓\n\nThe circle of radius $r=d_a=d_b=d_c$ centred at $I$ touches all three sides ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Точка пересечения высот",
+      "en": "The orthocentre"
+     },
+     "text": {
+      "ru": "Высоты треугольника (или их продолжения) пересекаются в одной точке $H$.",
+      "en": "The altitudes of a triangle (or their extensions) meet at one point $H$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Красивый приём: **сведём высоты к серединным перпендикулярам другого треугольника.**\n\nЧерез каждую вершину треугольника $ABC$ проведём прямую, параллельную противоположной стороне. Три такие прямые образуют треугольник $A_1B_1C_1$, в котором $A$, $B$, $C$ — середины сторон.\n\nДействительно, $ABCB_1$ и $ABA_1C$ — параллелограммы (по построению противоположные стороны параллельны), поэтому $$B_1A=BC=AC_1 ,$$ то есть $A$ — середина отрезка $B_1C_1$. Так же для $B$ и $C$.\n\nТеперь заметим: высота треугольника $ABC$ из вершины $A$ перпендикулярна $BC$, а значит и параллельной ей прямой $B_1C_1$; при этом она проходит через середину $A$ отрезка $B_1C_1$. Значит эта высота — **серединный перпендикуляр к стороне $B_1C_1$** треугольника $A_1B_1C_1$.\n\nПо предыдущей теореме три серединных перпендикуляра треугольника $A_1B_1C_1$ пересекаются в одной точке ✓ $\\blacksquare$",
+      "en": "A beautiful move: **turn the altitudes into the perpendicular bisectors of another triangle.**\n\nThrough each vertex of $ABC$ draw the line parallel to the opposite side. The three lines form a triangle $A_1B_1C_1$ in which $A$, $B$, $C$ are the midpoints of the sides.\n\nIndeed $ABCB_1$ and $ABA_1C$ are parallelograms by construction, so $$B_1A=BC=AC_1 ,$$ i.e. $A$ is the midpoint of $B_1C_1$; likewise for $B$ and $C$.\n\nNow observe: the altitude of $ABC$ from $A$ is perpendicular to $BC$, hence to the parallel line $B_1C_1$, and it passes through the midpoint $A$ of $B_1C_1$. So this altitude is the **perpendicular bisector of the side $B_1C_1$** of the triangle $A_1B_1C_1$.\n\nBy the previous theorem the three perpendicular bisectors of $A_1B_1C_1$ concur ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Прямая Эйлера",
+      "en": "The Euler line"
+     },
+     "text": {
+      "ru": "В любом неравностороннем треугольнике точки $O$ (центр описанной окружности), $G$ (центроид) и $H$ (ортоцентр) лежат на одной прямой, причём $$HG=2\\,GO .$$",
+      "en": "In any non-equilateral triangle the circumcentre $O$, the centroid $G$ and the orthocentre $H$ lie on one line, and $$HG=2\\,GO .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Пусть $M$ — середина стороны $BC$, и пусть $H_1$ — такая точка на луче $OG$ за точкой $G$, что $GH_1=2\\,GO$. Докажем, что $H_1$ — ортоцентр; тогда всё утверждение доказано.\n\nЦентроид делит медиану $AM$ в отношении $AG:GM=2:1$. Значит треугольники $GOM$ и $GH_1A$ подобны с коэффициентом $2$: у них равны вертикальные углы при вершине $G$, а прилежащие стороны пропорциональны — $$\\frac{GH_1}{GO}=2=\\frac{GA}{GM} .$$\n\nИз подобия следует $AH_1\\parallel OM$ и $AH_1=2\\,OM$. Но $OM\\perp BC$ (серединный перпендикуляр), значит и $AH_1\\perp BC$, то есть $H_1$ лежит на высоте из вершины $A$.\n\nТо же рассуждение с медианами из $B$ и из $C$ показывает, что $H_1$ лежит и на двух других высотах. Значит $H_1=H$ ✓ $\\blacksquare$\n\nЗаодно получено полезное соотношение $AH=2\\,OM$: **расстояние от вершины до ортоцентра вдвое больше расстояния от центра описанной окружности до противоположной стороны.**",
+      "en": "Let $M$ be the midpoint of $BC$, and let $H_1$ be the point on the ray $OG$ beyond $G$ with $GH_1=2\\,GO$. We show $H_1$ is the orthocentre, which proves everything.\n\nThe centroid divides the median $AM$ so that $AG:GM=2:1$. Hence the triangles $GOM$ and $GH_1A$ are similar with ratio $2$: the angles at $G$ are vertical, and the adjacent sides are proportional, $$\\frac{GH_1}{GO}=2=\\frac{GA}{GM} .$$\n\nSimilarity gives $AH_1\\parallel OM$ and $AH_1=2\\,OM$. But $OM\\perp BC$ (it is the perpendicular bisector), so $AH_1\\perp BC$ and $H_1$ lies on the altitude from $A$.\n\nThe same argument with the medians from $B$ and $C$ puts $H_1$ on the other two altitudes. Hence $H_1=H$ ✓ $\\blacksquare$\n\nAlong the way we obtained the useful relation $AH=2\\,OM$: **the distance from a vertex to the orthocentre is twice the distance from the circumcentre to the opposite side.**"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "На прямой Эйлера лежит и центр **окружности девяти точек** — окружности, проходящей через середины сторон, основания высот и середины отрезков от вершин до ортоцентра. Её центр — середина отрезка $OH$, а радиус равен $\\tfrac{R}{2}$. В равностороннем треугольнике все четыре центра совпадают, и прямая Эйлера не определена.",
+      "en": "The Euler line also carries the centre of the **nine-point circle** — the circle through the three midpoints of the sides, the three feet of the altitudes and the three midpoints of the segments from the vertices to the orthocentre. Its centre is the midpoint of $OH$ and its radius is $\\tfrac{R}{2}$. In an equilateral triangle all four centres coincide and the Euler line is undefined."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
     "ru": "Прямоугольный треугольник",
     "en": "The right triangle"
    },
@@ -484,6 +881,100 @@ window.LESSONS[9] = {
      "text": {
       "ru": "Тройки целых чисел, для которых теорема Пифагора выполняется, называют **пифагоровыми**. Самые нужные наизусть: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$, $(7,24,25)$ и все их кратные, например $(6,8,10)$.",
       "en": "Triples of integers satisfying the Pythagorean relation are called **Pythagorean**. Worth memorising: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$, $(7,24,25)$, and all their multiples, such as $(6,8,10)$."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Метрические соотношения",
+    "en": "Metric relations"
+   },
+   "blocks": [
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Теорема косинусов",
+      "en": "The law of cosines"
+     },
+     "text": {
+      "ru": "В любом треугольнике $$a^{2}=b^{2}+c^{2}-2bc\\cos A .$$ При $\\angle A=90^{\\circ}$ она обращается в теорему Пифагора.",
+      "en": "In any triangle $$a^{2}=b^{2}+c^{2}-2bc\\cos A .$$ For $\\angle A=90^{\\circ}$ it reduces to the Pythagorean theorem."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Опустим высоту $BH$ из вершины $B$ на прямую $AC$ и разберём случай остроугольного угла $A$ (тупой разбирается так же, с учётом знака косинуса).\n\nВ прямоугольном треугольнике $ABH$ имеем $$AH=c\\cos A,\\qquad BH=c\\sin A .$$\n\nТогда $HC=b-c\\cos A$, и по теореме Пифагора в треугольнике $BHC$ $$a^{2}=BH^{2}+HC^{2}=c^{2}\\sin^{2}A+\\left(b-c\\cos A\\right)^{2}.$$\n\nРаскроем скобки: $$a^{2}=c^{2}\\sin^{2}A+b^{2}-2bc\\cos A+c^{2}\\cos^{2}A .$$\n\nСумма $c^{2}\\left(\\sin^{2}A+\\cos^{2}A\\right)=c^{2}$, поэтому $$a^{2}=b^{2}+c^{2}-2bc\\cos A \\quad\\checkmark\\qquad\\blacksquare$$",
+      "en": "Drop the altitude $BH$ from $B$ to the line $AC$ and take the case of an acute angle $A$ (the obtuse case is identical once the sign of the cosine is respected).\n\nIn the right triangle $ABH$ $$AH=c\\cos A,\\qquad BH=c\\sin A .$$\n\nThen $HC=b-c\\cos A$, and Pythagoras in $BHC$ gives $$a^{2}=BH^{2}+HC^{2}=c^{2}\\sin^{2}A+\\left(b-c\\cos A\\right)^{2}.$$\n\nExpanding, $$a^{2}=c^{2}\\sin^{2}A+b^{2}-2bc\\cos A+c^{2}\\cos^{2}A ,$$ and $c^{2}\\left(\\sin^{2}A+\\cos^{2}A\\right)=c^{2}$, so $$a^{2}=b^{2}+c^{2}-2bc\\cos A \\quad\\checkmark\\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Теорема косинусов сразу даёт **критерий вида треугольника**: угол $A$ острый, прямой или тупой в зависимости от того, больше, равна или меньше сумма $b^{2}+c^{2}$ величины $a^{2}$.",
+      "en": "The law of cosines immediately gives a **test for the shape** of a triangle: the angle $A$ is acute, right or obtuse according as $b^{2}+c^{2}$ is greater than, equal to, or less than $a^{2}$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Формула длины медианы",
+      "en": "The median length formula"
+     },
+     "text": {
+      "ru": "Медиана $m_a$, проведённая к стороне $a$, удовлетворяет $$m_a^{2}=\\frac{2b^{2}+2c^{2}-a^{2}}{4}.$$",
+      "en": "The median $m_a$ to the side $a$ satisfies $$m_a^{2}=\\frac{2b^{2}+2c^{2}-a^{2}}{4}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Пусть $M$ — середина $BC$, обозначим $\\varphi=\\angle AMB$. Тогда $\\angle AMC=180^{\\circ}-\\varphi$ и $\\cos\\angle AMC=-\\cos\\varphi$.\n\nПрименим теорему косинусов в треугольниках $ABM$ и $ACM$, где $BM=CM=\\dfrac{a}{2}$: $$c^{2}=m_a^{2}+\\frac{a^{2}}{4}-2\\cdot m_a\\cdot\\frac{a}{2}\\cos\\varphi ,$$ $$b^{2}=m_a^{2}+\\frac{a^{2}}{4}+2\\cdot m_a\\cdot\\frac{a}{2}\\cos\\varphi .$$\n\nСложим: члены с косинусом уничтожаются, и $$b^{2}+c^{2}=2m_a^{2}+\\frac{a^{2}}{2}.$$\n\nОстаётся выразить $m_a^{2}$ ✓ $\\blacksquare$\n\n**Следствие (тождество параллелограмма).** Удвоив медиану до точки $A_1$, получаем параллелограмм со сторонами $b,c$ и диагоналями $a$, $2m_a$; равенство превращается в $$2\\left(b^{2}+c^{2}\\right)=a^{2}+\\left(2m_a\\right)^{2}$$ — сумма квадратов диагоналей параллелограмма равна сумме квадратов всех его сторон.",
+      "en": "Let $M$ be the midpoint of $BC$ and write $\\varphi=\\angle AMB$. Then $\\angle AMC=180^{\\circ}-\\varphi$ and $\\cos\\angle AMC=-\\cos\\varphi$.\n\nApply the law of cosines in $ABM$ and $ACM$, where $BM=CM=\\dfrac{a}{2}$: $$c^{2}=m_a^{2}+\\frac{a^{2}}{4}-a\\,m_a\\cos\\varphi ,$$ $$b^{2}=m_a^{2}+\\frac{a^{2}}{4}+a\\,m_a\\cos\\varphi .$$\n\nAdding, the cosine terms cancel: $$b^{2}+c^{2}=2m_a^{2}+\\frac{a^{2}}{2}.$$\n\nSolving for $m_a^{2}$ finishes the proof ✓ $\\blacksquare$\n\n**Corollary (the parallelogram law).** Doubling the median to a point $A_1$ produces a parallelogram with sides $b,c$ and diagonals $a$, $2m_a$; the identity becomes $$2\\left(b^{2}+c^{2}\\right)=a^{2}+\\left(2m_a\\right)^{2}$$ — the sum of the squares of the diagonals of a parallelogram equals the sum of the squares of its sides."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Теорема Стюарта",
+      "en": "Stewart theorem"
+     },
+     "text": {
+      "ru": "Пусть точка $D$ лежит на стороне $BC$ треугольника $ABC$, причём $BD=m$, $DC=n$, $AD=d$. Тогда $$b^{2}m+c^{2}n=a\\left(d^{2}+mn\\right),\\qquad a=m+n .$$",
+      "en": "Let $D$ lie on the side $BC$ of a triangle $ABC$ with $BD=m$, $DC=n$, $AD=d$. Then $$b^{2}m+c^{2}n=a\\left(d^{2}+mn\\right),\\qquad a=m+n .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Обозначим $\\varphi=\\angle ADB$, тогда $\\angle ADC=180^{\\circ}-\\varphi$. Теорема косинусов в двух треугольниках даёт $$c^{2}=d^{2}+m^{2}-2dm\\cos\\varphi ,\\qquad b^{2}=d^{2}+n^{2}+2dn\\cos\\varphi .$$\n\nЧтобы уничтожить косинус, умножим первое равенство на $n$, второе на $m$ и сложим: $$c^{2}n+b^{2}m=d^{2}\\left(m+n\\right)+m^{2}n+n^{2}m=d^{2}a+mn\\left(m+n\\right)=a\\left(d^{2}+mn\\right) \\quad\\checkmark\\qquad\\blacksquare$$\n\nПри $m=n=\\tfrac{a}{2}$ отсюда получается формула медианы, а вместе со свойством биссектрисы — формула её длины $$\\ell_a^{2}=bc-mn .$$",
+      "en": "Write $\\varphi=\\angle ADB$, so $\\angle ADC=180^{\\circ}-\\varphi$. The law of cosines in the two triangles gives $$c^{2}=d^{2}+m^{2}-2dm\\cos\\varphi ,\\qquad b^{2}=d^{2}+n^{2}+2dn\\cos\\varphi .$$\n\nTo kill the cosine, multiply the first by $n$, the second by $m$ and add: $$c^{2}n+b^{2}m=d^{2}\\left(m+n\\right)+mn\\left(m+n\\right)=a\\left(d^{2}+mn\\right) \\quad\\checkmark\\qquad\\blacksquare$$\n\nWith $m=n=\\tfrac{a}{2}$ this recovers the median formula, and combined with the bisector theorem it gives the bisector length $$\\ell_a^{2}=bc-mn .$$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Стороны треугольника равны $7$, $8$ и $9$. Найдите медиану, проведённую к стороне $9$, и косинус противолежащего ей угла.",
+      "en": "A triangle has sides $7$, $8$ and $9$. Find the median to the side of length $9$ and the cosine of the angle opposite it."
+     },
+     "steps": {
+      "ru": [
+       "Пусть $a=9$, $b=8$, $c=7$.",
+       "Медиана: $$m_a^{2}=\\frac{2\\cdot64+2\\cdot49-81}{4}=\\frac{128+98-81}{4}=\\frac{145}{4},$$ значит $m_a=\\dfrac{\\sqrt{145}}{2}\\approx6{,}02$.",
+       "Косинус: из $a^{2}=b^{2}+c^{2}-2bc\\cos A$ получаем $$\\cos A=\\frac{64+49-81}{2\\cdot8\\cdot7}=\\frac{32}{112}=\\frac27 .$$",
+       "Косинус положителен, значит угол острый — треугольник остроугольный со стороны наибольшего угла ✓"
+      ],
+      "en": [
+       "Take $a=9$, $b=8$, $c=7$.",
+       "Median: $$m_a^{2}=\\frac{2\\cdot64+2\\cdot49-81}{4}=\\frac{145}{4},$$ so $m_a=\\dfrac{\\sqrt{145}}{2}\\approx6.02$.",
+       "Cosine: from $a^{2}=b^{2}+c^{2}-2bc\\cos A$, $$\\cos A=\\frac{64+49-81}{2\\cdot8\\cdot7}=\\frac{32}{112}=\\frac27 .$$",
+       "The cosine is positive, so the largest angle is acute — the triangle is acute ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$m_a=\\dfrac{\\sqrt{145}}{2}$, $\\cos A=\\dfrac27$.",
+      "en": "$m_a=\\dfrac{\\sqrt{145}}{2}$, $\\cos A=\\dfrac27$."
      }
     }
    ]
