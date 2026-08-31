@@ -166,7 +166,7 @@ window.LESSON_INDEX = [
    "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic."
   },
   "problems": 50,
-  "sections": 4
+  "sections": 7
  },
  {
   "n": 13,
@@ -180,7 +180,7 @@ window.LESSON_INDEX = [
    "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 8
  },
  {
   "n": 14,
