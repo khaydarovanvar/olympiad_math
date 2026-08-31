@@ -209,5 +209,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 6
+ },
+ {
+  "n": 16,
+  "cat": "mix",
+  "title": {
+   "ru": "Пробная олимпиада",
+   "en": "Mock olympiad"
+  },
+  "sub": {
+   "ru": "Как устроен тур, как распределить время и как оформить решение — и четыре пробных варианта из всех тем сразу.",
+   "en": "How a round works, how to spend the time and how to write a solution — plus four mock papers drawing on every topic."
+  },
+  "problems": 20,
+  "sections": 3
  }
 ];
