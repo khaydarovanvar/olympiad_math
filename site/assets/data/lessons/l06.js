@@ -127,6 +127,38 @@ window.LESSONS[6] = {
       "ru": "Неравенство доказано; равенство при $a=b=c$. $\\blacksquare$",
       "en": "Proved; equality when $a=b=c$. $\\blacksquare$"
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство треугольника для модулей",
+      "en": "The triangle inequality for absolute values"
+     },
+     "text": {
+      "ru": "Для любых вещественных $a,b$ $$\\left|a+b\\right|\\ \\le\\ \\left|a\\right|+\\left|b\\right| ,$$ и, как следствие, $$\\bigl|\\,\\left|a\\right|-\\left|b\\right|\\,\\bigr|\\ \\le\\ \\left|a-b\\right| .$$",
+      "en": "For all reals $a,b$ $$\\left|a+b\\right|\\ \\le\\ \\left|a\\right|+\\left|b\\right| ,$$ and consequently $$\\bigl|\\,\\left|a\\right|-\\left|b\\right|\\,\\bigr|\\ \\le\\ \\left|a-b\\right| .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Обе части неотрицательны, поэтому неравенство равносильно неравенству квадратов: $$\\left(a+b\\right)^{2}\\ \\le\\ \\left(\\left|a\\right|+\\left|b\\right|\\right)^{2}.$$\n\nСлева $a^{2}+2ab+b^{2}$, справа $a^{2}+2\\left|a\\right|\\left|b\\right|+b^{2}$. После сокращения остаётся $$ab\\ \\le\\ \\left|a\\right|\\left|b\\right|=\\left|ab\\right| ,$$ что верно всегда: число не превосходит своего модуля ✓\n\nВторое неравенство: применим первое к $a=\\left(a-b\\right)+b$, получаем $\\left|a\\right|\\le\\left|a-b\\right|+\\left|b\\right|$, то есть $\\left|a\\right|-\\left|b\\right|\\le\\left|a-b\\right|$. Поменяв $a$ и $b$ местами, получаем ту же оценку для $\\left|b\\right|-\\left|a\\right|$ ✓ $\\blacksquare$",
+      "en": "Both sides are non-negative, so the inequality is equivalent to the one between the squares: $$\\left(a+b\\right)^{2}\\ \\le\\ \\left(\\left|a\\right|+\\left|b\\right|\\right)^{2}.$$\n\nThe left side is $a^{2}+2ab+b^{2}$, the right $a^{2}+2\\left|a\\right|\\left|b\\right|+b^{2}$. Cancelling leaves $$ab\\ \\le\\ \\left|a\\right|\\left|b\\right|=\\left|ab\\right| ,$$ which always holds: a number never exceeds its absolute value ✓\n\nFor the second inequality apply the first to $a=\\left(a-b\\right)+b$, giving $\\left|a\\right|\\le\\left|a-b\\right|+\\left|b\\right|$, i.e. $\\left|a\\right|-\\left|b\\right|\\le\\left|a-b\\right|$. Swapping $a$ and $b$ gives the same bound for $\\left|b\\right|-\\left|a\\right|$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Равенство достигается ровно тогда, когда $a$ и $b$ **одного знака** (или одно из них равно нулю) — именно в этом случае $ab=\\left|ab\\right|$.",
+      "en": "Equality holds exactly when $a$ and $b$ have the **same sign** (or one of them is zero) — precisely the case $ab=\\left|ab\\right|$."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Три способа доказать $X\\ge Y$.**\n\n1. Перенести всё в одну сторону и разложить: $X-Y=\\left(\\dots\\right)^{2}$ или произведение неотрицательных множителей.\n2. Свести к известному неравенству (о средних, Коши–Буняковского, Йенсена).\n3. Доказать цепочку $X\\ge Z\\ge Y$ через промежуточную величину.\n\nПервый способ работает почти всегда в школьных задачах и не требует никаких ссылок.",
+      "en": "**Three ways to prove $X\\ge Y$.**\n\n1. Move everything to one side and factor: $X-Y=\\left(\\dots\\right)^{2}$ or a product of non-negative factors.\n2. Reduce it to a named inequality (AM–GM, Cauchy–Schwarz, Jensen).\n3. Prove a chain $X\\ge Z\\ge Y$ through an intermediate quantity.\n\nThe first route works for nearly every school problem and needs no citation at all."
+     }
     }
    ]
   },
@@ -226,6 +258,31 @@ window.LESSONS[6] = {
      "text": {
       "ru": "Разбивать слагаемые надо так, чтобы **произведение оказалось константой**. Если бы мы применили AM–GM к двум слагаемым $x^{2}$ и $\\tfrac2x$, получилось бы $2\\sqrt{2x}$ — выражение с переменной, из которого ничего не следует. Умение выбрать правильное разбиение и есть главный навык в этой теме.",
       "en": "The split must make the **product a constant**. Applying AM–GM to the two terms $x^{2}$ and $\\tfrac2x$ would give $2\\sqrt{2x}$ — an expression still containing the variable, from which nothing follows. Choosing the right split is the real skill here."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Доказательство неравенства о средних (индукция Коши)",
+      "en": "Proof of AM–GM (Cauchy induction)"
+     },
+     "text": {
+      "ru": "Для любых $n$ и любых $a_1,\\dots,a_n\\ge0$ $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n},$$ с равенством тогда и только тогда, когда все числа равны.",
+      "en": "For every $n$ and all $a_1,\\dots,a_n\\ge0$ $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n},$$ with equality if and only if all the numbers are equal."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Классическое доказательство Коши идёт «вперёд по степеням двойки, назад по одному».\n\n**Шаг 1: случай $n=2$.** $$\\frac{a+b}{2}-\\sqrt{ab}=\\frac{a-2\\sqrt{ab}+b}{2}=\\frac{\\left(\\sqrt{a}-\\sqrt{b}\\right)^{2}}{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Шаг 2: от $n$ к $2n$.** Пусть неравенство верно для $n$ чисел. Возьмём $2n$ чисел и разобьём их на две половины: $$\\frac{a_1+\\dots+a_{2n}}{2n}=\\frac12\\left(\\frac{a_1+\\dots+a_n}{n}+\\frac{a_{n+1}+\\dots+a_{2n}}{n}\\right)\\ \\ge\\ \\frac12\\left(G_1+G_2\\right),$$ где $G_1,G_2$ — средние геометрические половин. По случаю $n=2$ $$\\frac{G_1+G_2}{2}\\ \\ge\\ \\sqrt{G_1G_2}=\\sqrt[2n]{a_1\\cdots a_{2n}} \\quad\\checkmark$$\n\nЗначит неравенство верно для $n=2,4,8,16,\\dots$ — всех степеней двойки.\n\n**Шаг 3: от $n$ к $n-1$.** Пусть неравенство верно для $n$ чисел, и даны $a_1,\\dots,a_{n-1}$. Обозначим их среднее арифметическое $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1}$$ и применим неравенство для $n$ чисел к набору $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}A}.$$ Числитель слева равен $\\left(n-1\\right)A+A=nA$, поэтому слева стоит просто $A$. Возведём в $n$-ю степень: $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}A .$$ Если $A=0$, то все числа нули и утверждение очевидно; иначе делим на $A$: $$A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ то есть $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓\n\n**Заключение.** Любое $n$ не превосходит некоторой степени двойки $2^{k}$; неравенство верно для $2^{k}$ по шагу 2 и спускается до $n$ повторением шага 3 ✓ $\\blacksquare$",
+      "en": "The classical proof of Cauchy runs \"forward along powers of two, backward one at a time\".\n\n**Step 1: the case $n=2$.** $$\\frac{a+b}{2}-\\sqrt{ab}=\\frac{\\left(\\sqrt{a}-\\sqrt{b}\\right)^{2}}{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Step 2: from $n$ to $2n$.** Assume the inequality for $n$ numbers. Take $2n$ numbers and split them into halves: $$\\frac{a_1+\\dots+a_{2n}}{2n}=\\frac12\\left(\\frac{a_1+\\dots+a_n}{n}+\\frac{a_{n+1}+\\dots+a_{2n}}{n}\\right)\\ \\ge\\ \\frac12\\left(G_1+G_2\\right),$$ where $G_1,G_2$ are the geometric means of the halves. By the case $n=2$ $$\\frac{G_1+G_2}{2}\\ \\ge\\ \\sqrt{G_1G_2}=\\sqrt[2n]{a_1\\cdots a_{2n}} \\quad\\checkmark$$\n\nSo the inequality holds for $n=2,4,8,16,\\dots$ — every power of two.\n\n**Step 3: from $n$ to $n-1$.** Assume it for $n$ numbers and let $a_1,\\dots,a_{n-1}$ be given. Write their arithmetic mean $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1}$$ and apply the $n$-number case to the list $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}A}.$$ The numerator is $\\left(n-1\\right)A+A=nA$, so the left side is just $A$. Raise to the $n$-th power: $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}A .$$ If $A=0$ all numbers are zero and the claim is clear; otherwise divide by $A$: $$A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ i.e. $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓\n\n**Conclusion.** Every $n$ is at most some power of two $2^{k}$; the inequality holds for $2^{k}$ by Step 2 and descends to $n$ by repeating Step 3 ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Эта схема — «доказать для степеней двойки, затем спуститься» — называется **индукцией Коши** и полезна далеко за пределами неравенств.",
+      "en": "This scheme — prove it for powers of two, then descend — is called **Cauchy induction** and is useful far beyond inequalities."
      }
     }
    ]
@@ -333,6 +390,181 @@ window.LESSONS[6] = {
   },
   {
    "h": {
+    "ru": "Степенные средние",
+    "en": "Power means"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Среднее арифметическое, среднее геометрическое, среднее квадратичное и среднее гармоническое — не четыре разные конструкции, а четыре точки одной непрерывной шкалы. Увидев эту шкалу один раз, вы перестанете запоминать цепочку неравенств: она станет очевидной.",
+      "en": "The arithmetic, geometric, quadratic and harmonic means are not four separate constructions but four points on one continuous scale. Once you see the scale you stop memorising the chain of inequalities: it becomes obvious."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Степенное среднее",
+      "en": "Power mean"
+     },
+     "text": {
+      "ru": "Пусть $a_1,\\dots,a_n>0$ и $t\\ne0$ — вещественное число. **Степенным средним порядка $t$** называется $$M_t=\\left(\\frac{a_1^{\\,t}+a_2^{\\,t}+\\dots+a_n^{\\,t}}{n}\\right)^{1/t}.$$ Для $t=0$ определение доопределяют по непрерывности: $$M_0=\\sqrt[n]{a_1a_2\\cdots a_n}.$$",
+      "en": "Let $a_1,\\dots,a_n>0$ and let $t\\ne0$ be a real number. The **power mean of order $t$** is $$M_t=\\left(\\frac{a_1^{\\,t}+a_2^{\\,t}+\\dots+a_n^{\\,t}}{n}\\right)^{1/t}.$$ For $t=0$ the definition is extended by continuity: $$M_0=\\sqrt[n]{a_1a_2\\cdots a_n}.$$"
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "$t$",
+       "Название",
+       "Формула"
+      ],
+      "en": [
+       "$t$",
+       "Name",
+       "Formula"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "$-1$",
+        "гармоническое $H$",
+        "$\\dfrac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}$"
+       ],
+       [
+        "$0$",
+        "геометрическое $G$",
+        "$\\sqrt[n]{a_1\\cdots a_n}$"
+       ],
+       [
+        "$1$",
+        "арифметическое $A$",
+        "$\\dfrac{a_1+\\dots+a_n}{n}$"
+       ],
+       [
+        "$2$",
+        "квадратичное $Q$",
+        "$\\sqrt{\\dfrac{a_1^{2}+\\dots+a_n^{2}}{n}}$"
+       ],
+       [
+        "$\\to+\\infty$",
+        "максимум",
+        "$\\max a_i$"
+       ],
+       [
+        "$\\to-\\infty$",
+        "минимум",
+        "$\\min a_i$"
+       ]
+      ],
+      "en": [
+       [
+        "$-1$",
+        "harmonic $H$",
+        "$\\dfrac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}$"
+       ],
+       [
+        "$0$",
+        "geometric $G$",
+        "$\\sqrt[n]{a_1\\cdots a_n}$"
+       ],
+       [
+        "$1$",
+        "arithmetic $A$",
+        "$\\dfrac{a_1+\\dots+a_n}{n}$"
+       ],
+       [
+        "$2$",
+        "quadratic $Q$",
+        "$\\sqrt{\\dfrac{a_1^{2}+\\dots+a_n^{2}}{n}}$"
+       ],
+       [
+        "$\\to+\\infty$",
+        "maximum",
+        "$\\max a_i$"
+       ],
+       [
+        "$\\to-\\infty$",
+        "minimum",
+        "$\\min a_i$"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство о степенных средних",
+      "en": "The power mean inequality"
+     },
+     "text": {
+      "ru": "Если $s<t$, то для любых положительных $a_1,\\dots,a_n$ $$M_s\\le M_t,$$ причём равенство достигается тогда и только тогда, когда $a_1=a_2=\\dots=a_n$.",
+      "en": "If $s<t$ then for all positive $a_1,\\dots,a_n$ $$M_s\\le M_t,$$ with equality if and only if $a_1=a_2=\\dots=a_n$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Общий случай выводится из неравенства Йенсена (см. следующий раздел): функция $x\\mapsto x^{t/s}$ выпукла при $t/s>1$. Здесь разберём три школьных случая, которых хватает почти всегда.\n\n**$Q\\ge A$.** По неравенству Коши–Буняковского с наборами $(a_1,\\dots,a_n)$ и $(1,\\dots,1)$ $$\\left(a_1+\\dots+a_n\\right)^{2}\\le n\\left(a_1^{2}+\\dots+a_n^{2}\\right).$$ Разделим на $n^{2}$ и извлечём корень ✓\n\n**$A\\ge G$.** Это неравенство о средних, доказанное выше ✓\n\n**$G\\ge H$.** Применим $A\\ge G$ к числам $\\frac1{a_1},\\dots,\\frac1{a_n}$: $$\\frac{\\frac1{a_1}+\\dots+\\frac1{a_n}}{n}\\ \\ge\\ \\sqrt[n]{\\frac1{a_1\\cdots a_n}}=\\frac1{G}.$$ Перевернём обе части (они положительны, знак меняется): $$H=\\frac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}\\le G \\quad\\checkmark$$\n\nВо всех трёх случаях равенство в использованных неравенствах равносильно равенству всех $a_i$. $\\blacksquare$",
+      "en": "The general case follows from Jensen (next section): the map $x\\mapsto x^{t/s}$ is convex when $t/s>1$. Here we prove the three school cases, which cover almost everything.\n\n**$Q\\ge A$.** Cauchy–Schwarz with the vectors $(a_1,\\dots,a_n)$ and $(1,\\dots,1)$ gives $$\\left(a_1+\\dots+a_n\\right)^{2}\\le n\\left(a_1^{2}+\\dots+a_n^{2}\\right).$$ Divide by $n^{2}$ and take square roots ✓\n\n**$A\\ge G$.** This is the AM–GM inequality proved above ✓\n\n**$G\\ge H$.** Apply $A\\ge G$ to the numbers $\\frac1{a_1},\\dots,\\frac1{a_n}$: $$\\frac{\\frac1{a_1}+\\dots+\\frac1{a_n}}{n}\\ \\ge\\ \\sqrt[n]{\\frac1{a_1\\cdots a_n}}=\\frac1{G}.$$ Invert both sides (they are positive, so the sign flips): $$H=\\frac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}\\le G \\quad\\checkmark$$\n\nIn all three cases equality in the tool used is equivalent to all $a_i$ being equal. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Пусть $a+b+c=3$ и $a,b,c>0$. Докажите, что $a^{2}+b^{2}+c^{2}\\ge3$ и $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$.",
+      "en": "Let $a+b+c=3$ with $a,b,c>0$. Prove that $a^{2}+b^{2}+c^{2}\\ge3$ and $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$."
+     },
+     "steps": {
+      "ru": [
+       "Из условия $A=\\dfrac{a+b+c}{3}=1$.",
+       "Первое неравенство — это $Q\\ge A$: $\\sqrt{\\dfrac{a^{2}+b^{2}+c^{2}}{3}}\\ge1$, откуда $a^{2}+b^{2}+c^{2}\\ge3$ ✓",
+       "Второе — это $A\\ge H$: $1\\ge\\dfrac{3}{\\frac1a+\\frac1b+\\frac1c}$, то есть $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$ ✓",
+       "Равенство в обоих случаях при $a=b=c=1$."
+      ],
+      "en": [
+       "The hypothesis says $A=\\dfrac{a+b+c}{3}=1$.",
+       "The first inequality is $Q\\ge A$: $\\sqrt{\\dfrac{a^{2}+b^{2}+c^{2}}{3}}\\ge1$, hence $a^{2}+b^{2}+c^{2}\\ge3$ ✓",
+       "The second is $A\\ge H$: $1\\ge\\dfrac{3}{\\frac1a+\\frac1b+\\frac1c}$, i.e. $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$ ✓",
+       "Equality in both cases at $a=b=c=1$."
+      ]
+     },
+     "ans": {
+      "ru": "Оба следуют из шкалы средних при $A=1$.",
+      "en": "Both follow from the mean scale with $A=1$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Взвешенное неравенство о средних",
+      "en": "Weighted AM–GM"
+     },
+     "text": {
+      "ru": "Пусть $w_1,\\dots,w_n>0$ и $w_1+\\dots+w_n=1$. Тогда для положительных $a_i$ $$w_1a_1+w_2a_2+\\dots+w_na_n\\ \\ge\\ a_1^{\\,w_1}a_2^{\\,w_2}\\cdots a_n^{\\,w_n},$$ с равенством лишь при $a_1=\\dots=a_n$.",
+      "en": "Let $w_1,\\dots,w_n>0$ with $w_1+\\dots+w_n=1$. Then for positive $a_i$ $$w_1a_1+w_2a_2+\\dots+w_na_n\\ \\ge\\ a_1^{\\,w_1}a_2^{\\,w_2}\\cdots a_n^{\\,w_n},$$ with equality only when $a_1=\\dots=a_n$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Для рациональных весов доказательство чисто школьное. Запишем $w_i=\\dfrac{k_i}{N}$ с целыми $k_i$ и $k_1+\\dots+k_n=N$. Применим обычное неравенство о средних к $N$ числам, среди которых $a_1$ повторено $k_1$ раз, $a_2$ повторено $k_2$ раз и так далее: $$\\frac{k_1a_1+\\dots+k_na_n}{N}\\ \\ge\\ \\sqrt[N]{a_1^{\\,k_1}\\cdots a_n^{\\,k_n}}=a_1^{\\,k_1/N}\\cdots a_n^{\\,k_n/N}.$$ Это в точности требуемое ✓\n\nПроизвольные вещественные веса получаются предельным переходом: любое вещественное число приближается рациональными, а обе части непрерывны по $w_i$. $\\blacksquare$",
+      "en": "For rational weights the proof is elementary. Write $w_i=\\dfrac{k_i}{N}$ with integers $k_i$ summing to $N$. Apply ordinary AM–GM to the $N$ numbers in which $a_1$ is repeated $k_1$ times, $a_2$ repeated $k_2$ times, and so on: $$\\frac{k_1a_1+\\dots+k_na_n}{N}\\ \\ge\\ \\sqrt[N]{a_1^{\\,k_1}\\cdots a_n^{\\,k_n}}=a_1^{\\,k_1/N}\\cdots a_n^{\\,k_n/N}.$$ That is exactly the claim ✓\n\nArbitrary real weights follow by a limit: every real is approximated by rationals and both sides are continuous in the $w_i$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Взвешенная версия — это способ **прицелиться в нужную точку равенства**. Обычное неравенство о средних даёт равенство только при равных числах; если задача требует равенства, скажем, при $a=2b$, подберите веса так, чтобы это выполнялось.",
+      "en": "The weighted version is how you **aim at the required equality point**. Plain AM–GM forces equality only when the numbers are equal; if a problem needs equality at, say, $a=2b$, choose weights that make it happen."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
     "ru": "Неравенство Коши–Буняковского",
     "en": "The Cauchy–Schwarz inequality"
    },
@@ -398,6 +630,284 @@ window.LESSONS[6] = {
      "ans": {
       "ru": "Неравенство Несбитта доказано; равенство при $a=b=c$. $\\blacksquare$",
       "en": "Nesbitt’s inequality is proved; equality when $a=b=c$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Доказательство неравенства Коши–Буняковского через дискриминант.** Рассмотрим квадратный трёхчлен от переменной $t$: $$P(t)=\\sum_{i=1}^{n}\\left(a_it-b_i\\right)^{2}=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\left(\\sum b_i^{2}\\right).$$\n\nКак сумма квадратов, $P(t)\\ge0$ при всех вещественных $t$. Если старший коэффициент $\\sum a_i^{2}$ равен нулю, то все $a_i=0$ и доказывать нечего. Иначе парабола не опускается ниже оси, значит её дискриминант неположителен: $$4\\left(\\sum a_ib_i\\right)^{2}-4\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)\\ \\le\\ 0 ,$$ то есть $$\\left(\\sum a_ib_i\\right)^{2}\\ \\le\\ \\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right) \\quad\\checkmark$$\n\nРавенство означает, что дискриминант равен нулю, то есть $P(t_0)=0$ для некоторого $t_0$, а значит $b_i=t_0a_i$ для всех $i$ — наборы пропорциональны ✓ $\\blacksquare$",
+      "en": "**Proof of Cauchy–Schwarz by the discriminant.** Consider the quadratic in a variable $t$: $$P(t)=\\sum_{i=1}^{n}\\left(a_it-b_i\\right)^{2}=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\left(\\sum b_i^{2}\\right).$$\n\nBeing a sum of squares, $P(t)\\ge0$ for every real $t$. If the leading coefficient $\\sum a_i^{2}$ is zero then all $a_i=0$ and there is nothing to prove. Otherwise the parabola never dips below the axis, so its discriminant is non-positive: $$4\\left(\\sum a_ib_i\\right)^{2}-4\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)\\ \\le\\ 0 ,$$ that is $$\\left(\\sum a_ib_i\\right)^{2}\\ \\le\\ \\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right) \\quad\\checkmark$$\n\nEquality means the discriminant vanishes, so $P(t_0)=0$ for some $t_0$, hence $b_i=t_0a_i$ for all $i$ — the two lists are proportional ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "lemma",
+     "name": {
+      "ru": "Тождество Лагранжа",
+      "en": "Lagrange identity"
+     },
+     "text": {
+      "ru": "$$\\left(\\sum_{i=1}^{n}a_i^{2}\\right)\\left(\\sum_{i=1}^{n}b_i^{2}\\right)-\\left(\\sum_{i=1}^{n}a_ib_i\\right)^{2}=\\sum_{1\\le i<j\\le n}\\left(a_ib_j-a_jb_i\\right)^{2}.$$",
+      "en": "$$\\left(\\sum_{i=1}^{n}a_i^{2}\\right)\\left(\\sum_{i=1}^{n}b_i^{2}\\right)-\\left(\\sum_{i=1}^{n}a_ib_i\\right)^{2}=\\sum_{1\\le i<j\\le n}\\left(a_ib_j-a_jb_i\\right)^{2}.$$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Тождество Лагранжа даёт неравенство Коши–Буняковского мгновенно: правая часть — сумма квадратов, значит она неотрицательна. Более того, оно показывает **точную величину зазора**, а равенство сразу читается как $a_ib_j=a_jb_i$ для всех пар, то есть пропорциональность. При $n=2$ это знакомое тождество $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=\\left(ac+bd\\right)^{2}+\\left(ad-bc\\right)^{2}.$$",
+      "en": "Lagrange identity gives Cauchy–Schwarz instantly: the right side is a sum of squares, hence non-negative. Better, it exhibits the **exact size of the gap**, and equality reads off as $a_ib_j=a_jb_i$ for all pairs, i.e. proportionality. For $n=2$ it is the familiar identity $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=\\left(ac+bd\\right)^{2}+\\left(ad-bc\\right)^{2}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Доказательство формы Энгеля.** Достаточно разобрать случай двух дробей, дальше — индукция.\n\nПри $x,y\\in\\mathbb{R}$ и $p,q>0$ утверждается $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{\\left(x+y\\right)^{2}}{p+q}.$$ Умножим обе части на положительное число $pq\\left(p+q\\right)$: $$qx^{2}\\left(p+q\\right)+py^{2}\\left(p+q\\right)\\ \\ge\\ pq\\left(x+y\\right)^{2}.$$ Раскроем и сократим общие члены $pqx^{2}+pqy^{2}$: слева останется $q^{2}x^{2}+p^{2}y^{2}$, справа $2pqxy$. А это $$\\left(qx-py\\right)^{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Индукция.** Для $n$ дробей объединяем первые две по доказанному, получая $n-1$ дробь, и повторяем. Равенство на каждом шаге требует $\\dfrac{x}{p}=\\dfrac{y}{q}$, поэтому в общем случае равенство равносильно $$\\frac{x_1}{p_1}=\\frac{x_2}{p_2}=\\dots=\\frac{x_n}{p_n} \\quad\\checkmark\\qquad\\blacksquare$$",
+      "en": "**Proof of the Engel form.** It suffices to handle two fractions; induction does the rest.\n\nFor $x,y\\in\\mathbb{R}$ and $p,q>0$ the claim is $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{\\left(x+y\\right)^{2}}{p+q}.$$ Multiply by the positive number $pq\\left(p+q\\right)$: $$qx^{2}\\left(p+q\\right)+py^{2}\\left(p+q\\right)\\ \\ge\\ pq\\left(x+y\\right)^{2}.$$ Expand and cancel the common $pqx^{2}+pqy^{2}$: the left side keeps $q^{2}x^{2}+p^{2}y^{2}$, the right keeps $2pqxy$. That is $$\\left(qx-py\\right)^{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Induction.** For $n$ fractions merge the first two by the above, leaving $n-1$ fractions, and repeat. Equality at each step needs $\\dfrac{x}{p}=\\dfrac{y}{q}$, so in general equality is equivalent to $$\\frac{x_1}{p_1}=\\frac{x_2}{p_2}=\\dots=\\frac{x_n}{p_n} \\quad\\checkmark\\qquad\\blacksquare$$"
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Неравенство о перестановках и Чебышёв",
+    "en": "The rearrangement and Chebyshev inequalities"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Следующее неравенство почти не встречается в школьных учебниках, но на олимпиадах оно работает как отмычка: оно объясняет, почему одинаково упорядоченные наборы «дружат», а противоположно упорядоченные — «спорят».",
+      "en": "The next inequality is almost absent from school textbooks, yet at olympiads it works like a master key: it explains why similarly sorted lists cooperate and oppositely sorted lists fight."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство о перестановках",
+      "en": "The rearrangement inequality"
+     },
+     "text": {
+      "ru": "Пусть $a_1\\le a_2\\le\\dots\\le a_n$ и $b_1\\le b_2\\le\\dots\\le b_n$ — два упорядоченных набора вещественных чисел, а $\\sigma$ — произвольная перестановка индексов. Тогда $$\\underbrace{a_1b_n+a_2b_{n-1}+\\dots+a_nb_1}_{\\text{обратный порядок}}\\ \\le\\ \\sum_{i=1}^{n}a_ib_{\\sigma(i)}\\ \\le\\ \\underbrace{a_1b_1+a_2b_2+\\dots+a_nb_n}_{\\text{прямой порядок}}.$$",
+      "en": "Let $a_1\\le a_2\\le\\dots\\le a_n$ and $b_1\\le b_2\\le\\dots\\le b_n$ be two sorted lists of reals and let $\\sigma$ be any permutation of the indices. Then $$\\underbrace{a_1b_n+a_2b_{n-1}+\\dots+a_nb_1}_{\\text{reversed order}}\\ \\le\\ \\sum_{i=1}^{n}a_ib_{\\sigma(i)}\\ \\le\\ \\underbrace{a_1b_1+a_2b_2+\\dots+a_nb_n}_{\\text{same order}}.$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Докажем верхнюю оценку; нижняя получается заменой $b_i$ на $-b_i$.\n\nПерестановок конечное число, значит сумма $S(\\sigma)=\\sum a_ib_{\\sigma(i)}$ достигает максимума на какой-то перестановке. Возьмём такую $\\sigma$ и предположим, что она **не** прямой порядок. Тогда найдутся индексы $i<j$ с $\\sigma(i)>\\sigma(j)$, то есть $$b_{\\sigma(i)}\\ge b_{\\sigma(j)}\\quad\\text{при}\\quad a_i\\le a_j .$$\n\nПоменяем местами два значения: пусть $\\tau$ совпадает с $\\sigma$ всюду, кроме $\\tau(i)=\\sigma(j)$, $\\tau(j)=\\sigma(i)$. Разность сумм равна $$S(\\tau)-S(\\sigma)=a_ib_{\\sigma(j)}+a_jb_{\\sigma(i)}-a_ib_{\\sigma(i)}-a_jb_{\\sigma(j)} =\\left(a_j-a_i\\right)\\left(b_{\\sigma(i)}-b_{\\sigma(j)}\\right)\\ \\ge\\ 0 ,$$ потому что оба множителя неотрицательны.\n\nЗначит перестановка $\\tau$ не хуже, а она ближе к прямому порядку (число «инверсий» уменьшилось хотя бы на одну). Повторяя такие обмены конечное число раз, мы придём к прямому порядку, ни разу не уменьшив сумму ✓ $\\blacksquare$",
+      "en": "We prove the upper bound; the lower one follows by replacing $b_i$ with $-b_i$.\n\nThere are finitely many permutations, so $S(\\sigma)=\\sum a_ib_{\\sigma(i)}$ attains a maximum at some $\\sigma$. Take such a $\\sigma$ and suppose it is **not** the sorted order. Then there are indices $i<j$ with $\\sigma(i)>\\sigma(j)$, that is $$b_{\\sigma(i)}\\ge b_{\\sigma(j)}\\quad\\text{while}\\quad a_i\\le a_j .$$\n\nSwap the two values: let $\\tau$ agree with $\\sigma$ except $\\tau(i)=\\sigma(j)$, $\\tau(j)=\\sigma(i)$. The difference of the sums is $$S(\\tau)-S(\\sigma)=\\left(a_j-a_i\\right)\\left(b_{\\sigma(i)}-b_{\\sigma(j)}\\right)\\ \\ge\\ 0 ,$$ since both factors are non-negative.\n\nSo $\\tau$ is no worse, and it is closer to the sorted order (one inversion fewer). Repeating such swaps finitely many times reaches the sorted order without ever decreasing the sum ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Докажите, что для положительных $a,b,c$ $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3 .$$",
+      "en": "Prove that for positive $a,b,c$ $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3 .$$"
+     },
+     "steps": {
+      "ru": [
+       "Считаем без ограничения общности $a\\ge b\\ge c>0$.",
+       "Возьмём наборы $\\left(a,b,c\\right)$ и $\\left(\\dfrac1c,\\dfrac1b,\\dfrac1a\\right)$: оба упорядочены по возрастанию одинаково, поскольку $a\\ge b\\ge c$ влечёт $\\dfrac1c\\ge\\dfrac1b\\ge\\dfrac1a$.",
+       "Прямой порядок даёт сумму $\\dfrac{a}{c}+\\dfrac{b}{b}+\\dfrac{c}{a}$; любая перестановка не больше, в частности $\\dfrac{a}{b}+\\dfrac{b}{c}+\\dfrac{c}{a}$ — тоже сумма вида $\\sum a_ib_{\\sigma(i)}$.",
+       "Проще применить неравенство о средних напрямую: $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3\\sqrt[3]{\\frac{a}{b}\\cdot\\frac{b}{c}\\cdot\\frac{c}{a}}=3\\sqrt[3]{1}=3 .$$",
+       "Равенство при $\\dfrac{a}{b}=\\dfrac{b}{c}=\\dfrac{c}{a}$, то есть при $a=b=c$ ✓"
+      ],
+      "en": [
+       "Assume without loss of generality $a\\ge b\\ge c>0$.",
+       "Take the lists $\\left(a,b,c\\right)$ and $\\left(\\dfrac1c,\\dfrac1b,\\dfrac1a\\right)$: they are sorted the same way, since $a\\ge b\\ge c$ forces $\\dfrac1c\\ge\\dfrac1b\\ge\\dfrac1a$.",
+       "The sorted pairing gives $\\dfrac{a}{c}+1+\\dfrac{c}{a}$; every other pairing, our sum included, is no larger — so rearrangement bounds the sum from above, not below.",
+       "The clean route is AM–GM applied directly: $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3\\sqrt[3]{\\frac{a}{b}\\cdot\\frac{b}{c}\\cdot\\frac{c}{a}}=3\\sqrt[3]{1}=3 .$$",
+       "Equality when $\\dfrac{a}{b}=\\dfrac{b}{c}=\\dfrac{c}{a}$, i.e. $a=b=c$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$\\ge3$, равенство при $a=b=c$.",
+      "en": "$\\ge3$, equality at $a=b=c$."
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "Обратите внимание на третий шаг: неравенство о перестановках даёт **верхнюю** границу для перемешанной суммы, а нам нужна нижняя. Всегда проверяйте, в какую сторону работает инструмент, прежде чем ссылаться на него.",
+      "en": "Notice step three: rearrangement bounds a shuffled sum from **above**, but here we needed a lower bound. Always check which way a tool points before quoting it."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство Чебышёва о суммах",
+      "en": "Chebyshev sum inequality"
+     },
+     "text": {
+      "ru": "Если $a_1\\le\\dots\\le a_n$ и $b_1\\le\\dots\\le b_n$ (одинаково упорядочены), то $$\\frac1n\\sum_{i=1}^{n}a_ib_i\\ \\ge\\ \\left(\\frac1n\\sum_{i=1}^{n}a_i\\right)\\left(\\frac1n\\sum_{i=1}^{n}b_i\\right).$$ Если наборы упорядочены противоположно, неравенство меняет знак.",
+      "en": "If $a_1\\le\\dots\\le a_n$ and $b_1\\le\\dots\\le b_n$ (similarly sorted) then $$\\frac1n\\sum_{i=1}^{n}a_ib_i\\ \\ge\\ \\left(\\frac1n\\sum_{i=1}^{n}a_i\\right)\\left(\\frac1n\\sum_{i=1}^{n}b_i\\right).$$ For oppositely sorted lists the inequality reverses."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Выпишем $n$ неравенств из предыдущей теоремы — по одному на каждый «циклический сдвиг» второго набора: $$\\begin{aligned} a_1b_1+a_2b_2+\\dots+a_nb_n&\\ \\ge\\ a_1b_1+a_2b_2+\\dots+a_nb_n,\\\\ a_1b_1+a_2b_2+\\dots+a_nb_n&\\ \\ge\\ a_1b_2+a_2b_3+\\dots+a_nb_1,\\\\ &\\ \\ \\vdots\\\\ a_1b_1+a_2b_2+\\dots+a_nb_n&\\ \\ge\\ a_1b_n+a_2b_1+\\dots+a_nb_{n-1}. \\end{aligned}$$\n\nСложим все $n$ строк. Слева получится $n\\sum a_ib_i$. Справа каждое произведение $a_ib_j$ встречается ровно один раз (сдвиги пробегают все пары ровно по разу), поэтому сумма правых частей равна $$\\left(\\sum_i a_i\\right)\\left(\\sum_j b_j\\right).$$\n\nИтак $n\\sum a_ib_i\\ \\ge\\ \\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$; делим на $n^{2}$ ✓ $\\blacksquare$",
+      "en": "Write down the $n$ inequalities given by the previous theorem, one for each cyclic shift of the second list: $$\\begin{aligned} a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_1+a_2b_2+\\dots+a_nb_n,\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_2+a_2b_3+\\dots+a_nb_1,\\\\ &\\ \\ \\vdots\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_n+a_2b_1+\\dots+a_nb_{n-1}. \\end{aligned}$$\n\nAdd all $n$ rows. The left side becomes $n\\sum a_ib_i$. On the right every product $a_ib_j$ occurs exactly once (the shifts run through all pairs once each), so the right side totals $$\\left(\\sum_i a_i\\right)\\left(\\sum_j b_j\\right).$$\n\nHence $n\\sum a_ib_i\\ \\ge\\ \\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$; divide by $n^{2}$ ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Докажите, что для положительных $a,b,c$ $$\\frac{a^{3}+b^{3}+c^{3}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$",
+      "en": "Prove that for positive $a,b,c$ $$\\frac{a^{3}+b^{3}+c^{3}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$"
+     },
+     "steps": {
+      "ru": [
+       "Считаем $a\\le b\\le c$ (неравенство симметрично).",
+       "Тогда наборы $(a,b,c)$ и $(a^{2},b^{2},c^{2})$ упорядочены одинаково: возведение в квадрат сохраняет порядок положительных чисел.",
+       "Применим неравенство Чебышёва: $$\\frac{a\\cdot a^{2}+b\\cdot b^{2}+c\\cdot c^{2}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$",
+       "Слева стоит $\\dfrac{a^{3}+b^{3}+c^{3}}{3}$ ✓ Равенство при $a=b=c$."
+      ],
+      "en": [
+       "Assume $a\\le b\\le c$ (the statement is symmetric).",
+       "Then $(a,b,c)$ and $(a^{2},b^{2},c^{2})$ are similarly sorted: squaring preserves the order of positive numbers.",
+       "Chebyshev gives $$\\frac{a\\cdot a^{2}+b\\cdot b^{2}+c\\cdot c^{2}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$",
+       "The left side is $\\dfrac{a^{3}+b^{3}+c^{3}}{3}$ ✓ Equality at $a=b=c$."
+      ]
+     },
+     "ans": {
+      "ru": "Прямое применение Чебышёва к $(a,b,c)$ и $(a^{2},b^{2},c^{2})$.",
+      "en": "A direct application of Chebyshev to $(a,b,c)$ and $(a^{2},b^{2},c^{2})$."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Как распознать задачу «на Чебышёва».** В неравенстве встречается произведение суммы на сумму, а слева — сумма произведений одинаково растущих величин. Типичные признаки: степени $a^{k}$ и $a^{m}$ в одном выражении, или дроби вида $\\dfrac{a}{b+c}$, где числитель растёт вместе со знаменателем-дополнением.",
+      "en": "**Recognising a Chebyshev problem.** A product of two sums appears on one side and a sum of products of quantities that grow together on the other. Typical signals: powers $a^{k}$ and $a^{m}$ in the same expression, or fractions $\\dfrac{a}{b+c}$ where the numerator grows as its complementary denominator shrinks."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Выпуклость и неравенство Йенсена",
+    "en": "Convexity and Jensen inequality"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Все неравенства о средних — частные случаи одного геометрического факта: **хорда графика выпуклой функции лежит не ниже самого графика**. Понимание этого превращает набор разрозненных формул в одну идею.",
+      "en": "Every inequality between means is a special case of one geometric fact: **a chord of the graph of a convex function lies on or above the graph**. Seeing this turns a pile of separate formulas into a single idea."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Выпуклая функция",
+      "en": "Convex function"
+     },
+     "text": {
+      "ru": "Функция $f$, определённая на промежутке $I$, называется **выпуклой** (выпуклой вниз), если для любых $x,y\\in I$ и любого $\\lambda\\in[0,1]$ $$f\\left(\\lambda x+(1-\\lambda)y\\right)\\ \\le\\ \\lambda f(x)+(1-\\lambda)f(y).$$ Если неравенство всегда строгое при $x\\ne y$ и $0<\\lambda<1$, функция **строго выпукла**. При обратном знаке функция называется **вогнутой** (выпуклой вверх).",
+      "en": "A function $f$ on an interval $I$ is **convex** if for all $x,y\\in I$ and every $\\lambda\\in[0,1]$ $$f\\left(\\lambda x+(1-\\lambda)y\\right)\\ \\le\\ \\lambda f(x)+(1-\\lambda)f(y).$$ If the inequality is strict whenever $x\\ne y$ and $0<\\lambda<1$, the function is **strictly convex**. With the reversed sign the function is called **concave**."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Геометрически: точка $\\lambda x+(1-\\lambda)y$ пробегает отрезок от $x$ до $y$, левая часть — значение функции в этой точке, правая — высота хорды над ней. Выпуклость означает «график провисает под хордой».\n\nЕсли $f$ дважды дифференцируема, признак прост: $f$ выпукла на $I$ ⟺ $f^{\\prime\\prime}(x)\\ge0$ на $I$. Так $x^{2}$, $e^{x}$, $-\\ln x$ и $\\dfrac1x$ (при $x>0$) выпуклы, а $\\ln x$, $\\sqrt{x}$ и $\\sin x$ (на $[0,\\pi]$) вогнуты.",
+      "en": "Geometrically: the point $\\lambda x+(1-\\lambda)y$ sweeps the segment from $x$ to $y$, the left side is the height of the graph there, the right side the height of the chord. Convexity says the graph sags below the chord.\n\nIf $f$ is twice differentiable the test is easy: $f$ is convex on $I$ ⟺ $f^{\\prime\\prime}(x)\\ge0$ there. So $x^{2}$, $e^{x}$, $-\\ln x$ and $\\dfrac1x$ (for $x>0$) are convex, while $\\ln x$, $\\sqrt{x}$ and $\\sin x$ (on $[0,\\pi]$) are concave."
+     }
+    },
+    {
+     "t": "fig",
+     "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\" aria-label=\"chord above a convex graph\"><path d=\"M30 150 Q110 30 290 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"55\" y1=\"112\" x2=\"250\" y2=\"43\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><circle cx=\"55\" cy=\"112\" r=\"4\" fill=\"currentColor\"/><circle cx=\"250\" cy=\"43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"150\" cy=\"77\" r=\"4\" fill=\"currentColor\"/><circle cx=\"150\" cy=\"55\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"150\" y1=\"55\" x2=\"150\" y2=\"77\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"40\" y=\"128\" font-size=\"13\" fill=\"currentColor\">f(x)</text><text x=\"258\" y=\"38\" font-size=\"13\" fill=\"currentColor\">f(y)</text><text x=\"158\" y=\"72\" font-size=\"12\" fill=\"currentColor\">graph</text><text x=\"158\" y=\"48\" font-size=\"12\" fill=\"currentColor\">chord</text></svg>",
+     "cap": {
+      "ru": "Выпуклая функция: хорда лежит выше графика, поэтому среднее значений не меньше значения в среднем.",
+      "en": "A convex function: the chord lies above the graph, so the mean of the values is at least the value at the mean."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство Йенсена",
+      "en": "Jensen inequality"
+     },
+     "text": {
+      "ru": "Пусть $f$ выпукла на $I$, точки $x_1,\\dots,x_n\\in I$, а веса $w_1,\\dots,w_n\\ge0$ дают в сумме $1$. Тогда $$f\\left(\\sum_{i=1}^{n}w_ix_i\\right)\\ \\le\\ \\sum_{i=1}^{n}w_if(x_i).$$ В частности, при равных весах $w_i=\\frac1n$ $$f\\left(\\frac{x_1+\\dots+x_n}{n}\\right)\\ \\le\\ \\frac{f(x_1)+\\dots+f(x_n)}{n}.$$ Для вогнутой $f$ знаки меняются на противоположные.",
+      "en": "Let $f$ be convex on $I$, let $x_1,\\dots,x_n\\in I$ and let $w_1,\\dots,w_n\\ge0$ sum to $1$. Then $$f\\left(\\sum_{i=1}^{n}w_ix_i\\right)\\ \\le\\ \\sum_{i=1}^{n}w_if(x_i).$$ With equal weights $w_i=\\frac1n$ this reads $$f\\left(\\frac{x_1+\\dots+x_n}{n}\\right)\\ \\le\\ \\frac{f(x_1)+\\dots+f(x_n)}{n}.$$ For concave $f$ both signs reverse."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Индукция по $n$.\n\n**База $n=2$** — это в точности определение выпуклости ✓\n\n**Шаг.** Пусть утверждение верно для $n-1$ точек. Возьмём $n$ точек с весами $w_i$; можно считать $w_n<1$ (иначе всё тривиально). Обозначим $W=w_1+\\dots+w_{n-1}=1-w_n>0$ и введём точку $$z=\\frac{w_1x_1+\\dots+w_{n-1}x_{n-1}}{W}\\in I ,$$ которая лежит в $I$ как взвешенное среднее точек из $I$.\n\nТогда $\\sum_{i=1}^{n}w_ix_i=Wz+w_nx_n$, и по определению выпуклости (случай двух точек) $$f\\left(Wz+w_nx_n\\right)\\ \\le\\ W f(z)+w_nf(x_n).$$\n\nК $f(z)$ применим предположение индукции с весами $\\dfrac{w_i}{W}$, дающими в сумме $1$: $$f(z)\\ \\le\\ \\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i).$$\n\nПодставим: $$f\\left(\\sum w_ix_i\\right)\\le W\\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i)+w_nf(x_n)=\\sum_{i=1}^{n}w_if(x_i) \\quad\\checkmark\\qquad\\blacksquare$$\n\nПри строгой выпуклости равенство возможно лишь когда все $x_i$ с ненулевыми весами совпадают.",
+      "en": "Induction on $n$.\n\n**Base $n=2$** is exactly the definition of convexity ✓\n\n**Step.** Suppose the claim holds for $n-1$ points. Take $n$ points with weights $w_i$; we may assume $w_n<1$ (otherwise it is trivial). Put $W=w_1+\\dots+w_{n-1}=1-w_n>0$ and $$z=\\frac{w_1x_1+\\dots+w_{n-1}x_{n-1}}{W}\\in I ,$$ which lies in $I$ as a weighted average of points of $I$.\n\nThen $\\sum_{i=1}^{n}w_ix_i=Wz+w_nx_n$, and the two-point definition gives $$f\\left(Wz+w_nx_n\\right)\\ \\le\\ W f(z)+w_nf(x_n).$$\n\nApply the induction hypothesis to $f(z)$ with the weights $\\dfrac{w_i}{W}$, which sum to $1$: $$f(z)\\ \\le\\ \\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i).$$\n\nSubstituting, $$f\\left(\\sum w_ix_i\\right)\\le W\\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i)+w_nf(x_n)=\\sum_{i=1}^{n}w_if(x_i) \\quad\\checkmark\\qquad\\blacksquare$$\n\nWhen $f$ is strictly convex, equality forces all $x_i$ with non-zero weight to coincide."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Выведите неравенство о средних $\\dfrac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$ из неравенства Йенсена.",
+      "en": "Derive AM–GM, $\\dfrac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$, from Jensen inequality."
+     },
+     "steps": {
+      "ru": [
+       "Возьмём $f(x)=\\ln x$ на $(0,+\\infty)$. Она **вогнута**: $f^{\\prime\\prime}(x)=-\\dfrac1{x^{2}}<0$.",
+       "Йенсен для вогнутой функции с равными весами: $$\\ln\\!\\left(\\frac{a_1+\\dots+a_n}{n}\\right)\\ \\ge\\ \\frac{\\ln a_1+\\dots+\\ln a_n}{n}.$$",
+       "Правая часть равна $\\ln\\sqrt[n]{a_1\\cdots a_n}$ по свойствам логарифма.",
+       "Логарифм строго возрастает, значит из $\\ln A\\ge\\ln G$ следует $A\\ge G$ ✓",
+       "Строгая вогнутость даёт равенство только при $a_1=\\dots=a_n$."
+      ],
+      "en": [
+       "Take $f(x)=\\ln x$ on $(0,+\\infty)$. It is **concave**: $f^{\\prime\\prime}(x)=-\\dfrac1{x^{2}}<0$.",
+       "Jensen for a concave function with equal weights: $$\\ln\\!\\left(\\frac{a_1+\\dots+a_n}{n}\\right)\\ \\ge\\ \\frac{\\ln a_1+\\dots+\\ln a_n}{n}.$$",
+       "The right side equals $\\ln\\sqrt[n]{a_1\\cdots a_n}$ by the logarithm laws.",
+       "The logarithm is strictly increasing, so $\\ln A\\ge\\ln G$ gives $A\\ge G$ ✓",
+       "Strict concavity makes equality possible only when $a_1=\\dots=a_n$."
+      ]
+     },
+     "ans": {
+      "ru": "Йенсен для $\\ln x$ — это в точности $A\\ge G$.",
+      "en": "Jensen for $\\ln x$ is exactly $A\\ge G$."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "В треугольнике докажите, что $\\sin A+\\sin B+\\sin C\\le\\dfrac{3\\sqrt3}{2}$.",
+      "en": "In a triangle prove that $\\sin A+\\sin B+\\sin C\\le\\dfrac{3\\sqrt3}{2}$."
+     },
+     "steps": {
+      "ru": [
+       "Углы лежат в $(0,\\pi)$, где $\\sin$ вогнут: $(\\sin x)^{\\prime\\prime}=-\\sin x\\le0$.",
+       "Йенсен для вогнутой функции: $$\\frac{\\sin A+\\sin B+\\sin C}{3}\\ \\le\\ \\sin\\!\\left(\\frac{A+B+C}{3}\\right).$$",
+       "В треугольнике $A+B+C=\\pi$, значит справа стоит $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt3}{2}$.",
+       "Умножаем на $3$: сумма не превосходит $\\dfrac{3\\sqrt3}{2}$ ✓ Равенство — в равностороннем треугольнике."
+      ],
+      "en": [
+       "The angles lie in $(0,\\pi)$, where $\\sin$ is concave: $(\\sin x)^{\\prime\\prime}=-\\sin x\\le0$.",
+       "Jensen for a concave function: $$\\frac{\\sin A+\\sin B+\\sin C}{3}\\ \\le\\ \\sin\\!\\left(\\frac{A+B+C}{3}\\right).$$",
+       "In a triangle $A+B+C=\\pi$, so the right side is $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt3}{2}$.",
+       "Multiply by $3$: the sum is at most $\\dfrac{3\\sqrt3}{2}$ ✓ Equality for the equilateral triangle."
+      ]
+     },
+     "ans": {
+      "ru": "$\\le\\dfrac{3\\sqrt3}{2}$, равенство при $A=B=C=60^{\\circ}$.",
+      "en": "$\\le\\dfrac{3\\sqrt3}{2}$, equality when $A=B=C=60^{\\circ}$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Касательная как оценка",
+      "en": "The tangent line trick"
+     },
+     "text": {
+      "ru": "Если $f$ выпукла и дифференцируема на $I$, то её график лежит **не ниже любой касательной**: $$f(x)\\ \\ge\\ f(t)+f^{\\prime}(t)\\left(x-t\\right)\\qquad\\text{для всех }x,t\\in I .$$",
+      "en": "If $f$ is convex and differentiable on $I$ then its graph lies **on or above every tangent line**: $$f(x)\\ \\ge\\ f(t)+f^{\\prime}(t)\\left(x-t\\right)\\qquad\\text{for all }x,t\\in I .$$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Это самый практичный приём во всей теме. Пусть требуется доказать $\\sum f(x_i)\\ge C$ при условии $\\sum x_i=S$. Найдите предполагаемую точку равенства $t=\\dfrac{S}{n}$, проведите касательную в ней и докажите поточечную оценку $$f(x)\\ \\ge\\ \\alpha x+\\beta$$ обычной алгеброй. Просуммировав её по всем $i$, получаем $\\sum f(x_i)\\ge\\alpha S+n\\beta$ — и задача решена одной строкой.",
+      "en": "This is the most practical technique in the whole topic. Suppose you must prove $\\sum f(x_i)\\ge C$ subject to $\\sum x_i=S$. Guess the equality point $t=\\dfrac{S}{n}$, draw the tangent there, and prove the pointwise bound $$f(x)\\ \\ge\\ \\alpha x+\\beta$$ by ordinary algebra. Summing over $i$ gives $\\sum f(x_i)\\ge\\alpha S+n\\beta$, and the problem is finished in one line."
      }
     }
    ]
@@ -471,6 +981,220 @@ window.LESSONS[6] = {
      "text": {
       "ru": "Перемножать неравенства можно **только когда все части положительны**. Из $-5>-7$ и $2>1$ перемножением получилось бы $-10>-7$ — неверно. В олимпиадных задачах об этом почти всегда сказано («для положительных $a,b,c$»), но написать «все части положительны, поэтому перемножаем» стоит: это строчка, за которую дают балл.",
       "en": "Inequalities may be multiplied **only when all parts are positive**. From $-5>-7$ and $2>1$, multiplying would give $-10>-7$, which is false. Olympiad problems almost always say \"for positive $a,b,c$\", but write out \"all parts are positive, so we may multiply\" — that is a line worth a mark."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Продвинутые приёмы",
+    "en": "Advanced techniques"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Ниже собраны приёмы, которые отличают уверенное решение олимпиадного неравенства от долгого перебора. Каждый из них стоит один раз разобрать до конца — дальше они узнаются мгновенно.",
+      "en": "The techniques below separate a confident solution of an olympiad inequality from a long search. Each is worth working through once; after that you recognise them instantly."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Метод SOS (сумма квадратов)",
+      "en": "The SOS (sum of squares) method"
+     },
+     "text": {
+      "ru": "Многие симметричные неравенства для трёх переменных приводятся к виду $$S_a\\left(b-c\\right)^{2}+S_b\\left(c-a\\right)^{2}+S_c\\left(a-b\\right)^{2}\\ \\ge\\ 0 ,$$ где $S_a,S_b,S_c$ — выражения от $a,b,c$. Если все три коэффициента неотрицательны, неравенство доказано.",
+      "en": "Many symmetric three-variable inequalities can be brought to the form $$S_a\\left(b-c\\right)^{2}+S_b\\left(c-a\\right)^{2}+S_c\\left(a-b\\right)^{2}\\ \\ge\\ 0 ,$$ where $S_a,S_b,S_c$ are expressions in $a,b,c$. If all three coefficients are non-negative, the inequality is proved."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Докажите, что $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$, и найдите точную величину разности.",
+      "en": "Prove that $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ and identify the exact size of the gap."
+     },
+     "steps": {
+      "ru": [
+       "Умножим обе части на $2$ и перенесём всё влево: $$2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca\\ \\ge\\ 0 .$$",
+       "Сгруппируем по парам: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$",
+       "Это в точности $\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\ \\ge\\ 0$ ✓",
+       "Значит разность равна $\\tfrac12\\left[\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\right]$ — это форма SOS с $S_a=S_b=S_c=\\tfrac12$."
+      ],
+      "en": [
+       "Multiply by $2$ and move everything to the left: $$2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca\\ \\ge\\ 0 .$$",
+       "Group in pairs: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$",
+       "This is exactly $\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\ \\ge\\ 0$ ✓",
+       "So the gap equals $\\tfrac12\\left[\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\right]$ — the SOS form with $S_a=S_b=S_c=\\tfrac12$."
+      ]
+     },
+     "ans": {
+      "ru": "Разность равна $\\tfrac12\\sum\\left(a-b\\right)^{2}$.",
+      "en": "The gap equals $\\tfrac12\\sum\\left(a-b\\right)^{2}$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Неравенство Шура",
+      "en": "Schur inequality"
+     },
+     "text": {
+      "ru": "Для неотрицательных $a,b,c$ и любого $t>0$ $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)+c^{t}\\left(c-a\\right)\\left(c-b\\right)\\ \\ge\\ 0 .$$ Случай $t=1$ после раскрытия скобок даёт $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b .$$",
+      "en": "For non-negative $a,b,c$ and any $t>0$ $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)+c^{t}\\left(c-a\\right)\\left(c-b\\right)\\ \\ge\\ 0 .$$ The case $t=1$ expands to $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Неравенство симметрично, поэтому можно считать $a\\ge b\\ge c\\ge0$. Сгруппируем первые два слагаемых, вынеся общий множитель $\\left(a-b\\right)$: $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)=\\left(a-b\\right)\\left[a^{t}\\left(a-c\\right)-b^{t}\\left(b-c\\right)\\right].$$\n\nИз $a\\ge b$ следует $a^{t}\\ge b^{t}$ и $a-c\\ge b-c\\ge0$, поэтому квадратная скобка неотрицательна, а множитель $\\left(a-b\\right)$ неотрицателен. Значит сумма первых двух слагаемых $\\ge0$.\n\nТретье слагаемое равно $c^{t}\\left(c-a\\right)\\left(c-b\\right)$; оба множителя $\\left(c-a\\right)$ и $\\left(c-b\\right)$ неположительны, значит их произведение неотрицательно, и всё слагаемое $\\ge0$.\n\nСумма двух неотрицательных величин неотрицательна ✓ $\\blacksquare$",
+      "en": "The expression is symmetric, so assume $a\\ge b\\ge c\\ge0$. Group the first two terms, pulling out $\\left(a-b\\right)$: $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)=\\left(a-b\\right)\\left[a^{t}\\left(a-c\\right)-b^{t}\\left(b-c\\right)\\right].$$\n\nFrom $a\\ge b$ we get $a^{t}\\ge b^{t}$ and $a-c\\ge b-c\\ge0$, so the bracket is non-negative, and $\\left(a-b\\right)\\ge0$. Hence the first two terms together are $\\ge0$.\n\nThe third term is $c^{t}\\left(c-a\\right)\\left(c-b\\right)$; both factors $\\left(c-a\\right)$ and $\\left(c-b\\right)$ are non-positive, so their product is non-negative and the term is $\\ge0$.\n\nA sum of two non-negative quantities is non-negative ✓ $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Подстановка Рави",
+      "en": "The Ravi substitution"
+     },
+     "text": {
+      "ru": "Числа $a,b,c$ являются сторонами треугольника тогда и только тогда, когда существуют $x,y,z>0$ с $$a=y+z,\\qquad b=z+x,\\qquad c=x+y .$$",
+      "en": "Numbers $a,b,c$ are the sides of a triangle if and only if there exist $x,y,z>0$ with $$a=y+z,\\qquad b=z+x,\\qquad c=x+y .$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Если такие $x,y,z$ есть,** то $$b+c=\\left(z+x\\right)+\\left(x+y\\right)=a+2x>a ,$$ и аналогично для двух других неравенств треугольника ✓\n\n**Обратно.** Пусть $a,b,c$ — стороны треугольника, положим $$x=\\frac{b+c-a}{2},\\qquad y=\\frac{c+a-b}{2},\\qquad z=\\frac{a+b-c}{2}.$$ Все три положительны в точности по неравенствам треугольника, и прямая проверка даёт $y+z=a$, $z+x=b$, $x+y=c$ ✓ $\\blacksquare$\n\n(Геометрически $x,y,z$ — это отрезки от вершин до точек касания вписанной окружности.)",
+      "en": "**If such $x,y,z$ exist** then $$b+c=\\left(z+x\\right)+\\left(x+y\\right)=a+2x>a ,$$ and similarly for the other two triangle inequalities ✓\n\n**Conversely,** if $a,b,c$ are the sides of a triangle, set $$x=\\frac{b+c-a}{2},\\qquad y=\\frac{c+a-b}{2},\\qquad z=\\frac{a+b-c}{2}.$$ All three are positive exactly by the triangle inequalities, and a direct check gives $y+z=a$, $z+x=b$, $x+y=c$ ✓ $\\blacksquare$\n\n(Geometrically $x,y,z$ are the tangent lengths from the vertices to the incircle.)"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Подстановка Рави **снимает условие треугольника**: неудобное «$a,b,c$ — стороны треугольника» превращается в удобное «$x,y,z>0$», после чего работают обычные неравенство о средних и Коши–Буняковского.",
+      "en": "The Ravi substitution **removes the triangle condition**: the awkward hypothesis \"$a,b,c$ are sides of a triangle\" becomes the comfortable \"$x,y,z>0$\", after which ordinary AM–GM and Cauchy–Schwarz apply."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Пусть $a,b,c$ — стороны треугольника. Докажите, что $$a^{2}+b^{2}+c^{2}\\ <\\ 2\\left(ab+bc+ca\\right).$$",
+      "en": "Let $a,b,c$ be the sides of a triangle. Prove that $$a^{2}+b^{2}+c^{2}\\ <\\ 2\\left(ab+bc+ca\\right).$$"
+     },
+     "steps": {
+      "ru": [
+       "Подставим $a=y+z$, $b=z+x$, $c=x+y$ с $x,y,z>0$.",
+       "Левая часть: $$\\sum\\left(y+z\\right)^{2}=2\\left(x^{2}+y^{2}+z^{2}\\right)+2\\left(xy+yz+zx\\right).$$",
+       "Правая часть: $ab+bc+ca=\\left(x^{2}+y^{2}+z^{2}\\right)+3\\left(xy+yz+zx\\right)$, поэтому её удвоение равно $2\\left(x^{2}+y^{2}+z^{2}\\right)+6\\left(xy+yz+zx\\right)$.",
+       "Разность равна $4\\left(xy+yz+zx\\right)>0$, поскольку $x,y,z>0$ ✓",
+       "Неравенство строгое — вырожденный «треугольник» исключён условием $x,y,z>0$."
+      ],
+      "en": [
+       "Substitute $a=y+z$, $b=z+x$, $c=x+y$ with $x,y,z>0$.",
+       "Left side: $$\\sum\\left(y+z\\right)^{2}=2\\left(x^{2}+y^{2}+z^{2}\\right)+2\\left(xy+yz+zx\\right).$$",
+       "Right side: $ab+bc+ca=\\left(x^{2}+y^{2}+z^{2}\\right)+3\\left(xy+yz+zx\\right)$, so twice it is $2\\left(x^{2}+y^{2}+z^{2}\\right)+6\\left(xy+yz+zx\\right)$.",
+       "The difference is $4\\left(xy+yz+zx\\right)>0$ because $x,y,z>0$ ✓",
+       "The inequality is strict: degenerate triangles are excluded by $x,y,z>0$."
+      ]
+     },
+     "ans": {
+      "ru": "Разность равна $4\\left(xy+yz+zx\\right)>0$.",
+      "en": "The gap equals $4\\left(xy+yz+zx\\right)>0$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Однородизация и нормировка",
+      "en": "Homogenisation and normalisation"
+     },
+     "text": {
+      "ru": "Неравенство называется **однородным степени $d$**, если замена $\\left(a,b,c\\right)\\to\\left(ta,tb,tc\\right)$ умножает обе части на $t^{d}$. Однородное неравенство можно доказывать при любом удобном дополнительном условии вида $a+b+c=3$ или $abc=1$: масштабирование сводит общий случай к нему.\n\nОбратно, если в условии дано, например, $a+b+c=1$, а неравенство неоднородно, его можно **однородизировать**, домножая слагаемые на подходящие степени $\\left(a+b+c\\right)$.",
+      "en": "An inequality is **homogeneous of degree $d$** if replacing $\\left(a,b,c\\right)$ by $\\left(ta,tb,tc\\right)$ multiplies both sides by $t^{d}$. A homogeneous inequality may be proved under any convenient extra condition such as $a+b+c=3$ or $abc=1$: scaling reduces the general case to it.\n\nConversely, if the hypothesis is $a+b+c=1$ and the inequality is not homogeneous, you can **homogenise** it by multiplying terms by suitable powers of $\\left(a+b+c\\right)$."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "**Неравенство Мюрхеда.** Для симметричных сумм одночленов существует общий критерий: если последовательность показателей $\\left(p_1,\\dots,p_n\\right)$ мажорирует $\\left(q_1,\\dots,q_n\\right)$ (упорядочив обе по убыванию, частичные суммы первой не меньше, а полные суммы равны), то соответствующая симметричная сумма не меньше. Так $\\sum_{\\text{sym}}a^{3}\\ \\ge\\ \\sum_{\\text{sym}}a^{2}b\\ \\ge\\ \\sum_{\\text{sym}}abc$. На олимпиаде ссылку на Мюрхеда обычно стоит сопровождать прямым доказательством через неравенство о средних.",
+      "en": "**Muirhead inequality.** For symmetric sums of monomials there is a general criterion: if the exponent sequence $\\left(p_1,\\dots,p_n\\right)$ majorises $\\left(q_1,\\dots,q_n\\right)$ (sorted decreasingly, the partial sums of the first are at least those of the second, and the totals are equal) then the corresponding symmetric sum is at least as large. Thus $\\sum_{\\text{sym}}a^{3}\\ \\ge\\ \\sum_{\\text{sym}}a^{2}b\\ \\ge\\ \\sum_{\\text{sym}}abc$. At an olympiad it is wise to back a citation of Muirhead with a direct AM–GM argument."
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Что видно в задаче",
+       "Что пробовать"
+      ],
+      "en": [
+       "What you see",
+       "What to try"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "сумма дробей $\\frac{x_i^{2}}{y_i}$",
+        "Коши в форме Энгеля"
+       ],
+       [
+        "произведение $=1$ или сумма фиксирована",
+        "неравенство о средних, нормировка"
+       ],
+       [
+        "симметрия и равенство при $a=b=c$",
+        "SOS, Шур"
+       ],
+       [
+        "$a,b,c$ — стороны треугольника",
+        "подстановка Рави"
+       ],
+       [
+        "одна функция от каждой переменной",
+        "Йенсен или касательная"
+       ],
+       [
+        "две одинаково упорядоченные суммы",
+        "Чебышёв, перестановки"
+       ],
+       [
+        "разные степени одной переменной",
+        "степенные средние"
+       ]
+      ],
+      "en": [
+       [
+        "a sum of fractions $\\frac{x_i^{2}}{y_i}$",
+        "Cauchy in Engel form"
+       ],
+       [
+        "a fixed product or a fixed sum",
+        "AM–GM, normalisation"
+       ],
+       [
+        "symmetry with equality at $a=b=c$",
+        "SOS, Schur"
+       ],
+       [
+        "$a,b,c$ are triangle sides",
+        "Ravi substitution"
+       ],
+       [
+        "one function of each variable",
+        "Jensen or the tangent line"
+       ],
+       [
+        "two similarly sorted sums",
+        "Chebyshev, rearrangement"
+       ],
+       [
+        "different powers of one variable",
+        "power means"
+       ]
+      ]
      }
     }
    ]

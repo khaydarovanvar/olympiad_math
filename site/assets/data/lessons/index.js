@@ -82,7 +82,7 @@ window.LESSON_INDEX = [
    "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 9
  },
  {
   "n": 7,
@@ -96,7 +96,7 @@ window.LESSON_INDEX = [
    "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 8
  },
  {
   "n": 8,
