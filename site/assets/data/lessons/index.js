@@ -69,5 +69,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 6
+ },
+ {
+  "n": 6,
+  "cat": "alg",
+  "title": {
+   "ru": "Неравенства",
+   "en": "Inequalities"
+  },
+  "sub": {
+   "ru": "От «квадрат неотрицателен» до Коши–Буняковского: как доказывать неравенства, а не угадывать их.",
+   "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
