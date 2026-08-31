@@ -125,5 +125,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 6
+ },
+ {
+  "n": 10,
+  "cat": "geo",
+  "title": {
+   "ru": "Площади и метод площадей",
+   "en": "Areas and the area method"
+  },
+  "sub": {
+   "ru": "Формулы площади, отношения площадей как главный инструмент, теорема Чевы и формула Пика.",
+   "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
