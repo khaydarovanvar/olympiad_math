@@ -148,7 +148,7 @@
       '" data-reveal data-reveal-delay="' + (i % 4) + '" href="' + href + '">' +
       '<span class="tnum">' + (t.n < 10 ? '0' : '') + t.n + '</span>' +
       '<h3>' + esc(title) + '</h3>' +
-      '<p>' + esc(t.tip) + '</p>' +
+      '<p>' + esc(L && L.sub ? (L.sub[lang] || t.tip) : t.tip) + '</p>' +
       '<span class="tfoot">' +
         (L ? '<span class="lx-stat"><span>' + esc(plural(L.sections, T.secs)) + '</span>' +
              '<span>' + esc(plural(L.problems, T.probs)) + '</span></span>'

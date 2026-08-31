@@ -310,7 +310,7 @@ body.menu-open .m-link{transform:none}
 .tcard .tfoot{display:flex;align-items:center;justify-content:space-between;gap:.6rem;
   margin-top:.4rem;padding-top:.85rem;border-top:1px solid var(--line-soft);
   font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
-.tcard .tgo{color:var(--c);font-weight:600;transition:transform .35s var(--ease-out)}
+.tcard .tgo{color:var(--c);font-weight:600;white-space:nowrap;transition:transform .35s var(--ease-out)}
 .tcard:hover .tgo{transform:translateX(4px)}
 .tcard .tcat{color:var(--c)}
 

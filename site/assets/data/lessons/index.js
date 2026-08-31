@@ -7,7 +7,39 @@ window.LESSON_INDEX = [
    "ru": "Делимость, НОД и НОК",
    "en": "Divisibility, GCD and LCM"
   },
+  "sub": {
+   "ru": "Фундамент всей теории чисел: деление с остатком, признаки делимости и алгоритм Евклида.",
+   "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm."
+  },
   "problems": 20,
   "sections": 7
+ },
+ {
+  "n": 2,
+  "cat": "nt",
+  "title": {
+   "ru": "Простые числа",
+   "en": "Prime numbers"
+  },
+  "sub": {
+   "ru": "Кирпичи, из которых сложены все целые числа: разложение, бесконечность простых и приём «$p>3$ значит $p=6k\\pm1$».",
+   "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\"."
+  },
+  "problems": 20,
+  "sections": 5
+ },
+ {
+  "n": 3,
+  "cat": "nt",
+  "title": {
+   "ru": "Арифметика остатков",
+   "en": "Modular arithmetic"
+  },
+  "sub": {
+   "ru": "Сравнения превращают громоздкие вычисления в короткие: последние цифры, циклы степеней и малая теорема Ферма.",
+   "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem."
+  },
+  "problems": 20,
+  "sections": 4
  }
 ];

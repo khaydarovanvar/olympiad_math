@@ -194,6 +194,7 @@ def main():
         built.append(n)
         index.append({'n': n, 'cat': lesson['cat'],
                       'title': lesson['title'],
+                      'sub': lesson['sub'],
                       'problems': len(lesson.get('problems', [])),
                       'sections': len(lesson.get('sections', []))})
 
