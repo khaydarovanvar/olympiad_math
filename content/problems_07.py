@@ -1,0 +1,261 @@
+# -*- coding: utf-8 -*-
+"""Topic 7 — extra problems, appended to lesson_07.py by content/build.py.
+
+Source labels: where the competition is known for certain it is named; the
+round labels ("Районный тур · уровень") describe the level a problem is
+typical of, not a claim about where it was set.
+"""
+
+SCHOOL   = 'Школьный тур · уровень / School-round level'
+DISTRICT = 'Районный тур · уровень / District-round level'
+REGION   = 'Областной тур · уровень / Regional-round level'
+REPUBLIC = 'Республиканский тур · уровень / Republic-round level'
+INTL     = 'Международный уровень / International level'
+CLASSIC  = 'Классическая задача / Classic'
+
+EXTRA = [
+
+ # ------------------------------------------------------------------ level 1
+ {'src': SCHOOL, 'lvl': 1,
+  'q': {'ru': r'В арифметической прогрессии $a_1=7$ и $d=-2$. Найдите $a_{10}$.',
+        'en': r'An arithmetic progression has $a_1=7$ and $d=-2$. Find $a_{10}$.'},
+  'hint': {'ru': r'$a_n=a_1+(n-1)d$.',
+           'en': r'$a_n=a_1+(n-1)d$.'},
+  'sol': {'ru': r'Формула общего члена: $$a_n=a_1+(n-1)d .$$\n\nПодставим $n=10$: $$a_{10}=7+9\cdot(-2)=7-18=-11 .$$\n\n**Проверка** прямым счётом: $7,5,3,1,-1,-3,-5,-7,-9,-11$ — десятый член действительно $-11$ ✓\n\n**Ответ:** $-11$.',
+          'en': r'The formula for the general term: $$a_n=a_1+(n-1)d .$$\n\nWith $n=10$: $$a_{10}=7+9\cdot(-2)=7-18=-11 .$$\n\n**Check** by listing: $7,5,3,1,-1,-3,-5,-7,-9,-11$ — the tenth term is indeed $-11$ ✓\n\n**Answer:** $-11$.'}},
+
+ {'src': SCHOOL, 'lvl': 1,
+  'q': {'ru': r'Найдите сумму $1+2+3+\dots+100$.',
+        'en': r'Find the sum $1+2+3+\dots+100$.'},
+  'hint': {'ru': r'Сложите первое слагаемое с последним, второе с предпоследним и так далее.',
+           'en': r'Pair the first term with the last, the second with the second-to-last, and so on.'},
+  'sol': {'ru': r'Разобьём слагаемые на пары: $$(1+100)+(2+99)+(3+98)+\dots+(50+51).$$\n\nКаждая пара даёт $101$, а пар ровно $50$, поэтому $$1+2+\dots+100=50\cdot101=5050 .$$\n\n**Общая формула:** $$1+2+\dots+n=\frac{n(n+1)}{2} ,$$ и при $n=100$ она даёт $\dfrac{100\cdot101}{2}=5050$ ✓\n\n**Ответ:** $5050$.',
+          'en': r'Split the terms into pairs: $$(1+100)+(2+99)+(3+98)+\dots+(50+51).$$\n\nEach pair gives $101$ and there are exactly $50$ pairs, so $$1+2+\dots+100=50\cdot101=5050 .$$\n\n**The general formula:** $$1+2+\dots+n=\frac{n(n+1)}{2} ,$$ which at $n=100$ gives $\dfrac{100\cdot101}{2}=5050$ ✓\n\n**Answer:** $5050$.'}},
+
+ {'src': SCHOOL, 'lvl': 1,
+  'q': {'ru': r'Геометрическая прогрессия начинается с $b_1=3$ и имеет знаменатель $q=2$. Найдите $b_6$ и сумму первых шести членов.',
+        'en': r'A geometric progression has $b_1=3$ and ratio $q=2$. Find $b_6$ and the sum of the first six terms.'},
+  'hint': {'ru': r'$b_n=b_1q^{\,n-1}$ и $S_n=b_1\dfrac{q^{n}-1}{q-1}$.',
+           'en': r'$b_n=b_1q^{\,n-1}$ and $S_n=b_1\dfrac{q^{n}-1}{q-1}$.'},
+  'sol': {'ru': r'**Шестой член:** $$b_6=b_1q^{5}=3\cdot2^{5}=3\cdot32=96 .$$\n\n**Сумма шести членов:** $$S_6=b_1\frac{q^{6}-1}{q-1}=3\cdot\frac{64-1}{1}=3\cdot63=189 .$$\n\n**Проверка** прямым сложением: $$3+6+12+24+48+96=189 \quad\checkmark$$\n\n**Ответ:** $b_6=96$, $S_6=189$.',
+          'en': r'**The sixth term:** $$b_6=b_1q^{5}=3\cdot2^{5}=3\cdot32=96 .$$\n\n**The sum of six terms:** $$S_6=b_1\frac{q^{6}-1}{q-1}=3\cdot\frac{64-1}{1}=3\cdot63=189 .$$\n\n**Check** by adding directly: $$3+6+12+24+48+96=189 \quad\checkmark$$\n\n**Answer:** $b_6=96$, $S_6=189$.'}},
+
+ {'src': SCHOOL, 'lvl': 1,
+  'q': {'ru': r'Сколько членов в прогрессии $5,\ 9,\ 13,\ \dots,\ 101$?',
+        'en': r'How many terms are there in the progression $5,\ 9,\ 13,\ \dots,\ 101$?'},
+  'hint': {'ru': r'Решите уравнение $a_1+(n-1)d=101$.',
+           'en': r'Solve $a_1+(n-1)d=101$.'},
+  'sol': {'ru': r'Это арифметическая прогрессия с $a_1=5$ и $d=4$. Из формулы общего члена $$5+(n-1)\cdot4=101 $$ получаем $$(n-1)\cdot4=96\quad\Longrightarrow\quad n-1=24\quad\Longrightarrow\quad n=25 .$$\n\n**Проверка:** $a_{25}=5+24\cdot4=5+96=101$ ✓\n\n**Ответ:** $25$ членов.',
+          'en': r'This is an arithmetic progression with $a_1=5$ and $d=4$. From the general term $$5+(n-1)\cdot4=101 $$ we get $$(n-1)\cdot4=96\quad\Longrightarrow\quad n-1=24\quad\Longrightarrow\quad n=25 .$$\n\n**Check:** $a_{25}=5+24\cdot4=5+96=101$ ✓\n\n**Answer:** $25$ terms.'}},
+
+ {'src': SCHOOL, 'lvl': 1,
+  'q': {'ru': r'Найдите сумму первых двадцати чётных натуральных чисел.',
+        'en': r'Find the sum of the first twenty positive even numbers.'},
+  'hint': {'ru': r'Вынесите двойку за скобку.',
+           'en': r'Factor out the two.'},
+  'sol': {'ru': r'Речь идёт о сумме $$2+4+6+\dots+40=2(1+2+3+\dots+20).$$\n\nВнутри скобки — сумма первых двадцати натуральных чисел: $$1+2+\dots+20=\frac{20\cdot21}{2}=210 .$$\n\nЗначит искомая сумма равна $2\cdot210=420$.\n\n**Проверка** по формуле суммы прогрессии: $$S=\frac{(2+40)\cdot20}{2}=\frac{42\cdot20}{2}=420 \quad\checkmark$$\n\n**Ответ:** $420$.',
+          'en': r'The sum in question is $$2+4+6+\dots+40=2(1+2+3+\dots+20).$$\n\nInside the bracket is the sum of the first twenty positive integers: $$1+2+\dots+20=\frac{20\cdot21}{2}=210 .$$\n\nSo the sum equals $2\cdot210=420$.\n\n**Check** by the progression-sum formula: $$S=\frac{(2+40)\cdot20}{2}=\frac{42\cdot20}{2}=420 \quad\checkmark$$\n\n**Answer:** $420$.'}},
+
+ {'src': SCHOOL, 'lvl': 1,
+  'q': {'ru': r'При каких $x$ числа $3$, $x$, $27$ образуют геометрическую прогрессию?',
+        'en': r'For which $x$ do the numbers $3$, $x$, $27$ form a geometric progression?'},
+  'hint': {'ru': r'Средний член — среднее геометрическое соседей: $x^{2}=3\cdot27$.',
+           'en': r'The middle term is the geometric mean of its neighbours: $x^{2}=3\cdot27$.'},
+  'sol': {'ru': r'В геометрической прогрессии отношения соседних членов равны: $$\frac x3=\frac{27}{x}\quad\Longrightarrow\quad x^{2}=81 .$$\n\nОтсюда $x=9$ или $x=-9$.\n\n**Проверка.** При $x=9$: прогрессия $3,9,27$ со знаменателем $3$ ✓ При $x=-9$: прогрессия $3,-9,27$ со знаменателем $-3$ ✓\n\n**Ответ:** $x=9$ и $x=-9$.\n\n**Замечание.** Часто в задачах требуют положительный знаменатель — тогда остаётся только $x=9$.',
+          'en': r'In a geometric progression consecutive ratios agree: $$\frac x3=\frac{27}{x}\quad\Longrightarrow\quad x^{2}=81 .$$\n\nHence $x=9$ or $x=-9$.\n\n**Check.** For $x=9$: the progression $3,9,27$ with ratio $3$ ✓ For $x=-9$: the progression $3,-9,27$ with ratio $-3$ ✓\n\n**Answer:** $x=9$ and $x=-9$.\n\n**Remark.** Problems often ask for a positive ratio — then only $x=9$ survives.'}},
+
+ # ------------------------------------------------------------------ level 2
+ {'src': DISTRICT, 'lvl': 2,
+  'q': {'ru': r'Найдите сумму всех трёхзначных чисел, кратных $7$.',
+        'en': r'Find the sum of all three-digit multiples of $7$.'},
+  'hint': {'ru': r'Это арифметическая прогрессия от $105$ до $994$.',
+           'en': r'It is an arithmetic progression from $105$ to $994$.'},
+  'sol': {'ru': r'**Границы.** Наименьшее трёхзначное кратное семи: $7\cdot15=105$. Наибольшее: $7\cdot142=994$ (ведь $7\cdot143=1001$ уже четырёхзначное).\n\n**Количество членов.** Это все $7k$ при $k=15,16,\dots,142$, то есть $$142-15+1=128 $$ чисел.\n\n**Сумма.** По формуле суммы арифметической прогрессии $$S=\frac{(105+994)\cdot128}{2}=\frac{1099\cdot128}{2}=1099\cdot64=70336 .$$\n\n**Ответ:** $70\,336$.\n\n**Проверка через вынесение семёрки:** $$S=7(15+16+\dots+142)=7\cdot\frac{(15+142)\cdot128}{2}=7\cdot10048=70336 \quad\checkmark$$',
+          'en': r'**The range.** The smallest three-digit multiple of seven is $7\cdot15=105$; the largest is $7\cdot142=994$ (since $7\cdot143=1001$ has four digits).\n\n**How many terms.** They are $7k$ for $k=15,16,\dots,142$, that is $$142-15+1=128 $$ numbers.\n\n**The sum.** By the arithmetic-progression formula $$S=\frac{(105+994)\cdot128}{2}=\frac{1099\cdot128}{2}=1099\cdot64=70336 .$$\n\n**Answer:** $70\,336$.\n\n**Check by factoring out the seven:** $$S=7(15+16+\dots+142)=7\cdot\frac{(15+142)\cdot128}{2}=7\cdot10048=70336 \quad\checkmark$$'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'В геометрической прогрессии $b_2=6$ и $b_5=48$. Найдите $b_1$ и знаменатель.',
+        'en': r'A geometric progression has $b_2=6$ and $b_5=48$. Find $b_1$ and the ratio.'},
+  'hint': {'ru': r'Поделите $b_5$ на $b_2$.',
+           'en': r'Divide $b_5$ by $b_2$.'},
+  'sol': {'ru': r'Запишем оба члена через $b_1$ и $q$: $$b_2=b_1q,\qquad b_5=b_1q^{4} .$$\n\nПоделим второе на первое (члены ненулевые): $$\frac{b_5}{b_2}=q^{3}=\frac{48}{6}=8\quad\Longrightarrow\quad q=2 .$$\n\nТогда из $b_1q=6$ получаем $b_1=3$.\n\n**Проверка:** прогрессия $3,6,12,24,48$ — действительно $b_2=6$ и $b_5=48$ ✓\n\n**Ответ:** $b_1=3$, $q=2$.',
+          'en': r'Write both terms through $b_1$ and $q$: $$b_2=b_1q,\qquad b_5=b_1q^{4} .$$\n\nDivide the second by the first (the terms are non-zero): $$\frac{b_5}{b_2}=q^{3}=\frac{48}{6}=8\quad\Longrightarrow\quad q=2 .$$\n\nThen $b_1q=6$ gives $b_1=3$.\n\n**Check:** the progression $3,6,12,24,48$ indeed has $b_2=6$ and $b_5=48$ ✓\n\n**Answer:** $b_1=3$, $q=2$.'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'Докажите, что в арифметической прогрессии каждый член (кроме первого) равен полусумме соседей: $a_n=\dfrac{a_{n-1}+a_{n+1}}{2}$.',
+        'en': r'Prove that in an arithmetic progression every term (except the first) is the average of its neighbours: $a_n=\dfrac{a_{n-1}+a_{n+1}}{2}$.'},
+  'hint': {'ru': r'Соседние члены отличаются на $d$.',
+           'en': r'Neighbouring terms differ by $d$.'},
+  'sol': {'ru': r'По определению арифметической прогрессии $$a_{n-1}=a_n-d,\qquad a_{n+1}=a_n+d .$$\n\nСложим: $$a_{n-1}+a_{n+1}=(a_n-d)+(a_n+d)=2a_n ,$$ откуда $$a_n=\frac{a_{n-1}+a_{n+1}}{2} . \qquad\blacksquare$$\n\n**Обратное тоже верно:** если каждый член равен полусумме соседей, то $a_{n+1}-a_n=a_n-a_{n-1}$, то есть разность постоянна, и последовательность — арифметическая прогрессия.\n\n**Отсюда и название** «арифметическая»: каждый член — среднее арифметическое соседей. У геометрической прогрессии аналогично $b_n^{2}=b_{n-1}b_{n+1}$.',
+          'en': r'By definition of an arithmetic progression $$a_{n-1}=a_n-d,\qquad a_{n+1}=a_n+d .$$\n\nAdding, $$a_{n-1}+a_{n+1}=(a_n-d)+(a_n+d)=2a_n ,$$ hence $$a_n=\frac{a_{n-1}+a_{n+1}}{2} . \qquad\blacksquare$$\n\n**The converse holds too:** if every term is the average of its neighbours then $a_{n+1}-a_n=a_n-a_{n-1}$, so the difference is constant and the sequence is arithmetic.\n\n**Hence the name** "arithmetic": every term is the arithmetic mean of its neighbours. For a geometric progression the analogue is $b_n^{2}=b_{n-1}b_{n+1}$.'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'Вычислите $\dfrac1{1\cdot2}+\dfrac1{2\cdot3}+\dots+\dfrac1{n(n+1)}$.',
+        'en': r'Evaluate $\dfrac1{1\cdot2}+\dfrac1{2\cdot3}+\dots+\dfrac1{n(n+1)}$.'},
+  'hint': {'ru': r'$\dfrac1{k(k+1)}=\dfrac1k-\dfrac1{k+1}$.',
+           'en': r'$\dfrac1{k(k+1)}=\dfrac1k-\dfrac1{k+1}$.'},
+  'sol': {'ru': r'Разложим общее слагаемое: $$\frac1{k(k+1)}=\frac{(k+1)-k}{k(k+1)}=\frac1k-\frac1{k+1} .$$\n\nСумма «телескопируется»: $$\left(\frac11-\frac12\right)+\left(\frac12-\frac13\right)+\dots+\left(\frac1n-\frac1{n+1}\right).$$\n\nВсе промежуточные слагаемые взаимно уничтожаются, остаётся $$1-\frac1{n+1}=\frac{n}{n+1} .$$\n\n**Проверка** при $n=2$: $\tfrac12+\tfrac16=\tfrac23$, и формула даёт $\tfrac23$ ✓\n\n**Ответ:** $\dfrac{n}{n+1}$.',
+          'en': r'Split the general term: $$\frac1{k(k+1)}=\frac{(k+1)-k}{k(k+1)}=\frac1k-\frac1{k+1} .$$\n\nThe sum telescopes: $$\left(\frac11-\frac12\right)+\left(\frac12-\frac13\right)+\dots+\left(\frac1n-\frac1{n+1}\right).$$\n\nAll intermediate terms cancel, leaving $$1-\frac1{n+1}=\frac{n}{n+1} .$$\n\n**Check** at $n=2$: $\tfrac12+\tfrac16=\tfrac23$, and the formula gives $\tfrac23$ ✓\n\n**Answer:** $\dfrac{n}{n+1}$.'}},
+
+ {'src': DISTRICT, 'lvl': 2,
+  'q': {'ru': r'Вычислите сумму $1\cdot2+2\cdot3+3\cdot4+\dots+n(n+1)$.',
+        'en': r'Evaluate the sum $1\cdot2+2\cdot3+3\cdot4+\dots+n(n+1)$.'},
+  'hint': {'ru': r'$k(k+1)=k^{2}+k$; воспользуйтесь известными формулами.',
+           'en': r'$k(k+1)=k^{2}+k$; use the known formulas.'},
+  'sol': {'ru': r'Раскроем каждое слагаемое: $$k(k+1)=k^{2}+k .$$\n\nЗначит вся сумма распадается на две известные: $$\sum_{k=1}^{n}k^{2}+\sum_{k=1}^{n}k=\frac{n(n+1)(2n+1)}{6}+\frac{n(n+1)}{2} .$$\n\nВынесем общий множитель $\dfrac{n(n+1)}{6}$: $$\frac{n(n+1)}{6}\Bigl[(2n+1)+3\Bigr]=\frac{n(n+1)(2n+4)}{6}=\frac{n(n+1)(n+2)}{3} .$$\n\n**Проверка** при $n=3$: слева $2+6+12=20$, справа $\dfrac{3\cdot4\cdot5}{3}=20$ ✓\n\n**Ответ:** $\dfrac{n(n+1)(n+2)}{3}$.',
+          'en': r'Expand each term: $$k(k+1)=k^{2}+k .$$\n\nThe sum then splits into two known ones: $$\sum_{k=1}^{n}k^{2}+\sum_{k=1}^{n}k=\frac{n(n+1)(2n+1)}{6}+\frac{n(n+1)}{2} .$$\n\nTake out the common factor $\dfrac{n(n+1)}{6}$: $$\frac{n(n+1)}{6}\Bigl[(2n+1)+3\Bigr]=\frac{n(n+1)(2n+4)}{6}=\frac{n(n+1)(n+2)}{3} .$$\n\n**Check** at $n=3$: the left side is $2+6+12=20$, the right $\dfrac{3\cdot4\cdot5}{3}=20$ ✓\n\n**Answer:** $\dfrac{n(n+1)(n+2)}{3}$.'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'Сумма бесконечной геометрической прогрессии равна $9$, а её первый член равен $6$. Найдите знаменатель.',
+        'en': r'An infinite geometric progression has sum $9$ and first term $6$. Find its ratio.'},
+  'hint': {'ru': r'$S=\dfrac{b_1}{1-q}$ при $|q|<1$.',
+           'en': r'$S=\dfrac{b_1}{1-q}$ when $|q|<1$.'},
+  'sol': {'ru': r'Формула суммы бесконечной прогрессии (она применима при $|q|<1$): $$S=\frac{b_1}{1-q} .$$\n\nПодставим данные: $$9=\frac{6}{1-q}\quad\Longrightarrow\quad 1-q=\frac69=\frac23\quad\Longrightarrow\quad q=\frac13 .$$\n\nУсловие $|q|<1$ выполнено ✓\n\n**Проверка:** $$6+2+\frac23+\frac29+\dots=\frac{6}{1-\frac13}=\frac{6}{\frac23}=9 \quad\checkmark$$\n\n**Ответ:** $q=\dfrac13$.',
+          'en': r'The sum of an infinite progression (valid for $|q|<1$) is $$S=\frac{b_1}{1-q} .$$\n\nSubstituting, $$9=\frac{6}{1-q}\quad\Longrightarrow\quad 1-q=\frac69=\frac23\quad\Longrightarrow\quad q=\frac13 .$$\n\nThe condition $|q|<1$ holds ✓\n\n**Check:** $$6+2+\frac23+\frac29+\dots=\frac{6}{1-\frac13}=\frac{6}{\frac23}=9 \quad\checkmark$$\n\n**Answer:** $q=\dfrac13$.'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'Докажите, что $1+2+4+\dots+2^{\,n-1}=2^{n}-1$.',
+        'en': r'Prove that $1+2+4+\dots+2^{\,n-1}=2^{n}-1$.'},
+  'hint': {'ru': r'Умножьте сумму на $2$ и вычтите исходную.',
+           'en': r'Multiply the sum by $2$ and subtract the original.'},
+  'sol': {'ru': r'Обозначим $$S=1+2+4+\dots+2^{\,n-1} .$$\n\nУмножим на $2$: $$2S=2+4+8+\dots+2^{n} .$$\n\nВычтем первое из второго: почти все слагаемые уничтожаются, остаются крайние $$2S-S=2^{n}-1 ,$$ то есть $S=2^{n}-1$. $\blacksquare$\n\n**Проверка** при $n=4$: $1+2+4+8=15=2^{4}-1$ ✓\n\n**Наглядно.** Это и означает, что в двоичной записи число $\underbrace{11\ldots1}_{n}$ равно $2^{n}-1$.',
+          'en': r'Write $$S=1+2+4+\dots+2^{\,n-1} .$$\n\nMultiply by $2$: $$2S=2+4+8+\dots+2^{n} .$$\n\nSubtract the first from the second: almost everything cancels, leaving the extreme terms $$2S-S=2^{n}-1 ,$$ i.e. $S=2^{n}-1$. $\blacksquare$\n\n**Check** at $n=4$: $1+2+4+8=15=2^{4}-1$ ✓\n\n**Pictorially.** This is exactly why the binary number $\underbrace{11\ldots1}_{n}$ equals $2^{n}-1$.'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'Сколько членов в прогрессии $100,\ 97,\ 94,\ \dots$, если все они положительны, и чему равна их сумма?',
+        'en': r'How many terms does the progression $100,\ 97,\ 94,\ \dots$ have while all of them stay positive, and what is their sum?'},
+  'hint': {'ru': r'Требуется $a_n=100-3(n-1)>0$.',
+           'en': r'We need $a_n=100-3(n-1)>0$.'},
+  'sol': {'ru': r'Здесь $a_1=100$, $d=-3$, значит $$a_n=100-3(n-1)=103-3n .$$\n\n**Условие положительности:** $$103-3n>0\quad\Longleftrightarrow\quad n<\frac{103}{3}=34\tfrac13 ,$$ то есть $n\le34$. Последний положительный член $$a_{34}=103-102=1 .$$\n\n**Сумма.** $$S_{34}=\frac{(100+1)\cdot34}{2}=\frac{101\cdot34}{2}=101\cdot17=1717 .$$\n\n**Ответ:** $34$ члена, сумма $1717$.\n\n**Проверка:** следующий член был бы $a_{35}=103-105=-2<0$ ✓',
+          'en': r'Here $a_1=100$, $d=-3$, so $$a_n=100-3(n-1)=103-3n .$$\n\n**Positivity:** $$103-3n>0\quad\Longleftrightarrow\quad n<\frac{103}{3}=34\tfrac13 ,$$ i.e. $n\le34$. The last positive term is $$a_{34}=103-102=1 .$$\n\n**The sum.** $$S_{34}=\frac{(100+1)\cdot34}{2}=\frac{101\cdot34}{2}=101\cdot17=1717 .$$\n\n**Answer:** $34$ terms, sum $1717$.\n\n**Check:** the next term would be $a_{35}=103-105=-2<0$ ✓'}},
+
+ {'src': SCHOOL, 'lvl': 2,
+  'q': {'ru': r'Докажите формулу суммы арифметической прогрессии $S_n=\dfrac{\left(a_1+a_n\right)n}{2}$.',
+        'en': r'Prove the formula for the sum of an arithmetic progression, $S_n=\dfrac{\left(a_1+a_n\right)n}{2}$.'},
+  'hint': {'ru': r'Запишите сумму дважды — в прямом и в обратном порядке.',
+           'en': r'Write the sum twice — forwards and backwards.'},
+  'sol': {'ru': r'Запишем сумму дважды, второй раз в обратном порядке: $$S_n=a_1+a_2+\dots+a_{n-1}+a_n ,$$ $$S_n=a_n+a_{n-1}+\dots+a_2+a_1 .$$\n\nСложим их **по столбцам**. Ключевое наблюдение: в каждом столбце сумма одна и та же, ведь $$a_k+a_{n+1-k}=\left[a_1+(k-1)d\right]+\left[a_1+(n-k)d\right]=2a_1+(n-1)d=a_1+a_n .$$\n\nСтолбцов ровно $n$, поэтому $$2S_n=n\left(a_1+a_n\right)\quad\Longrightarrow\quad S_n=\frac{\left(a_1+a_n\right)n}{2} . \qquad\blacksquare$$\n\n**Это и есть приём Гаусса**, которым он в детстве сложил числа от $1$ до $100$.',
+          'en': r'Write the sum twice, the second time backwards: $$S_n=a_1+a_2+\dots+a_{n-1}+a_n ,$$ $$S_n=a_n+a_{n-1}+\dots+a_2+a_1 .$$\n\nAdd them **column by column**. The key observation is that every column has the same total, since $$a_k+a_{n+1-k}=\left[a_1+(k-1)d\right]+\left[a_1+(n-k)d\right]=2a_1+(n-1)d=a_1+a_n .$$\n\nThere are exactly $n$ columns, so $$2S_n=n\left(a_1+a_n\right)\quad\Longrightarrow\quad S_n=\frac{\left(a_1+a_n\right)n}{2} . \qquad\blacksquare$$\n\n**This is Gauss’s trick**, with which as a child he added the numbers from $1$ to $100$.'}},
+
+ {'src': DISTRICT, 'lvl': 2,
+  'q': {'ru': r'Докажите, что $1^{2}+3^{2}+5^{2}+\dots+(2n-1)^{2}=\dfrac{n(2n-1)(2n+1)}{3}$.',
+        'en': r'Prove that $1^{2}+3^{2}+5^{2}+\dots+(2n-1)^{2}=\dfrac{n(2n-1)(2n+1)}{3}$.'},
+  'hint': {'ru': r'Из суммы квадратов всех чисел до $2n$ вычтите сумму квадратов чётных.',
+           'en': r'Subtract the sum of the even squares from the sum of all squares up to $2n$.'},
+  'sol': {'ru': r'Сумма квадратов **всех** чисел от $1$ до $2n$: $$\sum_{k=1}^{2n}k^{2}=\frac{2n(2n+1)(4n+1)}{6} .$$\n\nСумма квадратов **чётных** чисел: $$\sum_{k=1}^{n}(2k)^{2}=4\sum_{k=1}^{n}k^{2}=4\cdot\frac{n(n+1)(2n+1)}{6} .$$\n\nВычитаем и выносим общий множитель $\dfrac{n(2n+1)}{6}$: $$\frac{n(2n+1)}{6}\Bigl[2(4n+1)-4(n+1)\Bigr]=\frac{n(2n+1)}{6}\cdot(8n+2-4n-4)=\frac{n(2n+1)(4n-2)}{6} .$$\n\nНаконец $4n-2=2(2n-1)$, поэтому сумма равна $$\frac{n(2n+1)(2n-1)}{3} . \qquad\blacksquare$$\n\n**Проверка** при $n=3$: слева $1+9+25=35$, справа $\dfrac{3\cdot5\cdot7}{3}=35$ ✓',
+          'en': r'The sum of **all** squares from $1$ to $2n$: $$\sum_{k=1}^{2n}k^{2}=\frac{2n(2n+1)(4n+1)}{6} .$$\n\nThe sum of the **even** squares: $$\sum_{k=1}^{n}(2k)^{2}=4\sum_{k=1}^{n}k^{2}=4\cdot\frac{n(n+1)(2n+1)}{6} .$$\n\nSubtract and take out the common factor $\dfrac{n(2n+1)}{6}$: $$\frac{n(2n+1)}{6}\Bigl[2(4n+1)-4(n+1)\Bigr]=\frac{n(2n+1)}{6}\cdot(8n+2-4n-4)=\frac{n(2n+1)(4n-2)}{6} .$$\n\nFinally $4n-2=2(2n-1)$, so the sum equals $$\frac{n(2n+1)(2n-1)}{3} . \qquad\blacksquare$$\n\n**Check** at $n=3$: the left side is $1+9+25=35$, the right $\dfrac{3\cdot5\cdot7}{3}=35$ ✓'}},
+
+ # ------------------------------------------------------------------ level 3
+ {'src': DISTRICT, 'lvl': 3,
+  'q': {'ru': r'Вычислите $\displaystyle\sum_{k=1}^{n}\frac1{k(k+2)}$.',
+        'en': r'Evaluate $\displaystyle\sum_{k=1}^{n}\frac1{k(k+2)}$.'},
+  'hint': {'ru': r'$\dfrac1{k(k+2)}=\dfrac12\left(\dfrac1k-\dfrac1{k+2}\right)$.',
+           'en': r'$\dfrac1{k(k+2)}=\dfrac12\left(\dfrac1k-\dfrac1{k+2}\right)$.'},
+  'sol': {'ru': r'Разложим общее слагаемое: $$\frac1{k(k+2)}=\frac12\cdot\frac{(k+2)-k}{k(k+2)}=\frac12\left(\frac1k-\frac1{k+2}\right).$$\n\nСумма телескопируется **через одно звено**: уцелеют первые два положительных и последние два отрицательных слагаемых: $$\sum_{k=1}^{n}\frac1{k(k+2)}=\frac12\left(1+\frac12-\frac1{n+1}-\frac1{n+2}\right)=\frac34-\frac12\left(\frac1{n+1}+\frac1{n+2}\right).$$\n\nПриведя к общему знаменателю, $$=\frac34-\frac{2n+3}{2(n+1)(n+2)} .$$\n\n**Проверка** при $n=1$: слева $\tfrac13$; справа $\tfrac34-\tfrac{5}{12}=\tfrac{9-5}{12}=\tfrac13$ ✓\n\n**Замечание.** При $n\to\infty$ сумма стремится к $\tfrac34$.',
+          'en': r'Split the general term: $$\frac1{k(k+2)}=\frac12\cdot\frac{(k+2)-k}{k(k+2)}=\frac12\left(\frac1k-\frac1{k+2}\right).$$\n\nThe sum telescopes **with a gap of two**: the first two positive and the last two negative terms survive: $$\sum_{k=1}^{n}\frac1{k(k+2)}=\frac12\left(1+\frac12-\frac1{n+1}-\frac1{n+2}\right)=\frac34-\frac12\left(\frac1{n+1}+\frac1{n+2}\right).$$\n\nOver a common denominator, $$=\frac34-\frac{2n+3}{2(n+1)(n+2)} .$$\n\n**Check** at $n=1$: the left side is $\tfrac13$; the right $\tfrac34-\tfrac{5}{12}=\tfrac{9-5}{12}=\tfrac13$ ✓\n\n**Remark.** As $n\to\infty$ the sum tends to $\tfrac34$.'}},
+
+ {'src': CLASSIC, 'lvl': 3,
+  'q': {'ru': r'Докажите, что $F_1+F_2+\dots+F_n=F_{n+2}-1$ для чисел Фибоначчи.',
+        'en': r'Prove that $F_1+F_2+\dots+F_n=F_{n+2}-1$ for the Fibonacci numbers.'},
+  'hint': {'ru': r'Запишите каждое $F_k$ как $F_{k+2}-F_{k+1}$.',
+           'en': r'Write each $F_k$ as $F_{k+2}-F_{k+1}$.'},
+  'sol': {'ru': r'Из рекуррентного соотношения $F_{k+2}=F_{k+1}+F_k$ получаем $$F_k=F_{k+2}-F_{k+1} .$$\n\nПодставим это в сумму — она телескопируется: $$\sum_{k=1}^{n}F_k=\sum_{k=1}^{n}\left(F_{k+2}-F_{k+1}\right)=F_{n+2}-F_2 .$$\n\nТак как $F_2=1$, получаем $$F_1+\dots+F_n=F_{n+2}-1 . \qquad\blacksquare$$\n\n**Проверка** при $n=5$: слева $1+1+2+3+5=12$; справа $F_7-1=13-1=12$ ✓\n\n**Похожие тождества.** Тем же приёмом доказываются $$F_2+F_4+\dots+F_{2n}=F_{2n+1}-1 $$ и $$F_1^{2}+F_2^{2}+\dots+F_n^{2}=F_nF_{n+1} .$$',
+          'en': r'From the recursion $F_{k+2}=F_{k+1}+F_k$ we get $$F_k=F_{k+2}-F_{k+1} .$$\n\nSubstituting into the sum makes it telescope: $$\sum_{k=1}^{n}F_k=\sum_{k=1}^{n}\left(F_{k+2}-F_{k+1}\right)=F_{n+2}-F_2 .$$\n\nSince $F_2=1$, $$F_1+\dots+F_n=F_{n+2}-1 . \qquad\blacksquare$$\n\n**Check** at $n=5$: the left side is $1+1+2+3+5=12$; the right $F_7-1=13-1=12$ ✓\n\n**Similar identities.** The same trick proves $$F_2+F_4+\dots+F_{2n}=F_{2n+1}-1 $$ and $$F_1^{2}+F_2^{2}+\dots+F_n^{2}=F_nF_{n+1} .$$'}},
+
+ {'src': CLASSIC, 'lvl': 3,
+  'q': {'ru': r'Докажите тождество Кассини: $F_{n-1}F_{n+1}-F_n^{2}=(-1)^{n}$.',
+        'en': r'Prove Cassini’s identity: $F_{n-1}F_{n+1}-F_n^{2}=(-1)^{n}$.'},
+  'hint': {'ru': r'Индукция: посмотрите, как связаны выражения для $n$ и $n+1$.',
+           'en': r'Induct: relate the expressions for $n$ and $n+1$.'},
+  'sol': {'ru': r'Обозначим $$D_n=F_{n-1}F_{n+1}-F_n^{2} .$$\n\n**База $n=2$.** $$D_2=F_1F_3-F_2^{2}=1\cdot2-1=1=(-1)^{2} \quad\checkmark$$\n\n**Переход.** Подставим $F_{n+2}=F_{n+1}+F_n$: $$D_{n+1}=F_nF_{n+2}-F_{n+1}^{2}=F_n\left(F_{n+1}+F_n\right)-F_{n+1}^{2}=F_nF_{n+1}+F_n^{2}-F_{n+1}^{2} .$$\n\nТеперь заменим $F_{n+1}=F_n+F_{n-1}$ в последнем квадрате: $$F_{n+1}^{2}=F_{n+1}\left(F_n+F_{n-1}\right)=F_nF_{n+1}+F_{n-1}F_{n+1} .$$\n\nПодставляя, получаем $$D_{n+1}=F_nF_{n+1}+F_n^{2}-F_nF_{n+1}-F_{n-1}F_{n+1}=-\left(F_{n-1}F_{n+1}-F_n^{2}\right)=-D_n .$$\n\nЗначит знак чередуется, и вместе с базой это даёт $D_n=(-1)^{n}$. $\blacksquare$\n\n**Проверка** при $n=5$: $$F_4F_6-F_5^{2}=3\cdot8-25=-1=(-1)^{5} \quad\checkmark$$\n\n**Забавное следствие.** Тождество Кассини лежит в основе известной «геометрической» головоломки, где квадрат $8\times8$ якобы превращается в прямоугольник $5\times13$: разница площадей ровно $\pm1$.',
+          'en': r'Write $$D_n=F_{n-1}F_{n+1}-F_n^{2} .$$\n\n**Base $n=2$.** $$D_2=F_1F_3-F_2^{2}=1\cdot2-1=1=(-1)^{2} \quad\checkmark$$\n\n**Step.** Substitute $F_{n+2}=F_{n+1}+F_n$: $$D_{n+1}=F_nF_{n+2}-F_{n+1}^{2}=F_n\left(F_{n+1}+F_n\right)-F_{n+1}^{2}=F_nF_{n+1}+F_n^{2}-F_{n+1}^{2} .$$\n\nNow replace $F_{n+1}=F_n+F_{n-1}$ inside the last square: $$F_{n+1}^{2}=F_{n+1}\left(F_n+F_{n-1}\right)=F_nF_{n+1}+F_{n-1}F_{n+1} .$$\n\nSubstituting gives $$D_{n+1}=F_nF_{n+1}+F_n^{2}-F_nF_{n+1}-F_{n-1}F_{n+1}=-\left(F_{n-1}F_{n+1}-F_n^{2}\right)=-D_n .$$\n\nSo the sign alternates, and with the base this gives $D_n=(-1)^{n}$. $\blacksquare$\n\n**Check** at $n=5$: $$F_4F_6-F_5^{2}=3\cdot8-25=-1=(-1)^{5} \quad\checkmark$$\n\n**An amusing consequence.** Cassini’s identity underlies the famous dissection puzzle in which an $8\times8$ square apparently becomes a $5\times13$ rectangle: the areas differ by exactly $\pm1$.'}},
+
+ {'src': DISTRICT, 'lvl': 3,
+  'q': {'ru': r'Последовательность задана условиями $a_1=2$ и $a_{n+1}=2a_n+1$. Найдите формулу общего члена.',
+        'en': r'A sequence is given by $a_1=2$ and $a_{n+1}=2a_n+1$. Find a closed formula for $a_n$.'},
+  'hint': {'ru': r'Прибавьте единицу к обеим частям.',
+           'en': r'Add one to both sides.'},
+  'sol': {'ru': r'Прибавим $1$ к обеим частям рекуррентного соотношения: $$a_{n+1}+1=2a_n+2=2\left(a_n+1\right).$$\n\nЗначит последовательность $b_n=a_n+1$ — геометрическая прогрессия со знаменателем $2$ и первым членом $$b_1=a_1+1=3 .$$\n\nПоэтому $$b_n=3\cdot2^{\,n-1}\quad\Longrightarrow\quad a_n=3\cdot2^{\,n-1}-1 .$$\n\n**Проверка:** $a_1=3-1=2$ ✓, $a_2=6-1=5$ и по формуле рекуррентности $2\cdot2+1=5$ ✓, $a_3=12-1=11=2\cdot5+1$ ✓\n\n**Ответ:** $a_n=3\cdot2^{\,n-1}-1$.\n\n**Общий приём.** Для $a_{n+1}=qa_n+c$ при $q\ne1$ ищут «неподвижную точку» $x=qx+c$, то есть $x=\dfrac{c}{1-q}$, и рассматривают $b_n=a_n-x$: она уже чисто геометрическая. Здесь $x=-1$.',
+          'en': r'Add $1$ to both sides of the recursion: $$a_{n+1}+1=2a_n+2=2\left(a_n+1\right).$$\n\nSo the sequence $b_n=a_n+1$ is a geometric progression with ratio $2$ and first term $$b_1=a_1+1=3 .$$\n\nHence $$b_n=3\cdot2^{\,n-1}\quad\Longrightarrow\quad a_n=3\cdot2^{\,n-1}-1 .$$\n\n**Check:** $a_1=3-1=2$ ✓, $a_2=6-1=5$ and the recursion gives $2\cdot2+1=5$ ✓, $a_3=12-1=11=2\cdot5+1$ ✓\n\n**Answer:** $a_n=3\cdot2^{\,n-1}-1$.\n\n**The general trick.** For $a_{n+1}=qa_n+c$ with $q\ne1$ one finds the fixed point $x=qx+c$, i.e. $x=\dfrac{c}{1-q}$, and looks at $b_n=a_n-x$, which is purely geometric. Here $x=-1$.'}},
+
+ {'src': REGION, 'lvl': 3,
+  'q': {'ru': r'Вычислите $\displaystyle\sum_{k=1}^{n}k\cdot2^{k}$.',
+        'en': r'Evaluate $\displaystyle\sum_{k=1}^{n}k\cdot2^{k}$.'},
+  'hint': {'ru': r'Умножьте сумму на $2$ и вычтите исходную.',
+           'en': r'Multiply the sum by $2$ and subtract the original.'},
+  'sol': {'ru': r'Обозначим $$S=1\cdot2+2\cdot2^{2}+3\cdot2^{3}+\dots+n\cdot2^{n} .$$\n\nУмножим на $2$: $$2S=1\cdot2^{2}+2\cdot2^{3}+\dots+(n-1)\cdot2^{n}+n\cdot2^{\,n+1} .$$\n\nВычтем первое из второго. Коэффициент при $2^{k}$ (для $2\le k\le n$) равен $(k-1)-k=-1$, коэффициент при $2^{1}$ равен $-1$, а член $n\cdot2^{\,n+1}$ остаётся: $$S=n\cdot2^{\,n+1}-\left(2+2^{2}+\dots+2^{n}\right).$$\n\nВ скобке — геометрическая прогрессия: $$2+2^{2}+\dots+2^{n}=2^{\,n+1}-2 .$$\n\nЗначит $$S=n\cdot2^{\,n+1}-2^{\,n+1}+2=(n-1)\,2^{\,n+1}+2 .$$\n\n**Проверка** при $n=3$: слева $2+8+24=34$; справа $2\cdot16+2=34$ ✓\n\n**Ответ:** $(n-1)\,2^{\,n+1}+2$.',
+          'en': r'Write $$S=1\cdot2+2\cdot2^{2}+3\cdot2^{3}+\dots+n\cdot2^{n} .$$\n\nMultiply by $2$: $$2S=1\cdot2^{2}+2\cdot2^{3}+\dots+(n-1)\cdot2^{n}+n\cdot2^{\,n+1} .$$\n\nSubtract the first from the second. The coefficient of $2^{k}$ (for $2\le k\le n$) is $(k-1)-k=-1$, the coefficient of $2^{1}$ is $-1$, and the term $n\cdot2^{\,n+1}$ survives: $$S=n\cdot2^{\,n+1}-\left(2+2^{2}+\dots+2^{n}\right).$$\n\nThe bracket is a geometric progression: $$2+2^{2}+\dots+2^{n}=2^{\,n+1}-2 .$$\n\nHence $$S=n\cdot2^{\,n+1}-2^{\,n+1}+2=(n-1)\,2^{\,n+1}+2 .$$\n\n**Check** at $n=3$: the left side is $2+8+24=34$; the right $2\cdot16+2=34$ ✓\n\n**Answer:** $(n-1)\,2^{\,n+1}+2$.'}},
+
+ {'src': CLASSIC, 'lvl': 3,
+  'q': {'ru': r'Докажите, что $\displaystyle\sum_{k=1}^{n}\frac1{k^{2}}\ \le\ 2-\frac1n$ при всех натуральных $n$.',
+        'en': r'Prove that $\displaystyle\sum_{k=1}^{n}\frac1{k^{2}}\ \le\ 2-\frac1n$ for every positive integer $n$.'},
+  'hint': {'ru': r'Индукция; в переходе достаточно проверить $\dfrac1{(n+1)^{2}}\le\dfrac1n-\dfrac1{n+1}$.',
+           'en': r'Induct; in the step it suffices to check $\dfrac1{(n+1)^{2}}\le\dfrac1n-\dfrac1{n+1}$.'},
+  'sol': {'ru': r'**База $n=1$.** Слева $1$, справа $2-1=1$ — равенство ✓\n\n**Переход.** Пусть неравенство верно для $n$. Тогда $$\sum_{k=1}^{n+1}\frac1{k^{2}}\ \le\ 2-\frac1n+\frac1{(n+1)^{2}} ,$$ и достаточно проверить, что правая часть не превосходит $2-\dfrac1{n+1}$, то есть что $$\frac1{(n+1)^{2}}\ \le\ \frac1n-\frac1{n+1}=\frac{1}{n(n+1)} .$$\n\nПоследнее равносильно (после умножения на положительное $n(n+1)^{2}$) неравенству $$n\ \le\ n+1 ,$$ которое очевидно верно ✓\n\nПо индукции неравенство доказано. $\blacksquare$\n\n**Проверка** при $n=3$: слева $1+\tfrac14+\tfrac19=\tfrac{49}{36}\approx1{,}36$; справа $2-\tfrac13\approx1{,}67$ ✓\n\n**Замечание.** Отсюда сразу следует ограниченность суммы двойкой; на самом деле при $n\to\infty$ она стремится к $\dfrac{\pi^{2}}{6}\approx1{,}6449$ — это знаменитый результат Эйлера.',
+          'en': r'**Base $n=1$.** The left side is $1$, the right $2-1=1$ — equality ✓\n\n**Step.** Suppose the inequality holds for $n$. Then $$\sum_{k=1}^{n+1}\frac1{k^{2}}\ \le\ 2-\frac1n+\frac1{(n+1)^{2}} ,$$ and it suffices to check that the right side is at most $2-\dfrac1{n+1}$, i.e. that $$\frac1{(n+1)^{2}}\ \le\ \frac1n-\frac1{n+1}=\frac{1}{n(n+1)} .$$\n\nMultiplying by the positive number $n(n+1)^{2}$, this is equivalent to $$n\ \le\ n+1 ,$$ which is obvious ✓\n\nThe induction is complete. $\blacksquare$\n\n**Check** at $n=3$: the left side is $1+\tfrac14+\tfrac19=\tfrac{49}{36}\approx1.36$; the right $2-\tfrac13\approx1.67$ ✓\n\n**Remark.** This immediately bounds the sum by two; in fact as $n\to\infty$ it tends to $\dfrac{\pi^{2}}{6}\approx1.6449$ — Euler’s famous result.'}},
+
+ {'src': DISTRICT, 'lvl': 3,
+  'q': {'ru': r'Вычислите $\displaystyle\sum_{k=1}^{n}\frac1{k(k+1)(k+2)}$.',
+        'en': r'Evaluate $\displaystyle\sum_{k=1}^{n}\frac1{k(k+1)(k+2)}$.'},
+  'hint': {'ru': r'$\dfrac1{k(k+1)(k+2)}=\dfrac12\left(\dfrac1{k(k+1)}-\dfrac1{(k+1)(k+2)}\right)$.',
+           'en': r'$\dfrac1{k(k+1)(k+2)}=\dfrac12\left(\dfrac1{k(k+1)}-\dfrac1{(k+1)(k+2)}\right)$.'},
+  'sol': {'ru': r'Проверим указанное разложение: $$\frac1{k(k+1)}-\frac1{(k+1)(k+2)}=\frac{(k+2)-k}{k(k+1)(k+2)}=\frac{2}{k(k+1)(k+2)} ,$$ то есть общее слагаемое равно половине этой разности ✓\n\nТеперь сумма телескопируется: $$\sum_{k=1}^{n}\frac1{k(k+1)(k+2)}=\frac12\left(\frac1{1\cdot2}-\frac1{(n+1)(n+2)}\right)=\frac14-\frac1{2(n+1)(n+2)} .$$\n\n**Проверка** при $n=1$: слева $\tfrac16$; справа $\tfrac14-\tfrac1{12}=\tfrac{3-1}{12}=\tfrac16$ ✓\n\n**Ответ:** $\dfrac14-\dfrac1{2(n+1)(n+2)}$; при $n\to\infty$ сумма стремится к $\dfrac14$.',
+          'en': r'Verify the stated splitting: $$\frac1{k(k+1)}-\frac1{(k+1)(k+2)}=\frac{(k+2)-k}{k(k+1)(k+2)}=\frac{2}{k(k+1)(k+2)} ,$$ so the general term is half this difference ✓\n\nNow the sum telescopes: $$\sum_{k=1}^{n}\frac1{k(k+1)(k+2)}=\frac12\left(\frac1{1\cdot2}-\frac1{(n+1)(n+2)}\right)=\frac14-\frac1{2(n+1)(n+2)} .$$\n\n**Check** at $n=1$: the left side is $\tfrac16$; the right $\tfrac14-\tfrac1{12}=\tfrac{3-1}{12}=\tfrac16$ ✓\n\n**Answer:** $\dfrac14-\dfrac1{2(n+1)(n+2)}$; as $n\to\infty$ the sum tends to $\dfrac14$.'}},
+
+ {'src': REGION, 'lvl': 3,
+  'q': {'ru': r'Вычислите $\displaystyle\sum_{k=1}^{n}\frac{2k+1}{k^{2}(k+1)^{2}}$.',
+        'en': r'Evaluate $\displaystyle\sum_{k=1}^{n}\frac{2k+1}{k^{2}(k+1)^{2}}$.'},
+  'hint': {'ru': r'$2k+1=(k+1)^{2}-k^{2}$.',
+           'en': r'$2k+1=(k+1)^{2}-k^{2}$.'},
+  'sol': {'ru': r'Заметим, что числитель — разность квадратов знаменателей: $$2k+1=(k+1)^{2}-k^{2} .$$\n\nЗначит $$\frac{2k+1}{k^{2}(k+1)^{2}}=\frac{(k+1)^{2}-k^{2}}{k^{2}(k+1)^{2}}=\frac1{k^{2}}-\frac1{(k+1)^{2}} .$$\n\nСумма телескопируется: $$\sum_{k=1}^{n}\left(\frac1{k^{2}}-\frac1{(k+1)^{2}}\right)=1-\frac1{(n+1)^{2}} .$$\n\n**Проверка** при $n=1$: слева $\dfrac{3}{1\cdot4}=\dfrac34$; справа $1-\dfrac14=\dfrac34$ ✓ При $n=2$: слева $\tfrac34+\tfrac{5}{36}=\tfrac{27+5}{36}=\tfrac{32}{36}=\tfrac89$; справа $1-\tfrac19=\tfrac89$ ✓\n\n**Ответ:** $1-\dfrac1{(n+1)^{2}}$.',
+          'en': r'Note that the numerator is the difference of the squares in the denominator: $$2k+1=(k+1)^{2}-k^{2} .$$\n\nHence $$\frac{2k+1}{k^{2}(k+1)^{2}}=\frac{(k+1)^{2}-k^{2}}{k^{2}(k+1)^{2}}=\frac1{k^{2}}-\frac1{(k+1)^{2}} .$$\n\nThe sum telescopes: $$\sum_{k=1}^{n}\left(\frac1{k^{2}}-\frac1{(k+1)^{2}}\right)=1-\frac1{(n+1)^{2}} .$$\n\n**Check** at $n=1$: the left side is $\dfrac{3}{1\cdot4}=\dfrac34$; the right $1-\dfrac14=\dfrac34$ ✓ At $n=2$: the left is $\tfrac34+\tfrac{5}{36}=\tfrac{32}{36}=\tfrac89$; the right $1-\tfrac19=\tfrac89$ ✓\n\n**Answer:** $1-\dfrac1{(n+1)^{2}}$.'}},
+
+ {'src': CLASSIC, 'lvl': 3,
+  'q': {'ru': r'Докажите, что $\displaystyle\sum_{k=1}^{n}\frac1{\sqrt k}\ >\ 2\left(\sqrt{n+1}-1\right)$.',
+        'en': r'Prove that $\displaystyle\sum_{k=1}^{n}\frac1{\sqrt k}\ >\ 2\left(\sqrt{n+1}-1\right)$.'},
+  'hint': {'ru': r'Сравните $\dfrac1{\sqrt k}$ с $2\left(\sqrt{k+1}-\sqrt k\right)$.',
+           'en': r'Compare $\dfrac1{\sqrt k}$ with $2\left(\sqrt{k+1}-\sqrt k\right)$.'},
+  'sol': {'ru': r'**Ключевая оценка.** Домножим разность корней на сопряжённое: $$2\left(\sqrt{k+1}-\sqrt k\right)=\frac{2\left(\sqrt{k+1}-\sqrt k\right)\left(\sqrt{k+1}+\sqrt k\right)}{\sqrt{k+1}+\sqrt k}=\frac{2}{\sqrt{k+1}+\sqrt k} .$$\n\nВ знаменателе $\sqrt{k+1}+\sqrt k>2\sqrt k$, поэтому $$2\left(\sqrt{k+1}-\sqrt k\right)<\frac{2}{2\sqrt k}=\frac1{\sqrt k} .$$\n\n**Складываем.** Просуммировав по $k=1,\dots,n$, слева получаем телескопическую сумму: $$\sum_{k=1}^{n}2\left(\sqrt{k+1}-\sqrt k\right)=2\left(\sqrt{n+1}-1\right),$$ и она строго меньше $\displaystyle\sum_{k=1}^{n}\frac1{\sqrt k}$. $\blacksquare$\n\n**Проверка** при $n=3$: слева $1+\tfrac1{\sqrt2}+\tfrac1{\sqrt3}\approx1+0{,}707+0{,}577=2{,}284$; справа $2(2-1)=2$ ✓\n\n**Следствие.** Сумма неограниченно растёт: при $n=10^{6}$ она больше $2\left(\sqrt{10^{6}+1}-1\right)\approx1998$.',
+          'en': r'**The key estimate.** Multiply the difference of roots by its conjugate: $$2\left(\sqrt{k+1}-\sqrt k\right)=\frac{2\left(\sqrt{k+1}-\sqrt k\right)\left(\sqrt{k+1}+\sqrt k\right)}{\sqrt{k+1}+\sqrt k}=\frac{2}{\sqrt{k+1}+\sqrt k} .$$\n\nIn the denominator $\sqrt{k+1}+\sqrt k>2\sqrt k$, so $$2\left(\sqrt{k+1}-\sqrt k\right)<\frac{2}{2\sqrt k}=\frac1{\sqrt k} .$$\n\n**Add up.** Summing over $k=1,\dots,n$, the left side telescopes: $$\sum_{k=1}^{n}2\left(\sqrt{k+1}-\sqrt k\right)=2\left(\sqrt{n+1}-1\right),$$ and it is strictly less than $\displaystyle\sum_{k=1}^{n}\frac1{\sqrt k}$. $\blacksquare$\n\n**Check** at $n=3$: the left side is $1+\tfrac1{\sqrt2}+\tfrac1{\sqrt3}\approx2.284$; the right $2(2-1)=2$ ✓\n\n**Consequence.** The sum grows without bound: at $n=10^{6}$ it exceeds $2\left(\sqrt{10^{6}+1}-1\right)\approx1998$.'}},
+
+ # ------------------------------------------------------------------ level 4
+ {'src': CLASSIC, 'lvl': 4,
+  'q': {'ru': r'Выведите формулу Бине для чисел Фибоначчи: $$F_n=\frac{1}{\sqrt5}\left[\left(\frac{1+\sqrt5}{2}\right)^{n}-\left(\frac{1-\sqrt5}{2}\right)^{n}\right].$$',
+        'en': r'Derive Binet’s formula for the Fibonacci numbers: $$F_n=\frac{1}{\sqrt5}\left[\left(\frac{1+\sqrt5}{2}\right)^{n}-\left(\frac{1-\sqrt5}{2}\right)^{n}\right].$$'},
+  'hint': {'ru': r'Ищите решения вида $x^{n}$: подстановка даёт $x^{2}=x+1$.',
+           'en': r'Look for solutions of the form $x^{n}$: substitution gives $x^{2}=x+1$.'},
+  'sol': {'ru': r'**Шаг 1: характеристическое уравнение.** Попробуем подобрать решение вида $a_n=x^{n}$. Подставив в $a_{n+2}=a_{n+1}+a_n$, получаем $$x^{\,n+2}=x^{\,n+1}+x^{n}\quad\Longrightarrow\quad x^{2}=x+1 .$$\n\nКорни: $$\varphi=\frac{1+\sqrt5}{2},\qquad \psi=\frac{1-\sqrt5}{2} .$$\n\n**Шаг 2: общее решение.** Рекуррентность линейна, поэтому любая комбинация $$a_n=A\varphi^{n}+B\psi^{n}$$ тоже ей удовлетворяет; и наоборот, коэффициенты $A,B$ однозначно определяются двумя начальными значениями (система из двух линейных уравнений с ненулевым определителем, ведь $\varphi\ne\psi$).\n\n**Шаг 3: подбираем $A$ и $B$.** Из $F_0=0$ и $F_1=1$: $$A+B=0,\qquad A\varphi+B\psi=1 .$$ Первое даёт $B=-A$, второе — $$A(\varphi-\psi)=1,\qquad \varphi-\psi=\sqrt5\quad\Longrightarrow\quad A=\frac1{\sqrt5} .$$\n\nЗначит $$F_n=\frac{\varphi^{n}-\psi^{n}}{\sqrt5} . \qquad\blacksquare$$\n\n**Проверка** при $n=5$: $$\varphi^{5}\approx11{,}0902,\quad \psi^{5}\approx-0{,}0902,\quad \frac{11{,}0902+0{,}0902}{2{,}2360}\approx5=F_5 \quad\checkmark$$\n\n**Следствие.** Так как $|\psi|<1$, при больших $n$ число $F_n$ — это ближайшее целое к $\dfrac{\varphi^{n}}{\sqrt5}$.',
+          'en': r'**Step 1: the characteristic equation.** Try a solution of the form $a_n=x^{n}$. Substituting into $a_{n+2}=a_{n+1}+a_n$ gives $$x^{\,n+2}=x^{\,n+1}+x^{n}\quad\Longrightarrow\quad x^{2}=x+1 .$$\n\nThe roots are $$\varphi=\frac{1+\sqrt5}{2},\qquad \psi=\frac{1-\sqrt5}{2} .$$\n\n**Step 2: the general solution.** The recursion is linear, so any combination $$a_n=A\varphi^{n}+B\psi^{n}$$ satisfies it too; conversely $A,B$ are determined uniquely by two initial values (a $2\times2$ linear system with non-zero determinant, since $\varphi\ne\psi$).\n\n**Step 3: fit $A$ and $B$.** From $F_0=0$ and $F_1=1$: $$A+B=0,\qquad A\varphi+B\psi=1 .$$ The first gives $B=-A$, the second $$A(\varphi-\psi)=1,\qquad \varphi-\psi=\sqrt5\quad\Longrightarrow\quad A=\frac1{\sqrt5} .$$\n\nHence $$F_n=\frac{\varphi^{n}-\psi^{n}}{\sqrt5} . \qquad\blacksquare$$\n\n**Check** at $n=5$: $$\varphi^{5}\approx11.0902,\quad \psi^{5}\approx-0.0902,\quad \frac{11.0902+0.0902}{2.2360}\approx5=F_5 \quad\checkmark$$\n\n**Consequence.** Since $|\psi|<1$, for large $n$ the number $F_n$ is the nearest integer to $\dfrac{\varphi^{n}}{\sqrt5}$.'}},
+
+ {'src': CLASSIC, 'lvl': 4,
+  'q': {'ru': r'Докажите, что гармоническая сумма $1+\dfrac12+\dfrac13+\dots+\dfrac1n$ неограниченно растёт.',
+        'en': r'Prove that the harmonic sum $1+\dfrac12+\dfrac13+\dots+\dfrac1n$ grows without bound.'},
+  'hint': {'ru': r'Сгруппируйте слагаемые блоками длины $1,2,4,8,\dots$',
+           'en': r'Group the terms into blocks of lengths $1,2,4,8,\dots$'},
+  'sol': {'ru': r'Разобьём слагаемые на блоки, границы которых — степени двойки: $$\underbrace{\frac12}_{1\ \text{слаг.}}\ +\ \underbrace{\frac13+\frac14}_{2}\ +\ \underbrace{\frac15+\dots+\frac18}_{4}\ +\ \underbrace{\frac19+\dots+\frac1{16}}_{8}+\dots$$\n\n**Оценим каждый блок снизу.** В блоке от $\dfrac1{2^{m}+1}$ до $\dfrac1{2^{\,m+1}}$ ровно $2^{m}$ слагаемых, и каждое не меньше наименьшего, то есть $\dfrac1{2^{\,m+1}}$. Значит блок не меньше $$2^{m}\cdot\frac1{2^{\,m+1}}=\frac12 .$$\n\n**Складываем.** Взяв $n=2^{k}$, получаем $$1+\frac12+\dots+\frac1{2^{k}}\ \ge\ 1+\underbrace{\frac12+\frac12+\dots+\frac12}_{k}=1+\frac k2 .$$\n\nПравая часть растёт неограниченно, значит и сумма тоже. $\blacksquare$\n\n**Насколько медленно.** Чтобы сумма превысила $10$, нужно около $n=12\,367$ слагаемых; чтобы превысить $20$ — уже больше $2\cdot10^{8}$.\n\n**Замечание.** Это доказательство придумал Николай Орем в XIV веке.',
+          'en': r'Split the terms into blocks whose boundaries are powers of two: $$\underbrace{\frac12}_{1\ \text{term}}\ +\ \underbrace{\frac13+\frac14}_{2}\ +\ \underbrace{\frac15+\dots+\frac18}_{4}\ +\ \underbrace{\frac19+\dots+\frac1{16}}_{8}+\dots$$\n\n**Bound each block from below.** The block from $\dfrac1{2^{m}+1}$ to $\dfrac1{2^{\,m+1}}$ has exactly $2^{m}$ terms, each at least the smallest one, $\dfrac1{2^{\,m+1}}$. So the block is at least $$2^{m}\cdot\frac1{2^{\,m+1}}=\frac12 .$$\n\n**Add up.** Taking $n=2^{k}$, $$1+\frac12+\dots+\frac1{2^{k}}\ \ge\ 1+\underbrace{\frac12+\frac12+\dots+\frac12}_{k}=1+\frac k2 .$$\n\nThe right side grows without bound, and so does the sum. $\blacksquare$\n\n**How slowly.** To pass $10$ takes about $n=12\,367$ terms; to pass $20$ takes more than $2\cdot10^{8}$.\n\n**Remark.** This proof is due to Nicole Oresme in the fourteenth century.'}},
+
+ {'src': CLASSIC, 'lvl': 4,
+  'q': {'ru': r'Докажите, что последовательность $a_n=\left(1+\dfrac1n\right)^{n}$ возрастает.',
+        'en': r'Prove that the sequence $a_n=\left(1+\dfrac1n\right)^{n}$ is increasing.'},
+  'hint': {'ru': r'Примените неравенство о среднем к $n$ копиям числа $1+\frac1n$ и одной единице.',
+           'en': r'Apply AM–GM to $n$ copies of $1+\frac1n$ together with one $1$.'},
+  'sol': {'ru': r'Возьмём $n+1$ чисел: $n$ копий числа $1+\dfrac1n$ и ещё одну единицу.\n\n**Среднее геометрическое** этого набора равно $$\sqrt[\,n+1\,]{\left(1+\frac1n\right)^{n}\cdot1}=a_n^{\frac1{n+1}} .$$\n\n**Среднее арифметическое** равно $$\frac{n\left(1+\frac1n\right)+1}{n+1}=\frac{n+1+1}{n+1}=1+\frac1{n+1} .$$\n\nЧисла набора не все равны (единица отличается от $1+\tfrac1n$), поэтому неравенство о среднем **строгое**: $$a_n^{\frac1{n+1}}\ <\ 1+\frac1{n+1} .$$\n\nВозведём обе (положительные) части в степень $n+1$: $$a_n\ <\ \left(1+\frac1{n+1}\right)^{\,n+1}=a_{n+1} . \qquad\blacksquare$$\n\n**Проверка:** $$a_1=2,\quad a_2=2{,}25,\quad a_3\approx2{,}370,\quad a_4\approx2{,}441,\quad a_{10}\approx2{,}594 \quad\checkmark$$\n\n**Замечание.** Вместе с доказанной ранее оценкой $a_n<3$ это означает, что последовательность возрастает и ограничена, а значит имеет предел — это и есть число $e$.',
+          'en': r'Take $n+1$ numbers: $n$ copies of $1+\dfrac1n$ together with a single $1$.\n\n**The geometric mean** of this list is $$\sqrt[\,n+1\,]{\left(1+\frac1n\right)^{n}\cdot1}=a_n^{\frac1{n+1}} .$$\n\n**The arithmetic mean** is $$\frac{n\left(1+\frac1n\right)+1}{n+1}=\frac{n+1+1}{n+1}=1+\frac1{n+1} .$$\n\nThe numbers are not all equal (the $1$ differs from $1+\tfrac1n$), so AM–GM is **strict**: $$a_n^{\frac1{n+1}}\ <\ 1+\frac1{n+1} .$$\n\nRaise both (positive) sides to the power $n+1$: $$a_n\ <\ \left(1+\frac1{n+1}\right)^{\,n+1}=a_{n+1} . \qquad\blacksquare$$\n\n**Check:** $$a_1=2,\quad a_2=2.25,\quad a_3\approx2.370,\quad a_4\approx2.441,\quad a_{10}\approx2.594 \quad\checkmark$$\n\n**Remark.** Together with the earlier bound $a_n<3$ this says the sequence is increasing and bounded, hence convergent — its limit is the number $e$.'}},
+
+ {'src': CLASSIC, 'lvl': 4,
+  'q': {'ru': r'Докажите теорему Цекендорфа: каждое натуральное число единственным образом представимо суммой различных чисел Фибоначчи, среди которых нет двух соседних.',
+        'en': r'Prove Zeckendorf’s theorem: every positive integer has a unique representation as a sum of distinct Fibonacci numbers, no two of them consecutive.'},
+  'hint': {'ru': r'Существование — жадный алгоритм; единственность — сравнение сумм по величине.',
+           'en': r'Existence: the greedy algorithm. Uniqueness: compare the sizes of the sums.'},
+  'sol': {'ru': r'Считаем числами Фибоначчи $$F_2=1,\ F_3=2,\ F_4=3,\ F_5=5,\ F_6=8,\dots$$ (единицу берём один раз).\n\n**Существование (жадный алгоритм).** Индукция по $n$. Пусть $F_k$ — наибольшее число Фибоначчи, не превосходящее $n$. Рассмотрим остаток $r=n-F_k$.\n\nКлючевая оценка: $r<F_{\,k-1}$. Действительно, из максимальности $F_k$ следует $n<F_{\,k+1}=F_k+F_{\,k-1}$, откуда $r=n-F_k<F_{\,k-1}$.\n\nЗначит по предположению индукции $r$ раскладывается в такую сумму, и все её слагаемые строго меньше $F_{\,k-1}$, то есть не соседствуют с $F_k$ ✓\n\n**Единственность.** Достаточно доказать, что сумма любого «правильного» набора со старшим членом $F_k$ строго меньше $F_{\,k+1}$. Индукция: сумма не превосходит $$F_k+F_{\,k-2}+F_{\,k-4}+\dots ,$$ а для этой суммы известно тождество $$F_k+F_{\,k-2}+F_{\,k-4}+\dots\ <\ F_{\,k+1} $$ (оно проверяется индукцией: $F_k+F_{k-2}+\dots\le F_k+F_{k-1}-1=F_{k+1}-1$).\n\nТеперь пусть у числа $n$ есть два разных правильных представления. Выбросим общие слагаемые; у оставшихся наборов старшие члены различны, скажем $F_k>F_m$. Тогда одна сумма не меньше $F_k$, а другая строго меньше $F_{\,m+1}\le F_k$ — противоречие ✗\n\n$\blacksquare$\n\n**Пример.** $$100=89+8+3=F_{11}+F_6+F_4 ,$$ и никакие два из индексов $11,6,4$ не соседние ✓',
+          'en': r'Take the Fibonacci numbers to be $$F_2=1,\ F_3=2,\ F_4=3,\ F_5=5,\ F_6=8,\dots$$ (using the value $1$ only once).\n\n**Existence (greedy algorithm).** Induct on $n$. Let $F_k$ be the largest Fibonacci number not exceeding $n$, and consider the remainder $r=n-F_k$.\n\nThe key estimate is $r<F_{\,k-1}$: maximality of $F_k$ gives $n<F_{\,k+1}=F_k+F_{\,k-1}$, hence $r=n-F_k<F_{\,k-1}$.\n\nSo by the induction hypothesis $r$ has such a representation, and all its terms are strictly below $F_{\,k-1}$, hence not adjacent to $F_k$ ✓\n\n**Uniqueness.** It suffices to show that any admissible set with largest member $F_k$ sums to strictly less than $F_{\,k+1}$. Indeed the sum is at most $$F_k+F_{\,k-2}+F_{\,k-4}+\dots ,$$ and induction gives $$F_k+F_{\,k-2}+F_{\,k-4}+\dots\ \le\ F_k+F_{\,k-1}-1=F_{\,k+1}-1\ <\ F_{\,k+1} .$$\n\nNow suppose $n$ had two different admissible representations. Discard the common terms; the remaining sets have different largest members, say $F_k>F_m$. Then one sum is at least $F_k$ while the other is strictly less than $F_{\,m+1}\le F_k$ — a contradiction ✗\n\n$\blacksquare$\n\n**Example.** $$100=89+8+3=F_{11}+F_6+F_4 ,$$ and no two of the indices $11,6,4$ are consecutive ✓'}},
+
+ {'src': INTL, 'lvl': 4,
+  'q': {'ru': r'Последовательность задана условиями $a_1=1$ и $a_{n+1}=a_n+\dfrac1{a_n}$. Докажите, что $a_{100}>14$.',
+        'en': r'A sequence is given by $a_1=1$ and $a_{n+1}=a_n+\dfrac1{a_n}$. Prove that $a_{100}>14$.'},
+  'hint': {'ru': r'Работайте не с $a_n$, а с $a_n^{2}$.',
+           'en': r'Work with $a_n^{2}$ rather than $a_n$.'},
+  'sol': {'ru': r'Все члены положительны (это видно по индукции), поэтому можно возводить в квадрат.\n\n**Ключевой шаг.** Возведём рекуррентное соотношение в квадрат: $$a_{n+1}^{2}=\left(a_n+\frac1{a_n}\right)^{2}=a_n^{2}+2+\frac1{a_n^{2}}\ >\ a_n^{2}+2 .$$\n\n**Накапливаем.** Применяя это $n-1$ раз, получаем $$a_n^{2}\ >\ a_1^{2}+2(n-1)=1+2(n-1)=2n-1 .$$\n\n**Подставляем $n=100$.** $$a_{100}^{2}\ >\ 199\quad\Longrightarrow\quad a_{100}\ >\ \sqrt{199}\ >\ \sqrt{196}=14 . \qquad\blacksquare$$\n\n**Насколько оценка точна.** Верхняя оценка получается так же: $$a_{n+1}^{2}=a_n^{2}+2+\frac1{a_n^{2}}\ \le\ a_n^{2}+2+1 ,$$ откуда $a_{100}^{2}\le1+3\cdot99=298$ и $a_{100}<17{,}3$. На самом деле $a_{100}\approx14{,}61$.\n\n**Замечание.** Тот же приём показывает, что $a_n$ растёт примерно как $\sqrt{2n}$.',
+          'en': r'All terms are positive (an easy induction), so we may square.\n\n**The key step.** Square the recursion: $$a_{n+1}^{2}=\left(a_n+\frac1{a_n}\right)^{2}=a_n^{2}+2+\frac1{a_n^{2}}\ >\ a_n^{2}+2 .$$\n\n**Accumulate.** Applying this $n-1$ times, $$a_n^{2}\ >\ a_1^{2}+2(n-1)=1+2(n-1)=2n-1 .$$\n\n**Set $n=100$.** $$a_{100}^{2}\ >\ 199\quad\Longrightarrow\quad a_{100}\ >\ \sqrt{199}\ >\ \sqrt{196}=14 . \qquad\blacksquare$$\n\n**How sharp is this.** An upper bound comes the same way: $$a_{n+1}^{2}=a_n^{2}+2+\frac1{a_n^{2}}\ \le\ a_n^{2}+3 ,$$ so $a_{100}^{2}\le1+3\cdot99=298$ and $a_{100}<17.3$. In fact $a_{100}\approx14.61$.\n\n**Remark.** The same trick shows $a_n$ grows roughly like $\sqrt{2n}$.'}},
+]

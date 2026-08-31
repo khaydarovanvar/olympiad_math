@@ -796,6 +796,486 @@ window.LESSONS[6] = {
     "ru": "**Шаг 1.** Применим неравенство $x^{2}+y^{2}+z^{2}\\ge xy+yz+zx$ к числам $x=a^{2}$, $y=b^{2}$, $z=c^{2}$: $$a^{4}+b^{4}+c^{4}\\ \\ge\\ a^{2}b^{2}+b^{2}c^{2}+c^{2}a^{2}.$$\n\n**Шаг 2.** Применим то же неравенство ещё раз, теперь к числам $x=ab$, $y=bc$, $z=ca$: $$a^{2}b^{2}+b^{2}c^{2}+c^{2}a^{2}\\ \\ge\\ ab\\cdot bc+bc\\cdot ca+ca\\cdot ab=ab^{2}c+abc^{2}+a^{2}bc=abc\\,(a+b+c).$$\n\nСоединяя два шага по транзитивности, получаем требуемое. Заметим, что оба шага верны для **любых** вещественных чисел, так как неравенство $x^{2}+y^{2}+z^{2}\\ge xy+yz+zx$ не требует положительности.\n\nРавенство достигается при $a^{2}=b^{2}=c^{2}$ и $ab=bc=ca$ одновременно, то есть при $a=b=c$. $\\blacksquare$",
     "en": "**Step 1.** Apply $x^{2}+y^{2}+z^{2}\\ge xy+yz+zx$ to $x=a^{2}$, $y=b^{2}$, $z=c^{2}$: $$a^{4}+b^{4}+c^{4}\\ \\ge\\ a^{2}b^{2}+b^{2}c^{2}+c^{2}a^{2}.$$\n\n**Step 2.** Apply the same inequality again, now to $x=ab$, $y=bc$, $z=ca$: $$a^{2}b^{2}+b^{2}c^{2}+c^{2}a^{2}\\ \\ge\\ ab\\cdot bc+bc\\cdot ca+ca\\cdot ab=ab^{2}c+abc^{2}+a^{2}bc=abc\\,(a+b+c).$$\n\nChaining the two steps by transitivity gives the claim. Note that both steps hold for **all** real numbers, because $x^{2}+y^{2}+z^{2}\\ge xy+yz+zx$ needs no positivity.\n\nEquality requires $a^{2}=b^{2}=c^{2}$ and $ab=bc=ca$ at once, that is $a=b=c$. $\\blacksquare$"
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что $a^{2}+b^{2}\\ge2ab$ для любых действительных $a,b$. Когда достигается равенство?",
+    "en": "Prove that $a^{2}+b^{2}\\ge2ab$ for all real $a,b$. When does equality hold?"
+   },
+   "hint": {
+    "ru": "Перенесите всё в одну сторону.",
+    "en": "Move everything to one side."
+   },
+   "sol": {
+    "ru": "Перенесём всё влево: $$a^{2}+b^{2}-2ab=(a-b)^{2} .$$\n\nКвадрат действительного числа неотрицателен, значит $$(a-b)^{2}\\ge0\\quad\\Longleftrightarrow\\quad a^{2}+b^{2}\\ge2ab . \\qquad\\blacksquare$$\n\n**Равенство** достигается ровно тогда, когда $(a-b)^{2}=0$, то есть при $a=b$.\n\n**Замечание.** Это самое базовое неравенство: почти все дальнейшие — его переодетые варианты.",
+    "en": "Move everything to the left: $$a^{2}+b^{2}-2ab=(a-b)^{2} .$$\n\nThe square of a real number is non-negative, so $$(a-b)^{2}\\ge0\\quad\\Longleftrightarrow\\quad a^{2}+b^{2}\\ge2ab . \\qquad\\blacksquare$$\n\n**Equality** holds exactly when $(a-b)^{2}=0$, i.e. when $a=b$.\n\n**Remark.** This is the most basic inequality of all: almost every later one is a disguised version of it."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите неравенство между средним арифметическим и средним геометрическим: $\\dfrac{a+b}{2}\\ge\\sqrt{ab}$ при $a,b\\ge0$.",
+    "en": "Prove the AM–GM inequality $\\dfrac{a+b}{2}\\ge\\sqrt{ab}$ for $a,b\\ge0$."
+   },
+   "hint": {
+    "ru": "Обозначьте $a=x^{2}$, $b=y^{2}$.",
+    "en": "Put $a=x^{2}$, $b=y^{2}$."
+   },
+   "sol": {
+    "ru": "Так как $a,b\\ge0$, можно записать $a=x^{2}$ и $b=y^{2}$, где $x=\\sqrt a\\ge0$, $y=\\sqrt b\\ge0$.\n\nНеравенство превращается в $$\\frac{x^{2}+y^{2}}{2}\\ge xy\\quad\\Longleftrightarrow\\quad x^{2}+y^{2}-2xy\\ge0\\quad\\Longleftrightarrow\\quad (x-y)^{2}\\ge0 ,$$ что верно всегда. $\\blacksquare$\n\n**Равенство** — при $x=y$, то есть при $a=b$.\n\n**Геометрический смысл.** В прямоугольнике со сторонами $a$ и $b$ полупериметр не меньше стороны квадрата той же площади.",
+    "en": "Since $a,b\\ge0$ we may write $a=x^{2}$ and $b=y^{2}$ with $x=\\sqrt a\\ge0$, $y=\\sqrt b\\ge0$.\n\nThe inequality becomes $$\\frac{x^{2}+y^{2}}{2}\\ge xy\\quad\\Longleftrightarrow\\quad x^{2}+y^{2}-2xy\\ge0\\quad\\Longleftrightarrow\\quad (x-y)^{2}\\ge0 ,$$ which always holds. $\\blacksquare$\n\n**Equality** at $x=y$, i.e. $a=b$.\n\n**Geometric meaning.** For a rectangle with sides $a$ and $b$, the half-perimeter is at least the side of the square of the same area."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите наименьшее значение выражения $x^{2}-6x+11$.",
+    "en": "Find the smallest value of $x^{2}-6x+11$."
+   },
+   "hint": {
+    "ru": "Выделите полный квадрат.",
+    "en": "Complete the square."
+   },
+   "sol": {
+    "ru": "Выделим полный квадрат: $$x^{2}-6x+11=\\left(x^{2}-6x+9\\right)+2=(x-3)^{2}+2 .$$\n\nПервое слагаемое неотрицательно, поэтому $$x^{2}-6x+11\\ge2 ,$$ причём равенство достигается при $x=3$.\n\n**Ответ:** наименьшее значение равно $2$ (при $x=3$).",
+    "en": "Complete the square: $$x^{2}-6x+11=\\left(x^{2}-6x+9\\right)+2=(x-3)^{2}+2 .$$\n\nThe first term is non-negative, so $$x^{2}-6x+11\\ge2 ,$$ with equality at $x=3$.\n\n**Answer:** the smallest value is $2$, attained at $x=3$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что $x^{2}+4\\ge4x$ для любого действительного $x$.",
+    "en": "Prove that $x^{2}+4\\ge4x$ for every real $x$."
+   },
+   "hint": {
+    "ru": "$x^{2}-4x+4$ — знакомый квадрат.",
+    "en": "$x^{2}-4x+4$ is a familiar square."
+   },
+   "sol": {
+    "ru": "Перенесём всё влево: $$x^{2}-4x+4=(x-2)^{2}\\ge0 . \\qquad\\blacksquare$$\n\n**Равенство** при $x=2$.\n\n**Проверка** при $x=1$: слева $1+4=5$, справа $4$ ✓ При $x=5$: $25+4=29\\ge20$ ✓",
+    "en": "Move everything to the left: $$x^{2}-4x+4=(x-2)^{2}\\ge0 . \\qquad\\blacksquare$$\n\n**Equality** at $x=2$.\n\n**Check** at $x=1$: the left side is $1+4=5$, the right $4$ ✓ At $x=5$: $25+4=29\\ge20$ ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что $a^{2}+1\\ge2|a|$ для любого действительного $a$.",
+    "en": "Prove that $a^{2}+1\\ge2|a|$ for every real $a$."
+   },
+   "hint": {
+    "ru": "$a^{2}=|a|^{2}$.",
+    "en": "$a^{2}=|a|^{2}$."
+   },
+   "sol": {
+    "ru": "Заметим, что $a^{2}=|a|^{2}$, поэтому неравенство равносильно $$|a|^{2}-2|a|+1\\ge0\\quad\\Longleftrightarrow\\quad \\left(|a|-1\\right)^{2}\\ge0 ,$$ что верно всегда. $\\blacksquare$\n\n**Равенство** при $|a|=1$, то есть при $a=1$ или $a=-1$.\n\n**Следствие.** Для $a\\ne0$ отсюда получается знакомое $\\left|a+\\dfrac1a\\right|\\ge2$ — достаточно поделить обе части на $|a|$.",
+    "en": "Note $a^{2}=|a|^{2}$, so the inequality is equivalent to $$|a|^{2}-2|a|+1\\ge0\\quad\\Longleftrightarrow\\quad \\left(|a|-1\\right)^{2}\\ge0 ,$$ which always holds. $\\blacksquare$\n\n**Equality** at $|a|=1$, i.e. $a=1$ or $a=-1$.\n\n**Consequence.** For $a\\ne0$ this gives the familiar $\\left|a+\\dfrac1a\\right|\\ge2$ — just divide both sides by $|a|$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Площадь прямоугольника равна $36$. Каков наименьший возможный периметр?",
+    "en": "A rectangle has area $36$. What is the smallest possible perimeter?"
+   },
+   "hint": {
+    "ru": "Примените неравенство о среднем к сторонам.",
+    "en": "Apply AM–GM to the sides."
+   },
+   "sol": {
+    "ru": "Пусть стороны равны $a$ и $b$, тогда $ab=36$ и периметр равен $P=2(a+b)$.\n\nПо неравенству о среднем $$\\frac{a+b}{2}\\ge\\sqrt{ab}=\\sqrt{36}=6\\quad\\Longrightarrow\\quad a+b\\ge12\\quad\\Longrightarrow\\quad P\\ge24 .$$\n\nРавенство достигается при $a=b$, то есть у квадрата со стороной $6$: его периметр действительно равен $24$.\n\n**Ответ:** $24$ (квадрат $6\\times6$).\n\n**Наблюдение.** Максимального периметра не существует: при $a=100$, $b=0{,}36$ площадь та же, а периметр больше $200$.",
+    "en": "Let the sides be $a$ and $b$, so $ab=36$ and the perimeter is $P=2(a+b)$.\n\nBy AM–GM $$\\frac{a+b}{2}\\ge\\sqrt{ab}=\\sqrt{36}=6\\quad\\Longrightarrow\\quad a+b\\ge12\\quad\\Longrightarrow\\quad P\\ge24 .$$\n\nEquality holds when $a=b$, i.e. for the $6\\times6$ square, whose perimeter is indeed $24$.\n\n**Answer:** $24$ (the $6\\times6$ square).\n\n**Observation.** There is no largest perimeter: with $a=100$, $b=0.36$ the area is the same but the perimeter exceeds $200$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $a^{2}+b^{2}+c^{2}+3\\ge2(a+b+c)$ для любых действительных $a,b,c$.",
+    "en": "Prove that $a^{2}+b^{2}+c^{2}+3\\ge2(a+b+c)$ for all real $a,b,c$."
+   },
+   "hint": {
+    "ru": "Разбейте на три отдельных неравенства.",
+    "en": "Split into three separate inequalities."
+   },
+   "sol": {
+    "ru": "Перенесём всё влево и сгруппируем по переменным: $$a^{2}-2a+1+b^{2}-2b+1+c^{2}-2c+1=(a-1)^{2}+(b-1)^{2}+(c-1)^{2} .$$\n\nСумма трёх квадратов неотрицательна, значит неравенство верно. $\\blacksquare$\n\n**Равенство** — только при $a=b=c=1$.\n\n**Проверка** при $a=b=c=0$: слева $3$, справа $0$ ✓ При $a=b=c=2$: слева $12+3=15$, справа $12$ ✓",
+    "en": "Move everything to the left and group by variable: $$a^{2}-2a+1+b^{2}-2b+1+c^{2}-2c+1=(a-1)^{2}+(b-1)^{2}+(c-1)^{2} .$$\n\nA sum of three squares is non-negative, so the inequality holds. $\\blacksquare$\n\n**Equality** only at $a=b=c=1$.\n\n**Check** at $a=b=c=0$: the left side is $3$, the right $0$ ✓ At $a=b=c=2$: $12+3=15$ versus $12$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $\\dfrac ab+\\dfrac bc+\\dfrac ca\\ge3$ для любых положительных $a,b,c$.",
+    "en": "Prove that $\\dfrac ab+\\dfrac bc+\\dfrac ca\\ge3$ for all positive $a,b,c$."
+   },
+   "hint": {
+    "ru": "Произведение трёх дробей равно единице.",
+    "en": "The product of the three fractions equals one."
+   },
+   "sol": {
+    "ru": "Обозначим $$x=\\frac ab,\\qquad y=\\frac bc,\\qquad z=\\frac ca .$$ Все три числа положительны, и их произведение равно $$xyz=\\frac ab\\cdot\\frac bc\\cdot\\frac ca=1 .$$\n\nПо неравенству о среднем для трёх чисел $$\\frac{x+y+z}{3}\\ge\\sqrt[3]{xyz}=1\\quad\\Longrightarrow\\quad x+y+z\\ge3 . \\qquad\\blacksquare$$\n\n**Равенство** — при $x=y=z=1$, то есть при $a=b=c$.\n\n**Проверка** при $a=1$, $b=2$, $c=4$: $$\\frac12+\\frac12+4=5\\ge3 \\quad\\checkmark$$",
+    "en": "Put $$x=\\frac ab,\\qquad y=\\frac bc,\\qquad z=\\frac ca .$$ All three are positive and their product is $$xyz=\\frac ab\\cdot\\frac bc\\cdot\\frac ca=1 .$$\n\nBy AM–GM for three numbers $$\\frac{x+y+z}{3}\\ge\\sqrt[3]{xyz}=1\\quad\\Longrightarrow\\quad x+y+z\\ge3 . \\qquad\\blacksquare$$\n\n**Equality** at $x=y=z=1$, i.e. $a=b=c$.\n\n**Check** at $a=1$, $b=2$, $c=4$: $$\\frac12+\\frac12+4=5\\ge3 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $(a+b+c)^{2}\\ge3(ab+bc+ca)$ для любых действительных $a,b,c$.",
+    "en": "Prove that $(a+b+c)^{2}\\ge3(ab+bc+ca)$ for all real $a,b,c$."
+   },
+   "hint": {
+    "ru": "Раскройте квадрат и вспомните $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$.",
+    "en": "Expand the square and recall $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$."
+   },
+   "sol": {
+    "ru": "Раскроем квадрат суммы: $$(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2(ab+bc+ca).$$\n\nЗначит неравенство равносильно $$a^{2}+b^{2}+c^{2}+2(ab+bc+ca)\\ge3(ab+bc+ca)\\quad\\Longleftrightarrow\\quad a^{2}+b^{2}+c^{2}\\ge ab+bc+ca .$$\n\nПоследнее — известное неравенство: его левая минус правая часть равна $$\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ \\ge\\ 0 . \\qquad\\blacksquare$$\n\n**Равенство** — при $a=b=c$.\n\n**Полезное следствие.** Если $a+b+c=3$, то $ab+bc+ca\\le3$.",
+    "en": "Expand the square of the sum: $$(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2(ab+bc+ca).$$\n\nSo the inequality is equivalent to $$a^{2}+b^{2}+c^{2}+2(ab+bc+ca)\\ge3(ab+bc+ca)\\quad\\Longleftrightarrow\\quad a^{2}+b^{2}+c^{2}\\ge ab+bc+ca .$$\n\nThe latter is standard: left minus right equals $$\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ \\ge\\ 0 . \\qquad\\blacksquare$$\n\n**Equality** at $a=b=c$.\n\n**Useful consequence.** If $a+b+c=3$ then $ab+bc+ca\\le3$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $a^{2}+b^{2}+1\\ge ab+a+b$ для любых действительных $a,b$.",
+    "en": "Prove that $a^{2}+b^{2}+1\\ge ab+a+b$ for all real $a,b$."
+   },
+   "hint": {
+    "ru": "Домножьте обе части на $2$.",
+    "en": "Multiply both sides by $2$."
+   },
+   "sol": {
+    "ru": "Домножим на $2$ и перенесём всё влево: $$2a^{2}+2b^{2}+2-2ab-2a-2b .$$\n\nСгруппируем в три квадрата: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(a^{2}-2a+1\\right)+\\left(b^{2}-2b+1\\right)=(a-b)^{2}+(a-1)^{2}+(b-1)^{2} .$$\n\nЭто сумма квадратов, значит она неотрицательна, а с ней и исходная разность. $\\blacksquare$\n\n**Равенство** — когда все три квадрата нулевые, то есть $a=b=1$.\n\n**Проверка** при $a=2$, $b=0$: слева $4+0+1=5$, справа $0+2+0=2$ ✓",
+    "en": "Multiply by $2$ and move everything to the left: $$2a^{2}+2b^{2}+2-2ab-2a-2b .$$\n\nGroup into three squares: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(a^{2}-2a+1\\right)+\\left(b^{2}-2b+1\\right)=(a-b)^{2}+(a-1)^{2}+(b-1)^{2} .$$\n\nThis is a sum of squares, hence non-negative, and so is the original difference. $\\blacksquare$\n\n**Equality** when all three squares vanish, i.e. $a=b=1$.\n\n**Check** at $a=2$, $b=0$: the left side is $4+0+1=5$, the right $0+2+0=2$ ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите наибольшее значение выражения $x(10-x)$ при действительном $x$.",
+    "en": "Find the largest value of $x(10-x)$ over the reals."
+   },
+   "hint": {
+    "ru": "Выделите полный квадрат или примените неравенство о среднем.",
+    "en": "Complete the square, or apply AM–GM."
+   },
+   "sol": {
+    "ru": "**Способ 1 (полный квадрат).** $$x(10-x)=10x-x^{2}=25-\\left(x^{2}-10x+25\\right)=25-(x-5)^{2}\\le25 ,$$ причём равенство достигается при $x=5$.\n\n**Способ 2 (среднее).** Если $0<x<10$, оба множителя положительны, а их сумма постоянна: $$x+(10-x)=10 .$$ По неравенству о среднем $$\\sqrt{x(10-x)}\\le\\frac{x+(10-x)}{2}=5\\quad\\Longrightarrow\\quad x(10-x)\\le25 .$$ Вне отрезка $[0,10]$ произведение отрицательно, так что максимум там не достигается.\n\n**Ответ:** $25$ (при $x=5$).",
+    "en": "**Method 1 (completing the square).** $$x(10-x)=10x-x^{2}=25-\\left(x^{2}-10x+25\\right)=25-(x-5)^{2}\\le25 ,$$ with equality at $x=5$.\n\n**Method 2 (AM–GM).** For $0<x<10$ both factors are positive and their sum is constant: $$x+(10-x)=10 .$$ AM–GM gives $$\\sqrt{x(10-x)}\\le\\frac{x+(10-x)}{2}=5\\quad\\Longrightarrow\\quad x(10-x)\\le25 .$$ Outside $[0,10]$ the product is negative, so the maximum is not there.\n\n**Answer:** $25$, attained at $x=5$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $x+\\dfrac4x\\ge4$ при $x>0$, и найдите, когда достигается равенство.",
+    "en": "Prove that $x+\\dfrac4x\\ge4$ for $x>0$, and find when equality holds."
+   },
+   "hint": {
+    "ru": "Среднее арифметическое и среднее геометрическое двух слагаемых.",
+    "en": "AM–GM on the two terms."
+   },
+   "sol": {
+    "ru": "Оба слагаемых положительны, а их произведение постоянно: $$x\\cdot\\frac4x=4 .$$\n\nПо неравенству о среднем $$\\frac{x+\\frac4x}{2}\\ \\ge\\ \\sqrt{x\\cdot\\frac4x}=2\\quad\\Longrightarrow\\quad x+\\frac4x\\ge4 . \\qquad\\blacksquare$$\n\n**Равенство** — при $x=\\dfrac4x$, то есть $x^{2}=4$ и (с учётом $x>0$) $x=2$.\n\n**Проверка:** при $x=2$ сумма равна $2+2=4$ ✓ При $x=1$: $1+4=5>4$ ✓\n\n**Другой путь.** $$x+\\frac4x-4=\\frac{x^{2}-4x+4}{x}=\\frac{(x-2)^{2}}{x}\\ \\ge\\ 0\\quad\\text{при }x>0 .$$",
+    "en": "Both terms are positive and their product is constant: $$x\\cdot\\frac4x=4 .$$\n\nAM–GM gives $$\\frac{x+\\frac4x}{2}\\ \\ge\\ \\sqrt{x\\cdot\\frac4x}=2\\quad\\Longrightarrow\\quad x+\\frac4x\\ge4 . \\qquad\\blacksquare$$\n\n**Equality** when $x=\\dfrac4x$, i.e. $x^{2}=4$, and since $x>0$, $x=2$.\n\n**Check:** at $x=2$ the sum is $2+2=4$ ✓ At $x=1$: $1+4=5>4$ ✓\n\n**Another route.** $$x+\\frac4x-4=\\frac{x^{2}-4x+4}{x}=\\frac{(x-2)^{2}}{x}\\ \\ge\\ 0\\quad\\text{for }x>0 .$$"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $(1+a)(1+b)\\ge\\left(1+\\sqrt{ab}\\right)^{2}$ при $a,b\\ge0$.",
+    "en": "Prove that $(1+a)(1+b)\\ge\\left(1+\\sqrt{ab}\\right)^{2}$ for $a,b\\ge0$."
+   },
+   "hint": {
+    "ru": "Раскройте обе части.",
+    "en": "Expand both sides."
+   },
+   "sol": {
+    "ru": "Раскроем обе части: $$(1+a)(1+b)=1+a+b+ab ,$$ $$\\left(1+\\sqrt{ab}\\right)^{2}=1+2\\sqrt{ab}+ab .$$\n\nВычитая, видим, что неравенство равносильно $$a+b\\ \\ge\\ 2\\sqrt{ab} ,$$ а это в точности неравенство о среднем для $a$ и $b$ (равносильно $\\left(\\sqrt a-\\sqrt b\\right)^{2}\\ge0$). $\\blacksquare$\n\n**Равенство** — при $a=b$.\n\n**Проверка** при $a=1$, $b=4$: слева $2\\cdot5=10$, справа $(1+2)^{2}=9$ ✓",
+    "en": "Expand both sides: $$(1+a)(1+b)=1+a+b+ab ,$$ $$\\left(1+\\sqrt{ab}\\right)^{2}=1+2\\sqrt{ab}+ab .$$\n\nSubtracting, the inequality is equivalent to $$a+b\\ \\ge\\ 2\\sqrt{ab} ,$$ which is exactly AM–GM for $a$ and $b$ (equivalent to $\\left(\\sqrt a-\\sqrt b\\right)^{2}\\ge0$). $\\blacksquare$\n\n**Equality** at $a=b$.\n\n**Check** at $a=1$, $b=4$: the left side is $2\\cdot5=10$, the right $(1+2)^{2}=9$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $a^{4}+b^{4}\\ge a^{3}b+ab^{3}$ для любых действительных $a,b$.",
+    "en": "Prove that $a^{4}+b^{4}\\ge a^{3}b+ab^{3}$ for all real $a,b$."
+   },
+   "hint": {
+    "ru": "Сгруппируйте так, чтобы вынести $a-b$.",
+    "en": "Group so that $a-b$ comes out."
+   },
+   "sol": {
+    "ru": "Перенесём всё влево и сгруппируем: $$a^{4}+b^{4}-a^{3}b-ab^{3}=a^{3}(a-b)-b^{3}(a-b)=(a-b)\\left(a^{3}-b^{3}\\right).$$\n\nРазложим разность кубов: $$(a-b)\\left(a^{3}-b^{3}\\right)=(a-b)^{2}\\left(a^{2}+ab+b^{2}\\right).$$\n\nПервый множитель — квадрат, значит неотрицателен. Второй тоже: $$a^{2}+ab+b^{2}=\\left(a+\\frac b2\\right)^{2}+\\frac{3b^{2}}{4}\\ \\ge\\ 0 .$$\n\nПроизведение двух неотрицательных чисел неотрицательно. $\\blacksquare$\n\n**Равенство** — при $a=b$ (или при $a=b=0$).\n\n**Проверка** при $a=2$, $b=1$: слева $16+1=17$, справа $8+2=10$ ✓",
+    "en": "Move everything to the left and group: $$a^{4}+b^{4}-a^{3}b-ab^{3}=a^{3}(a-b)-b^{3}(a-b)=(a-b)\\left(a^{3}-b^{3}\\right).$$\n\nFactor the difference of cubes: $$(a-b)\\left(a^{3}-b^{3}\\right)=(a-b)^{2}\\left(a^{2}+ab+b^{2}\\right).$$\n\nThe first factor is a square, hence non-negative. So is the second: $$a^{2}+ab+b^{2}=\\left(a+\\frac b2\\right)^{2}+\\frac{3b^{2}}{4}\\ \\ge\\ 0 .$$\n\nA product of two non-negative numbers is non-negative. $\\blacksquare$\n\n**Equality** at $a=b$ (or $a=b=0$).\n\n**Check** at $a=2$, $b=1$: the left side is $16+1=17$, the right $8+2=10$ ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Положительные числа $a,b,c$ удовлетворяют $a+b+c=3$. Докажите, что $ab+bc+ca\\le3$.",
+    "en": "Positive numbers $a,b,c$ satisfy $a+b+c=3$. Prove that $ab+bc+ca\\le3$."
+   },
+   "hint": {
+    "ru": "Воспользуйтесь неравенством $(a+b+c)^{2}\\ge3(ab+bc+ca)$.",
+    "en": "Use $(a+b+c)^{2}\\ge3(ab+bc+ca)$."
+   },
+   "sol": {
+    "ru": "Из неравенства $$(a+b+c)^{2}\\ \\ge\\ 3(ab+bc+ca)$$ (оно равносильно $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$) подставим условие $a+b+c=3$: $$9\\ \\ge\\ 3(ab+bc+ca)\\quad\\Longrightarrow\\quad ab+bc+ca\\ \\le\\ 3 . \\qquad\\blacksquare$$\n\n**Равенство** — при $a=b=c=1$: тогда $ab+bc+ca=3$ ✓\n\n**Проверка** на другой тройке: $a=2$, $b=0{,}5$, $c=0{,}5$ даёт $$1+0{,}25+1=2{,}25\\le3 \\quad\\checkmark$$",
+    "en": "From the inequality $$(a+b+c)^{2}\\ \\ge\\ 3(ab+bc+ca)$$ (equivalent to $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$), substitute $a+b+c=3$: $$9\\ \\ge\\ 3(ab+bc+ca)\\quad\\Longrightarrow\\quad ab+bc+ca\\ \\le\\ 3 . \\qquad\\blacksquare$$\n\n**Equality** at $a=b=c=1$, where $ab+bc+ca=3$ ✓\n\n**Check** on another triple: $a=2$, $b=0.5$, $c=0.5$ gives $$1+0.25+1=2.25\\le3 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $(a+b)(b+c)(c+a)\\ge8abc$ для положительных $a,b,c$.",
+    "en": "Prove that $(a+b)(b+c)(c+a)\\ge8abc$ for positive $a,b,c$."
+   },
+   "hint": {
+    "ru": "Оцените каждую скобку по отдельности.",
+    "en": "Estimate each bracket separately."
+   },
+   "sol": {
+    "ru": "Применим неравенство о среднем к каждой скобке: $$a+b\\ \\ge\\ 2\\sqrt{ab},\\qquad b+c\\ \\ge\\ 2\\sqrt{bc},\\qquad c+a\\ \\ge\\ 2\\sqrt{ca} .$$\n\nВсе части положительны, поэтому неравенства можно перемножить: $$(a+b)(b+c)(c+a)\\ \\ge\\ 8\\sqrt{ab}\\cdot\\sqrt{bc}\\cdot\\sqrt{ca}=8\\sqrt{a^{2}b^{2}c^{2}}=8abc . \\qquad\\blacksquare$$\n\n**Равенство** — когда равенство в каждом из трёх мест, то есть $a=b=c$.\n\n**Проверка** при $a=b=c=1$: слева $2\\cdot2\\cdot2=8$, справа $8$ ✓ При $a=2$, $b=c=1$: слева $3\\cdot2\\cdot3=18$, справа $16$ ✓",
+    "en": "Apply AM–GM to each bracket: $$a+b\\ \\ge\\ 2\\sqrt{ab},\\qquad b+c\\ \\ge\\ 2\\sqrt{bc},\\qquad c+a\\ \\ge\\ 2\\sqrt{ca} .$$\n\nAll sides are positive, so the inequalities may be multiplied: $$(a+b)(b+c)(c+a)\\ \\ge\\ 8\\sqrt{ab}\\cdot\\sqrt{bc}\\cdot\\sqrt{ca}=8\\sqrt{a^{2}b^{2}c^{2}}=8abc . \\qquad\\blacksquare$$\n\n**Equality** when each of the three is tight, i.e. $a=b=c$.\n\n**Check** at $a=b=c=1$: the left side is $2\\cdot2\\cdot2=8$, the right $8$ ✓ At $a=2$, $b=c=1$: $3\\cdot2\\cdot3=18$ versus $16$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите неравенство Несбитта: для положительных $a,b,c$ $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32 .$$",
+    "en": "Prove Nesbitt’s inequality: for positive $a,b,c$ $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32 .$$"
+   },
+   "hint": {
+    "ru": "Прибавьте по единице к каждой дроби.",
+    "en": "Add one to each fraction."
+   },
+   "sol": {
+    "ru": "Прибавим к каждой дроби единицу: $$\\frac{a}{b+c}+1=\\frac{a+b+c}{b+c} ,$$ и аналогично для двух других. Обозначив $s=a+b+c$, получаем, что доказываемое неравенство равносильно $$s\\left(\\frac1{b+c}+\\frac1{c+a}+\\frac1{a+b}\\right)\\ \\ge\\ \\frac32+3=\\frac92 .$$\n\nЗаметим, что $$(b+c)+(c+a)+(a+b)=2s ,$$ поэтому достаточно доказать $$\\bigl(u+v+w\\bigr)\\left(\\frac1u+\\frac1v+\\frac1w\\right)\\ \\ge\\ 9 ,\\qquad u=b+c,\\ v=c+a,\\ w=a+b ,$$ ведь тогда левая часть будет не меньше $\\dfrac{9}{2s}\\cdot s=\\dfrac92$.\n\n**Доказательство вспомогательного неравенства.** По неравенству о среднем $$u+v+w\\ \\ge\\ 3\\sqrt[3]{uvw},\\qquad \\frac1u+\\frac1v+\\frac1w\\ \\ge\\ \\frac{3}{\\sqrt[3]{uvw}} ,$$ и перемножение даёт $9$ ✓\n\n$\\blacksquare$\n\n**Равенство** — при $u=v=w$, то есть при $a=b=c$; тогда каждая дробь равна $\\tfrac12$.\n\n**Проверка** при $a=2$, $b=c=1$: $$\\frac22+\\frac13+\\frac13=1{,}666\\ldots\\ \\ge\\ 1{,}5 \\quad\\checkmark$$",
+    "en": "Add one to each fraction: $$\\frac{a}{b+c}+1=\\frac{a+b+c}{b+c} ,$$ and likewise for the other two. Writing $s=a+b+c$, the inequality to prove becomes $$s\\left(\\frac1{b+c}+\\frac1{c+a}+\\frac1{a+b}\\right)\\ \\ge\\ \\frac32+3=\\frac92 .$$\n\nNote that $$(b+c)+(c+a)+(a+b)=2s ,$$ so it suffices to prove $$\\bigl(u+v+w\\bigr)\\left(\\frac1u+\\frac1v+\\frac1w\\right)\\ \\ge\\ 9 ,\\qquad u=b+c,\\ v=c+a,\\ w=a+b ,$$ since then the left side is at least $\\dfrac{9}{2s}\\cdot s=\\dfrac92$.\n\n**Proof of the auxiliary inequality.** By AM–GM $$u+v+w\\ \\ge\\ 3\\sqrt[3]{uvw},\\qquad \\frac1u+\\frac1v+\\frac1w\\ \\ge\\ \\frac{3}{\\sqrt[3]{uvw}} ,$$ and multiplying gives $9$ ✓\n\n$\\blacksquare$\n\n**Equality** at $u=v=w$, i.e. $a=b=c$, where each fraction equals $\\tfrac12$.\n\n**Check** at $a=2$, $b=c=1$: $$\\frac22+\\frac13+\\frac13=1.666\\ldots\\ \\ge\\ 1.5 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что для положительных $a,b$ среднее геометрическое не меньше среднего гармонического: $$\\sqrt{ab}\\ \\ge\\ \\frac{2ab}{a+b} .$$",
+    "en": "Prove that for positive $a,b$ the geometric mean is at least the harmonic mean: $$\\sqrt{ab}\\ \\ge\\ \\frac{2ab}{a+b} .$$"
+   },
+   "hint": {
+    "ru": "Разделите обе части на $\\sqrt{ab}$.",
+    "en": "Divide both sides by $\\sqrt{ab}$."
+   },
+   "sol": {
+    "ru": "Обе части положительны, поэтому неравенство равносильно (после умножения на $a+b$ и деления на $\\sqrt{ab}$) $$a+b\\ \\ge\\ 2\\sqrt{ab} ,$$ то есть неравенству о среднем арифметическом и геометрическом, которое равносильно $\\left(\\sqrt a-\\sqrt b\\right)^{2}\\ge0$. $\\blacksquare$\n\n**Равенство** — при $a=b$.\n\n**Полная цепочка средних.** Для положительных $a,b$ $$\\frac{2ab}{a+b}\\ \\le\\ \\sqrt{ab}\\ \\le\\ \\frac{a+b}{2}\\ \\le\\ \\sqrt{\\frac{a^{2}+b^{2}}{2}} ,$$ и всюду равенство только при $a=b$.\n\n**Проверка** при $a=1$, $b=4$: $$\\frac{2\\cdot4}{5}=1{,}6\\ \\le\\ 2\\ \\le\\ 2{,}5 \\quad\\checkmark$$",
+    "en": "Both sides are positive, so (multiplying by $a+b$ and dividing by $\\sqrt{ab}$) the inequality is equivalent to $$a+b\\ \\ge\\ 2\\sqrt{ab} ,$$ i.e. to AM–GM, which in turn is $\\left(\\sqrt a-\\sqrt b\\right)^{2}\\ge0$. $\\blacksquare$\n\n**Equality** at $a=b$.\n\n**The full chain of means.** For positive $a,b$ $$\\frac{2ab}{a+b}\\ \\le\\ \\sqrt{ab}\\ \\le\\ \\frac{a+b}{2}\\ \\le\\ \\sqrt{\\frac{a^{2}+b^{2}}{2}} ,$$ with equality everywhere only at $a=b$.\n\n**Check** at $a=1$, $b=4$: $$\\frac{2\\cdot4}{5}=1.6\\ \\le\\ 2\\ \\le\\ 2.5 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $(a+b+c)\\left(a^{2}+b^{2}+c^{2}\\right)\\ge9abc$ для положительных $a,b,c$.",
+    "en": "Prove that $(a+b+c)\\left(a^{2}+b^{2}+c^{2}\\right)\\ge9abc$ for positive $a,b,c$."
+   },
+   "hint": {
+    "ru": "Оцените каждую скобку неравенством о среднем.",
+    "en": "Bound each bracket by AM–GM."
+   },
+   "sol": {
+    "ru": "Применим неравенство о среднем к каждой скобке отдельно: $$a+b+c\\ \\ge\\ 3\\sqrt[3]{abc} ,$$ $$a^{2}+b^{2}+c^{2}\\ \\ge\\ 3\\sqrt[3]{a^{2}b^{2}c^{2}} .$$\n\nОбе части положительны, значит неравенства можно перемножить: $$(a+b+c)\\left(a^{2}+b^{2}+c^{2}\\right)\\ \\ge\\ 9\\sqrt[3]{abc}\\cdot\\sqrt[3]{a^{2}b^{2}c^{2}}=9\\sqrt[3]{a^{3}b^{3}c^{3}}=9abc . \\qquad\\blacksquare$$\n\n**Равенство** — при $a=b=c$.\n\n**Проверка** при $a=b=c=1$: слева $3\\cdot3=9$, справа $9$ ✓ При $a=2$, $b=c=1$: слева $4\\cdot6=24$, справа $18$ ✓",
+    "en": "Apply AM–GM to each bracket separately: $$a+b+c\\ \\ge\\ 3\\sqrt[3]{abc} ,$$ $$a^{2}+b^{2}+c^{2}\\ \\ge\\ 3\\sqrt[3]{a^{2}b^{2}c^{2}} .$$\n\nBoth sides are positive, so the inequalities may be multiplied: $$(a+b+c)\\left(a^{2}+b^{2}+c^{2}\\right)\\ \\ge\\ 9\\sqrt[3]{abc}\\cdot\\sqrt[3]{a^{2}b^{2}c^{2}}=9\\sqrt[3]{a^{3}b^{3}c^{3}}=9abc . \\qquad\\blacksquare$$\n\n**Equality** at $a=b=c$.\n\n**Check** at $a=b=c=1$: the left side is $3\\cdot3=9$, the right $9$ ✓ At $a=2$, $b=c=1$: $4\\cdot6=24$ versus $18$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Пусть $a,b,c$ — стороны треугольника. Докажите, что $$(a+b-c)(b+c-a)(c+a-b)\\ \\le\\ abc .$$",
+    "en": "Let $a,b,c$ be the sides of a triangle. Prove that $$(a+b-c)(b+c-a)(c+a-b)\\ \\le\\ abc .$$"
+   },
+   "hint": {
+    "ru": "Обозначьте $x=b+c-a$, $y=c+a-b$, $z=a+b-c$ и выразите $a,b,c$ через них.",
+    "en": "Put $x=b+c-a$, $y=c+a-b$, $z=a+b-c$ and express $a,b,c$ through them."
+   },
+   "sol": {
+    "ru": "**Замена Равви.** Положим $$x=b+c-a,\\qquad y=c+a-b,\\qquad z=a+b-c .$$ По неравенству треугольника все три числа положительны, и обратная замена даёт $$a=\\frac{y+z}{2},\\qquad b=\\frac{z+x}{2},\\qquad c=\\frac{x+y}{2} .$$\n\nДоказываемое неравенство превращается в $$xyz\\ \\le\\ \\frac{(y+z)(z+x)(x+y)}{8} ,$$ то есть в $$(x+y)(y+z)(z+x)\\ \\ge\\ 8xyz ,$$ а это уже знакомое неравенство: по среднему $$x+y\\ge2\\sqrt{xy},\\quad y+z\\ge2\\sqrt{yz},\\quad z+x\\ge2\\sqrt{zx} ,$$ и перемножение даёт $8xyz$ ✓\n\n$\\blacksquare$\n\n**Равенство** — при $x=y=z$, то есть у равностороннего треугольника.\n\n**Проверка** для треугольника $3,4,5$: слева $(3+4-5)(4+5-3)(5+3-4)=2\\cdot6\\cdot4=48$, справа $60$ ✓",
+    "en": "**Ravi substitution.** Put $$x=b+c-a,\\qquad y=c+a-b,\\qquad z=a+b-c .$$ The triangle inequality makes all three positive, and inverting, $$a=\\frac{y+z}{2},\\qquad b=\\frac{z+x}{2},\\qquad c=\\frac{x+y}{2} .$$\n\nThe inequality becomes $$xyz\\ \\le\\ \\frac{(y+z)(z+x)(x+y)}{8} ,$$ i.e. $$(x+y)(y+z)(z+x)\\ \\ge\\ 8xyz ,$$ which is familiar: AM–GM gives $$x+y\\ge2\\sqrt{xy},\\quad y+z\\ge2\\sqrt{yz},\\quad z+x\\ge2\\sqrt{zx} ,$$ and multiplying yields $8xyz$ ✓\n\n$\\blacksquare$\n\n**Equality** at $x=y=z$, i.e. for an equilateral triangle.\n\n**Check** for the $3,4,5$ triangle: the left side is $(3+4-5)(4+5-3)(5+3-4)=2\\cdot6\\cdot4=48$, the right $60$ ✓"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите наименьшее значение выражения $\\dfrac{x^{2}+2}{\\sqrt{x^{2}+1}}$ при действительном $x$.",
+    "en": "Find the smallest value of $\\dfrac{x^{2}+2}{\\sqrt{x^{2}+1}}$ over the reals."
+   },
+   "hint": {
+    "ru": "Обозначьте $t=\\sqrt{x^{2}+1}$.",
+    "en": "Put $t=\\sqrt{x^{2}+1}$."
+   },
+   "sol": {
+    "ru": "Обозначим $$t=\\sqrt{x^{2}+1}\\ \\ge\\ 1 ,$$ тогда $x^{2}=t^{2}-1$ и выражение принимает вид $$\\frac{t^{2}-1+2}{t}=\\frac{t^{2}+1}{t}=t+\\frac1t .$$\n\nПо неравенству о среднем при $t>0$ $$t+\\frac1t\\ \\ge\\ 2 ,$$ причём равенство достигается при $t=1$ — а это допустимое значение, ведь $t=1$ отвечает $x=0$.\n\n**Ответ:** наименьшее значение равно $2$ (при $x=0$).\n\n**Проверка:** при $x=0$ выражение равно $\\tfrac21=2$ ✓ При $x=1$: $\\tfrac{3}{\\sqrt2}\\approx2{,}12>2$ ✓",
+    "en": "Put $$t=\\sqrt{x^{2}+1}\\ \\ge\\ 1 ,$$ so that $x^{2}=t^{2}-1$ and the expression becomes $$\\frac{t^{2}-1+2}{t}=\\frac{t^{2}+1}{t}=t+\\frac1t .$$\n\nBy AM–GM, for $t>0$, $$t+\\frac1t\\ \\ge\\ 2 ,$$ with equality at $t=1$ — an admissible value, since $t=1$ corresponds to $x=0$.\n\n**Answer:** the smallest value is $2$, attained at $x=0$.\n\n**Check:** at $x=0$ the expression equals $\\tfrac21=2$ ✓ At $x=1$: $\\tfrac{3}{\\sqrt2}\\approx2.12>2$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $2^{n}>n^{2}$ при всех целых $n\\ge5$.",
+    "en": "Prove that $2^{n}>n^{2}$ for every integer $n\\ge5$."
+   },
+   "hint": {
+    "ru": "Индукция; в переходе оцените $(n+1)^{2}$ через $2n^{2}$.",
+    "en": "Induct; in the step bound $(n+1)^{2}$ by $2n^{2}$."
+   },
+   "sol": {
+    "ru": "**База $n=5$.** $2^{5}=32>25=5^{2}$ ✓\n\n**Переход.** Пусть $2^{n}>n^{2}$ для некоторого $n\\ge5$. Тогда $$2^{n+1}=2\\cdot2^{n}>2n^{2} .$$ Осталось проверить, что $$2n^{2}\\ \\ge\\ (n+1)^{2}\\quad\\Longleftrightarrow\\quad 2n^{2}-n^{2}-2n-1\\ge0\\quad\\Longleftrightarrow\\quad n^{2}-2n-1\\ge0 .$$\n\nПоследнее верно при $n\\ge3$, ведь $$n^{2}-2n-1=(n-1)^{2}-2\\ \\ge\\ 4^{2}-2=14>0\\quad\\text{при }n\\ge5 .$$\n\nЗначит $2^{n+1}>(n+1)^{2}$, и по индукции неравенство верно при всех $n\\ge5$. $\\blacksquare$\n\n**Почему нужен старт с пятёрки.** При $n=2$: $4=4$; при $n=3$: $8<9$; при $n=4$: $16=16$ — неравенство ещё не выполняется.",
+    "en": "**Base $n=5$.** $2^{5}=32>25=5^{2}$ ✓\n\n**Step.** Suppose $2^{n}>n^{2}$ for some $n\\ge5$. Then $$2^{n+1}=2\\cdot2^{n}>2n^{2} .$$ It remains to check that $$2n^{2}\\ \\ge\\ (n+1)^{2}\\quad\\Longleftrightarrow\\quad 2n^{2}-n^{2}-2n-1\\ge0\\quad\\Longleftrightarrow\\quad n^{2}-2n-1\\ge0 .$$\n\nThis holds for $n\\ge3$, since $$n^{2}-2n-1=(n-1)^{2}-2\\ \\ge\\ 4^{2}-2=14>0\\quad\\text{for }n\\ge5 .$$\n\nSo $2^{n+1}>(n+1)^{2}$, and by induction the inequality holds for all $n\\ge5$. $\\blacksquare$\n\n**Why the start at five.** At $n=2$: $4=4$; at $n=3$: $8<9$; at $n=4$: $16=16$ — the inequality is not yet true."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что среди всех треугольников с данным периметром наибольшую площадь имеет равносторонний.",
+    "en": "Prove that among all triangles with a given perimeter the equilateral one has the largest area."
+   },
+   "hint": {
+    "ru": "Формула Герона плюс неравенство о среднем для трёх чисел.",
+    "en": "Heron’s formula plus AM–GM for three numbers."
+   },
+   "sol": {
+    "ru": "Пусть периметр равен $2p$, стороны — $a,b,c$, полупериметр — $p$. По формуле Герона $$S=\\sqrt{p(p-a)(p-b)(p-c)} .$$\n\nЧисла $p-a$, $p-b$, $p-c$ положительны (неравенство треугольника), и их сумма постоянна: $$(p-a)+(p-b)+(p-c)=3p-2p=p .$$\n\nПо неравенству о среднем для трёх чисел с фиксированной суммой произведение наибольшее, когда они равны: $$(p-a)(p-b)(p-c)\\ \\le\\ \\left(\\frac{p}{3}\\right)^{3}=\\frac{p^{3}}{27} .$$\n\nЗначит $$S\\ \\le\\ \\sqrt{p\\cdot\\frac{p^{3}}{27}}=\\frac{p^{2}}{3\\sqrt3} ,$$ и равенство достигается ровно при $$p-a=p-b=p-c\\quad\\Longleftrightarrow\\quad a=b=c=\\frac{2p}{3} . \\qquad\\blacksquare$$\n\n**Проверка.** При периметре $12$ равносторонний треугольник со стороной $4$ даёт $$S=\\frac{\\sqrt3}{4}\\cdot16=4\\sqrt3\\approx6{,}93 ,$$ а треугольник $3,4,5$ того же периметра — всего $6$ ✓",
+    "en": "Let the perimeter be $2p$, the sides $a,b,c$, and the semiperimeter $p$. Heron’s formula gives $$S=\\sqrt{p(p-a)(p-b)(p-c)} .$$\n\nThe numbers $p-a$, $p-b$, $p-c$ are positive (triangle inequality) and their sum is fixed: $$(p-a)+(p-b)+(p-c)=3p-2p=p .$$\n\nBy AM–GM, three numbers with a fixed sum have the largest product when they are equal: $$(p-a)(p-b)(p-c)\\ \\le\\ \\left(\\frac{p}{3}\\right)^{3}=\\frac{p^{3}}{27} .$$\n\nHence $$S\\ \\le\\ \\sqrt{p\\cdot\\frac{p^{3}}{27}}=\\frac{p^{2}}{3\\sqrt3} ,$$ with equality exactly when $$p-a=p-b=p-c\\quad\\Longleftrightarrow\\quad a=b=c=\\frac{2p}{3} . \\qquad\\blacksquare$$\n\n**Check.** With perimeter $12$ the equilateral triangle of side $4$ gives $$S=\\frac{\\sqrt3}{4}\\cdot16=4\\sqrt3\\approx6.93 ,$$ while the $3,4,5$ triangle of the same perimeter gives only $6$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $\\left(1+\\dfrac1n\\right)^{n}<3$ при любом натуральном $n$.",
+    "en": "Prove that $\\left(1+\\dfrac1n\\right)^{n}<3$ for every positive integer $n$."
+   },
+   "hint": {
+    "ru": "Раскройте по биному и оцените каждое слагаемое сверху дробью $\\dfrac1{2^{k-1}}$.",
+    "en": "Expand by the binomial theorem and bound each term above by $\\dfrac1{2^{k-1}}$."
+   },
+   "sol": {
+    "ru": "Раскроем по формуле бинома: $$\\left(1+\\frac1n\\right)^{n}=\\sum_{k=0}^{n}\\binom nk\\frac1{n^{k}} .$$\n\n**Оценим слагаемое с номером $k\\ge1$.** $$\\binom nk\\frac1{n^{k}}=\\frac{n(n-1)\\cdots(n-k+1)}{k!\\,n^{k}}\\ \\le\\ \\frac{n^{k}}{k!\\,n^{k}}=\\frac1{k!} ,$$ ведь в числителе каждый из $k$ множителей не больше $n$.\n\n**Оценим факториал.** При $k\\ge1$ $$k!=1\\cdot2\\cdot3\\cdots k\\ \\ge\\ 1\\cdot2\\cdot2\\cdots2=2^{\\,k-1} ,$$ значит $\\dfrac1{k!}\\le\\dfrac1{2^{\\,k-1}}$.\n\n**Складываем.** $$\\left(1+\\frac1n\\right)^{n}\\ \\le\\ 1+\\sum_{k=1}^{n}\\frac1{2^{\\,k-1}}=1+\\left(1+\\frac12+\\frac14+\\dots+\\frac1{2^{\\,n-1}}\\right)<1+2=3 ,$$ потому что сумма геометрической прогрессии со знаменателем $\\tfrac12$ строго меньше $2$. $\\blacksquare$\n\n**Проверка:** $n=1$ даёт $2$; $n=2$ даёт $2{,}25$; $n=10$ даёт примерно $2{,}594$ — всё меньше трёх ✓\n\n**Замечание.** С ростом $n$ эта последовательность возрастает и стремится к числу $e\\approx2{,}71828$.",
+    "en": "Expand by the binomial theorem: $$\\left(1+\\frac1n\\right)^{n}=\\sum_{k=0}^{n}\\binom nk\\frac1{n^{k}} .$$\n\n**Bound the term of index $k\\ge1$.** $$\\binom nk\\frac1{n^{k}}=\\frac{n(n-1)\\cdots(n-k+1)}{k!\\,n^{k}}\\ \\le\\ \\frac{n^{k}}{k!\\,n^{k}}=\\frac1{k!} ,$$ since each of the $k$ factors in the numerator is at most $n$.\n\n**Bound the factorial.** For $k\\ge1$ $$k!=1\\cdot2\\cdot3\\cdots k\\ \\ge\\ 1\\cdot2\\cdot2\\cdots2=2^{\\,k-1} ,$$ so $\\dfrac1{k!}\\le\\dfrac1{2^{\\,k-1}}$.\n\n**Add up.** $$\\left(1+\\frac1n\\right)^{n}\\ \\le\\ 1+\\sum_{k=1}^{n}\\frac1{2^{\\,k-1}}=1+\\left(1+\\frac12+\\frac14+\\dots+\\frac1{2^{\\,n-1}}\\right)<1+2=3 ,$$ because the geometric sum with ratio $\\tfrac12$ is strictly below $2$. $\\blacksquare$\n\n**Check:** $n=1$ gives $2$; $n=2$ gives $2.25$; $n=10$ gives about $2.594$ — all below three ✓\n\n**Remark.** As $n$ grows this sequence increases and tends to $e\\approx2.71828$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $a^{3}+b^{3}+c^{3}\\ge a^{2}b+b^{2}c+c^{2}a$ для положительных $a,b,c$.",
+    "en": "Prove that $a^{3}+b^{3}+c^{3}\\ge a^{2}b+b^{2}c+c^{2}a$ for positive $a,b,c$."
+   },
+   "hint": {
+    "ru": "Примените среднее к тройке $a^{3},a^{3},b^{3}$.",
+    "en": "Apply AM–GM to the triple $a^{3},a^{3},b^{3}$."
+   },
+   "sol": {
+    "ru": "По неравенству о среднем для трёх чисел $$\\frac{a^{3}+a^{3}+b^{3}}{3}\\ \\ge\\ \\sqrt[3]{a^{3}\\cdot a^{3}\\cdot b^{3}}=a^{2}b ,$$ то есть $$2a^{3}+b^{3}\\ \\ge\\ 3a^{2}b .$$\n\nАналогично $$2b^{3}+c^{3}\\ \\ge\\ 3b^{2}c,\\qquad 2c^{3}+a^{3}\\ \\ge\\ 3c^{2}a .$$\n\nСложим все три неравенства. Слева получим $$\\left(2a^{3}+a^{3}\\right)+\\left(2b^{3}+b^{3}\\right)+\\left(2c^{3}+c^{3}\\right)=3\\left(a^{3}+b^{3}+c^{3}\\right),$$ справа — $3\\left(a^{2}b+b^{2}c+c^{2}a\\right)$. Деля на $3$, получаем требуемое. $\\blacksquare$\n\n**Равенство** — при $a=b=c$.\n\n**Проверка** при $a=2$, $b=1$, $c=1$: слева $8+1+1=10$, справа $4+1+2=7$ ✓",
+    "en": "By AM–GM for three numbers $$\\frac{a^{3}+a^{3}+b^{3}}{3}\\ \\ge\\ \\sqrt[3]{a^{3}\\cdot a^{3}\\cdot b^{3}}=a^{2}b ,$$ that is $$2a^{3}+b^{3}\\ \\ge\\ 3a^{2}b .$$\n\nSimilarly $$2b^{3}+c^{3}\\ \\ge\\ 3b^{2}c,\\qquad 2c^{3}+a^{3}\\ \\ge\\ 3c^{2}a .$$\n\nAdd the three. On the left we get $$\\left(2a^{3}+a^{3}\\right)+\\left(2b^{3}+b^{3}\\right)+\\left(2c^{3}+c^{3}\\right)=3\\left(a^{3}+b^{3}+c^{3}\\right),$$ on the right $3\\left(a^{2}b+b^{2}c+c^{2}a\\right)$. Dividing by $3$ gives the claim. $\\blacksquare$\n\n**Equality** at $a=b=c$.\n\n**Check** at $a=2$, $b=1$, $c=1$: the left side is $8+1+1=10$, the right $4+1+2=7$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите неравенство о среднем арифметическом и геометрическом для любого числа слагаемых: $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n}\\qquad (a_i\\ge0).$$",
+    "en": "Prove the AM–GM inequality for any number of terms: $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n}\\qquad (a_i\\ge0).$$"
+   },
+   "hint": {
+    "ru": "Индукция Коши: сначала для степеней двойки (удвоение), потом «вниз» от $n$ к $n-1$.",
+    "en": "Cauchy induction: first for powers of two (doubling), then downward from $n$ to $n-1$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: случай $n=2$.** Это $\\left(\\sqrt{a_1}-\\sqrt{a_2}\\right)^{2}\\ge0$ ✓\n\n**Шаг 2: удвоение.** Пусть неравенство верно для $n$ чисел; докажем для $2n$. Разобьём числа на две половины и обозначим их средние арифметические $A$ и $B$, а средние геометрические — $G$ и $H$. По предположению $A\\ge G$ и $B\\ge H$, а по случаю $n=2$ $$\\frac{A+B}{2}\\ \\ge\\ \\sqrt{AB}\\ \\ge\\ \\sqrt{GH} .$$ Слева стоит среднее арифметическое всех $2n$ чисел, справа — их среднее геометрическое, ведь $$\\sqrt{GH}=\\sqrt{\\sqrt[n]{a_1\\cdots a_n}\\cdot\\sqrt[n]{a_{n+1}\\cdots a_{2n}}}=\\sqrt[2n]{a_1\\cdots a_{2n}} . \\qquad\\checkmark$$\n\nЗначит неравенство верно при всех $n=2^{k}$.\n\n**Шаг 3: спуск от $n$ к $n-1$.** Пусть неравенство верно для $n$ чисел, и даны $n-1$ чисел $a_1,\\dots,a_{n-1}$ со средним арифметическим $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1} .$$ Применим предположение к набору из $n$ чисел $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}\\,A} .$$ Слева стоит $$\\frac{(n-1)A+A}{n}=A ,$$ поэтому $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}\\,A\\quad\\Longrightarrow\\quad A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ то есть $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓ (случай $A=0$ тривиален).\n\n**Итог.** Из шага 2 неравенство верно для сколь угодно больших степеней двойки, а шаг 3 позволяет спуститься от любой такой степени к любому меньшему $n$. $\\blacksquare$\n\n**Равенство** — только когда все числа равны.",
+    "en": "**Step 1: the case $n=2$.** This is $\\left(\\sqrt{a_1}-\\sqrt{a_2}\\right)^{2}\\ge0$ ✓\n\n**Step 2: doubling.** Suppose the inequality holds for $n$ numbers; prove it for $2n$. Split the numbers into two halves with arithmetic means $A$, $B$ and geometric means $G$, $H$. By hypothesis $A\\ge G$ and $B\\ge H$, and by the case $n=2$ $$\\frac{A+B}{2}\\ \\ge\\ \\sqrt{AB}\\ \\ge\\ \\sqrt{GH} .$$ The left side is the arithmetic mean of all $2n$ numbers, the right their geometric mean, since $$\\sqrt{GH}=\\sqrt{\\sqrt[n]{a_1\\cdots a_n}\\cdot\\sqrt[n]{a_{n+1}\\cdots a_{2n}}}=\\sqrt[2n]{a_1\\cdots a_{2n}} . \\qquad\\checkmark$$\n\nSo the inequality holds for every $n=2^{k}$.\n\n**Step 3: descent from $n$ to $n-1$.** Suppose it holds for $n$ numbers, and take $n-1$ numbers $a_1,\\dots,a_{n-1}$ with arithmetic mean $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1} .$$ Apply the hypothesis to the $n$ numbers $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}\\,A} .$$ The left side equals $$\\frac{(n-1)A+A}{n}=A ,$$ so $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}\\,A\\quad\\Longrightarrow\\quad A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ i.e. $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓ (the case $A=0$ is trivial).\n\n**Conclusion.** Step 2 gives the inequality for arbitrarily large powers of two, and step 3 lets us descend from any such power to any smaller $n$. $\\blacksquare$\n\n**Equality** only when all the numbers are equal."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите неравенство Коши — Буняковского в форме Энгеля («лемма о дробях»): для положительных $b_i$ $$\\frac{a_1^{2}}{b_1}+\\frac{a_2^{2}}{b_2}+\\dots+\\frac{a_n^{2}}{b_n}\\ \\ge\\ \\frac{\\left(a_1+a_2+\\dots+a_n\\right)^{2}}{b_1+b_2+\\dots+b_n} ,$$ и выведите из него неравенство Несбитта.",
+    "en": "Prove the Cauchy–Schwarz inequality in Engel form (the \"fraction lemma\"): for positive $b_i$ $$\\frac{a_1^{2}}{b_1}+\\frac{a_2^{2}}{b_2}+\\dots+\\frac{a_n^{2}}{b_n}\\ \\ge\\ \\frac{\\left(a_1+a_2+\\dots+a_n\\right)^{2}}{b_1+b_2+\\dots+b_n} ,$$ and deduce Nesbitt’s inequality from it."
+   },
+   "hint": {
+    "ru": "Сначала случай $n=2$; он равносилен $(a_1b_2-a_2b_1)^{2}\\ge0$.",
+    "en": "Start with $n=2$; it is equivalent to $(a_1b_2-a_2b_1)^{2}\\ge0$."
+   },
+   "sol": {
+    "ru": "**Случай $n=2$.** Требуется $$\\frac{a_1^{2}}{b_1}+\\frac{a_2^{2}}{b_2}\\ \\ge\\ \\frac{(a_1+a_2)^{2}}{b_1+b_2} .$$ Умножим на положительное $b_1b_2(b_1+b_2)$ и раскроем: слева $$\\left(a_1^{2}b_2+a_2^{2}b_1\\right)(b_1+b_2),$$ справа $$(a_1+a_2)^{2}b_1b_2 .$$ Разность равна $$a_1^{2}b_2^{2}+a_2^{2}b_1^{2}-2a_1a_2b_1b_2=\\left(a_1b_2-a_2b_1\\right)^{2}\\ \\ge\\ 0 . \\qquad\\checkmark$$\n\n**Общий случай.** Индукция по $n$: применяем случай $n=2$ к первой дроби и «свёрнутому остатку». Именно, по предположению $$\\sum_{i=2}^{n}\\frac{a_i^{2}}{b_i}\\ \\ge\\ \\frac{\\left(a_2+\\dots+a_n\\right)^{2}}{b_2+\\dots+b_n} ,$$ а затем $$\\frac{a_1^{2}}{b_1}+\\frac{\\left(a_2+\\dots+a_n\\right)^{2}}{b_2+\\dots+b_n}\\ \\ge\\ \\frac{\\left(a_1+\\dots+a_n\\right)^{2}}{b_1+\\dots+b_n} \\quad\\checkmark$$\n\n**Вывод неравенства Несбитта.** Запишем каждую дробь так, чтобы в числителе оказался квадрат: $$\\frac{a}{b+c}=\\frac{a^{2}}{a(b+c)} ,$$ и аналогично для остальных. Тогда $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac{(a+b+c)^{2}}{a(b+c)+b(c+a)+c(a+b)}=\\frac{(a+b+c)^{2}}{2(ab+bc+ca)} .$$\n\nОстаётся вспомнить, что $(a+b+c)^{2}\\ge3(ab+bc+ca)$, откуда правая часть не меньше $\\dfrac32$. $\\blacksquare$\n\n**Равенство** — при $\\dfrac{a_1}{b_1}=\\dots=\\dfrac{a_n}{b_n}$; в неравенстве Несбитта это даёт $a=b=c$.",
+    "en": "**The case $n=2$.** We need $$\\frac{a_1^{2}}{b_1}+\\frac{a_2^{2}}{b_2}\\ \\ge\\ \\frac{(a_1+a_2)^{2}}{b_1+b_2} .$$ Multiply by the positive number $b_1b_2(b_1+b_2)$ and expand: the left side gives $$\\left(a_1^{2}b_2+a_2^{2}b_1\\right)(b_1+b_2),$$ the right $$(a_1+a_2)^{2}b_1b_2 .$$ Their difference is $$a_1^{2}b_2^{2}+a_2^{2}b_1^{2}-2a_1a_2b_1b_2=\\left(a_1b_2-a_2b_1\\right)^{2}\\ \\ge\\ 0 . \\qquad\\checkmark$$\n\n**The general case.** Induct on $n$: apply the case $n=2$ to the first fraction and the folded-up remainder. Namely, by the induction hypothesis $$\\sum_{i=2}^{n}\\frac{a_i^{2}}{b_i}\\ \\ge\\ \\frac{\\left(a_2+\\dots+a_n\\right)^{2}}{b_2+\\dots+b_n} ,$$ and then $$\\frac{a_1^{2}}{b_1}+\\frac{\\left(a_2+\\dots+a_n\\right)^{2}}{b_2+\\dots+b_n}\\ \\ge\\ \\frac{\\left(a_1+\\dots+a_n\\right)^{2}}{b_1+\\dots+b_n} \\quad\\checkmark$$\n\n**Deducing Nesbitt.** Rewrite each fraction so that a square sits on top: $$\\frac{a}{b+c}=\\frac{a^{2}}{a(b+c)} ,$$ and similarly for the others. Then $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac{(a+b+c)^{2}}{a(b+c)+b(c+a)+c(a+b)}=\\frac{(a+b+c)^{2}}{2(ab+bc+ca)} .$$\n\nIt remains to recall $(a+b+c)^{2}\\ge3(ab+bc+ca)$, whence the right side is at least $\\dfrac32$. $\\blacksquare$\n\n**Equality** when $\\dfrac{a_1}{b_1}=\\dots=\\dfrac{a_n}{b_n}$; in Nesbitt this gives $a=b=c$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите неравенство о перестановках: если $a_1\\le a_2\\le\\dots\\le a_n$ и $b_1\\le b_2\\le\\dots\\le b_n$, то для любой перестановки $\\sigma$ $$\\sum_i a_ib_{\\sigma(i)}\\ \\le\\ \\sum_i a_ib_i .$$",
+    "en": "Prove the rearrangement inequality: if $a_1\\le a_2\\le\\dots\\le a_n$ and $b_1\\le b_2\\le\\dots\\le b_n$, then for every permutation $\\sigma$ $$\\sum_i a_ib_{\\sigma(i)}\\ \\le\\ \\sum_i a_ib_i .$$"
+   },
+   "hint": {
+    "ru": "Если в перестановке есть «инверсия», поменяйте два слагаемых местами и сравните суммы.",
+    "en": "If the permutation has an inversion, swap two terms and compare the sums."
+   },
+   "sol": {
+    "ru": "**Ключевая лемма о двух слагаемых.** Пусть $i<j$, то есть $a_i\\le a_j$, и пусть в перестановке этим местам отвечают $b_p$ и $b_q$ с $b_p\\ge b_q$ («инверсия»). Сравним два варианта: $$\\left(a_ib_q+a_jb_p\\right)-\\left(a_ib_p+a_jb_q\\right)=\\left(a_j-a_i\\right)\\left(b_p-b_q\\right)\\ \\ge\\ 0 .$$\n\nЗначит, поменяв местами $b_p$ и $b_q$ (то есть поставив большее $b$ к большему $a$), мы **не уменьшили** сумму.\n\n**Завершение.** Любую перестановку можно превратить в тождественную конечным числом таких обменов: каждый обмен убирает хотя бы одну инверсию, а инверсий конечное число. На каждом шаге сумма не убывает, значит $$\\sum_i a_ib_{\\sigma(i)}\\ \\le\\ \\sum_i a_ib_i . \\qquad\\blacksquare$$\n\n**Симметрично** наименьшая сумма получается при противоположном порядке: $\\sum a_ib_{n+1-i}$.\n\n**Пример применения.** Для положительных $a,b,c$ наборы $(a,b,c)$ и $(a,b,c)$ упорядочены одинаково, поэтому $$a^{2}+b^{2}+c^{2}\\ \\ge\\ ab+bc+ca ,$$ — правая часть отвечает циклической перестановке.\n\n**Проверка леммы** на числах: $a_i=1$, $a_j=3$, $b_q=2$, $b_p=5$: «правильно» $1\\cdot2+3\\cdot5=17$, «наоборот» $1\\cdot5+3\\cdot2=11$ ✓",
+    "en": "**The key two-term lemma.** Let $i<j$, so $a_i\\le a_j$, and suppose these places carry $b_p$ and $b_q$ with $b_p\\ge b_q$ (an \"inversion\"). Compare the two arrangements: $$\\left(a_ib_q+a_jb_p\\right)-\\left(a_ib_p+a_jb_q\\right)=\\left(a_j-a_i\\right)\\left(b_p-b_q\\right)\\ \\ge\\ 0 .$$\n\nSo swapping $b_p$ and $b_q$ — putting the larger $b$ with the larger $a$ — does **not decrease** the sum.\n\n**Finishing.** Any permutation can be turned into the identity by finitely many such swaps: each swap removes at least one inversion, and there are finitely many. At every step the sum does not decrease, so $$\\sum_i a_ib_{\\sigma(i)}\\ \\le\\ \\sum_i a_ib_i . \\qquad\\blacksquare$$\n\n**Symmetrically** the smallest sum comes from the opposite order: $\\sum a_ib_{n+1-i}$.\n\n**A sample application.** For positive $a,b,c$ the tuples $(a,b,c)$ and $(a,b,c)$ are ordered alike, hence $$a^{2}+b^{2}+c^{2}\\ \\ge\\ ab+bc+ca ,$$ the right side coming from a cyclic permutation.\n\n**Check of the lemma** on numbers: $a_i=1$, $a_j=3$, $b_q=2$, $b_p=5$: \"aligned\" gives $1\\cdot2+3\\cdot5=17$, \"reversed\" gives $1\\cdot5+3\\cdot2=11$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите неравенство Шура (при $t=1$): для неотрицательных $a,b,c$ $$a(a-b)(a-c)+b(b-a)(b-c)+c(c-a)(c-b)\\ \\ge\\ 0 ,$$ и выведите из него, что $$a^{3}+b^{3}+c^{3}+abc\\cdot 3\\ \\ge\\ ab(a+b)+bc(b+c)+ca(c+a)-3abc .$$",
+    "en": "Prove Schur’s inequality (for $t=1$): for non-negative $a,b,c$ $$a(a-b)(a-c)+b(b-a)(b-c)+c(c-a)(c-b)\\ \\ge\\ 0 ,$$ and deduce that $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ ab(a+b)+bc(b+c)+ca(c+a)-3abc .$$"
+   },
+   "hint": {
+    "ru": "Считайте, что $a\\ge b\\ge c$, и сгруппируйте первые два слагаемых.",
+    "en": "Assume $a\\ge b\\ge c$ and group the first two terms."
+   },
+   "sol": {
+    "ru": "Выражение симметрично относительно перестановок $a,b,c$, поэтому без ограничения общности $$a\\ \\ge\\ b\\ \\ge\\ c\\ \\ge\\ 0 .$$\n\n**Группируем первые два слагаемых.** $$a(a-b)(a-c)+b(b-a)(b-c)=(a-b)\\left[a(a-c)-b(b-c)\\right].$$\n\nВнутри скобки: $$a(a-c)-b(b-c)=a^{2}-ac-b^{2}+bc=(a-b)(a+b)-c(a-b)=(a-b)(a+b-c).$$\n\nЗначит первые два слагаемых дают $$(a-b)^{2}(a+b-c) .$$\n\n**Третье слагаемое.** $$c(c-a)(c-b)=c\\,(a-c)(b-c)\\ \\ge\\ 0 ,$$ ведь при нашем порядке $a-c\\ge0$ и $b-c\\ge0$.\n\n**Итог.** Первое слагаемое неотрицательно, если $a+b-c\\ge0$ — а это верно, ведь $a\\ge c$ и $b\\ge0$. Значит вся сумма неотрицательна. $\\blacksquare$\n\n**Раскрытие.** Разложив скобки в исходном выражении, получаем $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b-3abc+3abc ,$$ то есть в точности требуемое неравенство между суммой кубов с $3abc$ и суммой смешанных членов.\n\n**Проверка** при $a=2$, $b=1$, $c=0$: слева $8+1+0+0=9$, справа $2\\cdot1\\cdot3=6$ ✓ При $a=b=c$ обе части равны.\n\n**Замечание.** Неотрицательность существенна: при отрицательных числах неравенство может нарушаться.",
+    "en": "The expression is symmetric under permuting $a,b,c$, so without loss of generality $$a\\ \\ge\\ b\\ \\ge\\ c\\ \\ge\\ 0 .$$\n\n**Group the first two terms.** $$a(a-b)(a-c)+b(b-a)(b-c)=(a-b)\\left[a(a-c)-b(b-c)\\right].$$\n\nInside the bracket: $$a(a-c)-b(b-c)=a^{2}-ac-b^{2}+bc=(a-b)(a+b)-c(a-b)=(a-b)(a+b-c).$$\n\nSo the first two terms give $$(a-b)^{2}(a+b-c) .$$\n\n**The third term.** $$c(c-a)(c-b)=c\\,(a-c)(b-c)\\ \\ge\\ 0 ,$$ since under our ordering $a-c\\ge0$ and $b-c\\ge0$.\n\n**Conclusion.** The first piece is non-negative provided $a+b-c\\ge0$ — true because $a\\ge c$ and $b\\ge0$. Hence the whole sum is non-negative. $\\blacksquare$\n\n**Expanding.** Multiplying out the original expression gives $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b-3abc+3abc ,$$ exactly the stated inequality between the cubes plus $3abc$ and the mixed terms.\n\n**Check** at $a=2$, $b=1$, $c=0$: the left side is $8+1+0+0=9$, the right $2\\cdot1\\cdot3=6$ ✓ At $a=b=c$ both sides are equal.\n\n**Remark.** Non-negativity matters: with negative numbers the inequality can fail."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите неравенство Минковского для двух слагаемых: $$\\sqrt{a^{2}+b^{2}}+\\sqrt{c^{2}+d^{2}}\\ \\ge\\ \\sqrt{(a+c)^{2}+(b+d)^{2}} .$$",
+    "en": "Prove Minkowski’s inequality for two terms: $$\\sqrt{a^{2}+b^{2}}+\\sqrt{c^{2}+d^{2}}\\ \\ge\\ \\sqrt{(a+c)^{2}+(b+d)^{2}} .$$"
+   },
+   "hint": {
+    "ru": "Возведите обе части в квадрат; останется неравенство Коши — Буняковского.",
+    "en": "Square both sides; what remains is Cauchy–Schwarz."
+   },
+   "sol": {
+    "ru": "Обе части неотрицательны, поэтому можно возвести в квадрат. Слева: $$\\left(a^{2}+b^{2}\\right)+\\left(c^{2}+d^{2}\\right)+2\\sqrt{\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)} .$$ Справа: $$(a+c)^{2}+(b+d)^{2}=\\left(a^{2}+b^{2}\\right)+\\left(c^{2}+d^{2}\\right)+2(ac+bd).$$\n\nЗначит неравенство равносильно $$\\sqrt{\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)}\\ \\ge\\ ac+bd .$$\n\nЕсли правая часть отрицательна, всё очевидно. Если неотрицательна, возведём в квадрат ещё раз: $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)\\ \\ge\\ (ac+bd)^{2} ,$$ а это неравенство Коши — Буняковского для двух пар: его разность равна $$(ad-bc)^{2}\\ \\ge\\ 0 . \\qquad\\blacksquare$$\n\n**Равенство** — когда $ad=bc$ и $ac+bd\\ge0$, то есть когда векторы $(a,b)$ и $(c,d)$ сонаправлены.\n\n**Геометрический смысл.** Это неравенство треугольника: длина суммы векторов не превосходит суммы длин.\n\n**Проверка** при $(a,b)=(3,0)$, $(c,d)=(0,4)$: слева $3+4=7$, справа $\\sqrt{9+16}=5$ ✓",
+    "en": "Both sides are non-negative, so we may square. On the left: $$\\left(a^{2}+b^{2}\\right)+\\left(c^{2}+d^{2}\\right)+2\\sqrt{\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)} .$$ On the right: $$(a+c)^{2}+(b+d)^{2}=\\left(a^{2}+b^{2}\\right)+\\left(c^{2}+d^{2}\\right)+2(ac+bd).$$\n\nSo the inequality is equivalent to $$\\sqrt{\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)}\\ \\ge\\ ac+bd .$$\n\nIf the right side is negative this is clear. If it is non-negative, square once more: $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)\\ \\ge\\ (ac+bd)^{2} ,$$ which is Cauchy–Schwarz for two pairs: the difference equals $$(ad-bc)^{2}\\ \\ge\\ 0 . \\qquad\\blacksquare$$\n\n**Equality** when $ad=bc$ and $ac+bd\\ge0$, i.e. when the vectors $(a,b)$ and $(c,d)$ point the same way.\n\n**Geometric meaning.** This is the triangle inequality: the length of a sum of vectors is at most the sum of the lengths.\n\n**Check** at $(a,b)=(3,0)$, $(c,d)=(0,4)$: the left side is $3+4=7$, the right $\\sqrt{9+16}=5$ ✓"
+   }
   }
  ]
 };

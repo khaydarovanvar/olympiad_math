@@ -799,6 +799,486 @@ window.LESSONS[8] = {
     "ru": "Пусть число равно $\\overline{ab}=10a+b$, где $a\\in\\{1,\\dots,9\\}$ и $b\\in\\{0,\\dots,9\\}$. Условие даёт $$10a+b=4(a+b)=4a+4b .$$ Переносим: $$6a=3b\\quad\\Longrightarrow\\quad b=2a .$$\n\nОстаётся перебрать $a$ так, чтобы $b=2a$ оставалось цифрой, то есть $2a\\le9$: подходят $a=1,2,3,4$.\n\n$$a=1\\Rightarrow12,\\qquad a=2\\Rightarrow24,\\qquad a=3\\Rightarrow36,\\qquad a=4\\Rightarrow48 .$$\n\n**Проверка:** $12=4\\cdot3$ ✓, $24=4\\cdot6$ ✓, $36=4\\cdot9$ ✓, $48=4\\cdot12$ ✓\n\n**Ответ:** $12,\\ 24,\\ 36,\\ 48$.",
     "en": "Let the number be $\\overline{ab}=10a+b$ with $a\\in\\{1,\\dots,9\\}$ and $b\\in\\{0,\\dots,9\\}$. The condition gives $$10a+b=4(a+b)=4a+4b .$$ Rearranging, $$6a=3b\\quad\\Longrightarrow\\quad b=2a .$$\n\nIt remains to take those $a$ for which $b=2a$ is still a digit, that is $2a\\le9$: namely $a=1,2,3,4$.\n\n$$a=1\\Rightarrow12,\\qquad a=2\\Rightarrow24,\\qquad a=3\\Rightarrow36,\\qquad a=4\\Rightarrow48 .$$\n\n**Check:** $12=4\\cdot3$ ✓, $24=4\\cdot6$ ✓, $36=4\\cdot9$ ✓, $48=4\\cdot12$ ✓\n\n**Answer:** $12,\\ 24,\\ 36,\\ 48$."
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Решите систему $$x+y=10,\\qquad x-y=4 .$$",
+    "en": "Solve the system $$x+y=10,\\qquad x-y=4 .$$"
+   },
+   "hint": {
+    "ru": "Сложите уравнения.",
+    "en": "Add the equations."
+   },
+   "sol": {
+    "ru": "Сложим уравнения — переменная $y$ исчезает: $$2x=14\\quad\\Longrightarrow\\quad x=7 .$$\n\nПодставим в первое: $7+y=10$, значит $y=3$.\n\n**Проверка:** $7+3=10$ ✓ и $7-3=4$ ✓\n\n**Ответ:** $x=7$, $y=3$.\n\n**Общее наблюдение.** Если известны сумма $s$ и разность $d$ двух чисел, то $$x=\\frac{s+d}{2},\\qquad y=\\frac{s-d}{2} .$$",
+    "en": "Add the equations — the variable $y$ disappears: $$2x=14\\quad\\Longrightarrow\\quad x=7 .$$\n\nSubstituting into the first: $7+y=10$, so $y=3$.\n\n**Check:** $7+3=10$ ✓ and $7-3=4$ ✓\n\n**Answer:** $x=7$, $y=3$.\n\n**General observation.** Given the sum $s$ and difference $d$ of two numbers, $$x=\\frac{s+d}{2},\\qquad y=\\frac{s-d}{2} .$$"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Ручка втрое дороже карандаша, а вместе они стоят $2400$ сум. Сколько стоит каждый?",
+    "en": "A pen costs three times as much as a pencil, and together they cost $2400$ soum. Find each price."
+   },
+   "hint": {
+    "ru": "Обозначьте цену карандаша за $x$.",
+    "en": "Let the pencil cost $x$."
+   },
+   "sol": {
+    "ru": "Пусть карандаш стоит $x$ сум; тогда ручка стоит $3x$, и по условию $$x+3x=2400\\quad\\Longrightarrow\\quad 4x=2400\\quad\\Longrightarrow\\quad x=600 .$$\n\nЗначит карандаш — $600$ сум, ручка — $1800$ сум.\n\n**Проверка:** $1800=3\\cdot600$ ✓ и $600+1800=2400$ ✓\n\n**Ответ:** карандаш $600$ сум, ручка $1800$ сум.",
+    "en": "Let the pencil cost $x$ soum; then the pen costs $3x$, and $$x+3x=2400\\quad\\Longrightarrow\\quad 4x=2400\\quad\\Longrightarrow\\quad x=600 .$$\n\nSo the pencil costs $600$ soum and the pen $1800$ soum.\n\n**Check:** $1800=3\\cdot600$ ✓ and $600+1800=2400$ ✓\n\n**Answer:** pencil $600$ soum, pen $1800$ soum."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Число увеличили на $20\\%$ и получили $96$. Каким было число?",
+    "en": "A number increased by $20\\%$ becomes $96$. What was the number?"
+   },
+   "hint": {
+    "ru": "Увеличение на $20\\%$ — это умножение на $1{,}2$.",
+    "en": "Increasing by $20\\%$ means multiplying by $1.2$."
+   },
+   "sol": {
+    "ru": "Пусть исходное число равно $x$. Увеличение на $20\\%$ означает умножение на $1{,}2$: $$1{,}2\\,x=96\\quad\\Longrightarrow\\quad x=\\frac{96}{1{,}2}=80 .$$\n\n**Проверка:** $20\\%$ от $80$ — это $16$, и $80+16=96$ ✓\n\n**Ответ:** $80$.\n\n**Частая ошибка.** Нельзя просто вычесть $20\\%$ от $96$: это дало бы $76{,}8$, а не $80$. Проценты всегда считаются от **исходной** величины.",
+    "en": "Let the original number be $x$. Increasing by $20\\%$ means multiplying by $1.2$: $$1.2\\,x=96\\quad\\Longrightarrow\\quad x=\\frac{96}{1.2}=80 .$$\n\n**Check:** $20\\%$ of $80$ is $16$, and $80+16=96$ ✓\n\n**Answer:** $80$.\n\n**A common mistake.** One cannot simply subtract $20\\%$ of $96$: that would give $76.8$, not $80$. Percentages are always taken of the **original** quantity."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Два числа относятся как $3:5$, а их разность равна $14$. Найдите эти числа.",
+    "en": "Two numbers are in the ratio $3:5$ and differ by $14$. Find them."
+   },
+   "hint": {
+    "ru": "Обозначьте их $3k$ и $5k$.",
+    "en": "Write them as $3k$ and $5k$."
+   },
+   "sol": {
+    "ru": "Обозначим числа $3k$ и $5k$. Их разность $$5k-3k=2k=14\\quad\\Longrightarrow\\quad k=7 .$$\n\nЗначит числа равны $$3\\cdot7=21\\qquad\\text{и}\\qquad 5\\cdot7=35 .$$\n\n**Проверка:** $21:35=3:5$ ✓ и $35-21=14$ ✓\n\n**Ответ:** $21$ и $35$.",
+    "en": "Write the numbers as $3k$ and $5k$. Their difference is $$5k-3k=2k=14\\quad\\Longrightarrow\\quad k=7 .$$\n\nSo the numbers are $$3\\cdot7=21\\qquad\\text{and}\\qquad 5\\cdot7=35 .$$\n\n**Check:** $21:35=3:5$ ✓ and $35-21=14$ ✓\n\n**Answer:** $21$ and $35$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Решите систему $$3x+y=11,\\qquad x-y=1 .$$",
+    "en": "Solve the system $$3x+y=11,\\qquad x-y=1 .$$"
+   },
+   "hint": {
+    "ru": "Сложите уравнения.",
+    "en": "Add the equations."
+   },
+   "sol": {
+    "ru": "Сложим уравнения: $$4x=12\\quad\\Longrightarrow\\quad x=3 .$$\n\nИз второго уравнения $y=x-1=2$.\n\n**Проверка:** $3\\cdot3+2=11$ ✓ и $3-2=1$ ✓\n\n**Ответ:** $x=3$, $y=2$.",
+    "en": "Add the equations: $$4x=12\\quad\\Longrightarrow\\quad x=3 .$$\n\nThe second equation gives $y=x-1=2$.\n\n**Check:** $3\\cdot3+2=11$ ✓ and $3-2=1$ ✓\n\n**Answer:** $x=3$, $y=2$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Рубашку уценили на $20\\%$, и теперь она стоит $64\\,000$ сум. Какой была цена до уценки?",
+    "en": "A shirt was discounted by $20\\%$ and now costs $64\\,000$ soum. What was the price before the discount?"
+   },
+   "hint": {
+    "ru": "После скидки осталось $80\\%$ прежней цены.",
+    "en": "After the discount $80\\%$ of the old price remains."
+   },
+   "sol": {
+    "ru": "Пусть прежняя цена равна $x$. После скидки в $20\\%$ осталось $80\\%$, то есть $$0{,}8\\,x=64\\,000\\quad\\Longrightarrow\\quad x=\\frac{64\\,000}{0{,}8}=80\\,000 .$$\n\n**Проверка:** $20\\%$ от $80\\,000$ — это $16\\,000$, и $80\\,000-16\\,000=64\\,000$ ✓\n\n**Ответ:** $80\\,000$ сум.",
+    "en": "Let the old price be $x$. After a $20\\%$ discount $80\\%$ remains, so $$0.8\\,x=64\\,000\\quad\\Longrightarrow\\quad x=\\frac{64\\,000}{0.8}=80\\,000 .$$\n\n**Check:** $20\\%$ of $80\\,000$ is $16\\,000$, and $80\\,000-16\\,000=64\\,000$ ✓\n\n**Answer:** $80\\,000$ soum."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите систему $$4x-3y=6,\\qquad 2x+y=8 .$$",
+    "en": "Solve the system $$4x-3y=6,\\qquad 2x+y=8 .$$"
+   },
+   "hint": {
+    "ru": "Выразите $y$ из второго уравнения.",
+    "en": "Express $y$ from the second equation."
+   },
+   "sol": {
+    "ru": "Из второго уравнения $$y=8-2x .$$\n\nПодставим в первое: $$4x-3(8-2x)=6\\quad\\Longrightarrow\\quad 4x-24+6x=6\\quad\\Longrightarrow\\quad 10x=30 ,$$ откуда $x=3$ и $y=8-6=2$.\n\n**Проверка:** $4\\cdot3-3\\cdot2=12-6=6$ ✓ и $2\\cdot3+2=8$ ✓\n\n**Ответ:** $x=3$, $y=2$.",
+    "en": "From the second equation $$y=8-2x .$$\n\nSubstitute into the first: $$4x-3(8-2x)=6\\quad\\Longrightarrow\\quad 4x-24+6x=6\\quad\\Longrightarrow\\quad 10x=30 ,$$ so $x=3$ and $y=8-6=2$.\n\n**Check:** $4\\cdot3-3\\cdot2=12-6=6$ ✓ and $2\\cdot3+2=8$ ✓\n\n**Answer:** $x=3$, $y=2$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Лодка проходит $30$ км по течению за $2$ часа, а обратно — за $3$ часа. Найдите собственную скорость лодки и скорость течения.",
+    "en": "A boat covers $30$ km downstream in $2$ hours and returns in $3$ hours. Find the speed of the boat in still water and the speed of the current."
+   },
+   "hint": {
+    "ru": "По течению скорость $v+c$, против — $v-c$.",
+    "en": "Downstream the speed is $v+c$, upstream $v-c$."
+   },
+   "sol": {
+    "ru": "Обозначим собственную скорость лодки $v$, скорость течения $c$.\n\n**По течению:** $$v+c=\\frac{30}{2}=15 .$$\n\n**Против течения:** $$v-c=\\frac{30}{3}=10 .$$\n\nСложив, получаем $2v=25$, то есть $v=12{,}5$ км/ч; вычитая, $2c=5$, то есть $c=2{,}5$ км/ч.\n\n**Проверка:** по течению $15$ км/ч, за $2$ ч — ровно $30$ км ✓ Против течения $10$ км/ч, за $3$ ч — $30$ км ✓\n\n**Ответ:** $12{,}5$ км/ч и $2{,}5$ км/ч.",
+    "en": "Let the boat’s own speed be $v$ and the current’s speed $c$.\n\n**Downstream:** $$v+c=\\frac{30}{2}=15 .$$\n\n**Upstream:** $$v-c=\\frac{30}{3}=10 .$$\n\nAdding gives $2v=25$, i.e. $v=12.5$ km/h; subtracting gives $2c=5$, i.e. $c=2.5$ km/h.\n\n**Check:** downstream at $15$ km/h for $2$ h is exactly $30$ km ✓ Upstream at $10$ km/h for $3$ h is $30$ km ✓\n\n**Answer:** $12.5$ km/h and $2.5$ km/h."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько литров $40\\%$-го и $70\\%$-го раствора кислоты надо смешать, чтобы получить $30$ литров $50\\%$-го раствора?",
+    "en": "How many litres of $40\\%$ and $70\\%$ acid must be mixed to obtain $30$ litres of $50\\%$ acid?"
+   },
+   "hint": {
+    "ru": "Составьте два уравнения: по объёму и по количеству кислоты.",
+    "en": "Write two equations: one for volume, one for the amount of acid."
+   },
+   "sol": {
+    "ru": "Пусть взяли $x$ литров $40\\%$-го раствора и $y$ литров $70\\%$-го.\n\n**Уравнение по объёму:** $$x+y=30 .$$\n\n**Уравнение по чистой кислоте:** $$0{,}4x+0{,}7y=0{,}5\\cdot30=15 .$$\n\nПодставим $x=30-y$ во второе: $$0{,}4(30-y)+0{,}7y=15\\quad\\Longrightarrow\\quad 12+0{,}3y=15\\quad\\Longrightarrow\\quad y=10 ,$$ и тогда $x=20$.\n\n**Проверка:** кислоты $0{,}4\\cdot20+0{,}7\\cdot10=8+7=15$ литров, то есть ровно $50\\%$ от $30$ ✓\n\n**Ответ:** $20$ л сорокапроцентного и $10$ л семидесятипроцентного.",
+    "en": "Let $x$ litres of the $40\\%$ solution and $y$ litres of the $70\\%$ solution be used.\n\n**Volume equation:** $$x+y=30 .$$\n\n**Pure-acid equation:** $$0.4x+0.7y=0.5\\cdot30=15 .$$\n\nSubstituting $x=30-y$ into the second, $$0.4(30-y)+0.7y=15\\quad\\Longrightarrow\\quad 12+0.3y=15\\quad\\Longrightarrow\\quad y=10 ,$$ and then $x=20$.\n\n**Check:** the acid amounts to $0.4\\cdot20+0.7\\cdot10=8+7=15$ litres, exactly $50\\%$ of $30$ ✓\n\n**Answer:** $20$ L of the $40\\%$ and $10$ L of the $70\\%$ solution."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Двое рабочих вместе выполняют работу за $6$ дней, а первый в одиночку — за $10$ дней. За сколько дней справится второй?",
+    "en": "Two workers together finish a job in $6$ days; the first alone takes $10$ days. How long does the second need alone?"
+   },
+   "hint": {
+    "ru": "Складываются не времена, а производительности.",
+    "en": "Rates add, not times."
+   },
+   "sol": {
+    "ru": "Производительность — это доля работы за день. Первый делает $\\dfrac1{10}$ работы в день, вместе они делают $\\dfrac16$.\n\nЗначит второй делает $$\\frac16-\\frac1{10}=\\frac{5-3}{30}=\\frac{2}{30}=\\frac1{15} $$ работы в день, то есть справится за $15$ дней.\n\n**Проверка:** $\\dfrac1{10}+\\dfrac1{15}=\\dfrac{3+2}{30}=\\dfrac16$ ✓\n\n**Ответ:** $15$ дней.\n\n**Частая ошибка.** Нельзя вычитать времена: $10-6=4$ — неверный ответ.",
+    "en": "A rate is the fraction of the job done per day. The first does $\\dfrac1{10}$ of the job per day, together they do $\\dfrac16$.\n\nSo the second does $$\\frac16-\\frac1{10}=\\frac{5-3}{30}=\\frac{2}{30}=\\frac1{15} $$ per day, i.e. finishes in $15$ days.\n\n**Check:** $\\dfrac1{10}+\\dfrac1{15}=\\dfrac{3+2}{30}=\\dfrac16$ ✓\n\n**Answer:** $15$ days.\n\n**A common mistake.** One may not subtract times: $10-6=4$ is a wrong answer."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сумма цифр двузначного числа равна $12$. Если цифры поменять местами, число увеличится на $18$. Найдите число.",
+    "en": "The digits of a two-digit number add up to $12$. Swapping the digits increases the number by $18$. Find the number."
+   },
+   "hint": {
+    "ru": "Запишите число как $10a+b$.",
+    "en": "Write the number as $10a+b$."
+   },
+   "sol": {
+    "ru": "Пусть число равно $10a+b$, где $a$ — цифра десятков, $b$ — цифра единиц.\n\n**Первое условие:** $a+b=12$.\n\n**Второе условие:** число с переставленными цифрами — это $10b+a$, и $$(10b+a)-(10a+b)=9(b-a)=18\\quad\\Longrightarrow\\quad b-a=2 .$$\n\nРешая систему $a+b=12$, $b-a=2$, получаем $b=7$, $a=5$.\n\n**Проверка:** число $57$, сумма цифр $12$ ✓, перестановка даёт $75=57+18$ ✓\n\n**Ответ:** $57$.",
+    "en": "Let the number be $10a+b$, with $a$ the tens digit and $b$ the units digit.\n\n**First condition:** $a+b=12$.\n\n**Second condition:** the swapped number is $10b+a$, and $$(10b+a)-(10a+b)=9(b-a)=18\\quad\\Longrightarrow\\quad b-a=2 .$$\n\nSolving $a+b=12$, $b-a=2$ gives $b=7$, $a=5$.\n\n**Check:** the number is $57$, its digit sum is $12$ ✓, and swapping gives $75=57+18$ ✓\n\n**Answer:** $57$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сумма трёх подряд идущих целых чисел равна $96$. Найдите их.",
+    "en": "Three consecutive integers add up to $96$. Find them."
+   },
+   "hint": {
+    "ru": "Обозначьте среднее число за $n$.",
+    "en": "Let the middle number be $n$."
+   },
+   "sol": {
+    "ru": "Пусть среднее число равно $n$; тогда числа — это $n-1$, $n$, $n+1$, и их сумма равна $$3n=96\\quad\\Longrightarrow\\quad n=32 .$$\n\n**Ответ:** $31$, $32$, $33$.\n\n**Проверка:** $31+32+33=96$ ✓\n\n**Замечание.** Удобство обозначения через **среднее** число в том, что крайние слагаемые сразу сокращаются. Тот же приём работает для любого нечётного количества подряд идущих чисел: их сумма всегда делится на их количество.",
+    "en": "Let the middle number be $n$; the numbers are $n-1$, $n$, $n+1$ and their sum is $$3n=96\\quad\\Longrightarrow\\quad n=32 .$$\n\n**Answer:** $31$, $32$, $33$.\n\n**Check:** $31+32+33=96$ ✓\n\n**Remark.** Naming the **middle** number is convenient because the outer terms cancel at once. The same trick works for any odd count of consecutive numbers: their sum is always divisible by how many there are."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Машина проехала из $A$ в $B$ со скоростью $60$ км/ч, а обратно — со скоростью $40$ км/ч, затратив на всё $5$ часов. Найдите расстояние $AB$.",
+    "en": "A car drove from $A$ to $B$ at $60$ km/h and back at $40$ km/h, taking $5$ hours in total. Find the distance $AB$."
+   },
+   "hint": {
+    "ru": "Сложите два времени.",
+    "en": "Add the two times."
+   },
+   "sol": {
+    "ru": "Пусть расстояние равно $d$ км. Время туда — $\\dfrac d{60}$, обратно — $\\dfrac d{40}$, и по условию $$\\frac d{60}+\\frac d{40}=5 .$$\n\nПриведём к общему знаменателю $120$: $$\\frac{2d+3d}{120}=5\\quad\\Longrightarrow\\quad \\frac{5d}{120}=5\\quad\\Longrightarrow\\quad d=120 .$$\n\n**Проверка:** $\\dfrac{120}{60}=2$ ч и $\\dfrac{120}{40}=3$ ч, всего $5$ ч ✓\n\n**Ответ:** $120$ км.\n\n**Полезно заметить:** средняя скорость за всю поездку равна $\\dfrac{240}{5}=48$ км/ч, а вовсе не $50$ — это среднее гармоническое, а не арифметическое.",
+    "en": "Let the distance be $d$ km. The outward time is $\\dfrac d{60}$, the return $\\dfrac d{40}$, and $$\\frac d{60}+\\frac d{40}=5 .$$\n\nOver the common denominator $120$: $$\\frac{2d+3d}{120}=5\\quad\\Longrightarrow\\quad \\frac{5d}{120}=5\\quad\\Longrightarrow\\quad d=120 .$$\n\n**Check:** $\\dfrac{120}{60}=2$ h and $\\dfrac{120}{40}=3$ h, $5$ h in all ✓\n\n**Answer:** $120$ km.\n\n**Worth noticing:** the average speed for the whole trip is $\\dfrac{240}{5}=48$ km/h, not $50$ — it is the harmonic, not the arithmetic, mean."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите систему $$x+y=5,\\qquad xy=6 .$$",
+    "en": "Solve the system $$x+y=5,\\qquad xy=6 .$$"
+   },
+   "hint": {
+    "ru": "Числа $x$ и $y$ — корни квадратного уравнения.",
+    "en": "The numbers $x$ and $y$ are the roots of a quadratic."
+   },
+   "sol": {
+    "ru": "По теореме, обратной теореме Виета, числа $x$ и $y$ — корни уравнения $$t^{2}-(x+y)\\,t+xy=0 ,$$ то есть $$t^{2}-5t+6=0 .$$\n\nДискриминант равен $25-24=1$, корни $$t=\\frac{5\\pm1}{2}=3\\ \\text{или}\\ 2 .$$\n\n**Ответ:** $(x,y)=(2,3)$ или $(3,2)$.\n\n**Проверка:** $2+3=5$ ✓ и $2\\cdot3=6$ ✓\n\n**Замечание.** Этот приём — превращение симметричной системы в квадратное уравнение — работает всегда, когда известны сумма и произведение.",
+    "en": "By the converse of Vieta’s theorem, $x$ and $y$ are the roots of $$t^{2}-(x+y)\\,t+xy=0 ,$$ that is $$t^{2}-5t+6=0 .$$\n\nThe discriminant is $25-24=1$, and the roots are $$t=\\frac{5\\pm1}{2}=3\\ \\text{or}\\ 2 .$$\n\n**Answer:** $(x,y)=(2,3)$ or $(3,2)$.\n\n**Check:** $2+3=5$ ✓ and $2\\cdot3=6$ ✓\n\n**Remark.** Turning a symmetric system into a quadratic works whenever the sum and the product are known."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Через $6$ лет отец будет вдвое старше сына, а $4$ года назад он был вчетверо старше. Сколько им лет сейчас?",
+    "en": "In $6$ years a father will be twice as old as his son; $4$ years ago he was four times as old. How old are they now?"
+   },
+   "hint": {
+    "ru": "Обозначьте нынешние возрасты $f$ и $s$.",
+    "en": "Let the present ages be $f$ and $s$."
+   },
+   "sol": {
+    "ru": "Пусть сейчас отцу $f$ лет, сыну $s$ лет.\n\n**Через $6$ лет:** $$f+6=2(s+6)\\quad\\Longrightarrow\\quad f=2s+6 .$$\n\n**Четыре года назад:** $$f-4=4(s-4)\\quad\\Longrightarrow\\quad f=4s-12 .$$\n\nПриравняем правые части: $$2s+6=4s-12\\quad\\Longrightarrow\\quad 2s=18\\quad\\Longrightarrow\\quad s=9 ,$$ и тогда $f=2\\cdot9+6=24$.\n\n**Проверка:** через $6$ лет — $30$ и $15$, и $30=2\\cdot15$ ✓ Четыре года назад — $20$ и $5$, и $20=4\\cdot5$ ✓\n\n**Ответ:** отцу $24$ года, сыну $9$ лет.",
+    "en": "Let the father be $f$ and the son $s$ years old now.\n\n**In $6$ years:** $$f+6=2(s+6)\\quad\\Longrightarrow\\quad f=2s+6 .$$\n\n**Four years ago:** $$f-4=4(s-4)\\quad\\Longrightarrow\\quad f=4s-12 .$$\n\nEquate the right sides: $$2s+6=4s-12\\quad\\Longrightarrow\\quad 2s=18\\quad\\Longrightarrow\\quad s=9 ,$$ and then $f=2\\cdot9+6=24$.\n\n**Check:** in $6$ years, $30$ and $15$, and $30=2\\cdot15$ ✓ Four years ago, $20$ and $5$, and $20=4\\cdot5$ ✓\n\n**Answer:** the father is $24$, the son is $9$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Цену товара сначала повысили на $25\\%$, а затем понизили на $20\\%$. Как изменилась цена по сравнению с первоначальной?",
+    "en": "A price was first raised by $25\\%$ and then lowered by $20\\%$. How does the final price compare with the original?"
+   },
+   "hint": {
+    "ru": "Перемножьте коэффициенты.",
+    "en": "Multiply the two factors."
+   },
+   "sol": {
+    "ru": "Пусть первоначальная цена равна $p$.\n\nПовышение на $25\\%$ — умножение на $1{,}25$; понижение на $20\\%$ — умножение на $0{,}8$. Итоговая цена: $$p\\cdot1{,}25\\cdot0{,}8=p\\cdot1=p .$$\n\n**Ответ:** цена вернулась к первоначальной, изменения нет.\n\n**Почему так.** $1{,}25=\\dfrac54$ и $0{,}8=\\dfrac45$ — взаимно обратные числа.\n\n**Осторожно:** порядок здесь не важен, но величины процентов не «складываются»: повышение на $25\\%$ и понижение на $25\\%$ дали бы $$1{,}25\\cdot0{,}75=0{,}9375 ,$$ то есть цена упала бы на $6{,}25\\%$.",
+    "en": "Let the original price be $p$.\n\nA $25\\%$ rise multiplies by $1.25$; a $20\\%$ fall multiplies by $0.8$. The final price is $$p\\cdot1.25\\cdot0.8=p\\cdot1=p .$$\n\n**Answer:** the price is back to the original — no change.\n\n**Why.** $1.25=\\dfrac54$ and $0.8=\\dfrac45$ are reciprocals.\n\n**Careful:** the order does not matter here, but percentages do not simply add: a $25\\%$ rise followed by a $25\\%$ fall would give $$1.25\\cdot0.75=0.9375 ,$$ a net drop of $6.25\\%$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Решите систему $$x+y=7,\\qquad x^{2}+y^{2}=25 .$$",
+    "en": "Solve the system $$x+y=7,\\qquad x^{2}+y^{2}=25 .$$"
+   },
+   "hint": {
+    "ru": "$x^{2}+y^{2}=(x+y)^{2}-2xy$.",
+    "en": "$x^{2}+y^{2}=(x+y)^{2}-2xy$."
+   },
+   "sol": {
+    "ru": "Воспользуемся тождеством $$x^{2}+y^{2}=(x+y)^{2}-2xy .$$\n\nПодставим известные величины: $$25=49-2xy\\quad\\Longrightarrow\\quad xy=12 .$$\n\nТеперь известны сумма и произведение, значит $x$ и $y$ — корни уравнения $$t^{2}-7t+12=0 ,$$ дискриминант $49-48=1$, корни $$t=\\frac{7\\pm1}{2}=4\\ \\text{или}\\ 3 .$$\n\n**Проверка:** $3+4=7$ ✓ и $9+16=25$ ✓\n\n**Ответ:** $(3,4)$ и $(4,3)$.",
+    "en": "Use the identity $$x^{2}+y^{2}=(x+y)^{2}-2xy .$$\n\nSubstituting the known values, $$25=49-2xy\\quad\\Longrightarrow\\quad xy=12 .$$\n\nNow the sum and product are known, so $x$ and $y$ are the roots of $$t^{2}-7t+12=0 ,$$ with discriminant $49-48=1$ and roots $$t=\\frac{7\\pm1}{2}=4\\ \\text{or}\\ 3 .$$\n\n**Check:** $3+4=7$ ✓ and $9+16=25$ ✓\n\n**Answer:** $(3,4)$ and $(4,3)$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Двое рабочих вместе выполняют работу за $12$ дней. Первому в одиночку нужно на $10$ дней больше, чем второму. За сколько дней каждый справится один?",
+    "en": "Two workers together finish a job in $12$ days. Alone, the first needs $10$ days more than the second. How long does each need alone?"
+   },
+   "hint": {
+    "ru": "Обозначьте время второго за $x$ и составьте уравнение производительностей.",
+    "en": "Let the second need $x$ days and write the equation of rates."
+   },
+   "sol": {
+    "ru": "Пусть второй справляется за $x$ дней, тогда первый — за $x+10$. Производительности складываются: $$\\frac1x+\\frac1{x+10}=\\frac1{12} .$$\n\nУмножим на $12x(x+10)$: $$12(x+10)+12x=x(x+10)\\quad\\Longrightarrow\\quad 24x+120=x^{2}+10x ,$$ то есть $$x^{2}-14x-120=0 .$$\n\nДискриминант $$D=196+480=676=26^{2} ,$$ корни $$x=\\frac{14\\pm26}{2}=20\\ \\text{или}\\ -6 .$$\n\nОтрицательный корень отбрасываем: $x=20$.\n\n**Ответ:** второй — за $20$ дней, первый — за $30$.\n\n**Проверка:** $\\dfrac1{30}+\\dfrac1{20}=\\dfrac{2+3}{60}=\\dfrac1{12}$ ✓",
+    "en": "Let the second need $x$ days, so the first needs $x+10$. Rates add: $$\\frac1x+\\frac1{x+10}=\\frac1{12} .$$\n\nMultiply by $12x(x+10)$: $$12(x+10)+12x=x(x+10)\\quad\\Longrightarrow\\quad 24x+120=x^{2}+10x ,$$ that is $$x^{2}-14x-120=0 .$$\n\nThe discriminant is $$D=196+480=676=26^{2} ,$$ with roots $$x=\\frac{14\\pm26}{2}=20\\ \\text{or}\\ -6 .$$\n\nDiscard the negative root: $x=20$.\n\n**Answer:** the second needs $20$ days, the first $30$.\n\n**Check:** $\\dfrac1{30}+\\dfrac1{20}=\\dfrac{2+3}{60}=\\dfrac1{12}$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Решите систему $$x+y=4,\\qquad x^{3}+y^{3}=28 .$$",
+    "en": "Solve the system $$x+y=4,\\qquad x^{3}+y^{3}=28 .$$"
+   },
+   "hint": {
+    "ru": "$x^{3}+y^{3}=(x+y)^{3}-3xy(x+y)$.",
+    "en": "$x^{3}+y^{3}=(x+y)^{3}-3xy(x+y)$."
+   },
+   "sol": {
+    "ru": "Воспользуемся тождеством $$x^{3}+y^{3}=(x+y)^{3}-3xy(x+y).$$\n\nПодставим $x+y=4$: $$28=64-12xy\\quad\\Longrightarrow\\quad 12xy=36\\quad\\Longrightarrow\\quad xy=3 .$$\n\nТеперь $x$ и $y$ — корни уравнения $$t^{2}-4t+3=0 ,$$ то есть $t=1$ или $t=3$.\n\n**Проверка:** $1+3=4$ ✓ и $1+27=28$ ✓\n\n**Ответ:** $(1,3)$ и $(3,1)$.",
+    "en": "Use the identity $$x^{3}+y^{3}=(x+y)^{3}-3xy(x+y).$$\n\nWith $x+y=4$: $$28=64-12xy\\quad\\Longrightarrow\\quad 12xy=36\\quad\\Longrightarrow\\quad xy=3 .$$\n\nNow $x$ and $y$ are the roots of $$t^{2}-4t+3=0 ,$$ i.e. $t=1$ or $t=3$.\n\n**Check:** $1+3=4$ ✓ and $1+27=28$ ✓\n\n**Answer:** $(1,3)$ and $(3,1)$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Труба наполняет бассейн за $6$ часов, а сливное отверстие опустошает полный бассейн за $8$ часов. За какое время наполнится пустой бассейн, если открыть и то, и другое?",
+    "en": "A pipe fills a pool in $6$ hours, while a drain empties a full pool in $8$ hours. How long does an empty pool take to fill with both open?"
+   },
+   "hint": {
+    "ru": "Слив даёт отрицательную производительность.",
+    "en": "The drain contributes a negative rate."
+   },
+   "sol": {
+    "ru": "За час труба наполняет $\\dfrac16$ бассейна, а слив уносит $\\dfrac18$. Суммарная производительность: $$\\frac16-\\frac18=\\frac{4-3}{24}=\\frac1{24} $$ бассейна в час.\n\nОна положительна, значит бассейн всё-таки наполнится — за $$\\frac{1}{\\frac1{24}}=24 \\text{ часа}.$$\n\n**Проверка:** за $24$ часа труба нальёт $4$ бассейна, слив унесёт $3$ — остаётся ровно один ✓\n\n**Ответ:** $24$ часа.\n\n**Замечание.** Если бы слив опустошал бассейн быстрее, чем труба его наполняет (скажем, за $5$ часов), суммарная производительность стала бы отрицательной и бассейн не наполнился бы никогда.",
+    "en": "In one hour the pipe fills $\\dfrac16$ of the pool while the drain removes $\\dfrac18$. The net rate is $$\\frac16-\\frac18=\\frac{4-3}{24}=\\frac1{24} $$ of a pool per hour.\n\nIt is positive, so the pool does fill — in $$\\frac{1}{\\frac1{24}}=24 \\text{ hours}.$$\n\n**Check:** in $24$ hours the pipe delivers $4$ poolfuls and the drain removes $3$, leaving exactly one ✓\n\n**Answer:** $24$ hours.\n\n**Remark.** Had the drain emptied the pool faster than the pipe fills it (say in $5$ hours), the net rate would be negative and the pool would never fill."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Книгу продают с прибылью $20\\%$. Если бы её купили на $10\\%$ дешевле, а продали на $6\\,000$ сум дешевле, прибыль составила бы $25\\%$. Сколько стоила книга при покупке?",
+    "en": "A book is sold at a $20\\%$ profit. Had it been bought $10\\%$ cheaper and sold for $6\\,000$ soum less, the profit would have been $25\\%$. What was the purchase price?"
+   },
+   "hint": {
+    "ru": "Обозначьте закупочную цену $c$ и выразите обе выручки.",
+    "en": "Let the cost be $c$ and express both selling prices."
+   },
+   "sol": {
+    "ru": "Пусть закупочная цена равна $c$.\n\n**Как было:** продажная цена $$S=1{,}2\\,c .$$\n\n**Как могло быть:** закупка $0{,}9\\,c$, продажа $S-6000$, прибыль $25\\%$: $$S-6000=1{,}25\\cdot0{,}9\\,c=1{,}125\\,c .$$\n\nПодставим $S=1{,}2c$: $$1{,}2\\,c-6000=1{,}125\\,c\\quad\\Longrightarrow\\quad 0{,}075\\,c=6000\\quad\\Longrightarrow\\quad c=80\\,000 .$$\n\n**Проверка.** Было: купили за $80\\,000$, продали за $96\\,000$ — прибыль $16\\,000$, то есть $20\\%$ ✓ Стало бы: купили за $72\\,000$, продали за $90\\,000$ — прибыль $18\\,000$, то есть ровно $25\\%$ от $72\\,000$ ✓\n\n**Ответ:** $80\\,000$ сум.",
+    "en": "Let the purchase price be $c$.\n\n**As it happened:** the selling price is $$S=1.2\\,c .$$\n\n**As it might have been:** cost $0.9\\,c$, selling price $S-6000$, profit $25\\%$: $$S-6000=1.25\\cdot0.9\\,c=1.125\\,c .$$\n\nSubstituting $S=1.2c$: $$1.2\\,c-6000=1.125\\,c\\quad\\Longrightarrow\\quad 0.075\\,c=6000\\quad\\Longrightarrow\\quad c=80\\,000 .$$\n\n**Check.** As it was: bought at $80\\,000$, sold at $96\\,000$ — profit $16\\,000$, i.e. $20\\%$ ✓ As it might have been: bought at $72\\,000$, sold at $90\\,000$ — profit $18\\,000$, exactly $25\\%$ of $72\\,000$ ✓\n\n**Answer:** $80\\,000$ soum."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Поезд длиной $200$ м проезжает мимо столба за $10$ секунд, а мимо платформы — за $30$ секунд. Найдите скорость поезда и длину платформы.",
+    "en": "A train $200$ m long passes a pole in $10$ seconds and a platform in $30$ seconds. Find the speed of the train and the length of the platform."
+   },
+   "hint": {
+    "ru": "Мимо столба поезд проезжает свою длину, мимо платформы — свою длину плюс длину платформы.",
+    "en": "Past a pole the train covers its own length; past a platform, its length plus the platform’s."
+   },
+   "sol": {
+    "ru": "**Скорость.** Проезжая мимо столба, поезд проходит ровно свою длину: $$v=\\frac{200}{10}=20\\ \\text{м/с}\\ (=72\\ \\text{км/ч}).$$\n\n**Длина платформы.** Проезжая мимо платформы, поезд проходит свою длину плюс длину платформы: $$200+L=v\\cdot30=600\\quad\\Longrightarrow\\quad L=400\\ \\text{м}.$$\n\n**Проверка:** за $30$ с при скорости $20$ м/с поезд проходит $600$ м, из которых $200$ м — он сам ✓\n\n**Ответ:** скорость $20$ м/с, платформа $400$ м.\n\n**Почему так.** «Проехать мимо» означает: от момента, когда голова поезда поравнялась с началом объекта, до момента, когда хвост миновал его конец.",
+    "en": "**The speed.** Passing a pole, the train covers exactly its own length: $$v=\\frac{200}{10}=20\\ \\text{m/s}\\ (=72\\ \\text{km/h}).$$\n\n**The platform.** Passing the platform, the train covers its own length plus the platform’s: $$200+L=v\\cdot30=600\\quad\\Longrightarrow\\quad L=400\\ \\text{m}.$$\n\n**Check:** in $30$ s at $20$ m/s the train covers $600$ m, of which $200$ m is the train itself ✓\n\n**Answer:** speed $20$ m/s, platform $400$ m.\n\n**Why.** \"Passing\" runs from the moment the front of the train reaches the start of the object until the tail clears its end."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите трёхзначное число, которое в $11$ раз больше суммы своих цифр.",
+    "en": "Find the three-digit number that is $11$ times the sum of its digits."
+   },
+   "hint": {
+    "ru": "Запишите число как $100a+10b+c$ и оцените, каким может быть $a$.",
+    "en": "Write it as $100a+10b+c$ and bound the digit $a$."
+   },
+   "sol": {
+    "ru": "Пусть число равно $100a+10b+c$, где $a\\ge1$. Условие: $$100a+10b+c=11(a+b+c)\\quad\\Longleftrightarrow\\quad 89a=b+10c .$$\n\n**Оценим $a$.** Правая часть не превосходит $9+10\\cdot9=99$, значит $89a\\le99$, откуда $a=1$.\n\n**Решаем оставшееся.** $$b+10c=89 .$$ Так как $b\\le9$, число $10c$ не меньше $80$, то есть $c\\ge8$. При $c=9$ получилось бы $b=-1$ ✗ Значит $c=8$ и $b=9$.\n\n**Ответ:** $198$.\n\n**Проверка:** сумма цифр $1+9+8=18$, и $11\\cdot18=198$ ✓",
+    "en": "Let the number be $100a+10b+c$ with $a\\ge1$. The condition reads $$100a+10b+c=11(a+b+c)\\quad\\Longleftrightarrow\\quad 89a=b+10c .$$\n\n**Bound $a$.** The right side is at most $9+10\\cdot9=99$, so $89a\\le99$, forcing $a=1$.\n\n**Solve the rest.** $$b+10c=89 .$$ Since $b\\le9$, we need $10c\\ge80$, i.e. $c\\ge8$. Taking $c=9$ would give $b=-1$ ✗ So $c=8$ and $b=9$.\n\n**Answer:** $198$.\n\n**Check:** the digit sum is $1+9+8=18$, and $11\\cdot18=198$ ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Решите систему $$\\frac1x+\\frac1y=\\frac7{12},\\qquad \\frac1x-\\frac1y=\\frac1{12} .$$",
+    "en": "Solve the system $$\\frac1x+\\frac1y=\\frac7{12},\\qquad \\frac1x-\\frac1y=\\frac1{12} .$$"
+   },
+   "hint": {
+    "ru": "Обозначьте $u=\\frac1x$, $v=\\frac1y$ — система станет линейной.",
+    "en": "Put $u=\\frac1x$, $v=\\frac1y$ — the system becomes linear."
+   },
+   "sol": {
+    "ru": "Обозначим $u=\\dfrac1x$ и $v=\\dfrac1y$. Система превращается в линейную: $$u+v=\\frac7{12},\\qquad u-v=\\frac1{12} .$$\n\nСложив: $$2u=\\frac8{12}=\\frac23\\quad\\Longrightarrow\\quad u=\\frac13\\quad\\Longrightarrow\\quad x=3 .$$\n\nВычтя: $$2v=\\frac6{12}=\\frac12\\quad\\Longrightarrow\\quad v=\\frac14\\quad\\Longrightarrow\\quad y=4 .$$\n\n**Проверка:** $\\dfrac13+\\dfrac14=\\dfrac{7}{12}$ ✓ и $\\dfrac13-\\dfrac14=\\dfrac1{12}$ ✓\n\n**Ответ:** $x=3$, $y=4$.\n\n**Приём.** Замена переменных — самый быстрый способ свести дробную систему к линейной; главное потом не забыть вернуться к исходным переменным.",
+    "en": "Put $u=\\dfrac1x$ and $v=\\dfrac1y$. The system becomes linear: $$u+v=\\frac7{12},\\qquad u-v=\\frac1{12} .$$\n\nAdding: $$2u=\\frac8{12}=\\frac23\\quad\\Longrightarrow\\quad u=\\frac13\\quad\\Longrightarrow\\quad x=3 .$$\n\nSubtracting: $$2v=\\frac6{12}=\\frac12\\quad\\Longrightarrow\\quad v=\\frac14\\quad\\Longrightarrow\\quad y=4 .$$\n\n**Check:** $\\dfrac13+\\dfrac14=\\dfrac{7}{12}$ ✓ and $\\dfrac13-\\dfrac14=\\dfrac1{12}$ ✓\n\n**Answer:** $x=3$, $y=4$.\n\n**The trick.** A change of variables is the quickest way to turn a system of fractions into a linear one; just remember to convert back at the end."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все двузначные числа, равные утроенному произведению своих цифр.",
+    "en": "Find all two-digit numbers equal to three times the product of their digits."
+   },
+   "hint": {
+    "ru": "$10a+b=3ab$; выразите $b$ через $a$.",
+    "en": "$10a+b=3ab$; solve for $b$ in terms of $a$."
+   },
+   "sol": {
+    "ru": "Пусть число равно $10a+b$, где $1\\le a\\le9$ и $0\\le b\\le9$. Условие: $$10a+b=3ab .$$\n\nСоберём слагаемые с $b$: $$10a=b(3a-1)\\quad\\Longrightarrow\\quad b=\\frac{10a}{3a-1} .$$\n\nПереберём $a$ от $1$ до $9$ и оставим случаи, когда $b$ — цифра:\n\n$a=1$: $\\ b=\\dfrac{10}{2}=5$ ✓ — число $15$;\n\n$a=2$: $\\ b=\\dfrac{20}{5}=4$ ✓ — число $24$;\n\n$a=3$: $\\ \\dfrac{30}{8}$ — не целое ✗\n\n$a=4$: $\\ \\dfrac{40}{11}$ ✗; $\\ a=5$: $\\dfrac{50}{14}$ ✗; $\\ a=6$: $\\dfrac{60}{17}$ ✗;\n\n$a=7$: $\\ \\dfrac{70}{20}=3{,}5$ ✗; $\\ a=8$: $\\dfrac{80}{23}$ ✗; $\\ a=9$: $\\dfrac{90}{26}$ ✗\n\n**Проверка:** $3\\cdot1\\cdot5=15$ ✓ и $3\\cdot2\\cdot4=24$ ✓\n\n**Ответ:** $15$ и $24$.",
+    "en": "Let the number be $10a+b$ with $1\\le a\\le9$ and $0\\le b\\le9$. The condition is $$10a+b=3ab .$$\n\nCollect the $b$ terms: $$10a=b(3a-1)\\quad\\Longrightarrow\\quad b=\\frac{10a}{3a-1} .$$\n\nRun through $a=1,\\dots,9$ and keep the cases where $b$ is a digit:\n\n$a=1$: $\\ b=\\dfrac{10}{2}=5$ ✓ — the number $15$;\n\n$a=2$: $\\ b=\\dfrac{20}{5}=4$ ✓ — the number $24$;\n\n$a=3$: $\\ \\dfrac{30}{8}$ is not an integer ✗\n\n$a=4$: $\\ \\dfrac{40}{11}$ ✗; $\\ a=5$: $\\dfrac{50}{14}$ ✗; $\\ a=6$: $\\dfrac{60}{17}$ ✗;\n\n$a=7$: $\\ \\dfrac{70}{20}=3.5$ ✗; $\\ a=8$: $\\dfrac{80}{23}$ ✗; $\\ a=9$: $\\dfrac{90}{26}$ ✗\n\n**Check:** $3\\cdot1\\cdot5=15$ ✓ and $3\\cdot2\\cdot4=24$ ✓\n\n**Answer:** $15$ and $24$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Две свечи одинаковой длины сгорают полностью: первая за $4$ часа, вторая за $5$ часов. Обе зажгли одновременно. Через какое время остаток второй свечи станет вдвое длиннее остатка первой?",
+    "en": "Two candles of the same length burn out in $4$ and $5$ hours respectively. Both are lit at the same moment. After how long is the remaining part of the second candle twice as long as that of the first?"
+   },
+   "hint": {
+    "ru": "Длина остатка убывает линейно.",
+    "en": "The remaining length decreases linearly."
+   },
+   "sol": {
+    "ru": "Примем начальную длину каждой свечи за $1$. Через $t$ часов остатки равны $$\\ell_1=1-\\frac t4,\\qquad \\ell_2=1-\\frac t5 .$$\n\nУсловие $\\ell_2=2\\ell_1$ даёт $$1-\\frac t5=2\\left(1-\\frac t4\\right)=2-\\frac t2 .$$\n\nПереносим: $$\\frac t2-\\frac t5=1\\quad\\Longrightarrow\\quad \\frac{5t-2t}{10}=1\\quad\\Longrightarrow\\quad \\frac{3t}{10}=1\\quad\\Longrightarrow\\quad t=\\frac{10}{3} .$$\n\nЭто $3$ часа $20$ минут.\n\n**Проверка:** через $\\tfrac{10}3$ ч $$\\ell_1=1-\\frac{10}{12}=\\frac16,\\qquad \\ell_2=1-\\frac{10}{15}=\\frac13=2\\cdot\\frac16 \\quad\\checkmark$$\n\n**Ответ:** через $3$ часа $20$ минут.\n\n**Замечание.** Ответ не зависит от длины свечей — важны только времена сгорания.",
+    "en": "Take the initial length of each candle to be $1$. After $t$ hours the remaining lengths are $$\\ell_1=1-\\frac t4,\\qquad \\ell_2=1-\\frac t5 .$$\n\nThe condition $\\ell_2=2\\ell_1$ gives $$1-\\frac t5=2\\left(1-\\frac t4\\right)=2-\\frac t2 .$$\n\nRearranging: $$\\frac t2-\\frac t5=1\\quad\\Longrightarrow\\quad \\frac{5t-2t}{10}=1\\quad\\Longrightarrow\\quad \\frac{3t}{10}=1\\quad\\Longrightarrow\\quad t=\\frac{10}{3} .$$\n\nThat is $3$ hours $20$ minutes.\n\n**Check:** at $t=\\tfrac{10}3$ h $$\\ell_1=1-\\frac{10}{12}=\\frac16,\\qquad \\ell_2=1-\\frac{10}{15}=\\frac13=2\\cdot\\frac16 \\quad\\checkmark$$\n\n**Answer:** after $3$ hours $20$ minutes.\n\n**Remark.** The answer does not depend on the candles’ length — only on the burning times."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "В какой момент между $3$ и $4$ часами часовая и минутная стрелки совпадают?",
+    "en": "At what moment between $3$ and $4$ o’clock do the hour and minute hands coincide?"
+   },
+   "hint": {
+    "ru": "Минутная стрелка проходит $6^\\circ$ в минуту, часовая — $0{,}5^\\circ$.",
+    "en": "The minute hand moves $6^\\circ$ per minute, the hour hand $0.5^\\circ$."
+   },
+   "sol": {
+    "ru": "Отсчитаем углы от отметки «$12$» по часовой стрелке и пусть прошло $t$ минут после трёх часов.\n\n**Минутная стрелка** делает полный оборот ($360^\\circ$) за $60$ минут, значит её угол равен $$6t .$$\n\n**Часовая стрелка** делает $360^\\circ$ за $12$ часов, то есть $0{,}5^\\circ$ в минуту; в три часа она стоит на $90^\\circ$, значит её угол равен $$90+0{,}5\\,t .$$\n\n**Совпадение:** $$6t=90+0{,}5\\,t\\quad\\Longrightarrow\\quad 5{,}5\\,t=90\\quad\\Longrightarrow\\quad t=\\frac{90}{5{,}5}=\\frac{180}{11}=16\\frac4{11} .$$\n\n**Ответ:** в $3$ часа $16\\dfrac4{11}$ минуты (примерно $3{:}16{:}21{,}8$).\n\n**Проверка:** минутная стрелка на $6\\cdot\\tfrac{180}{11}=\\tfrac{1080}{11}\\approx98{,}18^\\circ$; часовая на $90+\\tfrac{90}{11}\\approx98{,}18^\\circ$ ✓\n\n**Замечание.** Стрелки совпадают $11$ раз за $12$ часов, то есть каждые $\\dfrac{12}{11}$ часа.",
+    "en": "Measure angles clockwise from the \"$12$\" mark, and let $t$ minutes have passed since three o’clock.\n\n**The minute hand** completes $360^\\circ$ in $60$ minutes, so its angle is $$6t .$$\n\n**The hour hand** completes $360^\\circ$ in $12$ hours, i.e. $0.5^\\circ$ per minute; at three o’clock it stands at $90^\\circ$, so its angle is $$90+0.5\\,t .$$\n\n**Coincidence:** $$6t=90+0.5\\,t\\quad\\Longrightarrow\\quad 5.5\\,t=90\\quad\\Longrightarrow\\quad t=\\frac{90}{5.5}=\\frac{180}{11}=16\\frac4{11} .$$\n\n**Answer:** at $3$ hours $16\\dfrac4{11}$ minutes (about $3{:}16{:}21.8$).\n\n**Check:** the minute hand is at $6\\cdot\\tfrac{180}{11}\\approx98.18^\\circ$; the hour hand at $90+\\tfrac{90}{11}\\approx98.18^\\circ$ ✓\n\n**Remark.** The hands coincide $11$ times in $12$ hours, i.e. every $\\dfrac{12}{11}$ of an hour."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Катер проходит расстояние между двумя пристанями по течению за $5$ часов, а против течения — за $7$ часов. За какое время то же расстояние проплывёт плот?",
+    "en": "A motorboat covers the distance between two piers downstream in $5$ hours and upstream in $7$ hours. How long would a raft (drifting with the current) take?"
+   },
+   "hint": {
+    "ru": "Плот движется со скоростью течения.",
+    "en": "A raft moves at exactly the speed of the current."
+   },
+   "sol": {
+    "ru": "Пусть расстояние равно $d$, собственная скорость катера $v$, скорость течения $c$. Плот плывёт со скоростью течения, поэтому нужно найти $\\dfrac dc$.\n\n**Из условия:** $$v+c=\\frac d5,\\qquad v-c=\\frac d7 .$$\n\nВычтем второе из первого: $$2c=\\frac d5-\\frac d7=d\\cdot\\frac{7-5}{35}=\\frac{2d}{35}\\quad\\Longrightarrow\\quad c=\\frac{d}{35} .$$\n\nЗначит плот проплывёт расстояние за $$\\frac dc=35 \\text{ часов}.$$\n\n**Проверка.** Пусть $d=35$ км. Тогда $v+c=7$ и $v-c=5$, откуда $v=6$ и $c=1$ км/ч. Плот со скоростью $1$ км/ч пройдёт $35$ км за $35$ часов ✓\n\n**Ответ:** $35$ часов.\n\n**Красивая формула.** Если по течению путь занимает $t_1$, а против — $t_2$, то плот плывёт $$\\frac{2t_1t_2}{t_2-t_1}=\\frac{2\\cdot5\\cdot7}{2}=35 $$ часов.",
+    "en": "Let the distance be $d$, the boat’s own speed $v$ and the current $c$. A raft drifts at the speed of the current, so we need $\\dfrac dc$.\n\n**From the data:** $$v+c=\\frac d5,\\qquad v-c=\\frac d7 .$$\n\nSubtract the second from the first: $$2c=\\frac d5-\\frac d7=d\\cdot\\frac{7-5}{35}=\\frac{2d}{35}\\quad\\Longrightarrow\\quad c=\\frac{d}{35} .$$\n\nSo the raft covers the distance in $$\\frac dc=35 \\text{ hours}.$$\n\n**Check.** Take $d=35$ km. Then $v+c=7$ and $v-c=5$, so $v=6$ and $c=1$ km/h. A raft at $1$ km/h covers $35$ km in $35$ hours ✓\n\n**Answer:** $35$ hours.\n\n**A neat formula.** If downstream takes $t_1$ and upstream $t_2$, a raft takes $$\\frac{2t_1t_2}{t_2-t_1}=\\frac{2\\cdot5\\cdot7}{2}=35 $$ hours."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Из сосуда, полного спирта ($40$ литров), отливают $4$ литра и доливают столько же воды. Так делают три раза. Какова концентрация спирта в конце?",
+    "en": "From a vessel holding $40$ litres of pure alcohol, $4$ litres are drawn off and replaced by water. This is done three times. What is the final alcohol concentration?"
+   },
+   "hint": {
+    "ru": "После каждой операции доля спирта умножается на одно и то же число.",
+    "en": "Each operation multiplies the alcohol fraction by the same factor."
+   },
+   "sol": {
+    "ru": "**Ключевое наблюдение.** Когда мы отливаем $4$ литра из $40$, мы уносим ровно $\\dfrac{4}{40}=\\dfrac1{10}$ **всего содержимого**, в том числе десятую часть имеющегося спирта. Доливание воды объём восстанавливает, но спирта не добавляет.\n\nЗначит после каждой операции количество спирта умножается на $$1-\\frac1{10}=0{,}9 .$$\n\n**Три операции:** $$40\\cdot0{,}9^{3}=40\\cdot0{,}729=29{,}16 \\text{ литра спирта}.$$\n\nОбъём остался прежним ($40$ л), поэтому концентрация равна $$\\frac{29{,}16}{40}=0{,}729=72{,}9\\% .$$\n\n**Проверка по шагам.** После первого раза: $36$ л спирта. После второго: $36-3{,}6=32{,}4$. После третьего: $32{,}4-3{,}24=29{,}16$ ✓\n\n**Ответ:** $72{,}9\\%$.\n\n**Общая формула.** После $n$ операций концентрация равна $\\left(1-\\dfrac vV\\right)^{n}$, где $V$ — объём сосуда, $v$ — объём порции.",
+    "en": "**The key observation.** Drawing $4$ litres out of $40$ removes exactly $\\dfrac{4}{40}=\\dfrac1{10}$ of **everything** in the vessel, including a tenth of the alcohol present. Adding water restores the volume but adds no alcohol.\n\nSo each operation multiplies the amount of alcohol by $$1-\\frac1{10}=0.9 .$$\n\n**Three operations:** $$40\\cdot0.9^{3}=40\\cdot0.729=29.16 \\text{ litres of alcohol}.$$\n\nThe volume is unchanged ($40$ L), so the concentration is $$\\frac{29.16}{40}=0.729=72.9\\% .$$\n\n**Step-by-step check.** After the first round: $36$ L of alcohol. After the second: $36-3.6=32.4$. After the third: $32.4-3.24=29.16$ ✓\n\n**Answer:** $72.9\\%$.\n\n**General formula.** After $n$ operations the concentration is $\\left(1-\\dfrac vV\\right)^{n}$, where $V$ is the vessel’s volume and $v$ the size of each portion."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Колонна солдат длиной $1$ км движется с постоянной скоростью. Посыльный выезжает от хвоста колонны, доезжает до её головы и сразу возвращается к хвосту. К этому моменту колонна прошла ровно $1$ км. Какой путь проделал посыльный?",
+    "en": "A column of soldiers $1$ km long marches at constant speed. A messenger rides from the rear to the head of the column and immediately back to the rear. By the time he returns, the column has advanced exactly $1$ km. How far did the messenger ride?"
+   },
+   "hint": {
+    "ru": "Считайте скорости относительными: догоняя — разность, навстречу — сумма.",
+    "en": "Use relative speeds: closing on the head, the difference; coming back, the sum."
+   },
+   "sol": {
+    "ru": "Обозначим скорость колонны $u$, скорость посыльного $v$, длину колонны $1$ км.\n\n**Общее время.** Колонна прошла $1$ км, значит всё заняло $$T=\\frac1u .$$\n\n**Вперёд.** Посыльный догоняет голову, относительная скорость $v-u$, и надо покрыть $1$ км: $$t_1=\\frac1{v-u} .$$\n\n**Назад.** Теперь он движется навстречу хвосту, относительная скорость $v+u$: $$t_2=\\frac1{v+u} .$$\n\n**Уравнение.** $$\\frac1{v-u}+\\frac1{v+u}=\\frac1u .$$ Приведём левую часть к общему знаменателю: $$\\frac{2v}{v^{2}-u^{2}}=\\frac1u\\quad\\Longrightarrow\\quad 2uv=v^{2}-u^{2}\\quad\\Longrightarrow\\quad v^{2}-2uv-u^{2}=0 .$$\n\nРешаем относительно $v$: $$v=u\\left(1\\pm\\sqrt2\\right),$$ и по смыслу $v>0$, значит $$v=u\\left(1+\\sqrt2\\right).$$\n\n**Путь посыльного.** $$vT=\\frac vu=1+\\sqrt2\\approx2{,}414 \\text{ км}.$$\n\n**Ответ:** $1+\\sqrt2$ км, то есть примерно $2$ км $414$ м.\n\n**Проверка.** При $u=1$ имеем $v=2{,}414$; тогда $t_1=\\dfrac1{1{,}414}\\approx0{,}707$ и $t_2=\\dfrac1{3{,}414}\\approx0{,}293$, в сумме ровно $1=T$ ✓",
+    "en": "Let the column move at speed $u$, the messenger at speed $v$, with the column $1$ km long.\n\n**Total time.** The column advanced $1$ km, so the whole trip took $$T=\\frac1u .$$\n\n**Forward leg.** The messenger closes on the head at relative speed $v-u$ and must cover $1$ km: $$t_1=\\frac1{v-u} .$$\n\n**Return leg.** Now he meets the rear head-on, at relative speed $v+u$: $$t_2=\\frac1{v+u} .$$\n\n**The equation.** $$\\frac1{v-u}+\\frac1{v+u}=\\frac1u .$$ Over a common denominator, $$\\frac{2v}{v^{2}-u^{2}}=\\frac1u\\quad\\Longrightarrow\\quad 2uv=v^{2}-u^{2}\\quad\\Longrightarrow\\quad v^{2}-2uv-u^{2}=0 .$$\n\nSolving for $v$: $$v=u\\left(1\\pm\\sqrt2\\right),$$ and since $v>0$, $$v=u\\left(1+\\sqrt2\\right).$$\n\n**The messenger’s distance.** $$vT=\\frac vu=1+\\sqrt2\\approx2.414 \\text{ km}.$$\n\n**Answer:** $1+\\sqrt2$ km, about $2$ km $414$ m.\n\n**Check.** With $u=1$ we get $v=2.414$; then $t_1=\\dfrac1{1.414}\\approx0.707$ and $t_2=\\dfrac1{3.414}\\approx0.293$, summing to exactly $1=T$ ✓"
+   }
   }
  ]
 };

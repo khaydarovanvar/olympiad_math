@@ -81,7 +81,7 @@ window.LESSON_INDEX = [
    "ru": "От «квадрат неотрицателен» до Коши–Буняковского: как доказывать неравенства, а не угадывать их.",
    "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {
@@ -95,7 +95,7 @@ window.LESSON_INDEX = [
    "ru": "Арифметическая и геометрическая прогрессии, телескопические суммы, рекуррентные формулы и числа Фибоначчи.",
    "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {
@@ -109,7 +109,7 @@ window.LESSON_INDEX = [
    "ru": "Движение, работа, смеси и проценты: как перевести условие в уравнения и как решать получившиеся системы.",
    "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {
