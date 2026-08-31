@@ -83,5 +83,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 7,
+  "cat": "alg",
+  "title": {
+   "ru": "Последовательности и суммы",
+   "en": "Sequences and series"
+  },
+  "sub": {
+   "ru": "Арифметическая и геометрическая прогрессии, телескопические суммы, рекуррентные формулы и числа Фибоначчи.",
+   "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
