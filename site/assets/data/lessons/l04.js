@@ -922,6 +922,486 @@ window.LESSONS[4] = {
     "ru": "Пусть $k=\\dfrac{a^{2}+b^{2}}{ab+1}$ — натуральное число. Тогда $$a^{2}+b^{2}=k(ab+1),\\qquad\\text{то есть}\\qquad a^{2}-kab+b^{2}-k=0. \\tag{$\\ast$}$$\n\nПредположим, что $k$ **не** является точным квадратом, и среди всех пар $(a,b)$ натуральных чисел, удовлетворяющих $(\\ast)$ с этим $k$, выберем пару с наименьшей суммой $a+b$. Не умаляя общности, $a\\ge b$.\n\n**Второй корень.** Зафиксируем $b$ и $k$ и будем считать $(\\ast)$ квадратным уравнением относительно первой переменной: $$t^{2}-(kb)\\,t+(b^{2}-k)=0 .$$ Один его корень — $t_1=a$. По теореме Виета второй корень равен $$t_{2}=kb-a=\\frac{b^{2}-k}{a}.$$ Первое выражение показывает, что $t_2$ **целое**; второе — что $t_2$ вместе с $b$ тоже удовлетворяет $(\\ast)$.\n\n**$t_2$ не отрицательно.** Если бы $t_{2}<0$, то $$t_{2}^{2}-kbt_{2}+b^{2}-k\\ \\ge\\ t_2^2+kb+b^{2}-k\\ >\\ 0,$$ так как $-kbt_2\\ge kb$ при $t_2\\le-1$ и $kb-k=k(b-1)\\ge0$. Но это выражение равно нулю — противоречие. Значит $t_{2}\\ge0$.\n\n**$t_2$ не равно нулю.** Если $t_{2}=0$, то из $(\\ast)$ получаем $b^{2}=k$, то есть $k$ — точный квадрат, вопреки предположению.\n\n**Спуск.** Итак, $t_{2}$ — натуральное число и $(t_{2},b)$ — решение с тем же $k$. Оценим его: из $t_{2}=\\dfrac{b^{2}-k}{a}$ и $a\\ge b$ следует $$t_{2}\\le\\frac{b^{2}-k}{b}<b\\le a,$$ поэтому $t_{2}+b<a+b$. Это противоречит минимальности выбранной пары.\n\nЗначит предположение неверно: $k$ обязан быть точным квадратом. $\\blacksquare$\n\n*Замечание.* Приём называется **прыжком Виеты** (Vieta jumping) и родился именно на этой задаче. Пример: $a=8$, $b=2$ дают $\\dfrac{64+4}{17}=4=2^{2}$.",
     "en": "Let $k=\\dfrac{a^{2}+b^{2}}{ab+1}$ be a positive integer. Then $$a^{2}+b^{2}=k(ab+1),\\qquad\\text{that is}\\qquad a^{2}-kab+b^{2}-k=0. \\tag{$\\ast$}$$\n\nSuppose $k$ is **not** a perfect square, and among all pairs $(a,b)$ of positive integers satisfying $(\\ast)$ with this $k$, choose one with the smallest sum $a+b$. Without loss of generality $a\\ge b$.\n\n**The second root.** Fix $b$ and $k$ and read $(\\ast)$ as a quadratic in the first variable: $$t^{2}-(kb)\\,t+(b^{2}-k)=0 .$$ One root is $t_1=a$. By Vieta the other root is $$t_{2}=kb-a=\\frac{b^{2}-k}{a}.$$ The first expression shows $t_2$ is an **integer**; the second shows that $t_2$ together with $b$ also satisfies $(\\ast)$.\n\n**$t_2$ is not negative.** If $t_{2}<0$ then $$t_{2}^{2}-kbt_{2}+b^{2}-k\\ \\ge\\ t_2^2+kb+b^{2}-k\\ >\\ 0,$$ since $-kbt_2\\ge kb$ when $t_2\\le-1$ and $kb-k=k(b-1)\\ge0$. But that expression is zero — contradiction. So $t_{2}\\ge0$.\n\n**$t_2$ is not zero.** If $t_{2}=0$ then $(\\ast)$ gives $b^{2}=k$, making $k$ a perfect square, against our assumption.\n\n**Descent.** So $t_{2}$ is a positive integer and $(t_{2},b)$ is a solution with the same $k$. Bounding it: from $t_{2}=\\dfrac{b^{2}-k}{a}$ and $a\\ge b$, $$t_{2}\\le\\frac{b^{2}-k}{b}<b\\le a,$$ hence $t_{2}+b<a+b$. This contradicts the minimality of the chosen pair.\n\nSo the assumption fails and $k$ must be a perfect square. $\\blacksquare$\n\n*Remark.* The technique is called **Vieta jumping**, and it was born on this very problem. Example: $a=8$, $b=2$ give $\\dfrac{64+4}{17}=4=2^{2}$."
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Решите уравнение $7x+11y=100$ в неотрицательных целых числах.",
+    "en": "Solve $7x+11y=100$ in non-negative integers."
+   },
+   "hint": {
+    "ru": "Переберите $y$: их немного, ведь $11y\\le100$.",
+    "en": "Run through $y$: there are few, since $11y\\le100$."
+   },
+   "sol": {
+    "ru": "Из $11y\\le100$ следует $y\\le9$. Для каждого такого $y$ проверим, делится ли $100-11y$ на $7$:\n\n$y=0:\\ 100$ ✗; $\\ y=1:\\ 89$ ✗; $\\ y=2:\\ 78$ ✗; $\\ y=3:\\ 67$ ✗;\n\n$y=4:\\ 56=7\\cdot8$ ✓; $\\ y=5:\\ 45$ ✗; $\\ y=6:\\ 34$ ✗;\n\n$y=7:\\ 23$ ✗; $\\ y=8:\\ 12$ ✗; $\\ y=9:\\ 1$ ✗.\n\nПодошло единственное значение $y=4$, при нём $x=8$.\n\n**Проверка:** $7\\cdot8+11\\cdot4=56+44=100$ ✓\n\n**Ответ:** $(x,y)=(8,4)$.",
+    "en": "From $11y\\le100$ we get $y\\le9$. For each such $y$ check whether $100-11y$ is divisible by $7$:\n\n$y=0:\\ 100$ ✗; $\\ y=1:\\ 89$ ✗; $\\ y=2:\\ 78$ ✗; $\\ y=3:\\ 67$ ✗;\n\n$y=4:\\ 56=7\\cdot8$ ✓; $\\ y=5:\\ 45$ ✗; $\\ y=6:\\ 34$ ✗;\n\n$y=7:\\ 23$ ✗; $\\ y=8:\\ 12$ ✗; $\\ y=9:\\ 1$ ✗.\n\nOnly $y=4$ works, and then $x=8$.\n\n**Check:** $7\\cdot8+11\\cdot4=56+44=100$ ✓\n\n**Answer:** $(x,y)=(8,4)$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что уравнение $2x+4y=7$ не имеет решений в целых числах.",
+    "en": "Prove that $2x+4y=7$ has no solutions in integers."
+   },
+   "hint": {
+    "ru": "Посмотрите на чётность.",
+    "en": "Look at parity."
+   },
+   "sol": {
+    "ru": "Левая часть $$2x+4y=2(x+2y)$$ при целых $x,y$ всегда чётна.\n\nПравая часть равна $7$ — нечётное число.\n\nЧётное число не может равняться нечётному, значит решений нет. $\\blacksquare$\n\n**Общее правило.** Уравнение $ax+by=c$ разрешимо в целых числах тогда и только тогда, когда $\\gcd(a,b)$ делит $c$. Здесь $\\gcd(2,4)=2$, а $2\\nmid7$.",
+    "en": "The left-hand side $$2x+4y=2(x+2y)$$ is always even for integers $x,y$.\n\nThe right-hand side is $7$, an odd number.\n\nAn even number cannot equal an odd one, so there are no solutions. $\\blacksquare$\n\n**General rule.** The equation $ax+by=c$ is solvable in integers exactly when $\\gcd(a,b)$ divides $c$. Here $\\gcd(2,4)=2$ while $2\\nmid7$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(x,y)$, для которых $x+y=xy$.",
+    "en": "Find all pairs of positive integers $(x,y)$ with $x+y=xy$."
+   },
+   "hint": {
+    "ru": "Перенесите всё влево и прибавьте единицу.",
+    "en": "Move everything to one side and add one."
+   },
+   "sol": {
+    "ru": "Перепишем: $$xy-x-y=0 .$$ Прибавим $1$ к обеим частям и разложим: $$xy-x-y+1=1\\quad\\Longleftrightarrow\\quad (x-1)(y-1)=1 .$$\n\nПроизведение двух целых чисел равно единице только если оба равны $1$ (случай $-1$ и $-1$ дал бы $x=y=0$, что не натурально). Значит $$x-1=1,\\qquad y-1=1 .$$\n\n**Проверка:** $x=y=2$, тогда $2+2=4$ и $2\\cdot2=4$ ✓\n\n**Ответ:** $(2,2)$.",
+    "en": "Rewrite: $$xy-x-y=0 .$$ Add $1$ to both sides and factor: $$xy-x-y+1=1\\quad\\Longleftrightarrow\\quad (x-1)(y-1)=1 .$$\n\nA product of two integers equals one only if both equal $1$ (taking $-1$ and $-1$ would give $x=y=0$, not positive). So $$x-1=1,\\qquad y-1=1 .$$\n\n**Check:** $x=y=2$ gives $2+2=4$ and $2\\cdot2=4$ ✓\n\n**Answer:** $(2,2)$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(x,y)$, для которых $x^{2}=y^{2}+21$.",
+    "en": "Find all pairs of positive integers $(x,y)$ with $x^{2}=y^{2}+21$."
+   },
+   "hint": {
+    "ru": "$(x-y)(x+y)=21$.",
+    "en": "$(x-y)(x+y)=21$."
+   },
+   "sol": {
+    "ru": "Перенесём и разложим: $$x^{2}-y^{2}=21\\quad\\Longleftrightarrow\\quad (x-y)(x+y)=21 .$$\n\nОба множителя натуральные (ведь $x>y>0$), причём $x-y<x+y$. Разложения числа $21$: $$1\\cdot21\\qquad\\text{и}\\qquad 3\\cdot7 .$$\n\n**Первое:** $x-y=1$, $x+y=21$ $\\Rightarrow$ $x=11$, $y=10$.\n\n**Второе:** $x-y=3$, $x+y=7$ $\\Rightarrow$ $x=5$, $y=2$.\n\n**Проверка:** $11^{2}-10^{2}=121-100=21$ ✓ и $5^{2}-2^{2}=25-4=21$ ✓\n\n**Ответ:** $(11,10)$ и $(5,2)$.",
+    "en": "Move and factor: $$x^{2}-y^{2}=21\\quad\\Longleftrightarrow\\quad (x-y)(x+y)=21 .$$\n\nBoth factors are positive (as $x>y>0$) and $x-y<x+y$. The factorisations of $21$ are $$1\\cdot21\\qquad\\text{and}\\qquad 3\\cdot7 .$$\n\n**First:** $x-y=1$, $x+y=21$ $\\Rightarrow$ $x=11$, $y=10$.\n\n**Second:** $x-y=3$, $x+y=7$ $\\Rightarrow$ $x=5$, $y=2$.\n\n**Check:** $11^{2}-10^{2}=121-100=21$ ✓ and $5^{2}-2^{2}=25-4=21$ ✓\n\n**Answer:** $(11,10)$ and $(5,2)$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(x,y)$ с $x<y$ и $xy=24$.",
+    "en": "Find all pairs of positive integers $(x,y)$ with $x<y$ and $xy=24$."
+   },
+   "hint": {
+    "ru": "Выпишите делители числа $24$.",
+    "en": "List the divisors of $24$."
+   },
+   "sol": {
+    "ru": "Делители числа $24=2^{3}\\cdot3$: $$1,\\;2,\\;3,\\;4,\\;6,\\;8,\\;12,\\;24 $$ — всего $(3+1)(1+1)=8$ штук.\n\nОни разбиваются на пары с произведением $24$: $$1\\cdot24,\\qquad 2\\cdot12,\\qquad 3\\cdot8,\\qquad 4\\cdot6 .$$\n\nУсловие $x<y$ означает, что в каждой паре меньшее число берём за $x$.\n\n**Ответ:** $(1,24)$, $(2,12)$, $(3,8)$, $(4,6)$ — четыре пары.",
+    "en": "The divisors of $24=2^{3}\\cdot3$ are $$1,\\;2,\\;3,\\;4,\\;6,\\;8,\\;12,\\;24 $$ — that is $(3+1)(1+1)=8$ of them.\n\nThey pair up with product $24$: $$1\\cdot24,\\qquad 2\\cdot12,\\qquad 3\\cdot8,\\qquad 4\\cdot6 .$$\n\nThe condition $x<y$ just means taking the smaller member of each pair as $x$.\n\n**Answer:** $(1,24)$, $(2,12)$, $(3,8)$, $(4,6)$ — four pairs."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Решите уравнение $3x+4y=25$ в натуральных числах.",
+    "en": "Solve $3x+4y=25$ in positive integers."
+   },
+   "hint": {
+    "ru": "Из $4y<25$ следует $y\\le6$.",
+    "en": "From $4y<25$ we get $y\\le6$."
+   },
+   "sol": {
+    "ru": "Так как $x\\ge1$, имеем $4y\\le22$, то есть $y\\le5$. Переберём:\n\n$y=1:\\ 3x=21$, $x=7$ ✓\n\n$y=2:\\ 3x=17$ ✗\n\n$y=3:\\ 3x=13$ ✗\n\n$y=4:\\ 3x=9$, $x=3$ ✓\n\n$y=5:\\ 3x=5$ ✗\n\n**Проверка:** $3\\cdot7+4=25$ ✓ и $3\\cdot3+4\\cdot4=9+16=25$ ✓\n\n**Ответ:** $(7,1)$ и $(3,4)$.\n\n**Замечание.** Решения идут с шагом: $x$ уменьшается на $4$, $y$ увеличивается на $3$ — это общий вид решений линейного уравнения.",
+    "en": "Since $x\\ge1$ we have $4y\\le22$, i.e. $y\\le5$. Run through:\n\n$y=1:\\ 3x=21$, $x=7$ ✓\n\n$y=2:\\ 3x=17$ ✗\n\n$y=3:\\ 3x=13$ ✗\n\n$y=4:\\ 3x=9$, $x=3$ ✓\n\n$y=5:\\ 3x=5$ ✗\n\n**Check:** $3\\cdot7+4=25$ ✓ and $3\\cdot3+4\\cdot4=9+16=25$ ✓\n\n**Answer:** $(7,1)$ and $(3,4)$.\n\n**Remark.** Note the step: $x$ drops by $4$ while $y$ rises by $3$ — the general shape of the solutions of a linear equation."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все пары целых чисел $(x,y)$, для которых $x^{2}+y^{2}=25$.",
+    "en": "Find all pairs of integers $(x,y)$ with $x^{2}+y^{2}=25$."
+   },
+   "hint": {
+    "ru": "Оба квадрата не превосходят $25$, значит $|x|\\le5$.",
+    "en": "Both squares are at most $25$, so $|x|\\le5$."
+   },
+   "sol": {
+    "ru": "Из $x^{2}\\le25$ следует $|x|\\le5$; переберём неотрицательные $x$ и найдём $y^{2}=25-x^{2}$:\n\n$x=0:\\ y^{2}=25$, $y=\\pm5$ ✓\n\n$x=1:\\ y^{2}=24$ ✗\n\n$x=2:\\ y^{2}=21$ ✗\n\n$x=3:\\ y^{2}=16$, $y=\\pm4$ ✓\n\n$x=4:\\ y^{2}=9$, $y=\\pm3$ ✓\n\n$x=5:\\ y^{2}=0$, $y=0$ ✓\n\nУчитывая ещё и отрицательные $x$, получаем список $$(0,\\pm5),\\ (\\pm5,0),\\ (\\pm3,\\pm4),\\ (\\pm4,\\pm3).$$\n\n**Ответ:** всего $12$ пар: четыре «осевых» и восемь с $\\{|x|,|y|\\}=\\{3,4\\}$.",
+    "en": "From $x^{2}\\le25$ we get $|x|\\le5$; run through non-negative $x$ and solve $y^{2}=25-x^{2}$:\n\n$x=0:\\ y^{2}=25$, $y=\\pm5$ ✓\n\n$x=1:\\ y^{2}=24$ ✗\n\n$x=2:\\ y^{2}=21$ ✗\n\n$x=3:\\ y^{2}=16$, $y=\\pm4$ ✓\n\n$x=4:\\ y^{2}=9$, $y=\\pm3$ ✓\n\n$x=5:\\ y^{2}=0$, $y=0$ ✓\n\nIncluding negative $x$ as well, the list is $$(0,\\pm5),\\ (\\pm5,0),\\ (\\pm3,\\pm4),\\ (\\pm4,\\pm3).$$\n\n**Answer:** $12$ pairs in all — four on the axes and eight with $\\{|x|,|y|\\}=\\{3,4\\}$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что уравнение $4x+6y=2025$ не имеет решений в целых числах.",
+    "en": "Prove that $4x+6y=2025$ has no integer solutions."
+   },
+   "hint": {
+    "ru": "Что общего у коэффициентов?",
+    "en": "What do the coefficients have in common?"
+   },
+   "sol": {
+    "ru": "Оба коэффициента делятся на $2$: $$4x+6y=2(2x+3y).$$\n\nЗначит левая часть чётна при любых целых $x,y$, а $2025$ нечётно ✗\n\n**Ответ:** решений нет. $\\blacksquare$\n\n**Замечание.** Признак разрешимости: $ax+by=c$ решается в целых числах ровно тогда, когда $\\gcd(a,b)\\mid c$. Здесь $\\gcd(4,6)=2$, а $2025$ нечётно. Заметьте, что уравнение $4x+6y=2024$ решения имеет — например, $x=506$, $y=0$.",
+    "en": "Both coefficients are even: $$4x+6y=2(2x+3y).$$\n\nSo the left side is even for all integers $x,y$, whereas $2025$ is odd ✗\n\n**Answer:** there are no solutions. $\\blacksquare$\n\n**Remark.** The solvability test: $ax+by=c$ has integer solutions exactly when $\\gcd(a,b)\\mid c$. Here $\\gcd(4,6)=2$ while $2025$ is odd. Note that $4x+6y=2024$ does have solutions — e.g. $x=506$, $y=0$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все натуральные $n$, при которых $n^{2}+2n+12$ — полный квадрат.",
+    "en": "Find all positive integers $n$ for which $n^{2}+2n+12$ is a perfect square."
+   },
+   "hint": {
+    "ru": "$n^{2}+2n+12=(n+1)^{2}+11$.",
+    "en": "$n^{2}+2n+12=(n+1)^{2}+11$."
+   },
+   "sol": {
+    "ru": "Выделим полный квадрат: $$n^{2}+2n+12=(n+1)^{2}+11 .$$\n\nПусть это равно $m^{2}$ с $m>0$. Тогда $$m^{2}-(n+1)^{2}=11\\quad\\Longleftrightarrow\\quad \\bigl(m-(n+1)\\bigr)\\bigl(m+(n+1)\\bigr)=11 .$$\n\nЧисло $11$ простое, оба множителя положительны (второй больше первого), поэтому $$m-(n+1)=1,\\qquad m+(n+1)=11 .$$\n\nСкладывая: $2m=12$, $m=6$; вычитая: $2(n+1)=10$, $n=4$.\n\n**Проверка:** $4^{2}+2\\cdot4+12=16+8+12=36=6^{2}$ ✓\n\n**Ответ:** $n=4$.",
+    "en": "Complete the square: $$n^{2}+2n+12=(n+1)^{2}+11 .$$\n\nSuppose this equals $m^{2}$ with $m>0$. Then $$m^{2}-(n+1)^{2}=11\\quad\\Longleftrightarrow\\quad \\bigl(m-(n+1)\\bigr)\\bigl(m+(n+1)\\bigr)=11 .$$\n\nAs $11$ is prime and both factors are positive with the second larger, $$m-(n+1)=1,\\qquad m+(n+1)=11 .$$\n\nAdding: $2m=12$, $m=6$; subtracting: $2(n+1)=10$, $n=4$.\n\n**Check:** $4^{2}+2\\cdot4+12=16+8+12=36=6^{2}$ ✓\n\n**Answer:** $n=4$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите уравнение $x^{2}-4y^{2}=21$ в натуральных числах.",
+    "en": "Solve $x^{2}-4y^{2}=21$ in positive integers."
+   },
+   "hint": {
+    "ru": "$x^{2}-4y^{2}=(x-2y)(x+2y)$.",
+    "en": "$x^{2}-4y^{2}=(x-2y)(x+2y)$."
+   },
+   "sol": {
+    "ru": "Разложим левую часть как разность квадратов: $$(x-2y)(x+2y)=21 .$$\n\nОба множителя целые, второй положителен и больше первого, значит оба положительны. Разложения: $1\\cdot21$ и $3\\cdot7$.\n\n**Случай $x-2y=1$, $x+2y=21$.** Сложив: $2x=22$, $x=11$; вычтя: $4y=20$, $y=5$ ✓\n\n**Случай $x-2y=3$, $x+2y=7$.** Сложив: $2x=10$, $x=5$; вычтя: $4y=4$, $y=1$ ✓\n\n**Проверка:** $121-4\\cdot25=121-100=21$ ✓ и $25-4=21$ ✓\n\n**Ответ:** $(11,5)$ и $(5,1)$.",
+    "en": "Factor the left side as a difference of squares: $$(x-2y)(x+2y)=21 .$$\n\nBoth factors are integers, the second positive and larger, so both are positive. The factorisations are $1\\cdot21$ and $3\\cdot7$.\n\n**Case $x-2y=1$, $x+2y=21$.** Adding: $2x=22$, $x=11$; subtracting: $4y=20$, $y=5$ ✓\n\n**Case $x-2y=3$, $x+2y=7$.** Adding: $2x=10$, $x=5$; subtracting: $4y=4$, $y=1$ ✓\n\n**Check:** $121-4\\cdot25=121-100=21$ ✓ and $25-4=21$ ✓\n\n**Answer:** $(11,5)$ and $(5,1)$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все пары целых чисел $(x,y)$, для которых $xy-2x+3y=10$.",
+    "en": "Find all pairs of integers $(x,y)$ with $xy-2x+3y=10$."
+   },
+   "hint": {
+    "ru": "Сгруппируйте так, чтобы получилось произведение двух скобок.",
+    "en": "Group the terms so that a product of two brackets appears."
+   },
+   "sol": {
+    "ru": "Сгруппируем по $x$: $$x(y-2)+3y=10 .$$ Чтобы вторая часть тоже содержала $y-2$, вычтем и прибавим $6$: $$x(y-2)+3(y-2)=10-6=4 ,$$ то есть $$(x+3)(y-2)=4 .$$\n\nТеперь переберём все разложения четвёрки на два целых множителя: $$(1,4),\\ (2,2),\\ (4,1),\\ (-1,-4),\\ (-2,-2),\\ (-4,-1).$$\n\nПолучаем $$(x,y)=(-2,6),\\ (-1,4),\\ (1,3),\\ (-4,-2),\\ (-5,0),\\ (-7,1).$$\n\n**Проверка** для $(1,3)$: $1\\cdot3-2\\cdot1+3\\cdot3=3-2+9=10$ ✓ Для $(-5,0)$: $0+10+0=10$ ✓\n\n**Ответ:** шесть пар, перечисленных выше.",
+    "en": "Group by $x$: $$x(y-2)+3y=10 .$$ To make the rest contain $y-2$ as well, subtract and add $6$: $$x(y-2)+3(y-2)=10-6=4 ,$$ that is $$(x+3)(y-2)=4 .$$\n\nNow run through all factorisations of $4$ into two integers: $$(1,4),\\ (2,2),\\ (4,1),\\ (-1,-4),\\ (-2,-2),\\ (-4,-1).$$\n\nThese give $$(x,y)=(-2,6),\\ (-1,4),\\ (1,3),\\ (-4,-2),\\ (-5,0),\\ (-7,1).$$\n\n**Check** for $(1,3)$: $1\\cdot3-2\\cdot1+3\\cdot3=3-2+9=10$ ✓ For $(-5,0)$: $0+10+0=10$ ✓\n\n**Answer:** the six pairs listed above."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(x,y)$, для которых $\\dfrac1x-\\dfrac1y=\\dfrac1{12}$.",
+    "en": "Find all pairs of positive integers $(x,y)$ with $\\dfrac1x-\\dfrac1y=\\dfrac1{12}$."
+   },
+   "hint": {
+    "ru": "Приведите к общему знаменателю и разложите на множители.",
+    "en": "Clear denominators and factor."
+   },
+   "sol": {
+    "ru": "Умножим на $12xy$: $$12y-12x=xy\\quad\\Longleftrightarrow\\quad xy+12x-12y=0 .$$\n\nЧтобы разложить, вычтем $144$: $$x(y+12)-12(y+12)=-144\\quad\\Longleftrightarrow\\quad (x-12)(y+12)=-144 .$$\n\nТак как $y>0$, множитель $y+12>0$, значит $x-12<0$, то есть $x<12$. Положим $a=12-x>0$; тогда $$a\\,(y+12)=144 .$$\n\nЗначит $a$ — делитель $144$, и $y=\\dfrac{144}{a}-12>0$ требует $\\dfrac{144}{a}>12$, то есть $a<12$. Делители $144$, меньшие $12$: $$1,\\;2,\\;3,\\;4,\\;6,\\;8,\\;9 .$$\n\nСоответствующие пары $(x,y)=(12-a,\\ \\tfrac{144}{a}-12)$: $$(11,132),\\ (10,60),\\ (9,36),\\ (8,24),\\ (6,12),\\ (4,6),\\ (3,4).$$\n\n**Проверка** для $(4,6)$: $\\tfrac14-\\tfrac16=\\tfrac{3-2}{12}=\\tfrac1{12}$ ✓\n\n**Ответ:** семь пар, перечисленных выше.",
+    "en": "Multiply by $12xy$: $$12y-12x=xy\\quad\\Longleftrightarrow\\quad xy+12x-12y=0 .$$\n\nTo factor, subtract $144$: $$x(y+12)-12(y+12)=-144\\quad\\Longleftrightarrow\\quad (x-12)(y+12)=-144 .$$\n\nSince $y>0$ the factor $y+12>0$, so $x-12<0$, i.e. $x<12$. Put $a=12-x>0$; then $$a\\,(y+12)=144 .$$\n\nSo $a$ divides $144$, and $y=\\dfrac{144}{a}-12>0$ forces $\\dfrac{144}{a}>12$, i.e. $a<12$. The divisors of $144$ below $12$ are $$1,\\;2,\\;3,\\;4,\\;6,\\;8,\\;9 .$$\n\nThe corresponding pairs $(x,y)=(12-a,\\ \\tfrac{144}{a}-12)$ are $$(11,132),\\ (10,60),\\ (9,36),\\ (8,24),\\ (6,12),\\ (4,6),\\ (3,4).$$\n\n**Check** for $(4,6)$: $\\tfrac14-\\tfrac16=\\tfrac{3-2}{12}=\\tfrac1{12}$ ✓\n\n**Answer:** the seven pairs above."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько решений в натуральных числах имеет уравнение $2x+3y=100$?",
+    "en": "How many solutions in positive integers does $2x+3y=100$ have?"
+   },
+   "hint": {
+    "ru": "Из чётности следует, что $y$ чётно.",
+    "en": "Parity forces $y$ to be even."
+   },
+   "sol": {
+    "ru": "Числа $100$ и $2x$ чётны, значит $3y$ чётно, а с ним и $y$. Положим $y=2t$ с натуральным $t$: $$2x+6t=100\\quad\\Longleftrightarrow\\quad x=50-3t .$$\n\nУсловие $x\\ge1$ даёт $3t\\le49$, то есть $t\\le16$; условие $y\\ge1$ даёт $t\\ge1$.\n\nЗначит $t$ пробегает $1,2,\\dots,16$ — ровно $16$ значений, и каждому отвечает ровно одно решение $$(x,y)=(50-3t,\\ 2t).$$\n\n**Крайние случаи:** $t=1$ даёт $(47,2)$ ✓, $t=16$ даёт $(2,32)$ ✓\n\n**Ответ:** $16$.",
+    "en": "Both $100$ and $2x$ are even, so $3y$ is even and hence $y$ is. Put $y=2t$ with $t$ a positive integer: $$2x+6t=100\\quad\\Longleftrightarrow\\quad x=50-3t .$$\n\nThe condition $x\\ge1$ gives $3t\\le49$, i.e. $t\\le16$; the condition $y\\ge1$ gives $t\\ge1$.\n\nSo $t$ runs over $1,2,\\dots,16$ — exactly $16$ values, each giving one solution $$(x,y)=(50-3t,\\ 2t).$$\n\n**Extremes:** $t=1$ gives $(47,2)$ ✓ and $t=16$ gives $(2,32)$ ✓\n\n**Answer:** $16$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите уравнение $x+y+xy=7$ в натуральных числах.",
+    "en": "Solve $x+y+xy=7$ in positive integers."
+   },
+   "hint": {
+    "ru": "Прибавьте единицу и разложите на множители.",
+    "en": "Add one and factor."
+   },
+   "sol": {
+    "ru": "Прибавим $1$ к обеим частям: $$xy+x+y+1=8\\quad\\Longleftrightarrow\\quad (x+1)(y+1)=8 .$$\n\nТак как $x,y\\ge1$, оба множителя не меньше $2$. Разложения восьмёрки на два множителя, каждый $\\ge2$: $$2\\cdot4\\qquad\\text{и}\\qquad 4\\cdot2 .$$ (Вариант $8\\cdot1$ отпадает: множитель $1$ дал бы $y=0$.)\n\nОтсюда $$(x,y)=(1,3)\\quad\\text{или}\\quad (3,1).$$\n\n**Проверка:** $1+3+1\\cdot3=7$ ✓\n\n**Ответ:** $(1,3)$ и $(3,1)$.",
+    "en": "Add $1$ to both sides: $$xy+x+y+1=8\\quad\\Longleftrightarrow\\quad (x+1)(y+1)=8 .$$\n\nSince $x,y\\ge1$, both factors are at least $2$. The factorisations of $8$ into two factors each $\\ge2$ are $$2\\cdot4\\qquad\\text{and}\\qquad 4\\cdot2 .$$ (The option $8\\cdot1$ fails: the factor $1$ would give $y=0$.)\n\nHence $$(x,y)=(1,3)\\quad\\text{or}\\quad (3,1).$$\n\n**Check:** $1+3+1\\cdot3=7$ ✓\n\n**Answer:** $(1,3)$ and $(3,1)$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что уравнение $x^{2}-3y^{2}=2$ не имеет решений в целых числах.",
+    "en": "Prove that $x^{2}-3y^{2}=2$ has no integer solutions."
+   },
+   "hint": {
+    "ru": "Посмотрите на уравнение по модулю $3$.",
+    "en": "Look at the equation modulo $3$."
+   },
+   "sol": {
+    "ru": "Перейдём к модулю $3$. Слагаемое $3y^{2}$ исчезает, и уравнение превращается в $$x^{2}\\equiv2\\pmod 3 .$$\n\nНо квадраты по модулю $3$ дают только два значения: $$0^{2}\\equiv0,\\qquad(\\pm1)^{2}\\equiv1 .$$\n\nОстатка $2$ среди них нет, значит решений нет. $\\blacksquare$\n\n**Замечание.** Тот же приём показывает, что $x^{2}-3y^{2}=-1$ тоже нерешаемо, а вот $x^{2}-3y^{2}=1$ решения имеет: $(x,y)=(2,1)$, $(7,4)$, $(26,15),\\dots$",
+    "en": "Reduce modulo $3$. The term $3y^{2}$ vanishes and the equation becomes $$x^{2}\\equiv2\\pmod 3 .$$\n\nBut squares modulo $3$ take only two values: $$0^{2}\\equiv0,\\qquad(\\pm1)^{2}\\equiv1 .$$\n\nThe residue $2$ never occurs, so there are no solutions. $\\blacksquare$\n\n**Remark.** The same trick shows $x^{2}-3y^{2}=-1$ is unsolvable too, whereas $x^{2}-3y^{2}=1$ does have solutions: $(x,y)=(2,1)$, $(7,4)$, $(26,15),\\dots$"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все натуральные $n$, при которых дробь $\\dfrac{n+7}{n-1}$ — целое число.",
+    "en": "Find all positive integers $n$ for which $\\dfrac{n+7}{n-1}$ is an integer."
+   },
+   "hint": {
+    "ru": "$n+7=(n-1)+8$.",
+    "en": "$n+7=(n-1)+8$."
+   },
+   "sol": {
+    "ru": "Выделим целую часть: $$\\frac{n+7}{n-1}=\\frac{(n-1)+8}{n-1}=1+\\frac{8}{n-1} .$$\n\nДробь целая ровно тогда, когда $n-1$ — делитель восьмёрки. Так как $n$ натуральное и $n\\ne1$, число $n-1$ положительно, значит $$n-1\\in\\{1,2,4,8\\}\\quad\\Longrightarrow\\quad n\\in\\{2,3,5,9\\} .$$\n\n**Проверка:** $$\\frac{9}{1}=9,\\qquad\\frac{10}{2}=5,\\qquad\\frac{12}{4}=3,\\qquad\\frac{16}{8}=2 \\quad\\checkmark$$\n\n**Ответ:** $n=2,3,5,9$.",
+    "en": "Split off the integer part: $$\\frac{n+7}{n-1}=\\frac{(n-1)+8}{n-1}=1+\\frac{8}{n-1} .$$\n\nThe fraction is an integer exactly when $n-1$ divides $8$. Since $n$ is a positive integer with $n\\ne1$, the number $n-1$ is positive, so $$n-1\\in\\{1,2,4,8\\}\\quad\\Longrightarrow\\quad n\\in\\{2,3,5,9\\} .$$\n\n**Check:** $$\\frac{9}{1}=9,\\qquad\\frac{10}{2}=5,\\qquad\\frac{12}{4}=3,\\qquad\\frac{16}{8}=2 \\quad\\checkmark$$\n\n**Answer:** $n=2,3,5,9$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все тройки натуральных чисел $x\\le y\\le z$, для которых $\\dfrac1x+\\dfrac1y+\\dfrac1z=1$.",
+    "en": "Find all triples of positive integers $x\\le y\\le z$ with $\\dfrac1x+\\dfrac1y+\\dfrac1z=1$."
+   },
+   "hint": {
+    "ru": "Из $x\\le y\\le z$ следует $\\dfrac3x\\ge1$, то есть $x\\le3$.",
+    "en": "From $x\\le y\\le z$ we get $\\dfrac3x\\ge1$, so $x\\le3$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: ограничим $x$.** Наибольшее из трёх слагаемых — это $\\tfrac1x$, поэтому $$1=\\frac1x+\\frac1y+\\frac1z\\le\\frac3x\\quad\\Longrightarrow\\quad x\\le3 .$$ Кроме того $\\tfrac1x<1$, значит $x\\ge2$.\n\n**Случай $x=2$.** Тогда $\\tfrac1y+\\tfrac1z=\\tfrac12$, и так же $\\tfrac2y\\ge\\tfrac12$, то есть $y\\le4$; вместе с $y>2$ получаем $y\\in\\{3,4\\}$.\n\n$y=3$: $\\ \\tfrac1z=\\tfrac12-\\tfrac13=\\tfrac16$, значит $z=6$ ✓\n\n$y=4$: $\\ \\tfrac1z=\\tfrac12-\\tfrac14=\\tfrac14$, значит $z=4$ ✓\n\n**Случай $x=3$.** Тогда $\\tfrac1y+\\tfrac1z=\\tfrac23$, откуда $\\tfrac2y\\ge\\tfrac23$, то есть $y\\le3$; вместе с $y\\ge3$ получаем $y=3$ и $\\tfrac1z=\\tfrac13$, то есть $z=3$ ✓\n\n**Ответ:** $(2,3,6)$, $(2,4,4)$, $(3,3,3)$.\n\n**Проверка:** $\\tfrac12+\\tfrac13+\\tfrac16=1$ ✓, $\\tfrac12+\\tfrac14+\\tfrac14=1$ ✓, $\\tfrac13\\cdot3=1$ ✓",
+    "en": "**Step 1: bound $x$.** The largest of the three terms is $\\tfrac1x$, so $$1=\\frac1x+\\frac1y+\\frac1z\\le\\frac3x\\quad\\Longrightarrow\\quad x\\le3 .$$ Also $\\tfrac1x<1$, so $x\\ge2$.\n\n**Case $x=2$.** Then $\\tfrac1y+\\tfrac1z=\\tfrac12$, and likewise $\\tfrac2y\\ge\\tfrac12$, i.e. $y\\le4$; together with $y>2$ this gives $y\\in\\{3,4\\}$.\n\n$y=3$: $\\ \\tfrac1z=\\tfrac12-\\tfrac13=\\tfrac16$, so $z=6$ ✓\n\n$y=4$: $\\ \\tfrac1z=\\tfrac12-\\tfrac14=\\tfrac14$, so $z=4$ ✓\n\n**Case $x=3$.** Then $\\tfrac1y+\\tfrac1z=\\tfrac23$, so $\\tfrac2y\\ge\\tfrac23$, i.e. $y\\le3$; with $y\\ge3$ this forces $y=3$ and $\\tfrac1z=\\tfrac13$, so $z=3$ ✓\n\n**Answer:** $(2,3,6)$, $(2,4,4)$, $(3,3,3)$.\n\n**Check:** $\\tfrac12+\\tfrac13+\\tfrac16=1$ ✓, $\\tfrac12+\\tfrac14+\\tfrac14=1$ ✓, $\\tfrac13\\cdot3=1$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что уравнение $x^{2}+y^{2}=3z^{2}$ не имеет решений в натуральных числах.",
+    "en": "Prove that $x^{2}+y^{2}=3z^{2}$ has no solutions in positive integers."
+   },
+   "hint": {
+    "ru": "Возьмите решение с наименьшим $z$ и посмотрите по модулю $3$.",
+    "en": "Take a solution with the smallest $z$ and look modulo $3$."
+   },
+   "sol": {
+    "ru": "Предположим, что решения есть, и выберем среди них то, у которого $z$ **наименьшее**.\n\n**Шаг 1.** По модулю $3$ квадраты дают только остатки $0$ и $1$. Условие $$x^{2}+y^{2}\\equiv0\\pmod 3$$ выполнимо только при $$x^{2}\\equiv y^{2}\\equiv0\\pmod 3$$ (варианты $0+1$, $1+0$, $1+1$ дают $1$, $1$, $2$). Значит $3\\mid x$ и $3\\mid y$.\n\n**Шаг 2.** Запишем $x=3a$, $y=3b$: $$9a^{2}+9b^{2}=3z^{2}\\quad\\Longleftrightarrow\\quad 3\\left(a^{2}+b^{2}\\right)=z^{2} .$$ Отсюда $3\\mid z^{2}$, а значит $3\\mid z$; положим $z=3c$: $$3\\left(a^{2}+b^{2}\\right)=9c^{2}\\quad\\Longleftrightarrow\\quad a^{2}+b^{2}=3c^{2} .$$\n\n**Шаг 3.** Получилась тройка $(a,b,c)$ — тоже решение, причём $c=\\tfrac z3<z$. Это противоречит выбору наименьшего $z$ ✗\n\nЗначит решений в натуральных числах нет. $\\blacksquare$\n\n**Замечание.** Это классический **спуск Ферма**: из любого решения строится меньшее, чего в натуральных числах быть не может.",
+    "en": "Suppose solutions exist, and choose one with the **smallest** $z$.\n\n**Step 1.** Modulo $3$ squares leave only the residues $0$ and $1$. The condition $$x^{2}+y^{2}\\equiv0\\pmod 3$$ can hold only when $$x^{2}\\equiv y^{2}\\equiv0\\pmod 3$$ (the options $0+1$, $1+0$, $1+1$ give $1$, $1$, $2$). So $3\\mid x$ and $3\\mid y$.\n\n**Step 2.** Write $x=3a$, $y=3b$: $$9a^{2}+9b^{2}=3z^{2}\\quad\\Longleftrightarrow\\quad 3\\left(a^{2}+b^{2}\\right)=z^{2} .$$ Hence $3\\mid z^{2}$, so $3\\mid z$; put $z=3c$: $$3\\left(a^{2}+b^{2}\\right)=9c^{2}\\quad\\Longleftrightarrow\\quad a^{2}+b^{2}=3c^{2} .$$\n\n**Step 3.** So $(a,b,c)$ is a solution too, with $c=\\tfrac z3<z$ — contradicting the choice of the smallest $z$ ✗\n\nHence there are no solutions in positive integers. $\\blacksquare$\n\n**Remark.** This is the classical **Fermat descent**: from any solution one builds a smaller one, which positive integers do not allow."
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 3,
+   "q": {
+    "ru": "Решите уравнение $x^{2}+615=2^{y}$ в натуральных числах.",
+    "en": "Solve $x^{2}+615=2^{y}$ in positive integers."
+   },
+   "hint": {
+    "ru": "Сначала докажите по модулю $3$, что $y$ чётно.",
+    "en": "First show modulo $3$ that $y$ is even."
+   },
+   "sol": {
+    "ru": "**Шаг 1: $y$ чётно.** Так как $615=3\\cdot205$, по модулю $3$ уравнение даёт $$x^{2}\\equiv2^{y}\\equiv(-1)^{y}\\pmod 3 .$$ Квадраты по модулю $3$ равны $0$ или $1$, а $(-1)^{y}$ при нечётном $y$ равно $-1\\equiv2$ ✗ Значит $y$ чётно.\n\n**Шаг 2: разложение.** Пусть $y=2m$. Тогда $$2^{2m}-x^{2}=615\\quad\\Longleftrightarrow\\quad \\left(2^{m}-x\\right)\\left(2^{m}+x\\right)=615 .$$\n\n**Шаг 3: перебор.** Разложим $615=3\\cdot5\\cdot41$ на пары множителей и заметим, что **сумма** множителей равна $2\\cdot2^{m}=2^{m+1}$, то есть должна быть степенью двойки:\n\n$1\\cdot615$: сумма $616$ ✗\n\n$3\\cdot205$: сумма $208$ ✗\n\n$5\\cdot123$: сумма $128=2^{7}$ ✓\n\n$15\\cdot41$: сумма $56$ ✗\n\n**Шаг 4.** Из $2^{m+1}=128$ получаем $m=6$, значит $2^{m}=64$ и $$x=\\frac{123-5}{2}=59,\\qquad y=2m=12 .$$\n\n**Проверка:** $59^{2}+615=3481+615=4096=2^{12}$ ✓\n\n**Ответ:** $(x,y)=(59,12)$.",
+    "en": "**Step 1: $y$ is even.** Since $615=3\\cdot205$, reducing modulo $3$ gives $$x^{2}\\equiv2^{y}\\equiv(-1)^{y}\\pmod 3 .$$ Squares modulo $3$ are $0$ or $1$, while $(-1)^{y}$ for odd $y$ equals $-1\\equiv2$ ✗ So $y$ is even.\n\n**Step 2: factor.** Put $y=2m$. Then $$2^{2m}-x^{2}=615\\quad\\Longleftrightarrow\\quad \\left(2^{m}-x\\right)\\left(2^{m}+x\\right)=615 .$$\n\n**Step 3: search.** Factor $615=3\\cdot5\\cdot41$ into pairs and note that the **sum** of the two factors equals $2\\cdot2^{m}=2^{m+1}$, so it must be a power of two:\n\n$1\\cdot615$: sum $616$ ✗\n\n$3\\cdot205$: sum $208$ ✗\n\n$5\\cdot123$: sum $128=2^{7}$ ✓\n\n$15\\cdot41$: sum $56$ ✗\n\n**Step 4.** From $2^{m+1}=128$ we get $m=6$, so $2^{m}=64$ and $$x=\\frac{123-5}{2}=59,\\qquad y=2m=12 .$$\n\n**Check:** $59^{2}+615=3481+615=4096=2^{12}$ ✓\n\n**Answer:** $(x,y)=(59,12)$."
+   }
+  },
+  {
+   "src": "Республиканский тур · уровень / Republic-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Решите уравнение $2^{x}-3^{y}=1$ в натуральных числах.",
+    "en": "Solve $2^{x}-3^{y}=1$ in positive integers."
+   },
+   "hint": {
+    "ru": "При $x\\ge3$ посмотрите на уравнение по модулю $8$.",
+    "en": "For $x\\ge3$ look at the equation modulo $8$."
+   },
+   "sol": {
+    "ru": "Перепишем: $2^{x}=3^{y}+1$.\n\n**Малые $x$.** При $x=1$: $2=3^{y}+1$ даёт $3^{y}=1$, то есть $y=0$ — не натуральное ✗ При $x=2$: $4=3^{y}+1$ даёт $3^{y}=3$, то есть $y=1$ ✓\n\n**Случай $x\\ge3$.** Тогда $8\\mid2^{x}$, значит $$3^{y}\\equiv-1\\equiv7\\pmod 8 .$$ Но степени тройки по модулю $8$ принимают лишь два значения: $$3^{1}\\equiv3,\\quad 3^{2}=9\\equiv1,\\quad 3^{3}\\equiv3,\\quad 3^{4}\\equiv1,\\ \\dots$$ то есть $3^{y}\\in\\{1,3\\}\\pmod 8$, и семёрки среди них нет ✗\n\n**Проверка ответа:** $2^{2}-3^{1}=4-3=1$ ✓\n\n**Ответ:** $(x,y)=(2,1)$.",
+    "en": "Rewrite as $2^{x}=3^{y}+1$.\n\n**Small $x$.** For $x=1$: $2=3^{y}+1$ gives $3^{y}=1$, i.e. $y=0$, not positive ✗ For $x=2$: $4=3^{y}+1$ gives $3^{y}=3$, i.e. $y=1$ ✓\n\n**Case $x\\ge3$.** Then $8\\mid2^{x}$, so $$3^{y}\\equiv-1\\equiv7\\pmod 8 .$$ But the powers of three modulo $8$ take only two values: $$3^{1}\\equiv3,\\quad 3^{2}=9\\equiv1,\\quad 3^{3}\\equiv3,\\quad 3^{4}\\equiv1,\\ \\dots$$ i.e. $3^{y}\\in\\{1,3\\}\\pmod 8$, and $7$ is not among them ✗\n\n**Check:** $2^{2}-3^{1}=4-3=1$ ✓\n\n**Answer:** $(x,y)=(2,1)$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что уравнение $x^{2}+y^{2}+z^{2}=1999$ не имеет решений в целых числах.",
+    "en": "Prove that $x^{2}+y^{2}+z^{2}=1999$ has no integer solutions."
+   },
+   "hint": {
+    "ru": "Квадраты по модулю $8$ дают только $0$, $1$ и $4$.",
+    "en": "Squares modulo $8$ are only $0$, $1$ and $4$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: квадраты по модулю $8$.** Если $n=2k$, то $n^{2}=4k^{2}$, и $4k^{2}\\equiv0$ или $4$ в зависимости от чётности $k$. Если $n$ нечётно, то $n^{2}\\equiv1\\pmod 8$. Итого $$n^{2}\\in\\{0,\\,1,\\,4\\}\\pmod 8 .$$\n\n**Шаг 2: какие суммы трёх таких чисел бывают.** Переберём все наборы из трёх элементов множества $\\{0,1,4\\}$ и посчитаем суммы по модулю $8$: $$0,\\ 1,\\ 2,\\ 3,\\ 4,\\ 5,\\ 6\\ (=4+1+1),\\ 0\\ (=4+4+0),\\ 1\\ (=4+4+1),\\ 4\\ (=4+4+4).$$ Собирая, получаем множество возможных остатков $$\\{0,1,2,3,4,5,6\\} ,$$ то есть остаток $7$ **невозможен**.\n\n**Шаг 3.** Но $$1999=8\\cdot249+7\\equiv7\\pmod 8 .$$\n\nЗначит решений нет. $\\blacksquare$\n\n**Замечание.** Это частный случай теоремы Лежандра: целое число представимо суммой трёх квадратов тогда и только тогда, когда оно не имеет вида $4^{a}(8b+7)$.",
+    "en": "**Step 1: squares modulo $8$.** If $n=2k$ then $n^{2}=4k^{2}$, which is $\\equiv0$ or $4$ according to the parity of $k$. If $n$ is odd then $n^{2}\\equiv1\\pmod 8$. So $$n^{2}\\in\\{0,\\,1,\\,4\\}\\pmod 8 .$$\n\n**Step 2: which sums of three such numbers occur.** Run through all triples from $\\{0,1,4\\}$ and take sums modulo $8$: $$0,\\ 1,\\ 2,\\ 3,\\ 4,\\ 5,\\ 6\\ (=4+1+1),\\ 0\\ (=4+4+0),\\ 1\\ (=4+4+1),\\ 4\\ (=4+4+4).$$ Collecting, the possible residues are $$\\{0,1,2,3,4,5,6\\} ,$$ so the residue $7$ is **impossible**.\n\n**Step 3.** But $$1999=8\\cdot249+7\\equiv7\\pmod 8 .$$\n\nHence there are no solutions. $\\blacksquare$\n\n**Remark.** This is a special case of Legendre’s theorem: an integer is a sum of three squares exactly when it is not of the form $4^{a}(8b+7)$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все тройки натуральных чисел $x\\le y\\le z$, для которых $xyz=x+y+z$.",
+    "en": "Find all triples of positive integers $x\\le y\\le z$ with $xyz=x+y+z$."
+   },
+   "hint": {
+    "ru": "Оцените: $x+y+z\\le3z$.",
+    "en": "Estimate: $x+y+z\\le3z$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: ограничим произведение $xy$.** Так как $x\\le y\\le z$, имеем $$xyz=x+y+z\\le3z\\quad\\Longrightarrow\\quad xy\\le3 .$$\n\n**Случай $xy=1$:** тогда $x=y=1$ и уравнение даёт $z=2+z$ ✗\n\n**Случай $xy=2$:** тогда $x=1$, $y=2$ и $$2z=3+z\\quad\\Longrightarrow\\quad z=3 \\quad\\checkmark$$ (и действительно $1\\le2\\le3$).\n\n**Случай $xy=3$:** тогда $x=1$, $y=3$ и $$3z=4+z\\quad\\Longrightarrow\\quad z=2 ,$$ но тогда $z<y$ — нарушено упорядочение ✗\n\n**Проверка:** $1\\cdot2\\cdot3=6$ и $1+2+3=6$ ✓\n\n**Ответ:** единственная тройка $(1,2,3)$.",
+    "en": "**Step 1: bound the product $xy$.** Since $x\\le y\\le z$, $$xyz=x+y+z\\le3z\\quad\\Longrightarrow\\quad xy\\le3 .$$\n\n**Case $xy=1$:** then $x=y=1$ and the equation reads $z=2+z$ ✗\n\n**Case $xy=2$:** then $x=1$, $y=2$ and $$2z=3+z\\quad\\Longrightarrow\\quad z=3 \\quad\\checkmark$$ (and indeed $1\\le2\\le3$).\n\n**Case $xy=3$:** then $x=1$, $y=3$ and $$3z=4+z\\quad\\Longrightarrow\\quad z=2 ,$$ but then $z<y$, breaking the ordering ✗\n\n**Check:** $1\\cdot2\\cdot3=6$ and $1+2+3=6$ ✓\n\n**Answer:** the single triple $(1,2,3)$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все целые $n$, при которых $n^{2}+19n+92$ — полный квадрат.",
+    "en": "Find all integers $n$ for which $n^{2}+19n+92$ is a perfect square."
+   },
+   "hint": {
+    "ru": "Умножьте на $4$ и выделите полный квадрат.",
+    "en": "Multiply by $4$ and complete the square."
+   },
+   "sol": {
+    "ru": "Пусть $n^{2}+19n+92=k^{2}$ с целым $k\\ge0$. Умножим на $4$ и выделим квадрат: $$4n^{2}+76n+368=(2n+19)^{2}-361+368=(2n+19)^{2}+7 .$$\n\nЗначит $$(2k)^{2}-(2n+19)^{2}=7\\quad\\Longleftrightarrow\\quad \\bigl(2k-t\\bigr)\\bigl(2k+t\\bigr)=7,\\qquad t=2n+19 .$$\n\nЧисло $7$ простое, поэтому пара множителей — это $(1,7)$ или $(7,1)$ (отрицательные варианты дают $k<0$ и те же $n$). В обоих случаях сумма множителей равна $4k=8$, то есть $k=2$, а разность даёт $|t|=3$.\n\nИтак, $$2n+19=3\\ \\Rightarrow\\ n=-8,\\qquad 2n+19=-3\\ \\Rightarrow\\ n=-11 .$$\n\n**Проверка:** $$(-8)^{2}+19(-8)+92=64-152+92=4=2^{2} \\quad\\checkmark$$ $$(-11)^{2}+19(-11)+92=121-209+92=4=2^{2} \\quad\\checkmark$$\n\n**Ответ:** $n=-8$ и $n=-11$; натуральных решений нет.",
+    "en": "Let $n^{2}+19n+92=k^{2}$ with an integer $k\\ge0$. Multiply by $4$ and complete the square: $$4n^{2}+76n+368=(2n+19)^{2}-361+368=(2n+19)^{2}+7 .$$\n\nHence $$(2k)^{2}-(2n+19)^{2}=7\\quad\\Longleftrightarrow\\quad \\bigl(2k-t\\bigr)\\bigl(2k+t\\bigr)=7,\\qquad t=2n+19 .$$\n\nSince $7$ is prime, the pair of factors is $(1,7)$ or $(7,1)$ (the negative options give $k<0$ and the same $n$). In both cases the sum of the factors is $4k=8$, so $k=2$, and the difference gives $|t|=3$.\n\nTherefore $$2n+19=3\\ \\Rightarrow\\ n=-8,\\qquad 2n+19=-3\\ \\Rightarrow\\ n=-11 .$$\n\n**Check:** $$(-8)^{2}+19(-8)+92=64-152+92=4=2^{2} \\quad\\checkmark$$ $$(-11)^{2}+19(-11)+92=121-209+92=4=2^{2} \\quad\\checkmark$$\n\n**Answer:** $n=-8$ and $n=-11$; there are no positive solutions."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "У прямоугольника стороны — натуральные числа, а его площадь численно равна периметру. Найдите все такие прямоугольники.",
+    "en": "A rectangle has positive integer sides and its area is numerically equal to its perimeter. Find all such rectangles."
+   },
+   "hint": {
+    "ru": "$ab=2a+2b$; прибавьте $4$ и разложите на множители.",
+    "en": "$ab=2a+2b$; add $4$ and factor."
+   },
+   "sol": {
+    "ru": "Пусть стороны равны $a$ и $b$. Условие: $$ab=2a+2b .$$\n\nПеренесём и прибавим $4$: $$ab-2a-2b+4=4\\quad\\Longleftrightarrow\\quad (a-2)(b-2)=4 .$$\n\nСтороны положительны, и множители $a-2$, $b-2$ должны быть целыми с произведением $4$. Отрицательные варианты отпадают: например, $a-2=-1$, $b-2=-4$ дало бы $b=-2<0$ ✗\n\nОстаются положительные разложения четвёрки: $$(1,4),\\qquad(2,2),\\qquad(4,1),$$ откуда $$(a,b)=(3,6),\\quad(4,4),\\quad(6,3).$$\n\n**Проверка:** $3\\cdot6=18$ и $2(3+6)=18$ ✓; $4\\cdot4=16$ и $2(4+4)=16$ ✓\n\n**Ответ:** прямоугольник $3\\times6$ и квадрат $4\\times4$.",
+    "en": "Let the sides be $a$ and $b$. The condition is $$ab=2a+2b .$$\n\nMove everything over and add $4$: $$ab-2a-2b+4=4\\quad\\Longleftrightarrow\\quad (a-2)(b-2)=4 .$$\n\nThe sides are positive, and $a-2$, $b-2$ must be integers with product $4$. Negative options fail: e.g. $a-2=-1$, $b-2=-4$ would give $b=-2<0$ ✗\n\nSo the positive factorisations of $4$ remain: $$(1,4),\\qquad(2,2),\\qquad(4,1),$$ giving $$(a,b)=(3,6),\\quad(4,4),\\quad(6,3).$$\n\n**Check:** $3\\cdot6=18$ and $2(3+6)=18$ ✓; $4\\cdot4=16$ and $2(4+4)=16$ ✓\n\n**Answer:** the $3\\times6$ rectangle and the $4\\times4$ square."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Стороны прямоугольного треугольника — целые числа, один из катетов равен $15$. Найдите все такие треугольники.",
+    "en": "A right triangle has integer sides and one leg equal to $15$. Find all such triangles."
+   },
+   "hint": {
+    "ru": "$c^{2}-b^{2}=225$; оба множителя нечётны.",
+    "en": "$c^{2}-b^{2}=225$; both factors are odd."
+   },
+   "sol": {
+    "ru": "Пусть второй катет равен $b$, гипотенуза — $c$. Тогда $$15^{2}+b^{2}=c^{2}\\quad\\Longleftrightarrow\\quad (c-b)(c+b)=225 .$$\n\nЧисло $225=3^{2}\\cdot5^{2}$ нечётно, значит оба множителя нечётны, и их произведение автоматически даёт целые $$c=\\frac{(c-b)+(c+b)}{2},\\qquad b=\\frac{(c+b)-(c-b)}{2} .$$\n\nПереберём разложения $225=d\\cdot D$ с $d<D$:\n\n$1\\cdot225$: $\\ c=113$, $b=112$ ✓\n\n$3\\cdot75$: $\\ c=39$, $b=36$ ✓\n\n$5\\cdot45$: $\\ c=25$, $b=20$ ✓\n\n$9\\cdot25$: $\\ c=17$, $b=8$ ✓\n\n$15\\cdot15$: $\\ c=15$, $b=0$ ✗ (вырожденный)\n\n**Проверка** для $(8,15,17)$: $64+225=289=17^{2}$ ✓\n\n**Ответ:** четыре треугольника со сторонами $$(15,8,17),\\quad(15,20,25),\\quad(15,36,39),\\quad(15,112,113).$$",
+    "en": "Let the other leg be $b$ and the hypotenuse $c$. Then $$15^{2}+b^{2}=c^{2}\\quad\\Longleftrightarrow\\quad (c-b)(c+b)=225 .$$\n\nThe number $225=3^{2}\\cdot5^{2}$ is odd, so both factors are odd, and then $$c=\\frac{(c-b)+(c+b)}{2},\\qquad b=\\frac{(c+b)-(c-b)}{2}$$ come out as integers automatically.\n\nRun through the factorisations $225=d\\cdot D$ with $d<D$:\n\n$1\\cdot225$: $\\ c=113$, $b=112$ ✓\n\n$3\\cdot75$: $\\ c=39$, $b=36$ ✓\n\n$5\\cdot45$: $\\ c=25$, $b=20$ ✓\n\n$9\\cdot25$: $\\ c=17$, $b=8$ ✓\n\n$15\\cdot15$: $\\ c=15$, $b=0$ ✗ (degenerate)\n\n**Check** for $(8,15,17)$: $64+225=289=17^{2}$ ✓\n\n**Answer:** four triangles, with sides $$(15,8,17),\\quad(15,20,25),\\quad(15,36,39),\\quad(15,112,113).$$"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Опишите все примитивные пифагоровы тройки: найдите все решения уравнения $x^{2}+y^{2}=z^{2}$ в натуральных числах с $\\gcd(x,y,z)=1$.",
+    "en": "Describe all primitive Pythagorean triples: find every solution of $x^{2}+y^{2}=z^{2}$ in positive integers with $\\gcd(x,y,z)=1$."
+   },
+   "hint": {
+    "ru": "Покажите, что ровно одно из $x,y$ чётно, и разложите $\\left(\\tfrac{z-y}2\\right)\\left(\\tfrac{z+y}2\\right)=\\left(\\tfrac x2\\right)^{2}$.",
+    "en": "Show exactly one of $x,y$ is even, then factor $\\left(\\tfrac{z-y}2\\right)\\left(\\tfrac{z+y}2\\right)=\\left(\\tfrac x2\\right)^{2}$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: ровно одно из $x,y$ чётно.** Если бы оба были чётны, то и $z$ было бы чётным, вопреки $\\gcd=1$. Если бы оба были нечётны, то $$z^{2}=x^{2}+y^{2}\\equiv1+1=2\\pmod 4 ,$$ а квадрат не бывает сравним с $2$ по модулю $4$ ✗ Пусть для определённости $x$ чётно, $y$ и $z$ нечётны.\n\n**Шаг 2: разложение.** Запишем $$x^{2}=z^{2}-y^{2}=(z-y)(z+y) .$$ Числа $z-y$ и $z+y$ чётны; положим $$u=\\frac{z-y}{2},\\qquad v=\\frac{z+y}{2},\\qquad\\text{тогда}\\qquad uv=\\left(\\frac x2\\right)^{2} .$$\n\n**Шаг 3: $u$ и $v$ взаимно просты.** Общий делитель $d$ чисел $u,v$ делит их сумму $z$ и разность $y$, а $\\gcd(y,z)=1$ (иначе общий делитель вошёл бы и в $x$). Значит $d=1$.\n\n**Шаг 4.** Произведение двух взаимно простых чисел — полный квадрат, значит каждое из них полный квадрат: $$u=n^{2},\\qquad v=m^{2},\\qquad \\gcd(m,n)=1,\\ m>n>0 .$$\n\nВозвращаясь, $$z=v+u=m^{2}+n^{2},\\qquad y=v-u=m^{2}-n^{2},\\qquad x=2\\sqrt{uv}=2mn .$$\n\nНаконец, $y$ нечётно требует, чтобы $m$ и $n$ имели **разную чётность**.\n\n**Ответ.** Все примитивные тройки — это в точности $$x=2mn,\\qquad y=m^{2}-n^{2},\\qquad z=m^{2}+n^{2},$$ где $m>n>0$, $\\gcd(m,n)=1$ и $m,n$ разной чётности (и обратно, любая такая пара даёт примитивную тройку). $\\blacksquare$\n\n**Примеры.** $(m,n)=(2,1)\\to(4,3,5)$; $(3,2)\\to(12,5,13)$; $(4,1)\\to(8,15,17)$.",
+    "en": "**Step 1: exactly one of $x,y$ is even.** If both were even, $z$ would be too, contradicting $\\gcd=1$. If both were odd, then $$z^{2}=x^{2}+y^{2}\\equiv1+1=2\\pmod 4 ,$$ and no square is $\\equiv2$ modulo $4$ ✗ Say $x$ is even and $y$, $z$ are odd.\n\n**Step 2: factor.** Write $$x^{2}=z^{2}-y^{2}=(z-y)(z+y) .$$ Both $z-y$ and $z+y$ are even; put $$u=\\frac{z-y}{2},\\qquad v=\\frac{z+y}{2},\\qquad\\text{so that}\\qquad uv=\\left(\\frac x2\\right)^{2} .$$\n\n**Step 3: $u$ and $v$ are coprime.** A common divisor $d$ of $u,v$ divides their sum $z$ and difference $y$, and $\\gcd(y,z)=1$ (otherwise a common divisor would also divide $x$). So $d=1$.\n\n**Step 4.** A product of two coprime numbers being a perfect square forces each of them to be a perfect square: $$u=n^{2},\\qquad v=m^{2},\\qquad \\gcd(m,n)=1,\\ m>n>0 .$$\n\nGoing back, $$z=v+u=m^{2}+n^{2},\\qquad y=v-u=m^{2}-n^{2},\\qquad x=2\\sqrt{uv}=2mn .$$\n\nFinally, $y$ being odd requires $m$ and $n$ to have **opposite parity**.\n\n**Answer.** The primitive triples are exactly $$x=2mn,\\qquad y=m^{2}-n^{2},\\qquad z=m^{2}+n^{2},$$ with $m>n>0$, $\\gcd(m,n)=1$ and $m,n$ of opposite parity (and conversely every such pair gives a primitive triple). $\\blacksquare$\n\n**Examples.** $(m,n)=(2,1)\\to(4,3,5)$; $(3,2)\\to(12,5,13)$; $(4,1)\\to(8,15,17)$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что уравнение Пелля $x^{2}-2y^{2}=1$ имеет бесконечно много решений в натуральных числах.",
+    "en": "Prove that the Pell equation $x^{2}-2y^{2}=1$ has infinitely many solutions in positive integers."
+   },
+   "hint": {
+    "ru": "Из решения $(x,y)$ постройте новое: $(3x+4y,\\ 2x+3y)$.",
+    "en": "From a solution $(x,y)$ build a new one: $(3x+4y,\\ 2x+3y)$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: начальное решение.** $$3^{2}-2\\cdot2^{2}=9-8=1 ,$$ то есть $(x_1,y_1)=(3,2)$ подходит ✓\n\n**Шаг 2: как из решения сделать новое.** Положим $$X=3x+4y,\\qquad Y=2x+3y .$$ Тогда $$X^{2}-2Y^{2}=(3x+4y)^{2}-2(2x+3y)^{2} .$$ Раскроем скобки: $$(9x^{2}+24xy+16y^{2})-2\\left(4x^{2}+12xy+9y^{2}\\right)=9x^{2}+24xy+16y^{2}-8x^{2}-24xy-18y^{2},$$ то есть $$X^{2}-2Y^{2}=x^{2}-2y^{2}=1 . \\qquad\\checkmark$$\n\n**Шаг 3: решения не повторяются.** При $x,y>0$ имеем $Y=2x+3y>y$, значит вторая координата строго растёт, и все получаемые пары попарно различны.\n\nЗначит из $(3,2)$ рождается бесконечная цепочка $$(3,2)\\to(17,12)\\to(99,70)\\to(577,408)\\to\\cdots \\qquad\\blacksquare$$\n\n**Проверка:** $17^{2}-2\\cdot12^{2}=289-288=1$ ✓ и $99^{2}-2\\cdot70^{2}=9801-9800=1$ ✓\n\n**Откуда берётся преобразование.** Оно отвечает умножению на $3+2\\sqrt2$: если $x+y\\sqrt2$ даёт норму $1$, то и $(x+y\\sqrt2)(3+2\\sqrt2)=(3x+4y)+(2x+3y)\\sqrt2$ тоже.",
+    "en": "**Step 1: a starting solution.** $$3^{2}-2\\cdot2^{2}=9-8=1 ,$$ so $(x_1,y_1)=(3,2)$ works ✓\n\n**Step 2: turning a solution into a new one.** Put $$X=3x+4y,\\qquad Y=2x+3y .$$ Then $$X^{2}-2Y^{2}=(3x+4y)^{2}-2(2x+3y)^{2} .$$ Expanding, $$(9x^{2}+24xy+16y^{2})-2\\left(4x^{2}+12xy+9y^{2}\\right)=9x^{2}+24xy+16y^{2}-8x^{2}-24xy-18y^{2},$$ that is $$X^{2}-2Y^{2}=x^{2}-2y^{2}=1 . \\qquad\\checkmark$$\n\n**Step 3: the solutions never repeat.** For $x,y>0$ we have $Y=2x+3y>y$, so the second coordinate strictly increases and all the pairs produced are distinct.\n\nHence $(3,2)$ generates an infinite chain $$(3,2)\\to(17,12)\\to(99,70)\\to(577,408)\\to\\cdots \\qquad\\blacksquare$$\n\n**Check:** $17^{2}-2\\cdot12^{2}=289-288=1$ ✓ and $99^{2}-2\\cdot70^{2}=9801-9800=1$ ✓\n\n**Where the map comes from.** It is multiplication by $3+2\\sqrt2$: if $x+y\\sqrt2$ has norm $1$, so does $(x+y\\sqrt2)(3+2\\sqrt2)=(3x+4y)+(2x+3y)\\sqrt2$."
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Решите уравнение $3^{x}+4^{y}=5^{z}$ в натуральных числах.",
+    "en": "Solve $3^{x}+4^{y}=5^{z}$ in positive integers."
+   },
+   "hint": {
+    "ru": "Модуль $3$ даёт чётность $z$, модуль $4$ — чётность $x$; потом разложите разность квадратов.",
+    "en": "Modulo $3$ gives the parity of $z$, modulo $4$ that of $x$; then factor a difference of squares."
+   },
+   "sol": {
+    "ru": "**Шаг 1: $z$ чётно.** По модулю $3$: $4\\equiv1$ и $5\\equiv-1$, поэтому $$0+1\\equiv(-1)^{z}\\pmod 3\\quad\\Longrightarrow\\quad (-1)^{z}=1 ,$$ то есть $z$ чётно.\n\n**Шаг 2: $x$ чётно.** По модулю $4$: $3\\equiv-1$, $4^{y}\\equiv0$ (при $y\\ge1$), $5\\equiv1$, поэтому $$(-1)^{x}\\equiv1\\pmod 4\\quad\\Longrightarrow\\quad x\\ \\text{чётно}.$$\n\n**Шаг 3: разложение.** Пусть $x=2m$, $z=2n$. Тогда $$2^{2y}=4^{y}=5^{2n}-3^{2m}=\\left(5^{n}-3^{m}\\right)\\left(5^{n}+3^{m}\\right).$$ Оба множителя — степени двойки, скажем $2^{s}$ и $2^{t}$ с $s<t$.\n\n**Шаг 4: $s=1$.** Сложив, получаем $$2\\cdot5^{n}=2^{s}+2^{t}=2^{s}\\left(1+2^{t-s}\\right).$$ Скобка нечётна, а $5^{n}$ нечётно, значит степень двойки слева и справа совпадает: $s=1$.\n\n**Шаг 5.** Итак $5^{n}-3^{m}=2$ и $2\\cdot5^{n}=2+2^{t}$, откуда $$5^{n}=1+2^{\\,t-1} ,\\qquad\\text{то есть}\\qquad 2^{\\,t-1}=5^{n}-1 .$$\n\nРазложим: $$5^{n}-1=(5-1)\\left(5^{n-1}+5^{n-2}+\\dots+1\\right)=4\\cdot S ,$$ где $S$ — сумма $n$ нечётных слагаемых, значит $S$ имеет ту же чётность, что и $n$. Чтобы $4S$ было степенью двойки, нужно $S$ нечётной степенью двойки, то есть $S=1$, а это даёт $n=1$.\n\n**Шаг 6.** При $n=1$: $5-3^{m}=2$ даёт $3^{m}=3$, то есть $m=1$; тогда $2^{t-1}=4$, $t=3$, и $2y=s+t=1+3=4$, значит $y=2$.\n\nИтого $$x=2m=2,\\qquad y=2,\\qquad z=2n=2 .$$\n\n**Проверка:** $3^{2}+4^{2}=9+16=25=5^{2}$ ✓\n\n**Ответ:** $(x,y,z)=(2,2,2)$.",
+    "en": "**Step 1: $z$ is even.** Modulo $3$: $4\\equiv1$ and $5\\equiv-1$, so $$0+1\\equiv(-1)^{z}\\pmod 3\\quad\\Longrightarrow\\quad (-1)^{z}=1 ,$$ i.e. $z$ is even.\n\n**Step 2: $x$ is even.** Modulo $4$: $3\\equiv-1$, $4^{y}\\equiv0$ (for $y\\ge1$), $5\\equiv1$, so $$(-1)^{x}\\equiv1\\pmod 4\\quad\\Longrightarrow\\quad x\\ \\text{is even}.$$\n\n**Step 3: factor.** Put $x=2m$, $z=2n$. Then $$2^{2y}=4^{y}=5^{2n}-3^{2m}=\\left(5^{n}-3^{m}\\right)\\left(5^{n}+3^{m}\\right).$$ Both factors are powers of two, say $2^{s}$ and $2^{t}$ with $s<t$.\n\n**Step 4: $s=1$.** Adding them, $$2\\cdot5^{n}=2^{s}+2^{t}=2^{s}\\left(1+2^{t-s}\\right).$$ The bracket is odd and $5^{n}$ is odd, so the powers of two on the two sides must match: $s=1$.\n\n**Step 5.** Thus $5^{n}-3^{m}=2$ and $2\\cdot5^{n}=2+2^{t}$, giving $$5^{n}=1+2^{\\,t-1} ,\\qquad\\text{i.e.}\\qquad 2^{\\,t-1}=5^{n}-1 .$$\n\nFactor: $$5^{n}-1=(5-1)\\left(5^{n-1}+5^{n-2}+\\dots+1\\right)=4\\cdot S ,$$ where $S$ is a sum of $n$ odd terms, hence has the same parity as $n$. For $4S$ to be a power of two, $S$ must be one as well, and being odd it forces $S=1$, i.e. $n=1$.\n\n**Step 6.** With $n=1$: $5-3^{m}=2$ gives $3^{m}=3$, so $m=1$; then $2^{t-1}=4$, $t=3$, and $2y=s+t=1+3=4$, so $y=2$.\n\nAltogether $$x=2m=2,\\qquad y=2,\\qquad z=2n=2 .$$\n\n**Check:** $3^{2}+4^{2}=9+16=25=5^{2}$ ✓\n\n**Answer:** $(x,y,z)=(2,2,2)$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что уравнение $x^{3}+2y^{3}=4z^{3}$ имеет в целых числах только решение $x=y=z=0$.",
+    "en": "Prove that $x^{3}+2y^{3}=4z^{3}$ has only the solution $x=y=z=0$ in integers."
+   },
+   "hint": {
+    "ru": "Возьмите решение с наименьшим $|x|+|y|+|z|>0$ и покажите, что все три числа чётны.",
+    "en": "Take a solution with the smallest $|x|+|y|+|z|>0$ and show all three are even."
+   },
+   "sol": {
+    "ru": "Предположим, что есть ненулевое решение, и выберем из всех таких то, у которого сумма $|x|+|y|+|z|$ **наименьшая**.\n\n**Шаг 1: $x$ чётно.** Из уравнения $x^{3}=4z^{3}-2y^{3}=2\\left(2z^{3}-y^{3}\\right)$ видно, что $x^{3}$ чётно, а значит и $x$ чётно (куб нечётного числа нечётен). Положим $x=2a$.\n\n**Шаг 2: $y$ чётно.** Подставим: $$8a^{3}+2y^{3}=4z^{3}\\quad\\Longleftrightarrow\\quad 4a^{3}+y^{3}=2z^{3} .$$ Отсюда $y^{3}=2z^{3}-4a^{3}$ чётно, значит $y$ чётно; положим $y=2b$.\n\n**Шаг 3: $z$ чётно.** Подставим снова: $$4a^{3}+8b^{3}=2z^{3}\\quad\\Longleftrightarrow\\quad 2a^{3}+4b^{3}=z^{3} .$$ Отсюда $z^{3}$ чётно, значит $z$ чётно; положим $z=2c$.\n\n**Шаг 4: спуск.** Подставим в последнее равенство: $$2a^{3}+4b^{3}=8c^{3}\\quad\\Longleftrightarrow\\quad a^{3}+2b^{3}=4c^{3} .$$\n\nЗначит $(a,b,c)=\\left(\\tfrac x2,\\tfrac y2,\\tfrac z2\\right)$ — тоже решение, и оно ненулевое, но $$|a|+|b|+|c|=\\frac{|x|+|y|+|z|}{2}<|x|+|y|+|z| ,$$ что противоречит выбору наименьшей суммы ✗\n\nЗначит ненулевых решений нет. $\\blacksquare$",
+    "en": "Suppose a non-zero solution exists, and among all of them choose one with the **smallest** sum $|x|+|y|+|z|$.\n\n**Step 1: $x$ is even.** From $x^{3}=4z^{3}-2y^{3}=2\\left(2z^{3}-y^{3}\\right)$ we see $x^{3}$ is even, hence so is $x$ (the cube of an odd number is odd). Put $x=2a$.\n\n**Step 2: $y$ is even.** Substituting, $$8a^{3}+2y^{3}=4z^{3}\\quad\\Longleftrightarrow\\quad 4a^{3}+y^{3}=2z^{3} .$$ So $y^{3}=2z^{3}-4a^{3}$ is even and $y$ is even; put $y=2b$.\n\n**Step 3: $z$ is even.** Substituting again, $$4a^{3}+8b^{3}=2z^{3}\\quad\\Longleftrightarrow\\quad 2a^{3}+4b^{3}=z^{3} .$$ So $z^{3}$ is even and $z$ is even; put $z=2c$.\n\n**Step 4: the descent.** Substituting into the last identity, $$2a^{3}+4b^{3}=8c^{3}\\quad\\Longleftrightarrow\\quad a^{3}+2b^{3}=4c^{3} .$$\n\nSo $(a,b,c)=\\left(\\tfrac x2,\\tfrac y2,\\tfrac z2\\right)$ is a solution too, still non-zero, yet $$|a|+|b|+|c|=\\frac{|x|+|y|+|z|}{2}<|x|+|y|+|z| ,$$ contradicting the minimality ✗\n\nHence no non-zero solution exists. $\\blacksquare$"
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что уравнение $y^{2}=x^{3}+7$ не имеет решений в целых числах.",
+    "en": "Prove that $y^{2}=x^{3}+7$ has no integer solutions."
+   },
+   "hint": {
+    "ru": "Покажите, что $x$ нечётно, прибавьте единицу к обеим частям и найдите простой делитель вида $4k+3$.",
+    "en": "Show $x$ is odd, add one to both sides, and find a prime divisor of the form $4k+3$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: $x$ нечётно.** Пусть $x$ чётно. Тогда $8\\mid x^{3}$, поэтому $$y^{2}\\equiv7\\pmod 8 .$$ Но квадраты по модулю $8$ дают только $0$, $1$ и $4$ ✗ Значит $x$ нечётно.\n\n**Шаг 2: прибавим единицу.** $$y^{2}+1=x^{3}+8=(x+2)\\left(x^{2}-2x+4\\right).$$\n\n**Шаг 3: у второго множителя есть простой делитель вида $4k+3$.** Так как $x$ нечётно, число $x-1$ чётно, поэтому $(x-1)^{2}$ делится на $4$, и $$x^{2}-2x+4=(x-1)^{2}+3\\equiv3\\pmod 4 .$$ Число, сравнимое с $3$ по модулю $4$, нечётно и не может быть произведением одних лишь простых вида $4k+1$ (такое произведение само сравнимо с $1$). Значит у него есть простой делитель $p\\equiv3\\pmod 4$. Заметим также, что $x^{2}-2x+4=(x-1)^{2}+3\\ge3$, так что делитель действительно существует.\n\n**Шаг 4: противоречие.** Этот $p$ делит $y^{2}+1$, то есть $$y^{2}\\equiv-1\\pmod p .$$ Но нечётное простое $p$, делящее $y^{2}+1$, обязано быть сравнимо с $1$ по модулю $4$ (возведите сравнение в степень $\\tfrac{p-1}2$ и примените малую теорему Ферма) ✗\n\nПротиворечие. $\\blacksquare$\n\n**Замечание.** Это одно из уравнений Морделла $y^{2}=x^{3}+k$. При других $k$ решения бывают: например, $y^{2}=x^{3}+1$ имеет решения $(x,y)=(0,\\pm1)$, $(-1,0)$, $(2,\\pm3)$.",
+    "en": "**Step 1: $x$ is odd.** Suppose $x$ were even. Then $8\\mid x^{3}$, so $$y^{2}\\equiv7\\pmod 8 .$$ But squares modulo $8$ are only $0$, $1$ and $4$ ✗ So $x$ is odd.\n\n**Step 2: add one.** $$y^{2}+1=x^{3}+8=(x+2)\\left(x^{2}-2x+4\\right).$$\n\n**Step 3: the second factor has a prime divisor of the form $4k+3$.** Since $x$ is odd, $x-1$ is even, so $(x-1)^{2}$ is a multiple of $4$ and $$x^{2}-2x+4=(x-1)^{2}+3\\equiv3\\pmod 4 .$$ A number $\\equiv3\\pmod4$ is odd and cannot be a product of primes all of the form $4k+1$ (such a product is itself $\\equiv1$). So it has a prime divisor $p\\equiv3\\pmod 4$. Note also $x^{2}-2x+4=(x-1)^{2}+3\\ge3$, so such a divisor really exists.\n\n**Step 4: contradiction.** This $p$ divides $y^{2}+1$, i.e. $$y^{2}\\equiv-1\\pmod p .$$ But an odd prime $p$ dividing $y^{2}+1$ must be $\\equiv1\\pmod 4$ (raise the congruence to the power $\\tfrac{p-1}2$ and use Fermat’s little theorem) ✗\n\nContradiction. $\\blacksquare$\n\n**Remark.** This is one of the Mordell equations $y^{2}=x^{3}+k$. For other $k$ solutions do exist: e.g. $y^{2}=x^{3}+1$ has $(x,y)=(0,\\pm1)$, $(-1,0)$, $(2,\\pm3)$."
+   }
   }
  ]
 };

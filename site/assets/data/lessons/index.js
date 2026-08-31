@@ -39,7 +39,7 @@ window.LESSON_INDEX = [
    "ru": "Сравнения превращают громоздкие вычисления в короткие: последние цифры, циклы степеней и малая теорема Ферма.",
    "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 4
  },
  {
@@ -53,7 +53,7 @@ window.LESSON_INDEX = [
    "ru": "Уравнения, у которых ответ обязан быть целым: линейный случай, разложение на множители, оценки, остатки и бесконечный спуск.",
    "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 6
  },
  {
@@ -67,7 +67,7 @@ window.LESSON_INDEX = [
    "ru": "Формулы сокращённого умножения, группировка, симметричные суммы и теорема Безу — инструменты, которые превращают выражение в произведение.",
    "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 6
  },
  {

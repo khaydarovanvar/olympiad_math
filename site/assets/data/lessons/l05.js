@@ -853,6 +853,486 @@ window.LESSONS[5] = {
     "ru": "Обозначим $$\\sigma_2=ab+bc+ca,\\qquad\\sigma_3=abc,\\qquad p_k=a^{k}+b^{k}+c^{k}.$$\n\n**Шаг 1: выразим $p_2$ и $p_3$.** Из $(a+b+c)^{2}=p_2+2\\sigma_2=0$ получаем $$p_2=-2\\sigma_2 .$$ Из тождества $a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(\\dots)=0$ получаем $$p_3=3\\sigma_3 .$$\n\n**Шаг 2: уравнение, которому подчиняются $a,b,c$.** По теореме Виета числа $a,b,c$ — корни многочлена $$t^{3}-(a+b+c)t^{2}+\\sigma_2 t-\\sigma_3=t^{3}+\\sigma_2 t-\\sigma_3 .$$ Значит для каждого из них $$a^{3}=-\\sigma_2 a+\\sigma_3 .$$\n\n**Шаг 3: поднимаемся до пятой степени.** Умножим последнее равенство на $a^{2}$: $$a^{5}=-\\sigma_2 a^{3}+\\sigma_3 a^{2},$$ и то же для $b$ и $c$. Сложим все три: $$p_5=-\\sigma_2 p_3+\\sigma_3 p_2=-\\sigma_2\\cdot3\\sigma_3+\\sigma_3\\cdot(-2\\sigma_2)=-5\\,\\sigma_2\\sigma_3 .$$\n\n**Шаг 4: сравниваем.** $$\\frac{p_5}{5}=-\\sigma_2\\sigma_3,\\qquad \\frac{p_2}{2}\\cdot\\frac{p_3}{3}=\\frac{-2\\sigma_2}{2}\\cdot\\frac{3\\sigma_3}{3}=(-\\sigma_2)\\cdot\\sigma_3=-\\sigma_2\\sigma_3 .$$ Обе части равны. $\\blacksquare$\n\n*Проверка:* $a=1$, $b=1$, $c=-2$. Тогда $p_2=6$, $p_3=1+1-8=-6$, $p_5=1+1-32=-30$. Слева $-30/5=-6$, справа $\\tfrac62\\cdot\\tfrac{-6}{3}=3\\cdot(-2)=-6$ ✓",
     "en": "Write $$\\sigma_2=ab+bc+ca,\\qquad\\sigma_3=abc,\\qquad p_k=a^{k}+b^{k}+c^{k}.$$\n\n**Step 1: express $p_2$ and $p_3$.** From $(a+b+c)^{2}=p_2+2\\sigma_2=0$ we get $$p_2=-2\\sigma_2 .$$ From the identity $a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(\\dots)=0$ we get $$p_3=3\\sigma_3 .$$\n\n**Step 2: the equation $a,b,c$ obey.** By Vieta the numbers $a,b,c$ are the roots of $$t^{3}-(a+b+c)t^{2}+\\sigma_2 t-\\sigma_3=t^{3}+\\sigma_2 t-\\sigma_3 .$$ So each of them satisfies $$a^{3}=-\\sigma_2 a+\\sigma_3 .$$\n\n**Step 3: climb to the fifth power.** Multiply that by $a^{2}$: $$a^{5}=-\\sigma_2 a^{3}+\\sigma_3 a^{2},$$ and likewise for $b$ and $c$. Adding the three, $$p_5=-\\sigma_2 p_3+\\sigma_3 p_2=-\\sigma_2\\cdot3\\sigma_3+\\sigma_3\\cdot(-2\\sigma_2)=-5\\,\\sigma_2\\sigma_3 .$$\n\n**Step 4: compare.** $$\\frac{p_5}{5}=-\\sigma_2\\sigma_3,\\qquad \\frac{p_2}{2}\\cdot\\frac{p_3}{3}=\\frac{-2\\sigma_2}{2}\\cdot\\frac{3\\sigma_3}{3}=(-\\sigma_2)\\cdot\\sigma_3=-\\sigma_2\\sigma_3 .$$ The two sides agree. $\\blacksquare$\n\n*Check:* $a=1$, $b=1$, $c=-2$. Then $p_2=6$, $p_3=1+1-8=-6$, $p_5=1+1-32=-30$. The left side is $-30/5=-6$, the right side $\\tfrac62\\cdot\\tfrac{-6}{3}=3\\cdot(-2)=-6$ ✓"
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Вычислите $99^{2}$ в уме.",
+    "en": "Compute $99^{2}$ in your head."
+   },
+   "hint": {
+    "ru": "$99=100-1$.",
+    "en": "$99=100-1$."
+   },
+   "sol": {
+    "ru": "Применим формулу квадрата разности: $$99^{2}=(100-1)^{2}=100^{2}-2\\cdot100\\cdot1+1^{2}=10000-200+1 .$$\n\n**Ответ:** $9801$.\n\n**Тот же приём** работает и для других чисел: $$98^{2}=(100-2)^{2}=10000-400+4=9604,\\qquad 102^{2}=10000+400+4=10404 .$$",
+    "en": "Use the square of a difference: $$99^{2}=(100-1)^{2}=100^{2}-2\\cdot100\\cdot1+1^{2}=10000-200+1 .$$\n\n**Answer:** $9801$.\n\n**The same trick** works elsewhere: $$98^{2}=(100-2)^{2}=10000-400+4=9604,\\qquad 102^{2}=10000+400+4=10404 .$$"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Разложите на множители $x^{2}-9y^{2}$.",
+    "en": "Factor $x^{2}-9y^{2}$."
+   },
+   "hint": {
+    "ru": "$9y^{2}=(3y)^{2}$.",
+    "en": "$9y^{2}=(3y)^{2}$."
+   },
+   "sol": {
+    "ru": "Заметим, что $9y^{2}=(3y)^{2}$, поэтому перед нами разность квадратов: $$x^{2}-9y^{2}=x^{2}-(3y)^{2}=(x-3y)(x+3y).$$\n\n**Проверка** обратным раскрытием скобок: $$(x-3y)(x+3y)=x^{2}+3xy-3xy-9y^{2}=x^{2}-9y^{2} \\quad\\checkmark$$\n\n**Ответ:** $(x-3y)(x+3y)$.",
+    "en": "Note that $9y^{2}=(3y)^{2}$, so this is a difference of squares: $$x^{2}-9y^{2}=x^{2}-(3y)^{2}=(x-3y)(x+3y).$$\n\n**Check** by expanding back: $$(x-3y)(x+3y)=x^{2}+3xy-3xy-9y^{2}=x^{2}-9y^{2} \\quad\\checkmark$$\n\n**Answer:** $(x-3y)(x+3y)$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Вычислите $2025^{2}-2024^{2}$ без калькулятора.",
+    "en": "Compute $2025^{2}-2024^{2}$ without a calculator."
+   },
+   "hint": {
+    "ru": "Разность квадратов.",
+    "en": "Difference of squares."
+   },
+   "sol": {
+    "ru": "$$2025^{2}-2024^{2}=(2025-2024)(2025+2024)=1\\cdot4049 .$$\n\n**Ответ:** $4049$.\n\n**Общее наблюдение.** Разность квадратов двух соседних чисел всегда равна их сумме: $$(n+1)^{2}-n^{2}=2n+1 .$$ Поэтому, например, $101^{2}-100^{2}=201$.",
+    "en": "$$2025^{2}-2024^{2}=(2025-2024)(2025+2024)=1\\cdot4049 .$$\n\n**Answer:** $4049$.\n\n**General observation.** The difference of the squares of two consecutive numbers is always their sum: $$(n+1)^{2}-n^{2}=2n+1 .$$ So, for instance, $101^{2}-100^{2}=201$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Раскройте скобки: $(2x-3y)^{2}$.",
+    "en": "Expand $(2x-3y)^{2}$."
+   },
+   "hint": {
+    "ru": "$(a-b)^{2}=a^{2}-2ab+b^{2}$.",
+    "en": "$(a-b)^{2}=a^{2}-2ab+b^{2}$."
+   },
+   "sol": {
+    "ru": "Здесь $a=2x$ и $b=3y$: $$(2x-3y)^{2}=(2x)^{2}-2\\cdot2x\\cdot3y+(3y)^{2}=4x^{2}-12xy+9y^{2} .$$\n\n**Проверка** подстановкой $x=1$, $y=1$: слева $(2-3)^{2}=1$, справа $4-12+9=1$ ✓\n\n**Ответ:** $4x^{2}-12xy+9y^{2}$.",
+    "en": "Here $a=2x$ and $b=3y$: $$(2x-3y)^{2}=(2x)^{2}-2\\cdot2x\\cdot3y+(3y)^{2}=4x^{2}-12xy+9y^{2} .$$\n\n**Check** at $x=1$, $y=1$: the left side is $(2-3)^{2}=1$, the right side $4-12+9=1$ ✓\n\n**Answer:** $4x^{2}-12xy+9y^{2}$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Разложите на множители $x^{3}+8$.",
+    "en": "Factor $x^{3}+8$."
+   },
+   "hint": {
+    "ru": "$8=2^{3}$; используйте сумму кубов.",
+    "en": "$8=2^{3}$; use the sum of cubes."
+   },
+   "sol": {
+    "ru": "Формула суммы кубов: $$a^{3}+b^{3}=(a+b)\\left(a^{2}-ab+b^{2}\\right).$$\n\nПри $a=x$, $b=2$: $$x^{3}+8=(x+2)\\left(x^{2}-2x+4\\right).$$\n\n**Проверка:** $$(x+2)\\left(x^{2}-2x+4\\right)=x^{3}-2x^{2}+4x+2x^{2}-4x+8=x^{3}+8 \\quad\\checkmark$$\n\n**Ответ:** $(x+2)\\left(x^{2}-2x+4\\right)$.\n\n**Замечание.** Второй множитель на действительные множители не раскладывается: его дискриминант $4-16=-12<0$.",
+    "en": "The sum of cubes: $$a^{3}+b^{3}=(a+b)\\left(a^{2}-ab+b^{2}\\right).$$\n\nWith $a=x$, $b=2$: $$x^{3}+8=(x+2)\\left(x^{2}-2x+4\\right).$$\n\n**Check:** $$(x+2)\\left(x^{2}-2x+4\\right)=x^{3}-2x^{2}+4x+2x^{2}-4x+8=x^{3}+8 \\quad\\checkmark$$\n\n**Answer:** $(x+2)\\left(x^{2}-2x+4\\right)$.\n\n**Remark.** The second factor does not split over the reals: its discriminant is $4-16=-12<0$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Разложите на множители $a^{2}+6a+9-b^{2}$.",
+    "en": "Factor $a^{2}+6a+9-b^{2}$."
+   },
+   "hint": {
+    "ru": "Первые три слагаемых — полный квадрат.",
+    "en": "The first three terms form a perfect square."
+   },
+   "sol": {
+    "ru": "Свернём первые три слагаемых: $$a^{2}+6a+9=(a+3)^{2} .$$\n\nТогда всё выражение — разность квадратов: $$(a+3)^{2}-b^{2}=(a+3-b)(a+3+b).$$\n\n**Проверка** при $a=1$, $b=2$: слева $1+6+9-4=12$, справа $(1+3-2)(1+3+2)=2\\cdot6=12$ ✓\n\n**Ответ:** $(a+3-b)(a+3+b)$.",
+    "en": "Fold up the first three terms: $$a^{2}+6a+9=(a+3)^{2} .$$\n\nThe whole expression is then a difference of squares: $$(a+3)^{2}-b^{2}=(a+3-b)(a+3+b).$$\n\n**Check** at $a=1$, $b=2$: the left side is $1+6+9-4=12$, the right side $(1+3-2)(1+3+2)=2\\cdot6=12$ ✓\n\n**Answer:** $(a+3-b)(a+3+b)$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Разложите $x^{4}-1$ на множители до конца (над действительными числами).",
+    "en": "Factor $x^{4}-1$ completely over the reals."
+   },
+   "hint": {
+    "ru": "Дважды примените разность квадратов.",
+    "en": "Apply the difference of squares twice."
+   },
+   "sol": {
+    "ru": "Первый шаг: $$x^{4}-1=\\left(x^{2}\\right)^{2}-1^{2}=\\left(x^{2}-1\\right)\\left(x^{2}+1\\right).$$\n\nВторой шаг — первый множитель снова разность квадратов: $$x^{2}-1=(x-1)(x+1).$$\n\nМножитель $x^{2}+1$ дальше не раскладывается: он положителен при всех действительных $x$, значит действительных корней нет.\n\n**Ответ:** $$x^{4}-1=(x-1)(x+1)\\left(x^{2}+1\\right).$$\n\n**Проверка** при $x=2$: слева $16-1=15$, справа $1\\cdot3\\cdot5=15$ ✓",
+    "en": "First step: $$x^{4}-1=\\left(x^{2}\\right)^{2}-1^{2}=\\left(x^{2}-1\\right)\\left(x^{2}+1\\right).$$\n\nSecond step — the first factor is again a difference of squares: $$x^{2}-1=(x-1)(x+1).$$\n\nThe factor $x^{2}+1$ goes no further: it is positive for every real $x$, so it has no real roots.\n\n**Answer:** $$x^{4}-1=(x-1)(x+1)\\left(x^{2}+1\\right).$$\n\n**Check** at $x=2$: the left side is $16-1=15$, the right side $1\\cdot3\\cdot5=15$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что каждое нечётное число представимо в виде разности квадратов двух целых чисел.",
+    "en": "Prove that every odd number is a difference of two squares of integers."
+   },
+   "hint": {
+    "ru": "Посмотрите на $(n+1)^{2}-n^{2}$.",
+    "en": "Look at $(n+1)^{2}-n^{2}$."
+   },
+   "sol": {
+    "ru": "Раскроем скобки: $$(n+1)^{2}-n^{2}=n^{2}+2n+1-n^{2}=2n+1 .$$\n\nВыражение $2n+1$ при целом $n$ пробегает **все** нечётные числа. Значит для нечётного $m$ достаточно взять $$n=\\frac{m-1}{2},$$ и тогда $$m=(n+1)^{2}-n^{2}=\\left(\\frac{m+1}{2}\\right)^{2}-\\left(\\frac{m-1}{2}\\right)^{2} . \\qquad\\blacksquare$$\n\n**Пример.** $$45=23^{2}-22^{2}=529-484 \\quad\\checkmark$$\n\n**Замечание.** Чётные числа тоже иногда представимы: $8=3^{2}-1^{2}$. А вот числа вида $4k+2$ — никогда: разность квадратов сравнима с $0$, $1$ или $3$ по модулю $4$.",
+    "en": "Expand: $$(n+1)^{2}-n^{2}=n^{2}+2n+1-n^{2}=2n+1 .$$\n\nAs $n$ ranges over the integers, $2n+1$ runs through **all** odd numbers. So for an odd $m$ it suffices to take $$n=\\frac{m-1}{2},$$ and then $$m=(n+1)^{2}-n^{2}=\\left(\\frac{m+1}{2}\\right)^{2}-\\left(\\frac{m-1}{2}\\right)^{2} . \\qquad\\blacksquare$$\n\n**Example.** $$45=23^{2}-22^{2}=529-484 \\quad\\checkmark$$\n\n**Remark.** Some even numbers work too: $8=3^{2}-1^{2}$. But numbers of the form $4k+2$ never do: a difference of squares is $\\equiv0$, $1$ or $3$ modulo $4$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Упростите выражение $(a+b)^{3}-(a-b)^{3}$.",
+    "en": "Simplify $(a+b)^{3}-(a-b)^{3}$."
+   },
+   "hint": {
+    "ru": "Раскройте оба куба и сложите — часть слагаемых сократится.",
+    "en": "Expand both cubes and add — many terms cancel."
+   },
+   "sol": {
+    "ru": "Раскроем оба куба: $$(a+b)^{3}=a^{3}+3a^{2}b+3ab^{2}+b^{3},$$ $$(a-b)^{3}=a^{3}-3a^{2}b+3ab^{2}-b^{3}.$$\n\nВычитая, видим, что слагаемые с $a^{3}$ и $3ab^{2}$ сокращаются, а остальные удваиваются: $$(a+b)^{3}-(a-b)^{3}=6a^{2}b+2b^{3}=2b\\left(3a^{2}+b^{2}\\right).$$\n\n**Проверка** при $a=2$, $b=1$: слева $27-1=26$, справа $2\\cdot1\\cdot(12+1)=26$ ✓\n\n**Ответ:** $2b\\left(3a^{2}+b^{2}\\right)$.",
+    "en": "Expand both cubes: $$(a+b)^{3}=a^{3}+3a^{2}b+3ab^{2}+b^{3},$$ $$(a-b)^{3}=a^{3}-3a^{2}b+3ab^{2}-b^{3}.$$\n\nSubtracting, the $a^{3}$ and $3ab^{2}$ terms cancel while the others double: $$(a+b)^{3}-(a-b)^{3}=6a^{2}b+2b^{3}=2b\\left(3a^{2}+b^{2}\\right).$$\n\n**Check** at $a=2$, $b=1$: the left side is $27-1=26$, the right side $2\\cdot1\\cdot(12+1)=26$ ✓\n\n**Answer:** $2b\\left(3a^{2}+b^{2}\\right)$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Разложите на множители $x^{3}+y^{3}+x+y$.",
+    "en": "Factor $x^{3}+y^{3}+x+y$."
+   },
+   "hint": {
+    "ru": "Сгруппируйте первые два и последние два слагаемых.",
+    "en": "Group the first two terms and the last two."
+   },
+   "sol": {
+    "ru": "Сгруппируем: $$\\left(x^{3}+y^{3}\\right)+(x+y).$$\n\nПервая скобка — сумма кубов: $$x^{3}+y^{3}=(x+y)\\left(x^{2}-xy+y^{2}\\right).$$\n\nТеперь общий множитель $x+y$ виден в обеих частях: $$(x+y)\\left(x^{2}-xy+y^{2}\\right)+(x+y)=(x+y)\\left(x^{2}-xy+y^{2}+1\\right).$$\n\n**Проверка** при $x=1$, $y=1$: слева $1+1+1+1=4$, справа $2\\cdot(1-1+1+1)=2\\cdot2=4$ ✓\n\n**Ответ:** $(x+y)\\left(x^{2}-xy+y^{2}+1\\right)$.",
+    "en": "Group the terms: $$\\left(x^{3}+y^{3}\\right)+(x+y).$$\n\nThe first bracket is a sum of cubes: $$x^{3}+y^{3}=(x+y)\\left(x^{2}-xy+y^{2}\\right).$$\n\nNow the common factor $x+y$ is visible in both parts: $$(x+y)\\left(x^{2}-xy+y^{2}\\right)+(x+y)=(x+y)\\left(x^{2}-xy+y^{2}+1\\right).$$\n\n**Check** at $x=1$, $y=1$: the left side is $1+1+1+1=4$, the right side $2\\cdot(1-1+1+1)=2\\cdot2=4$ ✓\n\n**Answer:** $(x+y)\\left(x^{2}-xy+y^{2}+1\\right)$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите уравнение $x^{4}+4x^{3}+6x^{2}+4x+1=16$.",
+    "en": "Solve the equation $x^{4}+4x^{3}+6x^{2}+4x+1=16$."
+   },
+   "hint": {
+    "ru": "Коэффициенты $1,4,6,4,1$ — это строка треугольника Паскаля.",
+    "en": "The coefficients $1,4,6,4,1$ form a row of Pascal’s triangle."
+   },
+   "sol": {
+    "ru": "Коэффициенты $1,4,6,4,1$ — это в точности биномиальные коэффициенты четвёртой степени, поэтому левая часть сворачивается: $$x^{4}+4x^{3}+6x^{2}+4x+1=(x+1)^{4} .$$\n\nУравнение превращается в $$(x+1)^{4}=16 .$$\n\nЧетвёртая степень неотрицательна, и извлекая корень четвёртой степени, получаем $$|x+1|=2\\quad\\Longrightarrow\\quad x+1=2\\ \\text{или}\\ x+1=-2 .$$\n\n**Ответ:** $x=1$ и $x=-3$.\n\n**Проверка:** при $x=1$ левая часть равна $2^{4}=16$ ✓; при $x=-3$ она равна $(-2)^{4}=16$ ✓",
+    "en": "The coefficients $1,4,6,4,1$ are exactly the binomial coefficients of the fourth power, so the left side folds up: $$x^{4}+4x^{3}+6x^{2}+4x+1=(x+1)^{4} .$$\n\nThe equation becomes $$(x+1)^{4}=16 .$$\n\nA fourth power is non-negative, and taking fourth roots, $$|x+1|=2\\quad\\Longrightarrow\\quad x+1=2\\ \\text{or}\\ x+1=-2 .$$\n\n**Answer:** $x=1$ and $x=-3$.\n\n**Check:** at $x=1$ the left side is $2^{4}=16$ ✓; at $x=-3$ it is $(-2)^{4}=16$ ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Известно, что $a-b=3$ и $ab=4$. Найдите $a^{3}-b^{3}$.",
+    "en": "Given $a-b=3$ and $ab=4$, find $a^{3}-b^{3}$."
+   },
+   "hint": {
+    "ru": "$a^{3}-b^{3}=(a-b)^{3}+3ab(a-b)$.",
+    "en": "$a^{3}-b^{3}=(a-b)^{3}+3ab(a-b)$."
+   },
+   "sol": {
+    "ru": "Раскроем куб разности: $$(a-b)^{3}=a^{3}-3a^{2}b+3ab^{2}-b^{3}=a^{3}-b^{3}-3ab(a-b).$$\n\nОтсюда $$a^{3}-b^{3}=(a-b)^{3}+3ab(a-b).$$\n\nПодставим данные: $$a^{3}-b^{3}=3^{3}+3\\cdot4\\cdot3=27+36=63 .$$\n\n**Проверка.** Из $a-b=3$ и $ab=4$ числа $a$ и $-b$ — корни уравнения $t^{2}-3t-4=0$, то есть $a=4$, $b=1$. И действительно $$4^{3}-1^{3}=64-1=63 \\quad\\checkmark$$\n\n**Ответ:** $63$.",
+    "en": "Expand the cube of a difference: $$(a-b)^{3}=a^{3}-3a^{2}b+3ab^{2}-b^{3}=a^{3}-b^{3}-3ab(a-b).$$\n\nHence $$a^{3}-b^{3}=(a-b)^{3}+3ab(a-b).$$\n\nSubstitute the data: $$a^{3}-b^{3}=3^{3}+3\\cdot4\\cdot3=27+36=63 .$$\n\n**Check.** From $a-b=3$ and $ab=4$ the numbers $a$ and $-b$ are roots of $t^{2}-3t-4=0$, so $a=4$, $b=1$. Indeed $$4^{3}-1^{3}=64-1=63 \\quad\\checkmark$$\n\n**Answer:** $63$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Разложите на множители $a^{3}-b^{3}-a+b$.",
+    "en": "Factor $a^{3}-b^{3}-a+b$."
+   },
+   "hint": {
+    "ru": "$-a+b=-(a-b)$.",
+    "en": "$-a+b=-(a-b)$."
+   },
+   "sol": {
+    "ru": "Сгруппируем: $$\\left(a^{3}-b^{3}\\right)-(a-b).$$\n\nПервая скобка — разность кубов: $$a^{3}-b^{3}=(a-b)\\left(a^{2}+ab+b^{2}\\right).$$\n\nВыносим общий множитель $a-b$: $$(a-b)\\left(a^{2}+ab+b^{2}\\right)-(a-b)=(a-b)\\left(a^{2}+ab+b^{2}-1\\right).$$\n\n**Проверка** при $a=2$, $b=1$: слева $8-1-2+1=6$, справа $1\\cdot(4+2+1-1)=6$ ✓\n\n**Ответ:** $(a-b)\\left(a^{2}+ab+b^{2}-1\\right)$.",
+    "en": "Group the terms: $$\\left(a^{3}-b^{3}\\right)-(a-b).$$\n\nThe first bracket is a difference of cubes: $$a^{3}-b^{3}=(a-b)\\left(a^{2}+ab+b^{2}\\right).$$\n\nTake out the common factor $a-b$: $$(a-b)\\left(a^{2}+ab+b^{2}\\right)-(a-b)=(a-b)\\left(a^{2}+ab+b^{2}-1\\right).$$\n\n**Check** at $a=2$, $b=1$: the left side is $8-1-2+1=6$, the right side $1\\cdot(4+2+1-1)=6$ ✓\n\n**Answer:** $(a-b)\\left(a^{2}+ab+b^{2}-1\\right)$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите разложением на множители, что $4^{n}-1$ делится на $3$ при любом целом $n\\ge1$.",
+    "en": "Use a factorisation to prove that $4^{n}-1$ is divisible by $3$ for every integer $n\\ge1$."
+   },
+   "hint": {
+    "ru": "$a^{n}-b^{n}$ всегда делится на $a-b$.",
+    "en": "$a^{n}-b^{n}$ is always divisible by $a-b$."
+   },
+   "sol": {
+    "ru": "Воспользуемся тождеством $$a^{n}-b^{n}=(a-b)\\left(a^{n-1}+a^{n-2}b+\\dots+ab^{n-2}+b^{n-1}\\right).$$\n\nПри $a=4$, $b=1$ оно даёт $$4^{n}-1=(4-1)\\left(4^{n-1}+4^{n-2}+\\dots+4+1\\right)=3\\cdot\\left(4^{n-1}+\\dots+1\\right).$$\n\nВторая скобка — целое число, значит $3\\mid4^{n}-1$. $\\blacksquare$\n\n**Проверка:** $4^{3}-1=63=3\\cdot21$ ✓\n\n**Замечание.** Та же формула сразу даёт делимость $10^{n}-1$ на $9$ и $6^{n}-1$ на $5$.",
+    "en": "Use the identity $$a^{n}-b^{n}=(a-b)\\left(a^{n-1}+a^{n-2}b+\\dots+ab^{n-2}+b^{n-1}\\right).$$\n\nWith $a=4$, $b=1$ it gives $$4^{n}-1=(4-1)\\left(4^{n-1}+4^{n-2}+\\dots+4+1\\right)=3\\cdot\\left(4^{n-1}+\\dots+1\\right).$$\n\nThe second bracket is an integer, so $3\\mid4^{n}-1$. $\\blacksquare$\n\n**Check:** $4^{3}-1=63=3\\cdot21$ ✓\n\n**Remark.** The same formula immediately gives that $9\\mid10^{n}-1$ and $5\\mid6^{n}-1$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Разложите $x^{6}-y^{6}$ на множители до конца (над действительными числами).",
+    "en": "Factor $x^{6}-y^{6}$ completely over the reals."
+   },
+   "hint": {
+    "ru": "Сначала как разность квадратов, потом каждый куб.",
+    "en": "First as a difference of squares, then each cube."
+   },
+   "sol": {
+    "ru": "Сначала разность квадратов: $$x^{6}-y^{6}=\\left(x^{3}\\right)^{2}-\\left(y^{3}\\right)^{2}=\\left(x^{3}-y^{3}\\right)\\left(x^{3}+y^{3}\\right).$$\n\nТеперь разность и сумму кубов: $$x^{3}-y^{3}=(x-y)\\left(x^{2}+xy+y^{2}\\right),\\qquad x^{3}+y^{3}=(x+y)\\left(x^{2}-xy+y^{2}\\right).$$\n\nИтого $$x^{6}-y^{6}=(x-y)(x+y)\\left(x^{2}+xy+y^{2}\\right)\\left(x^{2}-xy+y^{2}\\right).$$\n\nКвадратные множители дальше не раскладываются: их дискриминанты (по $x$) равны $y^{2}-4y^{2}=-3y^{2}\\le0$.\n\n**Проверка** при $x=2$, $y=1$: слева $64-1=63$, справа $1\\cdot3\\cdot7\\cdot3=63$ ✓",
+    "en": "First a difference of squares: $$x^{6}-y^{6}=\\left(x^{3}\\right)^{2}-\\left(y^{3}\\right)^{2}=\\left(x^{3}-y^{3}\\right)\\left(x^{3}+y^{3}\\right).$$\n\nNow the difference and sum of cubes: $$x^{3}-y^{3}=(x-y)\\left(x^{2}+xy+y^{2}\\right),\\qquad x^{3}+y^{3}=(x+y)\\left(x^{2}-xy+y^{2}\\right).$$\n\nAltogether $$x^{6}-y^{6}=(x-y)(x+y)\\left(x^{2}+xy+y^{2}\\right)\\left(x^{2}-xy+y^{2}\\right).$$\n\nThe quadratic factors go no further: their discriminants (in $x$) are $y^{2}-4y^{2}=-3y^{2}\\le0$.\n\n**Check** at $x=2$, $y=1$: the left side is $64-1=63$, the right side $1\\cdot3\\cdot7\\cdot3=63$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите тождество $$a^{2}+b^{2}+c^{2}-ab-bc-ca=\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]$$ и выведите, что левая часть неотрицательна.",
+    "en": "Prove the identity $$a^{2}+b^{2}+c^{2}-ab-bc-ca=\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]$$ and deduce that the left side is non-negative."
+   },
+   "hint": {
+    "ru": "Раскройте правую часть.",
+    "en": "Expand the right-hand side."
+   },
+   "sol": {
+    "ru": "Раскроем правую часть: $$(a-b)^{2}+(b-c)^{2}+(c-a)^{2}=\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$\n\nСобирая подобные, получаем $$2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca ,$$ то есть ровно удвоенную левую часть ✓\n\n**Следствие.** Справа стоит сумма квадратов, умноженная на $\\tfrac12$, а квадраты неотрицательны, поэтому $$a^{2}+b^{2}+c^{2}\\ \\ge\\ ab+bc+ca$$ для всех действительных $a,b,c$.\n\n**Когда равенство?** Только если все три квадрата равны нулю, то есть $a=b=c$. $\\blacksquare$",
+    "en": "Expand the right-hand side: $$(a-b)^{2}+(b-c)^{2}+(c-a)^{2}=\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$\n\nCollecting like terms gives $$2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca ,$$ exactly twice the left-hand side ✓\n\n**Consequence.** The right side is half a sum of squares, and squares are non-negative, so $$a^{2}+b^{2}+c^{2}\\ \\ge\\ ab+bc+ca$$ for all real $a,b,c$.\n\n**Equality?** Only when all three squares vanish, i.e. $a=b=c$. $\\blacksquare$"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Разложите на множители $x^{5}+x+1$.",
+    "en": "Factor $x^{5}+x+1$."
+   },
+   "hint": {
+    "ru": "Прибавьте и вычтите $x^{2}$, чтобы получить множитель $x^{2}+x+1$.",
+    "en": "Add and subtract $x^{2}$ to bring out the factor $x^{2}+x+1$."
+   },
+   "sol": {
+    "ru": "Добавим и вычтем $x^{2}$: $$x^{5}+x+1=x^{5}-x^{2}+\\left(x^{2}+x+1\\right).$$\n\nПервая часть раскладывается: $$x^{5}-x^{2}=x^{2}\\left(x^{3}-1\\right)=x^{2}(x-1)\\left(x^{2}+x+1\\right).$$\n\nТеперь общий множитель виден: $$x^{5}+x+1=\\left(x^{2}+x+1\\right)\\left[x^{2}(x-1)+1\\right]=\\left(x^{2}+x+1\\right)\\left(x^{3}-x^{2}+1\\right).$$\n\n**Проверка** раскрытием: $$\\left(x^{2}+x+1\\right)\\left(x^{3}-x^{2}+1\\right)=x^{5}-x^{4}+x^{2}+x^{4}-x^{3}+x+x^{3}-x^{2}+1=x^{5}+x+1 \\quad\\checkmark$$\n\n**Ответ:** $\\left(x^{2}+x+1\\right)\\left(x^{3}-x^{2}+1\\right)$.\n\n**Почему приём работает.** Корни многочлена $x^{2}+x+1$ — это комплексные кубические корни из единицы $\\omega$, и для них $\\omega^{5}+\\omega+1=\\omega^{2}+\\omega+1=0$, так что множитель обязан быть.",
+    "en": "Add and subtract $x^{2}$: $$x^{5}+x+1=x^{5}-x^{2}+\\left(x^{2}+x+1\\right).$$\n\nThe first part factors: $$x^{5}-x^{2}=x^{2}\\left(x^{3}-1\\right)=x^{2}(x-1)\\left(x^{2}+x+1\\right).$$\n\nNow the common factor is visible: $$x^{5}+x+1=\\left(x^{2}+x+1\\right)\\left[x^{2}(x-1)+1\\right]=\\left(x^{2}+x+1\\right)\\left(x^{3}-x^{2}+1\\right).$$\n\n**Check** by expanding: $$\\left(x^{2}+x+1\\right)\\left(x^{3}-x^{2}+1\\right)=x^{5}-x^{4}+x^{2}+x^{4}-x^{3}+x+x^{3}-x^{2}+1=x^{5}+x+1 \\quad\\checkmark$$\n\n**Answer:** $\\left(x^{2}+x+1\\right)\\left(x^{3}-x^{2}+1\\right)$.\n\n**Why the trick works.** The roots of $x^{2}+x+1$ are the complex cube roots of unity $\\omega$, and for them $\\omega^{5}+\\omega+1=\\omega^{2}+\\omega+1=0$, so that factor has to be there."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите тождество $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}$$ и представьте с его помощью число $65$ суммой двух квадратов двумя способами.",
+    "en": "Prove the identity $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}$$ and use it to write $65$ as a sum of two squares in two ways."
+   },
+   "hint": {
+    "ru": "$65=5\\cdot13$, а $5=1^{2}+2^{2}$ и $13=2^{2}+3^{2}$.",
+    "en": "$65=5\\cdot13$, with $5=1^{2}+2^{2}$ and $13=2^{2}+3^{2}$."
+   },
+   "sol": {
+    "ru": "**Доказательство тождества.** Раскроем правую часть: $$(ac+bd)^{2}=a^{2}c^{2}+2abcd+b^{2}d^{2},$$ $$(ad-bc)^{2}=a^{2}d^{2}-2abcd+b^{2}c^{2}.$$ Слагаемые $\\pm2abcd$ уничтожаются, и остаётся $$a^{2}c^{2}+b^{2}d^{2}+a^{2}d^{2}+b^{2}c^{2}=a^{2}\\left(c^{2}+d^{2}\\right)+b^{2}\\left(c^{2}+d^{2}\\right)=\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right) \\quad\\checkmark$$\n\n**Применение.** Возьмём $5=1^{2}+2^{2}$ и $13=2^{2}+3^{2}$, то есть $a=1,b=2,c=2,d=3$: $$65=(1\\cdot2+2\\cdot3)^{2}+(1\\cdot3-2\\cdot2)^{2}=8^{2}+(-1)^{2}=64+1 .$$\n\nПоменяем местами $c$ и $d$ (то есть $c=3$, $d=2$): $$65=(1\\cdot3+2\\cdot2)^{2}+(1\\cdot2-2\\cdot3)^{2}=7^{2}+(-4)^{2}=49+16 .$$\n\n**Ответ:** $$65=8^{2}+1^{2}=7^{2}+4^{2} .$$\n\n**Замечание.** Именно это тождество объясняет, почему множество сумм двух квадратов замкнуто относительно умножения.",
+    "en": "**Proof of the identity.** Expand the right side: $$(ac+bd)^{2}=a^{2}c^{2}+2abcd+b^{2}d^{2},$$ $$(ad-bc)^{2}=a^{2}d^{2}-2abcd+b^{2}c^{2}.$$ The terms $\\pm2abcd$ cancel, leaving $$a^{2}c^{2}+b^{2}d^{2}+a^{2}d^{2}+b^{2}c^{2}=a^{2}\\left(c^{2}+d^{2}\\right)+b^{2}\\left(c^{2}+d^{2}\\right)=\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right) \\quad\\checkmark$$\n\n**Application.** Take $5=1^{2}+2^{2}$ and $13=2^{2}+3^{2}$, i.e. $a=1,b=2,c=2,d=3$: $$65=(1\\cdot2+2\\cdot3)^{2}+(1\\cdot3-2\\cdot2)^{2}=8^{2}+(-1)^{2}=64+1 .$$\n\nSwapping $c$ and $d$ (so $c=3$, $d=2$): $$65=(1\\cdot3+2\\cdot2)^{2}+(1\\cdot2-2\\cdot3)^{2}=7^{2}+(-4)^{2}=49+16 .$$\n\n**Answer:** $$65=8^{2}+1^{2}=7^{2}+4^{2} .$$\n\n**Remark.** This identity is exactly why the set of sums of two squares is closed under multiplication."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $a^{n}-b^{n}$ делится на $a-b$ при всех целых $a,b$ и натуральных $n$, и выведите отсюда, что $6^{100}-1$ делится на $35$.",
+    "en": "Prove that $a^{n}-b^{n}$ is divisible by $a-b$ for all integers $a,b$ and positive integers $n$, and deduce that $6^{100}-1$ is divisible by $35$."
+   },
+   "hint": {
+    "ru": "$35=5\\cdot7$; посмотрите на $6-1$ и на $6^{2}-1$.",
+    "en": "$35=5\\cdot7$; look at $6-1$ and at $6^{2}-1$."
+   },
+   "sol": {
+    "ru": "**Тождество.** Проверим прямым раскрытием скобок: $$(a-b)\\left(a^{n-1}+a^{n-2}b+\\dots+ab^{n-2}+b^{n-1}\\right)$$ — при умножении на $a$ получаем $a^{n}+a^{n-1}b+\\dots+ab^{n-1}$, при умножении на $-b$ получаем $-a^{n-1}b-\\dots-b^{n}$. Все средние слагаемые попарно уничтожаются, остаётся $$a^{n}-b^{n} . \\qquad\\checkmark$$ Вторая скобка — целое число, значит $(a-b)\\mid a^{n}-b^{n}$.\n\n**Делимость на $5$.** При $a=6$, $b=1$: $$5=6-1\\ \\big|\\ 6^{100}-1 \\quad\\checkmark$$\n\n**Делимость на $7$.** Запишем $6^{100}=\\left(6^{2}\\right)^{50}=36^{50}$ и применим тождество при $a=36$, $b=1$: $$35=36-1\\ \\big|\\ 36^{50}-1=6^{100}-1 ,$$ а $7\\mid35$ ✓\n\nЧисла $5$ и $7$ взаимно просты, значит $6^{100}-1$ делится на $35$. $\\blacksquare$\n\n**Проверка идеи** на маленьком показателе: $6^{2}-1=35$ ✓",
+    "en": "**The identity.** Check by expanding: $$(a-b)\\left(a^{n-1}+a^{n-2}b+\\dots+ab^{n-2}+b^{n-1}\\right)$$ — multiplying by $a$ gives $a^{n}+a^{n-1}b+\\dots+ab^{n-1}$, multiplying by $-b$ gives $-a^{n-1}b-\\dots-b^{n}$. All middle terms cancel in pairs, leaving $$a^{n}-b^{n} . \\qquad\\checkmark$$ The second bracket is an integer, so $(a-b)\\mid a^{n}-b^{n}$.\n\n**Divisibility by $5$.** With $a=6$, $b=1$: $$5=6-1\\ \\big|\\ 6^{100}-1 \\quad\\checkmark$$\n\n**Divisibility by $7$.** Write $6^{100}=\\left(6^{2}\\right)^{50}=36^{50}$ and apply the identity with $a=36$, $b=1$: $$35=36-1\\ \\big|\\ 36^{50}-1=6^{100}-1 ,$$ and $7\\mid35$ ✓\n\nAs $5$ and $7$ are coprime, $6^{100}-1$ is divisible by $35$. $\\blacksquare$\n\n**Sanity check** on a small exponent: $6^{2}-1=35$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что произведение четырёх подряд идущих целых чисел, увеличенное на единицу, — полный квадрат.",
+    "en": "Prove that the product of four consecutive integers, increased by one, is a perfect square."
+   },
+   "hint": {
+    "ru": "Перемножьте крайние и средние: $n(n+3)$ и $(n+1)(n+2)$.",
+    "en": "Multiply the outer and inner pairs: $n(n+3)$ and $(n+1)(n+2)$."
+   },
+   "sol": {
+    "ru": "Обозначим числа $n$, $n+1$, $n+2$, $n+3$ и перемножим их «крест-накрест»: $$n(n+3)=n^{2}+3n,\\qquad (n+1)(n+2)=n^{2}+3n+2 .$$\n\nОба выражения зависят только от $t=n^{2}+3n$, поэтому $$n(n+1)(n+2)(n+3)+1=t(t+2)+1=t^{2}+2t+1=(t+1)^{2}.$$\n\nВозвращаясь к $n$: $$n(n+1)(n+2)(n+3)+1=\\left(n^{2}+3n+1\\right)^{2} . \\qquad\\blacksquare$$\n\n**Проверка** при $n=1$: $$1\\cdot2\\cdot3\\cdot4+1=25=5^{2},\\qquad n^{2}+3n+1=1+3+1=5 \\quad\\checkmark$$\n\n**Ещё пример.** $n=5$: $5\\cdot6\\cdot7\\cdot8+1=1681=41^{2}$, и $25+15+1=41$ ✓",
+    "en": "Call the numbers $n$, $n+1$, $n+2$, $n+3$ and multiply them crosswise: $$n(n+3)=n^{2}+3n,\\qquad (n+1)(n+2)=n^{2}+3n+2 .$$\n\nBoth depend only on $t=n^{2}+3n$, so $$n(n+1)(n+2)(n+3)+1=t(t+2)+1=t^{2}+2t+1=(t+1)^{2}.$$\n\nBack in terms of $n$: $$n(n+1)(n+2)(n+3)+1=\\left(n^{2}+3n+1\\right)^{2} . \\qquad\\blacksquare$$\n\n**Check** at $n=1$: $$1\\cdot2\\cdot3\\cdot4+1=25=5^{2},\\qquad n^{2}+3n+1=1+3+1=5 \\quad\\checkmark$$\n\n**Another example.** $n=5$: $5\\cdot6\\cdot7\\cdot8+1=1681=41^{2}$, and $25+15+1=41$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что число $\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}$ — полный квадрат.",
+    "en": "Prove that $\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}$ is a perfect square."
+   },
+   "hint": {
+    "ru": "$\\underbrace{11\\ldots1}_{k}=\\dfrac{10^{k}-1}{9}$.",
+    "en": "$\\underbrace{11\\ldots1}_{k}=\\dfrac{10^{k}-1}{9}$."
+   },
+   "sol": {
+    "ru": "Запишем повторяющиеся единицы через степени десятки: $$\\underbrace{11\\ldots1}_{k}=\\frac{10^{k}-1}{9} .$$\n\nТогда $$\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}=\\frac{10^{2n}-1}{9}-2\\cdot\\frac{10^{n}-1}{9}=\\frac{10^{2n}-1-2\\cdot10^{n}+2}{9} .$$\n\nВ числителе получился полный квадрат: $$10^{2n}-2\\cdot10^{n}+1=\\left(10^{n}-1\\right)^{2} .$$\n\nЗначит $$\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}=\\left(\\frac{10^{n}-1}{3}\\right)^{2}=\\left(\\underbrace{33\\ldots3}_{n}\\right)^{2} ,$$ и это действительно квадрат целого числа, ведь $10^{n}-1=\\underbrace{99\\ldots9}_{n}$ делится на $3$. $\\blacksquare$\n\n**Проверка** при $n=2$: $$1111-22=1089=33^{2} \\quad\\checkmark$$\n\nПри $n=3$: $111111-222=110889=333^{2}$ ✓",
+    "en": "Write the repunits through powers of ten: $$\\underbrace{11\\ldots1}_{k}=\\frac{10^{k}-1}{9} .$$\n\nThen $$\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}=\\frac{10^{2n}-1}{9}-2\\cdot\\frac{10^{n}-1}{9}=\\frac{10^{2n}-1-2\\cdot10^{n}+2}{9} .$$\n\nThe numerator is a perfect square: $$10^{2n}-2\\cdot10^{n}+1=\\left(10^{n}-1\\right)^{2} .$$\n\nHence $$\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}=\\left(\\frac{10^{n}-1}{3}\\right)^{2}=\\left(\\underbrace{33\\ldots3}_{n}\\right)^{2} ,$$ and this really is the square of an integer, since $10^{n}-1=\\underbrace{99\\ldots9}_{n}$ is divisible by $3$. $\\blacksquare$\n\n**Check** at $n=2$: $$1111-22=1089=33^{2} \\quad\\checkmark$$\n\nAt $n=3$: $111111-222=110889=333^{2}$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите тождество $$(a+b+c)(ab+bc+ca)-abc=(a+b)(b+c)(c+a).$$",
+    "en": "Prove the identity $$(a+b+c)(ab+bc+ca)-abc=(a+b)(b+c)(c+a).$$"
+   },
+   "hint": {
+    "ru": "Раскройте обе части и сравните.",
+    "en": "Expand both sides and compare."
+   },
+   "sol": {
+    "ru": "**Левая часть.** Раскроем произведение: $$(a+b+c)(ab+bc+ca)=a^{2}b+abc+a^{2}c+ab^{2}+b^{2}c+abc+abc+bc^{2}+ac^{2},$$ то есть $$a^{2}b+a^{2}c+ab^{2}+b^{2}c+bc^{2}+ac^{2}+3abc .$$ Вычитая $abc$, получаем $$a^{2}b+a^{2}c+ab^{2}+b^{2}c+bc^{2}+ac^{2}+2abc .$$\n\n**Правая часть.** Сначала $$(a+b)(b+c)=ab+ac+b^{2}+bc ,$$ затем умножим на $(c+a)$: $$\\left(ab+ac+b^{2}+bc\\right)(c+a)=abc+ac^{2}+b^{2}c+bc^{2}+a^{2}b+a^{2}c+ab^{2}+abc .$$\n\nСобирая, получаем $$a^{2}b+a^{2}c+ab^{2}+b^{2}c+bc^{2}+ac^{2}+2abc $$ — то же самое ✓ $\\blacksquare$\n\n**Проверка** при $a=b=c=1$: слева $3\\cdot3-1=8$, справа $2\\cdot2\\cdot2=8$ ✓\n\n**Полезное следствие.** Если $a+b+c=0$, то правая часть равна $-abc$ (подставьте $a+b=-c$ и так далее).",
+    "en": "**Left side.** Expand the product: $$(a+b+c)(ab+bc+ca)=a^{2}b+abc+a^{2}c+ab^{2}+b^{2}c+abc+abc+bc^{2}+ac^{2},$$ i.e. $$a^{2}b+a^{2}c+ab^{2}+b^{2}c+bc^{2}+ac^{2}+3abc .$$ Subtracting $abc$ leaves $$a^{2}b+a^{2}c+ab^{2}+b^{2}c+bc^{2}+ac^{2}+2abc .$$\n\n**Right side.** First $$(a+b)(b+c)=ab+ac+b^{2}+bc ,$$ then multiply by $(c+a)$: $$\\left(ab+ac+b^{2}+bc\\right)(c+a)=abc+ac^{2}+b^{2}c+bc^{2}+a^{2}b+a^{2}c+ab^{2}+abc .$$\n\nCollecting gives $$a^{2}b+a^{2}c+ab^{2}+b^{2}c+bc^{2}+ac^{2}+2abc $$ — the same thing ✓ $\\blacksquare$\n\n**Check** at $a=b=c=1$: the left side is $3\\cdot3-1=8$, the right side $2\\cdot2\\cdot2=8$ ✓\n\n**A useful consequence.** If $a+b+c=0$ the right side equals $-abc$ (substitute $a+b=-c$ and so on)."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Пусть $x$ — действительное число и $x+\\dfrac1x$ — целое. Докажите, что $x^{n}+\\dfrac1{x^{n}}$ целое при всех натуральных $n$.",
+    "en": "Let $x$ be real with $x+\\dfrac1x$ an integer. Prove that $x^{n}+\\dfrac1{x^{n}}$ is an integer for every positive integer $n$."
+   },
+   "hint": {
+    "ru": "Умножьте $x^{n}+x^{-n}$ на $x+x^{-1}$ и посмотрите, что получится.",
+    "en": "Multiply $x^{n}+x^{-n}$ by $x+x^{-1}$ and see what comes out."
+   },
+   "sol": {
+    "ru": "Обозначим $$s_n=x^{n}+\\frac1{x^{n}},\\qquad s_0=2,\\qquad s_1=x+\\frac1x\\in\\mathbb{Z} .$$\n\n**Ключевое соотношение.** Перемножим: $$s_n\\cdot s_1=\\left(x^{n}+\\frac1{x^{n}}\\right)\\left(x+\\frac1x\\right)=x^{n+1}+x^{n-1}+\\frac1{x^{n-1}}+\\frac1{x^{n+1}}=s_{n+1}+s_{n-1} .$$\n\nОтсюда $$s_{n+1}=s_1\\,s_n-s_{n-1} .$$\n\n**Индукция.** База: $s_0=2$ и $s_1$ целые. Переход: если $s_{n-1}$ и $s_n$ целые, то и $s_{n+1}=s_1s_n-s_{n-1}$ целое как разность произведений целых чисел.\n\nЗначит все $s_n$ целые. $\\blacksquare$\n\n**Пример.** Пусть $x+\\tfrac1x=3$. Тогда $$s_2=3\\cdot3-2=7,\\qquad s_3=3\\cdot7-3=18,\\qquad s_4=3\\cdot18-7=47 .$$",
+    "en": "Write $$s_n=x^{n}+\\frac1{x^{n}},\\qquad s_0=2,\\qquad s_1=x+\\frac1x\\in\\mathbb{Z} .$$\n\n**The key relation.** Multiply: $$s_n\\cdot s_1=\\left(x^{n}+\\frac1{x^{n}}\\right)\\left(x+\\frac1x\\right)=x^{n+1}+x^{n-1}+\\frac1{x^{n-1}}+\\frac1{x^{n+1}}=s_{n+1}+s_{n-1} .$$\n\nHence $$s_{n+1}=s_1\\,s_n-s_{n-1} .$$\n\n**Induction.** Base: $s_0=2$ and $s_1$ are integers. Step: if $s_{n-1}$ and $s_n$ are integers, so is $s_{n+1}=s_1s_n-s_{n-1}$, being a difference of products of integers.\n\nSo every $s_n$ is an integer. $\\blacksquare$\n\n**Example.** Suppose $x+\\tfrac1x=3$. Then $$s_2=3\\cdot3-2=7,\\qquad s_3=3\\cdot7-3=18,\\qquad s_4=3\\cdot18-7=47 .$$"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $n^{5}+n^{4}+1$ составное при любом целом $n>1$.",
+    "en": "Prove that $n^{5}+n^{4}+1$ is composite for every integer $n>1$."
+   },
+   "hint": {
+    "ru": "Множитель $n^{2}+n+1$ здесь тоже есть.",
+    "en": "The factor $n^{2}+n+1$ is hiding here too."
+   },
+   "sol": {
+    "ru": "Проверим разложение: $$\\left(n^{2}+n+1\\right)\\left(n^{3}-n+1\\right)=n^{5}-n^{3}+n^{2}+n^{4}-n^{2}+n+n^{3}-n+1 .$$\n\nСлагаемые $\\mp n^{3}$, $\\pm n^{2}$ и $\\pm n$ попарно уничтожаются, остаётся $$n^{5}+n^{4}+1 . \\qquad\\checkmark$$\n\nОсталось убедиться, что при $n\\ge2$ оба множителя больше единицы: $$n^{2}+n+1\\ge4+2+1=7>1 ,$$ $$n^{3}-n+1=n\\left(n^{2}-1\\right)+1\\ge2\\cdot3+1=7>1 .$$\n\nЗначит число раскладывается в произведение двух множителей, больших единицы, то есть составное. $\\blacksquare$\n\n**Проверка** при $n=2$: $32+16+1=49=7\\cdot7$ ✓ При $n=3$: $243+81+1=325=13\\cdot25$ ✓",
+    "en": "Check the factorisation: $$\\left(n^{2}+n+1\\right)\\left(n^{3}-n+1\\right)=n^{5}-n^{3}+n^{2}+n^{4}-n^{2}+n+n^{3}-n+1 .$$\n\nThe terms $\\mp n^{3}$, $\\pm n^{2}$ and $\\pm n$ cancel in pairs, leaving $$n^{5}+n^{4}+1 . \\qquad\\checkmark$$\n\nIt remains to see both factors exceed one for $n\\ge2$: $$n^{2}+n+1\\ge4+2+1=7>1 ,$$ $$n^{3}-n+1=n\\left(n^{2}-1\\right)+1\\ge2\\cdot3+1=7>1 .$$\n\nSo the number splits into two factors greater than one — it is composite. $\\blacksquare$\n\n**Check** at $n=2$: $32+16+1=49=7\\cdot7$ ✓ At $n=3$: $243+81+1=325=13\\cdot25$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что при $x\\ne1$ $$(1+x)\\left(1+x^{2}\\right)\\left(1+x^{4}\\right)\\left(1+x^{8}\\right)=\\frac{1-x^{16}}{1-x} ,$$ и вычислите $3\\cdot5\\cdot17\\cdot257$.",
+    "en": "Prove that for $x\\ne1$ $$(1+x)\\left(1+x^{2}\\right)\\left(1+x^{4}\\right)\\left(1+x^{8}\\right)=\\frac{1-x^{16}}{1-x} ,$$ and compute $3\\cdot5\\cdot17\\cdot257$."
+   },
+   "hint": {
+    "ru": "Домножьте левую часть на $1-x$ и применяйте разность квадратов раз за разом.",
+    "en": "Multiply the left side by $1-x$ and apply the difference of squares again and again."
+   },
+   "sol": {
+    "ru": "**Тождество.** Домножим левую часть на $1-x$ и будем сворачивать: $$(1-x)(1+x)=1-x^{2};$$ $$\\left(1-x^{2}\\right)\\left(1+x^{2}\\right)=1-x^{4};$$ $$\\left(1-x^{4}\\right)\\left(1+x^{4}\\right)=1-x^{8};$$ $$\\left(1-x^{8}\\right)\\left(1+x^{8}\\right)=1-x^{16} .$$\n\nЗначит $$(1-x)\\cdot(1+x)\\left(1+x^{2}\\right)\\left(1+x^{4}\\right)\\left(1+x^{8}\\right)=1-x^{16} ,$$ и при $x\\ne1$ можно поделить на $1-x$ ✓\n\n**Вычисление.** Подставим $x=2$: $$3\\cdot5\\cdot17\\cdot257=(1+2)\\left(1+2^{2}\\right)\\left(1+2^{4}\\right)\\left(1+2^{8}\\right)=\\frac{1-2^{16}}{1-2}=2^{16}-1 .$$\n\n**Ответ:** $2^{16}-1=65535$.\n\n**Проверка:** $3\\cdot5=15$, $15\\cdot17=255$, $255\\cdot257=65535$ ✓",
+    "en": "**The identity.** Multiply the left side by $1-x$ and collapse it step by step: $$(1-x)(1+x)=1-x^{2};$$ $$\\left(1-x^{2}\\right)\\left(1+x^{2}\\right)=1-x^{4};$$ $$\\left(1-x^{4}\\right)\\left(1+x^{4}\\right)=1-x^{8};$$ $$\\left(1-x^{8}\\right)\\left(1+x^{8}\\right)=1-x^{16} .$$\n\nSo $$(1-x)\\cdot(1+x)\\left(1+x^{2}\\right)\\left(1+x^{4}\\right)\\left(1+x^{8}\\right)=1-x^{16} ,$$ and for $x\\ne1$ we may divide by $1-x$ ✓\n\n**The computation.** Put $x=2$: $$3\\cdot5\\cdot17\\cdot257=(1+2)\\left(1+2^{2}\\right)\\left(1+2^{4}\\right)\\left(1+2^{8}\\right)=\\frac{1-2^{16}}{1-2}=2^{16}-1 .$$\n\n**Answer:** $2^{16}-1=65535$.\n\n**Check:** $3\\cdot5=15$, $15\\cdot17=255$, $255\\cdot257=65535$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Числа $a,b,c$ отличны от нуля и $a+b+c=0$. Докажите, что $$\\frac{a^{2}}{2a^{2}+bc}+\\frac{b^{2}}{2b^{2}+ca}+\\frac{c^{2}}{2c^{2}+ab}=1 .$$",
+    "en": "Non-zero numbers $a,b,c$ satisfy $a+b+c=0$. Prove that $$\\frac{a^{2}}{2a^{2}+bc}+\\frac{b^{2}}{2b^{2}+ca}+\\frac{c^{2}}{2c^{2}+ab}=1 .$$"
+   },
+   "hint": {
+    "ru": "Подставьте $c=-a-b$ в знаменатель и разложите его на множители.",
+    "en": "Substitute $c=-a-b$ into a denominator and factor it."
+   },
+   "sol": {
+    "ru": "**Шаг 1: разложим знаменатель.** Так как $c=-a-b$, $$2a^{2}+bc=2a^{2}+b(-a-b)=2a^{2}-ab-b^{2}=(a-b)(2a+b).$$ А поскольку $2a+b=a+(a+b)=a-c$, получаем красивую форму $$2a^{2}+bc=(a-b)(a-c).$$ Аналогично $$2b^{2}+ca=(b-a)(b-c),\\qquad 2c^{2}+ab=(c-a)(c-b).$$\n\n**Шаг 2: сложим дроби.** Сумма принимает вид $$S=\\frac{a^{2}}{(a-b)(a-c)}+\\frac{b^{2}}{(b-a)(b-c)}+\\frac{c^{2}}{(c-a)(c-b)} .$$\n\nПриведём к общему знаменателю $(a-b)(b-c)(c-a)$. Учитывая знаки, числитель равен $$-a^{2}(b-c)-b^{2}(c-a)-c^{2}(a-b).$$\n\n**Шаг 3: раскроем числитель.** $$a^{2}(b-c)+b^{2}(c-a)+c^{2}(a-b)=-(a-b)(b-c)(c-a)$$ — это известное тождество; проверяется прямым раскрытием обеих частей.\n\nЗначит числитель равен $(a-b)(b-c)(c-a)$, и после сокращения $$S=1 . \\qquad\\blacksquare$$\n\n**Проверка** на конкретных числах $a=1$, $b=1$, $c=-2$: $$\\frac{1}{2-2}\\ \\text{—}$$ здесь знаменатель обращается в нуль, поэтому возьмём $a=1$, $b=2$, $c=-3$: $$\\frac{1}{2-6}+\\frac{4}{8-3}+\\frac{9}{18+2}=-\\frac14+\\frac45+\\frac9{20}=\\frac{-5+16+9}{20}=1 \\quad\\checkmark$$\n\n**Замечание.** Условие «все числа различны» нужно, чтобы знаменатели не обращались в нуль.",
+    "en": "**Step 1: factor a denominator.** Since $c=-a-b$, $$2a^{2}+bc=2a^{2}+b(-a-b)=2a^{2}-ab-b^{2}=(a-b)(2a+b).$$ And as $2a+b=a+(a+b)=a-c$, this takes the pretty form $$2a^{2}+bc=(a-b)(a-c).$$ Similarly $$2b^{2}+ca=(b-a)(b-c),\\qquad 2c^{2}+ab=(c-a)(c-b).$$\n\n**Step 2: add the fractions.** The sum becomes $$S=\\frac{a^{2}}{(a-b)(a-c)}+\\frac{b^{2}}{(b-a)(b-c)}+\\frac{c^{2}}{(c-a)(c-b)} .$$\n\nPut everything over $(a-b)(b-c)(c-a)$. Watching the signs, the numerator is $$-a^{2}(b-c)-b^{2}(c-a)-c^{2}(a-b).$$\n\n**Step 3: expand the numerator.** $$a^{2}(b-c)+b^{2}(c-a)+c^{2}(a-b)=-(a-b)(b-c)(c-a)$$ — a standard identity, verified by expanding both sides.\n\nSo the numerator equals $(a-b)(b-c)(c-a)$, and after cancelling $$S=1 . \\qquad\\blacksquare$$\n\n**Check** with concrete numbers: $a=1$, $b=2$, $c=-3$ gives $$\\frac{1}{2-6}+\\frac{4}{8-3}+\\frac{9}{18+2}=-\\frac14+\\frac45+\\frac9{20}=\\frac{-5+16+9}{20}=1 \\quad\\checkmark$$\n\n**Remark.** The numbers must be pairwise distinct, or a denominator vanishes."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Пусть $a+b+c=0$. Докажите, что $$\\frac{a^{7}+b^{7}+c^{7}}{7}=\\frac{a^{2}+b^{2}+c^{2}}{2}\\cdot\\frac{a^{5}+b^{5}+c^{5}}{5} .$$",
+    "en": "Let $a+b+c=0$. Prove that $$\\frac{a^{7}+b^{7}+c^{7}}{7}=\\frac{a^{2}+b^{2}+c^{2}}{2}\\cdot\\frac{a^{5}+b^{5}+c^{5}}{5} .$$"
+   },
+   "hint": {
+    "ru": "Обозначьте $q=ab+bc+ca$, $r=abc$ и получите рекуррентность $p_{n}=-q\\,p_{n-2}+r\\,p_{n-3}$.",
+    "en": "Set $q=ab+bc+ca$, $r=abc$ and derive the recursion $p_{n}=-q\\,p_{n-2}+r\\,p_{n-3}$."
+   },
+   "sol": {
+    "ru": "Обозначим степенные суммы $p_n=a^{n}+b^{n}+c^{n}$ и элементарные симметрические функции $$e_1=a+b+c=0,\\qquad e_2=ab+bc+ca=q,\\qquad e_3=abc=r .$$\n\n**Рекуррентность.** Числа $a,b,c$ — корни многочлена $$t^{3}-e_1t^{2}+e_2t-e_3=t^{3}+qt-r ,$$ значит для каждого из них $t^{3}=-qt+r$. Умножая на $t^{\\,n-3}$ и складывая по трём корням, получаем $$p_n=-q\\,p_{n-2}+r\\,p_{n-3},\\qquad n\\ge3 .$$\n\n**Считаем по очереди.** Начальные значения: $$p_0=3,\\qquad p_1=0,\\qquad p_2=e_1^{2}-2e_2=-2q .$$ Далее $$p_3=-q\\,p_1+r\\,p_0=3r ;$$ $$p_4=-q\\,p_2+r\\,p_1=2q^{2} ;$$ $$p_5=-q\\,p_3+r\\,p_2=-3qr-2qr=-5qr ;$$ $$p_6=-q\\,p_4+r\\,p_3=-2q^{3}+3r^{2} ;$$ $$p_7=-q\\,p_5+r\\,p_4=5q^{2}r+2q^{2}r=7q^{2}r .$$\n\n**Сравниваем.** $$\\frac{p_7}{7}=q^{2}r ,\\qquad \\frac{p_2}{2}\\cdot\\frac{p_5}{5}=\\frac{-2q}{2}\\cdot\\frac{-5qr}{5}=(-q)(-qr)=q^{2}r . \\qquad\\blacksquare$$\n\n**Проверка** на $a=1$, $b=1$, $c=-2$: $$p_7=1+1-128=-126,\\qquad p_2=6,\\qquad p_5=1+1-32=-30 ,$$ и $$\\frac{-126}{7}=-18,\\qquad \\frac62\\cdot\\frac{-30}{5}=3\\cdot(-6)=-18 \\quad\\checkmark$$",
+    "en": "Write the power sums $p_n=a^{n}+b^{n}+c^{n}$ and the elementary symmetric functions $$e_1=a+b+c=0,\\qquad e_2=ab+bc+ca=q,\\qquad e_3=abc=r .$$\n\n**The recursion.** The numbers $a,b,c$ are the roots of $$t^{3}-e_1t^{2}+e_2t-e_3=t^{3}+qt-r ,$$ so each satisfies $t^{3}=-qt+r$. Multiplying by $t^{\\,n-3}$ and summing over the three roots, $$p_n=-q\\,p_{n-2}+r\\,p_{n-3},\\qquad n\\ge3 .$$\n\n**Compute in turn.** The initial values are $$p_0=3,\\qquad p_1=0,\\qquad p_2=e_1^{2}-2e_2=-2q .$$ Then $$p_3=-q\\,p_1+r\\,p_0=3r ;$$ $$p_4=-q\\,p_2+r\\,p_1=2q^{2} ;$$ $$p_5=-q\\,p_3+r\\,p_2=-3qr-2qr=-5qr ;$$ $$p_6=-q\\,p_4+r\\,p_3=-2q^{3}+3r^{2} ;$$ $$p_7=-q\\,p_5+r\\,p_4=5q^{2}r+2q^{2}r=7q^{2}r .$$\n\n**Compare.** $$\\frac{p_7}{7}=q^{2}r ,\\qquad \\frac{p_2}{2}\\cdot\\frac{p_5}{5}=\\frac{-2q}{2}\\cdot\\frac{-5qr}{5}=(-q)(-qr)=q^{2}r . \\qquad\\blacksquare$$\n\n**Check** with $a=1$, $b=1$, $c=-2$: $$p_7=1+1-128=-126,\\qquad p_2=6,\\qquad p_5=1+1-32=-30 ,$$ and $$\\frac{-126}{7}=-18,\\qquad \\frac62\\cdot\\frac{-30}{5}=3\\cdot(-6)=-18 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите тождество Лагранжа для трёх пар чисел $$\\left(a_1^{2}+a_2^{2}+a_3^{2}\\right)\\left(b_1^{2}+b_2^{2}+b_3^{2}\\right)-\\left(a_1b_1+a_2b_2+a_3b_3\\right)^{2}=\\sum_{i<j}\\left(a_ib_j-a_jb_i\\right)^{2}$$ и выведите из него неравенство Коши — Буняковского.",
+    "en": "Prove Lagrange’s identity for three pairs $$\\left(a_1^{2}+a_2^{2}+a_3^{2}\\right)\\left(b_1^{2}+b_2^{2}+b_3^{2}\\right)-\\left(a_1b_1+a_2b_2+a_3b_3\\right)^{2}=\\sum_{i<j}\\left(a_ib_j-a_jb_i\\right)^{2}$$ and deduce the Cauchy–Schwarz inequality."
+   },
+   "hint": {
+    "ru": "Раскройте обе части и сравните одинаковые слагаемые.",
+    "en": "Expand both sides and match terms."
+   },
+   "sol": {
+    "ru": "**Левая часть.** Произведение сумм даёт девять слагаемых: $$\\sum_{i,j}a_i^{2}b_j^{2} ,$$ а квадрат скалярного произведения — $$\\sum_i a_i^{2}b_i^{2}+2\\sum_{i<j}a_ib_ia_jb_j .$$\n\nВычитая, «диагональные» члены $a_i^{2}b_i^{2}$ уничтожаются, и остаётся $$\\sum_{i\\ne j}a_i^{2}b_j^{2}-2\\sum_{i<j}a_ib_ia_jb_j=\\sum_{i<j}\\left(a_i^{2}b_j^{2}+a_j^{2}b_i^{2}-2a_ib_ja_jb_i\\right).$$\n\n**Правая часть.** Каждое слагаемое: $$\\left(a_ib_j-a_jb_i\\right)^{2}=a_i^{2}b_j^{2}-2a_ib_ja_jb_i+a_j^{2}b_i^{2} $$ — в точности то же самое ✓ $\\blacksquare$\n\n**Неравенство Коши — Буняковского.** Правая часть — сумма квадратов, значит она неотрицательна, откуда $$\\left(a_1b_1+a_2b_2+a_3b_3\\right)^{2}\\ \\le\\ \\left(a_1^{2}+a_2^{2}+a_3^{2}\\right)\\left(b_1^{2}+b_2^{2}+b_3^{2}\\right).$$\n\n**Когда равенство?** Только если все разности $a_ib_j-a_jb_i$ равны нулю, то есть векторы $(a_1,a_2,a_3)$ и $(b_1,b_2,b_3)$ пропорциональны.\n\n**Пример.** $a=(1,2,2)$, $b=(2,1,2)$: слева $(2+2+4)^{2}=64$, справа $9\\cdot9=81$, а разность $$\\left(1\\cdot1-2\\cdot2\\right)^{2}+\\left(1\\cdot2-2\\cdot2\\right)^{2}+\\left(2\\cdot2-2\\cdot1\\right)^{2}=9+4+4=17=81-64 \\quad\\checkmark$$",
+    "en": "**Left side.** The product of the sums gives nine terms $$\\sum_{i,j}a_i^{2}b_j^{2} ,$$ while the square of the dot product is $$\\sum_i a_i^{2}b_i^{2}+2\\sum_{i<j}a_ib_ia_jb_j .$$\n\nSubtracting, the diagonal terms $a_i^{2}b_i^{2}$ cancel and what remains is $$\\sum_{i\\ne j}a_i^{2}b_j^{2}-2\\sum_{i<j}a_ib_ia_jb_j=\\sum_{i<j}\\left(a_i^{2}b_j^{2}+a_j^{2}b_i^{2}-2a_ib_ja_jb_i\\right).$$\n\n**Right side.** Each term is $$\\left(a_ib_j-a_jb_i\\right)^{2}=a_i^{2}b_j^{2}-2a_ib_ja_jb_i+a_j^{2}b_i^{2} $$ — exactly the same ✓ $\\blacksquare$\n\n**Cauchy–Schwarz.** The right side is a sum of squares, hence non-negative, so $$\\left(a_1b_1+a_2b_2+a_3b_3\\right)^{2}\\ \\le\\ \\left(a_1^{2}+a_2^{2}+a_3^{2}\\right)\\left(b_1^{2}+b_2^{2}+b_3^{2}\\right).$$\n\n**Equality?** Only when every difference $a_ib_j-a_jb_i$ vanishes, i.e. the vectors $(a_1,a_2,a_3)$ and $(b_1,b_2,b_3)$ are proportional.\n\n**Example.** $a=(1,2,2)$, $b=(2,1,2)$: the left side is $(2+2+4)^{2}=64$, the right $9\\cdot9=81$, and the gap is $$\\left(1\\cdot1-2\\cdot2\\right)^{2}+\\left(1\\cdot2-2\\cdot2\\right)^{2}+\\left(2\\cdot2-2\\cdot1\\right)^{2}=9+4+4=17=81-64 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Действительные числа $a,b,c$ удовлетворяют равенству $a^{3}+b^{3}+c^{3}=3abc$. Докажите, что либо $a+b+c=0$, либо $a=b=c$.",
+    "en": "Real numbers $a,b,c$ satisfy $a^{3}+b^{3}+c^{3}=3abc$. Prove that either $a+b+c=0$ or $a=b=c$."
+   },
+   "hint": {
+    "ru": "Воспользуйтесь разложением $a^{3}+b^{3}+c^{3}-3abc$.",
+    "en": "Use the factorisation of $a^{3}+b^{3}+c^{3}-3abc$."
+   },
+   "sol": {
+    "ru": "Известное разложение: $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right).$$\n\nПо условию левая часть равна нулю, значит нулю равен один из множителей.\n\n**Первый случай:** $a+b+c=0$ — это первая из двух возможностей ✓\n\n**Второй случай:** $$a^{2}+b^{2}+c^{2}-ab-bc-ca=0 .$$ По уже доказанному тождеству это выражение равно $$\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right],$$ то есть половине суммы трёх квадратов. Сумма квадратов действительных чисел равна нулю только если каждый квадрат нулевой, значит $$a=b,\\quad b=c,\\quad c=a\\quad\\Longrightarrow\\quad a=b=c \\quad\\checkmark$$\n\n$\\blacksquare$\n\n**Примеры.** $(1,2,-3)$: $1+8-27=-18$ и $3\\cdot1\\cdot2\\cdot(-3)=-18$ ✓ (здесь сумма нулевая). $(2,2,2)$: $24=24$ ✓ (здесь все равны).\n\n**Замечание.** Для комплексных чисел вывод другой: второй множитель может обращаться в нуль и при неравных $a,b,c$.",
+    "en": "The standard factorisation: $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right).$$\n\nBy hypothesis the left side is zero, so one of the factors vanishes.\n\n**First case:** $a+b+c=0$ — the first alternative ✓\n\n**Second case:** $$a^{2}+b^{2}+c^{2}-ab-bc-ca=0 .$$ By the identity proved earlier this equals $$\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right],$$ half a sum of three squares. A sum of squares of real numbers vanishes only if each square does, so $$a=b,\\quad b=c,\\quad c=a\\quad\\Longrightarrow\\quad a=b=c \\quad\\checkmark$$\n\n$\\blacksquare$\n\n**Examples.** $(1,2,-3)$: $1+8-27=-18$ and $3\\cdot1\\cdot2\\cdot(-3)=-18$ ✓ (here the sum is zero). $(2,2,2)$: $24=24$ ✓ (here all are equal).\n\n**Remark.** Over the complex numbers the conclusion changes: the second factor can vanish with $a,b,c$ distinct."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите тождество $$x^{4}+y^{4}+(x+y)^{4}=2\\left(x^{2}+xy+y^{2}\\right)^{2}.$$",
+    "en": "Prove the identity $$x^{4}+y^{4}+(x+y)^{4}=2\\left(x^{2}+xy+y^{2}\\right)^{2}.$$"
+   },
+   "hint": {
+    "ru": "Раскройте обе части по степеням $x$.",
+    "en": "Expand both sides in powers of $x$."
+   },
+   "sol": {
+    "ru": "**Левая часть.** Раскроем четвёртую степень суммы: $$(x+y)^{4}=x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+y^{4} .$$ Значит $$x^{4}+y^{4}+(x+y)^{4}=2x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+2y^{4} .$$\n\n**Правая часть.** Обозначим $u=x^{2}+xy+y^{2}$ и возведём в квадрат: $$u^{2}=x^{4}+x^{2}y^{2}+y^{4}+2x^{3}y+2x^{2}y^{2}+2xy^{3}=x^{4}+2x^{3}y+3x^{2}y^{2}+2xy^{3}+y^{4} .$$\n\nУдваивая: $$2u^{2}=2x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+2y^{4} $$ — совпало ✓ $\\blacksquare$\n\n**Проверка** при $x=1$, $y=2$: слева $1+16+81=98$, справа $2\\cdot(1+2+4)^{2}=2\\cdot49=98$ ✓\n\n**Следствие.** Сумма $x^{4}+y^{4}+(x+y)^{4}$ всегда вдвое больше полного квадрата; в частности, она никогда не бывает простым числом при целых $x,y$, кроме вырожденных случаев.",
+    "en": "**Left side.** Expand the fourth power of a sum: $$(x+y)^{4}=x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+y^{4} .$$ Hence $$x^{4}+y^{4}+(x+y)^{4}=2x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+2y^{4} .$$\n\n**Right side.** Put $u=x^{2}+xy+y^{2}$ and square: $$u^{2}=x^{4}+x^{2}y^{2}+y^{4}+2x^{3}y+2x^{2}y^{2}+2xy^{3}=x^{4}+2x^{3}y+3x^{2}y^{2}+2xy^{3}+y^{4} .$$\n\nDoubling: $$2u^{2}=2x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+2y^{4} $$ — the same ✓ $\\blacksquare$\n\n**Check** at $x=1$, $y=2$: the left side is $1+16+81=98$, the right $2\\cdot(1+2+4)^{2}=2\\cdot49=98$ ✓\n\n**Consequence.** The sum $x^{4}+y^{4}+(x+y)^{4}$ is always twice a perfect square; in particular, for integer $x,y$ it is never prime except in degenerate cases."
+   }
   }
  ]
 };
