@@ -72,6 +72,34 @@ def walk_strings(node, path='', out=None):
 
 MATH = re.compile(r'\$\$(.+?)\$\$|\$(.+?)\$', re.S)
 
+# Lessons are authored in raw strings so that TeX needs no doubled backslashes.
+# The cost is that a paragraph break written as \n stays two literal characters,
+# so it has to be turned into a real newline here — outside the maths, where a
+# backslash always starts a TeX command and must be left exactly as it is.
+MATH_SPAN = re.compile(r'\$\$[\s\S]+?\$\$|\$[^$]+?\$')
+
+
+def real_newlines(text):
+    out, last = [], 0
+    for m in MATH_SPAN.finditer(text):
+        out.append(text[last:m.start()].replace('\\n', '\n'))
+        out.append(m.group(0))
+        last = m.end()
+    out.append(text[last:].replace('\\n', '\n'))
+    return ''.join(out)
+
+
+def normalise(node, key=None):
+    """Walk the lesson, fixing newlines in every string except raw TeX and SVG."""
+    if isinstance(node, str):
+        return node if key in ('tex', 'svg') else real_newlines(node)
+    if isinstance(node, dict):
+        return {k: normalise(v, k) for k, v in node.items()}
+    if isinstance(node, list):
+        return [normalise(v, key) for v in node]
+    return node
+
+
 
 def formulas(text):
     for m in MATH.finditer(text):
@@ -187,6 +215,7 @@ def main():
         total_formulas += check_math(lesson, issues) or 0
         total_problems += len(lesson.get('problems', []))
 
+        lesson = normalise(lesson)
         js = ('/* Topic %d — generated from content/lesson_%02d.py, do not edit by hand. */\n'
               'window.LESSONS = window.LESSONS || {};\n'
               'window.LESSONS[%d] = %s;\n') % (

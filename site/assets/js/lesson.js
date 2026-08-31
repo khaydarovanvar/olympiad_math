@@ -90,7 +90,11 @@
     });
     var html = esc(masked)
       .replace(/\*\*([\s\S]+?)\*\*/g, '<b>$1</b>')
-      .replace(/\*([^*\n]+?)\*/g, '<em>$1</em>');
+      .replace(/\*([^*\n]+?)\*/g, '<em>$1</em>')
+      /* A blank line is a paragraph break, a single one a line break. The
+         spacer is a span so it stays valid inside <p>, <li> and <td> alike. */
+      .replace(/\n{2,}/g, '<span class="vsp"></span>')
+      .replace(/\n/g, '<br>');
     return html.replace(new RegExp(SEP + '(\\d+)' + SEP, 'g'), function (_, i) {
       return esc(kept[+i]);
     });

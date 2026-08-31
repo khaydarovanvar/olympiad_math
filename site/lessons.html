@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Уроки — Олимпиадная математика</title>
-<meta name="description" content="Подробные уроки олимпиадной математики для 7–8 классов: теория с доказательствами и задачи с олимпиад. На русском и английском.">
+<meta name="description" content="Подробные уроки олимпиадной математики для 7–11 классов: теория с доказательствами и задачи с олимпиад. На русском и английском.">
 <meta name="theme-color" content="#0F1B2A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,9 +29,9 @@
         <circle cx="24" cy="24" r="21" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
         <path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/>
       </svg>
-      <span><b>MathLab</b><small>Olympiad · Grades 7–8</small></span>
+      <span><b>MathLab</b><small data-i18n="brandSub">Олимпиада · 7–11 классы</small></span>
     </a>
-    <div class="nav-mid" aria-hidden="true"><span class="hand">From the first problem to the podium</span></div>
+    <div class="nav-mid" aria-hidden="true"><span class="hand" data-i18n="slogan">От первой задачи — до пьедестала</span></div>
     <div class="nav-right">
       <nav class="nav-links" aria-label="Main">
         <a href="index.html" data-t="home">Home</a>
@@ -39,8 +39,8 @@
         <a href="library.html" data-t="library">Library</a>
       </nav>
       <div class="langsw" aria-label="Language"></div>
-      <button class="burger" aria-label="Menu" aria-expanded="false">
-        <span class="burger-label">Menu</span>
+      <button class="burger" data-i18n-attr="aria-label:menuOpen" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger-label" data-i18n="menu">Меню</span>
         <span class="burger-lines"><span></span><span></span></span>
       </button>
     </div>
@@ -56,8 +56,8 @@
       <div class="m-item"><a class="m-link" href="library.html" style="--i:3"><span class="m-num">04</span><span data-t="library">Library</span></a></div>
     </nav>
     <div class="menu-meta">
-      <div><h5>Level</h5><p>Grades 7–8<br>Uzbekistan olympiad rounds</p></div>
-      <div class="menu-slogan hand">From the first problem to the podium</div>
+      <div><h5 data-i18n="metaLevel">Уровень</h5><p data-i18n-html="metaLevelVal">7–11 классы<br>Олимпиады Узбекистана</p></div>
+      <div class="menu-slogan hand" data-i18n="slogan">От первой задачи — до пьедестала</div>
     </div>
   </div>
 </div>
@@ -83,14 +83,16 @@
 <footer class="foot">
   <div class="container">
     <div class="foot-bot">
-      <span>Grades 7–8 · Uzbekistan olympiad preparation</span>
-      <span class="hand" style="font-size:1.15rem;color:var(--gold)">From the first problem to the podium</span>
+      <span data-i18n="footBot">7–11 классы · подготовка к олимпиадам Узбекистана</span>
+      <span class="hand" style="font-size:1.15rem;color:var(--gold)" data-i18n="slogan">От первой задачи — до пьедестала</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/data/topics.js"></script>
 <script src="assets/data/lessons/index.js"></script>
+<script src="assets/data/strings.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/lesson.js"></script>
 <script>
 (function () {
@@ -157,6 +159,7 @@
   }).join('');
 })();
 </script>
+<script>ML.apply(STRINGS, ML.lang());</script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

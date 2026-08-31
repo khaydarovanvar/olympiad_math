@@ -1,51 +1,85 @@
-/* Every topic of the Grade 7–8 olympiad library, with its resources.
-   Generated from the resource library; edit here and both the library and
-   the topic pages follow. */
+/* Every topic of the Grades 7-11 olympiad library, with its resources.
+   Titles, categories, tips, card labels and descriptions carry both
+   languages; resource titles are proper names and stay as they are.
+   Edit here and the home, library and topic pages all follow. */
 var TOPICS = [
  {
   "n": 1,
-  "title": "Divisibility & GCD/LCM",
-  "cat": "Number Theory",
+  "title": {
+   "en": "Divisibility & GCD/LCM",
+   "ru": "Делимость, НОД и НОК"
+  },
+  "cat": {
+   "en": "Number Theory",
+   "ru": "Теория чисел"
+  },
   "catKey": "nt",
   "color": "#1E6FB8",
   "tint": "#E8F1FA",
-  "tip": "Start here. Divisibility is the foundation of all number theory. Master the Euclidean algorithm — it appears in at least one problem at every round of the Uzbekistan olympiad.",
+  "tip": {
+   "en": "Start here. Divisibility is the foundation of all number theory. Master the Euclidean algorithm — it appears in at least one problem at every round of the Uzbekistan olympiad.",
+   "ru": "Начните отсюда. Делимость — фундамент всей теории чисел. Освойте алгоритм Евклида: он встречается хотя бы в одной задаче на каждом туре олимпиады Узбекистана."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Number Theory — AoPS (Crawford)",
-      "desc": "Covers GCD, LCM, divisibility and Euclidean algorithm with hundreds of practice problems.",
+      "desc": {
+       "en": "Covers GCD, LCM, divisibility and Euclidean algorithm with hundreds of practice problems.",
+       "ru": "Охватывает НОД, НОК, делимость и алгоритм Евклида; сотни тренировочных задач."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-number-theory",
       "price": "paid",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Olympiad Number Theory — Justin Stevens (FREE)",
-      "desc": "Free 100-page PDF. Chapters 1-2 cover divisibility and GCD/LCM with competition examples.",
+      "desc": {
+       "en": "Free 100-page PDF. Chapters 1-2 cover divisibility and GCD/LCM with competition examples.",
+       "ru": "Бесплатный PDF на 100 страниц. Главы 1–2 — делимость и НОД/НОК с олимпиадными примерами."
+      },
       "url": "https://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Euclidean Algorithm",
-      "desc": "Clear explanation with proofs, examples, and competition problem links.",
+      "desc": {
+       "en": "Clear explanation with proofs, examples, and competition problem links.",
+       "ru": "Ясное изложение с доказательствами, примерами и ссылками на олимпиадные задачи."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Euclidean_algorithm",
       "price": "free",
       "star": false
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: GCD and LCM",
-      "desc": "Definitions, properties, theorems, and worked problems.",
+      "desc": {
+       "en": "Definitions, properties, theorems, and worked problems.",
+       "ru": "Определения, свойства, теоремы и разобранные задачи."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Greatest_common_divisor",
       "price": "free",
       "star": false
@@ -57,36 +91,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy: GCD & LCM",
-      "desc": "Step-by-step visual lessons on GCD and LCM. Great for beginners.",
+      "desc": {
+       "en": "Step-by-step visual lessons on GCD and LCM. Great for beginners.",
+       "ru": "Пошаговые наглядные уроки по НОД и НОК. Отлично для начинающих."
+      },
       "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-factors-and-multiples",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Number Theory Basics",
-      "desc": "AoPS covers divisibility rules, Euclidean algorithm, and GCD/LCM with olympiad examples.",
+      "desc": {
+       "en": "AoPS covers divisibility rules, Euclidean algorithm, and GCD/LCM with olympiad examples.",
+       "ru": "AoPS разбирает признаки делимости, алгоритм Евклида и НОД/НОК с олимпиадными примерами."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown: Why does Euclidean algorithm work?",
-      "desc": "Beautiful visual explanation. Highly recommended for deeper understanding.",
+      "desc": {
+       "en": "Beautiful visual explanation. Highly recommended for deeper understanding.",
+       "ru": "Красивое наглядное объяснение. Настоятельно рекомендуем для глубокого понимания."
+      },
       "url": "https://www.youtube.com/watch?v=Jwf6ncRmhPg",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Numberphile — GCD and prime factorization",
-      "desc": "Fun accessible exploration of GCD concepts.",
+      "desc": {
+       "en": "Fun accessible exploration of GCD concepts.",
+       "ru": "Увлекательный и доступный разбор идеи НОД."
+      },
       "url": "https://www.youtube.com/@numberphile",
       "price": "free",
       "star": false
@@ -98,36 +156,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Olympiad Number Theory (Justin Stevens)",
-      "desc": "Pages 1-25 on divisibility and GCD/LCM with 50+ worked competition examples.",
+      "desc": {
+       "en": "Pages 1-25 on divisibility and GCD/LCM with 50+ worked competition examples.",
+       "ru": "Страницы 1–25: делимость и НОД/НОК, более 50 разобранных олимпиадных примеров."
+      },
       "url": "https://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Official Uzbekistan Olympiad Guide",
-      "desc": "Ministry PDF with GCD/LCM problems from Bukhara viloyat and republic rounds.",
+      "desc": {
+       "en": "Ministry PDF with GCD/LCM problems from Bukhara viloyat and republic rounds.",
+       "ru": "Министерский PDF с задачами на НОД/НОК с областных и республиканских туров Бухары."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA — Grade 7-8 Past Papers",
-      "desc": "Past exam papers including GCD/LCM problems at grade 7-8 level.",
+      "desc": {
+       "en": "Past exam papers including GCD/LCM problems at grade 7-8 level.",
+       "ru": "Задачи прошлых туров, включая НОД/НОК на уровне 7–8 классов."
+      },
       "url": "https://olympiadusa.org/wp-content/uploads/2025/02/january-grade-7-8-past-exams-questions-and-solutions-olympiadusa-org.pdf",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — MONT Handout",
-      "desc": "Comprehensive free handout on number theory including divisibility.",
+      "desc": {
+       "en": "Comprehensive free handout on number theory including divisibility.",
+       "ru": "Подробный бесплатный конспект по теории чисел, включая делимость."
+      },
       "url": "https://web.evanchen.cc/handouts/MONT/MONT.pdf",
       "price": "free",
       "star": false
@@ -139,36 +221,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Number Theory Course",
-      "desc": "Interactive lessons on GCD/LCM with auto-graded problems. Free tier available.",
+      "desc": {
+       "en": "Interactive lessons on GCD/LCM with auto-graded problems. Free tier available.",
+       "ru": "Интерактивные уроки по НОД/НОК с автоматической проверкой. Есть бесплатный уровень."
+      },
       "url": "https://brilliant.org/courses/number-theory/",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS: Divisibility Rules Wiki",
-      "desc": "Competition problems tagged GCD/LCM with community solutions.",
+      "desc": {
+       "en": "Competition problems tagged GCD/LCM with community solutions.",
+       "ru": "Олимпиадные задачи с меткой НОД/НОК и решениями сообщества."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Divisibility_rules",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — GCD Problems",
-      "desc": "Classic math puzzle site with in-depth GCD/LCM explorations.",
+      "desc": {
+       "en": "Classic math puzzle site with in-depth GCD/LCM explorations.",
+       "ru": "Классический сайт математических головоломок с глубокими разборами НОД/НОК."
+      },
       "url": "https://www.cut-the-knot.org/blue/GCD.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Divisibility Problems",
-      "desc": "UK math enrichment with curated GCD/LCM competition problems.",
+      "desc": {
+       "en": "UK math enrichment with curated GCD/LCM competition problems.",
+       "ru": "Британский проект с подборкой олимпиадных задач на НОД/НОК."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -180,36 +286,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Al-Xorazmiy Materials",
-      "desc": "Official Uzbekistan olympiad platform. Al-Xorazmiy district-round grade 7-8 papers.",
+      "desc": {
+       "en": "Official Uzbekistan olympiad platform. Al-Xorazmiy district-round grade 7-8 papers.",
+       "ru": "Официальная олимпиадная платформа Узбекистана. Районные туры Аль-Хорезми, 7–8 классы."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Official Resource Portal",
-      "desc": "Ministry of Higher Education portal with structured olympiad guides.",
+      "desc": {
+       "en": "Ministry of Higher Education portal with structured olympiad guides.",
+       "ru": "Портал Министерства высшего образования со структурированными олимпиадными руководствами."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Qiziqarli Matematika (A.Yunusov) — ziyouz.com",
-      "desc": "Classic Uzbek book with interesting math and olympiad problems including divisibility.",
+      "desc": {
+       "en": "Classic Uzbek book with interesting math and olympiad problems including divisibility.",
+       "ru": "Классическая узбекская книга с занимательными и олимпиадными задачами, включая делимость."
+      },
       "url": "https://www.ziyouz.com/books/kollej_va_otm_darsliklari/matematika/Qiziqarli%20matematika%20va%20olimpiada%20masalalari%20(A.Yunusov%20va%20b.).pdf",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "info-master.uz — Al-Xorazmiy tests",
-      "desc": "Online test platform with Al-Xorazmiy olympiad tests for 7-8 sinf by topic.",
+      "desc": {
+       "en": "Online test platform with Al-Xorazmiy olympiad tests for 7-8 sinf by topic.",
+       "ru": "Платформа онлайн-тестов с заданиями Аль-Хорезми для 7–8 классов по темам."
+      },
       "url": "https://info-master.uz/2023/01/al-xorazmiy-olimpiadasi-matematika-%E2%84%961/",
       "price": "free",
       "star": false
@@ -220,48 +350,81 @@ var TOPICS = [
  },
  {
   "n": 2,
-  "title": "Prime Numbers",
-  "cat": "Number Theory",
+  "title": {
+   "en": "Prime Numbers",
+   "ru": "Простые числа"
+  },
+  "cat": {
+   "en": "Number Theory",
+   "ru": "Теория чисел"
+  },
   "catKey": "nt",
   "color": "#1E6FB8",
   "tint": "#E8F1FA",
-  "tip": "Prime factorization is used to count divisors, compute GCDs, and solve over a third of all number theory problems. Know how to factorize any number up to 1000 quickly.",
+  "tip": {
+   "en": "Prime factorization is used to count divisors, compute GCDs, and solve over a third of all number theory problems. Know how to factorize any number up to 1000 quickly.",
+   "ru": "Разложение на простые множители нужно, чтобы считать делители, находить НОД и решать больше трети всех задач по теории чисел. Научитесь быстро раскладывать любое число до 1000."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Number Theory — AoPS",
-      "desc": "Chapters on primes, fundamental theorem, and sieve with hundreds of graded problems.",
+      "desc": {
+       "en": "Chapters on primes, fundamental theorem, and sieve with hundreds of graded problems.",
+       "ru": "Главы о простых числах, основной теореме и решете; сотни задач по возрастанию сложности."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-number-theory",
       "price": "paid",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Prime Factorization",
-      "desc": "Unique factorization theorem, applications, and competition problem links.",
+      "desc": {
+       "en": "Unique factorization theorem, applications, and competition problem links.",
+       "ru": "Теорема о единственности разложения, приложения и ссылки на олимпиадные задачи."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Prime_factorization",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Sieve of Eratosthenes",
-      "desc": "Find all primes up to N efficiently with proof of correctness.",
+      "desc": {
+       "en": "Find all primes up to N efficiently with proof of correctness.",
+       "ru": "Как быстро найти все простые до N, с доказательством корректности."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Sieve_of_Eratosthenes",
       "price": "free",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "USSR Olympiad Problem Book — Shkliarsky",
-      "desc": "Classic Soviet olympiad book with outstanding number theory and prime problems.",
+      "desc": {
+       "en": "Classic Soviet olympiad book with outstanding number theory and prime problems.",
+       "ru": "Классический советский олимпиадный сборник с превосходными задачами о простых числах."
+      },
       "url": "https://www.abebooks.com/9780486277097",
       "price": "paid",
       "star": false
@@ -273,36 +436,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Why do primes make spirals?",
-      "desc": "Stunning visual exploration of primes. Builds deep intuition.",
+      "desc": {
+       "en": "Stunning visual exploration of primes. Builds deep intuition.",
+       "ru": "Впечатляющий наглядный разбор простых чисел. Развивает глубокую интуицию."
+      },
       "url": "https://www.youtube.com/watch?v=EK32jo7i5LQ",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy: Prime Numbers & Factorization",
-      "desc": "Beginner-to-intermediate series on prime factorization with applications.",
+      "desc": {
+       "en": "Beginner-to-intermediate series on prime factorization with applications.",
+       "ru": "Курс от начального до среднего уровня о разложении на простые множители и его применениях."
+      },
       "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Numberphile — Mersenne Primes",
-      "desc": "Fun videos about special primes. Great motivation for students.",
+      "desc": {
+       "en": "Fun videos about special primes. Great motivation for students.",
+       "ru": "Увлекательные видео об особых простых числах. Отличная мотивация для учеников."
+      },
       "url": "https://www.youtube.com/@numberphile",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Fundamental Theorem",
-      "desc": "Olympiad-focused video on the Fundamental Theorem of Arithmetic.",
+      "desc": {
+       "en": "Olympiad-focused video on the Fundamental Theorem of Arithmetic.",
+       "ru": "Олимпиадное видео об основной теореме арифметики."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": false
@@ -314,36 +501,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Olympiad NT — Justin Stevens (FREE)",
-      "desc": "Chapters on prime factorization with competition problems from AMC to IMO.",
+      "desc": {
+       "en": "Chapters on prime factorization with competition problems from AMC to IMO.",
+       "ru": "Главы о разложении на множители с задачами от AMC до IMO."
+      },
       "url": "https://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — MONT Handout (FREE)",
-      "desc": "Comprehensive free handout. Section on primes is rigorous and accessible.",
+      "desc": {
+       "en": "Comprehensive free handout. Section on primes is rigorous and accessible.",
+       "ru": "Подробный бесплатный конспект. Раздел о простых числах строгий и понятный."
+      },
       "url": "https://web.evanchen.cc/handouts/MONT/MONT.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Uzbekistan Olympiad Guide",
-      "desc": "Republic and international olympiad problems including prime-related topics.",
+      "desc": {
+       "en": "Republic and international olympiad problems including prime-related topics.",
+       "ru": "Задачи республиканских и международных олимпиад, включая темы о простых числах."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "AMC 8 Past Papers — Prime sections",
-      "desc": "AMC 8 is perfect for school-to-district level. Many problems involve primes.",
+      "desc": {
+       "en": "AMC 8 is perfect for school-to-district level. Many problems involve primes.",
+       "ru": "AMC 8 идеально подходит для школьного и районного уровня. Много задач о простых числах."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions",
       "price": "free",
       "star": false
@@ -355,36 +566,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Prime Pages (primes.utm.edu)",
-      "desc": "Ultimate reference on prime numbers: records, proofs, and primality tools.",
+      "desc": {
+       "en": "Ultimate reference on prime numbers: records, proofs, and primality tools.",
+       "ru": "Исчерпывающий справочник о простых числах: рекорды, доказательства, инструменты проверки."
+      },
       "url": "https://primes.utm.edu",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Primes Course",
-      "desc": "Interactive course with visual explanations of sieve and prime counting.",
+      "desc": {
+       "en": "Interactive course with visual explanations of sieve and prime counting.",
+       "ru": "Интерактивный курс с наглядным объяснением решета и подсчёта простых чисел."
+      },
       "url": "https://brilliant.org/courses/number-theory/",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH: Prime Number Challenges",
-      "desc": "Curated competition-quality prime problems for ages 11-16.",
+      "desc": {
+       "en": "Curated competition-quality prime problems for ages 11-16.",
+       "ru": "Отобранные олимпиадные задачи о простых числах для 11–16 лет."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Project Euler (Problems 1-10)",
-      "desc": "Computational prime problems. Good for programming-inclined students.",
+      "desc": {
+       "en": "Computational prime problems. Good for programming-inclined students.",
+       "ru": "Вычислительные задачи о простых числах. Хорошо для тех, кто программирует."
+      },
       "url": "https://projecteuler.net/archives",
       "price": "free",
       "star": false
@@ -396,36 +631,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Respublika bosqichi",
-      "desc": "Republic-level problems involving prime numbers from recent years.",
+      "desc": {
+       "en": "Republic-level problems involving prime numbers from recent years.",
+       "ru": "Задачи республиканского уровня о простых числах за последние годы."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Sonlar Nazariyasi",
-      "desc": "Official Uzbek math olympiad guide. Prime problems with solutions.",
+      "desc": {
+       "en": "Official Uzbek math olympiad guide. Prime problems with solutions.",
+       "ru": "Официальное руководство по олимпиадам Узбекистана. Задачи о простых числах с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz — Olimpiada savollari",
-      "desc": "Grade 7-11 math olympiad problems organized by topic.",
+      "desc": {
+       "en": "Grade 7-11 math olympiad problems organized by topic.",
+       "ru": "Олимпиадные задачи по математике для 7–11 классов, разложенные по темам."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Scribd: Al-Xorazmiy 7-8 sinf papers",
-      "desc": "Al-Xorazmiy olympiad papers. Search 'matematika Al-Xorazmiy' for current papers.",
+      "desc": {
+       "en": "Al-Xorazmiy olympiad papers. Search 'matematika Al-Xorazmiy' for current papers.",
+       "ru": "Материалы олимпиады Аль-Хорезми. Ищите «matematika Al-Xorazmiy» для свежих вариантов."
+      },
       "url": "https://www.scribd.com/document/781793973",
       "price": "paid",
       "star": false
@@ -436,48 +695,81 @@ var TOPICS = [
  },
  {
   "n": 3,
-  "title": "Modular Arithmetic",
-  "cat": "Number Theory",
+  "title": {
+   "en": "Modular Arithmetic",
+   "ru": "Арифметика остатков"
+  },
+  "cat": {
+   "en": "Number Theory",
+   "ru": "Теория чисел"
+  },
   "catKey": "nt",
   "color": "#1E6FB8",
   "tint": "#E8F1FA",
-  "tip": "Knowing last-digit cycles (2,3,7,9 have period 4) instantly solves a huge class of olympiad problems. Modular arithmetic is essential for at least 2 problems in every Uzbekistan Republic-level paper.",
+  "tip": {
+   "en": "Knowing last-digit cycles (2,3,7,9 have period 4) instantly solves a huge class of olympiad problems. Modular arithmetic is essential for at least 2 problems in every Uzbekistan Republic-level paper.",
+   "ru": "Знание циклов последних цифр (у 2, 3, 7 и 9 период равен 4) мгновенно решает целый класс олимпиадных задач. Остатки нужны как минимум для двух задач в каждом республиканском варианте."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Modular Arithmetic",
-      "desc": "Complete reference: notation, properties, congruences, Fermat/Euler theorems.",
+      "desc": {
+       "en": "Complete reference: notation, properties, congruences, Fermat/Euler theorems.",
+       "ru": "Полный справочник: обозначения, свойства, сравнения, теоремы Ферма и Эйлера."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Modular_arithmetic",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Fermat's Little Theorem",
-      "desc": "Proof, statement, and many competition applications.",
+      "desc": {
+       "en": "Proof, statement, and many competition applications.",
+       "ru": "Доказательство, формулировка и множество олимпиадных применений."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Fermat%27s_Little_Theorem",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Chinese Remainder Theorem",
-      "desc": "Statement, proof, and worked competition examples of CRT.",
+      "desc": {
+       "en": "Statement, proof, and worked competition examples of CRT.",
+       "ru": "Формулировка, доказательство и разобранные олимпиадные примеры китайской теоремы об остатках."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Chinese_Remainder_Theorem",
       "price": "free",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Number Theory — AoPS (Ch.5-8)",
-      "desc": "Modular arithmetic chapters with hundreds of competition problems.",
+      "desc": {
+       "en": "Modular arithmetic chapters with hundreds of competition problems.",
+       "ru": "Главы об арифметике остатков с сотнями олимпиадных задач."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-number-theory",
       "price": "paid",
       "star": false
@@ -489,36 +781,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Modular Arithmetic",
-      "desc": "Full competition lesson on modular arithmetic including last digit tricks.",
+      "desc": {
+       "en": "Full competition lesson on modular arithmetic including last digit tricks.",
+       "ru": "Полноценный олимпиадный урок по остаткам, включая приёмы с последними цифрами."
+      },
       "url": "https://www.youtube.com/watch?v=pLgM7N3UiJo",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy: Modular Arithmetic",
-      "desc": "Clear beginner introduction with interactive exercises.",
+      "desc": {
+       "en": "Clear beginner introduction with interactive exercises.",
+       "ru": "Понятное введение для начинающих с интерактивными упражнениями."
+      },
       "url": "https://www.khanacademy.org/computing/computer-science/cryptography",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "blackpenredpen — Last digit of large powers",
-      "desc": "Fast clear videos on finding last digits of powers using cycles.",
+      "desc": {
+       "en": "Fast clear videos on finding last digits of powers using cycles.",
+       "ru": "Быстрые и ясные видео о нахождении последних цифр степеней через циклы."
+      },
       "url": "https://www.youtube.com/@blackpenredpen",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Michael Penn — Olympiad number theory",
-      "desc": "University-level but clear videos on modular arithmetic applications.",
+      "desc": {
+       "en": "University-level but clear videos on modular arithmetic applications.",
+       "ru": "Университетский, но понятный курс видео о применениях арифметики остатков."
+      },
       "url": "https://www.youtube.com/@MichaelPennMath",
       "price": "free",
       "star": false
@@ -530,36 +846,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — MONT Handout (FREE)",
-      "desc": "Modular arithmetic chapter is especially well-written for olympiad prep.",
+      "desc": {
+       "en": "Modular arithmetic chapter is especially well-written for olympiad prep.",
+       "ru": "Глава об остатках написана особенно удачно для подготовки к олимпиадам."
+      },
       "url": "https://web.evanchen.cc/handouts/MONT/MONT.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Olympiad NT — Justin Stevens (FREE)",
-      "desc": "Dedicated modular arithmetic chapter with Wilson's theorem and CRT.",
+      "desc": {
+       "en": "Dedicated modular arithmetic chapter with Wilson's theorem and CRT.",
+       "ru": "Отдельная глава об остатках с теоремой Вильсона и китайской теоремой об остатках."
+      },
       "url": "https://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Uzbekistan Olympiad Guide",
-      "desc": "Republic-level problems involving modular arithmetic with solutions.",
+      "desc": {
+       "en": "Republic-level problems involving modular arithmetic with solutions.",
+       "ru": "Задачи республиканского уровня на остатки с решениями."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "AMC/AIME past papers — Number Theory",
-      "desc": "Many AIME problems involve modular arithmetic at district-to-regional level.",
+      "desc": {
+       "en": "Many AIME problems involve modular arithmetic at district-to-regional level.",
+       "ru": "Многие задачи AIME используют остатки на районном и областном уровне."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AIME_Problems_and_Solutions",
       "price": "free",
       "star": false
@@ -571,36 +911,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Modular Arithmetic",
-      "desc": "Interactive lessons from basics to CRT with visual representations.",
+      "desc": {
+       "en": "Interactive lessons from basics to CRT with visual representations.",
+       "ru": "Интерактивные уроки от основ до китайской теоремы об остатках, с наглядными схемами."
+      },
       "url": "https://brilliant.org/wiki/modular-arithmetic/",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS Forum — Modular Arithmetic",
-      "desc": "Hundreds of tagged competition problems with community explanations.",
+      "desc": {
+       "en": "Hundreds of tagged competition problems with community explanations.",
+       "ru": "Сотни олимпиадных задач с метками и объяснениями сообщества."
+      },
       "url": "https://artofproblemsolving.com/community/c3h118n",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Modular Arithmetic",
-      "desc": "Deep explorations including Fermat's Little Theorem applications.",
+      "desc": {
+       "en": "Deep explorations including Fermat's Little Theorem applications.",
+       "ru": "Глубокие разборы, включая применения малой теоремы Ферма."
+      },
       "url": "https://www.cut-the-knot.org/blue/Modulo.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "UKMT Junior Math Challenge",
-      "desc": "UK Junior challenges have excellent modular arithmetic problems.",
+      "desc": {
+       "en": "UK Junior challenges have excellent modular arithmetic problems.",
+       "ru": "В британских юниорских турах отличные задачи на остатки."
+      },
       "url": "https://www.ukmt.org.uk/competitions/solo/junior-mathematical-challenge/archive",
       "price": "free",
       "star": false
@@ -612,36 +976,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Matematika 7-8",
-      "desc": "Filter by matematika + 7-8 sinf for modular-type problems from all rounds.",
+      "desc": {
+       "en": "Filter by matematika + 7-8 sinf for modular-type problems from all rounds.",
+       "ru": "Отфильтруйте по «matematika» и 7–8 классам, чтобы найти задачи на остатки со всех туров."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Sonlar Nazariyasi",
-      "desc": "Modular arithmetic problems in the number theory section.",
+      "desc": {
+       "en": "Modular arithmetic problems in the number theory section.",
+       "ru": "Задачи на остатки в разделе теории чисел."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Fizika, Matematika va Informatika journal",
-      "desc": "Official journal publishing olympiad problems including modular arithmetic.",
+      "desc": {
+       "en": "Official journal publishing olympiad problems including modular arithmetic.",
+       "ru": "Официальный журнал, публикующий олимпиадные задачи, в том числе на остатки."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz",
-      "desc": "Uzbek-language olympiad problem sets organized by grade and topic.",
+      "desc": {
+       "en": "Uzbek-language olympiad problem sets organized by grade and topic.",
+       "ru": "Олимпиадные задачи на узбекском, разложенные по классам и темам."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
@@ -652,48 +1040,81 @@ var TOPICS = [
  },
  {
   "n": 4,
-  "title": "Diophantine Equations",
-  "cat": "Number Theory",
+  "title": {
+   "en": "Diophantine Equations",
+   "ru": "Диофантовы уравнения"
+  },
+  "cat": {
+   "en": "Number Theory",
+   "ru": "Теория чисел"
+  },
   "catKey": "nt",
   "color": "#1E6FB8",
   "tint": "#E8F1FA",
-  "tip": "Parity and mod arguments quickly eliminate impossible cases. The factoring trick (xy = x+y+k → (x-1)(y-1) = k+1) solves dozens of olympiad problems. Always try small cases first.",
+  "tip": {
+   "en": "Parity and mod arguments quickly eliminate impossible cases. The factoring trick (xy = x+y+k → (x-1)(y-1) = k+1) solves dozens of olympiad problems. Always try small cases first.",
+   "ru": "Чётность и остатки быстро отсекают невозможные случаи. Приём с разложением ($xy=x+y+k$ превращается в $(x-1)(y-1)=k+1$) решает десятки олимпиадных задач. Всегда начинайте с малых случаев."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Diophantine Equations",
-      "desc": "Overview of linear, quadratic, and complex Diophantine equations.",
+      "desc": {
+       "en": "Overview of linear, quadratic, and complex Diophantine equations.",
+       "ru": "Обзор линейных, квадратичных и более сложных диофантовых уравнений."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Diophantine_equation",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Simon's Favourite Factoring Trick",
-      "desc": "The (x-a)(y-b)=c technique for 1/x+1/y=1/n and hundreds of similar problems.",
+      "desc": {
+       "en": "The (x-a)(y-b)=c technique for 1/x+1/y=1/n and hundreds of similar problems.",
+       "ru": "Приём $(x-a)(y-b)=c$ для $1/x+1/y=1/n$ и сотен похожих задач."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Simon%27s_Favorite_Factoring_Trick",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Olympiad NT — Justin Stevens (FREE)",
-      "desc": "Dedicated Diophantine chapter including Pell's equation and parametric solutions.",
+      "desc": {
+       "en": "Dedicated Diophantine chapter including Pell's equation and parametric solutions.",
+       "ru": "Отдельная глава о диофантовых уравнениях, включая уравнение Пелля и параметрические решения."
+      },
       "url": "https://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Number Theory: Structures — Andreescu",
-      "desc": "Full chapter on Diophantine equations from AMC to IMO level.",
+      "desc": {
+       "en": "Full chapter on Diophantine equations from AMC to IMO level.",
+       "ru": "Целая глава о диофантовых уравнениях — от уровня AMC до IMO."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -705,36 +1126,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Linear Diophantine",
-      "desc": "How to solve ax+by=c — when solutions exist and finding the general solution.",
+      "desc": {
+       "en": "How to solve ax+by=c — when solutions exist and finding the general solution.",
+       "ru": "Как решать $ax+by=c$: когда решения есть и как найти общее решение."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "PatrickJMT — Diophantine Equations",
-      "desc": "Clear step-by-step video on solving linear and quadratic Diophantine equations.",
+      "desc": {
+       "en": "Clear step-by-step video on solving linear and quadratic Diophantine equations.",
+       "ru": "Понятное пошаговое видео о линейных и квадратичных диофантовых уравнениях."
+      },
       "url": "https://www.youtube.com/@patrickjmt",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "blackpenredpen — Pell's Equation",
-      "desc": "Introduction to x²-Dy²=1 with olympiad examples.",
+      "desc": {
+       "en": "Introduction to x²-Dy²=1 with olympiad examples.",
+       "ru": "Введение в уравнение $x^2-Dy^2=1$ с олимпиадными примерами."
+      },
       "url": "https://www.youtube.com/@blackpenredpen",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "MathDoctorBob — Number Theory",
-      "desc": "Accessible videos on Diophantine equations with full proofs.",
+      "desc": {
+       "en": "Accessible videos on Diophantine equations with full proofs.",
+       "ru": "Доступные видео о диофантовых уравнениях с полными доказательствами."
+      },
       "url": "https://www.youtube.com/@MathDoctorBob",
       "price": "free",
       "star": false
@@ -746,36 +1191,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — MONT (FREE)",
-      "desc": "Section on Diophantine equations is rigorous and well-structured.",
+      "desc": {
+       "en": "Section on Diophantine equations is rigorous and well-structured.",
+       "ru": "Раздел о диофантовых уравнениях строгий и хорошо выстроенный."
+      },
       "url": "https://web.evanchen.cc/handouts/MONT/MONT.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Uzbekistan Olympiad Guide",
-      "desc": "Integer equation problems from Republic-level Uzbekistan olympiad.",
+      "desc": {
+       "en": "Integer equation problems from Republic-level Uzbekistan olympiad.",
+       "ru": "Задачи на уравнения в целых числах с республиканского тура Узбекистана."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Past Papers",
-      "desc": "Grade 7-8 past exams including integer equation problems.",
+      "desc": {
+       "en": "Grade 7-8 past exams including integer equation problems.",
+       "ru": "Задачи прошлых туров для 7–8 классов, включая уравнения в целых числах."
+      },
       "url": "https://olympiadusa.org",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "IMO Problems Collection (Scribd)",
-      "desc": "Classic international olympiad problems. Many feature Diophantine equations.",
+      "desc": {
+       "en": "Classic international olympiad problems. Many feature Diophantine equations.",
+       "ru": "Классические задачи международных олимпиад. Многие — на диофантовы уравнения."
+      },
       "url": "https://www.scribd.com/document/356897836/Math-Olympiad-Problems-Collection-v2-pdf",
       "price": "paid",
       "star": false
@@ -787,36 +1256,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS: Diophantine Problem Archive",
-      "desc": "Hundreds of tagged problems with community solutions.",
+      "desc": {
+       "en": "Hundreds of tagged problems with community solutions.",
+       "ru": "Сотни размеченных задач с решениями сообщества."
+      },
       "url": "https://artofproblemsolving.com/community",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Diophantine Equations",
-      "desc": "Interactive problems on linear and Pythagorean Diophantine equations.",
+      "desc": {
+       "en": "Interactive problems on linear and Pythagorean Diophantine equations.",
+       "ru": "Интерактивные задачи на линейные и пифагоровы диофантовы уравнения."
+      },
       "url": "https://brilliant.org/wiki/diophantine-equations-linear/",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Integer Solutions",
-      "desc": "Classic explorations of integer equations, Pythagorean triples, and Pell.",
+      "desc": {
+       "en": "Classic explorations of integer equations, Pythagorean triples, and Pell.",
+       "ru": "Классические разборы уравнений в целых числах, пифагоровых троек и уравнения Пелля."
+      },
       "url": "https://www.cut-the-knot.org/do_you_know/Pell.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Diophantine Challenges",
-      "desc": "Competition-quality integer equation problems for junior olympiad level.",
+      "desc": {
+       "en": "Competition-quality integer equation problems for junior olympiad level.",
+       "ru": "Задачи олимпиадного качества на уравнения в целых числах для младших классов."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -828,36 +1321,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Respublika bosqichi",
-      "desc": "Republic-level papers often include a Diophantine-type problem.",
+      "desc": {
+       "en": "Republic-level papers often include a Diophantine-type problem.",
+       "ru": "В республиканских вариантах часто встречается задача диофантова типа."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Algebra section",
-      "desc": "Integer equation problems from viloyat and republic rounds.",
+      "desc": {
+       "en": "Integer equation problems from viloyat and republic rounds.",
+       "ru": "Задачи на уравнения в целых числах с областных и республиканских туров."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Mathematics Library",
-      "desc": "Uzbek-language math books including number theory problem collections.",
+      "desc": {
+       "en": "Uzbek-language math books including number theory problem collections.",
+       "ru": "Книги по математике на узбекском, включая сборники задач по теории чисел."
+      },
       "url": "https://www.ziyouz.com/books/kollej_va_otm_darsliklari/matematika/",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "TASIMO — Tashkent International Math Olympiad",
-      "desc": "Past TASIMO papers include Diophantine-type problems at advanced level.",
+      "desc": {
+       "en": "Past TASIMO papers include Diophantine-type problems at advanced level.",
+       "ru": "Прошлые варианты TASIMO содержат диофантовы задачи повышенного уровня."
+      },
       "url": "https://imogeometry.blogspot.com/p/geometry-solved-problem-collections.html",
       "price": "free",
       "star": false
@@ -868,48 +1385,81 @@ var TOPICS = [
  },
  {
   "n": 5,
-  "title": "Identities & Factoring",
-  "cat": "Algebra",
+  "title": {
+   "en": "Identities & Factoring",
+   "ru": "Тождества и разложение на множители"
+  },
+  "cat": {
+   "en": "Algebra",
+   "ru": "Алгебра"
+  },
   "catKey": "alg",
   "color": "#0F7A5E",
   "tint": "#E3F5EE",
-  "tip": "Sophie Germain identity (a⁴+4b⁴) appears in multiple olympiads every year. Memorize the top 10 identities and practice recognizing when to apply each one.",
+  "tip": {
+   "en": "Sophie Germain identity (a⁴+4b⁴) appears in multiple olympiads every year. Memorize the top 10 identities and practice recognizing when to apply each one.",
+   "ru": "Тождество Софи Жермен ($a^4+4b^4$) встречается на нескольких олимпиадах каждый год. Выучите десяток главных тождеств и тренируйтесь узнавать, какое из них применить."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Algebraic Identities",
-      "desc": "Complete list of key identities with proofs and competition examples.",
+      "desc": {
+       "en": "Complete list of key identities with proofs and competition examples.",
+       "ru": "Полный список ключевых тождеств с доказательствами и олимпиадными примерами."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Algebraic_identity",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Sophie Germain Identity",
-      "desc": "Statement, proof, and competition applications.",
+      "desc": {
+       "en": "Statement, proof, and competition applications.",
+       "ru": "Формулировка, доказательство и олимпиадные применения."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Sophie_Germain_Identity",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Algebra — AoPS (Rusczyk)",
-      "desc": "Gold standard competition algebra textbook. All key identities and factoring.",
+      "desc": {
+       "en": "Gold standard competition algebra textbook. All key identities and factoring.",
+       "ru": "Эталонный учебник олимпиадной алгебры. Все ключевые тождества и разложения."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-algebra",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Algebra — I.M. Gelfand",
-      "desc": "Classic Soviet algebra book with beautiful explanations of identities.",
+      "desc": {
+       "en": "Classic Soviet algebra book with beautiful explanations of identities.",
+       "ru": "Классический советский учебник алгебры с прекрасными объяснениями тождеств."
+      },
       "url": "https://www.abebooks.com/servlet/SearchResults?kn=algebra+gelfand",
       "price": "paid",
       "star": false
@@ -921,36 +1471,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Factoring",
-      "desc": "Factoring higher-degree polynomials, Sophie Germain, sum/difference of cubes.",
+      "desc": {
+       "en": "Factoring higher-degree polynomials, Sophie Germain, sum/difference of cubes.",
+       "ru": "Разложение многочленов высших степеней, тождество Софи Жермен, сумма и разность кубов."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "PatrickJMT — Factoring Polynomials",
-      "desc": "Step-by-step factoring techniques applicable to olympiad algebra.",
+      "desc": {
+       "en": "Step-by-step factoring techniques applicable to olympiad algebra.",
+       "ru": "Пошаговые приёмы разложения на множители, применимые в олимпиадной алгебре."
+      },
       "url": "https://www.youtube.com/@patrickjmt",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Essence of Algebra",
-      "desc": "Deep visual approach to why algebraic identities work.",
+      "desc": {
+       "en": "Deep visual approach to why algebraic identities work.",
+       "ru": "Глубокий наглядный подход к тому, почему работают алгебраические тождества."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Professor Leonard — Algebra Fundamentals",
-      "desc": "Clear explanations of identities and their geometric interpretations.",
+      "desc": {
+       "en": "Clear explanations of identities and their geometric interpretations.",
+       "ru": "Ясные объяснения тождеств и их геометрического смысла."
+      },
       "url": "https://www.youtube.com/@ProfessorLeonard",
       "price": "free",
       "star": false
@@ -962,36 +1536,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Olympiad Algebra Book — Parvardi (AoPS)",
-      "desc": "1220 polynomial and algebra problems for olympiad students.",
+      "desc": {
+       "en": "1220 polynomial and algebra problems for olympiad students.",
+       "ru": "1220 задач по многочленам и алгебре для олимпиадников."
+      },
       "url": "https://artofproblemsolving.com/community/c6h601134",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Algebra problems",
-      "desc": "Factoring and identity problems from viloyat and republic olympiad rounds.",
+      "desc": {
+       "en": "Factoring and identity problems from viloyat and republic olympiad rounds.",
+       "ru": "Задачи на разложение и тождества с областных и республиканских туров."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Grade 7-8 past papers",
-      "desc": "Algebra problems including factoring and identity application.",
+      "desc": {
+       "en": "Algebra problems including factoring and identity application.",
+       "ru": "Задачи по алгебре, включая разложение на множители и применение тождеств."
+      },
       "url": "https://olympiadusa.org/wp-content/uploads/2025/02/january-grade-7-8-past-exams-questions-and-solutions-olympiadusa-org.pdf",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "AMC 8 and AMC 10 Past Papers",
-      "desc": "Excellent source of identity and factoring problems at competition level.",
+      "desc": {
+       "en": "Excellent source of identity and factoring problems at competition level.",
+       "ru": "Отличный источник задач на тождества и разложение олимпиадного уровня."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions",
       "price": "free",
       "star": false
@@ -1003,36 +1601,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Algebra Fundamentals",
-      "desc": "Interactive algebra course: identities, factoring, olympiad problems.",
+      "desc": {
+       "en": "Interactive algebra course: identities, factoring, olympiad problems.",
+       "ru": "Интерактивный курс алгебры: тождества, разложение, олимпиадные задачи."
+      },
       "url": "https://brilliant.org/courses/algebra-fundamentals/",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS Community — Algebra Forum",
-      "desc": "Thousands of algebra competition problems with multiple solution approaches.",
+      "desc": {
+       "en": "Thousands of algebra competition problems with multiple solution approaches.",
+       "ru": "Тысячи олимпиадных задач по алгебре с несколькими способами решения."
+      },
       "url": "https://artofproblemsolving.com/community/c5",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Algebra Identities",
-      "desc": "Deep explorations with visual proofs.",
+      "desc": {
+       "en": "Deep explorations with visual proofs.",
+       "ru": "Глубокие разборы с наглядными доказательствами."
+      },
       "url": "https://www.cut-the-knot.org/arithmetic/algebra.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Algebraic Identities",
-      "desc": "UK competition-quality algebra problems involving factoring.",
+      "desc": {
+       "en": "UK competition-quality algebra problems involving factoring.",
+       "ru": "Британские задачи олимпиадного качества на разложение на множители."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -1044,36 +1666,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Algebra topshiriqlari",
-      "desc": "Al-Xorazmiy and main olympiad algebra problems for grades 7-8.",
+      "desc": {
+       "en": "Al-Xorazmiy and main olympiad algebra problems for grades 7-8.",
+       "ru": "Задачи по алгебре с Аль-Хорезми и основной олимпиады для 7–8 классов."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Algebra bo'limi",
-      "desc": "Algebra section of the official Uzbekistan olympiad guide with solutions.",
+      "desc": {
+       "en": "Algebra section of the official Uzbekistan olympiad guide with solutions.",
+       "ru": "Раздел алгебры официального руководства по олимпиадам Узбекистана с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "diplomishlari.uz — Al-Xorazmiy tests",
-      "desc": "Online test platform with 7-8 sinf algebra sections.",
+      "desc": {
+       "en": "Online test platform with 7-8 sinf algebra sections.",
+       "ru": "Платформа онлайн-тестов с разделами алгебры для 7–8 классов."
+      },
       "url": "https://diplomishlari.uz",
       "price": "paid",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Algebra kitoblari",
-      "desc": "Uzbek algebra textbooks and olympiad collections for free download.",
+      "desc": {
+       "en": "Uzbek algebra textbooks and olympiad collections for free download.",
+       "ru": "Узбекские учебники алгебры и олимпиадные сборники для свободного скачивания."
+      },
       "url": "https://www.ziyouz.com/books/kollej_va_otm_darsliklari/matematika/",
       "price": "free",
       "star": false
@@ -1084,48 +1730,81 @@ var TOPICS = [
  },
  {
   "n": 6,
-  "title": "Inequalities",
-  "cat": "Algebra",
+  "title": {
+   "en": "Inequalities",
+   "ru": "Неравенства"
+  },
+  "cat": {
+   "en": "Algebra",
+   "ru": "Алгебра"
+  },
   "catKey": "alg",
   "color": "#0F7A5E",
   "tint": "#E3F5EE",
-  "tip": "Always check the equality case — it confirms your AM-GM application is correct and tells you where the minimum/maximum is achieved. If equality can't be achieved, your bound may be wrong.",
+  "tip": {
+   "en": "Always check the equality case — it confirms your AM-GM application is correct and tells you where the minimum/maximum is achieved. If equality can't be achieved, your bound may be wrong.",
+   "ru": "Всегда проверяйте случай равенства — он подтверждает, что AM–GM применено верно, и показывает, где достигается минимум или максимум. Если равенство недостижимо, оценка, скорее всего, неточна."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: AM-GM Inequality",
-      "desc": "Full proof, when equality holds, and 50+ competition applications.",
+      "desc": {
+       "en": "Full proof, when equality holds, and 50+ competition applications.",
+       "ru": "Полное доказательство, случай равенства и более 50 олимпиадных применений."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AM-GM_Inequality",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Cauchy-Schwarz Inequality",
-      "desc": "Statement, proof, and competition applications.",
+      "desc": {
+       "en": "Statement, proof, and competition applications.",
+       "ru": "Формулировка, доказательство и олимпиадные применения."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Cauchy-Schwarz_Inequality",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Secrets in Inequalities Vol.1 — Pham Kim Hung",
-      "desc": "The classic olympiad inequalities book. Covers AM-GM and Cauchy-Schwarz.",
+      "desc": {
+       "en": "The classic olympiad inequalities book. Covers AM-GM and Cauchy-Schwarz.",
+       "ru": "Классическая книга об олимпиадных неравенствах. Разбирает AM–GM и Коши–Буняковского."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Old and New Inequalities — Andreescu",
-      "desc": "Competition inequality book widely used for olympiad preparation.",
+      "desc": {
+       "en": "Competition inequality book widely used for olympiad preparation.",
+       "ru": "Сборник по неравенствам, широко используемый при подготовке к олимпиадам."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -1137,36 +1816,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — AM-GM and Cauchy",
-      "desc": "Competition-focused explanations of the two most important inequality tools.",
+      "desc": {
+       "en": "Competition-focused explanations of the two most important inequality tools.",
+       "ru": "Олимпиадные объяснения двух главных инструментов работы с неравенствами."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Michael Penn — Olympiad Inequalities",
-      "desc": "Clear videos on AM-GM, Cauchy-Schwarz with competition examples.",
+      "desc": {
+       "en": "Clear videos on AM-GM, Cauchy-Schwarz with competition examples.",
+       "ru": "Понятные видео об AM–GM и Коши–Буняковском с олимпиадными примерами."
+      },
       "url": "https://www.youtube.com/@MichaelPennMath",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — AM-GM Geometric Proof",
-      "desc": "Beautiful visual proof of AM-GM using areas.",
+      "desc": {
+       "en": "Beautiful visual proof of AM-GM using areas.",
+       "ru": "Красивое наглядное доказательство AM–GM через площади."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Po-Shen Loh — Inequalities Lecture",
-      "desc": "CMU/IMO coach lectures on inequality techniques. Advanced but inspiring.",
+      "desc": {
+       "en": "CMU/IMO coach lectures on inequality techniques. Advanced but inspiring.",
+       "ru": "Лекции тренера сборной по приёмам работы с неравенствами. Сложно, но вдохновляет."
+      },
       "url": "https://www.youtube.com/@poshenloh",
       "price": "free",
       "star": false
@@ -1178,36 +1881,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — Olympiad Inequalities Notes (FREE)",
-      "desc": "Free notes on inequalities: AM-GM to rearrangement.",
+      "desc": {
+       "en": "Free notes on inequalities: AM-GM to rearrangement.",
+       "ru": "Бесплатный конспект по неравенствам: от AM–GM до перестановочного."
+      },
       "url": "https://web.evanchen.cc/olympiad.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Inequalities Olympiad Approach — Handout",
-      "desc": "Free handout covering AM-GM, Cauchy-Schwarz, Jensen, and SOS.",
+      "desc": {
+       "en": "Free handout covering AM-GM, Cauchy-Schwarz, Jensen, and SOS.",
+       "ru": "Бесплатный конспект: AM–GM, Коши–Буняковский, неравенство Йенсена и метод SOS."
+      },
       "url": "https://artofproblemsolving.com/community/c6h27244",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Tengsizliklar",
-      "desc": "Uzbekistan olympiad guide section on inequalities with viloyat/republic problems.",
+      "desc": {
+       "en": "Uzbekistan olympiad guide section on inequalities with viloyat/republic problems.",
+       "ru": "Раздел о неравенствах в руководстве по олимпиадам Узбекистана с задачами всех туров."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Past Papers — Algebra",
-      "desc": "Inequality problems from junior olympiad at grade 7-8 level.",
+      "desc": {
+       "en": "Inequality problems from junior olympiad at grade 7-8 level.",
+       "ru": "Задачи на неравенства с юниорской олимпиады уровня 7–8 классов."
+      },
       "url": "https://olympiadusa.org",
       "price": "free",
       "star": false
@@ -1219,36 +1946,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS: Inequalities Forum",
-      "desc": "Huge archive of competition inequality problems with solutions.",
+      "desc": {
+       "en": "Huge archive of competition inequality problems with solutions.",
+       "ru": "Огромный архив олимпиадных задач на неравенства с решениями."
+      },
       "url": "https://artofproblemsolving.com/community/c5h3",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Inequalities",
-      "desc": "Interactive inequality problems from basics to olympiad level.",
+      "desc": {
+       "en": "Interactive inequality problems from basics to olympiad level.",
+       "ru": "Интерактивные задачи на неравенства от основ до олимпиадного уровня."
+      },
       "url": "https://brilliant.org/wiki/am-gm-inequality/",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Inequalities",
-      "desc": "Mathematical explorations with visual proofs.",
+      "desc": {
+       "en": "Mathematical explorations with visual proofs.",
+       "ru": "Математические разборы с наглядными доказательствами."
+      },
       "url": "https://www.cut-the-knot.org/do_you_know/amgm.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Inequality Challenges",
-      "desc": "Competition-quality inequality problems for grades 7-10.",
+      "desc": {
+       "en": "Competition-quality inequality problems for grades 7-10.",
+       "ru": "Задачи на неравенства олимпиадного качества для 7–10 классов."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -1260,36 +2011,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Inequality problems in algebra sections of all olympiad levels.",
+      "desc": {
+       "en": "Inequality problems in algebra sections of all olympiad levels.",
+       "ru": "Задачи на неравенства в разделах алгебры на всех уровнях олимпиады."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Tengsizliklar bo'limi",
-      "desc": "Official inequality problems from Uzbekistan olympiad with solutions.",
+      "desc": {
+       "en": "Official inequality problems from Uzbekistan olympiad with solutions.",
+       "ru": "Официальные задачи на неравенства с олимпиад Узбекистана с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Fizika, Matematika va Informatika journal",
-      "desc": "Regular problems including inequalities in this official journal.",
+      "desc": {
+       "en": "Regular problems including inequalities in this official journal.",
+       "ru": "Регулярные задачи, включая неравенства, в этом официальном журнале."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com",
-      "desc": "Uzbek-language olympiad problems including inequality problems.",
+      "desc": {
+       "en": "Uzbek-language olympiad problems including inequality problems.",
+       "ru": "Олимпиадные задачи на узбекском, включая задачи на неравенства."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
@@ -1300,48 +2075,81 @@ var TOPICS = [
  },
  {
   "n": 7,
-  "title": "Sequences & Series",
-  "cat": "Algebra",
+  "title": {
+   "en": "Sequences & Series",
+   "ru": "Последовательности и суммы"
+  },
+  "cat": {
+   "en": "Algebra",
+   "ru": "Алгебра"
+  },
   "catKey": "alg",
   "color": "#0F7A5E",
   "tint": "#E3F5EE",
-  "tip": "Telescoping is the most powerful series trick for olympiads. When you see a sum, always ask: can I write each term as f(n+1) − f(n)?",
+  "tip": {
+   "en": "Telescoping is the most powerful series trick for olympiads. When you see a sum, always ask: can I write each term as f(n+1) − f(n)?",
+   "ru": "Телескопирование — самый сильный приём для сумм на олимпиадах. Увидев сумму, всегда спрашивайте себя: можно ли записать каждое слагаемое как $f(n+1)-f(n)$?"
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Arithmetic Sequences",
-      "desc": "Full treatment with competition problems and proof techniques.",
+      "desc": {
+       "en": "Full treatment with competition problems and proof techniques.",
+       "ru": "Полное изложение с олимпиадными задачами и приёмами доказательства."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Arithmetic_sequence",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Telescoping Series",
-      "desc": "The telescoping technique explained with many worked examples.",
+      "desc": {
+       "en": "The telescoping technique explained with many worked examples.",
+       "ru": "Приём телескопирования с большим числом разобранных примеров."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Telescoping_series",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Geometric Sequences",
-      "desc": "Geometric sequences, infinite sums, and competition applications.",
+      "desc": {
+       "en": "Geometric sequences, infinite sums, and competition applications.",
+       "ru": "Геометрические прогрессии, бесконечные суммы и олимпиадные применения."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Geometric_sequence",
       "price": "free",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Algebra — AoPS",
-      "desc": "Covers sequences, series, and recursive formulas at competition level.",
+      "desc": {
+       "en": "Covers sequences, series, and recursive formulas at competition level.",
+       "ru": "Последовательности, ряды и рекуррентные формулы олимпиадного уровня."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-algebra",
       "price": "paid",
       "star": false
@@ -1353,36 +2161,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Sequences and Series",
-      "desc": "Complete video course on arithmetic and geometric sequences.",
+      "desc": {
+       "en": "Complete video course on arithmetic and geometric sequences.",
+       "ru": "Полный видеокурс об арифметических и геометрических прогрессиях."
+      },
       "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:sequences",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Essence of Sequences",
-      "desc": "Visual exploration of convergence and geometric series.",
+      "desc": {
+       "en": "Visual exploration of convergence and geometric series.",
+       "ru": "Наглядный разбор сходимости и геометрических рядов."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "PatrickJMT — Telescoping Sums",
-      "desc": "Clear step-by-step video on evaluating telescoping sums.",
+      "desc": {
+       "en": "Clear step-by-step video on evaluating telescoping sums.",
+       "ru": "Понятное пошаговое видео о вычислении телескопических сумм."
+      },
       "url": "https://www.youtube.com/@patrickjmt",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Sequences",
-      "desc": "How sequences appear in math olympiads with competition examples.",
+      "desc": {
+       "en": "How sequences appear in math olympiads with competition examples.",
+       "ru": "Как последовательности появляются на олимпиадах, с примерами задач."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": false
@@ -1394,36 +2226,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Qiziqarli Matematika — Yunusov (Uzbek, FREE)",
-      "desc": "Uzbek-language book with interesting problems including number sequences.",
+      "desc": {
+       "en": "Uzbek-language book with interesting problems including number sequences.",
+       "ru": "Книга на узбекском с занимательными задачами, включая числовые последовательности."
+      },
       "url": "https://www.ziyouz.com/books/kollej_va_otm_darsliklari/matematika/Qiziqarli%20matematika%20va%20olimpiada%20masalalari%20(A.Yunusov%20va%20b.).pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Sequence problems",
-      "desc": "Recursive and closed-form sequence problems from Uzbekistan olympiad rounds.",
+      "desc": {
+       "en": "Recursive and closed-form sequence problems from Uzbekistan olympiad rounds.",
+       "ru": "Задачи на рекуррентные и явные формулы с туров олимпиады Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Fibonacci and Recursive Sequences — AoPS Handout",
-      "desc": "Free handout on Fibonacci numbers, linear recurrences, and olympiad applications.",
+      "desc": {
+       "en": "Free handout on Fibonacci numbers, linear recurrences, and olympiad applications.",
+       "ru": "Бесплатный конспект о числах Фибоначчи, линейных рекуррентах и их применениях."
+      },
       "url": "https://artofproblemsolving.com/community/c5h482124",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Grade 7-8 Past Exams",
-      "desc": "Includes sequence and series problems at school-to-district level.",
+      "desc": {
+       "en": "Includes sequence and series problems at school-to-district level.",
+       "ru": "Содержит задачи на последовательности и ряды школьного и районного уровня."
+      },
       "url": "https://olympiadusa.org",
       "price": "free",
       "star": false
@@ -1435,36 +2291,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Sequences and Series",
-      "desc": "Interactive course from arithmetic/geometric to recurrences.",
+      "desc": {
+       "en": "Interactive course from arithmetic/geometric to recurrences.",
+       "ru": "Интерактивный курс от арифметической и геометрической прогрессий до рекуррент."
+      },
       "url": "https://brilliant.org/courses/sequences-and-series/",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "OEIS — Online Encyclopedia of Integer Sequences",
-      "desc": "Look up any integer sequence. Great for exploration and discovery.",
+      "desc": {
+       "en": "Look up any integer sequence. Great for exploration and discovery.",
+       "ru": "Поиск по любой целочисленной последовательности. Отлично для исследований."
+      },
       "url": "https://oeis.org",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Sequence Problems",
-      "desc": "Competition problems on sequences and series with community solutions.",
+      "desc": {
+       "en": "Competition problems on sequences and series with community solutions.",
+       "ru": "Олимпиадные задачи на последовательности и ряды с решениями сообщества."
+      },
       "url": "https://artofproblemsolving.com/community/c5",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Sequences",
-      "desc": "Mathematical explorations of sequences including telescoping and recursive.",
+      "desc": {
+       "en": "Mathematical explorations of sequences including telescoping and recursive.",
+       "ru": "Математические разборы последовательностей, включая телескопические и рекуррентные."
+      },
       "url": "https://www.cut-the-knot.org",
       "price": "free",
       "star": false
@@ -1476,36 +2356,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Sequence and progression problems in Al-Xorazmiy and main olympiad papers.",
+      "desc": {
+       "en": "Sequence and progression problems in Al-Xorazmiy and main olympiad papers.",
+       "ru": "Задачи на последовательности и прогрессии в вариантах Аль-Хорезми и основной олимпиады."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz",
-      "desc": "Sequence problems from viloyat and Republic rounds with solutions.",
+      "desc": {
+       "en": "Sequence problems from viloyat and Republic rounds with solutions.",
+       "ru": "Задачи на последовательности с областных и республиканских туров с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "soff.uz — Matematika test 7-8 sinf",
-      "desc": "Online math tests for grades 7-8 including algebra and sequence questions.",
+      "desc": {
+       "en": "Online math tests for grades 7-8 including algebra and sequence questions.",
+       "ru": "Онлайн-тесты по математике для 7–8 классов, включая алгебру и последовательности."
+      },
       "url": "https://soff.uz/product/algebra-matematika-test-7-8-sinf-uchun",
       "price": "paid",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Math books",
-      "desc": "Uzbek math books including chapters on progressions and sequences.",
+      "desc": {
+       "en": "Uzbek math books including chapters on progressions and sequences.",
+       "ru": "Узбекские учебники с главами о прогрессиях и последовательностях."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
@@ -1516,48 +2420,81 @@ var TOPICS = [
  },
  {
   "n": 8,
-  "title": "Word Problems & Systems",
-  "cat": "Algebra",
+  "title": {
+   "en": "Word Problems & Systems",
+   "ru": "Текстовые задачи и системы"
+  },
+  "cat": {
+   "en": "Algebra",
+   "ru": "Алгебра"
+  },
   "catKey": "alg",
   "color": "#0F7A5E",
   "tint": "#E3F5EE",
-  "tip": "Define variables clearly before writing any equation. For symmetric systems, introduce s=x+y and p=xy — this reduces many hard systems to a simple quadratic.",
+  "tip": {
+   "en": "Define variables clearly before writing any equation. For symmetric systems, introduce s=x+y and p=xy — this reduces many hard systems to a simple quadratic.",
+   "ru": "Чётко определите переменные, прежде чем писать хоть одно уравнение. Для симметричных систем вводите $s=x+y$ и $p=xy$ — это сводит многие трудные системы к простому квадратному уравнению."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Systems of Equations",
-      "desc": "Techniques for 2- and 3-variable systems including symmetric cases.",
+      "desc": {
+       "en": "Techniques for 2- and 3-variable systems including symmetric cases.",
+       "ru": "Приёмы для систем с двумя и тремя переменными, включая симметричные случаи."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/System_of_equations",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Vieta's Formulas",
-      "desc": "Key tool for symmetric systems using sum/product of roots.",
+      "desc": {
+       "en": "Key tool for symmetric systems using sum/product of roots.",
+       "ru": "Ключевой инструмент для симметричных систем через сумму и произведение корней."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Vieta%27s_formulas",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Algebra — AoPS",
-      "desc": "Comprehensive treatment of word problems, mixture/rate/time, and systems.",
+      "desc": {
+       "en": "Comprehensive treatment of word problems, mixture/rate/time, and systems.",
+       "ru": "Подробное изложение текстовых задач на смеси, скорость и время, а также систем."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-algebra",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Art and Craft of Problem Solving — Zeitz",
-      "desc": "Outstanding chapter on algebraic word problems and modeling.",
+      "desc": {
+       "en": "Outstanding chapter on algebraic word problems and modeling.",
+       "ru": "Выдающаяся глава об алгебраических текстовых задачах и составлении модели."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -1569,36 +2506,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Systems of Equations",
-      "desc": "Complete video course: substitution, elimination, graphing.",
+      "desc": {
+       "en": "Complete video course: substitution, elimination, graphing.",
+       "ru": "Полный видеокурс: подстановка, сложение, графический способ."
+      },
       "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Word Problems",
-      "desc": "How to set up and solve competition-style word problems.",
+      "desc": {
+       "en": "How to set up and solve competition-style word problems.",
+       "ru": "Как составлять и решать текстовые задачи олимпиадного типа."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "PatrickJMT — Nonlinear Systems",
-      "desc": "Solving non-linear systems of equations step by step.",
+      "desc": {
+       "en": "Solving non-linear systems of equations step by step.",
+       "ru": "Решение нелинейных систем уравнений шаг за шагом."
+      },
       "url": "https://www.youtube.com/@patrickjmt",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "MathDoctorBob — Applied Algebra",
-      "desc": "Word problem modeling and system-solving at competition level.",
+      "desc": {
+       "en": "Word problem modeling and system-solving at competition level.",
+       "ru": "Составление модели и решение систем на олимпиадном уровне."
+      },
       "url": "https://www.youtube.com/@MathDoctorBob",
       "price": "free",
       "star": false
@@ -1610,36 +2571,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Grade 7-8 Past Exams",
-      "desc": "Word problems and systems at school-to-district level with solutions.",
+      "desc": {
+       "en": "Word problems and systems at school-to-district level with solutions.",
+       "ru": "Текстовые задачи и системы школьного и районного уровня с решениями."
+      },
       "url": "https://olympiadusa.org/wp-content/uploads/2025/02/january-grade-7-8-past-exams-questions-and-solutions-olympiadusa-org.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Algebra problems",
-      "desc": "Word problems from viloyat and republic rounds involving systems.",
+      "desc": {
+       "en": "Word problems from viloyat and republic rounds involving systems.",
+       "ru": "Текстовые задачи с областных и республиканских туров, сводящиеся к системам."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "AMC 8 Past Papers",
-      "desc": "Great source of word problems at school-to-district olympiad level.",
+      "desc": {
+       "en": "Great source of word problems at school-to-district olympiad level.",
+       "ru": "Отличный источник текстовых задач школьного и районного олимпиадного уровня."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Qiziqarli Matematika — Yunusov",
-      "desc": "Uzbek book with word problems including mixture and rate problems.",
+      "desc": {
+       "en": "Uzbek book with word problems including mixture and rate problems.",
+       "ru": "Узбекская книга с текстовыми задачами, включая задачи на смеси и движение."
+      },
       "url": "https://www.ziyouz.com/books/kollej_va_otm_darsliklari/matematika/Qiziqarli%20matematika%20va%20olimpiada%20masalalari%20(A.Yunusov%20va%20b.).pdf",
       "price": "free",
       "star": false
@@ -1651,36 +2636,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Word Problems",
-      "desc": "Interactive problems from basic to advanced, including systems and optimization.",
+      "desc": {
+       "en": "Interactive problems from basic to advanced, including systems and optimization.",
+       "ru": "Интерактивные задачи от простых до сложных, включая системы и оптимизацию."
+      },
       "url": "https://brilliant.org",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Algebra Competition Problems",
-      "desc": "Thousands of word problems and system problems from competition archives.",
+      "desc": {
+       "en": "Thousands of word problems and system problems from competition archives.",
+       "ru": "Тысячи текстовых задач и задач на системы из олимпиадных архивов."
+      },
       "url": "https://artofproblemsolving.com/community/c5",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Word Problems",
-      "desc": "UK enrichment problems involving systems and mathematical modeling.",
+      "desc": {
+       "en": "UK enrichment problems involving systems and mathematical modeling.",
+       "ru": "Британские задачи на системы и математическое моделирование."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "MathOlymp.com",
-      "desc": "Curated olympiad word problems searchable by topic and level.",
+      "desc": {
+       "en": "Curated olympiad word problems searchable by topic and level.",
+       "ru": "Отобранные олимпиадные текстовые задачи с поиском по теме и уровню."
+      },
       "url": "https://matholymp.com",
       "price": "free",
       "star": false
@@ -1692,36 +2701,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Word problems common at all levels. Filter by matematika 7-8 sinf.",
+      "desc": {
+       "en": "Word problems common at all levels. Filter by matematika 7-8 sinf.",
+       "ru": "Текстовые задачи встречаются на всех уровнях. Фильтруйте по «matematika», 7–8 классы."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Masalalar to'plami",
-      "desc": "Problem collections from Uzbekistan olympiads organized by topic.",
+      "desc": {
+       "en": "Problem collections from Uzbekistan olympiads organized by topic.",
+       "ru": "Сборники задач с олимпиад Узбекистана, разложенные по темам."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz — Grade 7-8",
-      "desc": "Uzbek-language problem sets for grades 7-8 including word problems.",
+      "desc": {
+       "en": "Uzbek-language problem sets for grades 7-8 including word problems.",
+       "ru": "Наборы задач на узбекском для 7–8 классов, включая текстовые задачи."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "info-master.uz",
-      "desc": "Uzbek math resources and tests including word problems.",
+      "desc": {
+       "en": "Uzbek math resources and tests including word problems.",
+       "ru": "Узбекские материалы и тесты по математике, включая текстовые задачи."
+      },
       "url": "https://info-master.uz",
       "price": "free",
       "star": false
@@ -1732,48 +2765,81 @@ var TOPICS = [
  },
  {
   "n": 9,
-  "title": "Triangles & Congruence",
-  "cat": "Geometry",
+  "title": {
+   "en": "Triangles & Congruence",
+   "ru": "Треугольники и равенство"
+  },
+  "cat": {
+   "en": "Geometry",
+   "ru": "Геометрия"
+  },
   "catKey": "geo",
   "color": "#B0451F",
   "tint": "#FBEDE6",
-  "tip": "Always draw a big, accurate diagram first. Label all known angles and sides. Most olympiad geometry proofs require adding one auxiliary construction — the right line changes everything.",
+  "tip": {
+   "en": "Always draw a big, accurate diagram first. Label all known angles and sides. Most olympiad geometry proofs require adding one auxiliary construction — the right line changes everything.",
+   "ru": "Сначала всегда рисуйте большой и аккуратный чертёж. Отметьте все известные углы и стороны. Большинство олимпиадных доказательств требует одного дополнительного построения — верная линия меняет всё."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Geometry Revisited — Coxeter & Greitzer",
-      "desc": "Classic olympiad geometry book. Chapters 1-2 cover triangles and similarity beautifully.",
+      "desc": {
+       "en": "Classic olympiad geometry book. Chapters 1-2 cover triangles and similarity beautifully.",
+       "ru": "Классическая книга по олимпиадной геометрии. Главы 1–2 прекрасно разбирают треугольники и подобие."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Geometry — AoPS",
-      "desc": "Competition geometry textbook covering congruence, similarity, and special triangles.",
+      "desc": {
+       "en": "Competition geometry textbook covering congruence, similarity, and special triangles.",
+       "ru": "Учебник олимпиадной геометрии: равенство, подобие и особые треугольники."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-geometry",
       "price": "paid",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Triangle Congruence and Similarity",
-      "desc": "All criteria with proofs and competition examples.",
+      "desc": {
+       "en": "All criteria with proofs and competition examples.",
+       "ru": "Все признаки с доказательствами и олимпиадными примерами."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Congruent_triangles",
       "price": "free",
       "star": false
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Cevian Lines",
-      "desc": "Ceva's theorem, medians, altitudes, and angle bisectors.",
+      "desc": {
+       "en": "Ceva's theorem, medians, altitudes, and angle bisectors.",
+       "ru": "Теорема Чевы, медианы, высоты и биссектрисы."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Cevian",
       "price": "free",
       "star": false
@@ -1785,36 +2851,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Triangle Geometry",
-      "desc": "Congruence, similarity, and special triangle constructions for competition.",
+      "desc": {
+       "en": "Congruence, similarity, and special triangle constructions for competition.",
+       "ru": "Равенство, подобие и особые построения в треугольнике для олимпиад."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Triangles and Congruence",
-      "desc": "Complete beginner-to-intermediate course on triangle congruence and similarity.",
+      "desc": {
+       "en": "Complete beginner-to-intermediate course on triangle congruence and similarity.",
+       "ru": "Полный курс от начального до среднего уровня о равенстве и подобии треугольников."
+      },
       "url": "https://www.khanacademy.org/math/geometry/hs-geo-congruence",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Triangle Geometry",
-      "desc": "Visual explorations of triangle properties.",
+      "desc": {
+       "en": "Visual explorations of triangle properties.",
+       "ru": "Наглядные разборы свойств треугольника."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Numberphile — Triangle Mysteries",
-      "desc": "Fun videos on interesting triangle properties.",
+      "desc": {
+       "en": "Fun videos on interesting triangle properties.",
+       "ru": "Увлекательные видео о любопытных свойствах треугольников."
+      },
       "url": "https://www.youtube.com/@numberphile",
       "price": "free",
       "star": false
@@ -1826,36 +2916,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "150 Nice Geometry Problems — Parvardi (FREE)",
-      "desc": "150 competition geometry problems with solutions. Many triangle-focused.",
+      "desc": {
+       "en": "150 competition geometry problems with solutions. Many triangle-focused.",
+       "ru": "150 олимпиадных задач по геометрии с решениями. Многие — о треугольниках."
+      },
       "url": "https://artofproblemsolving.com/community/c6h1116",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — EGMO (FREE book)",
-      "desc": "Free book-length PDF. Triangle chapter is outstanding for olympiad prep.",
+      "desc": {
+       "en": "Free book-length PDF. Triangle chapter is outstanding for olympiad prep.",
+       "ru": "Бесплатный PDF размером с книгу. Глава о треугольниках выдающаяся."
+      },
       "url": "https://web.evanchen.cc/geombook.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Geometriya",
-      "desc": "Uzbekistan olympiad geometry problems involving triangles with solutions.",
+      "desc": {
+       "en": "Uzbekistan olympiad geometry problems involving triangles with solutions.",
+       "ru": "Задачи по геометрии треугольника с олимпиад Узбекистана с решениями."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "imogeometry.blogspot.com",
-      "desc": "14,642 olympiad geometry problems with AoPS links.",
+      "desc": {
+       "en": "14,642 olympiad geometry problems with AoPS links.",
+       "ru": "14 642 олимпиадные задачи по геометрии со ссылками на AoPS."
+      },
       "url": "https://imogeometry.blogspot.com/p/geometry-solved-problem-collections.html",
       "price": "free",
       "star": false
@@ -1867,36 +2981,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "GeoGebra — Interactive Geometry",
-      "desc": "Free dynamic geometry software. Draw any triangle construction and explore.",
+      "desc": {
+       "en": "Free dynamic geometry software. Draw any triangle construction and explore.",
+       "ru": "Бесплатная динамическая геометрия. Постройте любую конструкцию и исследуйте её."
+      },
       "url": "https://www.geogebra.org/geometry",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Geometry Forum",
-      "desc": "Competition geometry problems with community solutions.",
+      "desc": {
+       "en": "Competition geometry problems with community solutions.",
+       "ru": "Олимпиадные задачи по геометрии с решениями сообщества."
+      },
       "url": "https://artofproblemsolving.com/community/c4",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Geometry Fundamentals",
-      "desc": "Interactive geometry course covering congruence, similarity, special triangles.",
+      "desc": {
+       "en": "Interactive geometry course covering congruence, similarity, special triangles.",
+       "ru": "Интерактивный курс геометрии: равенство, подобие, особые треугольники."
+      },
       "url": "https://brilliant.org/courses/geometry-fundamentals/",
       "price": "paid",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Triangle Problems",
-      "desc": "Deep mathematical explorations with visual proofs.",
+      "desc": {
+       "en": "Deep mathematical explorations with visual proofs.",
+       "ru": "Глубокие математические разборы с наглядными доказательствами."
+      },
       "url": "https://www.cut-the-knot.org/triangle.shtml",
       "price": "free",
       "star": false
@@ -1908,36 +3046,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Geometriya",
-      "desc": "Geometry problems from all levels for grades 7-8.",
+      "desc": {
+       "en": "Geometry problems from all levels for grades 7-8.",
+       "ru": "Задачи по геометрии всех уровней для 7–8 классов."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Geometriya bo'limi",
-      "desc": "Triangle problems from viloyat and republic rounds with full solutions.",
+      "desc": {
+       "en": "Triangle problems from viloyat and republic rounds with full solutions.",
+       "ru": "Задачи о треугольниках с областных и республиканских туров с полными решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "imogeometry — TASIMO problems",
-      "desc": "TASIMO geometry problems with solutions. Advanced level.",
+      "desc": {
+       "en": "TASIMO geometry problems with solutions. Advanced level.",
+       "ru": "Задачи по геометрии TASIMO с решениями. Повышенный уровень."
+      },
       "url": "https://imogeometry.blogspot.com",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Geometriya kitoblari",
-      "desc": "Uzbek geometry textbooks and supplementary problem collections.",
+      "desc": {
+       "en": "Uzbek geometry textbooks and supplementary problem collections.",
+       "ru": "Узбекские учебники геометрии и дополнительные сборники задач."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
@@ -1948,48 +3110,81 @@ var TOPICS = [
  },
  {
   "n": 10,
-  "title": "Area Tricks",
-  "cat": "Geometry",
+  "title": {
+   "en": "Area Tricks",
+   "ru": "Площади и метод площадей"
+  },
+  "cat": {
+   "en": "Geometry",
+   "ru": "Геометрия"
+  },
   "catKey": "geo",
   "color": "#B0451F",
   "tint": "#FBEDE6",
-  "tip": "Compute the same area in two different ways — this is one of the most powerful olympiad techniques across ALL topics, not just geometry.",
+  "tip": {
+   "en": "Compute the same area in two different ways — this is one of the most powerful olympiad techniques across ALL topics, not just geometry.",
+   "ru": "Посчитайте одну и ту же площадь двумя способами — это один из самых сильных олимпиадных приёмов во ВСЕХ темах, а не только в геометрии."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Pick's Theorem",
-      "desc": "Statement, proof, and competition applications for lattice polygons.",
+      "desc": {
+       "en": "Statement, proof, and competition applications for lattice polygons.",
+       "ru": "Формулировка, доказательство и олимпиадные применения для решётчатых многоугольников."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Pick%27s_Theorem",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Shoelace Theorem",
-      "desc": "Computing polygon areas using vertex coordinates.",
+      "desc": {
+       "en": "Computing polygon areas using vertex coordinates.",
+       "ru": "Вычисление площади многоугольника по координатам вершин."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Shoelace_Theorem",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Heron's Formula",
-      "desc": "Proof, applications, and competition problems.",
+      "desc": {
+       "en": "Proof, applications, and competition problems.",
+       "ru": "Доказательство, применения и олимпиадные задачи."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Heron%27s_formula",
       "price": "free",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Geometry — AoPS",
-      "desc": "Area section covers all formulas plus clever two-area tricks.",
+      "desc": {
+       "en": "Area section covers all formulas plus clever two-area tricks.",
+       "ru": "Раздел о площадях: все формулы плюс приёмы подсчёта площади двумя способами."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-geometry",
       "price": "paid",
       "star": false
@@ -2001,36 +3196,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Area Problems",
-      "desc": "Competition-focused video on area methods, Heron's formula, and Pick's theorem.",
+      "desc": {
+       "en": "Competition-focused video on area methods, Heron's formula, and Pick's theorem.",
+       "ru": "Олимпиадное видео о методе площадей, формуле Герона и формуле Пика."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Area and Perimeter",
-      "desc": "Comprehensive area course from triangles to composite shapes.",
+      "desc": {
+       "en": "Comprehensive area course from triangles to composite shapes.",
+       "ru": "Подробный курс о площадях — от треугольников до составных фигур."
+      },
       "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Area and Geometry",
-      "desc": "Visual explorations of area calculations.",
+      "desc": {
+       "en": "Visual explorations of area calculations.",
+       "ru": "Наглядные разборы вычисления площадей."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "MathOlympiad — Area Tricks",
-      "desc": "Olympiad-specific area techniques including dissection and two-ways method.",
+      "desc": {
+       "en": "Olympiad-specific area techniques including dissection and two-ways method.",
+       "ru": "Олимпиадные приёмы работы с площадями, включая разрезания и метод двух подсчётов."
+      },
       "url": "https://www.youtube.com/@mathsolympiad",
       "price": "free",
       "star": false
@@ -2042,36 +3261,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "150 Geometry Problems — Parvardi (FREE)",
-      "desc": "Many area-based competition problems with full solutions.",
+      "desc": {
+       "en": "Many area-based competition problems with full solutions.",
+       "ru": "Много олимпиадных задач на площади с полными решениями."
+      },
       "url": "https://artofproblemsolving.com/community/c6h1116",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — EGMO (FREE)",
-      "desc": "Full treatment of area methods in olympiad geometry.",
+      "desc": {
+       "en": "Full treatment of area methods in olympiad geometry.",
+       "ru": "Полное изложение метода площадей в олимпиадной геометрии."
+      },
       "url": "https://web.evanchen.cc/geombook.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Area problems",
-      "desc": "Area problems from Uzbekistan olympiad rounds with solutions.",
+      "desc": {
+       "en": "Area problems from Uzbekistan olympiad rounds with solutions.",
+       "ru": "Задачи на площади с туров олимпиады Узбекистана с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Past Papers",
-      "desc": "Area problems at grade 7-8 level from past exams.",
+      "desc": {
+       "en": "Area problems at grade 7-8 level from past exams.",
+       "ru": "Задачи на площади уровня 7–8 классов из прошлых туров."
+      },
       "url": "https://olympiadusa.org",
       "price": "free",
       "star": false
@@ -2083,36 +3326,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "GeoGebra — Area Explorer",
-      "desc": "Interactive area calculations visually for any polygon.",
+      "desc": {
+       "en": "Interactive area calculations visually for any polygon.",
+       "ru": "Наглядное интерактивное вычисление площади любого многоугольника."
+      },
       "url": "https://www.geogebra.org",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Area Competition Problems",
-      "desc": "Hundreds of area problems from competition archives.",
+      "desc": {
+       "en": "Hundreds of area problems from competition archives.",
+       "ru": "Сотни задач на площади из олимпиадных архивов."
+      },
       "url": "https://artofproblemsolving.com/community/c4",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Area & Perimeter",
-      "desc": "Interactive lessons on area formulas in competitions.",
+      "desc": {
+       "en": "Interactive lessons on area formulas in competitions.",
+       "ru": "Интерактивные уроки о формулах площади в олимпиадных задачах."
+      },
       "url": "https://brilliant.org/courses/geometry-fundamentals/",
       "price": "paid",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Area Puzzles",
-      "desc": "Engaging area and dissection puzzles for grades 7-8.",
+      "desc": {
+       "en": "Engaging area and dissection puzzles for grades 7-8.",
+       "ru": "Увлекательные задачи на площади и разрезания для 7–8 классов."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -2124,36 +3391,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Geometriya masalalari",
-      "desc": "Area problems from viloyat and republic olympiad papers for grades 7-8.",
+      "desc": {
+       "en": "Area problems from viloyat and republic olympiad papers for grades 7-8.",
+       "ru": "Задачи на площади с областных и республиканских туров для 7–8 классов."
+      },
       "url": "https://olympiad.maktab.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz",
-      "desc": "Area and geometry problems from official Uzbekistan olympiad guide.",
+      "desc": {
+       "en": "Area and geometry problems from official Uzbekistan olympiad guide.",
+       "ru": "Задачи на площади и геометрию из официального руководства по олимпиадам Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz",
-      "desc": "Grade 7-8 geometry problems in Uzbek language.",
+      "desc": {
+       "en": "Grade 7-8 geometry problems in Uzbek language.",
+       "ru": "Задачи по геометрии для 7–8 классов на узбекском языке."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Geometriya",
-      "desc": "Uzbek geometry books and supplementary resources.",
+      "desc": {
+       "en": "Uzbek geometry books and supplementary resources.",
+       "ru": "Узбекские книги по геометрии и дополнительные материалы."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
@@ -2164,48 +3455,81 @@ var TOPICS = [
  },
  {
   "n": 11,
-  "title": "Circles",
-  "cat": "Geometry",
+  "title": {
+   "en": "Circles",
+   "ru": "Окружности"
+  },
+  "cat": {
+   "en": "Geometry",
+   "ru": "Геометрия"
+  },
   "catKey": "geo",
   "color": "#B0451F",
   "tint": "#FBEDE6",
-  "tip": "Power of a Point is the single most powerful circle tool. When two chords, secants, or tangents interact at a point, write the power equation immediately.",
+  "tip": {
+   "en": "Power of a Point is the single most powerful circle tool. When two chords, secants, or tangents interact at a point, write the power equation immediately.",
+   "ru": "Степень точки — самый мощный инструмент работы с окружностями. Как только в одной точке встречаются хорды, секущие или касательные, сразу выписывайте равенство степеней."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Power of a Point",
-      "desc": "Full treatment with proof, all three cases, and competition problems.",
+      "desc": {
+       "en": "Full treatment with proof, all three cases, and competition problems.",
+       "ru": "Полное изложение с доказательством, разбором всех трёх случаев и олимпиадными задачами."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Power_of_a_Point_Theorem",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Inscribed Angle Theorem",
-      "desc": "All angle theorems for circles: inscribed, central, tangent-chord.",
+      "desc": {
+       "en": "All angle theorems for circles: inscribed, central, tangent-chord.",
+       "ru": "Все теоремы об углах окружности: вписанный, центральный, угол между касательной и хордой."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Inscribed_angle",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Geometry Revisited — Coxeter & Greitzer",
-      "desc": "Classic chapter on circles and cyclic quadrilaterals. Essential reading.",
+      "desc": {
+       "en": "Classic chapter on circles and cyclic quadrilaterals. Essential reading.",
+       "ru": "Классическая глава об окружностях и вписанных четырёхугольниках. Обязательное чтение."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Cyclic Quadrilateral and Ptolemy",
-      "desc": "Properties and Ptolemy's theorem with competition problems.",
+      "desc": {
+       "en": "Properties and Ptolemy's theorem with competition problems.",
+       "ru": "Свойства и теорема Птолемея с олимпиадными задачами."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Cyclic_quadrilateral",
       "price": "free",
       "star": false
@@ -2217,36 +3541,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Circle Theorems",
-      "desc": "Power of a point, inscribed angles, tangent properties with competition examples.",
+      "desc": {
+       "en": "Power of a point, inscribed angles, tangent properties with competition examples.",
+       "ru": "Степень точки, вписанные углы и свойства касательной с олимпиадными примерами."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Circle Theorems",
-      "desc": "Complete circle theorem course from central to inscribed quadrilaterals.",
+      "desc": {
+       "en": "Complete circle theorem course from central to inscribed quadrilaterals.",
+       "ru": "Полный курс теорем об окружности — от центральных углов до вписанных четырёхугольников."
+      },
       "url": "https://www.khanacademy.org/math/geometry/hs-geo-circles",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Circle Geometry",
-      "desc": "Beautiful explorations of circle geometry and optimization.",
+      "desc": {
+       "en": "Beautiful explorations of circle geometry and optimization.",
+       "ru": "Красивые разборы геометрии окружности и задач на оптимизацию."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "MathOlympiad — Circle Competition Problems",
-      "desc": "Olympiad-level circle problems solved step by step.",
+      "desc": {
+       "en": "Olympiad-level circle problems solved step by step.",
+       "ru": "Олимпиадные задачи об окружностях, разобранные шаг за шагом."
+      },
       "url": "https://www.youtube.com/@mathsolympiad",
       "price": "free",
       "star": false
@@ -2258,36 +3606,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — EGMO circle chapter (FREE)",
-      "desc": "Comprehensive free book chapter on circle geometry for olympiads.",
+      "desc": {
+       "en": "Comprehensive free book chapter on circle geometry for olympiads.",
+       "ru": "Подробная бесплатная глава о геометрии окружности для олимпиад."
+      },
       "url": "https://web.evanchen.cc/geombook.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "imogeometry — Circle problems",
-      "desc": "Thousands of competition circle problems organized by topic.",
+      "desc": {
+       "en": "Thousands of competition circle problems organized by topic.",
+       "ru": "Тысячи олимпиадных задач об окружностях, разложенных по темам."
+      },
       "url": "https://imogeometry.blogspot.com/p/geometry-solved-problem-collections.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Aylana masalalari",
-      "desc": "Circle problems from viloyat and republic olympiad papers.",
+      "desc": {
+       "en": "Circle problems from viloyat and republic olympiad papers.",
+       "ru": "Задачи об окружностях с областных и республиканских туров."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "150 Geometry Problems — Parvardi",
-      "desc": "Circle-focused competition problems with full solutions.",
+      "desc": {
+       "en": "Circle-focused competition problems with full solutions.",
+       "ru": "Олимпиадные задачи об окружностях с полными решениями."
+      },
       "url": "https://artofproblemsolving.com/community/c6h1116",
       "price": "free",
       "star": false
@@ -2299,36 +3671,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "GeoGebra — Circle Theorems",
-      "desc": "Interactive demonstrations. Drag points to see theorems hold dynamically.",
+      "desc": {
+       "en": "Interactive demonstrations. Drag points to see theorems hold dynamically.",
+       "ru": "Интерактивные демонстрации. Двигайте точки и смотрите, как теоремы сохраняются."
+      },
       "url": "https://www.geogebra.org",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Geometry/Circle Forum",
-      "desc": "Competition circle problems with community solutions.",
+      "desc": {
+       "en": "Competition circle problems with community solutions.",
+       "ru": "Олимпиадные задачи об окружностях с решениями сообщества."
+      },
       "url": "https://artofproblemsolving.com/community/c4",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Circle Geometry",
-      "desc": "Interactive course including power of a point.",
+      "desc": {
+       "en": "Interactive course including power of a point.",
+       "ru": "Интерактивный курс, включающий степень точки."
+      },
       "url": "https://brilliant.org/courses/geometry-fundamentals/",
       "price": "paid",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Circle Theorems",
-      "desc": "Classical explorations of circle geometry with proofs.",
+      "desc": {
+       "en": "Classical explorations of circle geometry with proofs.",
+       "ru": "Классические разборы геометрии окружности с доказательствами."
+      },
       "url": "https://www.cut-the-knot.org/geometry.shtml",
       "price": "free",
       "star": false
@@ -2340,36 +3736,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Circle geometry problems from all levels of Uzbekistan olympiad.",
+      "desc": {
+       "en": "Circle geometry problems from all levels of Uzbekistan olympiad.",
+       "ru": "Задачи о геометрии окружности со всех уровней олимпиады Узбекистана."
+      },
       "url": "https://olympiad.maktab.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Geometriya",
-      "desc": "Circle problems from viloyat and republic rounds with solutions.",
+      "desc": {
+       "en": "Circle problems from viloyat and republic rounds with solutions.",
+       "ru": "Задачи об окружностях с областных и республиканских туров с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "imogeometry — TASIMO",
-      "desc": "TASIMO competition problems include advanced circle geometry.",
+      "desc": {
+       "en": "TASIMO competition problems include advanced circle geometry.",
+       "ru": "Задачи TASIMO включают геометрию окружности повышенного уровня."
+      },
       "url": "https://imogeometry.blogspot.com",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Geometriya",
-      "desc": "Uzbek-language geometry resources including circle theorems.",
+      "desc": {
+       "en": "Uzbek-language geometry resources including circle theorems.",
+       "ru": "Материалы по геометрии на узбекском, включая теоремы об окружности."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
@@ -2380,48 +3800,81 @@ var TOPICS = [
  },
  {
   "n": 12,
-  "title": "Coordinate Geometry",
-  "cat": "Geometry",
+  "title": {
+   "en": "Coordinate Geometry",
+   "ru": "Координатный метод"
+  },
+  "cat": {
+   "en": "Geometry",
+   "ru": "Геометрия"
+  },
   "catKey": "geo",
   "color": "#B0451F",
   "tint": "#FBEDE6",
-  "tip": "Choose coordinates wisely — place one vertex at origin and one side along the x-axis. This eliminates variables and makes everything much cleaner.",
+  "tip": {
+   "en": "Choose coordinates wisely — place one vertex at origin and one side along the x-axis. This eliminates variables and makes everything much cleaner.",
+   "ru": "Выбирайте координаты с умом: поместите одну вершину в начало координат, а сторону — на ось абсцисс. Это убирает лишние переменные и делает выкладки заметно чище."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Coordinate Geometry",
-      "desc": "Distance, midpoint, slope, line equations, and circle equations.",
+      "desc": {
+       "en": "Distance, midpoint, slope, line equations, and circle equations.",
+       "ru": "Расстояние, середина, угловой коэффициент, уравнения прямой и окружности."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Coordinate_geometry",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Shoelace Theorem",
-      "desc": "Computing polygon areas from vertex coordinates.",
+      "desc": {
+       "en": "Computing polygon areas from vertex coordinates.",
+       "ru": "Вычисление площади многоугольника по координатам его вершин."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Shoelace_Theorem",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Geometry — AoPS",
-      "desc": "Coordinate geometry chapter at competition level.",
+      "desc": {
+       "en": "Coordinate geometry chapter at competition level.",
+       "ru": "Глава о координатной геометрии олимпиадного уровня."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-geometry",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Challenging Problems in Geometry — Posamentier",
-      "desc": "Excellent problems including many requiring coordinate methods.",
+      "desc": {
+       "en": "Excellent problems including many requiring coordinate methods.",
+       "ru": "Превосходные задачи, многие из которых требуют координатного метода."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -2433,36 +3886,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Analytic Geometry",
-      "desc": "Full coordinate geometry course: lines, distance, circles, conics.",
+      "desc": {
+       "en": "Full coordinate geometry course: lines, distance, circles, conics.",
+       "ru": "Полный курс координатной геометрии: прямые, расстояния, окружности, конические сечения."
+      },
       "url": "https://www.khanacademy.org/math/geometry/hs-geo-analytic-geometry",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Coordinate Methods",
-      "desc": "When and how to use coordinates in competition geometry.",
+      "desc": {
+       "en": "When and how to use coordinates in competition geometry.",
+       "ru": "Когда и как применять координаты в олимпиадной геометрии."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Essence of Linear Algebra",
-      "desc": "Deep geometric understanding of coordinates and transformations.",
+      "desc": {
+       "en": "Deep geometric understanding of coordinates and transformations.",
+       "ru": "Глубокое геометрическое понимание координат и преобразований."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "PatrickJMT — Analytic Geometry",
-      "desc": "Step-by-step coordinate geometry problems including circles and loci.",
+      "desc": {
+       "en": "Step-by-step coordinate geometry problems including circles and loci.",
+       "ru": "Пошаговые задачи по координатной геометрии, включая окружности и геометрические места."
+      },
       "url": "https://www.youtube.com/@patrickjmt",
       "price": "free",
       "star": false
@@ -2474,36 +3951,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — EGMO coordinate chapter (FREE)",
-      "desc": "When and how to use coordinates effectively in olympiads.",
+      "desc": {
+       "en": "When and how to use coordinates effectively in olympiads.",
+       "ru": "Когда и как эффективно применять координаты на олимпиадах."
+      },
       "url": "https://web.evanchen.cc/geombook.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Koordinatalar",
-      "desc": "Coordinate geometry problems from Uzbekistan olympiad rounds.",
+      "desc": {
+       "en": "Coordinate geometry problems from Uzbekistan olympiad rounds.",
+       "ru": "Задачи по координатной геометрии с туров олимпиады Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "AMC 10/12 coordinate geometry problems",
-      "desc": "AMC papers feature coordinate geometry at district-to-regional level.",
+      "desc": {
+       "en": "AMC papers feature coordinate geometry at district-to-regional level.",
+       "ru": "В вариантах AMC координатная геометрия встречается на районном и областном уровне."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Past Papers",
-      "desc": "Coordinate geometry problems at grade 7-8 level.",
+      "desc": {
+       "en": "Coordinate geometry problems at grade 7-8 level.",
+       "ru": "Задачи по координатной геометрии уровня 7–8 классов."
+      },
       "url": "https://olympiadusa.org",
       "price": "free",
       "star": false
@@ -2515,36 +4016,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "GeoGebra — Analytic Geometry",
-      "desc": "Interactive coordinate geometry — plot points, lines, circles instantly.",
+      "desc": {
+       "en": "Interactive coordinate geometry — plot points, lines, circles instantly.",
+       "ru": "Интерактивная координатная геометрия: точки, прямые и окружности мгновенно."
+      },
       "url": "https://www.geogebra.org",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Desmos — Graphing Calculator",
-      "desc": "Free online graphing calculator. Great for visualizing coordinate problems.",
+      "desc": {
+       "en": "Free online graphing calculator. Great for visualizing coordinate problems.",
+       "ru": "Бесплатный онлайн-график. Отлично подходит для наглядных координатных задач."
+      },
       "url": "https://www.desmos.com/calculator",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Coordinate Geometry Problems",
-      "desc": "Competition problems using coordinate methods.",
+      "desc": {
+       "en": "Competition problems using coordinate methods.",
+       "ru": "Олимпиадные задачи, решаемые координатным методом."
+      },
       "url": "https://artofproblemsolving.com/community/c4",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Analytic Geometry",
-      "desc": "Interactive coordinate geometry course.",
+      "desc": {
+       "en": "Interactive coordinate geometry course.",
+       "ru": "Интерактивный курс координатной геометрии."
+      },
       "url": "https://brilliant.org",
       "price": "paid",
       "star": false
@@ -2556,36 +4081,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Coordinate geometry in the geometry sections of Uzbekistan papers.",
+      "desc": {
+       "en": "Coordinate geometry in the geometry sections of Uzbekistan papers.",
+       "ru": "Координатная геометрия в геометрических разделах узбекских вариантов."
+      },
       "url": "https://olympiad.maktab.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz",
-      "desc": "Coordinate geometry problems from official Uzbekistan olympiad guide.",
+      "desc": {
+       "en": "Coordinate geometry problems from official Uzbekistan olympiad guide.",
+       "ru": "Задачи по координатной геометрии из официального руководства по олимпиадам Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz",
-      "desc": "Grade 7-8 geometry including coordinate methods.",
+      "desc": {
+       "en": "Grade 7-8 geometry including coordinate methods.",
+       "ru": "Геометрия для 7–8 классов, включая координатные методы."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Ziyouz.com — Analitik geometriya",
-      "desc": "Uzbek analytic geometry textbooks and supplementary materials.",
+      "desc": {
+       "en": "Uzbek analytic geometry textbooks and supplementary materials.",
+       "ru": "Узбекские учебники аналитической геометрии и дополнительные материалы."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
@@ -2596,48 +4145,81 @@ var TOPICS = [
  },
  {
   "n": 13,
-  "title": "Counting Principles",
-  "cat": "Combinatorics",
+  "title": {
+   "en": "Counting Principles",
+   "ru": "Комбинаторика: как считать"
+  },
+  "cat": {
+   "en": "Combinatorics",
+   "ru": "Комбинаторика"
+  },
   "catKey": "comb",
   "color": "#5B4FC7",
   "tint": "#EDECFD",
-  "tip": "Overcounting + correcting often beats counting directly. Draw a Venn diagram before applying inclusion-exclusion. Stars and bars is your go-to for distributing identical objects.",
+  "tip": {
+   "en": "Overcounting + correcting often beats counting directly. Draw a Venn diagram before applying inclusion-exclusion. Stars and bars is your go-to for distributing identical objects.",
+   "ru": "Посчитать с избытком и вычесть лишнее часто проще, чем считать напрямую. Перед формулой включений-исключений нарисуйте диаграмму. Шары и перегородки — главный приём для раздачи одинаковых предметов."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Introduction to Counting & Probability — AoPS",
-      "desc": "The best competition counting book. Permutations, combinations, inclusion-exclusion.",
+      "desc": {
+       "en": "The best competition counting book. Permutations, combinations, inclusion-exclusion.",
+       "ru": "Лучшая книга по олимпиадным подсчётам. Перестановки, сочетания, включения-исключения."
+      },
       "url": "https://artofproblemsolving.com/store/book/intro-counting",
       "price": "paid",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Counting — Intro to Intermediate",
-      "desc": "Multiplication/addition principles, permutations, combinations, Binomial theorem.",
+      "desc": {
+       "en": "Multiplication/addition principles, permutations, combinations, Binomial theorem.",
+       "ru": "Правила суммы и произведения, перестановки, сочетания, бином Ньютона."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Combinatorics/Olympiad",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Inclusion-Exclusion Principle",
-      "desc": "Statement, proof, and competition applications.",
+      "desc": {
+       "en": "Statement, proof, and competition applications.",
+       "ru": "Формулировка, доказательство и олимпиадные применения."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Inclusion-Exclusion_Principle",
       "price": "free",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "A Path to Combinatorics — Andreescu & Feng",
-      "desc": "Excellent olympiad combinatorics book covering counting methods.",
+      "desc": {
+       "en": "Excellent olympiad combinatorics book covering counting methods.",
+       "ru": "Отличная книга по олимпиадной комбинаторике с обзором методов подсчёта."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -2649,36 +4231,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Counting",
-      "desc": "Multiplication principle, permutations, combinations, overcounting.",
+      "desc": {
+       "en": "Multiplication principle, permutations, combinations, overcounting.",
+       "ru": "Правило произведения, перестановки, сочетания и борьба с двойным счётом."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Khan Academy — Counting and Combinatorics",
-      "desc": "From basics to combinations and permutations with practice.",
+      "desc": {
+       "en": "From basics to combinations and permutations with practice.",
+       "ru": "От основ до сочетаний и перестановок, с тренировкой."
+      },
       "url": "https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — How to Count",
-      "desc": "Deep intuitive approach to combinatorial thinking.",
+      "desc": {
+       "en": "Deep intuitive approach to combinatorial thinking.",
+       "ru": "Глубокий интуитивный подход к комбинаторному мышлению."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Po-Shen Loh — Combinatorics Lecture",
-      "desc": "Advanced but inspiring lecture by US IMO coach.",
+      "desc": {
+       "en": "Advanced but inspiring lecture by US IMO coach.",
+       "ru": "Сложная, но вдохновляющая лекция тренера сборной США."
+      },
       "url": "https://www.youtube.com/@poshenloh",
       "price": "free",
       "star": false
@@ -2690,36 +4296,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Kombinatorika",
-      "desc": "Combinatorics problems from Uzbekistan olympiad papers with solutions.",
+      "desc": {
+       "en": "Combinatorics problems from Uzbekistan olympiad papers with solutions.",
+       "ru": "Задачи по комбинаторике из вариантов олимпиады Узбекистана с решениями."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "AMC 8 and 10 Past Papers",
-      "desc": "Excellent source of counting and probability problems at competition level.",
+      "desc": {
+       "en": "Excellent source of counting and probability problems at competition level.",
+       "ru": "Отличный источник задач на подсчёты и вероятность олимпиадного уровня."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Challenging Problems — Yaglom & Yaglom",
-      "desc": "Classic Soviet book with outstanding combinatorics problems.",
+      "desc": {
+       "en": "Classic Soviet book with outstanding combinatorics problems.",
+       "ru": "Классическая советская книга с выдающимися задачами по комбинаторике."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "JMO 2025 Grade 7-8 Paper (Scribd)",
-      "desc": "Junior Math Olympiad 2025 paper for grades 7-8 covering combinatorics.",
+      "desc": {
+       "en": "Junior Math Olympiad 2025 paper for grades 7-8 covering combinatorics.",
+       "ru": "Вариант юниорской олимпиады 2025 года для 7–8 классов с задачами по комбинаторике."
+      },
       "url": "https://www.scribd.com/document/841297123/JMO-2025-7-8-question-paper",
       "price": "paid",
       "star": false
@@ -2731,36 +4361,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Combinatorics",
-      "desc": "Interactive counting course from basic principles to advanced techniques.",
+      "desc": {
+       "en": "Interactive counting course from basic principles to advanced techniques.",
+       "ru": "Интерактивный курс подсчётов — от базовых правил до продвинутых приёмов."
+      },
       "url": "https://brilliant.org/courses/counting/",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Combinatorics Forum",
-      "desc": "Thousands of competition counting problems with solutions.",
+      "desc": {
+       "en": "Thousands of competition counting problems with solutions.",
+       "ru": "Тысячи олимпиадных задач на подсчёты с решениями."
+      },
       "url": "https://artofproblemsolving.com/community/c6",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Combinatorics Challenges",
-      "desc": "Competition-quality counting problems for grades 7-10.",
+      "desc": {
+       "en": "Competition-quality counting problems for grades 7-10.",
+       "ru": "Задачи на подсчёты олимпиадного качества для 7–10 классов."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Combinatorics",
-      "desc": "Classical combinatorics problems with deep mathematical explanations.",
+      "desc": {
+       "en": "Classical combinatorics problems with deep mathematical explanations.",
+       "ru": "Классические комбинаторные задачи с глубокими математическими объяснениями."
+      },
       "url": "https://www.cut-the-knot.org/do_you_know/Combinatorics.shtml",
       "price": "free",
       "star": false
@@ -2772,36 +4426,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Combinatorics problems in Uzbekistan olympiad papers for grades 7-8.",
+      "desc": {
+       "en": "Combinatorics problems in Uzbekistan olympiad papers for grades 7-8.",
+       "ru": "Задачи по комбинаторике в вариантах олимпиады Узбекистана для 7–8 классов."
+      },
       "url": "https://olympiad.maktab.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Kombinatorika",
-      "desc": "Combinatorics section of the official Uzbekistan olympiad guide.",
+      "desc": {
+       "en": "Combinatorics section of the official Uzbekistan olympiad guide.",
+       "ru": "Раздел комбинаторики официального руководства по олимпиадам Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Qiziqarli Matematika — Yunusov",
-      "desc": "Uzbek book with interesting counting and combinatorics puzzles.",
+      "desc": {
+       "en": "Uzbek book with interesting counting and combinatorics puzzles.",
+       "ru": "Узбекская книга с занимательными задачами на подсчёты и комбинаторику."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz — Kombinatorika",
-      "desc": "Uzbek-language combinatorics problems for olympiad preparation.",
+      "desc": {
+       "en": "Uzbek-language combinatorics problems for olympiad preparation.",
+       "ru": "Задачи по комбинаторике на узбекском для подготовки к олимпиадам."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
@@ -2812,48 +4490,81 @@ var TOPICS = [
  },
  {
   "n": 14,
-  "title": "Pigeonhole Principle",
-  "cat": "Combinatorics",
+  "title": {
+   "en": "Pigeonhole Principle",
+   "ru": "Принцип Дирихле"
+  },
+  "cat": {
+   "en": "Combinatorics",
+   "ru": "Комбинаторика"
+  },
   "catKey": "comb",
   "color": "#5B4FC7",
   "tint": "#EDECFD",
-  "tip": "The hardest part is choosing the right partition (the 'holes'). Once you have the right partition, the argument writes itself. Practice by identifying pigeons and holes in 20+ problems.",
+  "tip": {
+   "en": "The hardest part is choosing the right partition (the 'holes'). Once you have the right partition, the argument writes itself. Practice by identifying pigeons and holes in 20+ problems.",
+   "ru": "Самое трудное — выбрать правильное разбиение, то есть «клетки». Как только разбиение найдено, доказательство пишется само. Потренируйтесь находить «предметы» и «клетки» в двух десятках задач."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Pigeonhole Principle",
-      "desc": "Full coverage: basic, generalized, and infinite pigeonhole with competition examples.",
+      "desc": {
+       "en": "Full coverage: basic, generalized, and infinite pigeonhole with competition examples.",
+       "ru": "Полный охват: простой, обобщённый и бесконечный принцип Дирихле с олимпиадными примерами."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Pigeonhole_Principle",
       "price": "free",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Problem Solving Strategies — Arthur Engel",
-      "desc": "Chapter 11 is entirely pigeonhole principle with dozens of competition problems.",
+      "desc": {
+       "en": "Chapter 11 is entirely pigeonhole principle with dozens of competition problems.",
+       "ru": "Глава 11 целиком посвящена принципу Дирихле; десятки олимпиадных задач."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Intermediate Counting & Probability — AoPS",
-      "desc": "Dedicated chapter on pigeonhole principle with competition problems.",
+      "desc": {
+       "en": "Dedicated chapter on pigeonhole principle with competition problems.",
+       "ru": "Отдельная глава о принципе Дирихле с олимпиадными задачами."
+      },
       "url": "https://artofproblemsolving.com/store/book/intermediate-counting",
       "price": "paid",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Ramsey Theory (intro)",
-      "desc": "Introduction to Ramsey theory which builds on pigeonhole.",
+      "desc": {
+       "en": "Introduction to Ramsey theory which builds on pigeonhole.",
+       "ru": "Введение в теорию Рамсея, выросшую из принципа Дирихле."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Ramsey_theory",
       "price": "free",
       "star": false
@@ -2865,36 +4576,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Pigeonhole",
-      "desc": "Competition pigeonhole videos with worked olympiad problems.",
+      "desc": {
+       "en": "Competition pigeonhole videos with worked olympiad problems.",
+       "ru": "Олимпиадные видео о принципе Дирихле с разобранными задачами."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Pigeonhole Applications",
-      "desc": "Visual explanations of pigeonhole and its surprising consequences.",
+      "desc": {
+       "en": "Visual explanations of pigeonhole and its surprising consequences.",
+       "ru": "Наглядные объяснения принципа Дирихле и его неожиданных следствий."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Numberphile — Pigeonhole Principle",
-      "desc": "Fun exploration of what pigeonhole proves and its surprising uses.",
+      "desc": {
+       "en": "Fun exploration of what pigeonhole proves and its surprising uses.",
+       "ru": "Увлекательный разбор того, что доказывает принцип Дирихле и где он применяется."
+      },
       "url": "https://www.youtube.com/@numberphile",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "MathOlympiad — Pigeonhole Problems",
-      "desc": "Olympiad problems with explanation of how to find the right partition.",
+      "desc": {
+       "en": "Olympiad problems with explanation of how to find the right partition.",
+       "ru": "Олимпиадные задачи с объяснением, как подобрать правильное разбиение."
+      },
       "url": "https://www.youtube.com/@mathsolympiad",
       "price": "free",
       "star": false
@@ -2906,36 +4641,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Pigeonhole Principle Handout — AoPS (FREE)",
-      "desc": "30+ pigeonhole problems from AMC to olympiad level with solutions.",
+      "desc": {
+       "en": "30+ pigeonhole problems from AMC to olympiad level with solutions.",
+       "ru": "Более 30 задач на принцип Дирихле — от AMC до олимпиадного уровня — с решениями."
+      },
       "url": "https://artofproblemsolving.com/community/c6h123",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Kombinatorika (pigeonhole)",
-      "desc": "Pigeonhole problems from Uzbekistan olympiad papers.",
+      "desc": {
+       "en": "Pigeonhole problems from Uzbekistan olympiad papers.",
+       "ru": "Задачи на принцип Дирихле из вариантов олимпиады Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "IMO Shortlist — Combinatorics",
-      "desc": "International olympiad combinatorics shortlist includes classic pigeonhole.",
+      "desc": {
+       "en": "International olympiad combinatorics shortlist includes classic pigeonhole.",
+       "ru": "В шорт-листе международной олимпиады по комбинаторике есть классический Дирихле."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/IMO_Shortlist",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Challenging Problems — Yaglom",
-      "desc": "Classic Soviet book with excellent combinatorics including pigeonhole.",
+      "desc": {
+       "en": "Classic Soviet book with excellent combinatorics including pigeonhole.",
+       "ru": "Классическая советская книга с отличной комбинаторикой, включая принцип Дирихле."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -2947,36 +4706,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Pigeonhole Principle",
-      "desc": "Interactive pigeonhole course with guided problem solving.",
+      "desc": {
+       "en": "Interactive pigeonhole course with guided problem solving.",
+       "ru": "Интерактивный курс о принципе Дирихле с разбором задач."
+      },
       "url": "https://brilliant.org/wiki/pigeonhole-principle/",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Pigeonhole Problems Archive",
-      "desc": "All competition problems tagged with pigeonhole principle.",
+      "desc": {
+       "en": "All competition problems tagged with pigeonhole principle.",
+       "ru": "Все олимпиадные задачи с меткой «принцип Дирихле»."
+      },
       "url": "https://artofproblemsolving.com/community/c6",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Pigeonhole",
-      "desc": "Classical pigeonhole problems with detailed proofs.",
+      "desc": {
+       "en": "Classical pigeonhole problems with detailed proofs.",
+       "ru": "Классические задачи на принцип Дирихле с подробными доказательствами."
+      },
       "url": "https://www.cut-the-knot.org/do_you_know/Pigeonhole.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Pigeonhole Challenges",
-      "desc": "Competition-quality pigeonhole problems for grades 7-12.",
+      "desc": {
+       "en": "Competition-quality pigeonhole problems for grades 7-12.",
+       "ru": "Задачи на принцип Дирихле олимпиадного качества для 7–12 классов."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -2988,36 +4771,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Olympiad problems requiring pigeonhole from district to republic level.",
+      "desc": {
+       "en": "Olympiad problems requiring pigeonhole from district to republic level.",
+       "ru": "Олимпиадные задачи на принцип Дирихле — от районного до республиканского уровня."
+      },
       "url": "https://olympiad.maktab.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz",
-      "desc": "Combinatorics and pigeonhole problems from official Uzbekistan guide.",
+      "desc": {
+       "en": "Combinatorics and pigeonhole problems from official Uzbekistan guide.",
+       "ru": "Задачи по комбинаторике и принципу Дирихле из официального руководства Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Qiziqarli Matematika",
-      "desc": "Classic Uzbek book with pigeonhole-type logical puzzles.",
+      "desc": {
+       "en": "Classic Uzbek book with pigeonhole-type logical puzzles.",
+       "ru": "Классическая узбекская книга с логическими задачами дирихлевского типа."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "bilimlar.uz",
-      "desc": "Uzbek olympiad materials including combinatorics for grades 7-8.",
+      "desc": {
+       "en": "Uzbek olympiad materials including combinatorics for grades 7-8.",
+       "ru": "Узбекские олимпиадные материалы, включая комбинаторику для 7–8 классов."
+      },
       "url": "https://bilimlar.uz",
       "price": "free",
       "star": false
@@ -3028,48 +4835,81 @@ var TOPICS = [
  },
  {
   "n": 15,
-  "title": "Logic & Proofs",
-  "cat": "Combinatorics",
+  "title": {
+   "en": "Logic & Proofs",
+   "ru": "Логика, доказательства и инварианты"
+  },
+  "cat": {
+   "en": "Combinatorics",
+   "ru": "Комбинаторика"
+  },
   "catKey": "comb",
   "color": "#5B4FC7",
   "tint": "#EDECFD",
-  "tip": "Always start a proof by stating what you will prove. Label base case and inductive step clearly. For contradiction, write your assumption explicitly at the top.",
+  "tip": {
+   "en": "Always start a proof by stating what you will prove. Label base case and inductive step clearly. For contradiction, write your assumption explicitly at the top.",
+   "ru": "Начинайте доказательство с того, что именно вы собираетесь доказать. Чётко обозначайте базу и переход индукции. В доказательстве от противного явно выписывайте предположение в самом начале."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "How to Prove It — Daniel Velleman",
-      "desc": "Best introduction to proof writing: direct, contradiction, induction, quantifiers.",
+      "desc": {
+       "en": "Best introduction to proof writing: direct, contradiction, induction, quantifiers.",
+       "ru": "Лучшее введение в написание доказательств: прямое, от противного, индукция, кванторы."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Mathematical Induction",
-      "desc": "Full coverage of weak and strong induction with competition examples.",
+      "desc": {
+       "en": "Full coverage of weak and strong induction with competition examples.",
+       "ru": "Полный разбор обычной и сильной индукции с олимпиадными примерами."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematical_induction",
       "price": "free",
       "star": true
      },
      {
       "kind": "wiki",
-      "label": "🌐 Wiki",
+      "label": {
+       "en": "🌐 Wiki",
+       "ru": "🌐 Вики"
+      },
       "title": "AoPS: Proof by Contradiction",
-      "desc": "How contradiction works, classic examples, and competition applications.",
+      "desc": {
+       "en": "How contradiction works, classic examples, and competition applications.",
+       "ru": "Как работает доказательство от противного, классические примеры и применения."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Proof_by_contradiction",
       "price": "free",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Art and Craft of Problem Solving — Zeitz",
-      "desc": "Outstanding on proof strategies. Chapter on 'Supremacy of Strategy' is essential.",
+      "desc": {
+       "en": "Outstanding on proof strategies. Chapter on 'Supremacy of Strategy' is essential.",
+       "ru": "Выдающаяся книга о стратегиях доказательства. Глава о выборе стратегии обязательна."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
@@ -3081,36 +4921,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Writing Proofs",
-      "desc": "How to write clear, rigorous proofs for olympiad problems.",
+      "desc": {
+       "en": "How to write clear, rigorous proofs for olympiad problems.",
+       "ru": "Как писать ясные и строгие доказательства олимпиадных задач."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Proofs and Mathematical Thinking",
-      "desc": "Visualizing why proofs work. Builds mathematical intuition.",
+      "desc": {
+       "en": "Visualizing why proofs work. Builds mathematical intuition.",
+       "ru": "Наглядное объяснение того, почему доказательства работают. Развивает интуицию."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Michael Penn — Olympiad Proof Techniques",
-      "desc": "Induction, contradiction, and contrapositive with clear examples.",
+      "desc": {
+       "en": "Induction, contradiction, and contrapositive with clear examples.",
+       "ru": "Индукция, доказательство от противного и контрапозиция с понятными примерами."
+      },
       "url": "https://www.youtube.com/@MichaelPennMath",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Numberphile — Mathematical Proofs",
-      "desc": "Accessible explanations of famous proofs (infinite primes, √2 irrational).",
+      "desc": {
+       "en": "Accessible explanations of famous proofs (infinite primes, √2 irrational).",
+       "ru": "Доступные разборы знаменитых доказательств (бесконечность простых, иррациональность √2)."
+      },
       "url": "https://www.youtube.com/@numberphile",
       "price": "free",
       "star": false
@@ -3122,36 +4986,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Evan Chen — Introduction to Proofs (FREE)",
-      "desc": "Free handout by top olympiad coach on proof writing.",
+      "desc": {
+       "en": "Free handout by top olympiad coach on proof writing.",
+       "ru": "Бесплатный конспект ведущего олимпиадного тренера о написании доказательств."
+      },
       "url": "https://web.evanchen.cc/olympiad.html",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathematical Induction Handout — AoPS (FREE)",
-      "desc": "25+ induction problems from trivial to olympiad level.",
+      "desc": {
+       "en": "25+ induction problems from trivial to olympiad level.",
+       "ru": "Более 25 задач на индукцию — от простейших до олимпиадного уровня."
+      },
       "url": "https://artofproblemsolving.com/community/c6h482",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Isbot usullari",
-      "desc": "Proof methods covered in Uzbekistan olympiad guide.",
+      "desc": {
+       "en": "Proof methods covered in Uzbekistan olympiad guide.",
+       "ru": "Методы доказательства в руководстве по олимпиадам Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "IMO Problems and Proofs",
-      "desc": "Full IMO problems with model solutions. Shows what a complete proof looks like.",
+      "desc": {
+       "en": "Full IMO problems with model solutions. Shows what a complete proof looks like.",
+       "ru": "Полные задачи IMO с образцовыми решениями. Видно, как выглядит законченное доказательство."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/International_Mathematical_Olympiad",
       "price": "free",
       "star": false
@@ -3163,36 +5051,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Olympiad Proof Problems",
-      "desc": "Competition problems requiring written proofs at every level.",
+      "desc": {
+       "en": "Competition problems requiring written proofs at every level.",
+       "ru": "Олимпиадные задачи, требующие письменного доказательства, на всех уровнях."
+      },
       "url": "https://artofproblemsolving.com/community",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Logic and Proofs",
-      "desc": "Interactive introduction to logical thinking and formal proofs.",
+      "desc": {
+       "en": "Interactive introduction to logical thinking and formal proofs.",
+       "ru": "Интерактивное введение в логическое мышление и формальные доказательства."
+      },
       "url": "https://brilliant.org/courses/logic-and-proof/",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Cut the Knot — Proofs",
-      "desc": "Hundreds of beautiful mathematical proofs organized by topic.",
+      "desc": {
+       "en": "Hundreds of beautiful mathematical proofs organized by topic.",
+       "ru": "Сотни красивых математических доказательств, разложенных по темам."
+      },
       "url": "https://www.cut-the-knot.org/proofs/index.shtml",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — Proof Challenges",
-      "desc": "Competition proof problems for grades 7-12.",
+      "desc": {
+       "en": "Competition proof problems for grades 7-12.",
+       "ru": "Задачи на доказательство олимпиадного качества для 7–12 классов."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
@@ -3204,36 +5116,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz",
-      "desc": "Proof-based problems in republic and international rounds.",
+      "desc": {
+       "en": "Proof-based problems in republic and international rounds.",
+       "ru": "Задачи на доказательство в республиканских и международных турах."
+      },
       "url": "https://olympiad.maktab.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — Isbot va mantiq",
-      "desc": "Proof and logic problems from official Uzbekistan math olympiad guide.",
+      "desc": {
+       "en": "Proof and logic problems from official Uzbekistan math olympiad guide.",
+       "ru": "Задачи на логику и доказательства из официального руководства по олимпиадам Узбекистана."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Qiziqarli Matematika",
-      "desc": "Logic puzzles and proof-based problems in Uzbek language.",
+      "desc": {
+       "en": "Logic puzzles and proof-based problems in Uzbek language.",
+       "ru": "Логические головоломки и задачи на доказательство на узбекском языке."
+      },
       "url": "https://www.ziyouz.com",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "TASIMO — Proof-based Olympiad",
-      "desc": "Tashkent International Math Olympiad requires full written proofs.",
+      "desc": {
+       "en": "Tashkent International Math Olympiad requires full written proofs.",
+       "ru": "Ташкентская международная олимпиада требует полных письменных доказательств."
+      },
       "url": "https://imogeometry.blogspot.com",
       "price": "free",
       "star": false
@@ -3244,48 +5180,81 @@ var TOPICS = [
  },
  {
   "n": 16,
-  "title": "Mock Olympiad",
-  "cat": "Mixed Review",
+  "title": {
+   "en": "Mock Olympiad",
+   "ru": "Пробная олимпиада"
+  },
+  "cat": {
+   "en": "Mixed Review",
+   "ru": "Повторение"
+  },
   "catKey": "mix",
   "color": "#8A6D1F",
   "tint": "#F7F0DE",
-  "tip": "Simulate real exam conditions: phone away, 45 minutes timed. Read all problems first, then start with the one you're most confident about. Full solutions after time is up.",
+  "tip": {
+   "en": "Simulate real exam conditions: phone away, 45 minutes timed. Read all problems first, then start with the one you're most confident about. Full solutions after time is up.",
+   "ru": "Смоделируйте настоящий тур: телефон убран, время засечено. Сначала прочитайте все задачи, потом начинайте с той, в которой уверены больше всего. Решения — только после того, как время вышло."
+  },
   "groups": [
    {
     "id": "theory",
     "cards": [
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Problem Solving Strategies — Arthur Engel",
-      "desc": "The definitive olympiad book. 700+ problems with strategies for all topics.",
+      "desc": {
+       "en": "The definitive olympiad book. 700+ problems with strategies for all topics.",
+       "ru": "Главная олимпиадная книга. Более 700 задач со стратегиями по всем темам."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Mathematical Olympiad in China (2007-2008)",
-      "desc": "Outstanding collection covering all four areas with solutions.",
+      "desc": {
+       "en": "Outstanding collection covering all four areas with solutions.",
+       "ru": "Выдающийся сборник по всем четырём разделам с решениями."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": true
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "Mathematical Circles (Russian Experience)",
-      "desc": "Mixed problem book with great pedagogy. Used in Russian math circles at this level.",
+      "desc": {
+       "en": "Mixed problem book with great pedagogy. Used in Russian math circles at this level.",
+       "ru": "Сборник смешанных задач с прекрасной методикой. Используется в математических кружках."
+      },
       "url": "https://artofproblemsolving.com/wiki/index.php/Mathematics_books",
       "price": "paid",
       "star": false
      },
      {
       "kind": "book",
-      "label": "📚 Book",
+      "label": {
+       "en": "📚 Book",
+       "ru": "📚 Книга"
+      },
       "title": "USSR Olympiad Problem Book — Shkliarsky",
-      "desc": "Classic collection. Excellent for mixed practice at republic level.",
+      "desc": {
+       "en": "Classic collection. Excellent for mixed practice at republic level.",
+       "ru": "Классический сборник. Отлично подходит для смешанной практики республиканского уровня."
+      },
       "url": "https://www.abebooks.com/9780486277097",
       "price": "paid",
       "star": false
@@ -3297,36 +5266,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Art of Problem Solving — Full Solutions",
-      "desc": "AoPS YouTube has many full olympiad problem solution videos.",
+      "desc": {
+       "en": "AoPS YouTube has many full olympiad problem solution videos.",
+       "ru": "На YouTube-канале AoPS много видеоразборов олимпиадных задач целиком."
+      },
       "url": "https://www.youtube.com/@ArtofProblemSolving",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "3Blue1Brown — Problem Solving Shorts",
-      "desc": "Visual approach to problem solving across all four topic areas.",
+      "desc": {
+       "en": "Visual approach to problem solving across all four topic areas.",
+       "ru": "Наглядный подход к решению задач по всем четырём разделам."
+      },
       "url": "https://www.youtube.com/@3blue1brown",
       "price": "free",
       "star": true
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Michael Penn — Mixed Olympiad Problems",
-      "desc": "Olympiad-level solutions across number theory, algebra, and combinatorics.",
+      "desc": {
+       "en": "Olympiad-level solutions across number theory, algebra, and combinatorics.",
+       "ru": "Решения олимпиадного уровня по теории чисел, алгебре и комбинаторике."
+      },
       "url": "https://www.youtube.com/@MichaelPennMath",
       "price": "free",
       "star": false
      },
      {
       "kind": "video",
-      "label": "▶ YouTube",
+      "label": {
+       "en": "▶ YouTube",
+       "ru": "▶ YouTube"
+      },
       "title": "Po-Shen Loh — Math Olympiad Camp",
-      "desc": "Full mixed olympiad training from the US IMO coach.",
+      "desc": {
+       "en": "Full mixed olympiad training from the US IMO coach.",
+       "ru": "Полный курс смешанной олимпиадной подготовки от тренера сборной США."
+      },
       "url": "https://www.youtube.com/@poshenloh",
       "price": "free",
       "star": false
@@ -3338,36 +5331,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Mathnet.uz — Full Uzbekistan Olympiad Guide (FREE)",
-      "desc": "Complete guide: tuman, viloyat, respublika. All topics covered with solutions.",
+      "desc": {
+       "en": "Complete guide: tuman, viloyat, respublika. All topics covered with solutions.",
+       "ru": "Полное руководство: туман, вилоят, республика. Все темы с решениями."
+      },
       "url": "https://mathnet.uz/Uploads/Resurs/5/8f3d6b15-a28c-44de-a194-87060d2e487b_.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "OlympiadUSA Grade 7-8 Past Exams (FREE)",
-      "desc": "Full past exam papers with solutions.",
+      "desc": {
+       "en": "Full past exam papers with solutions.",
+       "ru": "Полные варианты прошлых туров с решениями."
+      },
       "url": "https://olympiadusa.org/wp-content/uploads/2025/02/january-grade-7-8-past-exams-questions-and-solutions-olympiadusa-org.pdf",
       "price": "free",
       "star": true
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "Al-Xorazmiy 7-8 sinf papers (Scribd)",
-      "desc": "Official Al-Xorazmiy olympiad papers. Mixed problems across all topics.",
+      "desc": {
+       "en": "Official Al-Xorazmiy olympiad papers. Mixed problems across all topics.",
+       "ru": "Официальные варианты олимпиады Аль-Хорезми. Смешанные задачи по всем темам."
+      },
       "url": "https://www.scribd.com/document/808101628",
       "price": "paid",
       "star": false
      },
      {
       "kind": "pdf",
-      "label": "📄 PDF",
+      "label": {
+       "en": "📄 PDF",
+       "ru": "📄 PDF"
+      },
       "title": "IMO Problems Collection",
-      "desc": "All IMO problems 1959-2003. Use as inspiration for republic+ level.",
+      "desc": {
+       "en": "All IMO problems 1959-2003. Use as inspiration for republic+ level.",
+       "ru": "Все задачи IMO с 1959 по 2003 год. Ориентир для республиканского уровня и выше."
+      },
       "url": "https://www.scribd.com/document/356897836",
       "price": "paid",
       "star": false
@@ -3379,36 +5396,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "AoPS — Problem Search by Competition",
-      "desc": "Search by competition (AMC, AIME, USAMO, IMO) and topic.",
+      "desc": {
+       "en": "Search by competition (AMC, AIME, USAMO, IMO) and topic.",
+       "ru": "Поиск по соревнованию (AMC, AIME, USAMO, IMO) и по теме."
+      },
       "url": "https://artofproblemsolving.com/community",
       "price": "free",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "Brilliant.org — Full Courses",
-      "desc": "Complete olympiad preparation across all four topic areas.",
+      "desc": {
+       "en": "Complete olympiad preparation across all four topic areas.",
+       "ru": "Полная подготовка к олимпиаде по всем четырём разделам."
+      },
       "url": "https://brilliant.org",
       "price": "paid",
       "star": true
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "NRICH — All Competitions",
-      "desc": "Mixed competition problems from UKMT and other UK competitions.",
+      "desc": {
+       "en": "Mixed competition problems from UKMT and other UK competitions.",
+       "ru": "Смешанные задачи с UKMT и других британских соревнований."
+      },
       "url": "https://nrich.maths.org",
       "price": "free",
       "star": false
      },
      {
       "kind": "site",
-      "label": "🌍 Website",
+      "label": {
+       "en": "🌍 Website",
+       "ru": "🌍 Сайт"
+      },
       "title": "matholymp.com — Tutorials",
-      "desc": "Tutorials in elementary math for olympiad students covering all topics.",
+      "desc": {
+       "en": "Tutorials in elementary math for olympiad students covering all topics.",
+       "ru": "Пособия по элементарной математике для олимпиадников по всем темам."
+      },
       "url": "https://matholymp.com",
       "price": "free",
       "star": false
@@ -3420,36 +5461,60 @@ var TOPICS = [
     "cards": [
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "olympiad.maktab.uz — Barcha materiallar",
-      "desc": "ALL Uzbekistan olympiad materials: Al-Xorazmiy, asosiy, nufuzli xalqaro.",
+      "desc": {
+       "en": "ALL Uzbekistan olympiad materials: Al-Xorazmiy, asosiy, nufuzli xalqaro.",
+       "ru": "ВСЕ олимпиадные материалы Узбекистана: Аль-Хорезми, основная, международные."
+      },
       "url": "https://olympiad.maktab.uz/Site/OlympiadMaterials",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "Mathnet.uz — To'liq qo'llanma",
-      "desc": "Complete Uzbekistan olympiad preparation guide from official ministry portal.",
+      "desc": {
+       "en": "Complete Uzbekistan olympiad preparation guide from official ministry portal.",
+       "ru": "Полное руководство по подготовке к олимпиадам Узбекистана с официального портала."
+      },
       "url": "https://mathnet.uz",
       "price": "free",
       "star": true
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "AKHIMO — Al-Khorezmi International Olympiad",
-      "desc": "International competition held in Uzbekistan. Past problems on website.",
+      "desc": {
+       "en": "International competition held in Uzbekistan. Past problems on website.",
+       "ru": "Международное соревнование, проводимое в Узбекистане. Прошлые задачи на сайте."
+      },
       "url": "https://akhimo.urdu.uz",
       "price": "free",
       "star": false
      },
      {
       "kind": "uz",
-      "label": "🇺🇿 Uzbek",
+      "label": {
+       "en": "🇺🇿 Uzbek",
+       "ru": "🇺🇿 Узбекский"
+      },
       "title": "TASIMO — Tashkent International Olympiad",
-      "desc": "Tashkent-hosted international olympiad. Problems with solutions on AoPS.",
+      "desc": {
+       "en": "Tashkent-hosted international olympiad. Problems with solutions on AoPS.",
+       "ru": "Международная олимпиада в Ташкенте. Задачи с решениями на AoPS."
+      },
       "url": "https://imogeometry.blogspot.com/p/geometry-solved-problem-collections.html",
       "price": "free",
       "star": false

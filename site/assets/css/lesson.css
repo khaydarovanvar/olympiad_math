@@ -3,17 +3,6 @@
    Loaded after main.css; it reuses every token defined there.
    ========================================================================== */
 
-/* ---------- language switch ---------- */
-.langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
-.langsw button{
-  padding:.34rem .74rem;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.09em;
-  color:var(--muted);transition:background .25s,color .25s;
-}
-.langsw button.on{background:var(--ink);color:var(--canvas)}
-.langsw button:hover:not(.on){color:var(--accent)}
-body.menu-open .langsw{border-color:rgba(255,255,255,.25)}
-body.menu-open .langsw button.on{background:var(--gold);color:#0F1B2A}
-
 /* ---------- lesson head ---------- */
 .lhead{padding:calc(var(--nav-h) + 3rem) 0 2.2rem;position:relative;overflow:hidden;
   background:linear-gradient(180deg,var(--t) 0%,transparent 100%)}
@@ -149,6 +138,9 @@ body.menu-open .langsw button.on{background:var(--gold);color:#0F1B2A}
 .lnav a:hover{color:var(--c)}
 .lnav .next{text-align:right;margin-left:auto}
 
+/* a blank line inside a block: a block-level span keeps the markup valid */
+.vsp{display:block;height:.85em}
+
 /* ---------- figures ---------- */
 /* The SVG carries a viewBox but no width/height, so it takes the column width
    and keeps its ratio; the max-width stops a small diagram being blown up. */
@@ -186,7 +178,6 @@ body.menu-open .langsw button.on{background:var(--gold);color:#0F1B2A}
   .ltoc a:hover,.ltoc a.on{border-color:transparent;background:var(--t);border-radius:6px}
 }
 @media (max-width:640px){
-  .langsw button{padding:.3rem .55rem;font-size:.64rem}
   .lhead{padding-top:calc(var(--nav-h) + 1.8rem)}
   .lhead .lbig{display:none}
   .blk{padding:.95rem 1rem}

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ru" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Topic — Olympiad Mathematics, Grades 7–8</title>
-<meta name="description" content="One olympiad mathematics topic with its full shelf of resources: theory, video, PDFs, online practice and Uzbek-language material.">
+<title>Тема — олимпиадная математика, 7–11 классы</title>
+<meta name="description" content="Одна тема олимпиадной математики со всей полкой ресурсов: теория, видео, PDF, онлайн-практика и материалы на узбекском.">
 <meta name="theme-color" content="#0F1B2A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,24 +24,24 @@
 
 <header class="nav stuck">
   <div class="container">
-    <a class="brand" href="index.html" aria-label="Olympiad Mathematics — home">
+    <a class="brand" href="index.html" aria-label="MathLab">
       <svg viewBox="0 0 48 48" aria-hidden="true">
         <circle cx="24" cy="24" r="21" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
         <path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/>
       </svg>
-      <span><b>MathLab</b><small>Olympiad · Grades 7–8</small></span>
+      <span><b>MathLab</b><small data-i18n="brandSub">Олимпиада · 7–11 классы</small></span>
     </a>
-    <div class="nav-mid" aria-hidden="true"><span class="hand">From the first problem to the podium</span></div>
+    <div class="nav-mid" aria-hidden="true"><span class="hand" data-i18n="slogan">От первой задачи — до пьедестала</span></div>
     <div class="nav-right">
       <nav class="nav-links" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="lessons.html">Lessons</a>
-        <a href="index.html#topics" class="on">Topics</a>
-        <a href="library.html">Library</a>
-        <a href="index.html#path">Study path</a>
+        <a href="index.html" data-i18n="navHome">Главная</a>
+        <a href="lessons.html" data-i18n="navLessons">Уроки</a>
+        <a href="index.html#topics" class="on" data-i18n="navTopics">Темы</a>
+        <a href="library.html" data-i18n="navLibrary">Библиотека</a>
       </nav>
-      <button class="burger" aria-label="Open menu" aria-expanded="false">
-        <span class="burger-label">Menu</span>
+      <div class="langsw" aria-label="Language"></div>
+      <button class="burger" data-i18n-attr="aria-label:menuOpen" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger-label" data-i18n="menu">Меню</span>
         <span class="burger-lines"><span></span><span></span></span>
       </button>
     </div>
@@ -51,19 +51,17 @@
 <div class="menu-overlay" aria-hidden="true">
   <div class="menu-inner">
     <nav class="menu-list" aria-label="Menu">
-      <div class="m-item"><a class="m-link" href="index.html" style="--i:0"><span class="m-num">01</span>Home</a></div>
-      <div class="m-item"><a class="m-link" href="index.html#branches" style="--i:1"><span class="m-num">02</span>Four branches</a></div>
-      <div class="m-item"><a class="m-link" href="index.html#topics" style="--i:2"><span class="m-num">03</span>All 16 topics</a></div>
-      <div class="m-item"><a class="m-link" href="lessons.html" style="--i:6"><span class="m-num">07</span>Lessons</a></div>
-      <div class="m-item"><a class="m-link" href="library.html" style="--i:3"><span class="m-num">04</span>Resource library</a></div>
-      <div class="m-item"><a class="m-link" href="index.html#path" style="--i:4"><span class="m-num">05</span>Study path</a></div>
-      <div class="m-item"><a class="m-link" href="index.html#guides" style="--i:5"><span class="m-num">06</span>Theory guides</a></div>
+      <div class="m-item"><a class="m-link" href="index.html" style="--i:0"><span class="m-num">01</span><span data-i18n="m01">Главная</span></a></div>
+      <div class="m-item"><a class="m-link" href="lessons.html" style="--i:1"><span class="m-num">02</span><span data-i18n="m07">Уроки</span></a></div>
+      <div class="m-item"><a class="m-link" href="index.html#topics" style="--i:2"><span class="m-num">03</span><span data-i18n="m03">Все 16 тем</span></a></div>
+      <div class="m-item"><a class="m-link" href="library.html" style="--i:3"><span class="m-num">04</span><span data-i18n="m04">Библиотека ресурсов</span></a></div>
+      <div class="m-item"><a class="m-link" href="index.html#path" style="--i:4"><span class="m-num">05</span><span data-i18n="m05">Как заниматься</span></a></div>
     </nav>
     <div class="menu-meta">
-      <div><h5>Level</h5><p>Grades 7–8<br>Uzbekistan olympiad rounds</p></div>
-      <div><h5>Covers</h5><p>Number theory · Algebra<br>Geometry · Combinatorics</p></div>
-      <div><h5>Inside</h5><p>16 topics<br>320 curated resources</p></div>
-      <div class="menu-slogan hand">From the first problem to the podium</div>
+      <div><h5 data-i18n="metaLevel">Уровень</h5><p data-i18n-html="metaLevelVal">7–11 классы<br>Олимпиады Узбекистана</p></div>
+      <div><h5 data-i18n="metaCovers">Разделы</h5><p data-i18n-html="metaCoversVal">Теория чисел · Алгебра<br>Геометрия · Комбинаторика</p></div>
+      <div><h5 data-i18n="metaInside">Внутри</h5><p data-i18n-html="metaInsideVal">16 тем · 320 задач<br>320 отобранных ресурсов</p></div>
+      <div class="menu-slogan hand" data-i18n="slogan">От первой задачи — до пьедестала</div>
     </div>
   </div>
 </div>
@@ -90,113 +88,123 @@
             <circle cx="24" cy="24" r="21" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
             <path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/>
           </svg>
-          <span><b>MathLab</b><small>Olympiad · Grades 7–8</small></span>
+          <span><b>MathLab</b><small data-i18n="brandSub">Олимпиада · 7–11 классы</small></span>
         </a>
-        <p style="margin-top:1rem;max-width:34ch;font-size:.9rem">A curated route through olympiad
-        mathematics for Grades 7–8, built around the Uzbekistan rounds.</p>
+        <p style="margin-top:1rem;max-width:34ch;font-size:.9rem" data-i18n="footAbout">Продуманный маршрут по олимпиадной математике для 7–11 классов, построенный вокруг туров Узбекистана.</p>
       </div>
-      <div><h5>Branches</h5><ul>
-        <li><a href="library.html#nt">Number theory</a></li>
-        <li><a href="library.html#alg">Algebra</a></li>
-        <li><a href="library.html#geo">Geometry</a></li>
-        <li><a href="library.html#comb">Combinatorics</a></li>
+      <div><h5 data-i18n="footBranches">Разделы</h5><ul>
+        <li><a href="library.html#nt" data-i18n="brNt">Теория чисел</a></li>
+        <li><a href="library.html#alg" data-i18n="brAlg">Алгебра</a></li>
+        <li><a href="library.html#geo" data-i18n="brGeo">Геометрия</a></li>
+        <li><a href="library.html#comb" data-i18n="brComb">Комбинаторика</a></li>
       </ul></div>
-      <div><h5>Guides</h5><ul>
-        <li><a href="theory/topic-01.html">Divisibility</a></li>
-        <li><a href="theory/topic-06.html">Inequalities</a></li>
-        <li><a href="theory/topic-07.html">Geometry</a></li>
+      <div><h5 data-i18n="footGuides">Теория</h5><ul>
+        <li><a href="theory/topic-01.html" data-i18n="gDiv">Делимость</a></li>
+        <li><a href="theory/topic-06.html" data-i18n="gIneq">Неравенства</a></li>
+        <li><a href="theory/topic-07.html" data-i18n="gGeo">Геометрия</a></li>
       </ul></div>
-      <div><h5>Site</h5><ul>
-        <li><a href="index.html#topics">All topics</a></li>
-        <li><a href="library.html">Resource library</a></li>
-        <li><a href="index.html#path">Study path</a></li>
+      <div><h5 data-i18n="footSite">Сайт</h5><ul>
+        <li><a href="lessons.html" data-i18n="navLessons">Уроки</a></li>
+        <li><a href="index.html#topics" data-i18n="sAll">Все темы</a></li>
+        <li><a href="library.html" data-i18n="sLib">Библиотека ресурсов</a></li>
       </ul></div>
     </div>
     <div class="foot-bot">
-      <span>Grades 7–8 · Uzbekistan olympiad preparation</span>
-      <span class="hand" style="font-size:1.15rem;color:var(--gold)">From the first problem to the podium</span>
+      <span data-i18n="footBot">7–11 классы · подготовка к олимпиадам Узбекистана</span>
+      <span class="hand" style="font-size:1.15rem;color:var(--gold)" data-i18n="slogan">От первой задачи — до пьедестала</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/data/topics.js"></script>
+<script src="assets/data/strings.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/data/lessons/index.js"></script>
 <script>
 (function () {
-  var GUIDE = { 1: 'theory/topic-01.html', 6: 'theory/topic-06.html', 7: 'theory/topic-07.html' };
-  var HAS_LESSON = (window.LESSON_INDEX || []).map(function (e) { return e.n; });
-  var KIND = {
-    theory: ['Theory', 'Start here. Read one of these properly before you touch a problem set.'],
-    video:  ['Video', 'For the step that will not sit still on the page — not for the whole topic.'],
-    pdf:    ['PDF', 'Handouts, past papers and full chapters you can work through offline.'],
-    online: ['Online practice', 'Graded problems and wikis where you can check yourself as you go.'],
-    uzbek:  ['Uzbek-language', 'Material in Uzbek, including the Ministry and republic-round papers.']
-  };
+  var lang = ML.lang();
+  ML.mountSwitch(lang);
+  ML.apply(STRINGS, lang);
 
+  function t(k) { return ML.pick(STRINGS[k], lang); }
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
     });
   }
 
-  var n = parseInt((location.search.match(/[?&]t=(\d+)/) || [])[1], 10);
-  var t = TOPICS.filter(function (x) { return x.n === n; })[0] || TOPICS[0];
-  var idx = TOPICS.indexOf(t);
-  var total = t.groups.reduce(function (a, g) { return a + g.cards.length; }, 0);
+  var GUIDE = { 1: 'theory/topic-01.html', 6: 'theory/topic-06.html', 7: 'theory/topic-07.html' };
+  var HAS_LESSON = (window.LESSON_INDEX || []).map(function (e) { return e.n; });
+  var KIND = {
+    theory: ['kindTheory', 'kindTheoryD'],
+    video:  ['kindVideo',  'kindVideoD'],
+    pdf:    ['kindPdf',    'kindPdfD'],
+    online: ['kindOnline', 'kindOnlineD'],
+    uzbek:  ['kindUzbek',  'kindUzbekD']
+  };
 
-  document.title = 'Topic ' + t.n + ' · ' + t.title + ' — Olympiad Mathematics';
-  document.body.setAttribute('data-cat', t.catKey);
+  var n = parseInt((location.search.match(/[?&]t=(\d+)/) || [])[1], 10);
+  var x = TOPICS.filter(function (y) { return y.n === n; })[0] || TOPICS[0];
+  var idx = TOPICS.indexOf(x);
+  var total = x.groups.reduce(function (a, g) { return a + g.cards.length; }, 0);
+  var title = ML.pick(x.title, lang);
+  var cat = ML.pick(x.cat, lang);
+
+  document.title = t('libTopicPrefix') + ' ' + x.n + ' · ' + title + ' — MathLab';
+  document.body.setAttribute('data-cat', x.catKey);
 
   /* ---- head ---- */
   document.getElementById('thead').innerHTML =
-    '<div class="tbig" aria-hidden="true">' + t.n + '</div>' +
+    '<div class="tbig" aria-hidden="true">' + x.n + '</div>' +
     '<div class="container">' +
-      '<p class="crumb"><a href="index.html">Home</a> / <a href="index.html#topics">Topics</a> / ' +
-        esc(t.cat) + '</p>' +
-      '<h1 data-split>' + esc(t.title) + '</h1>' +
+      '<p class="crumb"><a href="index.html">' + esc(t('navHome')) + '</a> / ' +
+        '<a href="index.html#topics">' + esc(t('navTopics')) + '</a> / ' + esc(cat) + '</p>' +
+      '<h1>' + esc(title) + '</h1>' +
       '<div class="tmeta">' +
-        '<span>Topic ' + t.n + ' of ' + TOPICS.length + '</span>' +
-        '<span>' + esc(t.cat) + '</span>' +
-        '<span>' + total + ' resources</span>' +
-        (GUIDE[t.n] ? '<span style="color:var(--c)">Full theory guide available</span>' : '') +
+        '<span>' + esc(t('libTopicPrefix')) + ' ' + x.n + ' ' + esc(t('topOf')) + ' ' + TOPICS.length + '</span>' +
+        '<span>' + esc(cat) + '</span>' +
+        '<span>' + total + ' ' + esc(t('topResources')) + '</span>' +
+        (GUIDE[x.n] ? '<span style="color:var(--c)">' + esc(t('topGuide')) + '</span>' : '') +
       '</div>' +
     '</div>';
 
   document.getElementById('tMarquee').innerHTML =
-    esc(t.title) + ' <em>✦</em> ' + esc(t.cat) + ' <em>✦</em> Topic ' + t.n +
-    ' <em>✦</em> ' + total + ' resources <em>✦</em> Grades 7–8 <em>✦</em> ';
+    esc(title) + ' <em>✦</em> ' + esc(cat) + ' <em>✦</em> ' +
+    esc(t('libTopicPrefix')) + ' ' + x.n + ' <em>✦</em> ' + total + ' ' + esc(t('topResources')) + ' <em>✦</em> ';
 
   /* ---- body ---- */
-  var html = '<div class="tip-box" data-reveal><b>Why it matters.</b> ' + esc(t.tip) + '</div>';
+  var html = '<div class="tip-box" data-reveal><b>' + esc(t('topWhy')) + '</b> ' +
+             esc(ML.pick(x.tip, lang)) + '</div>';
 
-  if (HAS_LESSON.indexOf(t.n) > -1 || GUIDE[t.n]) {
+  if (HAS_LESSON.indexOf(x.n) > -1 || GUIDE[x.n]) {
     html += '<div class="band" data-reveal style="margin:2rem 0 2.6rem">' +
       '<div class="band-glow" aria-hidden="true"></div>' +
-      '<div><h2>There is a full lesson for this topic</h2>' +
-      '<p>Complete theory with every proof, worked examples and problems from real ' +
-      'olympiads — in Russian and English — before you go shopping in the list below.</p></div>' +
+      '<div><h2>' + esc(t('bandLesson')) + '</h2>' +
+      '<p>' + esc(t('bandLessonText')) + '</p></div>' +
       '<div class="hero-ctas">' +
-      (HAS_LESSON.indexOf(t.n) > -1
-        ? '<a class="btn" href="lesson.html?t=' + t.n + '">Open the lesson <span class="arr">→</span></a>'
+      (HAS_LESSON.indexOf(x.n) > -1
+        ? '<a class="btn" href="lesson.html?t=' + x.n + '">' + esc(t('bandOpenLesson')) +
+          ' <span class="arr">→</span></a>'
         : '') +
-      (GUIDE[t.n] ? '<a class="btn btn--ghost" href="' + GUIDE[t.n] + '">Theory guide</a>' : '') +
+      (GUIDE[x.n] ? '<a class="btn btn--ghost" href="' + GUIDE[x.n] + '">' +
+                    esc(t('bandTheoryGuide')) + '</a>' : '') +
       '</div></div>';
   }
 
-  t.groups.forEach(function (g, i) {
-    var meta = KIND[g.id] || [g.id, ''];
+  x.groups.forEach(function (g) {
+    var meta = KIND[g.id];
     html += '<section class="kindsec" data-reveal>' +
-      '<h2>' + esc(meta[0]) + ' <span class="n">' + g.cards.length + '</span></h2>' +
-      '<p class="kdesc">' + esc(meta[1]) + '</p>' +
+      '<h2>' + esc(meta ? t(meta[0]) : g.id) + ' <span class="n">' + g.cards.length + '</span></h2>' +
+      '<p class="kdesc">' + esc(meta ? t(meta[1]) : '') + '</p>' +
       '<div class="res-grid">' + g.cards.map(function (c) {
-        var tag = c.price === 'paid' ? '<span class="tag-paid">PAID</span>'
-                : c.price === 'free' ? '<span class="tag-free">FREE</span>' : '';
+        var tag = c.price === 'paid' ? '<span class="tag-paid">' + esc(t('tagPaid')) + '</span>'
+                : c.price === 'free' ? '<span class="tag-free">' + esc(t('tagFree')) + '</span>' : '';
         return '<article class="res' + (c.star ? ' star' : '') + '">' +
-          '<div class="res-top"><span class="res-kind">' + esc(c.label) + '</span>' + tag + '</div>' +
+          '<div class="res-top"><span class="res-kind">' + esc(ML.pick(c.label, lang)) + '</span>' + tag + '</div>' +
           '<h4>' + esc(c.title) + '</h4>' +
-          '<p>' + esc(c.desc) + '</p>' +
-          '<a class="res-go" href="' + esc(c.url) + '" target="_blank" rel="noopener">Open resource ↗</a>' +
-          '</article>';
+          '<p>' + esc(ML.pick(c.desc, lang)) + '</p>' +
+          '<a class="res-go" href="' + esc(c.url) + '" target="_blank" rel="noopener">' +
+          esc(t('resOpen')) + '</a></article>';
       }).join('') + '</div></section>';
   });
   document.getElementById('tBody').innerHTML = html;
@@ -204,8 +212,10 @@
   /* ---- prev / next ---- */
   var prev = TOPICS[idx - 1], next = TOPICS[idx + 1];
   document.getElementById('tNav').innerHTML =
-    (prev ? '<a href="topic.html?t=' + prev.n + '"><small>← Previous</small>' + esc(prev.title) + '</a>' : '<span></span>') +
-    (next ? '<a class="next" href="topic.html?t=' + next.n + '"><small>Next →</small>' + esc(next.title) + '</a>' : '');
+    (prev ? '<a href="topic.html?t=' + prev.n + '"><small>' + esc(t('topPrev')) + '</small>' +
+            esc(ML.pick(prev.title, lang)) + '</a>' : '<span></span>') +
+    (next ? '<a class="next" href="topic.html?t=' + next.n + '"><small>' + esc(t('topNext')) + '</small>' +
+            esc(ML.pick(next.title, lang)) + '</a>' : '');
 })();
 </script>
 <script src="assets/js/app.js"></script>

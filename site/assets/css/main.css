@@ -457,3 +457,15 @@ body.menu-open .m-link{transform:none}
   .hero-ctas .btn{flex:1;justify-content:center}
   .foot-top{grid-template-columns:1fr 1fr}
 }
+
+/* ---------- language switch (every page) ---------- */
+.langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.langsw button{
+  padding:.34rem .74rem;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.09em;
+  color:var(--muted);transition:background .25s,color .25s;
+}
+.langsw button.on{background:var(--ink);color:var(--canvas)}
+.langsw button:hover:not(.on){color:var(--accent)}
+body.menu-open .langsw{border-color:rgba(255,255,255,.25)}
+body.menu-open .langsw button.on{background:var(--gold);color:#0F1B2A}
+@media (max-width:640px){.langsw button{padding:.3rem .55rem;font-size:.64rem}}
