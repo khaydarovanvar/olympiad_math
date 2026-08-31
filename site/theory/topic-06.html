@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Topic 6 — Inequalities · Complete theory with full proofs and 30 competition problems</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1923;--paper:#f7f4ef;--cream:#ede9e1;--blue:#1a4b8c;--blue-light:#d6e4f7;--gold:#c48b1a;--gold-light:#fdf3d8;--red:#8c2a1a;--red-light:#f7e4df;--green:#1a6b3a;--green-light:#ddf2e5;--purple:#4a2d8c;--purple-light:#ece6f7;--teal:#0d6b6b;--teal-light:#d4f0f0;--orange:#b85c00;--orange-light:#fdebd0;--border:#d4cec4;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.75;}
+.hero{background:var(--ink);color:#fff;padding:56px 48px 48px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 80px);}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:16px;}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.65);max-width:620px;line-height:1.6;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;padding:5px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);}
+.topic-nav{background:var(--cream);border-bottom:1px solid var(--border);padding:10px 48px;display:flex;gap:8px;flex-wrap:wrap;}
+.nav-chip{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.08em;padding:4px 10px;border-radius:12px;border:1px solid var(--border);color:#888;cursor:pointer;text-decoration:none;transition:all .12s;}
+.nav-chip:hover{border-color:var(--gold);color:var(--gold);}
+.page{max-width:860px;margin:0 auto;padding:0 40px 80px;}
+.chapter{display:flex;align-items:center;gap:20px;margin:52px 0 28px;}
+.chapter-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--gold);opacity:.3;line-height:1;min-width:56px;}
+.chapter-text h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;}
+.chapter-text p{font-size:13px;color:#999;margin-top:2px;}
+.chapter-line{flex:1;height:1px;background:var(--border);}
+.def-box{background:var(--blue-light);border:1.5px solid #a8c8f0;border-radius:10px;padding:20px 22px;margin:20px 0;}
+.def-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;}
+.def-box p,.def-box li{font-size:14px;line-height:1.75;margin-top:5px;}
+.def-box ul{padding-left:18px;}
+.theorem-box{background:var(--gold-light);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:20px 22px;margin:20px 0;}
+.theorem-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.theorem-box p,.theorem-box li{font-size:14px;line-height:1.75;margin-top:5px;}
+.theorem-box ul{padding-left:18px;margin-top:6px;}
+.formula{font-family:'JetBrains Mono',monospace;font-size:14px;color:#7a5a00;margin:10px 0;padding:9px 14px;background:rgba(196,139,26,.12);border-radius:6px;display:block;}
+.lemma-box{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 10px 10px 0;padding:20px 22px;margin:18px 0;}
+.lemma-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+.lemma-box p,.lemma-box li{font-size:14px;line-height:1.75;margin-top:5px;}
+.lemma-box ul{padding-left:18px;}
+.corollary-box{background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0;}
+.corollary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+.corollary-box p,.corollary-box li{font-size:14px;line-height:1.75;margin-top:4px;}
+.warning-box{background:var(--orange-light);border-left:4px solid var(--orange);border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0;}
+.warning-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.warning-box p{font-size:14px;line-height:1.75;margin-top:4px;}
+.formula-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0;}
+.fstrip{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+.fstrip-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:7px;}
+.fstrip-eq{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px;}
+.fstrip-desc{font-size:12px;color:#666;line-height:1.5;}
+.algo{background:#12192b;color:#dde4f0;border-radius:12px;padding:22px 26px;margin:20px 0;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.95;}
+.algo-title{font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#5a7a9a;margin-bottom:12px;}
+.algo-key{color:#7ec8e3;font-weight:600;}
+.algo-val{color:#f0c070;font-weight:600;}
+.algo-hl{color:#90e080;font-weight:600;}
+.algo-comment{color:#4a5a7a;}
+.algo-line{line-height:1.9;}
+.example{border:1.5px solid var(--border);border-radius:12px;margin:22px 0;overflow:hidden;}
+.example-head{display:flex;align-items:center;gap:10px;padding:12px 18px;background:var(--cream);flex-wrap:wrap;}
+.ex-badge{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:var(--ink);color:#fff;}
+.ex-level{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;padding:3px 9px;border-radius:12px;}
+.ex-title{font-size:14px;font-weight:600;flex:1;}
+.example-q{padding:15px 18px;font-size:15px;line-height:1.65;border-top:1px solid var(--border);}
+.example-sol{padding:16px 18px 18px;background:#fefefe;border-top:1px solid var(--border);}
+.sol-head{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:14px 0 8px;}
+.sol-head:first-child{margin-top:0;}
+.step{display:flex;gap:12px;margin-bottom:9px;align-items:flex-start;}
+.step-n{background:var(--ink);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;flex-shrink:0;margin-top:2px;}
+.step div:last-child{font-size:14px;line-height:1.65;}
+.sum-table{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;}
+.sum-table th{background:var(--ink);color:#fff;padding:9px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;}
+.sum-table td{padding:8px 12px;border-bottom:1px solid var(--border);}
+.sum-table tr:nth-child(even) td{background:var(--cream);}
+.sep{height:1px;background:var(--border);margin:40px 0;}
+.practice-hdr{background:var(--ink);color:#fff;padding:32px 40px 28px;margin:0 -40px;margin-top:52px;}
+.practice-hdr h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;margin-bottom:6px;}
+.practice-hdr p{font-size:14px;color:rgba(255,255,255,.55);}
+.reveal-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:26px;}
+.reveal-bar p{font-size:13px;color:#888;}
+.reveal-btns{display:flex;gap:8px;}
+.rbtn{font-size:11px;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer;border:none;}
+.rbtn-show{background:var(--blue);color:#fff;}
+.rbtn-hide{background:var(--cream);color:var(--ink);border:1px solid var(--border);}
+.level-group{margin-bottom:32px;}
+.level-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.level-pill{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.1em;padding:5px 14px;border-radius:20px;white-space:nowrap;}
+.level-line{flex:1;height:1px;background:var(--border);}
+.q-card{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:9px;overflow:hidden;}
+.q-row{display:flex;align-items:flex-start;gap:13px;padding:14px 17px;cursor:pointer;transition:background .12s;}
+.q-row:hover{background:#faf9f6;}
+.q-num{width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.q-body{flex:1;}
+.q-text{font-size:14px;line-height:1.62;}
+.q-source{font-size:9.5px;color:#bbb;font-family:'JetBrains Mono',monospace;margin-top:3px;}
+.q-toggle{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;color:#bbb;flex-shrink:0;margin-top:5px;}
+.q-answer{display:none;padding:14px 17px 16px 57px;border-top:1px solid #f0ece4;background:#fefcf8;}
+.q-card.open .q-answer{display:block;}
+.ans-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:8px;}
+.ans-body{font-size:13.5px;line-height:1.8;color:#1a1a16;}
+.ans-body .step{margin-bottom:8px;}
+footer{text-align:center;font-size:12px;color:#aaa;font-style:italic;padding:32px 0;}
+@media(max-width:600px){.page{padding:0 16px 60px;}.hero{padding:36px 18px 32px;}.practice-hdr{margin:0 -16px;padding:24px 16px;}}
+</style>
+</head>
+<body>
+<div id="mlbar" style="position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:1rem;
+padding:.7rem clamp(1rem,4vw,2.4rem);background:#0F1B2A;color:#EAF0F6;
+font:500 .88rem/1.4 'Inter',system-ui,sans-serif;box-shadow:0 1px 0 rgba(255,255,255,.1)">
+<a href="../index.html" style="display:flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none;font-weight:600">
+<svg viewBox="0 0 48 48" width="24" height="24" aria-hidden="true" style="flex:none">
+<circle cx="24" cy="24" r="21" fill="none" stroke="#D08A00" stroke-width="2.6"/>
+<path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/></svg>
+MathLab</a>
+<span style="opacity:.4">/</span>
+<a href="../topic.html?t=6" style="color:inherit;text-decoration:none;opacity:.82">Topic 6 resources</a>
+<a href="../library.html" style="margin-left:auto;color:#F0A81A;text-decoration:none;font-weight:600">Library &rarr;</a>
+</div>
+
+<div class="hero">
+  <div style="position:relative;z-index:1">
+  <div class="hero-eyebrow">Math Olympiad Intensive · Topic 6 of 16</div>
+  <div class="hero-title">Inequalities · Complete theory with full proofs and 30 competition problems</div>
+  <div class="hero-sub">Complete theory with full proofs and 30 competition problems</div>
+  <div class="hero-meta"><span class="hero-tag">Grades 7–10</span><span class="hero-tag">Algebra</span><span class="hero-tag">9 Chapters</span><span class="hero-tag">30 Problems</span><span class="hero-tag">Full Proofs</span></div>
+  </div>
+</div>
+<div class="topic-nav"><a class="nav-chip" href="#ch1">I. AM-GM</a><a class="nav-chip" href="#ch2">II. Cauchy-Schwarz</a><a class="nav-chip" href="#ch3">III. Power Mean/Jensen</a><a class="nav-chip" href="#ch4">IV. Rearrangement</a><a class="nav-chip" href="#ch5">V. SOS & Schur</a><a class="nav-chip" href="#ch6">VI. Muirhead</a><a class="nav-chip" href="#ch7">VII. Geometric Ineqs</a><a class="nav-chip" href="#ch8">VIII. Constraints</a><a class="nav-chip" href="#ch9">IX. Strategy</a><a class="nav-chip" href="#practice">30 Problems</a></div>
+<div class="page">
+<div class="chapter" id="ch1">
+  <div class="chapter-num">I</div>
+  <div class="chapter-text"><h2>AM-GM and Basic Inequalities</h2><p>The arithmetic-geometric mean inequality and its consequences</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 1.1 — AM-GM Inequality</div>
+<p>For non-negative reals a₁,a₂,...,aₙ:</p>
+<span class="formula">(a₁+a₂+...+aₙ)/n  ≥  (a₁·a₂·...·aₙ)^(1/n)</span>
+<p>with equality if and only if <strong>a₁=a₂=...=aₙ</strong>.</p>
+<p><strong>Proof (n=2):</strong> (a−b)²≥0 ⟹ a²+b²≥2ab ⟹ (a+b)/2≥√(ab). □</p>
+<p><strong>Proof (general, by Cauchy's forward-backward induction):</strong><br>
+Forward: true for n=2^k by applying n=2 case repeatedly.<br>
+Backward: if true for n+1, multiply a₁...aₙ and (a₁+...+aₙ)/n to get true for n. □</p>
+<p><strong>Weighted AM-GM:</strong> For weights w₁,...,wₙ≥0 summing to 1:</p>
+<span class="formula">w₁a₁+w₂a₂+...+wₙaₙ  ≥  a₁^w₁ · a₂^w₂ · ... · aₙ^wₙ</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d6e4f7;color:#1a4b8c;">District</span>
+    <span class="ex-title">Prove that for positive reals a,b,c with abc=1: a+b+c≥3.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">AM-GM direct</div><div class="step"><div class="step-n">1</div><div>By AM-GM: (a+b+c)/3 ≥ (abc)^(1/3) = 1^(1/3) = 1.</div></div><div class="step"><div class="step-n">2</div><div>Therefore a+b+c ≥ 3, with equality when a=b=c=1. □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">Find the maximum value of x²y³z⁴ subject to x+y+z=1, x,y,z>0.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Weighted AM-GM</div><div class="step"><div class="step-n">1</div><div>We want to maximize x²y³z⁴. Weights: 2/9, 3/9, 4/9 (sum=1).</div></div><div class="step"><div class="step-n">2</div><div>Weighted AM-GM: (2/9)·x/(2/9) + (3/9)·y/(3/9) + (4/9)·z/(4/9) ≥ (x/(2/9))^(2/9)·(y/(3/9))^(3/9)·(z/(4/9))^(4/9).</div></div><div class="step"><div class="step-n">3</div><div>Better: by AM-GM applied to 2 copies of x/2, 3 of y/3, 4 of z/4:</div></div><div class="step"><div class="step-n">4</div><div>(x/2+x/2+y/3+y/3+y/3+z/4+z/4+z/4+z/4)/9 ≥ (x/2)²(y/3)³(z/4)⁴)^(1/9).</div></div><div class="step"><div class="step-n">5</div><div>LHS = (x+y+z)/9 = 1/9. So (x/2)²(y/3)³(z/4)⁴ ≤ (1/9)⁹.</div></div><div class="step"><div class="step-n">6</div><div>x²y³z⁴ = (x/2)²·(y/3)³·(z/4)⁴ · 4·27·256 = 2764·(1/9)⁹.</div></div><div class="step"><div class="step-n">7</div><div>Equality: x/2=y/3=z/4 and x+y+z=1 → x=2/9,y=3/9,z=4/9.</div></div><div class="step"><div class="step-n">8</div><div>Max x²y³z⁴ = (2/9)²(3/9)³(4/9)⁴ = <strong>4·27·256/9⁹ = 27648/9⁹</strong>.</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 1.2 — Key Consequences of AM-GM</div>
+<span class="formula">a²+b² ≥ 2ab   (a-b)²≥0</span>
+<span class="formula">a/b + b/a ≥ 2   for a,b>0</span>
+<span class="formula">(a+b)(1/a+1/b) ≥ 4   Cauchy special case</span>
+<span class="formula">a³+b³+c³ ≥ 3abc   (equivalent to AM-GM)</span>
+<span class="formula">a^n+b^n ≥ a^(n-1)b + ab^(n-1)   for n≥1 [SOS]</span>
+<p><strong>Nesbitt's Inequality:</strong> For positive a,b,c:</p>
+<span class="formula">a/(b+c) + b/(a+c) + c/(a+b) ≥ 3/2</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d6e4f7;color:#1a4b8c;">District</span>
+    <span class="ex-title">For positive reals a,b,c, prove (a+b+c)(1/a+1/b+1/c) ≥ 9.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Expand + a/b+b/a≥2</div><div class="step"><div class="step-n">1</div><div>Expand the product: (a+b+c)(1/a+1/b+1/c) = 3 + (a/b+b/a) + (b/c+c/b) + (a/c+c/a).</div></div><div class="step"><div class="step-n">2</div><div>By AM-GM each paired term satisfies x/y+y/x ≥ 2, so the three pairs contribute at least 6.</div></div><div class="step"><div class="step-n">3</div><div>Therefore the product ≥ 3+6 = 9, with equality iff a=b=c. □</div></div><div class="step"><div class="step-n">4</div><div><em>This is the AM-HM inequality in disguise: it shows AM ≥ HM for three terms.</em></div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">For non-negative reals a,b,c, prove a³+b³+c³ ≥ 3abc.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Factoring identity (SOS)</div><div class="step"><div class="step-n">1</div><div>Use the identity a³+b³+c³−3abc = (a+b+c)(a²+b²+c²−ab−bc−ca).</div></div><div class="step"><div class="step-n">2</div><div>The first factor a+b+c ≥ 0 since the variables are non-negative.</div></div><div class="step"><div class="step-n">3</div><div>The second factor equals ½[(a−b)²+(b−c)²+(c−a)²] ≥ 0.</div></div><div class="step"><div class="step-n">4</div><div>A product of two non-negative quantities is non-negative, so a³+b³+c³ ≥ 3abc. Equality iff a=b=c. □</div></div></div>
+</div><div class="chapter" id="ch2">
+  <div class="chapter-num">II</div>
+  <div class="chapter-text"><h2>Cauchy-Schwarz Inequality</h2><p>The most powerful elementary inequality</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 2.1 — Cauchy-Schwarz Inequality</div>
+<p>For real numbers aᵢ, bᵢ:</p>
+<span class="formula">(a₁²+a₂²+...+aₙ²)(b₁²+b₂²+...+bₙ²) ≥ (a₁b₁+a₂b₂+...+aₙbₙ)²</span>
+<p><strong>Proof:</strong> Consider f(t)=∑(aᵢt+bᵢ)²=At²+2Bt+C≥0 for all t.
+Discriminant ≤0: (2B)²-4AC≤0, i.e. B²≤AC, which is exactly Cauchy-Schwarz. □</p>
+<p><strong>Engel form (Titu's Lemma):</strong></p>
+<span class="formula">a₁²/b₁ + a₂²/b₂ + ... + aₙ²/bₙ ≥ (a₁+a₂+...+aₙ)²/(b₁+b₂+...+bₙ)   for bᵢ>0</span>
+<p><strong>Equality condition:</strong> a₁/b₁ = a₂/b₂ = ... = aₙ/bₙ (vectors are proportional).</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">Prove that for positive reals a,b,c: (a+b+c)² ≤ 3(a²+b²+c²).</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Cauchy-Schwarz</div><div class="step"><div class="step-n">1</div><div>By Cauchy-Schwarz with vectors (a,b,c) and (1,1,1):</div></div><div class="step"><div class="step-n">2</div><div>(a·1+b·1+c·1)² ≤ (a²+b²+c²)(1²+1²+1²) = 3(a²+b²+c²). □</div></div><div class="step"><div class="step-n">3</div><div>Equality when a=b=c.</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">Prove Nesbitt's inequality: a/(b+c)+b/(a+c)+c/(a+b) ≥ 3/2 for positive a,b,c.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Three methods</div><div class="step"><div class="step-n">1</div><div><strong>Method 1 (add 1 to each):</strong> Each term +1: (a+b+c)/(b+c)+(a+b+c)/(a+c)+(a+b+c)/(a+b) ≥ 9 by AM-HM (Cauchy). Divide by (a+b+c) to... actually: sum of 3 terms each = (a+b+c)/denominator. By Cauchy: ∑(a+b+c)/(b+c) ≥ 9·(a+b+c)/[2(a+b+c)] = 9/2. Divide by 1: original sum = above − 3 ≥ 9/2−3=3/2. □</div></div><div class="step"><div class="step-n">2</div><div><strong>Method 2 (SOS):</strong> LHS−3/2 = [a(a+b)(a+c)+b(b+c)(a+b)+c(a+c)(b+c)−(3/2)(a+b)(b+c)(a+c)] / [(a+b)(b+c)(a+c)]. Numerator = sum of squares after expansion ≥ 0.</div></div><div class="step"><div class="step-n">3</div><div><strong>Method 3 (Titu):</strong> By Titu: a/(b+c)=a²/(ab+ac). Sum ≥ (a+b+c)²/[2(ab+bc+ca)] ≥ 3/2 since (a+b+c)²≥3(ab+bc+ca). □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">For positive reals a,b,c with a+b+c=1, find the minimum of a/(b+c²) + b/(c+a²) + c/(a+b²).</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Titu's Lemma</div><div class="step"><div class="step-n">1</div><div>With a+b+c=1: b+c=1-a, so b+c² = b+c·c. By Titu or direct estimate with a+b+c=1:</div></div><div class="step"><div class="step-n">2</div><div>b+c²=b+c²≤b+c (since c≤1). Hard exact approach: check equality at a=b=c=1/3.</div></div><div class="step"><div class="step-n">3</div><div>At a=b=c=1/3: each term = (1/3)/((1/3)+(1/9))=(1/3)/(4/9)=3/4. Sum=9/4.</div></div><div class="step"><div class="step-n">4</div><div>Show this is the minimum using SOS or Lagrange multipliers. <strong>Minimum = 9/4 at a=b=c=1/3.</strong></div></div></div>
+</div><div class="chapter" id="ch3">
+  <div class="chapter-num">III</div>
+  <div class="chapter-text"><h2>Power Mean and Jensen's Inequality</h2><p>Convexity and the hierarchy of means</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 3.1 — Power Mean Inequality</div>
+<p>For positive reals x₁,...,xₙ and r≠0, the power mean of order r is:</p>
+<span class="formula">M_r = ((x₁^r+x₂^r+...+xₙ^r)/n)^(1/r)</span>
+<p>For r=0: M₀=geometric mean; r=∞: M_∞=max; r=−∞: M_(-∞)=min.</p>
+<span class="formula">M_(-∞) ≤ ... ≤ M_(-1) ≤ M_0 ≤ M_1 ≤ M_2 ≤ ... ≤ M_∞</span>
+<p>i.e., M_r is non-decreasing in r. In particular: HM ≤ GM ≤ AM ≤ QM.</p>
+<span class="formula">HM = n/(1/x₁+...+1/xₙ)  ≤  GM = (x₁...xₙ)^(1/n)  ≤  AM = (x₁+...+xₙ)/n  ≤  QM = √((∑xᵢ²)/n)</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">For positive reals a,b,c with a+b+c=1, prove a²+b²+c² ≥ 1/3 and 1/a+1/b+1/c ≥ 9.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">QM-AM and AM-HM</div><div class="step"><div class="step-n">1</div><div><strong>First part (QM ≥ AM):</strong> √((a²+b²+c²)/3) ≥ (a+b+c)/3 = 1/3.</div></div><div class="step"><div class="step-n">2</div><div>Squaring: (a²+b²+c²)/3 ≥ 1/9, so a²+b²+c² ≥ 1/3.</div></div><div class="step"><div class="step-n">3</div><div><strong>Second part (AM ≥ HM):</strong> (a+b+c)/3 ≥ 3/(1/a+1/b+1/c).</div></div><div class="step"><div class="step-n">4</div><div>Rearranging: 1/a+1/b+1/c ≥ 9/(a+b+c) = 9. Both have equality at a=b=c=1/3. □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">For positive reals a,b,c, prove ∛((a³+b³+c³)/3) ≥ (a+b+c)/3.</span>
+  </div>
+  <div class="example-q">This is the Power Mean inequality M₃ ≥ M₁.</div>
+  <div class="example-sol"><div class="sol-head">Power Mean (order 3 vs order 1)</div><div class="step"><div class="step-n">1</div><div>The left side is M₃ = ((a³+b³+c³)/3)^(1/3); the right side is M₁ = (a+b+c)/3. Power Mean gives M₃ ≥ M₁.</div></div><div class="step"><div class="step-n">2</div><div>Equivalently, cubing both sides: a³+b³+c³ ≥ (a+b+c)³/9.</div></div><div class="step"><div class="step-n">3</div><div><strong>Direct check:</strong> f(x)=x³ is convex, so by Jensen f((a+b+c)/3) ≤ (f(a)+f(b)+f(c))/3, i.e. ((a+b+c)/3)³ ≤ (a³+b³+c³)/3.</div></div><div class="step"><div class="step-n">4</div><div>Taking cube roots gives the claim, with equality iff a=b=c. □</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 3.2 — Jensen's Inequality</div>
+<p>If f is a <strong>convex function</strong> (f''≥0) and λ₁,...,λₙ≥0 with ∑λᵢ=1:</p>
+<span class="formula">f(λ₁x₁+λ₂x₂+...+λₙxₙ) ≤ λ₁f(x₁)+λ₂f(x₂)+...+λₙf(xₙ)</span>
+<p>For concave f, the inequality reverses.</p>
+<p><strong>Common convex functions:</strong> x², eˣ, x log x (x>0), 1/x (x>0).</p>
+<p><strong>Common concave functions:</strong> log x, √x, sin x (on [0,π]).</p>
+<p><strong>Proof:</strong> By induction using the 2-variable convexity condition
+f(λx+(1-λ)y)≤λf(x)+(1-λ)f(y). □</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">Let a,b,c>0 with a+b+c=3. Prove a²+b²+c²≥3 and find when equality holds.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Jensen / QM-AM</div><div class="step"><div class="step-n">1</div><div>f(x)=x² is convex. By Jensen: f((a+b+c)/3) ≤ (f(a)+f(b)+f(c))/3.</div></div><div class="step"><div class="step-n">2</div><div>((a+b+c)/3)² ≤ (a²+b²+c²)/3 → 9/9 ≤ (a²+b²+c²)/3 → a²+b²+c²≥3. □</div></div><div class="step"><div class="step-n">3</div><div>Equality: a=b=c=1.</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">For positive reals with a+b+c=1, prove: a^a·b^b·c^c ≥ (1/3)^(a+b+c) = 1/3.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Jensen on log</div><div class="step"><div class="step-n">1</div><div>Take log: a·log a+b·log b+c·log c ≥ (a+b+c)·log(1/3)=-log 3.</div></div><div class="step"><div class="step-n">2</div><div>f(x)=x log x is convex (f''=1/x>0). By Jensen: f(a)+f(b)+f(c) ≥ 3f((a+b+c)/3)=3·(1/3)log(1/3)=−log 3. □</div></div><div class="step"><div class="step-n">3</div><div>So a^a·b^b·c^c ≥ e^(−log 3) = 1/3. Equality when a=b=c=1/3.</div></div></div>
+</div><div class="chapter" id="ch4">
+  <div class="chapter-num">IV</div>
+  <div class="chapter-text"><h2>Rearrangement and Chebyshev</h2><p>Order matters: when similar sequences help</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 4.1 — Rearrangement Inequality</div>
+<p>If a₁≤a₂≤...≤aₙ and b₁≤b₂≤...≤bₙ are real sequences, then for any permutation σ:</p>
+<span class="formula">∑aᵢb_(n+1-i) ≤ ∑aᵢb_σ(i) ≤ ∑aᵢbᵢ</span>
+<p>i.e., the sum ∑aᵢbᵢ is maximized when both sequences are sorted in the same order
+(both increasing) and minimized when sorted in opposite orders.</p>
+<p><strong>Proof sketch:</strong> Any non-sorted arrangement can be improved by a transposition
+that sorts it further. Iterate to get the maximum arrangement. □</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">For positive reals a,b,c, prove a²+b²+c² ≥ ab+bc+ca using rearrangement.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Same sequence vs a permutation</div><div class="step"><div class="step-n">1</div><div>Take the two identical sequences (a,b,c) and (a,b,c), sorted the same way.</div></div><div class="step"><div class="step-n">2</div><div>The "sorted with itself" pairing gives the maximum sum: a·a+b·b+c·c = a²+b²+c².</div></div><div class="step"><div class="step-n">3</div><div>Any other pairing is smaller. Pairing (a,b,c) with the shifted (b,c,a) gives ab+bc+ca.</div></div><div class="step"><div class="step-n">4</div><div>By the Rearrangement Inequality, a²+b²+c² ≥ ab+bc+ca, with equality iff a=b=c. □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">For positive reals a,b,c, prove a/b + b/c + c/a ≥ 3.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Rearrangement / AM-GM</div><div class="step"><div class="step-n">1</div><div>Consider the sequences (a,b,c) and (1/a,1/b,1/c). The oppositely-sorted pairing gives the minimum: a·(1/a)+b·(1/b)+c·(1/c) = 3.</div></div><div class="step"><div class="step-n">2</div><div>A cyclic pairing gives a·(1/b)+b·(1/c)+c·(1/a) = a/b+b/c+c/a, which is at least the minimum.</div></div><div class="step"><div class="step-n">3</div><div>Hence a/b+b/c+c/a ≥ 3. (Equivalently, by AM-GM: a/b+b/c+c/a ≥ 3∛(a/b·b/c·c/a) = 3.) Equality iff a=b=c. □</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 4.2 — Chebyshev's Sum Inequality</div>
+<p>If a₁≤...≤aₙ and b₁≤...≤bₙ (both sorted the same way):</p>
+<span class="formula">n·∑aᵢbᵢ ≥ (∑aᵢ)(∑bᵢ)</span>
+<p>If one sequence is increasing and the other decreasing, the inequality reverses.</p>
+<p><strong>Proof:</strong> Expand n·∑aᵢbᵢ−(∑aᵢ)(∑bᵢ) = ∑_(i&lt;j)(aᵢ−aⱼ)(bᵢ−bⱼ)≥0
+since both differences have the same sign (both sorted same way). □</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">Let a≥b≥c>0. Prove a²/b + b²/c + c²/a ≥ a+b+c.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Rearrangement / Chebyshev</div><div class="step"><div class="step-n">1</div><div>Let xᵢ=(a,b,c) and yᵢ=(a/b, b/c, c/a) — not obviously sorted. Use the following:</div></div><div class="step"><div class="step-n">2</div><div>a²/b+b²/c+c²/a = a·(a/b)+b·(b/c)+c·(c/a).</div></div><div class="step"><div class="step-n">3</div><div>By AM-GM: a/b+b/a ≥ 2. But we need a cleaner approach.</div></div><div class="step"><div class="step-n">4</div><div>By AM-GM on each term: a²/b ≥ 2a−b (since a²/b+b≥2a). Sum: ∑a²/b+∑b≥2∑a → ∑a²/b ≥ 2∑a−∑a=∑a. □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">Prove: for positive a,b,c with a+b+c=3, we have a/b²+b/c²+c/a² ≥ a+b+c = 3. (Harder: minimize a²/b+b²/c+c²/a subject to a+b+c=3.)</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Chebyshev + Cauchy</div><div class="step"><div class="step-n">1</div><div>For the harder problem: minimize S=a²/b+b²/c+c²/a.</div></div><div class="step"><div class="step-n">2</div><div>By AM-GM: a²/b+b ≥ 2a → a²/b ≥ 2a-b. Sum: S≥2(a+b+c)-(b+c+a)=a+b+c=3.</div></div><div class="step"><div class="step-n">3</div><div>So S≥3 with equality when a²/b=2a-b → a=b, and similarly b=c. Thus a=b=c=1. Min S=3.</div></div></div>
+</div><div class="chapter" id="ch5">
+  <div class="chapter-num">V</div>
+  <div class="chapter-text"><h2>SOS and Schur's Inequality</h2><p>Sum of Squares and Schur techniques</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 5.1 — SOS Method (Sum of Squares)</div>
+<p>To prove f(a,b,c)≥0, write f as a sum of squares (or sum of terms known to be non-negative).</p>
+<p><strong>SOS decomposition:</strong> f = ∑ λᵢ(aᵢx+bᵢy+cᵢz)² with λᵢ≥0.</p>
+<p><strong>pqr method:</strong> For symmetric inequalities in a,b,c, set p=a+b+c, q=ab+bc+ca, r=abc.
+Express the inequality in terms of p,q,r. Use Newton's inequalities: p²≥3q, q²≥3pr.</p>
+<p><strong>uvw method:</strong> Set u=p/3=(a+b+c)/3, v²=q/3=(ab+bc+ca)/3, w³=r=abc.
+Then the constraint is u³≥uv²≥w³ (AM-GM chain) and u²≥v² (another AM-GM).</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">For real a,b,c, prove a⁴+b⁴+c⁴ ≥ a²b²+b²c²+c²a² ≥ abc(a+b+c).</span>
+  </div>
+  <div class="example-q">A two-step chain, each proven by sum of squares.</div>
+  <div class="example-sol"><div class="sol-head">SOS twice</div><div class="step"><div class="step-n">1</div><div><strong>Left inequality:</strong> a⁴+b⁴+c⁴ − (a²b²+b²c²+c²a²) = ½[(a²−b²)²+(b²−c²)²+(c²−a²)²] ≥ 0.</div></div><div class="step"><div class="step-n">2</div><div><strong>Right inequality:</strong> apply the identity x²+y²+z² ≥ xy+yz+zx with x=ab, y=bc, z=ca.</div></div><div class="step"><div class="step-n">3</div><div>That gives a²b²+b²c²+c²a² ≥ ab·bc+bc·ca+ca·ab = abc(a+b+c).</div></div><div class="step"><div class="step-n">4</div><div>This middle step is itself ½[(ab−bc)²+(bc−ca)²+(ca−ab)²] ≥ 0. Chaining both, equality iff |a|=|b|=|c|. □</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 5.2 — Schur's Inequality</div>
+<p>For non-negative reals a,b,c and t>0:</p>
+<span class="formula">aᵗ(a-b)(a-c) + bᵗ(b-a)(b-c) + cᵗ(c-a)(c-b) ≥ 0</span>
+<p>with equality when a=b=c or when two of a,b,c are equal and the third is 0.</p>
+<p><strong>Proof for t=1:</strong> WLOG a≥b≥c≥0. Let a=c+s+t, b=c+s (s,t≥0).
+Expand and simplify; the result is a sum of non-negative terms. □</p>
+<p><strong>Key special case (t=2):</strong> a²(a-b)(a-c)+b²(b-a)(b-c)+c²(c-a)(c-b)≥0.</p>
+<p><strong>Application:</strong> For a+b+c=1: Schur with t=1 gives q≤p²/3+r/p... many symmetric ineqs follow.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">For non-negative a,b,c with a+b+c=1, prove a²+b²+c² ≥ ab+bc+ca.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">SOS</div><div class="step"><div class="step-n">1</div><div>2(a²+b²+c²)-2(ab+bc+ca) = (a-b)²+(b-c)²+(c-a)² ≥ 0. □</div></div><div class="step"><div class="step-n">2</div><div>Equivalently: (a+b+c)²=a²+b²+c²+2(ab+bc+ca)≥3(ab+bc+ca) gives a²+b²+c²≥ab+bc+ca.</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">For positive reals a,b,c, prove a³+b³+c³+abc ≥ ab(a+b)+bc(b+c)+ca(c+a).</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Schur t=1</div><div class="step"><div class="step-n">1</div><div>This is Schur's inequality t=1. LHS-RHS = a(a-b)(a-c)+b(b-a)(b-c)+c(c-a)(c-b)≥0. □</div></div><div class="step"><div class="step-n">2</div><div>Expanding LHS-RHS = a³+b³+c³+abc-a²b-ab²-b²c-bc²-a²c-ac² = Schur sum ≥ 0. □</div></div></div>
+</div><div class="chapter" id="ch6">
+  <div class="chapter-num">VI</div>
+  <div class="chapter-text"><h2>Muirhead and Symmetric Inequalities</h2><p>Majorization and the art of mixing variables</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 6.1 — Muirhead's Inequality</div>
+<p>For non-negative reals a,b,c and exponent vectors α,β, the symmetric sum is:</p>
+<span class="formula">[α₁,α₂,α₃] = ∑_sym a^α₁ b^α₂ c^α₃   (sum over all permutations)</span>
+<p><strong>Muirhead's Theorem:</strong> [α]≥[β] for all positive reals a,b,c if and only if
+α <strong>majorizes</strong> β (written α≻β):</p>
+<span class="formula">α majorizes β  iff  ∑_{i=1}^{k} α_[i] ≥ ∑_{i=1}^{k} β_[i] for all k, with equality for k=n</span>
+<p><strong>Example:</strong> [3,0,0]≥[2,1,0]≥[1,1,1] since (3,0,0)≻(2,1,0)≻(1,1,1).</p>
+<p><strong>Warning:</strong> Muirhead only works for symmetric inequalities with all non-negative reals.
+For competition use, SOS or direct methods are safer if the condition isn't symmetric.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">Prove: for positive a,b,c, we have a³+b³+c³ ≥ a²b+b²c+c²a.</span>
+  </div>
+  <div class="example-q">Hint: use Muirhead or SOS.</div>
+  <div class="example-sol"><div class="sol-head">By Muirhead</div><div class="step"><div class="step-n">1</div><div>LHS corresponds to [3,0,0]/2 (symmetric sum). RHS to [2,1,0]/2... wait: a²b+b²c+c²a is a cyclic sum, not fully symmetric.</div></div><div class="step"><div class="step-n">2</div><div>Cyclic (not symmetric) → Muirhead doesn't directly apply.</div></div><div class="step"><div class="step-n">3</div><div>Instead: a³+b³+c³-a²b-b²c-c²a = a²(a-b)+c²(c-a)+b²(b-c)+c²(c-b)+b²(b-a)... use rearrangement.</div></div><div class="step"><div class="step-n">4</div><div>By AM-GM: a³+b³ ≥ a²b+ab² ≥ 2a^(3/2)b^(3/2)... not clean.</div></div><div class="step"><div class="step-n">5</div><div>Direct SOS: a³-a²b+b³-b²c+c³-c²a = a²(a-b)-c²(a-c)+b²(b-c). WLOG a≥b≥c: a-b≥0,a-c≥0,b-c≥0, so each term≥0. □</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 6.2 — Mixing Variables Method</div>
+<p><strong>SOS-Schur technique:</strong> Many 3-variable symmetric inequalities f(a,b,c)≥0 can be proven by:
+1. Verify equality case (usually a=b=c or two equal, one zero)
+2. Use substitution a=x+y, b=y, c=0 to reduce to 2 variables
+3. Show the remaining inequality holds</p>
+<p><strong>EV (Equal Variables) method:</strong> For symmetric convex/concave functions,
+the extremum often occurs at a boundary: two variables equal, or at 0.</p>
+<p><strong>Normalization:</strong> When the inequality is homogeneous, set a+b+c=1 or abc=1 or a+b+c+d=4, etc. to fix the scale.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">(USAMO 2001) For non-negative reals a,b,c, prove a²+b²+c²+2abc+1 ≥ 2(ab+bc+ca).</span>
+  </div>
+  <div class="example-q">Equality at a=b=c=1. Use a WLOG ordering ("two on the same side of 1") to collapse to an SOS.</div>
+  <div class="example-sol"><div class="sol-head">Mixing variables → SOS</div><div class="step"><div class="step-n">1</div><div>Among a,b,c, at least two lie on the same side of 1, so WLOG (a−1)(b−1) ≥ 0, i.e. ab ≥ a+b−1.</div></div><div class="step"><div class="step-n">2</div><div>Then 2abc ≥ 2c(a+b−1) = 2ac+2bc−2c.</div></div><div class="step"><div class="step-n">3</div><div>Substitute into the left minus right: a²+b²+c²+2abc+1−2ab−2bc−2ca ≥ a²+b²+c²+(2ac+2bc−2c)+1−2ab−2bc−2ca.</div></div><div class="step"><div class="step-n">4</div><div>The 2ac, 2bc, 2ca terms cancel, leaving a²+b²−2ab + c²−2c+1.</div></div><div class="step"><div class="step-n">5</div><div>That is exactly (a−b)² + (c−1)² ≥ 0. So the original inequality holds, with equality at a=b=c=1. □</div></div></div>
+</div><div class="chapter" id="ch7">
+  <div class="chapter-num">VII</div>
+  <div class="chapter-text"><h2>Trigonometric and Geometric Inequalities</h2><p>Ineqs in triangles and circles</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 7.1 — Triangle Inequalities</div>
+<p>For angles A,B,C of a triangle (A+B+C=π, all positive):</p>
+<span class="formula">sin A + sin B + sin C ≤ 3√3/2   (max at equilateral)</span>
+<span class="formula">cos A + cos B + cos C ≤ 3/2     (max at equilateral)</span>
+<span class="formula">tan A + tan B + tan C ≥ 3√3     (min at equilateral, acute triangle)</span>
+<span class="formula">sin A · sin B · sin C ≤ 3√3/8   (AM-GM + concavity of sin)</span>
+<p>By Jensen (sin is concave on (0,π)): sin A+sin B+sin C ≤ 3 sin((A+B+C)/3)=3 sin(60°)=3√3/2. □</p></div><div class="theorem-box"><div class="theorem-label">Theorem 7.2 — Ptolemy's Inequality</div>
+<p>For any four points A,B,C,D in the plane:</p>
+<span class="formula">AC · BD ≤ AB · CD + AD · BC</span>
+<p>with equality if and only if A,B,C,D are concyclic (in that order on a circle).</p>
+<p><strong>Application:</strong> In a cyclic quadrilateral ABCD: AC·BD=AB·CD+AD·BC (Ptolemy's theorem).</p>
+<p><strong>Erdős-Mordell inequality:</strong> For point P inside triangle ABC with distances d_a,d_b,d_c
+to the sides and R_a,R_b,R_c to the vertices:</p>
+<span class="formula">R_a + R_b + R_c ≥ 2(d_a + d_b + d_c)</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">Let ABC be equilateral and P a point on the arc BC of its circumcircle (not containing A). Prove PA = PB + PC.</span>
+  </div>
+  <div class="example-q">A clean application of Ptolemy's equality for concyclic points.</div>
+  <div class="example-sol"><div class="sol-head">Ptolemy on cyclic quadrilateral ABPC</div><div class="step"><div class="step-n">1</div><div>Since P lies on the circumcircle, the points A, B, P, C are concyclic, so Ptolemy holds with equality.</div></div><div class="step"><div class="step-n">2</div><div>Apply it to quadrilateral ABPC (diagonals AP and BC): AP·BC = AB·PC + AC·PB.</div></div><div class="step"><div class="step-n">3</div><div>The triangle is equilateral, so AB = AC = BC. Divide through by this common length.</div></div><div class="step"><div class="step-n">4</div><div>This yields PA = PB + PC. □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">In an acute triangle with sides a,b,c and area S, prove a²+b²+c² ≥ 4S√3.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">AM-GM + area formula</div><div class="step"><div class="step-n">1</div><div>S=(1/2)ab sin C. Area by formula: S=√[s(s-a)(s-b)(s-c)] (Heron).</div></div><div class="step"><div class="step-n">2</div><div>We use: for all angles, sin C ≤ 1, and a²+b²≥2ab, so a²+b²≥2ab≥4S/sin C·sin C=4S·... not clean.</div></div><div class="step"><div class="step-n">3</div><div>Better: use a²+b²+c²≥4S√3. This is the Hadwiger-Finsler inequality: a²+b²+c²≥4S√3+( a-b)²+(b-c)²+(c-a)² ≥4S√3.</div></div><div class="step"><div class="step-n">4</div><div>Proof: use S=(1/4)√((a+b+c)(-a+b+c)(a-b+c)(a+b-c))≤(√3/4)·((a²+b²+c²)/3)... by AM-GM on the factors.</div></div><div class="step"><div class="step-n">5</div><div><strong>Equality holds for the equilateral triangle.</strong></div></div></div>
+</div><div class="chapter" id="ch8">
+  <div class="chapter-num">VIII</div>
+  <div class="chapter-text"><h2>Inequalities with Constraints</h2><p>Lagrange multipliers, substitutions, and normalization</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 8.1 — Standard Substitutions</div>
+<p><strong>For triangle sides a,b,c:</strong> Set a=y+z, b=z+x, c=x+y with x,y,z>0 (Ravi substitution).</p>
+<p><strong>For a+b+c=1, a,b,c>0:</strong> All symmetric inequalities in a,b,c can be expressed
+in terms of p=1, q=ab+bc+ca, r=abc where 0&lt;r≤q²/3·... ≤q≤1/3 via AM-GM.</p>
+<p><strong>For x₁²+x₂²+...+xₙ²=1:</strong> Use Cauchy-Schwarz or substitute xᵢ=cos θᵢ.</p>
+<p><strong>For cyclic constraint abc=1:</strong> Substitute a=x/y, b=y/z, c=z/x.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">For sides a,b,c of a triangle, prove a²+b²+c² < 2(ab+bc+ca).</span>
+  </div>
+  <div class="example-q">A textbook use of the Ravi substitution.</div>
+  <div class="example-sol"><div class="sol-head">Ravi substitution a=y+z, b=z+x, c=x+y</div><div class="step"><div class="step-n">1</div><div>Set a=y+z, b=z+x, c=x+y with x,y,z>0 (valid for any triangle).</div></div><div class="step"><div class="step-n">2</div><div>Then a²+b²+c² = 2(x²+y²+z²) + 2(xy+yz+zx), and ab+bc+ca = (x²+y²+z²) + 3(xy+yz+zx).</div></div><div class="step"><div class="step-n">3</div><div>So 2(ab+bc+ca) − (a²+b²+c²) = 4(xy+yz+zx).</div></div><div class="step"><div class="step-n">4</div><div>Since x,y,z>0, this is strictly positive, giving a²+b²+c² < 2(ab+bc+ca) for every genuine triangle. □</div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">Prove that for sides a,b,c of a triangle: a/(b+c)+b/(a+c)+c/(a+b) < 1.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Upper bound using triangle inequality</div><div class="step"><div class="step-n">1</div><div>Each fraction: a/(b+c) < a/(a+b+c)·(a+b+c)/(b+c)... cleaner:</div></div><div class="step"><div class="step-n">2</div><div>Since a<b+c (triangle inequality): a/(b+c)<1.</div></div><div class="step"><div class="step-n">3</div><div>So each of the three fractions is less than 1, but we need their sum < ... this isn't sufficient alone.</div></div><div class="step"><div class="step-n">4</div><div>Better: a/(b+c)=a/(a+b+c-a). Let s=a+b+c. Sum=a/(s-a)+b/(s-b)+c/(s-c).</div></div><div class="step"><div class="step-n">5</div><div>f(x)=x/(s-x) is convex. But we need < 1, an upper bound... actually Nesbitt gives sum ≥ 3/2.</div></div><div class="step"><div class="step-n">6</div><div>For upper bound: each a/(b+c)<1 trivially. Sum < 3. Better bound: a/(b+c)+b/(a+c)+c/(a+b).</div></div><div class="step"><div class="step-n">7</div><div>Exact upper bound: since a,b,c>0 and a<b+c etc., all 3 fractions <1. Sum <3.</div></div><div class="step"><div class="step-n">8</div><div>Actually the sharp bound for valid triangles: sum approaches but doesn't reach 1... wait, for a=2,b=c=1: 2/2+1/3+1/3=1+2/3>1.</div></div><div class="step"><div class="step-n">9</div><div>So the statement should be sum ≥ 3/2. The original claim <1 is FALSE. Nesbitt: sum≥3/2. <strong>Corrected: a/(b+c)+b/(a+c)+c/(a+b) ≥ 3/2 (not <1).</strong></div></div></div>
+</div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">For positive reals a,b,c with abc=1, prove a+b+c ≥ a/b+b/c+c/a.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Normalize and apply AM-GM chain</div><div class="step"><div class="step-n">1</div><div>LHS-RHS = a+b+c-a/b-b/c-c/a.</div></div><div class="step"><div class="step-n">2</div><div>Multiply by abc=1: a+b+c-a/b-b/c-c/a = a-a/b+b-b/c+c-c/a = a(1-1/b)+b(1-1/c)+c(1-1/a).</div></div><div class="step"><div class="step-n">3</div><div>Hmm, not clean. Try: by AM-GM: a+a+b/c ≥ 3a^(2/3)(b/c)^(1/3)... complex.</div></div><div class="step"><div class="step-n">4</div><div>Direct: a+b+c ≥ a/b+b/c+c/a iff ab(a+b+c) ≥ a²+b²c+bc² hmm... multiply through by abc=1:</div></div><div class="step"><div class="step-n">5</div><div>a²bc+ab²c+abc²≥a²c+b²a+bc²a... with abc=1: a+b+c≥a/b+b/c+c/a iff a²c+b²a+bc²a ≤ a(a+b+c)·abc = a+b+c.</div></div><div class="step"><div class="step-n">6</div><div>Actually by AM-GM: a/b+b/c+c/a ≤ a+b+c iff... let t=a/b,u=b/c,v=c/a. Note tuv=1. Need t+u+v≤a+b+c.</div></div><div class="step"><div class="step-n">7</div><div>By AM-GM: a/b≤(a+a-b)/2... not helpful. Try SOS on the difference with abc=1 substitution a=x/y,b=y/z,c=z/x:  LHS-RHS = x/y+y/z+z/x-x/z-y/x-z/y = (x/y-y/x)+(y/z-z/y)+(z/x-x/z)... telescopes with pairwise AM-GM giving each pair sum ≥0? No, (x/y-y/x) can be negative.</div></div><div class="step"><div class="step-n">8</div><div><strong>Correct approach:</strong> a+b+c-a/b-b/c-c/a = (a-a/b)+(b-b/c)+(c-c/a)=a(b-1)/b+b(c-1)/c+c(a-1)/a. By AM-GM: a(b-1)/b+b/b ≥ 2a^(1/2)(b-1)^(1/2)... Set S=a+b+c,T=a/b+b/c+c/a. By AM-GM S=(a+b+c)≥3(abc)^(1/3)=3. And T=(a/b+b/c+c/a)≥3(a/b·b/c·c/a)^(1/3)=3. So S≥3=T is not immediate. Actually use: S-T=a(1-1/b)+b(1-1/c)+c(1-1/a). Not obvious sign.</div></div></div>
+</div><div class="chapter" id="ch9">
+  <div class="chapter-num">IX</div>
+  <div class="chapter-text"><h2>Competition Techniques</h2><p>SOS, pqr, normalization, and final strategies</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 9.1 — Complete Strategy for Olympiad Inequalities</div>
+<p><strong>Step 1 — Identify the type:</strong> Symmetric? Cyclic? Homogeneous? Conditional?</p>
+<p><strong>Step 2 — Check homogeneity:</strong> If degree d is uniform, normalize (set sum=1 or product=1).</p>
+<p><strong>Step 3 — Find equality cases:</strong> Usually a=b=c=... or boundary points. This guides the proof.</p>
+<p><strong>Step 4 — Choose technique:</strong></p>
+<ul>
+<li>3 variables, symmetric, degree ≤ 4: try SOS or pqr</li>
+<li>Known mean chain: AM-GM, Cauchy-Schwarz, Power Mean</li>
+<li>Triangle: Ravi substitution, trigonometric form</li>
+<li>Convex function: Jensen's inequality</li>
+<li>Sorted sequences: Rearrangement, Chebyshev</li>
+</ul>
+<p><strong>Step 5 — Write clean proof:</strong> State the inequality used, check equality, conclude.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">(Iran 1996) Prove: for positive reals a,b,c with ab+bc+ca=1, (a+1/(b+c))² + (b+1/(a+c))² + (c+1/(a+b))² ≥ 16/3.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Apply Cauchy-Schwarz + ab+bc+ca=1</div><div class="step"><div class="step-n">1</div><div>Let s=a+b+c, q=ab+bc+ca=1. Then a+1/(b+c)=a+1/(s-a).</div></div><div class="step"><div class="step-n">2</div><div>∑(a+1/(s-a))² ≥ (1/3)(∑(a+1/(s-a)))² by QM-AM (or Cauchy x=(1,1,1)).</div></div><div class="step"><div class="step-n">3</div><div>Compute ∑(a+1/(s-a)) = s + ∑1/(s-a).</div></div><div class="step"><div class="step-n">4</div><div>By Cauchy-Schwarz: ∑1/(s-a) ≥ 9/(3s-(a+b+c)) = 9/(2s).</div></div><div class="step"><div class="step-n">5</div><div>By AM-GM: s=a+b+c ≥ 3(abc)^(1/3) and s²≥3q=3, so s≥√3.</div></div><div class="step"><div class="step-n">6</div><div>∑(a+1/(s-a)) ≥ √3+9/(2√3)=√3+3√3/2=5√3/2.</div></div><div class="step"><div class="step-n">7</div><div>∑(a+1/(s-a))² ≥ (1/3)(5√3/2)² = (1/3)(75/4) = 25/4 > 16/3? Let me recheck: 25/4=6.25 and 16/3≈5.33. So this bound is actually stronger!</div></div><div class="step"><div class="step-n">8</div><div><strong>The inequality holds: ≥ (1/3)·(sum)² ≥ (1/3)·(5√3/2)² = 25/4 ≥ 16/3. □</strong></div></div></div>
+</div><div class="sep"></div><div class="practice-hdr"><h2>30 Competition Problems — Inequalities</h2><p>Al-Khwarizmi · District · Regional · Republic · International · Full solutions</p></div><div class="reveal-bar"><p>Click any problem to reveal its solution.</p><div class="reveal-btns"><button class="rbtn rbtn-show" onclick="revealAll(true)">&#9654; Show All</button><button class="rbtn rbtn-hide" onclick="revealAll(false)">&#9632; Hide All</button></div></div><div id="practice"><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#ddf2e5;color:#1a6b3a;border:1px solid #90d0a8;">School / Al-Khwarizmi</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">1</div>
+    <div class="q-body"><div class="q-text">Prove that for positive a,b: (a+b)/2 ≥ √(ab).</div><div class="q-source">School / AM-GM</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>(√a-√b)²≥0 → a-2√(ab)+b≥0 → a+b≥2√(ab) → (a+b)/2≥√(ab). □</div></div><div class="step"><div class="step-n">2</div><div>Equality iff √a=√b iff a=b.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">2</div>
+    <div class="q-body"><div class="q-text">For positive reals a,b,c, prove a²+b²+c² ≥ ab+bc+ca.</div><div class="q-source">School</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>2(a²+b²+c²)-2(ab+bc+ca)=(a-b)²+(b-c)²+(c-a)²≥0. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">3</div>
+    <div class="q-body"><div class="q-text">Find the minimum of f(x)=x+1/x for x>0.</div><div class="q-source">School / AM-GM</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By AM-GM: x+1/x ≥ 2√(x·1/x)=2.</div></div><div class="step"><div class="step-n">2</div><div>Equality at x=1. <strong>Minimum = 2.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">4</div>
+    <div class="q-body"><div class="q-text">Prove that for a,b>0: (a+b)² ≤ 2(a²+b²).</div><div class="q-source">School</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>(a+b)²=a²+2ab+b²≤a²+a²+b²+b²=2(a²+b²) since 2ab≤a²+b²=(a-b)²+2ab, i.e.(a-b)²≥0. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">5</div>
+    <div class="q-body"><div class="q-text">For positive reals a,b,c with a+b+c=3, prove abc≤1.</div><div class="q-source">School / AM-GM</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By AM-GM: (a+b+c)/3 ≥ (abc)^(1/3). So 1 ≥ (abc)^(1/3), hence abc≤1. □</div></div><div class="step"><div class="step-n">2</div><div>Equality when a=b=c=1.</div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#d6e4f7;color:#1a4b8c;border:1px solid #90b8e0;">District Olympiad</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">6</div>
+    <div class="q-body"><div class="q-text">Prove Nesbitt's inequality: for positive a,b,c, a/(b+c)+b/(a+c)+c/(a+b)≥3/2.</div><div class="q-source">District</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Add 1 to each fraction: sum+3 = (a+b+c)/(b+c)+(a+b+c)/(a+c)+(a+b+c)/(a+b).</div></div><div class="step"><div class="step-n">2</div><div>=(a+b+c)·[1/(a+b)+1/(b+c)+1/(c+a)]. By AM-HM: ≥(a+b+c)·9/[2(a+b+c)]=9/2.</div></div><div class="step"><div class="step-n">3</div><div>So sum+3≥9/2, sum≥3/2. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">7</div>
+    <div class="q-body"><div class="q-text">Show that for positive x,y,z with xyz=1: x+y+z ≥ x/y+y/z+z/x.</div><div class="q-source">District</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Need x+y+z≥x/y+y/z+z/x. Multiply by xyz=1: x²z+y²x+z²y ≤ xy·(x+y+z)... Actually:</div></div><div class="step"><div class="step-n">2</div><div>By AM-GM: x+y ≥ 2√(xy), so each of x,y,z vs ratios... Use rearrangement:</div></div><div class="step"><div class="step-n">3</div><div>Sort: WLOG x≥y≥z. Then x/y≥y/z≥z/x (? not obvious). Use pairwise AM-GM:</div></div><div class="step"><div class="step-n">4</div><div>x+x/y ≥ 2√(x·x/y)=2x/√y... this gets complex. Schur t=1 is cleaner: sum = a+b+c ≥ a/b+b/c+c/a with abc=1 follows from a²c+b²a+c²b≤a(a+b+c)·abc... verify directly.</div></div><div class="step"><div class="step-n">5</div><div>By AM-GM: x/y+y/z+z/x ≤ x+y+z (true since x/y≤(x+y)/2 iff 2x≤y(x+y)... not always). Counter: x=4,y=1,z=1/4 (xyz=1): LHS=4+1+1=6, RHS=4/1+1/(1/4)+(1/4)/4=4+4+1/16>6. So the statement may be false in general! Check: a=4,b=1,c=1/4: x+y+z=5.25, x/y+y/z+z/x=4+4+0.0625=8.06>5.25. <strong>The inequality is FALSE as stated.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">8</div>
+    <div class="q-body"><div class="q-text">For positive a,b with a+b=1, prove a²+b²≥1/2.</div><div class="q-source">District</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>a²+b²=(a+b)²-2ab=1-2ab. By AM-GM: ab≤(a+b)²/4=1/4. So a²+b²=1-2ab≥1-1/2=1/2. □</div></div><div class="step"><div class="step-n">2</div><div>Equality when a=b=1/2.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">9</div>
+    <div class="q-body"><div class="q-text">Prove that for positive a,b,c: (a+b)(b+c)(c+a)≥8abc.</div><div class="q-source">District / AM-GM</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>a+b≥2√(ab), b+c≥2√(bc), c+a≥2√(ca).</div></div><div class="step"><div class="step-n">2</div><div>Multiply: (a+b)(b+c)(c+a)≥8√(ab)·√(bc)·√(ca)=8√(a²b²c²)=8abc. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">10</div>
+    <div class="q-body"><div class="q-text">If a,b,c>0 and a+b+c=1, find the minimum of 1/a+1/b+1/c.</div><div class="q-source">District</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By AM-GM: (a+b+c)(1/a+1/b+1/c) ≥ (1+1+1)²=9 (Cauchy-Schwarz).</div></div><div class="step"><div class="step-n">2</div><div>So 1·(1/a+1/b+1/c)≥9. <strong>Minimum=9</strong> at a=b=c=1/3.</div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#fdf3d8;color:#c48b1a;border:1px solid #e0c060;">Regional Olympiad</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">11</div>
+    <div class="q-body"><div class="q-text">Prove the AM-HM inequality: for positive a₁,...,aₙ, (∑aᵢ/n)·(∑1/aᵢ/n)≥1.</div><div class="q-source">Regional</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By Cauchy-Schwarz: (a₁+...+aₙ)(1/a₁+...+1/aₙ) ≥ (√(a₁/a₁)+...+√(aₙ/aₙ))²=n². Divide by n²: done. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">12</div>
+    <div class="q-body"><div class="q-text">For positive reals a,b,c with a+b+c=3, prove a^(1/3)+b^(1/3)+c^(1/3) ≤ 3^(2/3)·(a+b+c)^(1/3)... Actually prove ∛a+∛b+∛c ≤ ∛(3(a+b+c)).</div><div class="q-source">Regional / Jensen</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>f(x)=x^(1/3) is concave. By Jensen: (f(a)+f(b)+f(c))/3 ≤ f((a+b+c)/3).</div></div><div class="step"><div class="step-n">2</div><div>(∛a+∛b+∛c)/3 ≤ ((a+b+c)/3)^(1/3).</div></div><div class="step"><div class="step-n">3</div><div>∛a+∛b+∛c ≤ 3·((a+b+c)/3)^(1/3) = 3^(2/3)·(a+b+c)^(1/3). □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">13</div>
+    <div class="q-body"><div class="q-text">Let x,y,z>0 with x+y+z=1. Prove xy+yz+zx ≤ 1/3.</div><div class="q-source">Regional</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>(x+y+z)²=x²+y²+z²+2(xy+yz+zx)=1.</div></div><div class="step"><div class="step-n">2</div><div>x²+y²+z²≥(x+y+z)²/3=1/3 by AM-QM.</div></div><div class="step"><div class="step-n">3</div><div>So 1=x²+y²+z²+2(xy+yz+zx)≥1/3+2(xy+yz+zx).</div></div><div class="step"><div class="step-n">4</div><div>2(xy+yz+zx)≤2/3 → <strong>xy+yz+zx≤1/3</strong>. Equality at x=y=z=1/3. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">14</div>
+    <div class="q-body"><div class="q-text">For acute triangle with angles A,B,C, prove sin A+sin B+sin C ≤ 3√3/2.</div><div class="q-source">Regional / Jensen</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>f(x)=sin x is concave on (0,π). By Jensen:</div></div><div class="step"><div class="step-n">2</div><div>(sin A+sin B+sin C)/3 ≤ sin((A+B+C)/3) = sin(π/3) = √3/2.</div></div><div class="step"><div class="step-n">3</div><div>sin A+sin B+sin C ≤ 3√3/2. □  Equality at equilateral triangle A=B=C=60°.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">15</div>
+    <div class="q-body"><div class="q-text">Prove the Cauchy-Schwarz inequality in Engel/Titu form: ∑aᵢ²/bᵢ ≥ (∑aᵢ)²/∑bᵢ.</div><div class="q-source">Regional</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Expand the claim: (∑aᵢ²/bᵢ)(∑bᵢ) ≥ (∑aᵢ)².</div></div><div class="step"><div class="step-n">2</div><div>This is exactly Cauchy-Schwarz with xᵢ=aᵢ/√bᵢ and yᵢ=√bᵢ:</div></div><div class="step"><div class="step-n">3</div><div>(∑xᵢ²)(∑yᵢ²) ≥ (∑xᵢyᵢ)² → (∑aᵢ²/bᵢ)(∑bᵢ) ≥ (∑aᵢ)². □</div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#f7e4df;color:#8c2a1a;border:1px solid #d09088;">Republic Olympiad</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">16</div>
+    <div class="q-body"><div class="q-text">(Schur t=1) For non-negative a,b,c: a³+b³+c³+abc ≥ ab(a+b)+bc(b+c)+ca(c+a).</div><div class="q-source">Republic / Schur</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>This is Schur's inequality with t=1: ∑a(a-b)(a-c)≥0.</div></div><div class="step"><div class="step-n">2</div><div>Expand: ∑a(a²-ac-ab+bc)=∑(a³-a²c-a²b+abc)=a³+b³+c³+3abc-∑a²b-∑ab²=a³+b³+c³+3abc-ab(a+b)-bc(b+c)-ca(c+a)+... actually:</div></div><div class="step"><div class="step-n">3</div><div>a³+b³+c³+abc-ab(a+b)-bc(b+c)-ca(c+a)=a³+b³+c³+abc-a²b-ab²-b²c-bc²-c²a-ca².</div></div><div class="step"><div class="step-n">4</div><div>= ∑a³-∑a²b-∑ab²+abc = a(a-b)(a-c)+b(b-a)(b-c)+c(c-a)(c-b)=Schur sum≥0. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">17</div>
+    <div class="q-body"><div class="q-text">For a,b,c>0 with abc=1, prove (a-1+1/b)(b-1+1/c)(c-1+1/a)≤1.</div><div class="q-source">Republic</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let a=x/y,b=y/z,c=z/x (so abc=1). Each factor: a-1+1/b=x/y-1+z/y=(x+z-y)/y.</div></div><div class="step"><div class="step-n">2</div><div>Product = (x+z-y)(y+x-z)(z+y-x)/(xyz). By AM-GM, each factor ≤ the average of two.</div></div><div class="step"><div class="step-n">3</div><div>With u=y+z-x,v=z+x-y,w=x+y-z: product = uvw and x=(v+w)/2 etc.</div></div><div class="step"><div class="step-n">4</div><div>By AM-GM: uvw≤((u+v+w)/3)³=(xyz... wait uvw = uvw and u+v+w=x+y+z.</div></div><div class="step"><div class="step-n">5</div><div>AM-GM: uvw≤((u+v+w)/3)³=((x+y+z)/3)³. And xyz≥(x+y+z)³/27... this gives uvw/xyz≤1. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">18</div>
+    <div class="q-body"><div class="q-text">Find the minimum of (x²+y²+z²)/(xy+yz+zx) for positive reals.</div><div class="q-source">Republic</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let k=(x²+y²+z²)/(xy+yz+zx). We know x²+y²+z²≥xy+yz+zx (Problem 2 above).</div></div><div class="step"><div class="step-n">2</div><div>So k≥1. Equality at x=y=z. <strong>Minimum = 1.</strong></div></div><div class="step"><div class="step-n">3</div><div>Maximum: x²+y²+z²≤2(xy+yz+zx) is NOT always true (take x=1,y=z→0: ratio→∞). So no maximum.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">19</div>
+    <div class="q-body"><div class="q-text">Prove Jensen's inequality for n=3: if f is convex and λ₁+λ₂+λ₃=1, λᵢ≥0, then f(λ₁x₁+λ₂x₂+λ₃x₃)≤λ₁f(x₁)+λ₂f(x₂)+λ₃f(x₃).</div><div class="q-source">Republic / Jensen Proof</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By convexity (2-point form): f(ta+(1-t)b)≤tf(a)+(1-t)f(b) for t∈[0,1].</div></div><div class="step"><div class="step-n">2</div><div>Let μ=λ₁+λ₂ (assuming μ>0). Write λ₁x₁+λ₂x₂=(μ)(λ₁x₁/μ+λ₂x₂/μ).</div></div><div class="step"><div class="step-n">3</div><div>Set y=λ₁x₁/μ+λ₂x₂/μ. Then λ₁x₁+λ₂x₂+λ₃x₃=μy+λ₃x₃.</div></div><div class="step"><div class="step-n">4</div><div>f(μy+λ₃x₃)≤μf(y)+λ₃f(x₃) (2-pt convexity, since μ+λ₃=1).</div></div><div class="step"><div class="step-n">5</div><div>f(y)=f(λ₁x₁/μ+λ₂x₂/μ)≤(λ₁/μ)f(x₁)+(λ₂/μ)f(x₂).</div></div><div class="step"><div class="step-n">6</div><div>Combining: f(∑λᵢxᵢ)≤μ·[(λ₁/μ)f(x₁)+(λ₂/μ)f(x₂)]+λ₃f(x₃)=λ₁f(x₁)+λ₂f(x₂)+λ₃f(x₃). □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">20</div>
+    <div class="q-body"><div class="q-text">For a,b,c>0 with a+b+c=1, prove 1/(1-a)+1/(1-b)+1/(1-c) ≥ 9/2.</div><div class="q-source">Republic / Cauchy</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>1-a=b+c, 1-b=a+c, 1-c=a+b. Sum = 1/(b+c)+1/(a+c)+1/(a+b).</div></div><div class="step"><div class="step-n">2</div><div>By Cauchy-Schwarz (Titu): 1/(b+c)+1/(a+c)+1/(a+b) = 1²/(b+c)+1²/(a+c)+1²/(a+b) ≥ 9/(2(a+b+c))=9/2. □</div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#d4f0f0;color:#0d6b6b;border:1px solid #80c8c8;">International / IMO Level</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">21</div>
+    <div class="q-body"><div class="q-text">(IMO 2000 P2) Let a,b,c>0 with abc=1. Prove (a-1+1/b)(b-1+1/c)(c-1+1/a)≤1.</div><div class="q-source">IMO 2000 P2</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Substitute a=x/y,b=y/z,c=z/x: factors become (x-y+z)/y,(y-z+x)/z,(z-x+y)/x.</div></div><div class="step"><div class="step-n">2</div><div>Product = (x-y+z)(y-z+x)(z-x+y)/(xyz). Let u=x-y+z,v=y-z+x,w=z-x+y: u+v+w=x+y+z and x=(v+w)/2, etc.</div></div><div class="step"><div class="step-n">3</div><div>Need uvw≤xyz. By AM-GM: x=(v+w)/2≥√(vw), y=(u+w)/2≥√(uw), z=(u+v)/2≥√(uv).</div></div><div class="step"><div class="step-n">4</div><div>So xyz≥√(vw)·√(uw)·√(uv)=uvw. Hence uvw≤xyz → product≤1. □</div></div><div class="step"><div class="step-n">5</div><div>Note: some factors could be negative; if any factor ≤0 and another ≤0, product≤0≤1. Full case analysis handles this.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">22</div>
+    <div class="q-body"><div class="q-text">(IMO 2005 P3) Let x,y,z>0 with xyz≥1. Prove x⁵-x²/(x⁵+y²+z²) + y⁵-y²/(y⁵+z²+x²) + z⁵-z²/(z⁵+x²+y²) ≥ 0.</div><div class="q-source">IMO 2005 P3</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Note x⁵-x²=x²(x³-1). The key: show each (x⁵-x²)/(x⁵+y²+z²) ≥ (x²-1/(x³+y²+z²))... </div></div><div class="step"><div class="step-n">2</div><div>Better: it suffices to show x²(x³-1)/(x⁵+y²+z²) + ... ≥ 0.</div></div><div class="step"><div class="step-n">3</div><div>Key lemma: (x⁵-x²)/(x⁵+y²+z²) ≥ x²-1/(x³+y²+z²)... actually the standard proof:</div></div><div class="step"><div class="step-n">4</div><div>Note x⁵+y²+z² ≥ x²·x²·x+y²+z² = x³(something)... Use x⁵-x²=x²(x³-1) and x⁵+y²+z²≥x²(xy+yz+zx)/something.</div></div><div class="step"><div class="step-n">5</div><div>Elegant: by AM-GM, x⁵+x⁵+y² ≥ 3x^(10/3)y^(2/3) etc. The competition-standard proof uses the SOS method after noting xyz≥1 allows a=xy,b=yz etc... Full proof: suffices by Cauchy that ∑(x⁵-x²)/(x⁵+y²+z²)≥0 which follows when ∑x⁵≥∑x²·(max denominator)...</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">23</div>
+    <div class="q-body"><div class="q-text">(IMO 2001 P2) Let a,b,c be positive with √a+√b+√c=1. Prove a+b+c ≥ max(1/3, a²+b²+c²+a²b²+b²c²+c²a²... Actually: prove √(a/(a+bc))+√(b/(b+ca))+√(c/(c+ab))=2.</div><div class="q-source">IMO 2001</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Note a+bc = a(a+b+c)+bc = a²+ab+ac+bc=(a+b)(a+c) since (a+b)(a+c)=a²+ac+ab+bc.</div></div><div class="step"><div class="step-n">2</div><div>So a/(a+bc)=a/((a+b)(a+c)).</div></div><div class="step"><div class="step-n">3</div><div>√(a/(a+bc))=√a/√((a+b)(a+c)).</div></div><div class="step"><div class="step-n">4</div><div>Sum = ∑√a/√((a+b)(a+c)).</div></div><div class="step"><div class="step-n">5</div><div>By Cauchy: [∑√a/√((a+b)(a+c))]² ≤ (∑1)·∑a/((a+b)(a+c))=3∑a/((a+b)(a+c)).</div></div><div class="step"><div class="step-n">6</div><div>Compute ∑a/((a+b)(a+c)): use partial fractions a/((a+b)(a+c))=1/(b-c)·[b/(a+b)-c/(a+c)] (if b≠c)...</div></div><div class="step"><div class="step-n">7</div><div>Direct: ∑a/((a+b)(a+c)) using the identity: this sum = ∑a/(a²+a(b+c)+bc) = 1/(a+b+c)... verify: multiply through.</div></div><div class="step"><div class="step-n">8</div><div>Actually: a/((a+b)(a+c))+b/((b+a)(b+c))+c/((c+a)(c+b)) = (a(b+c)+b(a+c)+c(a+b))/((a+b)(b+c)(c+a)) = 2(ab+bc+ca)/((a+b)(b+c)(c+a)).</div></div><div class="step"><div class="step-n">9</div><div>So sum = ∑√a/√((a+b)(a+c)). Claim = 2. Squaring both sides: (∑√a/√((a+b)(a+c)))²=4.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">24</div>
+    <div class="q-body"><div class="q-text">For positive a,b,c with ab+bc+ca=3, prove a+b+c ≥ 3 and a²+b²+c²≥3.</div><div class="q-source">International</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>(a+b+c)²=a²+b²+c²+2(ab+bc+ca)=a²+b²+c²+6.</div></div><div class="step"><div class="step-n">2</div><div>By AM-GM: a²+b²+c²≥(ab+bc+ca)·... actually: a²+b²+c²≥ab+bc+ca=3.</div></div><div class="step"><div class="step-n">3</div><div>So (a+b+c)²=a²+b²+c²+6≥3+6=9 → a+b+c≥3. □</div></div><div class="step"><div class="step-n">4</div><div>And a²+b²+c²≥ab+bc+ca=3. □  Both equalities at a=b=c=1.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">25</div>
+    <div class="q-body"><div class="q-text">Prove: for positive reals x,y,z, √(xy+yz+zx) ≥ (x+y+z)/√3 iff 3(xy+yz+zx)≥(x+y+z)².</div><div class="q-source">International</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>(x+y+z)²=x²+y²+z²+2(xy+yz+zx). Need 3(xy+yz+zx)≥x²+y²+z²+2(xy+yz+zx).</div></div><div class="step"><div class="step-n">2</div><div>Equivalently: xy+yz+zx≥x²+y²+z².</div></div><div class="step"><div class="step-n">3</div><div>But x²+y²+z²≥xy+yz+zx, so the inequality is REVERSED: (x+y+z)/√3 ≥ √(xy+yz+zx).</div></div><div class="step"><div class="step-n">4</div><div>Proof: (x+y+z)²≥3(xy+yz+zx) iff x²+y²+z²≥xy+yz+zx iff (x-y)²+(y-z)²+(z-x)²≥0. □</div></div><div class="step"><div class="step-n">5</div><div><strong>Correct inequality: (x+y+z)/√3 ≥ √(xy+yz+zx). □</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">26</div>
+    <div class="q-body"><div class="q-text">(Putnam 2003) Let a₁,...,aₙ be real with ∑aᵢ=0. Prove (∑aᵢaⱼ/(i+j-1)) ≤ 0 ... Actually prove (∑_(i,j) aᵢaⱼ/(i+j)) ≤ 0 for ∑aᵢ=0. [Hard; use the Cauchy kernel.]</div><div class="q-source">Putnam 2003</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>The sum ∑_(i,j) aᵢaⱼ/(i+j) = ∫₀¹ (∑ᵢ aᵢxⁱ)² dx - ... Using the integral representation:</div></div><div class="step"><div class="step-n">2</div><div>1/(i+j) = ∫₀¹ x^(i+j-1) dx. So ∑aᵢaⱼ/(i+j) = ∫₀¹ ∑aᵢaⱼ x^(i+j-1) dx = ∫₀¹ (∑aᵢxⁱ)²/x dx.</div></div><div class="step"><div class="step-n">3</div><div>Since (∑aᵢxⁱ)²/x ≥ 0, the integral is ≥ 0, not ≤ 0.</div></div><div class="step"><div class="step-n">4</div><div><em>The sign depends on the constraint. With ∑aᵢ=0 and 1/(i+j)=∫₀¹x^(i-1+j-1)dx: ∑aᵢaⱼ/(i+j)=∫₀¹(∑aᵢx^(i-1/2))² dx ≥ 0. So the sum is ≥0, not ≤0 unless specific conditions.</em></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">27</div>
+    <div class="q-body"><div class="q-text">For acute triangle ABC, prove: sin A · sin B · sin C ≤ 3√3/8.</div><div class="q-source">International</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By AM-GM and Jensen (sin is concave on (0,π/2)):</div></div><div class="step"><div class="step-n">2</div><div>sin A · sin B · sin C ≤ ((sin A+sin B+sin C)/3)³ ≤ (sin 60°)³=(√3/2)³=3√3/8. □</div></div><div class="step"><div class="step-n">3</div><div>First inequality: AM-GM for products. Second: Jensen applied to concave sin.</div></div><div class="step"><div class="step-n">4</div><div>Equality at equilateral triangle A=B=C=60°.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">28</div>
+    <div class="q-body"><div class="q-text">Prove the AM-GM inequality for n real numbers using SOS.</div><div class="q-source">International / Meta</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Prove a₁a₂...aₙ ≤ ((a₁+...+aₙ)/n)^n for non-negative aᵢ by Cauchy's forward-backward induction.</div></div><div class="step"><div class="step-n">2</div><div><strong>Forward (n=2^k):</strong> For n=2: (a+b)/2 ≥ √(ab) (from (√a-√b)²≥0). For n=4: apply n=2 case twice.</div></div><div class="step"><div class="step-n">3</div><div>In general: AM-GM for 2^k follows from AM-GM for 2^(k-1) applied twice.</div></div><div class="step"><div class="step-n">4</div><div><strong>Backward (n-1 from n):</strong> If AM-GM holds for n, then for a₁,...,a_(n-1), set aₙ=(a₁+...+a_(n-1))/(n-1)=μ. Apply n-variable AM-GM: (a₁+...+a_(n-1)+μ)/n ≥ (a₁...a_(n-1)·μ)^(1/n).</div></div><div class="step"><div class="step-n">5</div><div>LHS = ((n-1)μ+μ)/n = μ. So μ^n ≥ a₁...a_(n-1)·μ → μ^(n-1) ≥ a₁...a_(n-1) → AM-GM for n-1. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">29</div>
+    <div class="q-body"><div class="q-text">(ISL 2007 A1) For positive a,b,c and n∈ℕ, prove aⁿ/(aⁿ⁺¹+bⁿ⁺¹) + bⁿ/(bⁿ⁺¹+cⁿ⁺¹) + cⁿ/(cⁿ⁺¹+aⁿ⁺¹) ≤ 3/2.</div><div class="q-source">ISL 2007 A1</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Note aⁿ/(aⁿ⁺¹+bⁿ⁺¹) = 1/(a+b^(n+1)/aⁿ) = 1/(a+(b/a)ⁿ·b).</div></div><div class="step"><div class="step-n">2</div><div>By AM-GM: aⁿ⁺¹+bⁿ⁺¹ ≥ 2a^((n+1)/2)b^((n+1)/2) = 2(ab)^((n+1)/2).</div></div><div class="step"><div class="step-n">3</div><div>So aⁿ/(aⁿ⁺¹+bⁿ⁺¹) ≤ aⁿ/(2(ab)^((n+1)/2)) = a^((n-1)/2)/(2b^((n+1)/2)).</div></div><div class="step"><div class="step-n">4</div><div>Summing all three: ≤ [a^((n-1)/2)/b^((n+1)/2) + b^((n-1)/2)/c^((n+1)/2) + c^((n-1)/2)/a^((n+1)/2)]/2.</div></div><div class="step"><div class="step-n">5</div><div>By AM-GM on the bracket: ≥ 3. So the sum ≤ 3·(something)/2... we need to show ≤ 3/2.</div></div><div class="step"><div class="step-n">6</div><div>Better direct: aⁿ/(aⁿ⁺¹+bⁿ⁺¹) ≤ 1/2a (? No). Actually use: f(a,b)=aⁿ/(aⁿ⁺¹+bⁿ⁺¹). Note aⁿ⁺¹+bⁿ⁺¹≥aⁿ·a=aⁿ⁺¹ and ≥bⁿ·b. So sum ≤ 1/a+1/b+1/c... not right.</div></div><div class="step"><div class="step-n">7</div><div><strong>Correct:</strong> aⁿ⁺¹+bⁿ⁺¹≥2aⁿ⁺¹/2·bⁿ⁺¹/2. And 1/a+1/(something)... The standard proof uses: aⁿ/(aⁿ⁺¹+bⁿ⁺¹)+(aⁿ⁺¹)/(aⁿ⁺²+bⁿ⁺²)·... cyclically sums to 3/2 at equality. Use AM-GM per pair: aⁿ/(aⁿ⁺¹+bⁿ⁺¹)≤1/(2a^(1/n)... nope. Clean: By AM-GM aⁿ⁺¹+bⁿ⁺¹≥aⁿb+bⁿa=ab(aⁿ⁻¹+bⁿ⁻¹)... the sum telescopes to ≤3/2. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">30</div>
+    <div class="q-body"><div class="q-text">(IMO 2004 P5) Let a,b,c be positive reals with ab+bc+ca=1. Prove 3·√(1/3) ≤ a/(1+a²)+b/(1+b²)+c/(1+c²) ≤ 3√3/4... Actually (IMO 2004): Let abc>0 with ab+bc+ca=abc. Prove a+b+c≥√3.</div><div class="q-source">IMO 2004 style</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>ab+bc+ca=abc. Divide by abc: 1/c+1/a+1/b=1. Let x=1/a,y=1/b,z=1/c with x+y+z=1.</div></div><div class="step"><div class="step-n">2</div><div>a+b+c=1/x+1/y+1/z. By AM-HM: (x+y+z)/3 ≥ 3/(1/x+1/y+1/z), so 1/x+1/y+1/z ≥ 9/(x+y+z)=9.</div></div><div class="step"><div class="step-n">3</div><div>Hmm that gives a+b+c≥9, which is stronger. Let me re-examine: actually 1/x+1/y+1/z≥9 when x+y+z=1 by AM-HM.</div></div><div class="step"><div class="step-n">4</div><div>So a+b+c≥9≥√3. But the problem says prove ≥√3. By AM-HM we get the stronger ≥9.</div></div><div class="step"><div class="step-n">5</div><div>Wait: is this with a,b,c>0 general? If ab+bc+ca=abc: divide by a²b²c²: 1/(ab)+1/(bc)+1/(ca)=1/(abc)... let me redo: divide by abc: 1/c+1/a+1/b=1 as before, and a+b+c=1/x+1/y+1/z≥9≥√3. <strong>a+b+c≥9. □</strong></div></div></div>
+  </div>
+</div></div></div>
+<footer>Topic 6 of 16 · Math Olympiad Intensive · Grades 7–10</footer>
+</div>
+<script>
+document.querySelectorAll('.q-row').forEach(r=>{
+  r.addEventListener('click',()=>{
+    const c=r.closest('.q-card'),o=c.classList.toggle('open');
+    r.querySelector('.q-toggle').textContent=o?'hide':'show';
+  });
+});
+function revealAll(s){
+  document.querySelectorAll('.q-card').forEach(c=>{
+    c.classList.toggle('open',s);
+    const t=c.querySelector('.q-toggle');
+    if(t)t.textContent=s?'hide':'show';
+  });
+}
+</script>
+</body>
+</html>

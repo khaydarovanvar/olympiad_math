@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resource library — Olympiad Mathematics, Grades 7–8</title>
+<meta name="description" content="320 curated olympiad mathematics resources for Grades 7–8: theory, video, PDFs, online practice and Uzbek-language material, sorted into 16 topics.">
+<meta name="theme-color" content="#0F1B2A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@600&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+  .no-js [data-reveal]{opacity:1;transform:none}
+  .no-js .preloader{display:none}
+  .lib-head{padding:calc(var(--nav-h) + 3rem) 0 2rem}
+  .lib-count{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);margin-bottom:1.4rem}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<header class="nav stuck">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Olympiad Mathematics — home">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+        <path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/>
+      </svg>
+      <span><b>MathLab</b><small>Olympiad · Grades 7–8</small></span>
+    </a>
+    <div class="nav-mid" aria-hidden="true"><span class="hand">From the first problem to the podium</span></div>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="index.html#topics">Topics</a>
+        <a href="library.html" class="on">Library</a>
+        <a href="index.html#path">Study path</a>
+      </nav>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span class="burger-label">Menu</span>
+        <span class="burger-lines"><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-overlay" aria-hidden="true">
+  <div class="menu-inner">
+    <nav class="menu-list" aria-label="Menu">
+      <div class="m-item"><a class="m-link" href="index.html" style="--i:0"><span class="m-num">01</span>Home</a></div>
+      <div class="m-item"><a class="m-link" href="index.html#branches" style="--i:1"><span class="m-num">02</span>Four branches</a></div>
+      <div class="m-item"><a class="m-link" href="index.html#topics" style="--i:2"><span class="m-num">03</span>All 16 topics</a></div>
+      <div class="m-item"><a class="m-link" href="library.html" style="--i:3"><span class="m-num">04</span>Resource library</a></div>
+      <div class="m-item"><a class="m-link" href="index.html#path" style="--i:4"><span class="m-num">05</span>Study path</a></div>
+      <div class="m-item"><a class="m-link" href="index.html#guides" style="--i:5"><span class="m-num">06</span>Theory guides</a></div>
+    </nav>
+    <div class="menu-meta">
+      <div><h5>Level</h5><p>Grades 7–8<br>Uzbekistan olympiad rounds</p></div>
+      <div><h5>Covers</h5><p>Number theory · Algebra<br>Geometry · Combinatorics</p></div>
+      <div><h5>Inside</h5><p>16 topics<br>320 curated resources</p></div>
+      <div class="menu-slogan hand">From the first problem to the podium</div>
+    </div>
+  </div>
+</div>
+
+<section class="lib-head">
+  <div class="container">
+    <span class="eyebrow">Resource library</span>
+    <h1 class="display-lg" data-split>Everything worth reading, in one place</h1>
+    <p class="lead" style="margin-top:1.1rem" data-reveal>Three hundred and twenty resources, checked and
+    sorted. Pick a topic on the left, then filter by the kind of help you need.</p>
+  </div>
+</section>
+
+<div class="marquee marquee--flat marquee--slow" aria-hidden="true">
+  <div class="marquee-track"><span>
+    Theory <em>✦</em> Video <em>✦</em> PDF <em>✦</em> Online practice <em>✦</em> Uzbek-language <em>✦</em>
+    Past papers <em>✦</em> Books <em>✦</em> Wikis <em>✦</em>
+  </span></div>
+</div>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="lib-layout">
+      <aside class="lib-side" id="libSide" aria-label="Topics"></aside>
+      <main>
+        <div id="libTip"></div>
+        <div class="filters" id="libFilters"></div>
+        <p class="lib-count" id="libCount"></p>
+        <div class="res-grid" id="libGrid"></div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+            <path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/>
+          </svg>
+          <span><b>MathLab</b><small>Olympiad · Grades 7–8</small></span>
+        </a>
+        <p style="margin-top:1rem;max-width:34ch;font-size:.9rem">A curated route through olympiad
+        mathematics for Grades 7–8, built around the Uzbekistan rounds.</p>
+      </div>
+      <div><h5>Branches</h5><ul>
+        <li><a href="#nt">Number theory</a></li>
+        <li><a href="#alg">Algebra</a></li>
+        <li><a href="#geo">Geometry</a></li>
+        <li><a href="#comb">Combinatorics</a></li>
+      </ul></div>
+      <div><h5>Guides</h5><ul>
+        <li><a href="theory/topic-01.html">Divisibility</a></li>
+        <li><a href="theory/topic-06.html">Inequalities</a></li>
+        <li><a href="theory/topic-07.html">Geometry</a></li>
+      </ul></div>
+      <div><h5>Site</h5><ul>
+        <li><a href="index.html#topics">All topics</a></li>
+        <li><a href="library.html">Resource library</a></li>
+        <li><a href="index.html#path">Study path</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bot">
+      <span>Grades 7–8 · Uzbekistan olympiad preparation</span>
+      <span class="hand" style="font-size:1.15rem;color:var(--gold)">From the first problem to the podium</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data/topics.js"></script>
+<script>
+/* The library is one page with two axes: which topic, and which kind of
+   resource. Both live in the URL so a filtered view can be linked to. */
+(function () {
+  var KINDS = [
+    { id: 'all', label: 'Everything' },
+    { id: 'theory', label: 'Theory' },
+    { id: 'video', label: 'Video' },
+    { id: 'pdf', label: 'PDF' },
+    { id: 'wiki', label: 'Wiki' },
+    { id: 'site', label: 'Online' },
+    { id: 'book', label: 'Books' },
+    { id: 'uz', label: 'Uzbek' },
+    { id: 'free', label: 'Free only' }
+  ];
+  var GROUPS = [
+    ['nt', 'Number Theory'], ['alg', 'Algebra'],
+    ['geo', 'Geometry'], ['comb', 'Combinatorics'], ['mix', 'Mixed review']
+  ];
+
+  var side = document.getElementById('libSide');
+  var grid = document.getElementById('libGrid');
+  var tipBox = document.getElementById('libTip');
+  var filterBar = document.getElementById('libFilters');
+  var countEl = document.getElementById('libCount');
+
+  var current = 1, kind = 'all';
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  /* ---- sidebar ---- */
+  side.innerHTML = GROUPS.map(function (g) {
+    var mine = TOPICS.filter(function (t) { return t.catKey === g[0]; });
+    if (!mine.length) return '';
+    return '<div class="side-group" id="' + g[0] + '">' +
+      '<p class="side-label">' + g[1] + '</p>' +
+      mine.map(function (t) {
+        return '<a class="side-item" data-cat="' + t.catKey + '" data-t="' + t.n + '" href="#t' + t.n + '">' +
+          '<span class="sn">' + t.n + '</span><span>' + esc(t.title) + '</span></a>';
+      }).join('') + '</div>';
+  }).join('');
+
+  /* ---- filters ---- */
+  filterBar.innerHTML = KINDS.map(function (k) {
+    return '<button class="fbtn" data-k="' + k.id + '">' + k.label + '</button>';
+  }).join('');
+
+  /* ---- render ---- */
+  function cards(t) {
+    var all = [];
+    t.groups.forEach(function (g) {
+      g.cards.forEach(function (c) { all.push(c); });
+    });
+    if (kind === 'free') return all.filter(function (c) { return c.price !== 'paid'; });
+    if (kind !== 'all') return all.filter(function (c) { return c.kind === kind; });
+    return all;
+  }
+
+  function render() {
+    var t = TOPICS.filter(function (x) { return x.n === current; })[0] || TOPICS[0];
+    document.body.setAttribute('data-cat', t.catKey);
+
+    tipBox.innerHTML = '<div class="tip-box" data-cat="' + t.catKey + '">' +
+      '<b>Topic ' + t.n + ' · ' + esc(t.title) + '.</b> ' + esc(t.tip) + '</div>';
+
+    var list = cards(t);
+    countEl.textContent = list.length + ' of ' +
+      t.groups.reduce(function (a, g) { return a + g.cards.length; }, 0) +
+      ' resources · ' + t.cat;
+
+    grid.innerHTML = list.length ? list.map(function (c) {
+      var tag = c.price === 'paid' ? '<span class="tag-paid">PAID</span>'
+              : c.price === 'free' ? '<span class="tag-free">FREE</span>' : '';
+      return '<article class="res' + (c.star ? ' star' : '') + '" data-cat="' + t.catKey + '">' +
+        '<div class="res-top"><span class="res-kind">' + esc(c.label) + '</span>' + tag + '</div>' +
+        '<h4>' + esc(c.title) + '</h4>' +
+        '<p>' + esc(c.desc) + '</p>' +
+        '<a class="res-go" href="' + esc(c.url) + '" target="_blank" rel="noopener">Open resource ↗</a>' +
+        '</article>';
+    }).join('') : '<p class="empty">Nothing of that kind in this topic — try “Everything”.</p>';
+
+    Array.prototype.forEach.call(side.querySelectorAll('.side-item'), function (a) {
+      a.classList.toggle('on', +a.getAttribute('data-t') === current);
+    });
+    Array.prototype.forEach.call(filterBar.children, function (b) {
+      b.classList.toggle('on', b.getAttribute('data-k') === kind);
+    });
+  }
+
+  side.addEventListener('click', function (e) {
+    var a = e.target.closest('.side-item');
+    if (!a) return;
+    e.preventDefault();
+    current = +a.getAttribute('data-t');
+    history.replaceState(null, '', '#t' + current);
+    render();
+  });
+
+  filterBar.addEventListener('click', function (e) {
+    var b = e.target.closest('.fbtn');
+    if (!b) return;
+    kind = b.getAttribute('data-k');
+    render();
+  });
+
+  /* open on the topic or the branch named in the hash */
+  var h = (location.hash || '').replace('#', '');
+  var m = /^t(\d+)$/.exec(h);
+  if (m) current = +m[1];
+  else if (h) {
+    var first = TOPICS.filter(function (t) { return t.catKey === h; })[0];
+    if (first) current = first.n;
+  }
+  render();
+})();
+</script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

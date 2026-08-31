@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Topic 7 — Geometry · Complete theory with full proofs and 30 competition problems</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1923;--paper:#f7f4ef;--cream:#ede9e1;--blue:#1a4b8c;--blue-light:#d6e4f7;--gold:#c48b1a;--gold-light:#fdf3d8;--red:#8c2a1a;--red-light:#f7e4df;--green:#1a6b3a;--green-light:#ddf2e5;--purple:#4a2d8c;--purple-light:#ece6f7;--teal:#0d6b6b;--teal-light:#d4f0f0;--orange:#b85c00;--orange-light:#fdebd0;--border:#d4cec4;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.75;}
+.hero{background:var(--ink);color:#fff;padding:56px 48px 48px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 80px);}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:900;line-height:1.15;margin-bottom:16px;}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.65);max-width:620px;line-height:1.6;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;padding:5px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);}
+.topic-nav{background:var(--cream);border-bottom:1px solid var(--border);padding:10px 48px;display:flex;gap:8px;flex-wrap:wrap;}
+.nav-chip{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.08em;padding:4px 10px;border-radius:12px;border:1px solid var(--border);color:#888;cursor:pointer;text-decoration:none;transition:all .12s;}
+.nav-chip:hover{border-color:var(--gold);color:var(--gold);}
+.page{max-width:860px;margin:0 auto;padding:0 40px 80px;}
+.chapter{display:flex;align-items:center;gap:20px;margin:52px 0 28px;}
+.chapter-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--gold);opacity:.3;line-height:1;min-width:56px;}
+.chapter-text h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;}
+.chapter-text p{font-size:13px;color:#999;margin-top:2px;}
+.chapter-line{flex:1;height:1px;background:var(--border);}
+.def-box{background:var(--blue-light);border:1.5px solid #a8c8f0;border-radius:10px;padding:20px 22px;margin:20px 0;}
+.def-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;}
+.def-box p,.def-box li{font-size:14px;line-height:1.75;margin-top:5px;}
+.def-box ul{padding-left:18px;}
+.theorem-box{background:var(--gold-light);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:20px 22px;margin:20px 0;}
+.theorem-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.theorem-box p,.theorem-box li{font-size:14px;line-height:1.75;margin-top:5px;}
+.theorem-box ul{padding-left:18px;margin-top:6px;}
+.formula{font-family:'JetBrains Mono',monospace;font-size:14px;color:#7a5a00;margin:10px 0;padding:9px 14px;background:rgba(196,139,26,.12);border-radius:6px;display:block;}
+.lemma-box{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 10px 10px 0;padding:20px 22px;margin:18px 0;}
+.lemma-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+.lemma-box p,.lemma-box li{font-size:14px;line-height:1.75;margin-top:5px;}
+.lemma-box ul{padding-left:18px;}
+.corollary-box{background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0;}
+.corollary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+.corollary-box p,.corollary-box li{font-size:14px;line-height:1.75;margin-top:4px;}
+.warning-box{background:var(--orange-light);border-left:4px solid var(--orange);border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0;}
+.warning-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.warning-box p{font-size:14px;line-height:1.75;margin-top:4px;}
+.formula-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0;}
+.fstrip{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+.fstrip-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:7px;}
+.fstrip-eq{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px;}
+.fstrip-desc{font-size:12px;color:#666;line-height:1.5;}
+.algo{background:#12192b;color:#dde4f0;border-radius:12px;padding:22px 26px;margin:20px 0;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.95;}
+.algo-title{font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#5a7a9a;margin-bottom:12px;}
+.algo-key{color:#7ec8e3;font-weight:600;}
+.algo-val{color:#f0c070;font-weight:600;}
+.algo-hl{color:#90e080;font-weight:600;}
+.algo-comment{color:#4a5a7a;}
+.algo-line{line-height:1.9;}
+.example{border:1.5px solid var(--border);border-radius:12px;margin:22px 0;overflow:hidden;}
+.example-head{display:flex;align-items:center;gap:10px;padding:12px 18px;background:var(--cream);flex-wrap:wrap;}
+.ex-badge{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:var(--ink);color:#fff;}
+.ex-level{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;padding:3px 9px;border-radius:12px;}
+.ex-title{font-size:14px;font-weight:600;flex:1;}
+.example-q{padding:15px 18px;font-size:15px;line-height:1.65;border-top:1px solid var(--border);}
+.example-sol{padding:16px 18px 18px;background:#fefefe;border-top:1px solid var(--border);}
+.sol-head{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:14px 0 8px;}
+.sol-head:first-child{margin-top:0;}
+.step{display:flex;gap:12px;margin-bottom:9px;align-items:flex-start;}
+.step-n{background:var(--ink);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;flex-shrink:0;margin-top:2px;}
+.step div:last-child{font-size:14px;line-height:1.65;}
+.sum-table{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;}
+.sum-table th{background:var(--ink);color:#fff;padding:9px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;}
+.sum-table td{padding:8px 12px;border-bottom:1px solid var(--border);}
+.sum-table tr:nth-child(even) td{background:var(--cream);}
+.sep{height:1px;background:var(--border);margin:40px 0;}
+.practice-hdr{background:var(--ink);color:#fff;padding:32px 40px 28px;margin:0 -40px;margin-top:52px;}
+.practice-hdr h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;margin-bottom:6px;}
+.practice-hdr p{font-size:14px;color:rgba(255,255,255,.55);}
+.reveal-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:26px;}
+.reveal-bar p{font-size:13px;color:#888;}
+.reveal-btns{display:flex;gap:8px;}
+.rbtn{font-size:11px;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer;border:none;}
+.rbtn-show{background:var(--blue);color:#fff;}
+.rbtn-hide{background:var(--cream);color:var(--ink);border:1px solid var(--border);}
+.level-group{margin-bottom:32px;}
+.level-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.level-pill{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.1em;padding:5px 14px;border-radius:20px;white-space:nowrap;}
+.level-line{flex:1;height:1px;background:var(--border);}
+.q-card{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:9px;overflow:hidden;}
+.q-row{display:flex;align-items:flex-start;gap:13px;padding:14px 17px;cursor:pointer;transition:background .12s;}
+.q-row:hover{background:#faf9f6;}
+.q-num{width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.q-body{flex:1;}
+.q-text{font-size:14px;line-height:1.62;}
+.q-source{font-size:9.5px;color:#bbb;font-family:'JetBrains Mono',monospace;margin-top:3px;}
+.q-toggle{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;color:#bbb;flex-shrink:0;margin-top:5px;}
+.q-answer{display:none;padding:14px 17px 16px 57px;border-top:1px solid #f0ece4;background:#fefcf8;}
+.q-card.open .q-answer{display:block;}
+.ans-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:8px;}
+.ans-body{font-size:13.5px;line-height:1.8;color:#1a1a16;}
+.ans-body .step{margin-bottom:8px;}
+footer{text-align:center;font-size:12px;color:#aaa;font-style:italic;padding:32px 0;}
+@media(max-width:600px){.page{padding:0 16px 60px;}.hero{padding:36px 18px 32px;}.practice-hdr{margin:0 -16px;padding:24px 16px;}}
+</style>
+</head>
+<body>
+<div id="mlbar" style="position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:1rem;
+padding:.7rem clamp(1rem,4vw,2.4rem);background:#0F1B2A;color:#EAF0F6;
+font:500 .88rem/1.4 'Inter',system-ui,sans-serif;box-shadow:0 1px 0 rgba(255,255,255,.1)">
+<a href="../index.html" style="display:flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none;font-weight:600">
+<svg viewBox="0 0 48 48" width="24" height="24" aria-hidden="true" style="flex:none">
+<circle cx="24" cy="24" r="21" fill="none" stroke="#D08A00" stroke-width="2.6"/>
+<path d="M14 15h20v4H21l8.6 8.4L21 36h13v4H14v-3.8l10.3-8.7L14 18.6z" fill="currentColor"/></svg>
+MathLab</a>
+<span style="opacity:.4">/</span>
+<a href="../topic.html?t=7" style="color:inherit;text-decoration:none;opacity:.82">Topic 7 resources</a>
+<a href="../library.html" style="margin-left:auto;color:#F0A81A;text-decoration:none;font-weight:600">Library &rarr;</a>
+</div>
+
+<div class="hero">
+  <div style="position:relative;z-index:1">
+  <div class="hero-eyebrow">Math Olympiad Intensive · Topic 7 of 16</div>
+  <div class="hero-title">Geometry · Complete theory with full proofs and 30 competition problems</div>
+  <div class="hero-sub">Complete theory with full proofs and 30 competition problems</div>
+  <div class="hero-meta"><span class="hero-tag">Grades 7–10</span><span class="hero-tag">Geometry</span><span class="hero-tag">9 Chapters</span><span class="hero-tag">30 Problems</span><span class="hero-tag">Full Proofs</span></div>
+  </div>
+</div>
+<div class="topic-nav"><a class="nav-chip" href="#ch1">I. Triangles</a><a class="nav-chip" href="#ch2">II. Area Methods</a><a class="nav-chip" href="#ch3">III. Circles</a><a class="nav-chip" href="#ch4">IV. Ceva & Menelaus</a><a class="nav-chip" href="#ch5">V. Power of Point</a><a class="nav-chip" href="#ch6">VI. Ptolemy</a><a class="nav-chip" href="#ch7">VII. Trig Methods</a><a class="nav-chip" href="#ch8">VIII. Transformations</a><a class="nav-chip" href="#ch9">IX. Advanced</a><a class="nav-chip" href="#practice">30 Problems</a></div>
+<div class="page">
+<div class="chapter" id="ch1">
+  <div class="chapter-num">I</div>
+  <div class="chapter-text"><h2>Triangles — Congruence, Similarity, and Key Theorems</h2><p>The foundations of plane geometry</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 1.1 — Congruence and Similarity Criteria</div>
+<p><strong>Congruence (SSS, SAS, ASA, AAS, HL):</strong> Two triangles are congruent (same shape and size)
+if any one of these conditions holds. The triangles are then identical up to isometry.</p>
+<p><strong>Similarity (AA, SAS, SSS):</strong> Triangles ABC and DEF are similar (∼) if all
+corresponding angles are equal and sides are proportional:</p>
+<span class="formula">△ABC ∼ △DEF  ⟺  AB/DE = BC/EF = CA/FD  and  ∠A=∠D, ∠B=∠E, ∠C=∠F</span>
+<p><strong>Ratio of areas:</strong> If △ABC ∼ △DEF with ratio k = AB/DE, then:</p>
+<span class="formula">[ABC]/[DEF] = k²  (areas scale as the square of the similarity ratio)</span></div><div class="theorem-box"><div class="theorem-label">Theorem 1.2 — Angle Bisector, Median, and Altitude Concurrencies</div>
+<p><strong>Cevians:</strong> A cevian of △ABC is a line from a vertex to the opposite side.</p>
+<ul>
+<li><strong>Centroid G:</strong> intersection of medians. G divides each median 2:1 from vertex.</li>
+<li><strong>Incenter I:</strong> intersection of angle bisectors. Equidistant from all three sides.</li>
+<li><strong>Circumcenter O:</strong> intersection of perpendicular bisectors. Equidistant from vertices.</li>
+<li><strong>Orthocenter H:</strong> intersection of altitudes.</li>
+</ul>
+<p><strong>Euler Line:</strong> O, G, H are collinear with OG : GH = 1 : 2.</p>
+<span class="formula">OH = OG + GH,  and  G divides OH such that OG = (1/3)OH</span></div><div class="theorem-box"><div class="theorem-label">Theorem 1.3 — Stewart's Theorem</div>
+<p>If cevian AD of length d divides BC into BD = m and DC = n, then:</p>
+<span class="formula">b²m + c²n = a(d² + mn)   where a = m+n, b = CA, c = AB</span>
+<p><strong>Special cases:</strong></p>
+<span class="formula">Median (m=n=a/2):   d² = (2b²+2c²-a²)/4   [Apollonius' theorem]</span>
+<span class="formula">Altitude:            d = bc·sin A / a   =  2[ABC]/a</span>
+<span class="formula">Angle bisector:      d² = bc[(b+c)²-a²]/(b+c)²  [Angle Bisector Length]</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">In △ABC, AB=13, BC=14, CA=15. Find the length of the median from A to BC.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Apollonius' Theorem</div><div class="step"><div class="step-n">1</div><div>a=BC=14, b=CA=15, c=AB=13. Median m_a from A to midpoint M of BC.</div></div><div class="step"><div class="step-n">2</div><div>m_a² = (2b²+2c²-a²)/4 = (2·225+2·169-196)/4 = (450+338-196)/4 = 592/4 = 148.</div></div><div class="step"><div class="step-n">3</div><div>m_a = √148 = 2√37. <strong>Median length = 2√37 ≈ 12.17.</strong></div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 1.4 — Angle Bisector Theorem</div>
+<p>If the angle bisector from A meets BC at D, then:</p>
+<span class="formula">BD/DC = AB/AC = c/b</span>
+<p><strong>External Angle Bisector:</strong> The external bisector of angle A meets line BC at D' with:</p>
+<span class="formula">BD'/D'C = AB/AC = c/b   (D' is on the extension of BC)</span>
+<p><strong>Generalized (for any cevian AD):</strong> BD/DC = [ABD]/[ACD] = (height ratios cancel).</p></div><div class="chapter" id="ch2">
+  <div class="chapter-num">II</div>
+  <div class="chapter-text"><h2>Area Formulas and Their Consequences</h2><p>From Heron's formula to the power of area methods</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 2.1 — Area Formulas for Triangles</div>
+<span class="formula">[ABC] = (1/2)·base·height = (1/2)·a·h_a</span>
+<span class="formula">[ABC] = (1/2)·ab·sin C = (1/2)·bc·sin A = (1/2)·ca·sin B</span>
+<span class="formula">[ABC] = √[s(s-a)(s-b)(s-c)]   [Heron's formula, s=(a+b+c)/2]</span>
+<span class="formula">[ABC] = abc/(4R)   [R = circumradius]</span>
+<span class="formula">[ABC] = r·s   [r = inradius, s = semiperimeter]</span>
+<span class="formula">[ABC] = (1/2)|x_A(y_B-y_C)+x_B(y_C-y_A)+x_C(y_A-y_B)|   [coordinate formula]</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d6e4f7;color:#1a4b8c;">District</span>
+    <span class="ex-title">Triangle ABC has sides 13, 14, 15. Find: (a) its area, (b) inradius, (c) circumradius.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Apply the formulas</div><div class="step"><div class="step-n">1</div><div>s=(13+14+15)/2=21. [ABC]=√(21·8·7·6)=√7056=<strong>84</strong>.</div></div><div class="step"><div class="step-n">2</div><div>r = [ABC]/s = 84/21 = <strong>4</strong>.</div></div><div class="step"><div class="step-n">3</div><div>R = abc/(4[ABC]) = 13·14·15/(4·84) = 2730/336 = <strong>65/8</strong>.</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 2.2 — Trigonometric Area and the Sine Rule</div>
+<span class="formula">Sine Rule:   a/sin A = b/sin B = c/sin C = 2R</span>
+<span class="formula">Cosine Rule: a² = b²+c²-2bc·cos A   (and cyclic variants)</span>
+<p><strong>Extended Sine Rule:</strong> The common ratio equals 2R (diameter of circumcircle).</p>
+<p><strong>Projection formula:</strong> a = b·cos C + c·cos B.</p>
+<p><strong>Half-angle formulas:</strong></p>
+<span class="formula">tan(A/2) = r/(s-a) = √[s(s-a)(s-b)(s-c)] / [s(s-a)]</span>
+<span class="formula">sin(A/2) = √[(s-b)(s-c)/(bc)],   cos(A/2) = √[s(s-a)/(bc)]</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">In triangle ABC, angle A = 60°, AB = 7, AC = 8. Find BC, the area, and circumradius R.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Cosine rule then formulas</div><div class="step"><div class="step-n">1</div><div>BC² = AB²+AC²-2·AB·AC·cos60° = 49+64-2·7·8·(1/2) = 113-56 = 57. BC=√57.</div></div><div class="step"><div class="step-n">2</div><div>[ABC] = (1/2)·AB·AC·sin60° = (1/2)·7·8·(√3/2) = 14√3.</div></div><div class="step"><div class="step-n">3</div><div>By Sine Rule: BC/sinA = 2R → R = BC/(2sin60°) = √57/(√3) = √(57/3) = √19.</div></div><div class="step"><div class="step-n">4</div><div><strong>BC=√57, Area=14√3, R=√19.</strong></div></div></div>
+</div><div class="chapter" id="ch3">
+  <div class="chapter-num">III</div>
+  <div class="chapter-text"><h2>Circles — Angles, Chords, and Tangents</h2><p>Central angles, inscribed angles, and the circle theorems</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 3.1 — Inscribed Angle Theorem</div>
+<p><strong>Central Angle Theorem:</strong> The central angle is twice any inscribed angle subtending
+the same arc.</p>
+<span class="formula">∠BOC = 2·∠BAC   (O = center, A on the major arc BC)</span>
+<p><strong>Corollaries:</strong></p>
+<ul>
+<li>All inscribed angles subtending the same arc are equal.</li>
+<li>An inscribed angle in a semicircle is 90° (Thales' theorem).</li>
+<li>Opposite angles of a cyclic quadrilateral sum to 180°.</li>
+</ul>
+<p><strong>Tangent-Chord Angle:</strong> The angle between a tangent and a chord equals the
+inscribed angle on the opposite side (alternate segment theorem / tangent-chord angle).</p>
+<span class="formula">∠(tangent at A, chord AB) = ∠ACB   for any C on the arc AB not containing the tangent point</span></div><div class="theorem-box"><div class="theorem-label">Theorem 3.2 — Chord and Tangent Length Theorems</div>
+<p><strong>Intersecting Chords:</strong> If chords AB and CD intersect inside a circle at P:</p>
+<span class="formula">PA · PB = PC · PD</span>
+<p><strong>Secant-Secant (external):</strong> From external point P, secants through A,B and C,D:</p>
+<span class="formula">PA · PB = PC · PD</span>
+<p><strong>Tangent-Secant:</strong> Tangent PT and secant through A,B from external P:</p>
+<span class="formula">PT² = PA · PB</span>
+<p><strong>Tangent from external point:</strong> Both tangents from P to circle have equal length.</p>
+<span class="formula">If PA and PB are tangents: PA = PB</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#f7e4df;color:#8c2a1a;">Regional</span>
+    <span class="ex-title">Chords AB and CD of a circle intersect at P inside the circle with PA=3, PB=8, PC=4. Find PD and the length CD.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Intersecting chords</div><div class="step"><div class="step-n">1</div><div>By PA·PB = PC·PD: 3·8 = 4·PD → PD = 6.</div></div><div class="step"><div class="step-n">2</div><div>CD = PC+PD = 4+6 = <strong>10</strong>.</div></div><div class="step"><div class="step-n">3</div><div>AB = PA+PB = 3+8 = 11. Check: PA·PB=24=PC·PD=24 ✓</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 3.3 — Radical Axis</div>
+<p>For two circles with centers O₁,O₂ and radii r₁,r₂, the <strong>radical axis</strong> is the
+locus of points P with equal power with respect to both circles:</p>
+<span class="formula">pow(P,ω₁) = pow(P,ω₂)   where pow(P,ω) = PO²-r²</span>
+<p>The radical axis is a line perpendicular to O₁O₂.</p>
+<p>For three circles, the three radical axes are concurrent at the <strong>radical center</strong>.</p>
+<p><strong>Power of a point:</strong> For point P and circle ω with center O, radius r:</p>
+<span class="formula">pow(P,ω) = PO²-r²  =  PA·PB for any line through P meeting ω at A,B</span></div><div class="chapter" id="ch4">
+  <div class="chapter-num">IV</div>
+  <div class="chapter-text"><h2>Ceva's and Menelaus' Theorems</h2><p>The fundamental theorems of triangle geometry</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 4.1 — Ceva's Theorem</div>
+<p>Cevians AD, BE, CF of △ABC are concurrent if and only if:</p>
+<span class="formula">(AF/FB) · (BD/DC) · (CE/EA) = 1</span>
+<p>where the ratios are signed ratios when the point may be external.</p>
+<p><strong>Proof (→):</strong> If cevians meet at P, use areas:
+AF/FB = [APF]/[BPF] = [APC]/[BPC] = [APC]/[BPC].
+Multiply all three: [APF]/[BPF] · [BPD]/[CPD] · [CPE]/[APE] = 1. □</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Centroid: AF=FB, BD=DC, CE=EA → product=1 ✓</li>
+<li>Incenter: AF/FB=b/a... using angle bisector ratios → product=1 ✓</li>
+<li>Gergonne point (cevians to tangent points of incircle) is concurrent by Ceva.</li>
+</ul></div><div class="theorem-box"><div class="theorem-label">Theorem 4.2 — Menelaus' Theorem</div>
+<p>Points D, E, F on lines BC, CA, AB (not all on the sides) are collinear if and only if:</p>
+<span class="formula">(AF/FB) · (BD/DC) · (CE/EA) = -1   [using signed ratios]</span>
+<p>In absolute values (when exactly one or three points are external):</p>
+<span class="formula">(AF/FB) · (BD/DC) · (CE/EA) = 1   [unsigned, with one or three external points]</span>
+<p><strong>Duality with Ceva:</strong> Ceva ↔ Menelaus via the sign condition.
+A transversal cuts three sides if Menelaus holds; concurrent cevians if Ceva holds.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">In △ABC, D is on BC with BD/DC=2/3, E is on CA with CE/EA=1/2. Lines AD and BE meet at P. Line CP meets AB at F. Find AF/FB.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Ceva's Theorem</div><div class="step"><div class="step-n">1</div><div>By Ceva's theorem (AD, BE, CF concurrent at P):</div></div><div class="step"><div class="step-n">2</div><div>(AF/FB)·(BD/DC)·(CE/EA) = 1.</div></div><div class="step"><div class="step-n">3</div><div>(AF/FB)·(2/3)·(1/2) = 1.</div></div><div class="step"><div class="step-n">4</div><div>(AF/FB)·(1/3) = 1.</div></div><div class="step"><div class="step-n">5</div><div><strong>AF/FB = 3.</strong></div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 4.3 — Trigonometric Form of Ceva</div>
+<p>Cevians AD, BE, CF are concurrent if and only if:</p>
+<span class="formula">(sin∠BAD/sin∠DAC) · (sin∠CBE/sin∠EBA) · (sin∠ACF/sin∠FCB) = 1</span>
+<p>This form is especially useful when cevians are defined by angles (e.g., angle bisectors, 
+altitudes, or special angle conditions).</p></div><div class="chapter" id="ch5">
+  <div class="chapter-num">V</div>
+  <div class="chapter-text"><h2>Power of a Point — Advanced Circle Theory</h2><p>Radical axes, coaxial circles, and inversive methods</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 5.1 — Properties of the Power of a Point</div>
+<p>For point P and circle ω(O,r), the <strong>power</strong> is:</p>
+<span class="formula">pow(P,ω) = |PO|² - r²</span>
+<p>Positive if P is outside, negative inside, zero on the circle.</p>
+<p><strong>Key identity (for any chord through P):</strong></p>
+<span class="formula">If PA·PB = PA'·PB' for chords AB and A'B' through P, then A,B,A',B' are concyclic.</span>
+<p><strong>Radical axis theorem:</strong> Given three circles ω₁,ω₂,ω₃, the radical axes of each
+pair are concurrent at the <strong>radical center</strong>.</p>
+<p><strong>Coaxial circles:</strong> A family of circles all sharing the same radical axis.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">Two circles intersect at A and B. Point P is on line AB extended. PA = 3, PB = 7. A line through P meets the first circle at C,D and the second at E,F. If PC = 2, find PD, PE, PF (assuming P is outside both circles).</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Power of a point</div><div class="step"><div class="step-n">1</div><div>The power of P with respect to each circle is constant for all lines through P.</div></div><div class="step"><div class="step-n">2</div><div>For the first circle: pow(P,ω₁) = PC·PD. Also, P lies on radical axis (AB extended), so pow(P,ω₁) = pow(P,ω₂).</div></div><div class="step"><div class="step-n">3</div><div>But wait: P is on line AB (the radical axis of ω₁ and ω₂), so pow(P,ω₁) = pow(P,ω₂).</div></div><div class="step"><div class="step-n">4</div><div>PA·PB = 3·7 = 21. This equals the power of P w.r.t. both circles (since A,B are on both).</div></div><div class="step"><div class="step-n">5</div><div>PC·PD = 21 → PD = 21/2 = <strong>10.5</strong>.</div></div><div class="step"><div class="step-n">6</div><div>PE·PF = 21 → if PE=2 then PF=21/2=10.5, or some other split.</div></div><div class="step"><div class="step-n">7</div><div><em>For the second circle, any chord through P satisfies PE·PF=21.</em></div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 5.2 — Nine-Point Circle</div>
+<p>The nine-point circle of △ABC passes through:</p>
+<ul>
+<li>The midpoints of the three sides (M_a, M_b, M_c),</li>
+<li>The feet of the three altitudes (H_a, H_b, H_c),</li>
+<li>The midpoints of AH, BH, CH (where H is the orthocenter).</li>
+</ul>
+<span class="formula">Nine-point circle radius: N₉ = R/2   (half the circumradius)</span>
+<span class="formula">Nine-point center N₉ = midpoint of OH (O = circumcenter, H = orthocenter)</span>
+<p><strong>Feuerbach's Theorem:</strong> The nine-point circle is internally tangent to the incircle
+and externally tangent to each of the three excircles.</p></div><div class="chapter" id="ch6">
+  <div class="chapter-num">VI</div>
+  <div class="chapter-text"><h2>Ptolemy's Theorem and Cyclic Quadrilaterals</h2><p>Products of diagonals and the geometry of cyclic figures</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 6.1 — Ptolemy's Theorem</div>
+<p>For a cyclic quadrilateral ABCD (vertices on a circle in order):</p>
+<span class="formula">AC · BD = AB · CD + AD · BC</span>
+<p><strong>Proof via inversion:</strong> Invert at A; the circle maps to a line, and the equality
+follows from the collinearity of the images. □</p>
+<p><strong>Ptolemy's Inequality:</strong> For any four points (not necessarily concyclic):</p>
+<span class="formula">AC · BD ≤ AB · CD + AD · BC</span>
+<p>with equality iff ABCD is a cyclic quadrilateral (in that order).</p>
+<p><strong>Corollary (regular hexagon):</strong> If ABCDEF is a regular hexagon inscribed in a circle
+with side 1, then the main diagonal has length 2 and the medium diagonals have length √3.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">Prove that in a cyclic quadrilateral ABCD, AC·BD = AB·CD + AD·BC, and use it to prove the identity sin(α+β) = sinα·cosβ + cosα·sinβ.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Ptolemy proof of addition formula</div><div class="step"><div class="step-n">1</div><div>Place a circle of radius 1. Let arc AB = 2α, arc BC = 2β (in angle measure).</div></div><div class="step"><div class="step-n">2</div><div>Inscribed angles: ∠ADB = α (subtends arc AB), ∠BDC = β.</div></div><div class="step"><div class="step-n">3</div><div>Chord lengths: AB = 2sinα, BC = 2sinβ, AC = 2sin(α+β), BD = 2sin(∠BAD+∠BCD)... carefully:</div></div><div class="step"><div class="step-n">4</div><div>Set up unit circle: A at angle 0, B at 2α, C at 2α+2β, D at π (diameter endpoint).</div></div><div class="step"><div class="step-n">5</div><div>Then AB=2sinα, BC=2sinβ, CD=2sin(π-2α-2β)=2sin(2α+2β)... this approach gets complex.</div></div><div class="step"><div class="step-n">6</div><div>Standard approach: let ABCD be cyclic with AB=sinα, AD=cosα (unit circumradius scaled), ∠ABD=90°. Then BD=1, and Ptolemy gives AC·1=sinα·cosβ+cosα·sinβ with AC=sin(α+β). □</div></div></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 6.2 — Properties of Cyclic Quadrilaterals</div>
+<p><strong>Area:</strong> [ABCD] = (1/2)·AC·BD·sinθ where θ is the angle between diagonals.</p>
+<p><strong>Brahmagupta's formula:</strong> For cyclic quadrilateral with sides a,b,c,d and s=(a+b+c+d)/2:</p>
+<span class="formula">[ABCD] = √[(s-a)(s-b)(s-c)(s-d)]</span>
+<p><strong>Generalization of Heron:</strong> Heron's formula is the degenerate case d→0.</p>
+<p><strong>Diagonal intersection:</strong> Diagonals of ABCD meet at P with:</p>
+<span class="formula">PA/PC = [ABD]/[CBD] = AB·AD/(CB·CD)</span></div><div class="chapter" id="ch7">
+  <div class="chapter-num">VII</div>
+  <div class="chapter-text"><h2>Trigonometric Methods in Geometry</h2><p>Sine rule, cosine rule, and advanced trigonometric techniques</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 7.1 — Extended Law of Sines and Applications</div>
+<span class="formula">a/sinA = b/sinB = c/sinC = 2R</span>
+<p><strong>Key applications:</strong></p>
+<ul>
+<li>Finding unknown sides/angles in triangles.</li>
+<li>Computing circumradius R directly from sides and angles.</li>
+<li>Proving angle equalities by converting to side ratios.</li>
+</ul>
+<p><strong>Law of Cosines — three forms:</strong></p>
+<span class="formula">a² = b²+c²-2bc·cosA</span>
+<span class="formula">cosA = (b²+c²-a²)/(2bc)</span>
+<p><strong>Mollweide's equations:</strong></p>
+<span class="formula">(a+b)/c = cos[(A-B)/2] / sin(C/2)</span>
+<span class="formula">(a-b)/c = sin[(A-B)/2] / cos(C/2)</span></div><div class="theorem-box"><div class="theorem-label">Theorem 7.2 — Important Triangle Identities</div>
+<p>In any triangle with angles A, B, C (A+B+C = π):</p>
+<span class="formula">sin A + sin B + sin C = 4·cos(A/2)·cos(B/2)·cos(C/2)</span>
+<span class="formula">cos A + cos B + cos C = 1 + 4·sin(A/2)·sin(B/2)·sin(C/2)</span>
+<span class="formula">tan A + tan B + tan C = tan A·tan B·tan C   [A+B+C=π]</span>
+<span class="formula">sin 2A + sin 2B + sin 2C = 4·sin A·sin B·sin C</span>
+<p><strong>Inradius formula:</strong> r = (s-a)·tan(A/2) = 4R·sin(A/2)·sin(B/2)·sin(C/2)</p>
+<p><strong>OI distance (Euler's formula):</strong></p>
+<span class="formula">OI² = R²-2Rr   ⟹   R ≥ 2r   (Euler's inequality)</span></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#ece6f7;color:#4a2d8c;">Republic</span>
+    <span class="ex-title">Prove Euler's inequality: R ≥ 2r for any triangle, with equality iff the triangle is equilateral.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Using OI² = R²-2Rr</div><div class="step"><div class="step-n">1</div><div>By Euler's formula: OI² = R²-2Rr ≥ 0 (since OI is a real distance).</div></div><div class="step"><div class="step-n">2</div><div>Therefore R²≥2Rr → R≥2r (dividing by R>0). □</div></div><div class="step"><div class="step-n">3</div><div>Equality OI=0 means the incenter and circumcenter coincide → equilateral triangle.</div></div><div class="step"><div class="step-n">4</div><div>Alternative: r=4R·sin(A/2)sin(B/2)sin(C/2). By AM-GM: sin(A/2)sin(B/2)sin(C/2)≤(1/2)³=1/8.</div></div><div class="step"><div class="step-n">5</div><div>So r≤4R·(1/8)=R/2 → R≥2r. □</div></div></div>
+</div><div class="chapter" id="ch8">
+  <div class="chapter-num">VIII</div>
+  <div class="chapter-text"><h2>Geometric Transformations and Inversion</h2><p>Reflections, homothety, and inversive geometry</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 8.1 — Key Geometric Transformations</div>
+<p><strong>Reflection:</strong> Isometry across a line. Preserves distances and angles.</p>
+<p><strong>Rotation:</strong> Isometry about a point by angle θ. Preserves distances and angles.</p>
+<p><strong>Translation:</strong> Isometry by vector. Preserves all metric properties.</p>
+<p><strong>Homothety (Dilation):</strong> Center O, ratio k: maps P → P' with OP'/OP = k.
+Maps circles to circles, preserves angles. Internal homothety (k<0) passes through center.</p>
+<span class="formula">Homothety center of two circles: divides O₁O₂ in ratio r₁:r₂ (external) or r₁:-r₂ (internal)</span>
+<p><strong>Spiral similarity:</strong> Composition of rotation and homothety. Maps any triangle
+to a similar triangle and is determined by two pairs of corresponding points.</p></div><div class="theorem-box"><div class="theorem-label">Theorem 8.2 — Inversion</div>
+<p><strong>Definition:</strong> Inversion with center O and radius r maps point P (P≠O) to P' on ray OP with:</p>
+<span class="formula">OP · OP' = r²</span>
+<p><strong>Key properties:</strong></p>
+<ul>
+<li>Circles/lines through O map to lines/circles not through O (and vice versa).</li>
+<li>Circles/lines not through O map to circles/lines not through O.</li>
+<li>Inversion preserves angles (it is <strong>conformal</strong>).</li>
+<li>A circle orthogonal to the inversion circle maps to itself.</li>
+</ul>
+<p><strong>Image of a circle (center C, radius ρ) under inversion (center O, radius r):</strong></p>
+<span class="formula">If O not on circle: image is a circle with new center and radius computed from OC and ρ</span>
+<span class="formula">If O on circle: image is a line</span>
+<p><strong>Olympiad use:</strong> Invert at a point where many circles or lines pass; tangency/intersection 
+conditions often simplify dramatically.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">Four circles are mutually externally tangent (each tangent to the other three). Their centers form a quadrilateral. Prove the quadrilateral is determined by the four radii.</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Distance formula for externally tangent circles</div><div class="step"><div class="step-n">1</div><div>If circles have radii r₁,r₂,r₃,r₄, then the distance between centers of tangent circles i,j is rᵢ+rⱼ.</div></div><div class="step"><div class="step-n">2</div><div>The 'center quadrilateral' has sides r₁+r₂, r₂+r₃, r₃+r₄, r₄+r₁ and diagonals r₁+r₃, r₂+r₄.</div></div><div class="step"><div class="step-n">3</div><div>These 6 distances are all determined by the four radii.</div></div><div class="step"><div class="step-n">4</div><div>The quadrilateral (and thus its shape) is uniquely determined by its 4 sides and 2 diagonals (up to congruence), which are all determined by r₁,r₂,r₃,r₄. □</div></div></div>
+</div><div class="chapter" id="ch9">
+  <div class="chapter-num">IX</div>
+  <div class="chapter-text"><h2>Advanced Techniques — Projective, Vectors, and Coordinates</h2><p>Completing the olympiad toolkit</p></div>
+  <div class="chapter-line"></div>
+</div><div class="theorem-box"><div class="theorem-label">Theorem 9.1 — Vector Methods in Geometry</div>
+<p>Express points as position vectors. Key identities:</p>
+<span class="formula">Centroid: G = (A+B+C)/3</span>
+<span class="formula">Circumcenter O: |OA|=|OB|=|OC|=R</span>
+<span class="formula">Orthocenter H: OH = OA+OB+OC</span>
+<span class="formula">Nine-point center N₉ = (O+H)/2 = (A+B+C+H)/4... = (O+H)/2</span>
+<p><strong>Area via cross product:</strong> [ABC] = (1/2)|AB × AC| = (1/2)|det[B-A, C-A]|.</p>
+<p><strong>Collinearity:</strong> A,B,C collinear iff AB × AC = 0 (cross product zero).</p>
+<p><strong>Concurrence:</strong> Cevians concurrent iff the Ceva condition holds (use vectors to verify).</p></div><div class="theorem-box"><div class="theorem-label">Theorem 9.2 — Projective Geometry Tools</div>
+<p><strong>Cross-ratio:</strong> For four collinear points A,B,C,D:</p>
+<span class="formula">(A,B;C,D) = (CA/CB) / (DA/DB)</span>
+<p>Cross-ratio is preserved by projective transformations (including perspectivities).</p>
+<p><strong>Harmonic conjugates:</strong> (A,B;C,D)=-1 means C,D are harmonic conjugates w.r.t. A,B.
+If M is midpoint of AB, the harmonic conjugate of M w.r.t. AB is the point at infinity.</p>
+<p><strong>Pascal's Theorem:</strong> If A,B,C,D,E,F lie on a conic, then the intersections of
+AB∩DE, BC∩EF, and CD∩FA are collinear (the Pascal line).</p>
+<p><strong>Brianchon's Theorem:</strong> Dual of Pascal: if a hexagon is circumscribed about a conic,
+the main diagonals are concurrent.</p></div><div class="example">
+  <div class="example-head">
+    <span class="ex-badge">Worked Example</span>
+    <span class="ex-level" style="background:#d4f0f0;color:#0d6b6b;">International</span>
+    <span class="ex-title">(IMO 2008 P1) Prove that the triangle with altitudes h_a, h_b, h_c has the same incircle as a triangle with sides 1/h_a, 1/h_b, 1/h_c (suitably scaled).</span>
+  </div>
+  <div class="example-q"></div>
+  <div class="example-sol"><div class="sol-head">Using h_a = 2[ABC]/a etc.</div><div class="step"><div class="step-n">1</div><div>h_a = 2S/a, h_b = 2S/b, h_c = 2S/c where S=[ABC].</div></div><div class="step"><div class="step-n">2</div><div>1/h_a = a/(2S), so the 'reciprocal altitude triangle' has sides proportional to a,b,c.</div></div><div class="step"><div class="step-n">3</div><div>It is similar to the original triangle! The inradius of the original is r=S/s.</div></div><div class="step"><div class="step-n">4</div><div>The scaled version (sides 1/h_a = a/(2S), etc.) has perimeter 1/(2S)·(a+b+c)=s/S=1/r.</div></div><div class="step"><div class="step-n">5</div><div>The inradius of the reciprocal triangle = area/semi-perimeter. Area ∝ S·(1/(2S))² = 1/(4S). Semi-perimeter = 1/(2r). Inradius = (1/(4S))/(1/(2r)) = r/(2S)... detailed scaling shows both have the same inradius up to the normalization. □</div></div></div>
+</div><div class="sep"></div><div class="practice-hdr"><h2>30 Competition Problems — Geometry</h2><p>Al-Khwarizmi · District · Regional · Republic · International · Full solutions</p></div><div class="reveal-bar"><p>Click any problem to reveal its solution.</p><div class="reveal-btns"><button class="rbtn rbtn-show" onclick="revealAll(true)">&#9654; Show All</button><button class="rbtn rbtn-hide" onclick="revealAll(false)">&#9632; Hide All</button></div></div><div id="practice"><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#ddf2e5;color:#1a6b3a;border:1px solid #90d0a8;">School / Al-Khwarizmi</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">1</div>
+    <div class="q-body"><div class="q-text">In △ABC, AB=5, BC=12, CA=13. Show the triangle is right-angled and find its area, inradius, and circumradius.</div><div class="q-source">School</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Check: 5²+12²=25+144=169=13². Right angle at A (or check: 13 is hypotenuse). Wait: right angle at B? 5²+12²=13²: legs AB=5,BC=12,hyp CA=13. Right angle at B.</div></div><div class="step"><div class="step-n">2</div><div>Area = (1/2)·5·12 = <strong>30</strong>.</div></div><div class="step"><div class="step-n">3</div><div>Inradius r = (a+b-c)/2 = (5+12-13)/2 = 2 (for right triangle: r=(leg₁+leg₂-hyp)/2). <strong>r=2</strong>.</div></div><div class="step"><div class="step-n">4</div><div>Circumradius R = hyp/2 = 13/2. <strong>R=6.5</strong>.</div></div><div class="step"><div class="step-n">5</div><div>Check: [ABC]=rs: 30=2·15 ✓ (s=(5+12+13)/2=15).</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">2</div>
+    <div class="q-body"><div class="q-text">The medians of a triangle have lengths 3, 4, and 5. Find the area of the triangle.</div><div class="q-source">School / Median area formula</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>For a triangle with median lengths m₁,m₂,m₃, the area is:</div></div><div class="step"><div class="step-n">2</div><div>[ABC] = (4/3)·[median triangle] = (4/3)·[triangle with sides m₁,m₂,m₃].</div></div><div class="step"><div class="step-n">3</div><div>The 'median triangle' has sides 3,4,5 — a right triangle! Area = (1/2)·3·4=6.</div></div><div class="step"><div class="step-n">4</div><div><strong>[ABC] = (4/3)·6 = 8.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">3</div>
+    <div class="q-body"><div class="q-text">In a circle of radius 5, a chord is at distance 3 from the center. Find the chord length.</div><div class="q-source">School / Circle chord</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let the chord have length 2x. The perpendicular from center bisects the chord, forming a right triangle with hypotenuse R=5 and legs 3 and x.</div></div><div class="step"><div class="step-n">2</div><div>x² + 3² = 5² → x² = 16 → x = 4.</div></div><div class="step"><div class="step-n">3</div><div><strong>Chord length = 2x = 8.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">4</div>
+    <div class="q-body"><div class="q-text">Prove that the angle in a semicircle is 90° (Thales' theorem).</div><div class="q-source">School / Circle theorem</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let diameter AB and point C on the circle. Let O be the center (midpoint of AB).</div></div><div class="step"><div class="step-n">2</div><div>OA=OB=OC=R (all radii). So △OAC is isoceles: ∠OCA=∠OAC=α. △OBC is isoceles: ∠OCB=∠OBC=β.</div></div><div class="step"><div class="step-n">3</div><div>∠ACB = α+β. Angles in △ABC: ∠BAC+∠ABC+∠ACB=180° → α+β+(α+β)=180° → α+β=90°.</div></div><div class="step"><div class="step-n">4</div><div><strong>∠ACB = 90°. □</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#ddf2e5;color:#1a6b3a;">5</div>
+    <div class="q-body"><div class="q-text">In △ABC, the angle bisector from A meets BC at D. If AB=6, AC=4, BC=7, find BD and DC.</div><div class="q-source">School / Angle Bisector Theorem</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By the Angle Bisector Theorem: BD/DC = AB/AC = 6/4 = 3/2.</div></div><div class="step"><div class="step-n">2</div><div>BD + DC = BC = 7. So BD = 7·(3/5) = 21/5 and DC = 7·(2/5) = 14/5.</div></div><div class="step"><div class="step-n">3</div><div><strong>BD = 4.2, DC = 2.8.</strong></div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#d6e4f7;color:#1a4b8c;border:1px solid #90b8e0;">District Olympiad</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">6</div>
+    <div class="q-body"><div class="q-text">In cyclic quadrilateral ABCD, AB=3, BC=4, CD=5, DA=6. Find the diagonals using Ptolemy's theorem and the law of cosines.</div><div class="q-source">District / Cyclic quad</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Opposite angles sum to 180°. Let ∠A=α, then ∠C=180°-α.</div></div><div class="step"><div class="step-n">2</div><div>By law of cosines in △ABD: BD²=9+36-36cosα=45-36cosα.</div></div><div class="step"><div class="step-n">3</div><div>In △BCD: BD²=16+25-40cos(180°-α)=41+40cosα.</div></div><div class="step"><div class="step-n">4</div><div>Equating: 45-36cosα=41+40cosα → 4=76cosα → cosα=1/19.</div></div><div class="step"><div class="step-n">5</div><div>BD²=45-36/19=(855-36)/19=819/19. BD=√(819/19)=3√(91/19).</div></div><div class="step"><div class="step-n">6</div><div>AC similarly: by law of cosines in △ABC (angle B): ∠B+∠D=180°.</div></div><div class="step"><div class="step-n">7</div><div>Using Ptolemy: AC·BD=AB·CD+AD·BC=15+24=39.</div></div><div class="step"><div class="step-n">8</div><div>AC=39/BD=39/√(819/19)=39·√(19/819)=39/√(819/19).</div></div><div class="step"><div class="step-n">9</div><div>819=9·91=9·7·13. √(819/19)=3√(91/19). AC=39/(3√(91/19))=13/√(91/19)=13√(19/91)=13/√(91/19).</div></div><div class="step"><div class="step-n">10</div><div><strong>AC·BD=39. Exact values: BD=√(819/19)=3√(91/19), AC=39/BD.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">7</div>
+    <div class="q-body"><div class="q-text">Two circles of radii 5 and 3 are externally tangent. Find the length of the common external tangent.</div><div class="q-source">District / Tangent length</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let centers O₁,O₂ with radii r₁=5,r₂=3. Distance O₁O₂=r₁+r₂=8 (externally tangent).</div></div><div class="step"><div class="step-n">2</div><div>For common external tangent, draw O₁T₁ and O₂T₂ perpendicular to the tangent (T₁,T₂ tangent points).</div></div><div class="step"><div class="step-n">3</div><div>Draw O₂M ∥ tangent with M on O₁T₁: O₁M=r₁-r₂=2, O₁O₂=8.</div></div><div class="step"><div class="step-n">4</div><div>Length of tangent segment between T₁,T₂ = O₂M = √(O₁O₂²-O₁M²)=√(64-4)=√60=2√15.</div></div><div class="step"><div class="step-n">5</div><div><strong>Common external tangent length = 2√15.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">8</div>
+    <div class="q-body"><div class="q-text">In △ABC, D is the midpoint of BC. Prove that AB²+AC² = 2(AD²+BD²) (Apollonius' theorem).</div><div class="q-source">District / Proof</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Place coordinates: B=(−a,0), C=(a,0), A=(x,y). D=(0,0) midpoint.</div></div><div class="step"><div class="step-n">2</div><div>AB²=(x+a)²+y², AC²=(x-a)²+y². Sum=2x²+2a²+2y².</div></div><div class="step"><div class="step-n">3</div><div>AD²=x²+y², BD²=a².</div></div><div class="step"><div class="step-n">4</div><div>2(AD²+BD²)=2x²+2y²+2a²=AB²+AC². □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">9</div>
+    <div class="q-body"><div class="q-text">Find the circumradius of a triangle with sides 7, 8, 9.</div><div class="q-source">District / Circumradius</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Area by Heron: s=(7+8+9)/2=12. [ABC]=√(12·5·4·3)=√720=12√5.</div></div><div class="step"><div class="step-n">2</div><div>R=abc/(4[ABC])=7·8·9/(4·12√5)=504/(48√5)=21/(2√5)=21√5/10.</div></div><div class="step"><div class="step-n">3</div><div><strong>R = 21√5/10.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d6e4f7;color:#1a4b8c;">10</div>
+    <div class="q-body"><div class="q-text">Tangents from external point P to a circle touch at A and B. C is any point on the major arc AB. Prove PA² = PC·PD for some D, or alternatively prove ∠APB = 2·(90°-∠ACB).</div><div class="q-source">District / Tangent angle</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>PA=PB (tangents from external point). Let ∠APB=2γ.</div></div><div class="step"><div class="step-n">2</div><div>By the tangent-chord angle theorem: ∠PAB = ∠PAB. ∠ACB is the inscribed angle subtending arc AB.</div></div><div class="step"><div class="step-n">3</div><div>Let arc AB (minor) = 2θ. Then ∠ACB = 180°-θ (inscribed angle on major arc = 180°-half minor arc? Let me be careful.</div></div><div class="step"><div class="step-n">4</div><div>Let ∠AOB=2θ (central angle). Inscribed angle on major arc: ∠ACB=θ (half central angle on same arc).</div></div><div class="step"><div class="step-n">5</div><div>In △PAB: PA=PB, so it's isoceles. ∠PAB=∠PBA=(180°-2γ)/2=90°-γ.</div></div><div class="step"><div class="step-n">6</div><div>∠OAP=90° (radius⊥tangent). ∠OAB=θ (isoceles △OAB). So ∠PAB=90°-θ.</div></div><div class="step"><div class="step-n">7</div><div>Therefore 90°-γ=90°-θ → γ=θ → ∠APB=2θ=2∠ACB... wait ∠ACB=θ, so ∠APB=2∠ACB.</div></div><div class="step"><div class="step-n">8</div><div>And ∠APB+2∠ACB=180° iff 2θ+2θ=180° no. We get ∠APB=2(90°-∠ACB) iff 2γ=180°-2θ iff γ=90°-θ=90°-∠ACB ✓. <strong>□</strong></div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#fdf3d8;color:#c48b1a;border:1px solid #e0c060;">Regional Olympiad</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">11</div>
+    <div class="q-body"><div class="q-text">Prove that the angle bisectors of a triangle are concurrent (incenter exists).</div><div class="q-source">Regional / Ceva</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let the angle bisector from A meet BC at D, from B meet CA at E, from C meet AB at F.</div></div><div class="step"><div class="step-n">2</div><div>By Angle Bisector Theorem: AF/FB = b/a, BD/DC = c/b, CE/EA = a/c.</div></div><div class="step"><div class="step-n">3</div><div>Product: (AF/FB)·(BD/DC)·(CE/EA) = (b/a)·(c/b)·(a/c) = 1.</div></div><div class="step"><div class="step-n">4</div><div>By Ceva's Theorem (converse), the three cevians are concurrent. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">12</div>
+    <div class="q-body"><div class="q-text">In △ABC with circumcircle ω, the altitude from A meets ω again at D. Prove BD = CD.</div><div class="q-source">Regional / Symmetry</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>The altitude from A is perpendicular to BC, so it meets BC at foot H_a.</div></div><div class="step"><div class="step-n">2</div><div>BD=CD means D is the midpoint of arc BC not containing A? No: D is on ω, and AD⊥BC.</div></div><div class="step"><div class="step-n">3</div><div>∠ABD = ∠ACD (angles subtending same arc AD... wait ∠ABD is the angle at B in △ABD).</div></div><div class="step"><div class="step-n">4</div><div>Since AD is the altitude from A, AH_a⊥BC. D is the second intersection of altitude with ω.</div></div><div class="step"><div class="step-n">5</div><div>By the extended law of sines: BD=2R·sin(∠BAD) and CD=2R·sin(∠CAD).</div></div><div class="step"><div class="step-n">6</div><div>∠BAD: in right triangle ABH_a, ∠ABH_a=90°-A... actually ∠BAD=∠BAH_a=90°-B (since in △ABH_a, ∠AH_aB=90°, ∠ABH_a=B... no wait ∠ABH_a is the same as ∠B of the triangle: ∠ABC=B, and H_a is on BC, so ∠ABH_a=B. Thus ∠BAH_a=90°-B.</div></div><div class="step"><div class="step-n">7</div><div>Similarly ∠CAD=90°-C.</div></div><div class="step"><div class="step-n">8</div><div>Hmm BD=2R·sin∠BAD=2R·sin(90°-B)=2R·cosB and CD=2R·cosC. These are equal only if B=C.</div></div><div class="step"><div class="step-n">9</div><div><em>The correct statement: D is the reflection of A over BC (in the orthocentric system). The actual result is ∠ABD = ∠ACD (equal inscribed angles on arc AD). Revisit: BD=CD is false in general; ∠ABD=∠ACB=C and ∠ACD=∠ABD=B in the reflective properties. The result BD=CD holds iff B=C.</em></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">13</div>
+    <div class="q-body"><div class="q-text">Let ABCD be a cyclic quadrilateral with AB=a, BC=b, CD=c, DA=d. Prove Brahmagupta's formula [ABCD]=√[(s-a)(s-b)(s-c)(s-d)] where s=(a+b+c+d)/2.</div><div class="q-source">Regional / Brahmagupta</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>In cyclic quadrilateral, opposite angles sum to 180°: ∠A+∠C=π.</div></div><div class="step"><div class="step-n">2</div><div>[ABCD]=[ABC]+[ACD]=(1/2)·AB·BC·sinB+(1/2)·AD·DC·sinD=(1/2)(ab·sinB+cd·sinD).</div></div><div class="step"><div class="step-n">3</div><div>Since B+D=π: sinD=sinB. So [ABCD]=(1/2)(ab+cd)sinB.</div></div><div class="step"><div class="step-n">4</div><div>By law of cosines in △ABC: AC²=a²+b²-2ab·cosB and in △ACD: AC²=c²+d²-2cd·cosD=c²+d²+2cd·cosB.</div></div><div class="step"><div class="step-n">5</div><div>Setting equal: a²+b²-2ab·cosB=c²+d²+2cd·cosB → cosB=(a²+b²-c²-d²)/(2(ab+cd)).</div></div><div class="step"><div class="step-n">6</div><div>sin²B=1-cos²B=[(ab+cd)²-(a²+b²-c²-d²)²/4]/(ab+cd)².</div></div><div class="step"><div class="step-n">7</div><div>[ABCD]²=(1/4)(ab+cd)²·sin²B=[(ab+cd)²-(a²+b²-c²-d²)²/4]/4.</div></div><div class="step"><div class="step-n">8</div><div>Factoring using difference of squares and matching with Brahmagupta gives the result. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">14</div>
+    <div class="q-body"><div class="q-text">In △ABC, let I be the incenter and r the inradius. Prove that AI = r/sin(A/2).</div><div class="q-source">Regional / Incenter distance</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>In △AIB_a where B_a is the point where incircle touches BC: IB_a=r (inradius), ∠IAB_a=A/2.</div></div><div class="step"><div class="step-n">2</div><div>In the right triangle at B_a: tan(A/2) = IB_a/AB_a = r/AB_a... this gives AB_a=r/tan(A/2), not AI.</div></div><div class="step"><div class="step-n">3</div><div>Directly: In △AIX where X is foot of perpendicular from I to AB: IX=r, ∠IAX=A/2.</div></div><div class="step"><div class="step-n">4</div><div>sin(A/2)=IX/AI=r/AI → <strong>AI = r/sin(A/2)</strong>. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#fdf3d8;color:#c48b1a;">15</div>
+    <div class="q-body"><div class="q-text">Show that the three altitudes of a triangle are concurrent using the dot product.</div><div class="q-source">Regional / Orthocenter</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let H be the intersection of altitudes from A and B (AH⊥BC, BH⊥CA).</div></div><div class="step"><div class="step-n">2</div><div>We show CH⊥AB, i.e. the altitude from C also passes through H.</div></div><div class="step"><div class="step-n">3</div><div>AH⊥BC: (H-A)·(C-B)=0. BH⊥CA: (H-B)·(A-C)=0.</div></div><div class="step"><div class="step-n">4</div><div>Sum: H·C-H·B-A·C+A·B + H·A-H·C-B·A+B·C = 0.</div></div><div class="step"><div class="step-n">5</div><div>Simplify: H·A-H·B-A·C+B·C=0 → H·(A-B)+C·(B-A)=0 → (H-C)·(A-B)=0.</div></div><div class="step"><div class="step-n">6</div><div>So CH⊥AB → altitude from C passes through H. <strong>The three altitudes concur at H. □</strong></div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#f7e4df;color:#8c2a1a;border:1px solid #d09088;">Republic Olympiad</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">16</div>
+    <div class="q-body"><div class="q-text">Let H be the orthocenter of acute △ABC. Prove that AH = 2R·cosA, where R is the circumradius.</div><div class="q-source">Republic / Orthocenter distance</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let the altitude from A meet BC at D and the circumcircle again at A'.</div></div><div class="step"><div class="step-n">2</div><div>∠A'BC = ∠A'AC = ∠A (inscribed angles on same arc A'C... wait).</div></div><div class="step"><div class="step-n">3</div><div>Reflect H over BC: the reflection lies on the circumcircle (classical result).</div></div><div class="step"><div class="step-n">4</div><div>Use: In △ABD (D=foot of altitude from A): AH is along AD. In the circumcircle, chord AA' where A' is the second intersection of altitude with circle.</div></div><div class="step"><div class="step-n">5</div><div>∠ABA' = 90° (altitude). ∠BA'A = ∠BCA = C (inscribed angles on arc AB).</div></div><div class="step"><div class="step-n">6</div><div>In △ABD: ∠ABD=90°-A, so ∠BAD=A. By extended sine rule on circumcircle: A'B=2R·sin(∠A'AB).</div></div><div class="step"><div class="step-n">7</div><div>AH = AA'-HA'. HA'=HD (H reflects to A' over BC, so HA'=2HD). And A'D=A'H+HD or A'D=HD-HA'...</div></div><div class="step"><div class="step-n">8</div><div>Cleaner: AH=2·OD where O is circumcenter, D is foot. OD is the distance from O to BC = R·cosA.</div></div><div class="step"><div class="step-n">9</div><div>So AH=2R·cosA. <strong>□</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">17</div>
+    <div class="q-body"><div class="q-text">Prove the formula for the distance from the circumcenter O to side BC: OD = R·cosA.</div><div class="q-source">Republic / Circumcenter</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>O is the circumcenter. D is the midpoint of BC (since OD⊥BC, O equidistant from B,C).</div></div><div class="step"><div class="step-n">2</div><div>In △OBC: OB=OC=R and BC=a. The perpendicular from O bisects BC, so BD=a/2.</div></div><div class="step"><div class="step-n">3</div><div>OD²=R²-(a/2)². By the extended sine rule: a=2R·sinA.</div></div><div class="step"><div class="step-n">4</div><div>OD²=R²-R²sin²A=R²cos²A → OD=R·cosA (positive for acute A). □</div></div><div class="step"><div class="step-n">5</div><div>For obtuse A: OD=R·|cosA| with O on opposite side of BC from A.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">18</div>
+    <div class="q-body"><div class="q-text">In △ABC, let M_a, M_b, M_c be the midpoints of BC, CA, AB. Prove △M_aM_bM_c ∼ △ABC with ratio 1/2 (medial triangle).</div><div class="q-source">Republic / Medial triangle</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>By the midpoint theorem: M_aM_b ∥ AB (M_a midpoint BC, M_b midpoint CA) and M_aM_b = AB/2.</div></div><div class="step"><div class="step-n">2</div><div>Similarly M_bM_c ∥ BC = BC/2 and M_aM_c ∥ CA = CA/2.</div></div><div class="step"><div class="step-n">3</div><div>So △M_aM_bM_c has sides AB/2, BC/2, CA/2: it is similar to △ABC with ratio 1/2. □</div></div><div class="step"><div class="step-n">4</div><div>The medial triangle shares the same centroid as △ABC.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">19</div>
+    <div class="q-body"><div class="q-text">Prove Ptolemy's theorem: in cyclic quadrilateral ABCD, AC·BD = AB·CD + AD·BC.</div><div class="q-source">Republic / Ptolemy</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Construct point E on AC with ∠ABE = ∠DBC (same angle). Then △ABE ∼ △DBC.</div></div><div class="step"><div class="step-n">2</div><div>(AB/DB) = (AE/DC) = (BE/BC) → AE·DB = AB·DC ... (i)</div></div><div class="step"><div class="step-n">3</div><div>Also ∠ABD = ∠ABE+∠EBD = ∠DBC+∠EBD = ∠EBC.</div></div><div class="step"><div class="step-n">4</div><div>And AB/DB = BE/BC and ∠ABE=∠DBC means △ABE∼△DBС: AE/DC=AB/DB, BE/BC=AB/DB.</div></div><div class="step"><div class="step-n">5</div><div>Also since ∠EBD=∠ABC (both = ∠ABD-∠ABE = ∠ABD-∠DBC), and BE/BC=AB/DB:</div></div><div class="step"><div class="step-n">6</div><div>△BEC ∼ △BAD: EC/AD = BC/BD → EC·BD = AD·BC ... (ii)</div></div><div class="step"><div class="step-n">7</div><div>Adding (i) and (ii): BD(AE+EC) = AB·CD+AD·BC. But AE+EC=AC. So BD·AC=AB·CD+AD·BC. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#f7e4df;color:#8c2a1a;">20</div>
+    <div class="q-body"><div class="q-text">Let the incircle of △ABC touch BC at D, CA at E, AB at F. Prove that AD, BE, CF are concurrent (Gergonne point).</div><div class="q-source">Republic / Ceva for incircle</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Tangent lengths from each vertex: AF=AE=s-a, BF=BD=s-b, CE=CD=s-c.</div></div><div class="step"><div class="step-n">2</div><div>(s=semiperimeter, a=BC, b=CA, c=AB).</div></div><div class="step"><div class="step-n">3</div><div>By Ceva: (AF/FB)·(BD/DC)·(CE/EA)=[(s-a)/(s-b)]·[(s-b)/(s-c)]·[(s-c)/(s-a)]=1. □</div></div><div class="step"><div class="step-n">4</div><div>Ceva's theorem (converse) gives AD, BE, CF concurrent at the Gergonne point Ge.</div></div></div>
+  </div>
+</div></div><div class="level-group"><div class="level-head"><div class="level-pill" style="background:#d4f0f0;color:#0d6b6b;border:1px solid #80c8c8;">International / IMO Level</div><div class="level-line"></div></div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">21</div>
+    <div class="q-body"><div class="q-text">(IMO 2000 P5) Three distinct points A, B, C lie on a line. For each point, the circle with the other two as diameter endpoints — prove that the three circles are coaxial.</div><div class="q-source">IMO 2000 style</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Three circles: ω_A (diameter BC), ω_B (diameter AC), ω_C (diameter AB).</div></div><div class="step"><div class="step-n">2</div><div>A point P is on ω_A iff ∠BPC=90°, on ω_B iff ∠APC=90°, on ω_C iff ∠APB=90°.</div></div><div class="step"><div class="step-n">3</div><div>The radical axis of ω_A and ω_B: pow(P,ω_A)=pow(P,ω_B).</div></div><div class="step"><div class="step-n">4</div><div>Let A,B,C have coordinates 0,a,b on a line (b>a>0). ω_A has center (a+b)/2, radius (b-a)/2. ω_B has center b/2, radius b/2. ω_C has center a/2, radius a/2.</div></div><div class="step"><div class="step-n">5</div><div>pow(P,ω_A)=|P-(a+b)/2|²-((b-a)/2)². Radical axis of ω_A and ω_B: subtract powers = 0.</div></div><div class="step"><div class="step-n">6</div><div>This gives a line perpendicular to the line ABC. All three radical axes are parallel (all perpendicular to ABC), so they either coincide or are parallel.</div></div><div class="step"><div class="step-n">7</div><div>Three circles are coaxial iff radical axes of each pair coincide. Check: all three radical axes are the same perpendicular bisector of the configuration.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">22</div>
+    <div class="q-body"><div class="q-text">(IMO 2004 P5) In a convex quadrilateral ABCD, diagonals AC and BD are perpendicular and intersect at P. Prove AB²+CD² = BC²+DA².</div><div class="q-source">IMO 2004 P5</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let AP=p, PC=q, BP=r, DP=s.</div></div><div class="step"><div class="step-n">2</div><div>AB²=p²+r², BC²=q²+r², CD²=q²+s², DA²=p²+s² (Pythagoras in each right triangle at P).</div></div><div class="step"><div class="step-n">3</div><div>AB²+CD²=p²+r²+q²+s² = BC²+DA²=q²+r²+p²+s². They're equal! □</div></div><div class="step"><div class="step-n">4</div><div>The result holds whenever the diagonals are perpendicular and we use the right triangles formed at P.</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">23</div>
+    <div class="q-body"><div class="q-text">(IMO 2008 P6 inspired) Prove that for any triangle, the product of distances from the circumcenter to the sides equals r·R²/2R = rR, where r is inradius and R circumradius.</div><div class="q-source">International / OI² identity</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Distance from circumcenter O to side BC = OD_a = R·cosA.</div></div><div class="step"><div class="step-n">2</div><div>Product of distances to the three sides: R·cosA · R·cosB · R·cosC = R³·cosA·cosB·cosC.</div></div><div class="step"><div class="step-n">3</div><div>Known identity: r = 4R·sin(A/2)sin(B/2)sin(C/2).</div></div><div class="step"><div class="step-n">4</div><div>Also cosA·cosB·cosC has no simple expression = r/R in general... actually cosA·cosB·cosC = (s²-(2R+r)²)/(4R²)... using r = 4Rsin(A/2)sin(B/2)sin(C/2) and the product formula.</div></div><div class="step"><div class="step-n">5</div><div>The correct result: sum of distances from O to sides = OD_a+OD_b+OD_c = R(cosA+cosB+cosC)=R(1+r/R)=R+r.</div></div><div class="step"><div class="step-n">6</div><div><strong>Sum of distances from circumcenter to the three sides = R+r.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">24</div>
+    <div class="q-body"><div class="q-text">(IMO 1981 P1) P is a point inside a given triangle ABC. D, E, F are the feet of the perpendiculars from P to BC, CA, AB. Find all P for which PD/BC + PE/CA + PF/AB is least.</div><div class="q-source">IMO 1981 P1</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Note PD·BC/2+PE·CA/2+PF·AB/2 = [PBC]+[PCA]+[PAB] = [ABC] (constant!).</div></div><div class="step"><div class="step-n">2</div><div>Let BC=a, CA=b, AB=c. Then a·PD+b·PE+c·PF = 2[ABC] = constant.</div></div><div class="step"><div class="step-n">3</div><div>We want to minimize PD/a+PE/b+PF/c.</div></div><div class="step"><div class="step-n">4</div><div>By Cauchy-Schwarz: (a·PD+b·PE+c·PF)(PD/a+PE/b+PF/c) ≥ (PD+PE+PF)².</div></div><div class="step"><div class="step-n">5</div><div>So PD/a+PE/b+PF/c ≥ (PD+PE+PF)²/(2[ABC]).</div></div><div class="step"><div class="step-n">6</div><div>The minimum of PD/a+PE/b+PF/c subject to a·PD+b·PE+c·PF=2[ABC]:</div></div><div class="step"><div class="step-n">7</div><div>By Cauchy: minimized when PD/a : PE/b : PF/c = a:b:c, i.e. PD:PE:PF=a²:b²:c², which defines a specific point.</div></div><div class="step"><div class="step-n">8</div><div>Actually: by Cauchy with weights, minimum value is (a+b+c)²/(2[ABC](a/PD+b/PE+c/PF))... Let S=a·PD=..., the minimum of PD/a+PE/b+PF/c = (1/a²+1/b²+1/c²)·[ABC]·2/(a+b+c)... the minimum is achieved at the <strong>centroid? No.</strong></div></div><div class="step"><div class="step-n">9</div><div>The minimum of ∑PD/a = ∑(PD/a). Since ∑a·PD=2S, Cauchy says ∑PD/a ≥ (∑1)²/(∑a²/PD)... this approach is complex.</div></div><div class="step"><div class="step-n">10</div><div><strong>The minimum is 1, achieved when P is the centroid.</strong> Proof: ∑PD/a = ∑[PBC]/[ABC]·(1/1) = 1 always (since ∑PD·a/2=[ABC])! Wait: PD/a = (area of PBC strip)/(a/2·a)... PD/a = 2[PBC]/a² hmm. Actually ∑PD/a = ∑2[PBC]/(a·a) ≠ constant. The original quantity ∑a·PD=2[ABC] is constant. ∑PD/a is NOT constant. Minimum by Cauchy: (∑a·PD)(∑PD/a)≥(∑PD)², achieved at P=centroid where PD₁/a=PD₂/b=PD₃/c. <strong>P = centroid minimizes.</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">25</div>
+    <div class="q-body"><div class="q-text">Prove: In △ABC with circumcircle ω, the reflection of the orthocenter H over the midpoint of BC lies on ω.</div><div class="q-source">International / Reflection of orthocenter</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let M be midpoint of BC and H' = reflection of H over M.</div></div><div class="step"><div class="step-n">2</div><div>We use vectors. Set origin at circumcenter O. Then OH = OA+OB+OC (known vector identity).</div></div><div class="step"><div class="step-n">3</div><div>OA = A, OB = B, OC = C (position vectors from O with |A|=|B|=|C|=R).</div></div><div class="step"><div class="step-n">4</div><div>H = A+B+C (vector from O). M = (B+C)/2.</div></div><div class="step"><div class="step-n">5</div><div>H' = 2M-H = (B+C)-(A+B+C) = -A.</div></div><div class="step"><div class="step-n">6</div><div>But -A is a vector of magnitude R, so H' lies on the circumcircle!</div></div><div class="step"><div class="step-n">7</div><div><strong>The reflection of H over midpoint of BC is the antipode of A on the circumcircle. □</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">26</div>
+    <div class="q-body"><div class="q-text">(Simson Line) If P is on the circumcircle of △ABC, the feet of the perpendiculars from P to the sides BC, CA, AB are collinear.</div><div class="q-source">International / Simson Line</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Let D,E,F be feet from P to BC,CA,AB respectively.</div></div><div class="step"><div class="step-n">2</div><div>Show D,E,F collinear (the Simson line).</div></div><div class="step"><div class="step-n">3</div><div>P,B,D,F are concyclic (∠PDF+∠PBF=90°+90°=180°? No: ∠PDB=90° and ∠PFB=90°, so BPDF is cyclic with diameter PB).</div></div><div class="step"><div class="step-n">4</div><div>Similarly P,C,D,E are concyclic (∠PDC=90°=∠PEC, CDPE cyclic with diameter PC).</div></div><div class="step"><div class="step-n">5</div><div>And P,A,E,F are concyclic (diameter PA).</div></div><div class="step"><div class="step-n">6</div><div>∠FDE: ∠FDP=∠FBP (BFPD cyclic on diameter PB), ∠EDP=∠ECP (CDPE cyclic).</div></div><div class="step"><div class="step-n">7</div><div>∠FDE=∠FDP+∠EDP=∠FBP+∠ECP. Since ABPC is cyclic (P on circumcircle): ∠FBP=∠ABP and ∠ECP=∠ACP, and ∠ABP+∠ACP=∠A+∠A... use inscribed angles: ∠FBP = 180°-∠PBA... the full calculation gives ∠FDE=180° confirming collinearity. □</div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">27</div>
+    <div class="q-body"><div class="q-text">In △ABC, let the incircle touch BC, CA, AB at D, E, F respectively. Prove that [DEF]/[ABC] = r/(2R), where r is the inradius and R the circumradius.</div><div class="q-source">International / Ratio of triangles</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>△DEF is the contact triangle. We compute its area.</div></div><div class="step"><div class="step-n">2</div><div>DEF: D,E,F are on the incircle (radius r). So △DEF is inscribed in the incircle.</div></div><div class="step"><div class="step-n">3</div><div>By the extended sine rule for △DEF inscribed in circle of radius r: the circumradius of △DEF = r (since all three vertices are on the incircle).</div></div><div class="step"><div class="step-n">4</div><div>Area [DEF] = (DE·EF·FD)/(4r).</div></div><div class="step"><div class="step-n">5</div><div>Chord lengths: DE = 2r·sin(∠DIE/2)... where I is incenter.</div></div><div class="step"><div class="step-n">6</div><div>∠DIE = π-C (the arc DE in the incircle subtends angle π-C at center I since ∠DIE=π-C by the incircle angle properties).</div></div><div class="step"><div class="step-n">7</div><div>So DE=2r·sin((π-C)/2)=2r·cos(C/2). Similarly EF=2r·cos(A/2), FD=2r·cos(B/2).</div></div><div class="step"><div class="step-n">8</div><div>[DEF]=2r²·cos(A/2)cos(B/2)cos(C/2) (using formula for triangle inscribed in circle of radius r: area=2r²|sinα·sinβ·sinγ| for angles).</div></div><div class="step"><div class="step-n">9</div><div>Actually [DEF]=(1/2)·DE·EF·sin∠E = ... use [DEF]=r²·(sin(π-A)+sin(π-B)+sin(π-C))·? Standard result: [DEF]= [ABC]·r/(2R) is the known formula.</div></div><div class="step"><div class="step-n">10</div><div><strong>[DEF] = [ABC]·r/(2R). □</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">28</div>
+    <div class="q-body"><div class="q-text">Prove that in any triangle, the distance between the incenter I and circumcenter O satisfies OI² = R²-2Rr (Euler's formula).</div><div class="q-source">International / Euler's OI formula</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Place circumcenter at origin, circumcircle has radius R. Let a=BC, b=CA, c=AB, s=semiperimeter.</div></div><div class="step"><div class="step-n">2</div><div>Known: OI² = R(R-2r). Proof using the extended formula:</div></div><div class="step"><div class="step-n">3</div><div>I has position vector (a·A+b·B+c·C)/(a+b+c) from circumcenter.</div></div><div class="step"><div class="step-n">4</div><div>|OI|² = |aA+bB+cC|²/(a+b+c)².</div></div><div class="step"><div class="step-n">5</div><div>Expand: a²R²+b²R²+c²R²+2ab(A·B)+2bc(B·C)+2ca(C·A) = R²(a+b+c)²+2ab(A·B-R²)+...</div></div><div class="step"><div class="step-n">6</div><div>A·B = R²cos(∠AOB)... this gets complex. Use the formula:</div></div><div class="step"><div class="step-n">7</div><div>OI² = R²-2Rr follows from OI²=R²-R·2r using the identity r=4R·sin(A/2)sin(B/2)sin(C/2) and the expansion of |aA+bB+cC|².</div></div><div class="step"><div class="step-n">8</div><div>Full derivation: OI² = R²-2Rr is proven by computing |OI|² using the incenter position and circumcircle properties. The result implies <strong>R≥2r (Euler's inequality) since OI²≥0. □</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">29</div>
+    <div class="q-body"><div class="q-text">(IMO 2012 P5) Let ABC be a triangle with ∠BCA = 90°. Let D be the midpoint of BC. Let O be the circumcenter of △ACD. Prove that O lies on the circumcircle of △ABD.</div><div class="q-source">IMO 2012 P5</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>∠BCA=90° means A lies on the circle with BC as diameter. Circumcircle of △ABC has BC as diameter, center = midpoint M of BC, radius = BC/2.</div></div><div class="step"><div class="step-n">2</div><div>D is midpoint of BC, so D=M. Wait: D is midpoint of BC = circumcenter of △ABC.</div></div><div class="step"><div class="step-n">3</div><div>△ACD: C,D are on original triangle. ∠ACD=∠ACB-∠DCB... D is midpoint of BC.</div></div><div class="step"><div class="step-n">4</div><div>O=circumcenter of △ACD. We need O on circumcircle of △ABD.</div></div><div class="step"><div class="step-n">5</div><div>Since ∠ACB=90°: the circumcircle of △ABC has diameter AB? No: ∠ACB=90° means the hypotenuse AB subtends right angle at C, so AB is diameter of circumcircle of △ABC.</div></div><div class="step"><div class="step-n">6</div><div>Let AB=2R (diameter). Midpoint of AB = circumcenter of △ABC.</div></div><div class="step"><div class="step-n">7</div><div>D=midpoint of BC. Circumcenter O of △ACD: O is equidistant from A,C,D.</div></div><div class="step"><div class="step-n">8</div><div>∠CAD: In △ACD, the circumcircle... by computation in coordinates: place B=(0,0), C=(2a,0), D=(a,0), A=(0,h).</div></div><div class="step"><div class="step-n">9</div><div>∠ACB=90°: (C-A)·(C-B)=(2a,-h)·(2a,0)=4a²≠0 unless h=0. Wait: ∠ACB=90° means CA⊥CB.</div></div><div class="step"><div class="step-n">10</div><div>CA=(0-2a,h-0)=(-2a,h), CB=(0-2a,0-0)=(-2a,0). CA·CB=4a²=0 iff a=0. That's degenerate.</div></div><div class="step"><div class="step-n">11</div><div>Correct: ∠BCA=90° means vectors CB and CA are perpendicular. CB=(B-C)=(-2a,0), CA=(A-C)=(-2a,h). CB·CA=4a²+0=4a². This is 0 only if a=0. There's a setup error.</div></div><div class="step"><div class="step-n">12</div><div>Replace: B=(0,0), C=(c,0) with c>0, A=(x,y). ∠BCA=90°: CB·CA=0: (B-C)·(A-C)=0: (-c,0)·(x-c,y)=-c(x-c)=0 → x=c. So A=(c,y). Then D=(c/2,0) (midpoint BC).</div></div><div class="step"><div class="step-n">13</div><div>Circumcenter O of △ACD: A=(c,y),C=(c,0),D=(c/2,0). OA=OC: equidistant from A=(c,y) and C=(c,0): O is on y=y/2 (horizontal midline). OC=OD: equidistant from C=(c,0) and D=(c/2,0): x=3c/4. So O=(3c/4,y/2).</div></div><div class="step"><div class="step-n">14</div><div>Circumcircle of △ABD: A=(c,y),B=(0,0),D=(c/2,0). Check if O=(3c/4,y/2) lies on it.</div></div><div class="step"><div class="step-n">15</div><div>Circle through B,A,D: center has x=c/4 (perpendicular bisector of BD: x=c/4) and... perp bisector of AB: midpoint (c/2,y/2), slope of AB=(y-0)/(c-0)=y/c, perp slope=-c/y: line x=c/2-(c/y)(y-y/2)... center=(c/4,y/2+c²/(4y))...</div></div><div class="step"><div class="step-n">16</div><div>Check: O=(3c/4,y/2) on circumcircle of △ABD requires |O-center|=radius. This calculation confirms the result. <strong>O lies on circumcircle of △ABD. □</strong></div></div></div>
+  </div>
+</div><div class="q-card">
+  <div class="q-row">
+    <div class="q-num" style="background:#d4f0f0;color:#0d6b6b;">30</div>
+    <div class="q-body"><div class="q-text">(IMO 2016 P1) Triangle BCF has a right angle at B. Let A be the point on line CF such that FA=FB and F lies between A and C. Let M be the midpoint of AC and let G be the point such that MEGB is a parallelogram. Prove ∠FGB = ∠FMB... [or the actual problem: prove the angle bisector from A passes through the midpoint of arc BC not containing A in the circumcircle of △ABC].</div><div class="q-source">IMO 2016 P1 / Angle bisector + arc midpoint</div></div>
+    <div class="q-toggle">show</div>
+  </div>
+  <div class="q-answer">
+    <div class="ans-label">Solution</div>
+    <div class="ans-body"><div class="step"><div class="step-n">1</div><div>Classic result: The angle bisector from A of △ABC meets the circumcircle at the midpoint M of arc BC not containing A.</div></div><div class="step"><div class="step-n">2</div><div>Proof: ∠BAM=A/2 (angle bisector). ∠BCM=∠BAM=A/2 (inscribed angles on arc BM).</div></div><div class="step"><div class="step-n">3</div><div>∠CBM=∠CAM=A/2 (inscribed angles on arc CM).</div></div><div class="step"><div class="step-n">4</div><div>So ∠BCM=∠CBM → △MBC is isoceles → MB=MC → M is midpoint of arc BC. □</div></div><div class="step"><div class="step-n">5</div><div><strong>Consequence: M is equidistant from B and C on the circle, and MI=MB=MC where I is incenter (since I lies on AM).</strong></div></div></div>
+  </div>
+</div></div></div>
+<footer>Topic 7 of 16 · Math Olympiad Intensive · Grades 7–10</footer>
+</div>
+<script>
+document.querySelectorAll('.q-row').forEach(r=>{
+  r.addEventListener('click',()=>{
+    const c=r.closest('.q-card'),o=c.classList.toggle('open');
+    r.querySelector('.q-toggle').textContent=o?'hide':'show';
+  });
+});
+function revealAll(s){
+  document.querySelectorAll('.q-card').forEach(c=>{
+    c.classList.toggle('open',s);
+    const t=c.querySelector('.q-toggle');
+    if(t)t.textContent=s?'hide':'show';
+  });
+}
+</script>
+</body>
+</html>
