@@ -153,5 +153,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 12,
+  "cat": "geo",
+  "title": {
+   "ru": "Координатный метод",
+   "en": "Coordinate geometry"
+  },
+  "sub": {
+   "ru": "Расстояния, прямые, окружности и площади в координатах — и умение выбрать систему так, чтобы задача стала вычислением.",
+   "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic."
+  },
+  "problems": 20,
+  "sections": 4
  }
 ];
