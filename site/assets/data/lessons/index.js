@@ -181,5 +181,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 14,
+  "cat": "comb",
+  "title": {
+   "ru": "Принцип Дирихле",
+   "en": "The pigeonhole principle"
+  },
+  "sub": {
+   "ru": "Самое простое утверждение в математике — и одно из самых сильных: как выбрать «клетки» так, чтобы задача решилась сама.",
+   "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
