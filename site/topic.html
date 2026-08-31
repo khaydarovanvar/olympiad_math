@@ -35,6 +35,7 @@
     <div class="nav-right">
       <nav class="nav-links" aria-label="Main">
         <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
         <a href="index.html#topics" class="on">Topics</a>
         <a href="library.html">Library</a>
         <a href="index.html#path">Study path</a>
@@ -53,6 +54,7 @@
       <div class="m-item"><a class="m-link" href="index.html" style="--i:0"><span class="m-num">01</span>Home</a></div>
       <div class="m-item"><a class="m-link" href="index.html#branches" style="--i:1"><span class="m-num">02</span>Four branches</a></div>
       <div class="m-item"><a class="m-link" href="index.html#topics" style="--i:2"><span class="m-num">03</span>All 16 topics</a></div>
+      <div class="m-item"><a class="m-link" href="lessons.html" style="--i:6"><span class="m-num">07</span>Lessons</a></div>
       <div class="m-item"><a class="m-link" href="library.html" style="--i:3"><span class="m-num">04</span>Resource library</a></div>
       <div class="m-item"><a class="m-link" href="index.html#path" style="--i:4"><span class="m-num">05</span>Study path</a></div>
       <div class="m-item"><a class="m-link" href="index.html#guides" style="--i:5"><span class="m-num">06</span>Theory guides</a></div>
@@ -118,9 +120,11 @@
 </footer>
 
 <script src="assets/data/topics.js"></script>
+<script src="assets/data/lessons/index.js"></script>
 <script>
 (function () {
   var GUIDE = { 1: 'theory/topic-01.html', 6: 'theory/topic-06.html', 7: 'theory/topic-07.html' };
+  var HAS_LESSON = (window.LESSON_INDEX || []).map(function (e) { return e.n; });
   var KIND = {
     theory: ['Theory', 'Start here. Read one of these properly before you touch a problem set.'],
     video:  ['Video', 'For the step that will not sit still on the page — not for the whole topic.'],
@@ -165,14 +169,18 @@
   /* ---- body ---- */
   var html = '<div class="tip-box" data-reveal><b>Why it matters.</b> ' + esc(t.tip) + '</div>';
 
-  if (GUIDE[t.n]) {
+  if (HAS_LESSON.indexOf(t.n) > -1 || GUIDE[t.n]) {
     html += '<div class="band" data-reveal style="margin:2rem 0 2.6rem">' +
       '<div class="band-glow" aria-hidden="true"></div>' +
-      '<div><h2>This topic is written out in full</h2>' +
-      '<p>Complete theory with every proof, worked examples and graded competition problems — ' +
-      'before you go shopping in the resource list below.</p></div>' +
-      '<div class="hero-ctas"><a class="btn" href="' + GUIDE[t.n] +
-      '">Open the guide <span class="arr">→</span></a></div></div>';
+      '<div><h2>There is a full lesson for this topic</h2>' +
+      '<p>Complete theory with every proof, worked examples and problems from real ' +
+      'olympiads — in Russian and English — before you go shopping in the list below.</p></div>' +
+      '<div class="hero-ctas">' +
+      (HAS_LESSON.indexOf(t.n) > -1
+        ? '<a class="btn" href="lesson.html?t=' + t.n + '">Open the lesson <span class="arr">→</span></a>'
+        : '') +
+      (GUIDE[t.n] ? '<a class="btn btn--ghost" href="' + GUIDE[t.n] + '">Theory guide</a>' : '') +
+      '</div></div>';
   }
 
   t.groups.forEach(function (g, i) {
