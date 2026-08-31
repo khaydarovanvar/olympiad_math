@@ -139,5 +139,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 11,
+  "cat": "geo",
+  "title": {
+   "ru": "Окружности",
+   "en": "Circles"
+  },
+  "sub": {
+   "ru": "Вписанный угол, касательные, вписанные и описанные четырёхугольники, степень точки и теорема Птолемея.",
+   "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem."
+  },
+  "problems": 20,
+  "sections": 5
  }
 ];
