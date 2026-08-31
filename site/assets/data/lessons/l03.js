@@ -97,6 +97,154 @@ window.LESSONS[3] = {
       "ru": "Остаток $2$",
       "en": "The remainder is $2$"
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Арифметика сравнений корректна",
+      "en": "Congruences respect arithmetic"
+     },
+     "text": {
+      "ru": "Если $a\\equiv b$ и $c\\equiv d$ по модулю $m$, то $$a+c\\equiv b+d,\\qquad a-c\\equiv b-d,\\qquad ac\\equiv bd\\pmod m .$$ Следовательно $a^{n}\\equiv b^{n}$ при любом натуральном $n$, и вообще $P(a)\\equiv P(b)$ для любого многочлена $P$ с целыми коэффициентами.",
+      "en": "If $a\\equiv b$ and $c\\equiv d$ modulo $m$ then $$a+c\\equiv b+d,\\qquad a-c\\equiv b-d,\\qquad ac\\equiv bd\\pmod m .$$ Consequently $a^{n}\\equiv b^{n}$ for every positive integer $n$, and more generally $P(a)\\equiv P(b)$ for any polynomial $P$ with integer coefficients."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "По определению $m\\mid a-b$ и $m\\mid c-d$.\n\n**Сложение.** $$(a+c)-(b+d)=(a-b)+(c-d)$$ — сумма двух кратных $m$, значит кратна $m$ ✓ Вычитание аналогично.\n\n**Умножение.** Хитрость в том, чтобы разность разложить: $$ac-bd=ac-bc+bc-bd=c(a-b)+b(c-d).$$ Оба слагаемых кратны $m$ ✓\n\n**Степени.** Индукция: из $a^{n}\\equiv b^{n}$ и $a\\equiv b$ умножением получаем $a^{n+1}\\equiv b^{n+1}$ ✓\n\n**Многочлены.** Каждый одночлен $c_ka^{k}$ сравним с $c_kb^{k}$ по доказанному, и остаётся сложить. $\\blacksquare$",
+      "en": "By definition $m\\mid a-b$ and $m\\mid c-d$.\n\n**Addition.** $$(a+c)-(b+d)=(a-b)+(c-d)$$ is a sum of two multiples of $m$ ✓ Subtraction is the same.\n\n**Multiplication.** The trick is to split the difference: $$ac-bd=ac-bc+bc-bd=c(a-b)+b(c-d),$$ and both terms are multiples of $m$ ✓\n\n**Powers.** Induction: from $a^{n}\\equiv b^{n}$ and $a\\equiv b$, multiplying gives $a^{n+1}\\equiv b^{n+1}$ ✓\n\n**Polynomials.** Each monomial $c_ka^{k}$ is congruent to $c_kb^{k}$ by the above; add them up. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Именно последний пункт делает сравнения таким мощным инструментом: чтобы проверить утверждение о многочлене для **всех** целых чисел, достаточно проверить его для $m$ остатков. Бесконечная задача становится конечной.",
+      "en": "That last point is what makes congruences so powerful: to check a polynomial statement for **all** integers it suffices to check it for $m$ residues. An infinite task becomes a finite one."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Линейные сравнения и обратные элементы",
+    "en": "Linear congruences and inverses"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Складывать и умножать по модулю мы умеем. А что значит **разделить**? Ответ на этот вопрос — теория линейных сравнений, и она полностью повторяет историю с уравнением $ax+by=c$.",
+      "en": "Adding and multiplying modulo $m$ is settled. But what does it mean to **divide**? The answer is the theory of linear congruences, and it repeats the story of the equation $ax+by=c$ word for word."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Критерий разрешимости",
+      "en": "When a linear congruence is solvable"
+     },
+     "text": {
+      "ru": "Пусть $d=\\gcd(a,m)$. Сравнение $$ax\\equiv b\\pmod m$$ имеет решение **тогда и только тогда**, когда $d\\mid b$. В этом случае решений ровно $d$ штук по модулю $m$, и они образуют один класс по модулю $\\tfrac md$.",
+      "en": "Let $d=\\gcd(a,m)$. The congruence $$ax\\equiv b\\pmod m$$ is solvable **if and only if** $d\\mid b$. In that case it has exactly $d$ solutions modulo $m$, forming a single class modulo $\\tfrac md$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Сравнение $ax\\equiv b\\pmod m$ по определению означает, что $m\\mid ax-b$, то есть что найдётся целое $y$ с $$ax-b=my\\quad\\Longleftrightarrow\\quad ax-my=b .$$\n\nЭто линейное уравнение в целых числах, и по известному критерию оно разрешимо ровно тогда, когда $\\gcd(a,m)\\mid b$ ✓\n\n**Сколько решений.** Пусть $x_0$ — одно решение. Все решения уравнения даются формулой $$x=x_0+\\frac md\\,t,\\qquad t\\in\\mathbb{Z} .$$ По модулю $m$ различными оказываются те из них, у которых $t$ пробегает $0,1,\\dots,d-1$: дальше значения повторяются, ведь сдвиг на $d\\cdot\\tfrac md=m$ ничего не меняет.\n\nЗначит решений ровно $d$, и все они сравнимы между собой по модулю $\\tfrac md$. $\\blacksquare$",
+      "en": "By definition $ax\\equiv b\\pmod m$ says $m\\mid ax-b$, i.e. that some integer $y$ satisfies $$ax-b=my\\quad\\Longleftrightarrow\\quad ax-my=b .$$\n\nThis is a linear equation in integers, solvable exactly when $\\gcd(a,m)\\mid b$ ✓\n\n**How many solutions.** Let $x_0$ be one. All solutions of the equation are $$x=x_0+\\frac md\\,t,\\qquad t\\in\\mathbb{Z} .$$ Modulo $m$ the distinct ones come from $t=0,1,\\dots,d-1$: beyond that the values repeat, since a shift by $d\\cdot\\tfrac md=m$ changes nothing.\n\nSo there are exactly $d$ solutions, all congruent to one another modulo $\\tfrac md$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Обратный элемент",
+      "en": "Modular inverse"
+     },
+     "text": {
+      "ru": "Число $a^{-1}$ называется **обратным** к $a$ по модулю $m$, если $$a\\cdot a^{-1}\\equiv1\\pmod m .$$",
+      "en": "A number $a^{-1}$ is an **inverse** of $a$ modulo $m$ if $$a\\cdot a^{-1}\\equiv1\\pmod m .$$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Когда обратный существует",
+      "en": "When an inverse exists"
+     },
+     "text": {
+      "ru": "Обратный к $a$ по модулю $m$ существует **тогда и только тогда**, когда $\\gcd(a,m)=1$; при этом он единствен по модулю $m$.",
+      "en": "An inverse of $a$ modulo $m$ exists **if and only if** $\\gcd(a,m)=1$, and it is then unique modulo $m$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Существование.** Это частный случай предыдущей теоремы при $b=1$: сравнение $ax\\equiv1$ разрешимо ровно тогда, когда $\\gcd(a,m)\\mid1$, то есть когда $\\gcd(a,m)=1$.\n\n**Единственность.** Пусть $au\\equiv1$ и $av\\equiv1$. Умножим первое на $v$: $$v\\equiv v(au)=(av)u\\equiv u\\pmod m . \\qquad\\blacksquare$$",
+      "en": "**Existence.** A special case of the previous theorem with $b=1$: the congruence $ax\\equiv1$ is solvable exactly when $\\gcd(a,m)\\mid1$, i.e. $\\gcd(a,m)=1$.\n\n**Uniqueness.** Suppose $au\\equiv1$ and $av\\equiv1$. Multiply the first by $v$: $$v\\equiv v(au)=(av)u\\equiv u\\pmod m . \\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Закон сокращения",
+      "en": "The cancellation law"
+     },
+     "text": {
+      "ru": "Если $\\gcd(c,m)=1$, то из $ca\\equiv cb\\pmod m$ следует $a\\equiv b\\pmod m$. В общем случае из $ca\\equiv cb\\pmod m$ следует лишь $$a\\equiv b\\ \\left(\\bmod\\ \\frac m{\\gcd(c,m)}\\right).$$",
+      "en": "If $\\gcd(c,m)=1$ then $ca\\equiv cb\\pmod m$ implies $a\\equiv b\\pmod m$. In general $ca\\equiv cb\\pmod m$ only gives $$a\\equiv b\\ \\left(\\bmod\\ \\frac m{\\gcd(c,m)}\\right).$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Условие $ca\\equiv cb$ означает $m\\mid c(a-b)$. Обозначим $d=\\gcd(c,m)$ и запишем $c=dc_1$, $m=dm_1$, где $\\gcd\\left(c_1,m_1\\right)=1$.\n\nТогда $dm_1\\mid dc_1(a-b)$, то есть $m_1\\mid c_1(a-b)$. Так как $\\gcd\\left(c_1,m_1\\right)=1$, множитель $c_1$ можно выбросить: $$m_1\\mid a-b ,$$ то есть $a\\equiv b\\pmod{m_1}$, где $m_1=\\tfrac md$.\n\nПри $d=1$ получаем $m_1=m$ — первое утверждение. $\\blacksquare$",
+      "en": "The hypothesis $ca\\equiv cb$ says $m\\mid c(a-b)$. Put $d=\\gcd(c,m)$ and write $c=dc_1$, $m=dm_1$ with $\\gcd\\left(c_1,m_1\\right)=1$.\n\nThen $dm_1\\mid dc_1(a-b)$, i.e. $m_1\\mid c_1(a-b)$. As $\\gcd\\left(c_1,m_1\\right)=1$ the factor $c_1$ drops out: $$m_1\\mid a-b ,$$ that is $a\\equiv b\\pmod{m_1}$ with $m_1=\\tfrac md$.\n\nFor $d=1$ this gives $m_1=m$, the first statement. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "Вот классическая ловушка: $$6\\equiv16\\pmod{10} ,$$ но сократить на $2$ **нельзя**: $3\\not\\equiv8\\pmod{10}$. Модуль обязан уменьшиться: $3\\equiv8\\pmod5$ ✓ Прежде чем «делить» сравнение, всегда проверяйте $\\gcd$ с модулем.",
+      "en": "A classic trap: $$6\\equiv16\\pmod{10} ,$$ but one may **not** cancel the $2$: $3\\not\\equiv8\\pmod{10}$. The modulus must shrink: $3\\equiv8\\pmod5$ ✓ Before \"dividing\" a congruence, always check the gcd with the modulus."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Решите сравнение $14x\\equiv30\\pmod{100}$.",
+      "en": "Solve $14x\\equiv30\\pmod{100}$."
+     },
+     "steps": {
+      "ru": [
+       "$d=\\gcd(14,100)=2$, и $2\\mid30$ — решения есть, и их будет ровно $2$ по модулю $100$.",
+       "Сократим всё сравнение вместе с модулем на $2$: $\\ 7x\\equiv15\\pmod{50}$.",
+       "Теперь $\\gcd(7,50)=1$, значит есть обратный элемент. Подберём его: $7\\cdot43=301=6\\cdot50+1$, значит $7^{-1}\\equiv43\\pmod{50}$.",
+       "Умножаем: $x\\equiv43\\cdot15=645\\equiv645-12\\cdot50=45\\pmod{50}$.",
+       "По модулю $100$ это даёт два решения: $x\\equiv45$ и $x\\equiv95$.",
+       "Проверка: $14\\cdot45=630=6\\cdot100+30$ ✓ и $14\\cdot95=1330=13\\cdot100+30$ ✓"
+      ],
+      "en": [
+       "$d=\\gcd(14,100)=2$ and $2\\mid30$, so solutions exist — exactly $2$ of them modulo $100$.",
+       "Cancel the whole congruence, modulus included, by $2$: $\\ 7x\\equiv15\\pmod{50}$.",
+       "Now $\\gcd(7,50)=1$, so an inverse exists: $7\\cdot43=301=6\\cdot50+1$, hence $7^{-1}\\equiv43\\pmod{50}$.",
+       "Multiply: $x\\equiv43\\cdot15=645\\equiv45\\pmod{50}$.",
+       "Modulo $100$ this gives two solutions: $x\\equiv45$ and $x\\equiv95$.",
+       "Check: $14\\cdot45=630=6\\cdot100+30$ ✓ and $14\\cdot95=1330=13\\cdot100+30$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$x\\equiv45$ и $x\\equiv95\\pmod{100}$.",
+      "en": "$x\\equiv45$ and $x\\equiv95\\pmod{100}$."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Обратный элемент находят двумя способами: **обратным ходом алгоритма Евклида** (всегда работает) или **по теореме Эйлера**: $$a^{-1}\\equiv a^{\\varphi(m)-1}\\pmod m ,$$ поскольку $a\\cdot a^{\\varphi(m)-1}=a^{\\varphi(m)}\\equiv1$. Второй способ короче записывается, первый быстрее считается.",
+      "en": "There are two ways to find an inverse: **running the Euclidean algorithm backwards** (always works), or **Euler’s theorem**: $$a^{-1}\\equiv a^{\\varphi(m)-1}\\pmod m ,$$ since $a\\cdot a^{\\varphi(m)-1}=a^{\\varphi(m)}\\equiv1$. The second is shorter to write, the first faster to compute."
+     }
     }
    ]
   },
@@ -315,6 +463,406 @@ window.LESSONS[3] = {
      "text": {
       "ru": "Ферма даёт показатель $p-1$, но настоящий период может быть **меньше**: он всегда делит $p-1$. Так, $2^3\\equiv1\\pmod 7$, хотя Ферма обещает лишь $2^6\\equiv1$. Ищите короткий цикл руками — считать станет легче.",
       "en": "Fermat gives the exponent $p-1$, but the true period may be **shorter**: it always divides $p-1$. For instance $2^3\\equiv1\\pmod 7$, although Fermat only promises $2^6\\equiv1$. Look for the short cycle by hand — the arithmetic gets easier."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Теорема Эйлера",
+      "en": "Euler’s theorem"
+     },
+     "text": {
+      "ru": "Если $\\gcd(a,m)=1$, то $$a^{\\varphi(m)}\\equiv1\\pmod m ,$$ где $\\varphi(m)$ — количество чисел от $1$ до $m$, взаимно простых с $m$.",
+      "en": "If $\\gcd(a,m)=1$ then $$a^{\\varphi(m)}\\equiv1\\pmod m ,$$ where $\\varphi(m)$ counts the integers from $1$ to $m$ coprime to $m$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Пусть $r_1,\\dots,r_{\\varphi(m)}$ — все вычеты, взаимно простые с $m$. Умножение на $a$ переставляет их: каждое $ar_i$ взаимно просто с $m$, и из $ar_i\\equiv ar_j$ по закону сокращения следует $r_i=r_j$.\n\nПеремножив весь набор, получаем $$a^{\\varphi(m)}\\prod_i r_i\\equiv\\prod_i r_i\\pmod m ,$$ а произведение $\\prod r_i$ взаимно просто с $m$ и потому сокращается: $$a^{\\varphi(m)}\\equiv1\\pmod m . \\qquad\\blacksquare$$",
+      "en": "Let $r_1,\\dots,r_{\\varphi(m)}$ be the residues coprime to $m$. Multiplication by $a$ permutes them: each $ar_i$ is coprime to $m$, and $ar_i\\equiv ar_j$ forces $r_i=r_j$ by the cancellation law.\n\nMultiplying the whole set, $$a^{\\varphi(m)}\\prod_i r_i\\equiv\\prod_i r_i\\pmod m ,$$ and $\\prod r_i$ is coprime to $m$, hence cancels: $$a^{\\varphi(m)}\\equiv1\\pmod m . \\qquad\\blacksquare$$"
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Малая теорема Ферма — частный случай при простом $m=p$, ведь тогда $\\varphi(p)=p-1$. Теорема Эйлера работает и для составных модулей, а именно они чаще всего встречаются в задачах про последние цифры ($m=10$, $100$, $1000$).",
+      "en": "Fermat’s little theorem is the special case $m=p$ prime, where $\\varphi(p)=p-1$. Euler’s version also handles composite moduli — and those are exactly what \"last digits\" problems need ($m=10$, $100$, $1000$)."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Найдите последнюю цифру числа $7^{7^{7}}$.",
+      "en": "Find the last digit of $7^{7^{7}}$."
+     },
+     "steps": {
+      "ru": [
+       "Нужен остаток по модулю $10$; $\\varphi(10)=4$, и $\\gcd(7,10)=1$, значит $7^{4}\\equiv1\\pmod{10}$.",
+       "Значит достаточно знать показатель $7^{7}$ по модулю $4$.",
+       "$7\\equiv-1\\pmod4$, поэтому $7^{7}\\equiv(-1)^{7}=-1\\equiv3\\pmod4$.",
+       "Следовательно $7^{7^{7}}\\equiv7^{3}\\pmod{10}$.",
+       "$7^{3}=343$, последняя цифра $3$."
+      ],
+      "en": [
+       "We need the residue mod $10$; $\\varphi(10)=4$ and $\\gcd(7,10)=1$, so $7^{4}\\equiv1\\pmod{10}$.",
+       "So it suffices to know the exponent $7^{7}$ modulo $4$.",
+       "$7\\equiv-1\\pmod4$, hence $7^{7}\\equiv-1\\equiv3\\pmod4$.",
+       "Therefore $7^{7^{7}}\\equiv7^{3}\\pmod{10}$.",
+       "$7^{3}=343$, whose last digit is $3$."
+      ]
+     },
+     "ans": {
+      "ru": "Последняя цифра $3$.",
+      "en": "The last digit is $3$."
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "В «башнях степеней» показатель приводят по модулю $\\varphi(m)$, а **не** по модулю $m$. Это самая частая ошибка в таких задачах. И приём законен лишь при $\\gcd(a,m)=1$: например, для $2^{2^{n}}$ по модулю $10$ так рассуждать нельзя.",
+      "en": "In a tower of exponents the exponent is reduced modulo $\\varphi(m)$, **not** modulo $m$. That is the commonest mistake in such problems. And the move is legitimate only when $\\gcd(a,m)=1$: for $2^{2^{n}}$ modulo $10$, for instance, it does not apply."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Китайская теорема об остатках",
+    "en": "The Chinese remainder theorem"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Часто про число известны его остатки по нескольким модулям сразу. Китайская теорема говорит, что если модули попарно взаимно просты, то эти сведения **полностью** определяют число по модулю их произведения — и что любой набор остатков достижим.",
+      "en": "Often one knows a number’s remainders modulo several moduli at once. The Chinese remainder theorem says that if the moduli are pairwise coprime, this information determines the number **completely** modulo their product — and that every combination of remainders occurs."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Китайская теорема об остатках",
+      "en": "The Chinese remainder theorem"
+     },
+     "text": {
+      "ru": "Пусть $m_1,m_2,\\dots,m_k$ попарно взаимно просты и $M=m_1m_2\\cdots m_k$. Тогда для любых $a_1,\\dots,a_k$ система $$x\\equiv a_1\\pmod{m_1},\\quad x\\equiv a_2\\pmod{m_2},\\quad\\dots,\\quad x\\equiv a_k\\pmod{m_k}$$ имеет решение, и оно единственно по модулю $M$.",
+      "en": "Let $m_1,\\dots,m_k$ be pairwise coprime with $M=m_1\\cdots m_k$. Then for any $a_1,\\dots,a_k$ the system $$x\\equiv a_1\\pmod{m_1},\\quad \\dots,\\quad x\\equiv a_k\\pmod{m_k}$$ has a solution, unique modulo $M$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Единственность.** Пусть $x$ и $y$ — два решения. Тогда $m_i\\mid x-y$ при каждом $i$. Модули попарно взаимно просты, поэтому их произведение тоже делит разность: $M\\mid x-y$, то есть $x\\equiv y\\pmod M$ ✓\n\n**Существование (явная формула).** Для каждого $i$ положим $$M_i=\\frac M{m_i}=\\prod_{j\\ne i}m_j .$$ Число $M_i$ взаимно просто с $m_i$: любой общий простой делитель делил бы $m_i$ и какое-то $m_j$, что противоречит попарной взаимной простоте. Значит существует обратный $N_i$ с $$M_iN_i\\equiv1\\pmod{m_i} .$$\n\nПоложим $$x=\\sum_{i=1}^{k}a_i M_i N_i .$$\n\nПроверим $i$-е сравнение. Все слагаемые с номером $j\\ne i$ содержат множитель $m_i$ (он входит в $M_j$), значит по модулю $m_i$ они исчезают. Остаётся $$x\\equiv a_iM_iN_i\\equiv a_i\\cdot1=a_i\\pmod{m_i} \\quad\\checkmark$$\n\nЗначит решение построено. $\\blacksquare$",
+      "en": "**Uniqueness.** Let $x,y$ be two solutions. Then $m_i\\mid x-y$ for every $i$. The moduli are pairwise coprime, so their product divides the difference too: $M\\mid x-y$, i.e. $x\\equiv y\\pmod M$ ✓\n\n**Existence (an explicit formula).** For each $i$ put $$M_i=\\frac M{m_i}=\\prod_{j\\ne i}m_j .$$ The number $M_i$ is coprime to $m_i$: a common prime divisor would divide $m_i$ and some $m_j$, contradicting pairwise coprimality. So there is an inverse $N_i$ with $$M_iN_i\\equiv1\\pmod{m_i} .$$\n\nSet $$x=\\sum_{i=1}^{k}a_i M_i N_i .$$\n\nCheck the $i$-th congruence. Every term with $j\\ne i$ contains the factor $m_i$ (it sits inside $M_j$), so it vanishes mod $m_i$. What is left is $$x\\equiv a_iM_iN_i\\equiv a_i\\pmod{m_i} \\quad\\checkmark$$\n\nThe solution is built. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Найдите наименьшее натуральное $x$ с $x\\equiv2\\pmod3$, $x\\equiv3\\pmod5$, $x\\equiv2\\pmod7$.",
+      "en": "Find the least positive $x$ with $x\\equiv2\\pmod3$, $x\\equiv3\\pmod5$, $x\\equiv2\\pmod7$."
+     },
+     "steps": {
+      "ru": [
+       "Модули $3,5,7$ попарно взаимно просты, $M=105$; решение единственно по модулю $105$.",
+       "**Приём попроще.** Первое и третье условия дают $3\\mid x-2$ и $7\\mid x-2$, значит $21\\mid x-2$, то есть $x\\equiv2\\pmod{21}$.",
+       "Ищем среди $2,\\ 23,\\ 44,\\ 65,\\ 86$ то, что даёт остаток $3$ по модулю $5$.",
+       "Остатки: $2,\\ 3,\\ 4,\\ 0,\\ 1$ — подходит $x=23$.",
+       "Проверка: $23=3\\cdot7+2$ ✓, $23=5\\cdot4+3$ ✓, $23=7\\cdot3+2$ ✓"
+      ],
+      "en": [
+       "The moduli $3,5,7$ are pairwise coprime with $M=105$; the solution is unique mod $105$.",
+       "**A shortcut.** The first and third conditions give $3\\mid x-2$ and $7\\mid x-2$, hence $21\\mid x-2$, i.e. $x\\equiv2\\pmod{21}$.",
+       "Look through $2,\\ 23,\\ 44,\\ 65,\\ 86$ for one leaving remainder $3$ mod $5$.",
+       "Their residues are $2,\\ 3,\\ 4,\\ 0,\\ 1$ — so $x=23$.",
+       "Check: $23=3\\cdot7+2$ ✓, $23=5\\cdot4+3$ ✓, $23=7\\cdot3+2$ ✓"
+      ]
+     },
+     "ans": {
+      "ru": "$x=23$; все решения — $x\\equiv23\\pmod{105}$.",
+      "en": "$x=23$; all solutions are $x\\equiv23\\pmod{105}$."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Найдите последние две цифры числа $3^{1000}$, разложив задачу по модулям $4$ и $25$.",
+      "en": "Find the last two digits of $3^{1000}$ by splitting the modulus $100$ into $4$ and $25$."
+     },
+     "steps": {
+      "ru": [
+       "$100=4\\cdot25$, и $\\gcd(4,25)=1$ — китайская теорема применима.",
+       "**По модулю $4$:** $3\\equiv-1$, значит $3^{1000}\\equiv(-1)^{1000}=1$.",
+       "**По модулю $25$:** $\\varphi(25)=20$, и по теореме Эйлера $3^{20}\\equiv1$; так как $20\\mid1000$, получаем $3^{1000}\\equiv1$.",
+       "Ищем $x$ с $x\\equiv1\\pmod4$ и $x\\equiv1\\pmod{25}$.",
+       "Оба условия выполняет $x\\equiv1\\pmod{100}$, и по единственности других решений нет."
+      ],
+      "en": [
+       "$100=4\\cdot25$ with $\\gcd(4,25)=1$, so the theorem applies.",
+       "**Mod $4$:** $3\\equiv-1$, so $3^{1000}\\equiv(-1)^{1000}=1$.",
+       "**Mod $25$:** $\\varphi(25)=20$, and Euler gives $3^{20}\\equiv1$; since $20\\mid1000$, $3^{1000}\\equiv1$.",
+       "We need $x\\equiv1\\pmod4$ and $x\\equiv1\\pmod{25}$.",
+       "Both hold for $x\\equiv1\\pmod{100}$, and by uniqueness there is nothing else."
+      ]
+     },
+     "ans": {
+      "ru": "Оканчивается на $01$.",
+      "en": "It ends in $01$."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Китайская теорема — это **стратегия разложения**: трудную задачу по составному модулю разбивают на лёгкие по степеням простых, решают по отдельности и собирают обратно. Так считают последние цифры, так устроены быстрые алгоритмы арифметики больших чисел.",
+      "en": "The Chinese remainder theorem is a **divide-and-conquer strategy**: a hard question modulo a composite number splits into easy ones modulo prime powers, solved separately and reassembled. That is how last digits are computed and how fast big-number arithmetic works."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "**Условие попарной взаимной простоты существенно.** Система $$x\\equiv1\\pmod2,\\qquad x\\equiv0\\pmod4$$ решений не имеет: первое требует нечётности, второе — чётности. Когда модули не взаимно просты, система разрешима лишь при условии согласованности: $\\gcd\\left(m_i,m_j\\right)\\mid a_i-a_j$ для всех пар.",
+      "en": "**Pairwise coprimality matters.** The system $$x\\equiv1\\pmod2,\\qquad x\\equiv0\\pmod4$$ has no solution: the first demands an odd number, the second an even one. For non-coprime moduli the system is solvable exactly under the compatibility condition $\\gcd\\left(m_i,m_j\\right)\\mid a_i-a_j$ for every pair."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Порядок вычета: почему степени зацикливаются",
+    "en": "The order of a residue: why powers cycle"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Мы видели, что последние цифры степеней повторяются с некоторым периодом. Теорема Эйлера объясняет, **почему** период существует. Понятие порядка объясняет, **чему именно** он равен.",
+      "en": "We have seen that the last digits of powers repeat with some period. Euler’s theorem explains **why** a period exists. The notion of order explains **what** it is."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Порядок вычета",
+      "en": "Order of a residue"
+     },
+     "text": {
+      "ru": "Пусть $\\gcd(a,m)=1$. **Порядком** $a$ по модулю $m$ называется наименьшее натуральное $k$ с $$a^{k}\\equiv1\\pmod m .$$ Обозначение: $\\operatorname{ord}_m(a)$.",
+      "en": "Let $\\gcd(a,m)=1$. The **order** of $a$ modulo $m$ is the least positive $k$ with $$a^{k}\\equiv1\\pmod m ,$$ written $\\operatorname{ord}_m(a)$."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Порядок существует: по теореме Эйлера показатель $\\varphi(m)$ уже годится, а значит непустое множество подходящих показателей имеет наименьший элемент.",
+      "en": "The order exists: Euler’s theorem shows the exponent $\\varphi(m)$ already works, so the non-empty set of valid exponents has a least element."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Порядок делит показатель",
+      "en": "The order divides every exponent that works"
+     },
+     "text": {
+      "ru": "Пусть $d=\\operatorname{ord}_m(a)$. Тогда $$a^{n}\\equiv1\\pmod m\\quad\\Longleftrightarrow\\quad d\\mid n .$$ В частности $d\\mid\\varphi(m)$, а при простом модуле $p$ — $d\\mid p-1$.",
+      "en": "Let $d=\\operatorname{ord}_m(a)$. Then $$a^{n}\\equiv1\\pmod m\\quad\\Longleftrightarrow\\quad d\\mid n .$$ In particular $d\\mid\\varphi(m)$, and for a prime modulus $p$, $d\\mid p-1$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Если $d\\mid n$,** скажем $n=dq$, то $$a^{n}=\\left(a^{d}\\right)^{q}\\equiv1^{q}=1 \\quad\\checkmark$$\n\n**Обратно,** пусть $a^{n}\\equiv1$. Разделим с остатком: $n=dq+r$, где $0\\le r<d$. Тогда $$1\\equiv a^{n}=\\left(a^{d}\\right)^{q}a^{r}\\equiv a^{r}\\pmod m .$$\n\nНо $d$ — **наименьший** положительный показатель с таким свойством, а $0\\le r<d$. Значит $r$ не может быть положительным, то есть $r=0$ и $d\\mid n$ ✓\n\nПоследнее утверждение получается подстановкой $n=\\varphi(m)$: теорема Эйлера даёт $a^{\\varphi(m)}\\equiv1$, значит $d\\mid\\varphi(m)$. $\\blacksquare$",
+      "en": "**If $d\\mid n$,** say $n=dq$, then $$a^{n}=\\left(a^{d}\\right)^{q}\\equiv1 \\quad\\checkmark$$\n\n**Conversely,** suppose $a^{n}\\equiv1$. Divide with remainder: $n=dq+r$ with $0\\le r<d$. Then $$1\\equiv a^{n}=\\left(a^{d}\\right)^{q}a^{r}\\equiv a^{r}\\pmod m .$$\n\nBut $d$ is the **least** positive exponent with this property and $0\\le r<d$, so $r$ cannot be positive: $r=0$ and $d\\mid n$ ✓\n\nThe last claim follows by taking $n=\\varphi(m)$: Euler gives $a^{\\varphi(m)}\\equiv1$, hence $d\\mid\\varphi(m)$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Эта теорема — самый мощный инструмент в задачах «докажите, что $p$ делит…». Схема: находим, что $a^{n}\\equiv1\\pmod p$, заключаем $d\\mid n$; отдельно из малой теоремы Ферма $d\\mid p-1$. Значит $d$ делит $\\gcd(n,\\ p-1)$ — и часто это сразу даёт $d=1$ или $d=2$, а с ними и ответ.",
+      "en": "This theorem is the sharpest tool in \"prove that $p$ divides…\" problems. The pattern: show $a^{n}\\equiv1\\pmod p$, conclude $d\\mid n$; separately Fermat gives $d\\mid p-1$. So $d$ divides $\\gcd(n,\\ p-1)$ — which often forces $d=1$ or $d=2$, and the answer follows."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Найдите порядок числа $2$ по модулю $7$ и по модулю $15$.",
+      "en": "Find the order of $2$ modulo $7$ and modulo $15$."
+     },
+     "steps": {
+      "ru": [
+       "**По модулю $7$:** $\\varphi(7)=6$, значит порядок делит $6$, то есть равен $1,2,3$ или $6$.",
+       "$2^{1}=2$, $2^{2}=4$, $2^{3}=8\\equiv1$ — порядок равен $3$.",
+       "**По модулю $15$:** $\\varphi(15)=8$, значит порядок делит $8$.",
+       "$2^{1}=2$, $2^{2}=4$, $2^{4}=16\\equiv1$ — порядок равен $4$.",
+       "Заметьте: в обоих случаях порядок строго меньше $\\varphi(m)$."
+      ],
+      "en": [
+       "**Mod $7$:** $\\varphi(7)=6$, so the order divides $6$, i.e. is $1,2,3$ or $6$.",
+       "$2^{1}=2$, $2^{2}=4$, $2^{3}=8\\equiv1$ — the order is $3$.",
+       "**Mod $15$:** $\\varphi(15)=8$, so the order divides $8$.",
+       "$2^{1}=2$, $2^{2}=4$, $2^{4}=16\\equiv1$ — the order is $4$.",
+       "Note that in both cases the order is strictly less than $\\varphi(m)$."
+      ]
+     },
+     "ans": {
+      "ru": "$\\operatorname{ord}_7(2)=3$, $\\operatorname{ord}_{15}(2)=4$.",
+      "en": "$\\operatorname{ord}_7(2)=3$, $\\operatorname{ord}_{15}(2)=4$."
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Докажите, что всякий простой делитель числа $2^{n}-1$ при простом $n$ имеет вид $2nk+1$.",
+      "en": "Prove that every prime divisor of $2^{n}-1$, with $n$ prime, has the form $2nk+1$."
+     },
+     "steps": {
+      "ru": [
+       "Пусть $p\\mid2^{n}-1$, то есть $2^{n}\\equiv1\\pmod p$. Обозначим $d=\\operatorname{ord}_p(2)$.",
+       "По теореме $d\\mid n$. Число $n$ простое, значит $d=1$ или $d=n$.",
+       "Случай $d=1$ означал бы $2\\equiv1\\pmod p$, то есть $p\\mid1$ ✗ Значит $d=n$.",
+       "По малой теореме Ферма $d\\mid p-1$, то есть $n\\mid p-1$.",
+       "Кроме того $p$ нечётно (ведь $2^{n}-1$ нечётно), значит $p-1$ чётно.",
+       "Итак, $p-1$ делится и на $n$, и на $2$, а $n$ нечётно, поэтому $2n\\mid p-1$."
+      ],
+      "en": [
+       "Let $p\\mid2^{n}-1$, i.e. $2^{n}\\equiv1\\pmod p$, and put $d=\\operatorname{ord}_p(2)$.",
+       "The theorem gives $d\\mid n$. As $n$ is prime, $d=1$ or $d=n$.",
+       "If $d=1$ then $2\\equiv1\\pmod p$, so $p\\mid1$ ✗ Hence $d=n$.",
+       "Fermat gives $d\\mid p-1$, so $n\\mid p-1$.",
+       "Also $p$ is odd (since $2^{n}-1$ is odd), so $p-1$ is even.",
+       "Thus $p-1$ is divisible by $n$ and by $2$, and $n$ is odd, so $2n\\mid p-1$."
+      ]
+     },
+     "ans": {
+      "ru": "$p=2nk+1$. Например, делители $2^{11}-1=2047$ ищутся среди $23,\\ 67,\\ 89,\\dots$ — и действительно $2047=23\\cdot89$.",
+      "en": "$p=2nk+1$. For instance the divisors of $2^{11}-1=2047$ are sought among $23,\\ 67,\\ 89,\\dots$ — and indeed $2047=23\\cdot89$."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "**Первообразные корни.** Иногда порядок достигает максимума: $\\operatorname{ord}_m(a)=\\varphi(m)$. Такое $a$ называют **первообразным корнем** по модулю $m$; его степени пробегают вообще все обратимые вычеты. Первообразные корни существуют ровно при $m=1,2,4,p^{k},2p^{k}$ с нечётным простым $p$. Например, $3$ — первообразный корень по модулю $7$: его степени дают $3,2,6,4,5,1$ — все шесть ненулевых вычетов.",
+      "en": "**Primitive roots.** Sometimes the order is as large as possible: $\\operatorname{ord}_m(a)=\\varphi(m)$. Such an $a$ is a **primitive root** modulo $m$, and its powers run through every invertible residue. Primitive roots exist exactly for $m=1,2,4,p^{k},2p^{k}$ with $p$ an odd prime. For instance $3$ is a primitive root mod $7$: its powers give $3,2,6,4,5,1$ — all six non-zero residues."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Квадраты по простому модулю",
+    "en": "Squares modulo a prime"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Приём «посмотрим на квадраты по модулю» мы уже применяли не раз. Пора выяснить, сколько вообще бывает квадратов по данному модулю и как узнать, является ли число квадратом, не перебирая всё подряд.",
+      "en": "We have used the move \"look at squares modulo $m$\" more than once. Time to find out how many squares there are altogether, and how to tell whether a number is one without checking everything."
+     }
+    },
+    {
+     "t": "def",
+     "name": {
+      "ru": "Квадратичный вычет",
+      "en": "Quadratic residue"
+     },
+     "text": {
+      "ru": "Пусть $p$ — нечётное простое и $p\\nmid a$. Число $a$ называется **квадратичным вычетом** по модулю $p$, если сравнение $$x^{2}\\equiv a\\pmod p$$ имеет решение, и **невычетом** в противном случае.",
+      "en": "Let $p$ be an odd prime with $p\\nmid a$. The number $a$ is a **quadratic residue** mod $p$ if $$x^{2}\\equiv a\\pmod p$$ has a solution, and a **non-residue** otherwise."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Вычетов ровно половина",
+      "en": "Exactly half are residues"
+     },
+     "text": {
+      "ru": "Среди ненулевых вычетов $1,2,\\dots,p-1$ ровно $\\dfrac{p-1}{2}$ квадратичных вычетов и столько же невычетов. При этом каждое сравнение $x^{2}\\equiv a$ имеет либо два решения, либо ни одного.",
+      "en": "Among the non-zero residues $1,2,\\dots,p-1$ exactly $\\dfrac{p-1}{2}$ are quadratic residues and equally many are non-residues. Moreover $x^{2}\\equiv a$ has either two solutions or none."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "Рассмотрим отображение $x\\mapsto x^{2}$ на множестве $\\{1,2,\\dots,p-1\\}$.\n\n**Каждое значение достигается дважды.** Если $x^{2}\\equiv y^{2}$, то $p\\mid(x-y)(x+y)$, и по лемме Евклида $x\\equiv y$ или $x\\equiv-y$. Значит числа $x$ и $p-x$ дают один и тот же квадрат, и других совпадений нет.\n\n**Эти два числа различны.** Равенство $x\\equiv-x$ означало бы $p\\mid2x$, что при нечётном $p$ и $p\\nmid x$ невозможно.\n\nЗначит $p-1$ чисел разбиваются на $\\tfrac{p-1}2$ пар, каждая из которых даёт свой квадрат, и все эти квадраты различны. Итого вычетов ровно $\\tfrac{p-1}2$, а остальные $\\tfrac{p-1}2$ ненулевых вычетов — невычеты. $\\blacksquare$",
+      "en": "Consider the map $x\\mapsto x^{2}$ on $\\{1,2,\\dots,p-1\\}$.\n\n**Every value is hit twice.** If $x^{2}\\equiv y^{2}$ then $p\\mid(x-y)(x+y)$, so Euclid’s lemma gives $x\\equiv y$ or $x\\equiv-y$. Thus $x$ and $p-x$ give the same square, and there are no other coincidences.\n\n**These two are distinct.** $x\\equiv-x$ would mean $p\\mid2x$, impossible for odd $p$ with $p\\nmid x$.\n\nSo the $p-1$ numbers split into $\\tfrac{p-1}2$ pairs, each producing its own square, all distinct. Hence there are exactly $\\tfrac{p-1}2$ residues, and the remaining $\\tfrac{p-1}2$ are non-residues. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Выпишите все квадратичные вычеты по модулю $11$.",
+      "en": "List all quadratic residues modulo $11$."
+     },
+     "steps": {
+      "ru": [
+       "Достаточно возвести в квадрат числа $1,\\dots,5$ — дальше квадраты повторяются.",
+       "$1^{2}=1$, $2^{2}=4$, $3^{2}=9$, $4^{2}=16\\equiv5$, $5^{2}=25\\equiv3$.",
+       "Получили $\\tfrac{11-1}{2}=5$ вычетов ✓",
+       "Невычеты — оставшиеся: $2,\\ 6,\\ 7,\\ 8,\\ 10$."
+      ],
+      "en": [
+       "It is enough to square $1,\\dots,5$ — beyond that the squares repeat.",
+       "$1^{2}=1$, $2^{2}=4$, $3^{2}=9$, $4^{2}=16\\equiv5$, $5^{2}=25\\equiv3$.",
+       "That is $\\tfrac{11-1}{2}=5$ residues ✓",
+       "The non-residues are the rest: $2,\\ 6,\\ 7,\\ 8,\\ 10$."
+      ]
+     },
+     "ans": {
+      "ru": "Вычеты: $1,3,4,5,9$.",
+      "en": "Residues: $1,3,4,5,9$."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Критерий Эйлера",
+      "en": "Euler’s criterion"
+     },
+     "text": {
+      "ru": "Пусть $p$ — нечётное простое и $p\\nmid a$. Тогда $$a^{\\frac{p-1}{2}}\\equiv\\begin{cases}\\ \\ 1\\pmod p, & \\text{если } a\\ \\text{— квадратичный вычет},\\\\[2pt] -1\\pmod p, & \\text{если } a\\ \\text{— невычет}.\\end{cases}$$",
+      "en": "Let $p$ be an odd prime with $p\\nmid a$. Then $$a^{\\frac{p-1}{2}}\\equiv\\begin{cases}\\ \\ 1\\pmod p, & \\text{if } a\\ \\text{is a quadratic residue},\\\\[2pt] -1\\pmod p, & \\text{if } a\\ \\text{is a non-residue}.\\end{cases}$$"
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "**Шаг 1: значение всегда $\\pm1$.** По малой теореме Ферма $$\\left(a^{\\frac{p-1}{2}}\\right)^{2}=a^{\\,p-1}\\equiv1\\pmod p ,$$ значит $p$ делит $\\left(a^{\\frac{p-1}{2}}-1\\right)\\left(a^{\\frac{p-1}{2}}+1\\right)$, и по лемме Евклида один из множителей делится на $p$.\n\n**Шаг 2: вычеты дают $+1$.** Пусть $a\\equiv x^{2}$. Тогда $$a^{\\frac{p-1}{2}}\\equiv x^{\\,p-1}\\equiv1\\pmod p \\quad\\checkmark$$\n\n**Шаг 3: невычеты дают $-1$.** Многочлен $t^{\\frac{p-1}{2}}-1$ имеет по модулю простого $p$ не более $\\tfrac{p-1}2$ корней. По шагу 2 все $\\tfrac{p-1}2$ квадратичных вычетов уже являются его корнями, значит других корней нет. Поэтому для невычета $a$ значение $a^{\\frac{p-1}{2}}$ не равно $1$, а по шагу 1 оно равно $-1$. $\\blacksquare$",
+      "en": "**Step 1: the value is always $\\pm1$.** Fermat gives $$\\left(a^{\\frac{p-1}{2}}\\right)^{2}=a^{\\,p-1}\\equiv1\\pmod p ,$$ so $p$ divides $\\left(a^{\\frac{p-1}{2}}-1\\right)\\left(a^{\\frac{p-1}{2}}+1\\right)$, and Euclid’s lemma puts $p$ into one of the factors.\n\n**Step 2: residues give $+1$.** If $a\\equiv x^{2}$ then $$a^{\\frac{p-1}{2}}\\equiv x^{\\,p-1}\\equiv1\\pmod p \\quad\\checkmark$$\n\n**Step 3: non-residues give $-1$.** The polynomial $t^{\\frac{p-1}{2}}-1$ has at most $\\tfrac{p-1}2$ roots modulo the prime $p$. By Step 2 all $\\tfrac{p-1}2$ quadratic residues are already roots, so there are no others. Hence for a non-residue $a$ the value $a^{\\frac{p-1}{2}}$ is not $1$, and by Step 1 it is $-1$. $\\blacksquare$"
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Когда $-1$ является квадратом",
+      "en": "When $-1$ is a square"
+     },
+     "text": {
+      "ru": "Для нечётного простого $p$ сравнение $x^{2}\\equiv-1\\pmod p$ разрешимо **тогда и только тогда**, когда $p\\equiv1\\pmod4$.",
+      "en": "For an odd prime $p$ the congruence $x^{2}\\equiv-1\\pmod p$ is solvable **if and only if** $p\\equiv1\\pmod4$."
+     }
+    },
+    {
+     "t": "proof",
+     "text": {
+      "ru": "По критерию Эйлера разрешимость равносильна равенству $$(-1)^{\\frac{p-1}{2}}\\equiv1\\pmod p .$$\n\nЛевая часть равна $+1$, если $\\tfrac{p-1}2$ чётно, и $-1$, если нечётно. А $-1\\not\\equiv1$ при $p>2$.\n\nЗначит разрешимость равносильна чётности $\\tfrac{p-1}2$, то есть условию $4\\mid p-1$. $\\blacksquare$\n\n**Проверка.** При $p=5$: $2^{2}=4\\equiv-1$ ✓ При $p=7$: квадраты по модулю $7$ — это $1,4,2$, и числа $6\\equiv-1$ среди них нет ✓",
+      "en": "By Euler’s criterion solvability is equivalent to $$(-1)^{\\frac{p-1}{2}}\\equiv1\\pmod p .$$\n\nThe left side is $+1$ when $\\tfrac{p-1}2$ is even and $-1$ when it is odd, and $-1\\not\\equiv1$ for $p>2$.\n\nSo solvability is equivalent to $\\tfrac{p-1}2$ being even, i.e. $4\\mid p-1$. $\\blacksquare$\n\n**Check.** For $p=5$: $2^{2}=4\\equiv-1$ ✓ For $p=7$: the squares mod $7$ are $1,4,2$, and $6\\equiv-1$ is not among them ✓"
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Отсюда мгновенно следуют многие «невозможности». Например, уравнение $x^{2}+1=7y$ решений не имеет, потому что $7\\equiv3\\pmod4$. А сумма двух квадратов никогда не делится на простое $p\\equiv3\\pmod4$ в нечётной степени — на этом стоит вся теория представления чисел суммой двух квадратов.",
+      "en": "Many \"impossibility\" results follow instantly. The equation $x^{2}+1=7y$ has no solutions because $7\\equiv3\\pmod4$. And a sum of two squares is never divisible by a prime $p\\equiv3\\pmod4$ to an odd power — the whole theory of representing numbers as sums of two squares rests on this."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "**Квадратичный закон взаимности** (Гаусс, $1796$) идёт дальше и связывает разрешимость $x^{2}\\equiv q\\pmod p$ с разрешимостью $x^{2}\\equiv p\\pmod q$: для различных нечётных простых $$\\left(\\frac pq\\right)\\left(\\frac qp\\right)=(-1)^{\\frac{p-1}2\\cdot\\frac{q-1}2} .$$ Гаусс называл её «золотой теоремой» и дал восемь разных доказательств.",
+      "en": "**Quadratic reciprocity** (Gauss, $1796$) goes further and links the solvability of $x^{2}\\equiv q\\pmod p$ to that of $x^{2}\\equiv p\\pmod q$: for distinct odd primes $$\\left(\\frac pq\\right)\\left(\\frac qp\\right)=(-1)^{\\frac{p-1}2\\cdot\\frac{q-1}2} .$$ Gauss called it the \"golden theorem\" and gave eight different proofs."
      }
     }
    ]

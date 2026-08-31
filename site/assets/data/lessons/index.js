@@ -26,7 +26,7 @@ window.LESSON_INDEX = [
    "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\"."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 8
  },
  {
   "n": 3,
@@ -40,7 +40,7 @@ window.LESSON_INDEX = [
    "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem."
   },
   "problems": 50,
-  "sections": 4
+  "sections": 8
  },
  {
   "n": 4,
