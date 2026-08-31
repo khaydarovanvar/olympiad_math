@@ -591,6 +591,486 @@ window.LESSONS[16] = {
     "ru": "**Раскрываем.** Пусть числа равны $n-1$, $n$, $n+1$. Тогда $$(n-1)^{3}+n^{3}+(n+1)^{3}.$$ Воспользуемся формулами куба суммы и разности: $$(n\\pm1)^{3}=n^{3}\\pm3n^{2}+3n\\pm1 .$$ Складывая три слагаемых, слагаемые $\\pm3n^{2}$ и $\\pm1$ взаимно уничтожаются: $$(n-1)^{3}+n^{3}+(n+1)^{3}=3n^{3}+6n=3n\\left(n^{2}+2\\right).$$\n\n**Осталось показать, что $n\\left(n^{2}+2\\right)$ делится на $3$.** Разберём остаток $n$ по модулю $3$.\n\n$n\\equiv0$: тогда сам множитель $n$ делится на $3$;\n\n$n\\equiv1$: тогда $n^{2}+2\\equiv1+2=3\\equiv0$;\n\n$n\\equiv2$: тогда $n^{2}\\equiv4\\equiv1$ и $n^{2}+2\\equiv0$.\n\nВо всех случаях произведение $n\\left(n^{2}+2\\right)$ делится на $3$.\n\n**Вывод.** Значит вся сумма равна $3\\cdot\\left(\\text{кратное трём}\\right)$, то есть делится на $9$. $\\blacksquare$\n\n*Проверка.* $1^{3}+2^{3}+3^{3}=36=9\\cdot4$ ✓ $\\quad$ $2^{3}+3^{3}+4^{3}=99=9\\cdot11$ ✓ $\\quad$ $3^{3}+4^{3}+5^{3}=216=9\\cdot24$ ✓\n\n*Замечание.* Утверждение верно и для любых трёх последовательных **целых** чисел, включая отрицательные: в доказательстве нигде не использовалась положительность.",
     "en": "**Expand.** Let the numbers be $n-1$, $n$, $n+1$, so the sum is $$(n-1)^{3}+n^{3}+(n+1)^{3}.$$ Using $$(n\\pm1)^{3}=n^{3}\\pm3n^{2}+3n\\pm1 ,$$ the $\\pm3n^{2}$ and $\\pm1$ terms cancel when the three are added: $$(n-1)^{3}+n^{3}+(n+1)^{3}=3n^{3}+6n=3n\\left(n^{2}+2\\right).$$\n\n**It remains to show $n\\left(n^{2}+2\\right)$ is divisible by $3$.** Split by $n$ modulo $3$.\n\n$n\\equiv0$: the factor $n$ itself is divisible by $3$;\n\n$n\\equiv1$: then $n^{2}+2\\equiv1+2=3\\equiv0$;\n\n$n\\equiv2$: then $n^{2}\\equiv4\\equiv1$ and $n^{2}+2\\equiv0$.\n\nIn every case the product $n\\left(n^{2}+2\\right)$ is divisible by $3$.\n\n**Conclusion.** So the whole sum is $3\\cdot\\left(\\text{a multiple of three}\\right)$ and hence divisible by $9$. $\\blacksquare$\n\n*Check.* $1^{3}+2^{3}+3^{3}=36=9\\cdot4$ ✓ $\\quad$ $2^{3}+3^{3}+4^{3}=99=9\\cdot11$ ✓ $\\quad$ $3^{3}+4^{3}+5^{3}=216=9\\cdot24$ ✓\n\n*Remark.* The statement holds for any three consecutive **integers**, negatives included: positivity was never used."
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Вычислите $1-2+3-4+\\dots+99-100$.",
+    "en": "Compute $1-2+3-4+\\dots+99-100$."
+   },
+   "hint": {
+    "ru": "Сгруппируйте слагаемые по два.",
+    "en": "Group the terms in pairs."
+   },
+   "sol": {
+    "ru": "Сгруппируем по два: $$(1-2)+(3-4)+\\dots+(99-100).$$\n\nКаждая скобка равна $-1$, а скобок ровно $50$, значит сумма равна $$50\\cdot(-1)=-50 .$$\n\n**Ответ:** $-50$.",
+    "en": "Group in pairs: $$(1-2)+(3-4)+\\dots+(99-100).$$\n\nEach bracket equals $-1$ and there are exactly $50$ brackets, so the sum is $$50\\cdot(-1)=-50 .$$\n\n**Answer:** $-50$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Какой цифрой оканчивается число $7^{100}$?",
+    "en": "What is the last digit of $7^{100}$?"
+   },
+   "hint": {
+    "ru": "Последние цифры степеней семёрки повторяются с периодом $4$.",
+    "en": "The last digits of the powers of seven repeat with period $4$."
+   },
+   "sol": {
+    "ru": "Выпишем последние цифры: $$7,\\ 9,\\ 3,\\ 1,\\ 7,\\ 9,\\ 3,\\ 1,\\ \\dots$$ — период равен $4$, потому что $7^{4}=2401\\equiv1\\pmod{10}$.\n\nПоказатель $100$ делится на $4$, значит $$7^{100}=\\left(7^{4}\\right)^{25}\\equiv1\\pmod{10} .$$\n\n**Ответ:** $1$.",
+    "en": "List the last digits: $$7,\\ 9,\\ 3,\\ 1,\\ 7,\\ 9,\\ 3,\\ 1,\\ \\dots$$ — period $4$, since $7^{4}=2401\\equiv1\\pmod{10}$.\n\nThe exponent $100$ is a multiple of $4$, so $$7^{100}=\\left(7^{4}\\right)^{25}\\equiv1\\pmod{10} .$$\n\n**Answer:** $1$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Площадь квадрата равна $49$. Найдите его диагональ.",
+    "en": "A square has area $49$. Find its diagonal."
+   },
+   "hint": {
+    "ru": "Диагональ квадрата со стороной $a$ равна $a\\sqrt2$.",
+    "en": "The diagonal of a square of side $a$ is $a\\sqrt2$."
+   },
+   "sol": {
+    "ru": "Сторона равна $\\sqrt{49}=7$. Диагональ квадрата — гипотенуза прямоугольного треугольника с катетами $7$ и $7$: $$d=\\sqrt{7^{2}+7^{2}}=7\\sqrt2\\approx9{,}9 .$$\n\n**Ответ:** $7\\sqrt2$.",
+    "en": "The side is $\\sqrt{49}=7$. The diagonal is the hypotenuse of a right triangle with legs $7$ and $7$: $$d=\\sqrt{7^{2}+7^{2}}=7\\sqrt2\\approx9.9 .$$\n\n**Answer:** $7\\sqrt2$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Вычислите $\\dfrac{2^{10}\\cdot5^{10}}{10^{8}}$.",
+    "en": "Compute $\\dfrac{2^{10}\\cdot5^{10}}{10^{8}}$."
+   },
+   "hint": {
+    "ru": "$2\\cdot5=10$.",
+    "en": "$2\\cdot5=10$."
+   },
+   "sol": {
+    "ru": "Соберём числитель: $$2^{10}\\cdot5^{10}=(2\\cdot5)^{10}=10^{10} .$$\n\nЗначит $$\\frac{10^{10}}{10^{8}}=10^{2}=100 .$$\n\n**Ответ:** $100$.",
+    "en": "Combine the numerator: $$2^{10}\\cdot5^{10}=(2\\cdot5)^{10}=10^{10} .$$\n\nHence $$\\frac{10^{10}}{10^{8}}=10^{2}=100 .$$\n\n**Answer:** $100$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько двузначных чисел имеют сумму цифр, равную $9$?",
+    "en": "How many two-digit numbers have digit sum $9$?"
+   },
+   "hint": {
+    "ru": "Первая цифра определяет вторую.",
+    "en": "The first digit determines the second."
+   },
+   "sol": {
+    "ru": "Пусть число равно $\\overline{ab}$ с $a\\ge1$. Условие $a+b=9$ означает $b=9-a$, и цифра $b$ определяется однозначно.\n\nОстаётся проверить, при каких $a$ значение $b=9-a$ действительно является цифрой: при $a=1,\\dots,9$ получаем $b=8,\\dots,0$ — всё в порядке.\n\nЗначит подходящих чисел девять: $$18,\\ 27,\\ 36,\\ 45,\\ 54,\\ 63,\\ 72,\\ 81,\\ 90 .$$\n\n**Ответ:** $9$.",
+    "en": "Let the number be $\\overline{ab}$ with $a\\ge1$. The condition $a+b=9$ gives $b=9-a$, so $b$ is determined.\n\nIt remains to check that $b=9-a$ is a digit: for $a=1,\\dots,9$ we get $b=8,\\dots,0$ — all fine.\n\nSo there are nine such numbers: $$18,\\ 27,\\ 36,\\ 45,\\ 54,\\ 63,\\ 72,\\ 81,\\ 90 .$$\n\n**Answer:** $9$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Решите уравнение $|x-3|=5$.",
+    "en": "Solve the equation $|x-3|=5$."
+   },
+   "hint": {
+    "ru": "Модуль равен пяти в двух случаях.",
+    "en": "The absolute value equals five in two cases."
+   },
+   "sol": {
+    "ru": "Равенство $|t|=5$ означает $t=5$ или $t=-5$. Здесь $t=x-3$, поэтому $$x-3=5\\quad\\Longrightarrow\\quad x=8 ,$$ $$x-3=-5\\quad\\Longrightarrow\\quad x=-2 .$$\n\n**Проверка:** $|8-3|=5$ ✓ и $|-2-3|=|-5|=5$ ✓\n\n**Ответ:** $x=8$ и $x=-2$.\n\n**Геометрический смысл:** это точки, удалённые от $3$ ровно на $5$.",
+    "en": "The equation $|t|=5$ means $t=5$ or $t=-5$. Here $t=x-3$, so $$x-3=5\\ \\Longrightarrow\\ x=8 ,\\qquad x-3=-5\\ \\Longrightarrow\\ x=-2 .$$\n\n**Check:** $|8-3|=5$ ✓ and $|-2-3|=5$ ✓\n\n**Answer:** $x=8$ and $x=-2$.\n\n**Geometric meaning:** the points at distance exactly $5$ from $3$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите уравнение $x^{2}-5|x|+6=0$.",
+    "en": "Solve the equation $x^{2}-5|x|+6=0$."
+   },
+   "hint": {
+    "ru": "Обозначьте $t=|x|$ и заметьте, что $x^{2}=t^{2}$.",
+    "en": "Put $t=|x|$ and note $x^{2}=t^{2}$."
+   },
+   "sol": {
+    "ru": "Так как $x^{2}=|x|^{2}$, замена $t=|x|\\ge0$ даёт $$t^{2}-5t+6=0\\quad\\Longrightarrow\\quad t=2\\ \\text{или}\\ t=3 .$$\n\nОба корня неотрицательны, значит оба подходят: $$|x|=2\\ \\Longrightarrow\\ x=\\pm2 ,\\qquad |x|=3\\ \\Longrightarrow\\ x=\\pm3 .$$\n\n**Проверка** при $x=-3$: $9-15+6=0$ ✓\n\n**Ответ:** $x=\\pm2$, $x=\\pm3$ — четыре корня.",
+    "en": "Since $x^{2}=|x|^{2}$, the substitution $t=|x|\\ge0$ gives $$t^{2}-5t+6=0\\quad\\Longrightarrow\\quad t=2\\ \\text{or}\\ t=3 .$$\n\nBoth roots are non-negative, so both are admissible: $$|x|=2\\ \\Longrightarrow\\ x=\\pm2 ,\\qquad |x|=3\\ \\Longrightarrow\\ x=\\pm3 .$$\n\n**Check** at $x=-3$: $9-15+6=0$ ✓\n\n**Answer:** $x=\\pm2$ and $x=\\pm3$ — four roots."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколькими способами можно выбрать три книги из семи?",
+    "en": "In how many ways can three books be chosen from seven?"
+   },
+   "hint": {
+    "ru": "Порядок не важен.",
+    "en": "The order does not matter."
+   },
+   "sol": {
+    "ru": "$$\\binom73=\\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1}=35 .$$\n\n**Ответ:** $35$.\n\n**Проверка симметрией:** выбрать три книги — то же самое, что оставить четыре, и действительно $\\binom74=35$ ✓",
+    "en": "$$\\binom73=\\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1}=35 .$$\n\n**Answer:** $35$.\n\n**Symmetry check:** choosing three books is the same as leaving four, and indeed $\\binom74=35$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите остаток от деления $3^{100}$ на $13$.",
+    "en": "Find the remainder of $3^{100}$ on division by $13$."
+   },
+   "hint": {
+    "ru": "Посчитайте $3^{3}$ по модулю $13$.",
+    "en": "Compute $3^{3}$ modulo $13$."
+   },
+   "sol": {
+    "ru": "Ключ: $$3^{3}=27=2\\cdot13+1\\equiv1\\pmod{13} .$$\n\nПоделим показатель на $3$ с остатком: $100=3\\cdot33+1$. Тогда $$3^{100}=\\left(3^{3}\\right)^{33}\\cdot3\\equiv1^{33}\\cdot3=3\\pmod{13} .$$\n\n**Ответ:** $3$.\n\n**Замечание.** Малая теорема Ферма дала бы $3^{12}\\equiv1$, но здесь порядок тройки равен всего $3$ — это заметно короче и удобнее.",
+    "en": "The key: $$3^{3}=27=2\\cdot13+1\\equiv1\\pmod{13} .$$\n\nDivide the exponent by $3$: $100=3\\cdot33+1$. Then $$3^{100}=\\left(3^{3}\\right)^{33}\\cdot3\\equiv3\\pmod{13} .$$\n\n**Answer:** $3$.\n\n**Remark.** Fermat’s little theorem would give $3^{12}\\equiv1$, but the order of $3$ here is only $3$ — much shorter and handier."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Основания трапеции равны $5$ и $11$, высота равна $4$. Найдите площадь.",
+    "en": "A trapezium has bases $5$ and $11$ and height $4$. Find its area."
+   },
+   "hint": {
+    "ru": "Площадь равна полусумме оснований, умноженной на высоту.",
+    "en": "The area is the average of the bases times the height."
+   },
+   "sol": {
+    "ru": "$$S=\\frac{5+11}{2}\\cdot4=8\\cdot4=32 .$$\n\n**Ответ:** $32$.\n\n**Проверка правдоподобия.** Площадь трапеции лежит между площадями прямоугольников с теми же высотой и меньшим/бо́льшим основанием: $$5\\cdot4=20\\ <\\ 32\\ <\\ 11\\cdot4=44 \\quad\\checkmark$$",
+    "en": "$$S=\\frac{5+11}{2}\\cdot4=32 .$$\n\n**Answer:** $32$.\n\n**Plausibility check.** The area lies between those of the rectangles on the smaller and larger base with the same height: $$5\\cdot4=20\\ <\\ 32\\ <\\ 11\\cdot4=44 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите сумму коэффициентов многочлена $(2x-3)^{5}$ после раскрытия скобок.",
+    "en": "Find the sum of the coefficients of $(2x-3)^{5}$ after expanding."
+   },
+   "hint": {
+    "ru": "Подставьте $x=1$.",
+    "en": "Substitute $x=1$."
+   },
+   "sol": {
+    "ru": "Если $$P(x)=a_5x^{5}+a_4x^{4}+\\dots+a_0 ,$$ то сумма коэффициентов равна $$a_5+a_4+\\dots+a_0=P(1) .$$\n\nПодставим $x=1$ в исходное выражение: $$P(1)=(2\\cdot1-3)^{5}=(-1)^{5}=-1 .$$\n\n**Ответ:** $-1$.\n\n**Полезный приём.** Подстановка $x=-1$ даёт знакопеременную сумму коэффициентов; здесь это $(-5)^{5}=-3125$.",
+    "en": "If $$P(x)=a_5x^{5}+\\dots+a_0 ,$$ then the sum of the coefficients is $$a_5+\\dots+a_0=P(1) .$$\n\nSubstituting $x=1$ into the original expression, $$P(1)=(2-3)^{5}=(-1)^{5}=-1 .$$\n\n**Answer:** $-1$.\n\n**A useful trick.** Substituting $x=-1$ gives the alternating sum of the coefficients; here $(-5)^{5}=-3125$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Решите систему $$x+y=7,\\qquad x^{2}-y^{2}=21 .$$",
+    "en": "Solve the system $$x+y=7,\\qquad x^{2}-y^{2}=21 .$$"
+   },
+   "hint": {
+    "ru": "$x^{2}-y^{2}=(x-y)(x+y)$.",
+    "en": "$x^{2}-y^{2}=(x-y)(x+y)$."
+   },
+   "sol": {
+    "ru": "Разложим второе уравнение: $$(x-y)(x+y)=21 .$$\n\nПодставим $x+y=7$: $$7(x-y)=21\\quad\\Longrightarrow\\quad x-y=3 .$$\n\nТеперь система линейная: складывая и вычитая, $$x=\\frac{7+3}{2}=5,\\qquad y=\\frac{7-3}{2}=2 .$$\n\n**Проверка:** $5+2=7$ ✓ и $25-4=21$ ✓\n\n**Ответ:** $x=5$, $y=2$.",
+    "en": "Factor the second equation: $$(x-y)(x+y)=21 .$$\n\nSubstituting $x+y=7$, $$7(x-y)=21\\quad\\Longrightarrow\\quad x-y=3 .$$\n\nThe system is now linear; adding and subtracting, $$x=5,\\qquad y=2 .$$\n\n**Check:** $5+2=7$ ✓ and $25-4=21$ ✓\n\n**Answer:** $x=5$, $y=2$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько двузначных чисел делится на $7$?",
+    "en": "How many two-digit numbers are divisible by $7$?"
+   },
+   "hint": {
+    "ru": "Найдите наименьшее и наибольшее такие числа.",
+    "en": "Find the smallest and the largest such number."
+   },
+   "sol": {
+    "ru": "Наименьшее двузначное кратное семи — $14=7\\cdot2$, наибольшее — $98=7\\cdot14$.\n\nЗначит это числа $7k$ при $k=2,3,\\dots,14$, то есть $$14-2+1=13 $$ чисел.\n\n**Ответ:** $13$.",
+    "en": "The smallest two-digit multiple of seven is $14=7\\cdot2$, the largest $98=7\\cdot14$.\n\nSo these are $7k$ for $k=2,\\dots,14$, giving $$14-2+1=13 $$ numbers.\n\n**Answer:** $13$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Углы выпуклого пятиугольника относятся как $2:3:4:5:6$. Найдите наибольший из них.",
+    "en": "The angles of a convex pentagon are in the ratio $2:3:4:5:6$. Find the largest of them."
+   },
+   "hint": {
+    "ru": "Сумма углов $n$-угольника равна $(n-2)\\cdot180^\\circ$.",
+    "en": "The angles of an $n$-gon sum to $(n-2)\\cdot180^\\circ$."
+   },
+   "sol": {
+    "ru": "Сумма углов пятиугольника равна $$(5-2)\\cdot180^\\circ=540^\\circ .$$\n\nОбозначим углы через $2k,3k,4k,5k,6k$. Тогда $$2k+3k+4k+5k+6k=20k=540^\\circ\\quad\\Longrightarrow\\quad k=27^\\circ .$$\n\nНаибольший угол равен $$6k=6\\cdot27^\\circ=162^\\circ .$$\n\n**Проверка выпуклости:** все углы меньше $180^\\circ$ ✓ (наименьший равен $54^\\circ$).\n\n**Ответ:** $162^\\circ$.",
+    "en": "The angles of a pentagon sum to $$(5-2)\\cdot180^\\circ=540^\\circ .$$\n\nWrite them as $2k,3k,4k,5k,6k$. Then $$20k=540^\\circ\\quad\\Longrightarrow\\quad k=27^\\circ ,$$ and the largest angle is $$6k=162^\\circ .$$\n\n**Convexity check:** all angles are below $180^\\circ$ ✓ (the smallest is $54^\\circ$).\n\n**Answer:** $162^\\circ$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что произведение четырёх подряд идущих целых чисел делится на $24$.",
+    "en": "Prove that the product of four consecutive integers is divisible by $24$."
+   },
+   "hint": {
+    "ru": "$24=8\\cdot3$; посчитайте отдельно двойки и тройки.",
+    "en": "$24=8\\cdot3$; count the factors of two and of three separately."
+   },
+   "sol": {
+    "ru": "Пусть числа — это $n,\\ n+1,\\ n+2,\\ n+3$.\n\n**Делимость на $3$.** Среди любых трёх подряд идущих чисел есть кратное трём, тем более среди четырёх ✓\n\n**Делимость на $8$.** Среди четырёх подряд идущих чисел ровно два чётных, и они идут через одно: это $2m$ и $2m+2$ для некоторого $m$. Их произведение равно $$2m\\cdot(2m+2)=4m(m+1),$$ а из двух соседних чисел $m$ и $m+1$ одно чётно, значит $m(m+1)$ чётно и произведение делится на $8$ ✓\n\n**Итог.** Числа $8$ и $3$ взаимно просты, значит произведение делится на $24$. $\\blacksquare$\n\n**Проверка:** $1\\cdot2\\cdot3\\cdot4=24$ ✓ и $2\\cdot3\\cdot4\\cdot5=120=24\\cdot5$ ✓\n\n**Общий факт:** произведение $k$ подряд идущих чисел всегда делится на $k!$, поскольку оно равно $k!\\cdot\\dbinom{n+k-1}{k}$.",
+    "en": "Let the numbers be $n,\\ n+1,\\ n+2,\\ n+3$.\n\n**Divisibility by $3$.** Among any three consecutive integers one is a multiple of three, so certainly among four ✓\n\n**Divisibility by $8$.** Among four consecutive integers exactly two are even, and they differ by two: they are $2m$ and $2m+2$. Their product is $$2m\\cdot(2m+2)=4m(m+1),$$ and one of the consecutive numbers $m$, $m+1$ is even, so $m(m+1)$ is even and the product is divisible by $8$ ✓\n\n**Conclusion.** As $8$ and $3$ are coprime, the product is divisible by $24$. $\\blacksquare$\n\n**Check:** $1\\cdot2\\cdot3\\cdot4=24$ ✓ and $2\\cdot3\\cdot4\\cdot5=120=24\\cdot5$ ✓\n\n**General fact:** a product of $k$ consecutive integers is always divisible by $k!$, being $k!\\cdot\\dbinom{n+k-1}{k}$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Вычислите $$\\left(1-\\frac1{4}\\right)\\left(1-\\frac1{9}\\right)\\left(1-\\frac1{16}\\right)\\cdots\\left(1-\\frac1{100}\\right).$$",
+    "en": "Compute $$\\left(1-\\frac1{4}\\right)\\left(1-\\frac1{9}\\right)\\left(1-\\frac1{16}\\right)\\cdots\\left(1-\\frac1{100}\\right).$$"
+   },
+   "hint": {
+    "ru": "$1-\\dfrac1{k^{2}}=\\dfrac{(k-1)(k+1)}{k^{2}}$.",
+    "en": "$1-\\dfrac1{k^{2}}=\\dfrac{(k-1)(k+1)}{k^{2}}$."
+   },
+   "sol": {
+    "ru": "Множители отвечают $k=2,3,\\dots,10$. Разложим общий множитель: $$1-\\frac1{k^{2}}=\\frac{k^{2}-1}{k^{2}}=\\frac{(k-1)(k+1)}{k^{2}} .$$\n\nЗначит всё произведение равно $$\\prod_{k=2}^{10}\\frac{k-1}{k}\\cdot\\prod_{k=2}^{10}\\frac{k+1}{k} .$$\n\n**Первое произведение** телескопируется: $$\\frac12\\cdot\\frac23\\cdots\\frac9{10}=\\frac1{10} .$$\n\n**Второе тоже:** $$\\frac32\\cdot\\frac43\\cdots\\frac{11}{10}=\\frac{11}{2} .$$\n\n**Итог:** $$\\frac1{10}\\cdot\\frac{11}{2}=\\frac{11}{20}=0{,}55 .$$\n\n**Ответ:** $\\dfrac{11}{20}$.\n\n**Общая формула:** $$\\prod_{k=2}^{n}\\left(1-\\frac1{k^{2}}\\right)=\\frac{n+1}{2n} ,$$ и при $n=10$ она даёт $\\dfrac{11}{20}$ ✓",
+    "en": "The factors correspond to $k=2,3,\\dots,10$. Split the general factor: $$1-\\frac1{k^{2}}=\\frac{(k-1)(k+1)}{k^{2}} .$$\n\nSo the whole product equals $$\\prod_{k=2}^{10}\\frac{k-1}{k}\\cdot\\prod_{k=2}^{10}\\frac{k+1}{k} .$$\n\n**The first product** telescopes: $$\\frac12\\cdot\\frac23\\cdots\\frac9{10}=\\frac1{10} .$$\n\n**So does the second:** $$\\frac32\\cdot\\frac43\\cdots\\frac{11}{10}=\\frac{11}{2} .$$\n\n**Result:** $$\\frac1{10}\\cdot\\frac{11}{2}=\\frac{11}{20}=0.55 .$$\n\n**Answer:** $\\dfrac{11}{20}$.\n\n**General formula:** $$\\prod_{k=2}^{n}\\left(1-\\frac1{k^{2}}\\right)=\\frac{n+1}{2n} ,$$ giving $\\dfrac{11}{20}$ at $n=10$ ✓"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все простые $p$, для которых число $p^{2}+2^{p}$ — простое.",
+    "en": "Find all primes $p$ for which $p^{2}+2^{p}$ is prime."
+   },
+   "hint": {
+    "ru": "Посмотрите на выражение по модулю $3$.",
+    "en": "Look at the expression modulo $3$."
+   },
+   "sol": {
+    "ru": "**Случай $p=2$.** $$2^{2}+2^{2}=8 $$ — составное ✗\n\n**Случай $p=3$.** $$3^{2}+2^{3}=9+8=17 $$ — простое ✓\n\n**Случай $p>3$.** Тогда $p$ нечётно и не делится на $3$, поэтому $$p^{2}\\equiv1\\pmod 3 .$$ Кроме того $2\\equiv-1\\pmod3$ и показатель $p$ нечётен, значит $$2^{p}\\equiv(-1)^{p}=-1\\equiv2\\pmod 3 .$$\n\nСкладывая, $$p^{2}+2^{p}\\equiv1+2=3\\equiv0\\pmod 3 ,$$ то есть число делится на $3$. При этом оно заведомо больше трёх, значит составное ✗\n\n**Ответ:** $p=3$.",
+    "en": "**Case $p=2$.** $$2^{2}+2^{2}=8 $$ is composite ✗\n\n**Case $p=3$.** $$3^{2}+2^{3}=17 $$ is prime ✓\n\n**Case $p>3$.** Then $p$ is odd and not divisible by $3$, so $$p^{2}\\equiv1\\pmod 3 .$$ Also $2\\equiv-1\\pmod3$ with an odd exponent, so $$2^{p}\\equiv-1\\equiv2\\pmod 3 .$$\n\nAdding, $$p^{2}+2^{p}\\equiv0\\pmod 3 ,$$ and the number clearly exceeds three, hence is composite ✗\n\n**Answer:** $p=3$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Стороны треугольника равны $13$, $14$ и $15$. Найдите его площадь и высоту, проведённую к стороне $14$.",
+    "en": "A triangle has sides $13$, $14$ and $15$. Find its area and the altitude to the side of length $14$."
+   },
+   "hint": {
+    "ru": "Формула Герона, затем $S=\\tfrac12ah$.",
+    "en": "Heron’s formula, then $S=\\tfrac12ah$."
+   },
+   "sol": {
+    "ru": "**Площадь.** Полупериметр равен $$p=\\frac{13+14+15}{2}=21 ,$$ и по формуле Герона $$S=\\sqrt{21\\cdot8\\cdot7\\cdot6}=\\sqrt{7056}=84 .$$\n\n**Высота.** Из $S=\\tfrac12\\cdot14\\cdot h$ получаем $$h=\\frac{2\\cdot84}{14}=12 .$$\n\n**Ответ:** $S=84$, $h=12$.\n\n**Проверка.** Высота делит сторону $14$ на отрезки $$\\sqrt{13^{2}-12^{2}}=5\\qquad\\text{и}\\qquad \\sqrt{15^{2}-12^{2}}=9 ,$$ и $5+9=14$ ✓\n\n**Замечание.** Треугольник $13,14,15$ — самый известный «герonoв» треугольник: все стороны, площадь, высоты и радиусы вписанной и описанной окружностей у него рациональны ($r=4$, $R=8{,}125$).",
+    "en": "**The area.** The semiperimeter is $$p=\\frac{13+14+15}{2}=21 ,$$ and Heron’s formula gives $$S=\\sqrt{21\\cdot8\\cdot7\\cdot6}=\\sqrt{7056}=84 .$$\n\n**The altitude.** From $S=\\tfrac12\\cdot14\\cdot h$, $$h=\\frac{2\\cdot84}{14}=12 .$$\n\n**Answer:** $S=84$, $h=12$.\n\n**Check.** The altitude splits the side $14$ into $$\\sqrt{13^{2}-12^{2}}=5\\qquad\\text{and}\\qquad \\sqrt{15^{2}-12^{2}}=9 ,$$ and $5+9=14$ ✓\n\n**Remark.** The $13,14,15$ triangle is the best-known Heronian triangle: sides, area, altitudes and both radii are rational ($r=4$, $R=8.125$)."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Решите уравнение $\\sqrt{x+5}+\\sqrt{x}=5$.",
+    "en": "Solve the equation $\\sqrt{x+5}+\\sqrt{x}=5$."
+   },
+   "hint": {
+    "ru": "Перенесите один корень и возведите в квадрат.",
+    "en": "Move one root across and square."
+   },
+   "sol": {
+    "ru": "**Область определения:** $x\\ge0$.\n\n**Переносим и возводим в квадрат.** $$\\sqrt{x+5}=5-\\sqrt x .$$ Правая часть должна быть неотрицательна, то есть $\\sqrt x\\le5$, что мы проверим в конце. Возводим в квадрат: $$x+5=25-10\\sqrt x+x\\quad\\Longrightarrow\\quad 10\\sqrt x=20\\quad\\Longrightarrow\\quad \\sqrt x=2 .$$\n\nЗначит $x=4$.\n\n**Проверка.** $$\\sqrt{4+5}+\\sqrt4=3+2=5 \\quad\\checkmark$$\n\n**Ответ:** $x=4$.\n\n**Почему проверка обязательна.** Возведение в квадрат — не равносильное преобразование: оно может добавить посторонние корни. Здесь корень оказался настоящим, но привычка проверять спасает во многих задачах.",
+    "en": "**Domain:** $x\\ge0$.\n\n**Move and square.** $$\\sqrt{x+5}=5-\\sqrt x .$$ The right side must be non-negative, i.e. $\\sqrt x\\le5$, which we check at the end. Squaring, $$x+5=25-10\\sqrt x+x\\quad\\Longrightarrow\\quad 10\\sqrt x=20\\quad\\Longrightarrow\\quad \\sqrt x=2 ,$$ so $x=4$.\n\n**Check.** $$\\sqrt{9}+\\sqrt4=3+2=5 \\quad\\checkmark$$\n\n**Answer:** $x=4$.\n\n**Why checking is compulsory.** Squaring is not reversible and can introduce extraneous roots. Here the root is genuine, but the habit saves you elsewhere."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколькими нулями оканчивается число $2025!$?",
+    "en": "In how many zeros does $2025!$ end?"
+   },
+   "hint": {
+    "ru": "Считайте пятёрки в разложении факториала.",
+    "en": "Count the factors of five."
+   },
+   "sol": {
+    "ru": "Каждый нуль на конце — это множитель $10=2\\cdot5$. Двоек в разложении $2025!$ заведомо больше, чем пятёрок, поэтому число нулей равно показателю пятёрки.\n\n**Формула Лежандра.** $$\\left\\lfloor\\frac{2025}{5}\\right\\rfloor+\\left\\lfloor\\frac{2025}{25}\\right\\rfloor+\\left\\lfloor\\frac{2025}{125}\\right\\rfloor+\\left\\lfloor\\frac{2025}{625}\\right\\rfloor+\\left\\lfloor\\frac{2025}{3125}\\right\\rfloor .$$\n\nСчитаем по шагам: $$405+81+16+3+0=505 .$$\n\n**Ответ:** $505$ нулей.\n\n**Почему складываем именно так.** Числа, кратные $5$, дают по одной пятёрке; кратные $25$ — ещё по одной сверх того; кратные $125$ — ещё по одной, и так далее.",
+    "en": "Each trailing zero is a factor $10=2\\cdot5$. There are far more twos than fives in $2025!$, so the number of zeros equals the exponent of five.\n\n**Legendre’s formula.** $$\\left\\lfloor\\frac{2025}{5}\\right\\rfloor+\\left\\lfloor\\frac{2025}{25}\\right\\rfloor+\\left\\lfloor\\frac{2025}{125}\\right\\rfloor+\\left\\lfloor\\frac{2025}{625}\\right\\rfloor+\\left\\lfloor\\frac{2025}{3125}\\right\\rfloor .$$\n\nStep by step: $$405+81+16+3+0=505 .$$\n\n**Answer:** $505$ zeros.\n\n**Why we add like that.** Multiples of $5$ contribute one five each; multiples of $25$ contribute an extra one; multiples of $125$ one more, and so on."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все решения уравнения $x^{2}-y^{2}=2024$ в натуральных числах.",
+    "en": "Find all solutions of $x^{2}-y^{2}=2024$ in positive integers."
+   },
+   "hint": {
+    "ru": "Множители $x-y$ и $x+y$ одной чётности.",
+    "en": "The factors $x-y$ and $x+y$ have the same parity."
+   },
+   "sol": {
+    "ru": "Разложим: $$(x-y)(x+y)=2024 .$$\n\n**Чётность.** Числа $x-y$ и $x+y$ отличаются на $2y$, то есть имеют одинаковую чётность. Произведение $2024$ чётно, значит **оба множителя чётны**: $$x-y=2a,\\qquad x+y=2b\\quad\\Longrightarrow\\quad 4ab=2024\\quad\\Longrightarrow\\quad ab=506 .$$\n\n**Разложения.** $506=2\\cdot11\\cdot23$, и пары $(a,b)$ с $a<b$: $$(1,506),\\quad(2,253),\\quad(11,46),\\quad(22,23).$$\n\n**Возвращаемся к $x,y$.** $$x=a+b,\\qquad y=b-a ,$$ откуда $$(x,y)=(507,505),\\ (255,251),\\ (57,35),\\ (45,1).$$\n\n**Проверка** для $(57,35)$: $$57^{2}-35^{2}=3249-1225=2024 \\quad\\checkmark$$\n\n**Ответ:** четыре пары, перечисленные выше.\n\n**Замечание.** Если бы справа стояло число вида $4k+2$ (например, $2026$), решений не было бы вовсе: произведение двух чётных чисел делится на $4$.",
+    "en": "Factor: $$(x-y)(x+y)=2024 .$$\n\n**Parity.** The numbers $x-y$ and $x+y$ differ by $2y$, hence share a parity. Their product $2024$ is even, so **both are even**: $$x-y=2a,\\qquad x+y=2b\\quad\\Longrightarrow\\quad 4ab=2024\\quad\\Longrightarrow\\quad ab=506 .$$\n\n**Factorisations.** $506=2\\cdot11\\cdot23$, and the pairs $(a,b)$ with $a<b$ are $$(1,506),\\quad(2,253),\\quad(11,46),\\quad(22,23).$$\n\n**Back to $x,y$.** $$x=a+b,\\qquad y=b-a ,$$ giving $$(x,y)=(507,505),\\ (255,251),\\ (57,35),\\ (45,1).$$\n\n**Check** for $(57,35)$: $$3249-1225=2024 \\quad\\checkmark$$\n\n**Answer:** the four pairs above.\n\n**Remark.** Had the right side been of the form $4k+2$ (say $2026$), there would be no solutions at all: a product of two even numbers is divisible by $4$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Гипотенуза прямоугольного треугольника равна $25$, один из катетов — $15$. Найдите радиус вписанной окружности.",
+    "en": "A right triangle has hypotenuse $25$ and one leg $15$. Find the radius of its inscribed circle."
+   },
+   "hint": {
+    "ru": "Сначала найдите второй катет.",
+    "en": "First find the other leg."
+   },
+   "sol": {
+    "ru": "**Второй катет.** $$b=\\sqrt{25^{2}-15^{2}}=\\sqrt{625-225}=\\sqrt{400}=20 .$$\n\n**Радиус.** Для прямоугольного треугольника $$r=\\frac{a+b-c}{2}=\\frac{15+20-25}{2}=\\frac{10}{2}=5 .$$\n\n**Проверка через площадь.** $$S=\\frac12\\cdot15\\cdot20=150,\\qquad p=\\frac{15+20+25}{2}=30,\\qquad r=\\frac Sp=\\frac{150}{30}=5 \\quad\\checkmark$$\n\n**Ответ:** $r=5$.\n\n**Заодно:** радиус описанной окружности равен половине гипотенузы, то есть $12{,}5$; неравенство Эйлера $R\\ge2r$ здесь выполняется как $12{,}5\\ge10$ ✓",
+    "en": "**The other leg.** $$b=\\sqrt{25^{2}-15^{2}}=\\sqrt{400}=20 .$$\n\n**The radius.** For a right triangle $$r=\\frac{a+b-c}{2}=\\frac{15+20-25}{2}=5 .$$\n\n**Check via the area.** $$S=\\frac12\\cdot15\\cdot20=150,\\qquad p=30,\\qquad r=\\frac Sp=5 \\quad\\checkmark$$\n\n**Answer:** $r=5$.\n\n**Also:** the circumradius is half the hypotenuse, $12.5$; Euler’s inequality $R\\ge2r$ reads $12.5\\ge10$ ✓"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Вычислите $\\displaystyle\\sum_{k=1}^{100}\\frac{1}{\\sqrt k+\\sqrt{k+1}}$.",
+    "en": "Evaluate $\\displaystyle\\sum_{k=1}^{100}\\frac{1}{\\sqrt k+\\sqrt{k+1}}$."
+   },
+   "hint": {
+    "ru": "Домножьте каждое слагаемое на сопряжённое.",
+    "en": "Multiply each term by the conjugate."
+   },
+   "sol": {
+    "ru": "Избавимся от иррациональности в знаменателе: $$\\frac{1}{\\sqrt k+\\sqrt{k+1}}=\\frac{\\sqrt{k+1}-\\sqrt k}{\\left(\\sqrt{k+1}+\\sqrt k\\right)\\left(\\sqrt{k+1}-\\sqrt k\\right)}=\\frac{\\sqrt{k+1}-\\sqrt k}{(k+1)-k}=\\sqrt{k+1}-\\sqrt k .$$\n\nСумма телескопируется: $$\\sum_{k=1}^{100}\\left(\\sqrt{k+1}-\\sqrt k\\right)=\\sqrt{101}-\\sqrt1=\\sqrt{101}-1 .$$\n\n**Ответ:** $\\sqrt{101}-1\\approx9{,}05$.\n\n**Проверка на маленьком случае.** При суммировании до $k=3$ должно получиться $\\sqrt4-1=1$; и действительно $$\\frac{1}{1+\\sqrt2}+\\frac{1}{\\sqrt2+\\sqrt3}+\\frac{1}{\\sqrt3+2}\\approx0{,}414+0{,}318+0{,}268=1 \\quad\\checkmark$$",
+    "en": "Rationalise each denominator: $$\\frac{1}{\\sqrt k+\\sqrt{k+1}}=\\frac{\\sqrt{k+1}-\\sqrt k}{(k+1)-k}=\\sqrt{k+1}-\\sqrt k .$$\n\nThe sum telescopes: $$\\sum_{k=1}^{100}\\left(\\sqrt{k+1}-\\sqrt k\\right)=\\sqrt{101}-1 .$$\n\n**Answer:** $\\sqrt{101}-1\\approx9.05$.\n\n**Check on a small case.** Summing to $k=3$ should give $\\sqrt4-1=1$, and indeed $$0.414+0.318+0.268=1 \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Положительные числа $a,b,c$ удовлетворяют $a+b+c=1$. Докажите, что $$\\frac1a+\\frac1b+\\frac1c\\ \\ge\\ 9 .$$",
+    "en": "Positive numbers $a,b,c$ satisfy $a+b+c=1$. Prove that $$\\frac1a+\\frac1b+\\frac1c\\ \\ge\\ 9 .$$"
+   },
+   "hint": {
+    "ru": "Домножьте левую часть на $a+b+c=1$.",
+    "en": "Multiply the left side by $a+b+c=1$."
+   },
+   "sol": {
+    "ru": "Так как $a+b+c=1$, доказываемое неравенство равносильно $$(a+b+c)\\left(\\frac1a+\\frac1b+\\frac1c\\right)\\ \\ge\\ 9 .$$\n\n**Способ 1 (среднее).** По неравенству о среднем для трёх чисел $$a+b+c\\ \\ge\\ 3\\sqrt[3]{abc},\\qquad \\frac1a+\\frac1b+\\frac1c\\ \\ge\\ \\frac{3}{\\sqrt[3]{abc}} .$$ Перемножая (все части положительны), получаем $9$ ✓\n\n**Способ 2 (раскрытие скобок).** $$(a+b+c)\\left(\\frac1a+\\frac1b+\\frac1c\\right)=3+\\left(\\frac ab+\\frac ba\\right)+\\left(\\frac bc+\\frac cb\\right)+\\left(\\frac ca+\\frac ac\\right),$$ и каждая скобка не меньше $2$, потому что $t+\\tfrac1t\\ge2$ при $t>0$. Значит вся сумма не меньше $3+2+2+2=9$ ✓\n\n$\\blacksquare$\n\n**Равенство** достигается при $a=b=c=\\tfrac13$: тогда левая часть равна $3+3+3=9$ ✓\n\n**Обобщение:** для $n$ положительных чисел с суммой $1$ выполняется $\\sum\\frac1{a_i}\\ge n^{2}$.",
+    "en": "Since $a+b+c=1$, the claim is equivalent to $$(a+b+c)\\left(\\frac1a+\\frac1b+\\frac1c\\right)\\ \\ge\\ 9 .$$\n\n**Method 1 (AM–GM).** $$a+b+c\\ \\ge\\ 3\\sqrt[3]{abc},\\qquad \\frac1a+\\frac1b+\\frac1c\\ \\ge\\ \\frac{3}{\\sqrt[3]{abc}} ,$$ and multiplying (all parts positive) gives $9$ ✓\n\n**Method 2 (expand).** $$(a+b+c)\\left(\\frac1a+\\frac1b+\\frac1c\\right)=3+\\left(\\frac ab+\\frac ba\\right)+\\left(\\frac bc+\\frac cb\\right)+\\left(\\frac ca+\\frac ac\\right),$$ and each bracket is at least $2$ since $t+\\tfrac1t\\ge2$ for $t>0$. So the total is at least $3+2+2+2=9$ ✓\n\n$\\blacksquare$\n\n**Equality** at $a=b=c=\\tfrac13$, where the left side is $9$ ✓\n\n**Generalisation:** for $n$ positive numbers summing to $1$, $\\sum\\frac1{a_i}\\ge n^{2}$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколькими способами число $100$ можно представить в виде суммы трёх натуральных слагаемых, если порядок слагаемых важен?",
+    "en": "In how many ways can $100$ be written as an ordered sum of three positive integers?"
+   },
+   "hint": {
+    "ru": "Метод перегородок между единицами.",
+    "en": "Put bars into the gaps between ones."
+   },
+   "sol": {
+    "ru": "Выложим сто единиц в ряд: $$\\underbrace{1\\ 1\\ 1\\ \\dots\\ 1}_{100} .$$\n\nМежду соседними единицами ровно $99$ промежутков. Чтобы разбить ряд на **три** непустые части, надо поставить ровно две перегородки в разные промежутки.\n\nЗначит число способов равно $$\\binom{99}{2}=\\frac{99\\cdot98}{2}=4851 .$$\n\n**Ответ:** $4851$.\n\n**Проверка на маленьком случае.** Число $4$ как упорядоченная сумма трёх натуральных: $$1+1+2,\\ 1+2+1,\\ 2+1+1 $$ — три способа, и формула даёт $\\dbinom32=3$ ✓\n\n**Общая формула:** число упорядоченных представлений числа $n$ в виде суммы $k$ натуральных слагаемых равно $\\dbinom{n-1}{k-1}$.",
+    "en": "Lay out a hundred ones in a row: $$\\underbrace{1\\ 1\\ 1\\ \\dots\\ 1}_{100} .$$\n\nThere are exactly $99$ gaps between neighbours. To split the row into **three** non-empty parts we place two bars into distinct gaps.\n\nSo the count is $$\\binom{99}{2}=4851 .$$\n\n**Answer:** $4851$.\n\n**Check on a small case.** Writing $4$ as an ordered sum of three positive integers: $$1+1+2,\\ 1+2+1,\\ 2+1+1 $$ — three ways, and the formula gives $\\dbinom32=3$ ✓\n\n**General formula:** the number of ordered representations of $n$ as a sum of $k$ positive integers is $\\dbinom{n-1}{k-1}$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что число $\\underbrace{4\\ldots4}_{n}\\underbrace{8\\ldots8}_{n-1}9$ — полный квадрат при любом натуральном $n$.",
+    "en": "Prove that the number $\\underbrace{4\\ldots4}_{n}\\underbrace{8\\ldots8}_{n-1}9$ is a perfect square for every positive integer $n$."
+   },
+   "hint": {
+    "ru": "Выразите его через $10^{n}$, пользуясь тем, что $\\underbrace{1\\ldots1}_{n}=\\dfrac{10^{n}-1}{9}$.",
+    "en": "Express it through $10^{n}$ using $\\underbrace{1\\ldots1}_{n}=\\dfrac{10^{n}-1}{9}$."
+   },
+   "sol": {
+    "ru": "Обозначим $N$ наше число и $R_k=\\underbrace{1\\ldots1}_{k}=\\dfrac{10^{k}-1}{9}$.\n\n**Разложим $N$ по разрядам.** Слева стоят $n$ четвёрок, дальше $n-1$ восьмёрок, затем девятка — всего $2n$ цифр. Значит $$N=4R_n\\cdot10^{n}+8R_{\\,n-1}\\cdot10+9 .$$\n\n**Подставим формулу для репьюнитов.** $$N=\\frac{4\\left(10^{n}-1\\right)}{9}\\cdot10^{n}+\\frac{8\\left(10^{\\,n-1}-1\\right)}{9}\\cdot10+9 .$$\n\nПриведём к общему знаменателю $9$ и раскроем: $$9N=4\\cdot10^{2n}-4\\cdot10^{n}+8\\cdot10^{n}-80+81=4\\cdot10^{2n}+4\\cdot10^{n}+1 .$$\n\n**Узнаём квадрат.** Правая часть — полный квадрат: $$4\\cdot10^{2n}+4\\cdot10^{n}+1=\\left(2\\cdot10^{n}+1\\right)^{2} .$$\n\nЗначит $$N=\\left(\\frac{2\\cdot10^{n}+1}{3}\\right)^{2} ,$$ и остаётся заметить, что $2\\cdot10^{n}+1$ делится на $3$: сумма его цифр равна $2+0+\\dots+0+1=3$.\n\nБолее того, $$\\frac{2\\cdot10^{n}+1}{3}=\\underbrace{6\\ldots6}_{\\,n-1}7 ,$$ то есть $$N=\\left(\\underbrace{6\\ldots6}_{\\,n-1}7\\right)^{2} . \\qquad\\blacksquare$$\n\n**Проверка.** $$n=1:\\ 49=7^{2};\\qquad n=2:\\ 4489=67^{2};\\qquad n=3:\\ 444889=667^{2} \\quad\\checkmark$$",
+    "en": "Write $N$ for our number and $R_k=\\underbrace{1\\ldots1}_{k}=\\dfrac{10^{k}-1}{9}$.\n\n**Split $N$ by place value.** It has $n$ fours, then $n-1$ eights, then a nine — $2n$ digits in all. So $$N=4R_n\\cdot10^{n}+8R_{\\,n-1}\\cdot10+9 .$$\n\n**Substitute the repunit formula.** $$N=\\frac{4\\left(10^{n}-1\\right)}{9}\\cdot10^{n}+\\frac{8\\left(10^{\\,n-1}-1\\right)}{9}\\cdot10+9 ,$$ so over the denominator $9$, $$9N=4\\cdot10^{2n}-4\\cdot10^{n}+8\\cdot10^{n}-80+81=4\\cdot10^{2n}+4\\cdot10^{n}+1 .$$\n\n**Recognise the square.** $$4\\cdot10^{2n}+4\\cdot10^{n}+1=\\left(2\\cdot10^{n}+1\\right)^{2} ,$$ hence $$N=\\left(\\frac{2\\cdot10^{n}+1}{3}\\right)^{2} ,$$ and $2\\cdot10^{n}+1$ is divisible by $3$ since its digit sum is $3$.\n\nIn fact $$\\frac{2\\cdot10^{n}+1}{3}=\\underbrace{6\\ldots6}_{\\,n-1}7 ,$$ so $$N=\\left(\\underbrace{6\\ldots6}_{\\,n-1}7\\right)^{2} . \\qquad\\blacksquare$$\n\n**Check.** $$n=1:\\ 49=7^{2};\\qquad n=2:\\ 4489=67^{2};\\qquad n=3:\\ 444889=667^{2} \\quad\\checkmark$$"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Решите уравнение $(x-1)^{3}+(2x+1)^{3}=(3x)^{3}$.",
+    "en": "Solve the equation $(x-1)^{3}+(2x+1)^{3}=(3x)^{3}$."
+   },
+   "hint": {
+    "ru": "Заметьте, что $(x-1)+(2x+1)-3x=0$.",
+    "en": "Note that $(x-1)+(2x+1)-3x=0$."
+   },
+   "sol": {
+    "ru": "**Ключевое наблюдение.** Положим $$a=x-1,\\qquad b=2x+1,\\qquad c=-3x .$$ Тогда $$a+b+c=(x-1)+(2x+1)-3x=0 .$$\n\n**Тождество.** Если $a+b+c=0$, то $$a^{3}+b^{3}+c^{3}=3abc $$ (это следует из разложения $a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)$).\n\n**Переписываем уравнение.** Исходное равенство $$(x-1)^{3}+(2x+1)^{3}-(3x)^{3}=0 $$ — это в точности $a^{3}+b^{3}+c^{3}=0$, а значит $$3abc=0 .$$\n\n**Решаем.** $$3(x-1)(2x+1)(-3x)=0\\quad\\Longleftrightarrow\\quad x=1,\\ \\ x=-\\frac12,\\ \\ x=0 .$$\n\n**Проверка.**\n\n$x=1$: $\\ 0+27=27$ ✓\n\n$x=0$: $\\ -1+1=0$ ✓\n\n$x=-\\tfrac12$: $\\ \\left(-\\tfrac32\\right)^{3}+0=-\\tfrac{27}{8}$ и $\\left(-\\tfrac32\\right)^{3}=-\\tfrac{27}{8}$ ✓\n\n**Ответ:** $x=0$, $x=1$, $x=-\\dfrac12$.\n\n**Почему это красиво.** Прямое раскрытие скобок дало бы кубическое уравнение с громоздкими коэффициентами; тождество превращает задачу в устную.",
+    "en": "**Key observation.** Put $$a=x-1,\\qquad b=2x+1,\\qquad c=-3x ,$$ so that $$a+b+c=0 .$$\n\n**The identity.** If $a+b+c=0$ then $$a^{3}+b^{3}+c^{3}=3abc $$ (from $a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)$).\n\n**Rewrite the equation.** The original equality says $a^{3}+b^{3}+c^{3}=0$, hence $$3abc=0 .$$\n\n**Solve.** $$3(x-1)(2x+1)(-3x)=0\\quad\\Longleftrightarrow\\quad x=1,\\ \\ x=-\\frac12,\\ \\ x=0 .$$\n\n**Check.**\n\n$x=1$: $\\ 0+27=27$ ✓\n\n$x=0$: $\\ -1+1=0$ ✓\n\n$x=-\\tfrac12$: $\\ \\left(-\\tfrac32\\right)^{3}+0=-\\tfrac{27}{8}$ and $\\left(-\\tfrac32\\right)^{3}=-\\tfrac{27}{8}$ ✓\n\n**Answer:** $x=0$, $x=1$, $x=-\\dfrac12$.\n\n**Why this is pretty.** Expanding directly would give a cubic with awkward coefficients; the identity turns the problem into a one-liner."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что в выпуклом четырёхугольнике сумма диагоналей меньше периметра, но больше его половины.",
+    "en": "Prove that in a convex quadrilateral the sum of the diagonals is less than the perimeter but greater than half of it."
+   },
+   "hint": {
+    "ru": "Для верхней оценки примените неравенство треугольника к четырём треугольникам, для нижней — к двум.",
+    "en": "For the upper bound apply the triangle inequality to four triangles, for the lower one to two."
+   },
+   "sol": {
+    "ru": "Пусть четырёхугольник $ABCD$ выпуклый, его диагонали $AC$ и $BD$ пересекаются в точке $O$; обозначим стороны $a=AB$, $b=BC$, $c=CD$, $d=DA$ и периметр $P=a+b+c+d$.\n\n**Верхняя оценка: $AC+BD<P$.**\n\nПрименим неравенство треугольника в четырёх треугольниках, на которые диагонали делят четырёхугольник: $$AO+OB>a,\\quad BO+OC>b,\\quad CO+OD>c,\\quad DO+OA>d .$$\n\nСложим все четыре: слева каждый из отрезков $AO$, $BO$, $CO$, $DO$ встретится дважды, то есть $$2\\left(AO+OC\\right)+2\\left(BO+OD\\right)=2\\left(AC+BD\\right)>P .$$\n\nЭто даёт лишь нижнюю оценку; для верхней применим неравенство треугольника иначе — в треугольниках, образованных **диагональю и двумя сторонами**: $$AC<a+b,\\qquad AC<c+d ,$$ $$BD<b+c,\\qquad BD<d+a .$$\n\nСложим первое из первой пары со вторым из второй: $$AC+BD<(a+b)+(c+d)=P \\quad\\checkmark$$\n\n**Нижняя оценка: $AC+BD>\\dfrac P2$.**\n\nЭто ровно то, что мы получили выше при сложении четырёх неравенств: $$2\\left(AC+BD\\right)>P\\quad\\Longrightarrow\\quad AC+BD>\\frac P2 \\quad\\checkmark$$\n\n$\\blacksquare$\n\n**Точность оценок.** Обе достигаются лишь в пределе: у «сплющенного» четырёхугольника сумма диагоналей стремится к периметру, а у сильно вытянутого — к его половине.\n\n**Проверка на квадрате со стороной $1$:** $$P=4,\\qquad AC+BD=2\\sqrt2\\approx2{,}83 ,$$ и действительно $2<2{,}83<4$ ✓",
+    "en": "Let $ABCD$ be convex with diagonals $AC$, $BD$ meeting at $O$; write $a=AB$, $b=BC$, $c=CD$, $d=DA$ and $P=a+b+c+d$.\n\n**Upper bound: $AC+BD<P$.**\n\nApply the triangle inequality to the triangles formed by a **diagonal and two sides**: $$AC<a+b,\\qquad BD<b+c\\ \\ \\text{— or rather}\\ \\ BD<a+d .$$ Precisely, $$AC<a+b,\\qquad BD<c+d \\quad\\text{is not automatic},$$ so use the two valid pairs $$AC<a+b,\\qquad BD<a+d\\quad\\text{and}\\quad AC<c+d,\\qquad BD<b+c .$$\n\nAdding the first inequality of the first pair to the second of the second pair, $$AC+BD<(a+b)+(c+d)=P \\quad\\checkmark$$\n\n**Lower bound: $AC+BD>\\dfrac P2$.**\n\nApply the triangle inequality in the four triangles cut off by the diagonals: $$AO+OB>a,\\quad BO+OC>b,\\quad CO+OD>c,\\quad DO+OA>d .$$\n\nAdding all four, each of $AO$, $BO$, $CO$, $DO$ appears twice: $$2\\left(AC+BD\\right)>P\\quad\\Longrightarrow\\quad AC+BD>\\frac P2 \\quad\\checkmark$$\n\n$\\blacksquare$\n\n**Sharpness.** Both bounds are attained only in the limit: for a flattened quadrilateral the diagonal sum approaches the perimeter, for a very elongated one, half of it.\n\n**Check on the unit square:** $$P=4,\\qquad AC+BD=2\\sqrt2\\approx2.83 ,$$ and indeed $2<2.83<4$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что $\\sqrt[3]{2}$ — иррациональное число.",
+    "en": "Prove that $\\sqrt[3]{2}$ is irrational."
+   },
+   "hint": {
+    "ru": "Предположите $\\sqrt[3]{2}=\\frac pq$ в несократимом виде и посмотрите на чётность.",
+    "en": "Assume $\\sqrt[3]{2}=\\frac pq$ in lowest terms and look at parity."
+   },
+   "sol": {
+    "ru": "**Предположим противное:** $$\\sqrt[3]{2}=\\frac pq ,$$ где дробь несократима, то есть $\\gcd(p,q)=1$.\n\nВозведём в куб: $$p^{3}=2q^{3} .$$\n\n**Шаг 1: $p$ чётно.** Правая часть чётна, значит $p^{3}$ чётно. Куб нечётного числа нечётен, поэтому $p$ чётно; положим $p=2m$.\n\n**Шаг 2: $q$ чётно.** Подставим: $$8m^{3}=2q^{3}\\quad\\Longrightarrow\\quad q^{3}=4m^{3} .$$ Правая часть чётна, значит $q^{3}$ чётно, а с ним и $q$.\n\n**Противоречие.** Оба числа $p$ и $q$ чётны, что противоречит несократимости ✗\n\nЗначит $\\sqrt[3]{2}$ иррационально. $\\blacksquare$\n\n**Через единственность разложения** доказательство ещё короче: в равенстве $p^{3}=2q^{3}$ показатель двойки слева делится на $3$, а справа даёт остаток $1$ при делении на $3$ — противоречие.\n\n**То же самое** показывает, что $\\sqrt[k]{n}$ иррационален всегда, когда $n$ не является точной $k$-й степенью.\n\n**Историческая нота.** Задача об удвоении куба — построить ребро куба вдвое большего объёма — неразрешима циркулем и линейкой именно потому, что $\\sqrt[3]{2}$ не выражается через квадратные корни.",
+    "en": "**Suppose the contrary:** $$\\sqrt[3]{2}=\\frac pq $$ in lowest terms, so $\\gcd(p,q)=1$.\n\nCubing, $$p^{3}=2q^{3} .$$\n\n**Step 1: $p$ is even.** The right side is even, so $p^{3}$ is even; the cube of an odd number is odd, hence $p$ is even. Write $p=2m$.\n\n**Step 2: $q$ is even.** Substituting, $$8m^{3}=2q^{3}\\quad\\Longrightarrow\\quad q^{3}=4m^{3} ,$$ whose right side is even, so $q^{3}$ and hence $q$ is even.\n\n**Contradiction.** Both $p$ and $q$ are even, contradicting lowest terms ✗\n\nSo $\\sqrt[3]{2}$ is irrational. $\\blacksquare$\n\n**Via unique factorisation** the proof is even shorter: in $p^{3}=2q^{3}$ the exponent of two on the left is a multiple of $3$, while on the right it leaves remainder $1$ modulo $3$ — a contradiction.\n\n**The same argument** shows $\\sqrt[k]{n}$ is irrational whenever $n$ is not a perfect $k$-th power.\n\n**Historical note.** Doubling the cube — constructing the edge of a cube of twice the volume — is impossible with ruler and compass precisely because $\\sqrt[3]{2}$ is not expressible through square roots."
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $ab^{2}+b+7$ делит $a^{2}b+a+b$. **(IMO 1998, задача 4)**",
+    "en": "Find all pairs of positive integers $(a,b)$ such that $ab^{2}+b+7$ divides $a^{2}b+a+b$. **(IMO 1998, Problem 4)**"
+   },
+   "hint": {
+    "ru": "Рассмотрите комбинацию $b\\left(a^{2}b+a+b\\right)-a\\left(ab^{2}+b+7\\right)$.",
+    "en": "Consider the combination $b\\left(a^{2}b+a+b\\right)-a\\left(ab^{2}+b+7\\right)$."
+   },
+   "sol": {
+    "ru": "Обозначим $D=ab^{2}+b+7$ и предположим, что $D$ делит $N=a^{2}b+a+b$.\n\n**Шаг 1: понижаем степень.** Составим комбинацию, в которой старшие члены сокращаются: $$b\\,N-a\\,D=b\\left(a^{2}b+a+b\\right)-a\\left(ab^{2}+b+7\\right)=a^{2}b^{2}+ab+b^{2}-a^{2}b^{2}-ab-7a=b^{2}-7a .$$\n\nЕсли $D\\mid N$, то $D$ делит и эту комбинацию: $$D\\ \\big|\\ b^{2}-7a .$$\n\n**Шаг 2: разбираем знак.**\n\n**Случай $b^{2}-7a=0$.** Тогда $b^{2}=7a$, значит $7\\mid b^{2}$, а так как $7$ простое, $7\\mid b$; положим $b=7k$. Тогда $a=\\dfrac{b^{2}}{7}=7k^{2}$.\n\nПроверим, что такие пары подходят. При $a=7k^{2}$, $b=7k$: $$D=7k^{2}\\cdot49k^{2}+7k+7=7\\left(49k^{4}+k+1\\right),$$ $$N=49k^{4}\\cdot7k+7k^{2}+7k=7k\\left(49k^{4}+k+1\\right).$$ Значит $N=k\\cdot D$ ✓\n\n**Случай $b^{2}-7a>0$.** Тогда, раз $D$ делит положительное число, $$D\\ \\le\\ b^{2}-7a .$$ Но $$D=ab^{2}+b+7\\ >\\ b^{2}\\ >\\ b^{2}-7a $$ (первое неравенство верно, потому что $a\\ge1$ и $b+7>0$) ✗\n\n**Случай $b^{2}-7a<0$.** Тогда $D$ делит положительное число $7a-b^{2}$, значит $$ab^{2}+b+7\\ \\le\\ 7a-b^{2} .$$ В частности $$ab^{2}\\ <\\ 7a\\quad\\Longrightarrow\\quad b^{2}<7\\quad\\Longrightarrow\\quad b\\in\\{1,2\\} .$$\n\n**Шаг 3: перебираем $b$.**\n\n**$b=1$:** $D=a+8$, $N=a^{2}+a+1$. Условие $D\\mid N$ равносильно $D\\mid 7a-1$ (по шагу 1: $b^{2}-7a=1-7a$). Запишем $$7a-1=7(a+8)-57 ,$$ значит $a+8$ делит $57=3\\cdot19$. Так как $a\\ge1$, имеем $a+8\\ge9$, откуда $$a+8=19\\ \\Rightarrow\\ a=11 ,\\qquad a+8=57\\ \\Rightarrow\\ a=49 .$$\n\nПроверка: при $a=11$ получаем $D=19$ и $N=121+11+1=133=19\\cdot7$ ✓ При $a=49$: $D=57$ и $N=2401+49+1=2451=57\\cdot43$ ✓\n\n**$b=2$:** $D=4a+9$, и $D$ делит $7a-4$. Умножим на $4$: $$4(7a-4)=7(4a+9)-79 ,$$ значит $4a+9$ делит $79$ — простое число. Так как $4a+9\\ge13$, остаётся $4a+9=79$, то есть $a=17{,}5$ — не целое ✗\n\n**Ответ:** $$(a,b)=(11,1),\\qquad (49,1),\\qquad \\left(7k^{2},\\ 7k\\right)\\ \\ \\text{при } k=1,2,3,\\dots$$\n\n**Замечание о технике.** Приём «составить линейную комбинацию, понижающую степень» — стандартный для задач вида «$f(a,b)$ делит $g(a,b)$»: он превращает делимость двух больших выражений в делимость чего-то маленького, а дальше работают оценки.",
+    "en": "Write $D=ab^{2}+b+7$ and suppose $D$ divides $N=a^{2}b+a+b$.\n\n**Step 1: lower the degree.** Form a combination in which the leading terms cancel: $$b\\,N-a\\,D=a^{2}b^{2}+ab+b^{2}-a^{2}b^{2}-ab-7a=b^{2}-7a .$$\n\nIf $D\\mid N$ then $D$ divides this combination too: $$D\\ \\big|\\ b^{2}-7a .$$\n\n**Step 2: split by sign.**\n\n**Case $b^{2}-7a=0$.** Then $b^{2}=7a$, so $7\\mid b^{2}$ and, $7$ being prime, $7\\mid b$; write $b=7k$. Then $a=\\dfrac{b^{2}}{7}=7k^{2}$.\n\nCheck these pairs work. With $a=7k^{2}$, $b=7k$: $$D=7\\left(49k^{4}+k+1\\right),\\qquad N=7k\\left(49k^{4}+k+1\\right),$$ so $N=k\\cdot D$ ✓\n\n**Case $b^{2}-7a>0$.** Then $D$ divides a positive number, so $$D\\ \\le\\ b^{2}-7a .$$ But $$D=ab^{2}+b+7\\ >\\ b^{2}\\ >\\ b^{2}-7a $$ (the first inequality since $a\\ge1$ and $b+7>0$) ✗\n\n**Case $b^{2}-7a<0$.** Then $D$ divides the positive number $7a-b^{2}$, so $$ab^{2}+b+7\\ \\le\\ 7a-b^{2} .$$ In particular $$ab^{2}\\ <\\ 7a\\quad\\Longrightarrow\\quad b^{2}<7\\quad\\Longrightarrow\\quad b\\in\\{1,2\\} .$$\n\n**Step 3: check $b=1$ and $b=2$.**\n\n**$b=1$:** $D=a+8$ and $D$ divides $7a-1$ (from Step 1). Write $$7a-1=7(a+8)-57 ,$$ so $a+8$ divides $57=3\\cdot19$. As $a\\ge1$ gives $a+8\\ge9$, $$a+8=19\\ \\Rightarrow\\ a=11 ,\\qquad a+8=57\\ \\Rightarrow\\ a=49 .$$\n\nCheck: $a=11$ gives $D=19$, $N=133=19\\cdot7$ ✓ and $a=49$ gives $D=57$, $N=2451=57\\cdot43$ ✓\n\n**$b=2$:** $D=4a+9$ divides $7a-4$. Multiplying by $4$, $$4(7a-4)=7(4a+9)-79 ,$$ so $4a+9$ divides the prime $79$. Since $4a+9\\ge13$, we would need $4a+9=79$, i.e. $a=17.5$ — not an integer ✗\n\n**Answer:** $$(a,b)=(11,1),\\qquad (49,1),\\qquad \\left(7k^{2},\\ 7k\\right)\\ \\ \\text{for } k=1,2,3,\\dots$$\n\n**A note on technique.** Forming a linear combination that lowers the degree is the standard move for problems of the shape \"$f(a,b)$ divides $g(a,b)$\": it turns a divisibility between two large expressions into one involving something small, after which size estimates finish the job."
+   }
   }
  ]
 };
