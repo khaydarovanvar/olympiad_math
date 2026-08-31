@@ -11,7 +11,7 @@ window.LESSON_INDEX = [
    "ru": "Фундамент всей теории чисел: деление с остатком, признаки делимости и алгоритм Евклида.",
    "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 7
  },
  {
@@ -25,7 +25,7 @@ window.LESSON_INDEX = [
    "ru": "Кирпичи, из которых сложены все целые числа: разложение, бесконечность простых и приём «$p>3$ значит $p=6k\\pm1$».",
    "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\"."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {

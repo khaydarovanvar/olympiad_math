@@ -926,6 +926,486 @@ window.LESSONS[1] = {
     "ru": "Обозначим $k=\\dfrac{abc-1}{(a-1)(b-1)(c-1)}$ — целое положительное. Так как $c\\ge2$, $b\\ge3$, $a\\ge4$, отношение $\\dfrac{x}{x-1}$ убывает, и $$k<\\frac{abc}{(a-1)(b-1)(c-1)}=\\frac{a}{a-1}\\cdot\\frac{b}{b-1}\\cdot\\frac{c}{c-1}\\le\\frac{4}{3}\\cdot\\frac{3}{2}\\cdot\\frac{2}{1}=4.$$ Кроме того, $abc-1$ и $(a-1)(b-1)(c-1)$ имеют разную чётность при нечётном $c$, что ограничивает случаи. Остаются $k=2$ и $k=3$; разбор даёт ровно два набора. **Ответ:** $(a,b,c)=(3,5,15)$ и $(a,b,c)=(2,4,8)$ — с точностью до записи в убывающем порядке $(15,5,3)$ и $(8,4,2)$. Проверка: $15\\cdot5\\cdot3-1=224$ и $14\\cdot4\\cdot2=112$, $224=2\\cdot112$ ✓; $8\\cdot4\\cdot2-1=63$ и $7\\cdot3\\cdot1=21$, $63=3\\cdot21$ ✓",
     "en": "Write $k=\\dfrac{abc-1}{(a-1)(b-1)(c-1)}$, a positive integer. Since $c\\ge2$, $b\\ge3$, $a\\ge4$ and $\\dfrac{x}{x-1}$ is decreasing, $$k<\\frac{abc}{(a-1)(b-1)(c-1)}=\\frac{a}{a-1}\\cdot\\frac{b}{b-1}\\cdot\\frac{c}{c-1}\\le\\frac{4}{3}\\cdot\\frac{3}{2}\\cdot\\frac{2}{1}=4.$$ A parity check also narrows the cases: for odd $c$ the two sides differ in parity. This leaves $k=2$ and $k=3$, and working each out gives exactly two triples. **Answer:** $(a,b,c)=(15,5,3)$ and $(a,b,c)=(8,4,2)$. Check: $15\\cdot5\\cdot3-1=224$ and $14\\cdot4\\cdot2=112$, with $224=2\\cdot112$ ✓; $8\\cdot4\\cdot2-1=63$ and $7\\cdot3\\cdot1=21$, with $63=3\\cdot21$ ✓"
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите наименьшее натуральное число, которое делится на каждое из чисел $2,3,4,5,6$.",
+    "en": "Find the smallest positive integer divisible by each of $2,3,4,5,6$."
+   },
+   "hint": {
+    "ru": "Это НОК; берите каждое простое в наибольшей встретившейся степени.",
+    "en": "It is the LCM; take each prime to the highest power that occurs."
+   },
+   "sol": {
+    "ru": "Разложим на простые множители: $$2=2,\\quad 3=3,\\quad 4=2^{2},\\quad 5=5,\\quad 6=2\\cdot3 .$$ НОК берёт каждое простое в наибольшей встретившейся степени: двойку — во второй (из четвёрки), тройку — в первой, пятёрку — в первой: $$\\operatorname{lcm}=2^{2}\\cdot3\\cdot5=60 .$$\n\n**Проверка:** $60$ делится на $2,3,4,5,6$ ✓ А $30$ не подходит: $30$ не делится на $4$.\n\n**Ответ:** $60$.",
+    "en": "Factor each number: $$2=2,\\quad 3=3,\\quad 4=2^{2},\\quad 5=5,\\quad 6=2\\cdot3 .$$ The LCM takes each prime to the highest power occurring: two squared (from the four), three, and five: $$\\operatorname{lcm}=2^{2}\\cdot3\\cdot5=60 .$$\n\n**Check:** $60$ is divisible by $2,3,4,5,6$ ✓ And $30$ fails, since $30$ is not divisible by $4$.\n\n**Answer:** $60$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите $\\gcd(84,120)$ и $\\operatorname{lcm}(84,120)$.",
+    "en": "Find $\\gcd(84,120)$ and $\\operatorname{lcm}(84,120)$."
+   },
+   "hint": {
+    "ru": "Разложите оба числа и сравните показатели.",
+    "en": "Factor both numbers and compare the exponents."
+   },
+   "sol": {
+    "ru": "Разложим: $$84=2^{2}\\cdot3\\cdot7,\\qquad 120=2^{3}\\cdot3\\cdot5 .$$\n\n**НОД** берёт наименьший показатель каждого общего простого: $$\\gcd=2^{2}\\cdot3=12 .$$\n\n**НОК** берёт наибольший показатель каждого встретившегося простого: $$\\operatorname{lcm}=2^{3}\\cdot3\\cdot5\\cdot7=840 .$$\n\n**Проверка по формуле** $\\gcd\\cdot\\operatorname{lcm}=ab$: $$12\\cdot840=10\\,080=84\\cdot120\\ \\checkmark$$",
+    "en": "Factor: $$84=2^{2}\\cdot3\\cdot7,\\qquad 120=2^{3}\\cdot3\\cdot5 .$$\n\n**The GCD** takes the smallest exponent of each shared prime: $$\\gcd=2^{2}\\cdot3=12 .$$\n\n**The LCM** takes the largest exponent of each prime occurring: $$\\operatorname{lcm}=2^{3}\\cdot3\\cdot5\\cdot7=840 .$$\n\n**Check with** $\\gcd\\cdot\\operatorname{lcm}=ab$: $$12\\cdot840=10\\,080=84\\cdot120\\ \\checkmark$$"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько чисел от $1$ до $200$ делится на $7$? А сколько из них делится и на $7$, и на $5$?",
+    "en": "How many numbers from $1$ to $200$ are divisible by $7$? And how many of those are divisible by both $7$ and $5$?"
+   },
+   "hint": {
+    "ru": "Кратных $d$ в отрезке $[1,N]$ ровно $\\left\\lfloor N/d\\right\\rfloor$.",
+    "en": "The multiples of $d$ in $[1,N]$ number $\\left\\lfloor N/d\\right\\rfloor$."
+   },
+   "sol": {
+    "ru": "Кратные семи — это $7,14,\\dots$, и их количество равно $$\\left\\lfloor\\frac{200}{7}\\right\\rfloor=28$$ (действительно, $7\\cdot28=196\\le200<203$).\n\nДелиться и на $7$, и на $5$ — значит делиться на $\\operatorname{lcm}(5,7)=35$. Таких чисел $$\\left\\lfloor\\frac{200}{35}\\right\\rfloor=5$$ (а именно $35,70,105,140,175$).\n\n**Ответ:** $28$ и $5$.",
+    "en": "The multiples of seven are $7,14,\\dots$, and there are $$\\left\\lfloor\\frac{200}{7}\\right\\rfloor=28$$ of them (indeed $7\\cdot28=196\\le200<203$).\n\nBeing divisible by both $7$ and $5$ means being divisible by $\\operatorname{lcm}(5,7)=35$, and there are $$\\left\\lfloor\\frac{200}{35}\\right\\rfloor=5$$ of those, namely $35,70,105,140,175$.\n\n**Answer:** $28$ and $5$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Найдите наименьшее натуральное число, которое при делении на $5$ даёт остаток $3$, а при делении на $7$ — остаток $4$.",
+    "en": "Find the smallest positive integer leaving remainder $3$ on division by $5$ and remainder $4$ on division by $7$."
+   },
+   "hint": {
+    "ru": "Выпишите числа первого вида и проверьте второе условие.",
+    "en": "List the numbers of the first kind and test the second condition."
+   },
+   "sol": {
+    "ru": "Числа, дающие остаток $3$ при делении на $5$, — это $$3,\\ 8,\\ 13,\\ 18,\\ 23,\\dots$$ Проверяем каждое на второе условие (остаток $4$ при делении на $7$): $$3\\to3,\\qquad 8\\to1,\\qquad 13\\to6,\\qquad 18\\to4\\ \\checkmark$$\n\n**Ответ:** $18$.\n\n*Замечание.* Все подходящие числа — это $18+35k$: шаг равен $\\operatorname{lcm}(5,7)=35$, потому что оба условия должны сохраниться. Следующие: $53$, $88$, $123$.",
+    "en": "The numbers leaving remainder $3$ modulo $5$ are $$3,\\ 8,\\ 13,\\ 18,\\ 23,\\dots$$ Test each against the second condition (remainder $4$ modulo $7$): $$3\\to3,\\qquad 8\\to1,\\qquad 13\\to6,\\qquad 18\\to4\\ \\checkmark$$\n\n**Answer:** $18$.\n\n*Remark.* All the solutions are $18+35k$: the step is $\\operatorname{lcm}(5,7)=35$, since both conditions must survive. The next ones are $53$, $88$, $123$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сумма цифр натурального числа равна $27$. Может ли это число быть простым?",
+    "en": "The digits of a positive integer add up to $27$. Can that number be prime?"
+   },
+   "hint": {
+    "ru": "Признак делимости на $9$.",
+    "en": "The divisibility rule for $9$."
+   },
+   "sol": {
+    "ru": "Число делится на $9$ тогда и только тогда, когда сумма его цифр делится на $9$. Здесь сумма цифр равна $27=9\\cdot3$, значит само число делится на $9$.\n\nЗначит у числа есть делитель $9$, отличный от $1$. Простым оно могло бы быть только если бы совпадало с $9$ — но $9=3\\cdot3$ не простое, да и сумма цифр девятки равна $9$, а не $27$.\n\nБолее того, наименьшее число с суммой цифр $27$ — это $999$, так что все такие числа не меньше $999$ и имеют собственный делитель $9$.\n\n**Ответ:** не может. $\\blacksquare$",
+    "en": "A number is divisible by $9$ exactly when its digit sum is. Here the digit sum is $27=9\\cdot3$, so the number itself is divisible by $9$.\n\nIt therefore has a divisor $9$ other than $1$. It could only be prime if it equalled $9$ — but $9=3\\cdot3$ is not prime, and the digit sum of $9$ is $9$, not $27$.\n\nIndeed the smallest number with digit sum $27$ is $999$, so every such number is at least $999$ and has the proper divisor $9$.\n\n**Answer:** it cannot. $\\blacksquare$"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько натуральных делителей у числа $84$ и чему равна их сумма?",
+    "en": "How many positive divisors has $84$, and what is their sum?"
+   },
+   "hint": {
+    "ru": "Из разложения $84=2^{2}\\cdot3\\cdot7$ читаются обе величины.",
+    "en": "Both quantities are read off the factorisation $84=2^{2}\\cdot3\\cdot7$."
+   },
+   "sol": {
+    "ru": "Разложение: $84=2^{2}\\cdot3^{1}\\cdot7^{1}$.\n\n**Количество делителей.** Каждый делитель имеет вид $2^{a}3^{b}7^{c}$, где $0\\le a\\le2$, $0\\le b\\le1$, $0\\le c\\le1$. По правилу произведения $$\\tau(84)=(2+1)(1+1)(1+1)=12 .$$\n\n**Сумма делителей.** Раскрыв скобки в произведении $$\\left(1+2+4\\right)\\left(1+3\\right)\\left(1+7\\right),$$ мы получим каждый делитель ровно один раз. Значит $$\\sigma(84)=7\\cdot4\\cdot8=224 .$$\n\n**Проверка перечислением:** $1,2,3,4,6,7,12,14,21,28,42,84$ — двенадцать чисел, и их сумма равна $224$ ✓",
+    "en": "The factorisation is $84=2^{2}\\cdot3^{1}\\cdot7^{1}$.\n\n**The count.** Every divisor is $2^{a}3^{b}7^{c}$ with $0\\le a\\le2$, $0\\le b\\le1$, $0\\le c\\le1$, so by the product rule $$\\tau(84)=(2+1)(1+1)(1+1)=12 .$$\n\n**The sum.** Expanding $$\\left(1+2+4\\right)\\left(1+3\\right)\\left(1+7\\right)$$ produces each divisor exactly once, so $$\\sigma(84)=7\\cdot4\\cdot8=224 .$$\n\n**Check by listing:** $1,2,3,4,6,7,12,14,21,28,42,84$ — twelve numbers adding to $224$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $2^{2n+1}+3^{2n+1}$ делится на $5$ при любом целом $n\\ge0$.",
+    "en": "Prove that $2^{2n+1}+3^{2n+1}$ is divisible by $5$ for every integer $n\\ge0$."
+   },
+   "hint": {
+    "ru": "При нечётном показателе $a+b$ делит $a^{k}+b^{k}$ — или возьмите модуль $5$.",
+    "en": "For an odd exponent $a+b$ divides $a^{k}+b^{k}$ — or take remainders modulo $5$."
+   },
+   "sol": {
+    "ru": "**Способ 1: тождество.** Показатель $2n+1$ нечётен, а при нечётном $k$ $$a^{k}+b^{k}=(a+b)\\left(a^{k-1}-a^{k-2}b+\\dots+b^{k-1}\\right).$$ Подставляя $a=2$, $b=3$, получаем множитель $a+b=5$, а вторая скобка — целое число. Значит вся сумма делится на $5$.\n\n**Способ 2: остатки.** По модулю $5$ имеем $3\\equiv-2$, поэтому $$2^{2n+1}+3^{2n+1}\\equiv2^{2n+1}+(-2)^{2n+1}=2^{2n+1}-2^{2n+1}=0\\pmod5 ,$$ где мы воспользовались нечётностью показателя. $\\blacksquare$\n\n**Проверка:** $n=0$ даёт $2+3=5$ ✓, $n=1$ даёт $8+27=35$ ✓, $n=2$ даёт $32+243=275=5\\cdot55$ ✓",
+    "en": "**Way 1: an identity.** The exponent $2n+1$ is odd, and for odd $k$ $$a^{k}+b^{k}=(a+b)\\left(a^{k-1}-a^{k-2}b+\\dots+b^{k-1}\\right).$$ With $a=2$, $b=3$ the factor $a+b=5$ comes out and the bracket is an integer, so the whole sum is divisible by $5$.\n\n**Way 2: remainders.** Modulo $5$ we have $3\\equiv-2$, so $$2^{2n+1}+3^{2n+1}\\equiv2^{2n+1}+(-2)^{2n+1}=2^{2n+1}-2^{2n+1}=0\\pmod5 ,$$ using that the exponent is odd. $\\blacksquare$\n\n**Check:** $n=0$ gives $2+3=5$ ✓, $n=1$ gives $8+27=35$ ✓, $n=2$ gives $32+243=275=5\\cdot55$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Чему может быть равен $\\gcd(n,\\,n+2)$ для натурального $n$? Разберите все случаи.",
+    "en": "What values can $\\gcd(n,\\,n+2)$ take for a positive integer $n$? Consider all cases."
+   },
+   "hint": {
+    "ru": "Общий делитель делит и разность.",
+    "en": "A common divisor also divides the difference."
+   },
+   "sol": {
+    "ru": "Пусть $d=\\gcd(n,n+2)$. Тогда $d$ делит оба числа, а значит и их разность: $$d\\ \\big|\\ (n+2)-n=2 .$$ Поэтому $d\\in\\{1,2\\}$.\n\n**Когда $d=2$.** Двойка делит $n$ и $n+2$ ровно тогда, когда $n$ чётно. Значит при чётном $n$ имеем $d=2$.\n\n**Когда $d=1$.** При нечётном $n$ двойка не делит $n$, поэтому остаётся $d=1$.\n\n**Ответ:** $\\gcd(n,n+2)=2$ при чётном $n$ и $1$ при нечётном. $\\blacksquare$\n\n*Проверка:* $\\gcd(6,8)=2$ ✓, $\\gcd(7,9)=1$ ✓",
+    "en": "Let $d=\\gcd(n,n+2)$. It divides both numbers, hence their difference: $$d\\ \\big|\\ (n+2)-n=2 ,$$ so $d\\in\\{1,2\\}$.\n\n**When $d=2$.** Two divides $n$ and $n+2$ exactly when $n$ is even, so even $n$ gives $d=2$.\n\n**When $d=1$.** For odd $n$ two does not divide $n$, leaving $d=1$.\n\n**Answer:** $\\gcd(n,n+2)=2$ for even $n$ and $1$ for odd $n$. $\\blacksquare$\n\n*Check:* $\\gcd(6,8)=2$ ✓, $\\gcd(7,9)=1$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все натуральные $n$, для которых $n+1$ делит $n^{2}+1$.",
+    "en": "Find all positive integers $n$ for which $n+1$ divides $n^{2}+1$."
+   },
+   "hint": {
+    "ru": "Выделите из $n^{2}+1$ часть, кратную $n+1$.",
+    "en": "Split off from $n^{2}+1$ the part that is a multiple of $n+1$."
+   },
+   "sol": {
+    "ru": "Запишем $$n^{2}+1=\\left(n^{2}-1\\right)+2=(n-1)(n+1)+2 .$$ Первое слагаемое делится на $n+1$, поэтому $$n+1\\ \\big|\\ n^{2}+1\\quad\\Longleftrightarrow\\quad n+1\\ \\big|\\ 2 .$$\n\nДелители двойки среди чисел вида $n+1$ при натуральном $n\\ge1$: только $n+1=2$, то есть $n=1$.\n\n**Проверка:** при $n=1$ имеем $n+1=2$ и $n^{2}+1=2$, и $2\\mid2$ ✓\n\n**Ответ:** $n=1$. *(Если допускать $n=0$, подходит и оно: $1\\mid1$.)*",
+    "en": "Write $$n^{2}+1=\\left(n^{2}-1\\right)+2=(n-1)(n+1)+2 .$$ The first term is a multiple of $n+1$, so $$n+1\\ \\big|\\ n^{2}+1\\quad\\Longleftrightarrow\\quad n+1\\ \\big|\\ 2 .$$\n\nAmong the numbers $n+1$ with $n\\ge1$, only $n+1=2$ divides two, that is $n=1$.\n\n**Check:** at $n=1$ we have $n+1=2$ and $n^{2}+1=2$, and $2\\mid2$ ✓\n\n**Answer:** $n=1$. *(Allowing $n=0$ it works too: $1\\mid1$.)*"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что среди любых $n$ подряд идущих целых чисел ровно одно делится на $n$.",
+    "en": "Prove that among any $n$ consecutive integers exactly one is divisible by $n$."
+   },
+   "hint": {
+    "ru": "Посмотрите на их остатки при делении на $n$.",
+    "en": "Look at their remainders on division by $n$."
+   },
+   "sol": {
+    "ru": "Пусть числа равны $$a,\\ a+1,\\ a+2,\\ \\dots,\\ a+n-1 .$$\n\n**Все остатки различны.** Если бы два из них давали одинаковый остаток при делении на $n$, то $n$ делило бы их разность. Но разность любых двух из этих чисел по модулю меньше $n$ и не равна нулю, значит на $n$ делиться не может. Противоречие.\n\n**Остатков ровно $n$.** Различных остатков при делении на $n$ бывает ровно $n$ штук: $0,1,\\dots,n-1$. У нас $n$ чисел с попарно различными остатками, значит каждый остаток встречается **ровно один раз**.\n\nВ частности, ровно одно число даёт остаток $0$ — то есть делится на $n$. $\\blacksquare$\n\n*Следствие.* Произведение $n$ подряд идущих целых чисел делится на $n$. (На самом деле верно и большее: оно делится на $n!$.)",
+    "en": "Let the numbers be $$a,\\ a+1,\\ a+2,\\ \\dots,\\ a+n-1 .$$\n\n**All the remainders differ.** If two of them left the same remainder modulo $n$, then $n$ would divide their difference. But the difference of any two of these numbers is non-zero and smaller than $n$ in absolute value, so it cannot be a multiple of $n$. Contradiction.\n\n**There are exactly $n$ remainders.** Modulo $n$ there are exactly $n$ possible remainders $0,1,\\dots,n-1$. We have $n$ numbers with pairwise different remainders, so each remainder occurs **exactly once**.\n\nIn particular exactly one number leaves remainder $0$ — that is, is divisible by $n$. $\\blacksquare$\n\n*Corollary.* A product of $n$ consecutive integers is divisible by $n$. (In fact more is true: it is divisible by $n!$.)"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите наименьшее натуральное число, у которого ровно $12$ натуральных делителей.",
+    "en": "Find the smallest positive integer with exactly $12$ positive divisors."
+   },
+   "hint": {
+    "ru": "Число делителей равно $(a_1+1)(a_2+1)\\cdots$; переберите разложения числа $12$.",
+    "en": "The divisor count is $(a_1+1)(a_2+1)\\cdots$; run through the factorisations of $12$."
+   },
+   "sol": {
+    "ru": "Если $N=p_1^{a_1}p_2^{a_2}\\cdots$, то $\\tau(N)=\\left(a_1+1\\right)\\left(a_2+1\\right)\\cdots$. Значит нам нужно разложить $12$ в произведение множителей, каждый из которых больше единицы, и выбрать показатели.\n\nЧтобы число было наименьшим, **бо́льшие показатели ставят к меньшим простым**. Переберём разложения:\n\n$12$ $\\to$ показатель $11$: $\\ 2^{11}=2048$;\n\n$6\\cdot2$ $\\to$ показатели $5,1$: $\\ 2^{5}\\cdot3=96$;\n\n$4\\cdot3$ $\\to$ показатели $3,2$: $\\ 2^{3}\\cdot3^{2}=72$;\n\n$3\\cdot2\\cdot2$ $\\to$ показатели $2,1,1$: $\\ 2^{2}\\cdot3\\cdot5=60$;\n\n$2\\cdot2\\cdot3$ — то же самое с точностью до порядка, но показатель $2$ выгоднее отдать двойке, что уже учтено.\n\nНаименьшее из полученных: $$60 .$$\n\n**Проверка:** делители $60$ — это $1,2,3,4,5,6,10,12,15,20,30,60$ — ровно двенадцать ✓\n\n**Ответ:** $60$.",
+    "en": "If $N=p_1^{a_1}p_2^{a_2}\\cdots$ then $\\tau(N)=\\left(a_1+1\\right)\\left(a_2+1\\right)\\cdots$. So we must write $12$ as a product of factors greater than one and read off the exponents.\n\nTo make the number smallest, **the larger exponents go on the smaller primes**. Run through the factorisations:\n\n$12$ $\\to$ exponent $11$: $\\ 2^{11}=2048$;\n\n$6\\cdot2$ $\\to$ exponents $5,1$: $\\ 2^{5}\\cdot3=96$;\n\n$4\\cdot3$ $\\to$ exponents $3,2$: $\\ 2^{3}\\cdot3^{2}=72$;\n\n$3\\cdot2\\cdot2$ $\\to$ exponents $2,1,1$: $\\ 2^{2}\\cdot3\\cdot5=60$.\n\nThe smallest of these is $$60 .$$\n\n**Check:** the divisors of $60$ are $1,2,3,4,5,6,10,12,15,20,30,60$ — exactly twelve ✓\n\n**Answer:** $60$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $\\gcd(a,b)=6$ и $\\operatorname{lcm}(a,b)=36$.",
+    "en": "Find all pairs of positive integers $(a,b)$ with $\\gcd(a,b)=6$ and $\\operatorname{lcm}(a,b)=36$."
+   },
+   "hint": {
+    "ru": "Запишите $a=6x$, $b=6y$ со взаимно простыми $x,y$.",
+    "en": "Write $a=6x$, $b=6y$ with $x,y$ coprime."
+   },
+   "sol": {
+    "ru": "Так как $\\gcd(a,b)=6$, можно записать $$a=6x,\\qquad b=6y,\\qquad \\gcd(x,y)=1 .$$\n\nДля таких чисел $$\\operatorname{lcm}(a,b)=6xy .$$ (Действительно, $\\operatorname{lcm}=\\dfrac{ab}{\\gcd}=\\dfrac{36xy}{6}=6xy$.)\n\nУсловие $\\operatorname{lcm}=36$ даёт $6xy=36$, то есть $$xy=6,\\qquad \\gcd(x,y)=1 .$$\n\nПары взаимно простых чисел с произведением $6$: $$(1,6),\\ (6,1),\\ (2,3),\\ (3,2)$$ — пара $(x,y)$ вида $(6,1)$ и т. д.; варианта с общим множителем здесь нет.\n\nВозвращаясь к $a=6x$, $b=6y$: $$(6,36),\\ (36,6),\\ (12,18),\\ (18,12).$$\n\n**Проверка** для $(12,18)$: $\\gcd=6$ ✓, $\\operatorname{lcm}=36$ ✓\n\n**Ответ:** четыре пары, перечисленные выше.",
+    "en": "Since $\\gcd(a,b)=6$ we may write $$a=6x,\\qquad b=6y,\\qquad \\gcd(x,y)=1 .$$\n\nFor such numbers $$\\operatorname{lcm}(a,b)=6xy$$ (indeed $\\operatorname{lcm}=\\dfrac{ab}{\\gcd}=\\dfrac{36xy}{6}=6xy$).\n\nThe condition $\\operatorname{lcm}=36$ gives $6xy=36$, that is $$xy=6,\\qquad \\gcd(x,y)=1 .$$\n\nThe coprime pairs with product $6$ are $$(1,6),\\ (6,1),\\ (2,3),\\ (3,2).$$\n\nBack to $a=6x$, $b=6y$: $$(6,36),\\ (36,6),\\ (12,18),\\ (18,12).$$\n\n**Check** for $(12,18)$: $\\gcd=6$ ✓, $\\operatorname{lcm}=36$ ✓\n\n**Answer:** the four pairs above."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $n^{2}-1$ делится на $8$ при любом нечётном $n$.",
+    "en": "Prove that $n^{2}-1$ is divisible by $8$ for every odd $n$."
+   },
+   "hint": {
+    "ru": "Разложите на множители и посмотрите на два соседних чётных числа.",
+    "en": "Factor it and look at two consecutive even numbers."
+   },
+   "sol": {
+    "ru": "Пусть $n=2k+1$. Тогда $$n^{2}-1=(n-1)(n+1)=2k\\cdot(2k+2)=4k(k+1).$$\n\nЧисла $k$ и $k+1$ идут подряд, поэтому одно из них чётно, и произведение $k(k+1)$ делится на $2$.\n\nЗначит $4k(k+1)$ делится на $4\\cdot2=8$. $\\blacksquare$\n\n*Проверка:* $n=3$ даёт $8$ ✓, $n=5$ даёт $24=8\\cdot3$ ✓, $n=7$ даёт $48=8\\cdot6$ ✓\n\n*Усиление.* Если вдобавок $3\\nmid n$, то $n^{2}-1$ делится и на $3$, а значит на $24$ — именно этот факт нужен в задачах о простых числах, больших трёх.",
+    "en": "Let $n=2k+1$. Then $$n^{2}-1=(n-1)(n+1)=2k\\cdot(2k+2)=4k(k+1).$$\n\nThe numbers $k$ and $k+1$ are consecutive, so one of them is even and the product $k(k+1)$ is divisible by $2$.\n\nHence $4k(k+1)$ is divisible by $4\\cdot2=8$. $\\blacksquare$\n\n*Check:* $n=3$ gives $8$ ✓, $n=5$ gives $24=8\\cdot3$ ✓, $n=7$ gives $48=8\\cdot6$ ✓\n\n*Sharpening.* If moreover $3\\nmid n$ then $n^{2}-1$ is divisible by $3$ as well, hence by $24$ — exactly the fact needed in problems about primes greater than three."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Найдите $\\operatorname{lcm}(1,2,3,\\dots,10)$.",
+    "en": "Find $\\operatorname{lcm}(1,2,3,\\dots,10)$."
+   },
+   "hint": {
+    "ru": "Возьмите каждое простое до $10$ в наибольшей степени, не превосходящей $10$.",
+    "en": "Take each prime up to $10$ to the highest power not exceeding $10$."
+   },
+   "sol": {
+    "ru": "НОК содержит каждое простое $p\\le10$ в наибольшей степени $p^{k}\\le10$:\n\n$\\bullet$ $p=2$: наибольшая степень двойки, не превосходящая $10$, — это $8=2^{3}$;\n\n$\\bullet$ $p=3$: это $9=3^{2}$;\n\n$\\bullet$ $p=5$: это $5$;\n\n$\\bullet$ $p=7$: это $7$.\n\nЗначит $$\\operatorname{lcm}(1,\\dots,10)=2^{3}\\cdot3^{2}\\cdot5\\cdot7=8\\cdot9\\cdot35=2520 .$$\n\n**Проверка:** $2520$ делится на каждое из чисел $1,\\dots,10$ ✓ А, например, $1260$ уже не делится на $8$.\n\n**Ответ:** $2520$.",
+    "en": "The LCM contains each prime $p\\le10$ to the highest power $p^{k}\\le10$:\n\n$\\bullet$ $p=2$: the highest power of two not exceeding $10$ is $8=2^{3}$;\n\n$\\bullet$ $p=3$: it is $9=3^{2}$;\n\n$\\bullet$ $p=5$: it is $5$;\n\n$\\bullet$ $p=7$: it is $7$.\n\nSo $$\\operatorname{lcm}(1,\\dots,10)=2^{3}\\cdot3^{2}\\cdot5\\cdot7=8\\cdot9\\cdot35=2520 .$$\n\n**Check:** $2520$ is divisible by each of $1,\\dots,10$ ✓ while $1260$, for instance, is not divisible by $8$.\n\n**Answer:** $2520$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $n(n+1)(2n+1)$ делится на $6$ при любом целом $n$.",
+    "en": "Prove that $n(n+1)(2n+1)$ is divisible by $6$ for every integer $n$."
+   },
+   "hint": {
+    "ru": "Отдельно на $2$ и отдельно на $3$.",
+    "en": "Handle the factor $2$ and the factor $3$ separately."
+   },
+   "sol": {
+    "ru": "**Делимость на $2$.** Числа $n$ и $n+1$ идут подряд, значит одно из них чётно, и произведение делится на $2$.\n\n**Делимость на $3$.** Разберём остаток $n$ по модулю $3$.\n\n$n\\equiv0$: множитель $n$ делится на $3$;\n\n$n\\equiv1$: тогда $2n+1\\equiv2+1=3\\equiv0$;\n\n$n\\equiv2$: тогда $n+1\\equiv3\\equiv0$.\n\nВо всех случаях один из множителей делится на $3$.\n\n**Вывод.** Произведение делится на $2$ и на $3$, а эти числа взаимно просты, значит оно делится на $6$. $\\blacksquare$\n\n*Где это встречается.* Формула суммы квадратов $$1^{2}+2^{2}+\\dots+n^{2}=\\frac{n(n+1)(2n+1)}{6}$$ имеет смысл только потому, что числитель всегда делится на $6$.",
+    "en": "**Divisibility by $2$.** The numbers $n$ and $n+1$ are consecutive, so one is even and the product is divisible by $2$.\n\n**Divisibility by $3$.** Split by $n$ modulo $3$.\n\n$n\\equiv0$: the factor $n$ is divisible by $3$;\n\n$n\\equiv1$: then $2n+1\\equiv2+1=3\\equiv0$;\n\n$n\\equiv2$: then $n+1\\equiv3\\equiv0$.\n\nIn every case one factor is divisible by $3$.\n\n**Conclusion.** The product is divisible by $2$ and by $3$, which are coprime, hence by $6$. $\\blacksquare$\n\n*Where this shows up.* The formula $$1^{2}+2^{2}+\\dots+n^{2}=\\frac{n(n+1)(2n+1)}{6}$$ makes sense only because the numerator is always divisible by $6$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколькими нулями оканчивается число $50!$?",
+    "en": "In how many zeros does $50!$ end?"
+   },
+   "hint": {
+    "ru": "Считайте пятёрки, не забыв про $25$ и $50$.",
+    "en": "Count the fives, remembering $25$ and $50$."
+   },
+   "sol": {
+    "ru": "Число нулей равно показателю пятёрки в разложении $50!$ (двоек заведомо больше).\n\n$$v_5(50!)=\\left\\lfloor\\frac{50}{5}\\right\\rfloor+\\left\\lfloor\\frac{50}{25}\\right\\rfloor=10+2=12 .$$\n\nПервое слагаемое считает числа $5,10,\\dots,50$ — каждое даёт хотя бы одну пятёрку. Второе добавляет **вторую** пятёрку для чисел $25$ и $50$.\n\n**Ответ:** $12$ нулей.\n\n*Типичная ошибка* — остановиться на $10$, забыв, что $25=5^{2}$ и $50=2\\cdot5^{2}$ дают по две пятёрки.",
+    "en": "The number of zeros is the exponent of five in $50!$ (twos are certainly more plentiful).\n\n$$v_5(50!)=\\left\\lfloor\\frac{50}{5}\\right\\rfloor+\\left\\lfloor\\frac{50}{25}\\right\\rfloor=10+2=12 .$$\n\nThe first term counts $5,10,\\dots,50$, each giving at least one five. The second adds the **second** five for $25$ and $50$.\n\n**Answer:** $12$ zeros.\n\n*The usual slip* is to stop at $10$, forgetting that $25=5^{2}$ and $50=2\\cdot5^{2}$ each carry two fives."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все натуральные $n$, при которых $2^{n}-1$ делится на $7$.",
+    "en": "Find all positive integers $n$ for which $2^{n}-1$ is divisible by $7$."
+   },
+   "hint": {
+    "ru": "Выпишите степени двойки по модулю $7$.",
+    "en": "List the powers of two modulo $7$."
+   },
+   "sol": {
+    "ru": "Посчитаем степени двойки по модулю $7$: $$2^{1}\\equiv2,\\qquad 2^{2}\\equiv4,\\qquad 2^{3}\\equiv8\\equiv1 .$$ Дальше всё повторяется с периодом $3$, потому что умножение на $2^{3}\\equiv1$ ничего не меняет: $$2^{4}\\equiv2,\\quad 2^{5}\\equiv4,\\quad 2^{6}\\equiv1,\\ \\dots$$\n\nЗначит $$2^{n}\\equiv1\\pmod7\\quad\\Longleftrightarrow\\quad n\\equiv0\\pmod3 .$$\n\n**Ответ:** ровно те $n$, которые делятся на $3$.\n\n**Проверка:** $2^{3}-1=7$ ✓, $2^{6}-1=63=7\\cdot9$ ✓, а $2^{4}-1=15$ на $7$ не делится ✓\n\n*Замечание.* Число $3$ здесь — **порядок** двойки по модулю $7$. По малой теореме Ферма $2^{6}\\equiv1$, и порядок обязан делить $6$; из делителей $1,2,3,6$ подходит наименьший, равный $3$.",
+    "en": "Compute the powers of two modulo $7$: $$2^{1}\\equiv2,\\qquad 2^{2}\\equiv4,\\qquad 2^{3}\\equiv8\\equiv1 .$$ From there everything repeats with period $3$, since multiplying by $2^{3}\\equiv1$ changes nothing: $$2^{4}\\equiv2,\\quad 2^{5}\\equiv4,\\quad 2^{6}\\equiv1,\\ \\dots$$\n\nHence $$2^{n}\\equiv1\\pmod7\\quad\\Longleftrightarrow\\quad n\\equiv0\\pmod3 .$$\n\n**Answer:** exactly the multiples of $3$.\n\n**Check:** $2^{3}-1=7$ ✓, $2^{6}-1=63=7\\cdot9$ ✓, while $2^{4}-1=15$ is not divisible by $7$ ✓\n\n*Remark.* The number $3$ here is the **order** of two modulo $7$. Fermat’s little theorem gives $2^{6}\\equiv1$, so the order must divide $6$; among the divisors $1,2,3,6$ the smallest that works is $3$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что если $\\gcd(a,b)=1$, то $\\gcd(a+b,\\,ab)=1$.",
+    "en": "Prove that if $\\gcd(a,b)=1$ then $\\gcd(a+b,\\,ab)=1$."
+   },
+   "hint": {
+    "ru": "Возьмите общий простой делитель и вспомните, что $p\\mid ab$ влечёт $p\\mid a$ или $p\\mid b$.",
+    "en": "Take a common prime divisor and recall that $p\\mid ab$ forces $p\\mid a$ or $p\\mid b$."
+   },
+   "sol": {
+    "ru": "Предположим противное: пусть $d=\\gcd(a+b,ab)>1$. Тогда у $d$ есть простой делитель $p$, и $$p\\ \\big|\\ a+b,\\qquad p\\ \\big|\\ ab .$$\n\n**Ключевой шаг.** Число $p$ простое и делит произведение $ab$, значит $p$ делит один из множителей. Пусть для определённости $$p\\ \\big|\\ a$$ (случай $p\\mid b$ разбирается дословно так же).\n\n**Приходим к противоречию.** Из $p\\mid a+b$ и $p\\mid a$ следует $$p\\ \\big|\\ (a+b)-a=b .$$ Значит $p$ — общий делитель чисел $a$ и $b$, то есть $p$ делит $\\gcd(a,b)=1$. Но простое число не может делить единицу.\n\nПротиворечие показывает, что $\\gcd(a+b,ab)=1$. $\\blacksquare$\n\n*Проверка:* $a=4$, $b=9$ (взаимно простые): $\\gcd(13,36)=1$ ✓ А для $a=4$, $b=6$ (не взаимно простых) уже $\\gcd(10,24)=2$.",
+    "en": "Suppose not: let $d=\\gcd(a+b,ab)>1$. Then $d$ has a prime divisor $p$ with $$p\\ \\big|\\ a+b,\\qquad p\\ \\big|\\ ab .$$\n\n**The key step.** As $p$ is prime and divides the product $ab$, it divides one of the factors. Say $$p\\ \\big|\\ a$$ (the case $p\\mid b$ is word for word the same).\n\n**The contradiction.** From $p\\mid a+b$ and $p\\mid a$ we get $$p\\ \\big|\\ (a+b)-a=b .$$ So $p$ is a common divisor of $a$ and $b$, that is $p$ divides $\\gcd(a,b)=1$. But a prime cannot divide one.\n\nThe contradiction shows $\\gcd(a+b,ab)=1$. $\\blacksquare$\n\n*Check:* $a=4$, $b=9$ (coprime): $\\gcd(13,36)=1$ ✓ For $a=4$, $b=6$ (not coprime) we get $\\gcd(10,24)=2$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $a+b=100$ и $\\gcd(a,b)=10$.",
+    "en": "Find all pairs of positive integers $(a,b)$ with $a+b=100$ and $\\gcd(a,b)=10$."
+   },
+   "hint": {
+    "ru": "Запишите $a=10x$, $b=10y$ и переведите оба условия на $x,y$.",
+    "en": "Write $a=10x$, $b=10y$ and translate both conditions to $x,y$."
+   },
+   "sol": {
+    "ru": "Из $\\gcd(a,b)=10$ следует $$a=10x,\\qquad b=10y,\\qquad \\gcd(x,y)=1 .$$\n\nУсловие $a+b=100$ превращается в $$10x+10y=100\\quad\\Longrightarrow\\quad x+y=10 .$$\n\nОстаётся перебрать пары натуральных $x,y$ с суммой $10$ и проверить взаимную простоту: $$\\begin{array}{llll}(1,9)&\\gcd=1\\ \\checkmark & (2,8)&\\gcd=2\\ \\times\\\\ (3,7)&\\gcd=1\\ \\checkmark & (4,6)&\\gcd=2\\ \\times\\\\ (5,5)&\\gcd=5\\ \\times & (6,4)&\\times\\\\ (7,3)&\\checkmark & (8,2)&\\times\\\\ (9,1)&\\checkmark & &\\end{array}$$\n\nПодходят $(1,9),(3,7),(7,3),(9,1)$, откуда $$(a,b)=(10,90),\\ (30,70),\\ (70,30),\\ (90,10).$$\n\n**Проверка** для $(30,70)$: сумма $100$ ✓, $\\gcd(30,70)=10$ ✓\n\n**Ответ:** четыре пары.",
+    "en": "From $\\gcd(a,b)=10$ we get $$a=10x,\\qquad b=10y,\\qquad \\gcd(x,y)=1 ,$$ and $a+b=100$ becomes $$10x+10y=100\\quad\\Longrightarrow\\quad x+y=10 .$$\n\nRun through the positive pairs with sum $10$ and test coprimality: $$\\begin{array}{llll}(1,9)&\\gcd=1\\ \\checkmark & (2,8)&\\gcd=2\\ \\times\\\\ (3,7)&\\gcd=1\\ \\checkmark & (4,6)&\\gcd=2\\ \\times\\\\ (5,5)&\\gcd=5\\ \\times & (6,4)&\\times\\\\ (7,3)&\\checkmark & (8,2)&\\times\\\\ (9,1)&\\checkmark & &\\end{array}$$\n\nThe survivors $(1,9),(3,7),(7,3),(9,1)$ give $$(a,b)=(10,90),\\ (30,70),\\ (70,30),\\ (90,10).$$\n\n**Check** for $(30,70)$: the sum is $100$ ✓ and $\\gcd(30,70)=10$ ✓\n\n**Answer:** four pairs."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите наименьшее натуральное $n$, при котором $n!$ делится на $2^{10}$.",
+    "en": "Find the smallest positive integer $n$ for which $n!$ is divisible by $2^{10}$."
+   },
+   "hint": {
+    "ru": "Показатель двойки в $n!$ равен $\\left\\lfloor n/2\\right\\rfloor+\\left\\lfloor n/4\\right\\rfloor+\\dots$",
+    "en": "The exponent of two in $n!$ is $\\left\\lfloor n/2\\right\\rfloor+\\left\\lfloor n/4\\right\\rfloor+\\dots$"
+   },
+   "sol": {
+    "ru": "Показатель двойки в факториале равен $$v_2(n!)=\\left\\lfloor\\frac n2\\right\\rfloor+\\left\\lfloor\\frac n4\\right\\rfloor+\\left\\lfloor\\frac n8\\right\\rfloor+\\dots$$\n\nСчитаем по возрастанию $n$:\n\n$v_2(10!)=5+2+1=8$ — мало;\n\n$v_2(11!)=5+2+1=8$ — мало (одиннадцать нечётно, ничего не добавилось);\n\n$v_2(12!)=6+3+1=10$ ✓\n\n**Ответ:** $n=12$.\n\n*Почему скачок.* Переход от $11!$ к $12!$ добавляет множитель $12=2^{2}\\cdot3$, то есть сразу две двойки: $8+2=10$.",
+    "en": "The exponent of two in a factorial is $$v_2(n!)=\\left\\lfloor\\frac n2\\right\\rfloor+\\left\\lfloor\\frac n4\\right\\rfloor+\\left\\lfloor\\frac n8\\right\\rfloor+\\dots$$\n\nWork upwards:\n\n$v_2(10!)=5+2+1=8$ — not enough;\n\n$v_2(11!)=5+2+1=8$ — still not (eleven is odd and adds nothing);\n\n$v_2(12!)=6+3+1=10$ ✓\n\n**Answer:** $n=12$.\n\n*Why the jump.* Going from $11!$ to $12!$ multiplies by $12=2^{2}\\cdot3$, contributing two twos at once: $8+2=10$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$ для любых натуральных $a$ и $b$.",
+    "en": "Prove that $\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$ for all positive integers $a$ and $b$."
+   },
+   "hint": {
+    "ru": "Сравните показатели каждого простого в обеих частях.",
+    "en": "Compare the exponent of each prime on both sides."
+   },
+   "sol": {
+    "ru": "Запишем оба числа через показатели простых: $$a=\\prod_p p^{\\alpha_p},\\qquad b=\\prod_p p^{\\beta_p},$$ где произведение берётся по всем простым, а почти все показатели нулевые.\n\n**Как устроены НОД и НОК.** Делитель числа $a$ — это в точности число вида $\\prod p^{\\gamma_p}$ с $\\gamma_p\\le\\alpha_p$. Поэтому общий делитель имеет показатели $\\gamma_p\\le\\min\\left(\\alpha_p,\\beta_p\\right)$, и наибольший из них — это $$\\gcd(a,b)=\\prod_p p^{\\min\\left(\\alpha_p,\\beta_p\\right)}.$$ Симметрично, общее кратное имеет показатели не меньше обоих, и наименьшее из них — $$\\operatorname{lcm}(a,b)=\\prod_p p^{\\max\\left(\\alpha_p,\\beta_p\\right)}.$$\n\n**Ключевое тождество для чисел.** Для любых двух чисел $$\\min(x,y)+\\max(x,y)=x+y ,$$ ведь меньшее и большее — это те же два числа, только переставленные.\n\n**Собираем.** Показатель простого $p$ в левой части равен $$\\min\\left(\\alpha_p,\\beta_p\\right)+\\max\\left(\\alpha_p,\\beta_p\\right)=\\alpha_p+\\beta_p ,$$ а это в точности показатель $p$ в произведении $ab$. Показатели совпали для каждого простого, значит числа равны. $\\blacksquare$\n\n*Проверка:* $a=12$, $b=18$: $\\gcd=6$, $\\operatorname{lcm}=36$, и $6\\cdot36=216=12\\cdot18$ ✓",
+    "en": "Write both numbers by prime exponents: $$a=\\prod_p p^{\\alpha_p},\\qquad b=\\prod_p p^{\\beta_p},$$ the product running over all primes, almost all exponents being zero.\n\n**What the GCD and LCM are.** A divisor of $a$ is exactly a number $\\prod p^{\\gamma_p}$ with $\\gamma_p\\le\\alpha_p$. So a common divisor has exponents $\\gamma_p\\le\\min\\left(\\alpha_p,\\beta_p\\right)$, and the largest of them is $$\\gcd(a,b)=\\prod_p p^{\\min\\left(\\alpha_p,\\beta_p\\right)}.$$ Symmetrically a common multiple has exponents at least both, and the smallest is $$\\operatorname{lcm}(a,b)=\\prod_p p^{\\max\\left(\\alpha_p,\\beta_p\\right)}.$$\n\n**The key numerical identity.** For any two numbers $$\\min(x,y)+\\max(x,y)=x+y ,$$ since the smaller and the larger are the same two numbers rearranged.\n\n**Put it together.** The exponent of a prime $p$ on the left is $$\\min\\left(\\alpha_p,\\beta_p\\right)+\\max\\left(\\alpha_p,\\beta_p\\right)=\\alpha_p+\\beta_p ,$$ which is exactly its exponent in $ab$. The exponents agree for every prime, so the numbers are equal. $\\blacksquare$\n\n*Check:* $a=12$, $b=18$: $\\gcd=6$, $\\operatorname{lcm}=36$, and $6\\cdot36=216=12\\cdot18$ ✓"
+   }
+  },
+  {
+   "src": "Республиканский тур · уровень / Republic-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что при $n\\ge2$ сумма $$1+\\frac12+\\frac13+\\dots+\\frac1n$$ не является целым числом.",
+    "en": "Prove that for $n\\ge2$ the sum $$1+\\frac12+\\frac13+\\dots+\\frac1n$$ is not an integer."
+   },
+   "hint": {
+    "ru": "Пусть $2^{k}$ — наибольшая степень двойки, не превосходящая $n$. Умножьте сумму на $\\operatorname{lcm}(1,\\dots,n)$.",
+    "en": "Let $2^{k}$ be the largest power of two not exceeding $n$. Multiply the sum by $\\operatorname{lcm}(1,\\dots,n)$."
+   },
+   "sol": {
+    "ru": "Обозначим сумму через $S$ и положим $L=\\operatorname{lcm}(1,2,\\dots,n)$.\n\n**Шаг 1: выделим особое слагаемое.** Пусть $2^{k}$ — наибольшая степень двойки, не превосходящая $n$; так как $n\\ge2$, имеем $k\\ge1$. Тогда $v_2(L)=k$: показатель двойки в НОК — это наибольший показатель двойки среди чисел $1,\\dots,n$.\n\n**Шаг 2: среди $1,\\dots,n$ ровно одно число делится на $2^{k}$.** Действительно, следующее кратное — это $2\\cdot2^{k}=2^{k+1}$, а оно больше $n$ по выбору $k$. Любое другое число вида $2^{k}\\cdot m$ с нечётным $m\\ge3$ тоже больше $n$, потому что $3\\cdot2^{k}>2^{k+1}>n$. Значит единственное такое число — само $2^{k}$.\n\n**Шаг 3: считаем чётность.** Умножим сумму на $L$: $$L\\cdot S=\\sum_{i=1}^{n}\\frac{L}{i}.$$ Все слагаемые целые. Для $i\\ne2^{k}$ имеем $v_2(i)<k$ (шаг 2), поэтому $$v_2\\!\\left(\\frac Li\\right)=k-v_2(i)\\ \\ge\\ 1 ,$$ то есть такое слагаемое **чётно**. А для $i=2^{k}$ получаем $v_2\\!\\left(L/2^{k}\\right)=0$, то есть это слагаемое **нечётно**.\n\nСумма одного нечётного числа и нескольких чётных нечётна, значит $$L\\cdot S\\ \\text{— нечётное число.}$$\n\n**Шаг 4: противоречие.** Если бы $S$ было целым, то $L\\cdot S$ делилось бы на $L$, а $L$ чётно (ведь $k\\ge1$). Тогда $L\\cdot S$ было бы чётным — противоречие с шагом 3.\n\nЗначит $S$ не целое. $\\blacksquare$\n\n*Проверка:* $1+\\tfrac12=\\tfrac32$, $1+\\tfrac12+\\tfrac13=\\tfrac{11}{6}$, $1+\\tfrac12+\\tfrac13+\\tfrac14=\\tfrac{25}{12}$ — все нецелые ✓",
+    "en": "Write $S$ for the sum and put $L=\\operatorname{lcm}(1,2,\\dots,n)$.\n\n**Step 1: single out one term.** Let $2^{k}$ be the largest power of two not exceeding $n$; since $n\\ge2$ we have $k\\ge1$. Then $v_2(L)=k$: the exponent of two in the LCM is the largest exponent of two among $1,\\dots,n$.\n\n**Step 2: exactly one of $1,\\dots,n$ is divisible by $2^{k}$.** The next multiple would be $2\\cdot2^{k}=2^{k+1}$, which exceeds $n$ by the choice of $k$; and any other number $2^{k}\\cdot m$ with odd $m\\ge3$ also exceeds $n$, since $3\\cdot2^{k}>2^{k+1}>n$. So the only such number is $2^{k}$ itself.\n\n**Step 3: count parities.** Multiply the sum by $L$: $$L\\cdot S=\\sum_{i=1}^{n}\\frac{L}{i},$$ every term being an integer. For $i\\ne2^{k}$ we have $v_2(i)<k$ by Step 2, so $$v_2\\!\\left(\\frac Li\\right)=k-v_2(i)\\ \\ge\\ 1 ,$$ and that term is **even**. For $i=2^{k}$ we get $v_2\\!\\left(L/2^{k}\\right)=0$, so that term is **odd**.\n\nOne odd term plus several even ones is odd, so $$L\\cdot S\\ \\text{is an odd number.}$$\n\n**Step 4: the contradiction.** If $S$ were an integer then $L\\cdot S$ would be a multiple of $L$, and $L$ is even (as $k\\ge1$), making $L\\cdot S$ even — contradicting Step 3.\n\nHence $S$ is not an integer. $\\blacksquare$\n\n*Check:* $1+\\tfrac12=\\tfrac32$, $1+\\tfrac12+\\tfrac13=\\tfrac{11}{6}$, $1+\\tfrac12+\\tfrac13+\\tfrac14=\\tfrac{25}{12}$ — none an integer ✓"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите все натуральные $n$, для которых $n^{2}$ делит $(n+1)^{2}-1$.",
+    "en": "Find all positive integers $n$ for which $n^{2}$ divides $(n+1)^{2}-1$."
+   },
+   "hint": {
+    "ru": "Раскройте скобки — почти всё сократится.",
+    "en": "Expand — almost everything cancels."
+   },
+   "sol": {
+    "ru": "Раскроем: $$(n+1)^{2}-1=n^{2}+2n+1-1=n^{2}+2n .$$\n\nПервое слагаемое делится на $n^{2}$, поэтому $$n^{2}\\ \\big|\\ n^{2}+2n\\quad\\Longleftrightarrow\\quad n^{2}\\ \\big|\\ 2n .$$\n\nСократим на $n>0$: условие превращается в $$n\\ \\big|\\ 2 ,$$ откуда $n\\in\\{1,2\\}$.\n\n**Проверка.** При $n=1$: $(1+1)^{2}-1=3$ и $n^{2}=1$, делится ✓ При $n=2$: $(2+1)^{2}-1=8$ и $n^{2}=4$, и $4\\mid8$ ✓ При $n=3$: $15$ и $9$ — не делится ✓\n\n**Ответ:** $n=1$ и $n=2$.",
+    "en": "Expand: $$(n+1)^{2}-1=n^{2}+2n+1-1=n^{2}+2n .$$\n\nThe first term is a multiple of $n^{2}$, so $$n^{2}\\ \\big|\\ n^{2}+2n\\quad\\Longleftrightarrow\\quad n^{2}\\ \\big|\\ 2n .$$\n\nCancelling $n>0$ turns the condition into $$n\\ \\big|\\ 2 ,$$ so $n\\in\\{1,2\\}$.\n\n**Check.** At $n=1$: $(1+1)^{2}-1=3$ and $n^{2}=1$, which divides ✓ At $n=2$: $(2+1)^{2}-1=8$ and $n^{2}=4$, and $4\\mid8$ ✓ At $n=3$: $15$ and $9$ — no ✓\n\n**Answer:** $n=1$ and $n=2$."
+   }
+  },
+  {
+   "src": "Республиканский тур · уровень / Republic-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что для любого простого $p>3$ число $p^{2}-1$ делится на $24$.",
+    "en": "Prove that for every prime $p>3$ the number $p^{2}-1$ is divisible by $24$."
+   },
+   "hint": {
+    "ru": "$24=8\\cdot3$; докажите делимость на каждый множитель отдельно.",
+    "en": "$24=8\\cdot3$; prove divisibility by each factor separately."
+   },
+   "sol": {
+    "ru": "Разложим $$p^{2}-1=(p-1)(p+1).$$\n\n**Делимость на $8$.** Простое $p>3$ нечётно, поэтому $p-1$ и $p+1$ — два подряд идущих чётных числа. Одно из любых двух подряд идущих чётных чисел делится на $4$, а другое — на $2$. Значит их произведение делится на $4\\cdot2=8$.\n\n**Делимость на $3$.** Среди трёх подряд идущих чисел $p-1$, $p$, $p+1$ ровно одно делится на $3$. Но $p$ простое и больше трёх, значит $3\\nmid p$. Следовательно на $3$ делится $p-1$ или $p+1$, а с ними и произведение.\n\n**Вывод.** Числа $8$ и $3$ взаимно просты, поэтому $p^{2}-1$ делится на $24$. $\\blacksquare$\n\n**Проверка:** $p=5$: $24$ ✓ $\\quad p=7$: $48=24\\cdot2$ ✓ $\\quad p=11$: $120=24\\cdot5$ ✓ $\\quad p=13$: $168=24\\cdot7$ ✓\n\n*Где нужно условие $p>3$.* При $p=3$ получается $8$, что на $24$ не делится, а при $p=2$ — вовсе $3$.",
+    "en": "Factor $$p^{2}-1=(p-1)(p+1).$$\n\n**Divisibility by $8$.** A prime $p>3$ is odd, so $p-1$ and $p+1$ are two consecutive even numbers. Of any two consecutive even numbers one is divisible by $4$ and the other by $2$, so their product is divisible by $4\\cdot2=8$.\n\n**Divisibility by $3$.** Among the three consecutive integers $p-1$, $p$, $p+1$ exactly one is divisible by $3$. But $p$ is prime and greater than three, so $3\\nmid p$. Hence $3$ divides $p-1$ or $p+1$, and with it the product.\n\n**Conclusion.** As $8$ and $3$ are coprime, $p^{2}-1$ is divisible by $24$. $\\blacksquare$\n\n**Check:** $p=5$: $24$ ✓ $\\quad p=7$: $48=24\\cdot2$ ✓ $\\quad p=11$: $120=24\\cdot5$ ✓ $\\quad p=13$: $168=24\\cdot7$ ✓\n\n*Where $p>3$ is needed.* At $p=3$ we get $8$, not a multiple of $24$; at $p=2$ we get $3$."
+   }
+  },
+  {
+   "src": "Республиканский тур · уровень / Republic-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Найдите наибольшее натуральное число, на которое делится $n^{5}-n$ при **всех** целых $n$.",
+    "en": "Find the largest positive integer that divides $n^{5}-n$ for **every** integer $n$."
+   },
+   "hint": {
+    "ru": "Посчитайте несколько значений и найдите их НОД, а потом докажите делимость в общем виде.",
+    "en": "Compute a few values and take their GCD, then prove the divisibility in general."
+   },
+   "sol": {
+    "ru": "**Шаг 1: находим кандидата.** Подставим малые $n$: $$n=2:\\ 32-2=30,\\qquad n=3:\\ 243-3=240,\\qquad n=4:\\ 1024-4=1020 .$$ Искомое число делит каждое из них, значит делит и их НОД: $$\\gcd(30,240,1020)=30 .$$ Больше $30$ ответ быть не может.\n\n**Шаг 2: проверяем, что $30$ подходит всегда.** Разложим $$n^{5}-n=n\\left(n^{4}-1\\right)=n\\left(n^{2}-1\\right)\\left(n^{2}+1\\right)=(n-1)\\,n\\,(n+1)\\left(n^{2}+1\\right).$$\n\n*Делимость на $2$ и на $3$:* множитель $(n-1)n(n+1)$ — произведение трёх подряд идущих чисел, среди них есть чётное и есть кратное трём.\n\n*Делимость на $5$:* разберём остаток $n$ по модулю $5$. Если $n\\equiv0,\\pm1$, то на $5$ делится один из множителей $n$, $n-1$, $n+1$. Если же $n\\equiv\\pm2$, то $n^{2}\\equiv4$ и $$n^{2}+1\\equiv5\\equiv0\\pmod5 .$$ Других остатков нет.\n\nЧисла $2$, $3$, $5$ попарно взаимно просты, поэтому $30\\mid n^{5}-n$ при всех целых $n$.\n\n**Ответ:** $30$. $\\blacksquare$",
+    "en": "**Step 1: find the candidate.** Substitute small $n$: $$n=2:\\ 32-2=30,\\qquad n=3:\\ 243-3=240,\\qquad n=4:\\ 1024-4=1020 .$$ The number we want divides each of these, hence divides their GCD: $$\\gcd(30,240,1020)=30 ,$$ so the answer cannot exceed $30$.\n\n**Step 2: check that $30$ always works.** Factor $$n^{5}-n=n\\left(n^{4}-1\\right)=n\\left(n^{2}-1\\right)\\left(n^{2}+1\\right)=(n-1)\\,n\\,(n+1)\\left(n^{2}+1\\right).$$\n\n*Divisibility by $2$ and $3$:* the factor $(n-1)n(n+1)$ is a product of three consecutive integers, containing an even one and a multiple of three.\n\n*Divisibility by $5$:* split by $n$ modulo $5$. If $n\\equiv0,\\pm1$ then one of $n$, $n-1$, $n+1$ is divisible by $5$. If $n\\equiv\\pm2$ then $n^{2}\\equiv4$ and $$n^{2}+1\\equiv5\\equiv0\\pmod5 .$$ There are no other cases.\n\nAs $2$, $3$, $5$ are pairwise coprime, $30\\mid n^{5}-n$ for every integer $n$.\n\n**Answer:** $30$. $\\blacksquare$"
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что если число $2^{n}-1$ простое, то и показатель $n$ простой.",
+    "en": "Prove that if $2^{n}-1$ is prime then the exponent $n$ is prime."
+   },
+   "hint": {
+    "ru": "Если $n=ab$, то $2^{a}-1$ делит $2^{n}-1$.",
+    "en": "If $n=ab$ then $2^{a}-1$ divides $2^{n}-1$."
+   },
+   "sol": {
+    "ru": "Докажем контрапозицию: **если $n$ составное, то $2^{n}-1$ составное.**\n\nПусть $n=ab$, где $1<a<n$ и $1<b<n$.\n\n**Ключевое разложение.** Положим $x=2^{a}$. Тогда $$2^{n}-1=x^{b}-1=(x-1)\\left(x^{\\,b-1}+x^{\\,b-2}+\\dots+x+1\\right),$$ то есть $$2^{n}-1=\\left(2^{a}-1\\right)\\left(2^{\\,a(b-1)}+2^{\\,a(b-2)}+\\dots+2^{a}+1\\right).$$\n\n**Оба множителя больше единицы.** Так как $a\\ge2$, первый множитель $2^{a}-1\\ge3>1$. Второй множитель — сумма $b\\ge2$ положительных слагаемых, каждое не меньше единицы, значит он не меньше $2$.\n\n**Оба множителя меньше самого числа.** Первый равен $2^{a}-1<2^{n}-1$, потому что $a<n$; второй тогда тоже меньше, ведь их произведение равно $2^{n}-1$, а первый больше единицы.\n\nЗначит $2^{n}-1$ раскладывается в произведение двух собственных множителей и потому составное. $\\blacksquare$\n\n**Проверка:** $n=4$ даёт $15=3\\cdot5$ ✓ $\\quad n=6$ даёт $63=7\\cdot9$ ✓ $\\quad n=9$ даёт $511=7\\cdot73$ ✓\n\n*Обратное неверно!* Простота $n$ не гарантирует простоту $2^{n}-1$: при $n=11$ получается $2047=23\\cdot89$. Простые вида $2^{p}-1$ называют **числами Мерсенна**, и неизвестно даже, конечно ли их количество.",
+    "en": "We prove the contrapositive: **if $n$ is composite then $2^{n}-1$ is composite.**\n\nLet $n=ab$ with $1<a<n$ and $1<b<n$.\n\n**The key factorisation.** Put $x=2^{a}$. Then $$2^{n}-1=x^{b}-1=(x-1)\\left(x^{\\,b-1}+x^{\\,b-2}+\\dots+x+1\\right),$$ that is $$2^{n}-1=\\left(2^{a}-1\\right)\\left(2^{\\,a(b-1)}+2^{\\,a(b-2)}+\\dots+2^{a}+1\\right).$$\n\n**Both factors exceed one.** As $a\\ge2$, the first is $2^{a}-1\\ge3>1$. The second is a sum of $b\\ge2$ positive terms each at least one, so it is at least $2$.\n\n**Both factors are smaller than the number.** The first is $2^{a}-1<2^{n}-1$ because $a<n$; the second is then smaller too, since their product is $2^{n}-1$ and the first exceeds one.\n\nSo $2^{n}-1$ splits into two proper factors and is composite. $\\blacksquare$\n\n**Check:** $n=4$ gives $15=3\\cdot5$ ✓ $\\quad n=6$ gives $63=7\\cdot9$ ✓ $\\quad n=9$ gives $511=7\\cdot73$ ✓\n\n*The converse fails!* A prime $n$ does not force $2^{n}-1$ prime: at $n=11$ we get $2047=23\\cdot89$. Primes of the form $2^{p}-1$ are the **Mersenne primes**, and it is not even known whether there are infinitely many."
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что если число $2^{n}+1$ простое, то $n$ — степень двойки.",
+    "en": "Prove that if $2^{n}+1$ is prime then $n$ is a power of two."
+   },
+   "hint": {
+    "ru": "Если у $n$ есть нечётный делитель $d>1$, воспользуйтесь тем, что $a+b$ делит $a^{d}+b^{d}$.",
+    "en": "If $n$ has an odd divisor $d>1$, use that $a+b$ divides $a^{d}+b^{d}$."
+   },
+   "sol": {
+    "ru": "Докажем контрапозицию: **если $n$ не является степенью двойки, то $2^{n}+1$ составное.**\n\n**Что значит «не степень двойки».** Тогда в разложении $n$ есть нечётный простой множитель, то есть $$n=m\\cdot d,\\qquad d>1\\ \\text{нечётно}.$$\n\n**Ключевое разложение.** Для нечётного $d$ верно тождество $$a^{d}+b^{d}=(a+b)\\left(a^{\\,d-1}-a^{\\,d-2}b+\\dots-ab^{\\,d-2}+b^{\\,d-1}\\right).$$ Возьмём $a=2^{m}$ и $b=1$: $$2^{n}+1=\\left(2^{m}\\right)^{d}+1^{d}=\\left(2^{m}+1\\right)\\left(2^{\\,m(d-1)}-2^{\\,m(d-2)}+\\dots+1\\right).$$\n\n**Оба множителя собственные.** Первый: $2^{m}+1\\ge3>1$, и $2^{m}+1<2^{n}+1$, потому что $m<n$ (ведь $d>1$). Второй тогда тоже строго между единицей и $2^{n}+1$.\n\nЗначит $2^{n}+1$ составное. $\\blacksquare$\n\n**Проверка:** $n=3$ даёт $9=3\\cdot3$ ✓ $\\quad n=6$ даёт $65=5\\cdot13$ ✓ $\\quad n=12$ даёт $4097=17\\cdot241$ ✓\n\n*Обратное снова неверно.* Числа $F_k=2^{2^{k}}+1$ называют **числами Ферма**. Ферма предполагал, что все они простые: $F_0=3$, $F_1=5$, $F_2=17$, $F_3=257$, $F_4=65537$ — действительно простые. Но Эйлер нашёл, что $$F_5=2^{32}+1=641\\cdot6\\,700\\,417$$ (это разобрано в теме об остатках), и других простых чисел Ферма до сих пор не найдено.",
+    "en": "We prove the contrapositive: **if $n$ is not a power of two then $2^{n}+1$ is composite.**\n\n**What \"not a power of two\" means.** Then $n$ has an odd prime factor, so $$n=m\\cdot d,\\qquad d>1\\ \\text{odd}.$$\n\n**The key factorisation.** For odd $d$ we have $$a^{d}+b^{d}=(a+b)\\left(a^{\\,d-1}-a^{\\,d-2}b+\\dots-ab^{\\,d-2}+b^{\\,d-1}\\right).$$ Take $a=2^{m}$ and $b=1$: $$2^{n}+1=\\left(2^{m}\\right)^{d}+1^{d}=\\left(2^{m}+1\\right)\\left(2^{\\,m(d-1)}-2^{\\,m(d-2)}+\\dots+1\\right).$$\n\n**Both factors are proper.** The first is $2^{m}+1\\ge3>1$ and $2^{m}+1<2^{n}+1$, since $m<n$ (because $d>1$). The second then also lies strictly between one and $2^{n}+1$.\n\nSo $2^{n}+1$ is composite. $\\blacksquare$\n\n**Check:** $n=3$ gives $9=3\\cdot3$ ✓ $\\quad n=6$ gives $65=5\\cdot13$ ✓ $\\quad n=12$ gives $4097=17\\cdot241$ ✓\n\n*Again the converse fails.* The numbers $F_k=2^{2^{k}}+1$ are the **Fermat numbers**. Fermat guessed they were all prime: $F_0=3$, $F_1=5$, $F_2=17$, $F_3=257$, $F_4=65537$ indeed are. But Euler found that $$F_5=2^{32}+1=641\\cdot6\\,700\\,417$$ (worked out in the remainders topic), and no further Fermat prime has been found since."
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Найдите все натуральные $n$, для которых $n$ делит $2^{n}-1$.",
+    "en": "Find all positive integers $n$ dividing $2^{n}-1$."
+   },
+   "hint": {
+    "ru": "Возьмите наименьший простой делитель $p$ числа $n$ и посмотрите на порядок двойки по модулю $p$.",
+    "en": "Take the smallest prime divisor $p$ of $n$ and look at the order of two modulo $p$."
+   },
+   "sol": {
+    "ru": "**Число $n=1$ подходит:** $1\\mid2^{1}-1=1$ ✓ Покажем, что других нет.\n\nПредположим противное: пусть $n>1$ и $n\\mid2^{n}-1$.\n\n**Шаг 1: $n$ нечётно.** Число $2^{n}-1$ нечётно, а его делитель $n$ не может быть чётным.\n\n**Шаг 2: берём наименьший простой делитель.** Пусть $p$ — наименьший простой делитель числа $n$; по шагу 1 число $p$ нечётно. Из $n\\mid2^{n}-1$ следует $$2^{n}\\equiv1\\pmod p .$$\n\n**Шаг 3: порядок двойки.** Обозначим через $d$ наименьшее натуральное число с $2^{d}\\equiv1\\pmod p$ (**порядок** двойки по модулю $p$; он существует, так как $\\gcd(2,p)=1$).\n\nСтандартное свойство порядка: если $2^{m}\\equiv1$, то $d\\mid m$. *Действительно,* поделив с остатком $m=dq+r$ с $0\\le r<d$, получаем $$1\\equiv2^{m}=\\left(2^{d}\\right)^{q}\\cdot2^{r}\\equiv2^{r}\\pmod p ,$$ и минимальность $d$ вынуждает $r=0$.\n\nОтсюда сразу два вывода: $$d\\ \\big|\\ n\\qquad\\text{(из шага 2)},$$ $$d\\ \\big|\\ p-1\\qquad\\text{(из малой теоремы Ферма } 2^{\\,p-1}\\equiv1).$$\n\n**Шаг 4: противоречие.** Из $d\\mid p-1$ следует $d\\le p-1<p$. Но $d$ делит $n$, а **наименьший** простой делитель числа $n$ равен $p$; значит любой делитель числа $n$, меньший $p$, обязан равняться единице. Поэтому $d=1$.\n\nА $d=1$ означает $2^{1}\\equiv1\\pmod p$, то есть $p\\mid1$ — невозможно для простого $p$.\n\nПротиворечие показывает, что случая $n>1$ не бывает.\n\n**Ответ:** $n=1$. $\\blacksquare$\n\n*Проверка на малых числах:* $n=3$: $2^{3}-1=7$, и $3\\nmid7$ ✓ $\\quad n=5$: $31$, и $5\\nmid31$ ✓ $\\quad n=7$: $127$, и $7\\nmid127$ ✓",
+    "en": "**The number $n=1$ works:** $1\\mid2^{1}-1=1$ ✓ We show there are no others.\n\nSuppose not: let $n>1$ with $n\\mid2^{n}-1$.\n\n**Step 1: $n$ is odd.** The number $2^{n}-1$ is odd, so its divisor $n$ cannot be even.\n\n**Step 2: take the smallest prime divisor.** Let $p$ be the smallest prime divisor of $n$; by Step 1 it is odd. From $n\\mid2^{n}-1$ we get $$2^{n}\\equiv1\\pmod p .$$\n\n**Step 3: the order of two.** Let $d$ be the least positive integer with $2^{d}\\equiv1\\pmod p$ (the **order** of two modulo $p$; it exists since $\\gcd(2,p)=1$).\n\nThe standard property: if $2^{m}\\equiv1$ then $d\\mid m$. *Indeed,* writing $m=dq+r$ with $0\\le r<d$, $$1\\equiv2^{m}=\\left(2^{d}\\right)^{q}\\cdot2^{r}\\equiv2^{r}\\pmod p ,$$ and minimality of $d$ forces $r=0$.\n\nThis gives two facts at once: $$d\\ \\big|\\ n\\qquad\\text{(from Step 2)},$$ $$d\\ \\big|\\ p-1\\qquad\\text{(from Fermat’s little theorem } 2^{\\,p-1}\\equiv1).$$\n\n**Step 4: the contradiction.** From $d\\mid p-1$ we get $d\\le p-1<p$. But $d$ divides $n$, whose **smallest** prime divisor is $p$; so any divisor of $n$ below $p$ must be one. Hence $d=1$.\n\nAnd $d=1$ means $2^{1}\\equiv1\\pmod p$, that is $p\\mid1$ — impossible for a prime.\n\nThe contradiction rules out $n>1$.\n\n**Answer:** $n=1$. $\\blacksquare$\n\n*Check on small numbers:* $n=3$: $2^{3}-1=7$ and $3\\nmid7$ ✓ $\\quad n=5$: $31$ and $5\\nmid31$ ✓ $\\quad n=7$: $127$ and $7\\nmid127$ ✓"
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что для чисел Фибоначчи выполнено $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$",
+    "en": "Prove that the Fibonacci numbers satisfy $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$"
+   },
+   "hint": {
+    "ru": "Воспользуйтесь формулой сложения $F_{m+n}=F_mF_{n+1}+F_{m-1}F_n$ и тем, что соседние числа Фибоначчи взаимно просты.",
+    "en": "Use the addition formula $F_{m+n}=F_mF_{n+1}+F_{m-1}F_n$ and that neighbouring Fibonacci numbers are coprime."
+   },
+   "sol": {
+    "ru": "Нам понадобятся два факта из темы о последовательностях: $$F_{a+b}=F_aF_{b+1}+F_{a-1}F_b\\qquad\\text{и}\\qquad \\gcd\\left(F_n,F_{n+1}\\right)=1 .$$\n\n**Ключевая лемма.** Для $m>n$ $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n},F_n\\right).$$\n\n*Доказательство.* Применим формулу сложения с $a=m-n$ и $b=n$: $$F_m=F_{(m-n)+n}=F_{m-n}F_{n+1}+F_{m-n-1}F_n .$$ Второе слагаемое делится на $F_n$, поэтому при вычислении наибольшего общего делителя с $F_n$ его можно отбросить: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right).$$ Но $\\gcd\\left(F_{n+1},F_n\\right)=1$, а множитель, взаимно простой со вторым аргументом, на НОД не влияет: $$\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right)=\\gcd\\left(F_{m-n},\\ F_n\\right). \\qquad\\square$$\n\n**Спуск.** Лемма говорит: вычитание в **индексах** не меняет НОД чисел Фибоначчи. Но вычитание меньшего из большего — это ровно шаг алгоритма Евклида для пары $(m,n)$. Повторяя лемму, мы повторяем алгоритм Евклида на индексах, пока меньший индекс не станет нулём: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{\\gcd(m,n)},\\ F_0\\right).$$\n\n**Конец.** Так как $F_0=0$, а $\\gcd(x,0)=x$, получаем $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} . \\qquad\\blacksquare$$\n\n**Проверка.** $F_{12}=144$, $F_{18}=2584$; $\\gcd(12,18)=6$ и $F_6=8$. Действительно $\\gcd(144,2584)=8$ ✓\n\n*Следствие.* $F_m$ делит $F_n$ тогда и только тогда, когда $m$ делит $n$ (при $m\\ge3$).",
+    "en": "We need two facts from the sequences topic: $$F_{a+b}=F_aF_{b+1}+F_{a-1}F_b\\qquad\\text{and}\\qquad \\gcd\\left(F_n,F_{n+1}\\right)=1 .$$\n\n**Key lemma.** For $m>n$, $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n},F_n\\right).$$\n\n*Proof.* Apply the addition formula with $a=m-n$ and $b=n$: $$F_m=F_{(m-n)+n}=F_{m-n}F_{n+1}+F_{m-n-1}F_n .$$ The second term is a multiple of $F_n$, so it may be dropped when taking the gcd with $F_n$: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right).$$ But $\\gcd\\left(F_{n+1},F_n\\right)=1$, and a factor coprime to the second argument does not affect the gcd: $$\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right)=\\gcd\\left(F_{m-n},\\ F_n\\right). \\qquad\\square$$\n\n**Descent.** The lemma says that subtracting in the **indices** leaves the gcd of Fibonacci numbers unchanged. But subtracting the smaller from the larger is exactly a step of the Euclidean algorithm on $(m,n)$. Repeating the lemma runs the Euclidean algorithm on the indices until the smaller one reaches zero: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{\\gcd(m,n)},\\ F_0\\right).$$\n\n**Finish.** Since $F_0=0$ and $\\gcd(x,0)=x$, $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} . \\qquad\\blacksquare$$\n\n**Check.** $F_{12}=144$, $F_{18}=2584$; $\\gcd(12,18)=6$ and $F_6=8$. Indeed $\\gcd(144,2584)=8$ ✓\n\n*Corollary.* $F_m$ divides $F_n$ if and only if $m$ divides $n$ (for $m\\ge3$)."
+   }
+  },
+  {
+   "src": "Международный уровень / International level",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что число $$\\frac{(2n)!}{n!\\,(n+1)!}$$ является целым при любом натуральном $n$.",
+    "en": "Prove that $$\\frac{(2n)!}{n!\\,(n+1)!}$$ is an integer for every positive integer $n$."
+   },
+   "hint": {
+    "ru": "Запишите его как разность двух биномиальных коэффициентов.",
+    "en": "Write it as a difference of two binomial coefficients."
+   },
+   "sol": {
+    "ru": "**Идея.** Целость дроби неочевидна: знаменатель содержит лишний множитель $n+1$. Но всё выражение можно записать как **разность двух биномиальных коэффициентов**, а они заведомо целые.\n\n**Считаем разность.** $$\\binom{2n}{n}-\\binom{2n}{n+1}=\\frac{(2n)!}{n!\\,n!}-\\frac{(2n)!}{(n+1)!\\,(n-1)!}.$$ Приведём второе слагаемое к знаменателю первого. Так как $(n+1)!=(n+1)\\cdot n!$ и $n!=n\\cdot(n-1)!$, получаем $$\\frac{(2n)!}{(n+1)!\\,(n-1)!}=\\frac{(2n)!}{n!\\,n!}\\cdot\\frac{n}{n+1}.$$\n\nЗначит $$\\binom{2n}{n}-\\binom{2n}{n+1}=\\binom{2n}{n}\\left(1-\\frac{n}{n+1}\\right)=\\binom{2n}{n}\\cdot\\frac{1}{n+1}=\\frac{(2n)!}{n!\\,(n+1)!}.$$\n\n**Вывод.** Слева стоит разность двух целых чисел, значит и справа целое число. $\\blacksquare$\n\n*Что это за числа.* Это **числа Каталана** $$C_n=\\frac{1}{n+1}\\binom{2n}{n}:\\qquad 1,\\ 2,\\ 5,\\ 14,\\ 42,\\ 132,\\dots$$ Они считают правильные скобочные последовательности, способы разрезать выпуклый многоугольник на треугольники и десятки других вещей — одна из таких задач разобрана в теме о комбинаторике.\n\n*Проверка:* при $n=3$ дробь равна $\\dfrac{720}{6\\cdot24}=5$ ✓, а $\\binom63-\\binom64=20-15=5$ ✓",
+    "en": "**The idea.** Integrality is not obvious: the denominator carries an extra factor $n+1$. But the whole expression can be written as a **difference of two binomial coefficients**, which are certainly integers.\n\n**Compute the difference.** $$\\binom{2n}{n}-\\binom{2n}{n+1}=\\frac{(2n)!}{n!\\,n!}-\\frac{(2n)!}{(n+1)!\\,(n-1)!}.$$ Bring the second term to the first denominator. Since $(n+1)!=(n+1)\\cdot n!$ and $n!=n\\cdot(n-1)!$, $$\\frac{(2n)!}{(n+1)!\\,(n-1)!}=\\frac{(2n)!}{n!\\,n!}\\cdot\\frac{n}{n+1}.$$\n\nHence $$\\binom{2n}{n}-\\binom{2n}{n+1}=\\binom{2n}{n}\\left(1-\\frac{n}{n+1}\\right)=\\binom{2n}{n}\\cdot\\frac{1}{n+1}=\\frac{(2n)!}{n!\\,(n+1)!}.$$\n\n**Conclusion.** The left side is a difference of integers, so the right side is an integer. $\\blacksquare$\n\n*What these numbers are.* They are the **Catalan numbers** $$C_n=\\frac{1}{n+1}\\binom{2n}{n}:\\qquad 1,\\ 2,\\ 5,\\ 14,\\ 42,\\ 132,\\dots$$ They count correct bracket sequences, triangulations of a convex polygon and dozens of other things — one such problem is worked out in the counting topic.\n\n*Check:* at $n=3$ the fraction is $\\dfrac{720}{6\\cdot24}=5$ ✓ and $\\binom63-\\binom64=20-15=5$ ✓"
+   }
   }
  ]
 };

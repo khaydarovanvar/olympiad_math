@@ -30,7 +30,8 @@
       hint: 'Подсказка', solution: 'Решение',
       showHint: 'Подсказка', showSol: 'Решение',
       hideHint: 'Скрыть подсказку', hideSol: 'Скрыть решение',
-      all: 'Все', lvl1: 'Лёгкие', lvl2: 'Средние', lvl3: 'Сложные',
+      all: 'Все', lvl1: 'Лёгкие', lvl2: 'Средние', lvl3: 'Сложные', lvl4: 'Олимпиадные',
+      srcNote: 'Метка слева показывает уровень тура, для которого задача типична. Конкретное соревнование названо только там, где источник известен точно.',
       shown: function (a, b) { return 'Показано ' + a + ' из ' + b; },
       prev: 'Предыдущая тема', next: 'Следующая тема',
       section: 'Раздел', topic: 'Тема', of: 'из',
@@ -55,7 +56,8 @@
       hint: 'Hint', solution: 'Solution',
       showHint: 'Hint', showSol: 'Solution',
       hideHint: 'Hide hint', hideSol: 'Hide solution',
-      all: 'All', lvl1: 'Easy', lvl2: 'Medium', lvl3: 'Hard',
+      all: 'All', lvl1: 'Easy', lvl2: 'Medium', lvl3: 'Hard', lvl4: 'Olympiad',
+      srcNote: 'The label on the left gives the round a problem is typical of. A specific competition is named only where the source is known for certain.',
       shown: function (a, b) { return 'Showing ' + a + ' of ' + b; },
       prev: 'Previous topic', next: 'Next topic',
       section: 'Section', topic: 'Topic', of: 'of',
@@ -224,13 +226,14 @@
     html += '<section class="lsec psec" id="problems">' +
       '<h2><span class="sn">' + esc(t.problems) + '</span>' + esc(plural(lang, L.problems.length, t.problemsWords)) + '</h2>' +
       '<div class="pbar">' +
-        ['all', 1, 2, 3].map(function (k) {
+        ['all', 1, 2, 3, 4].map(function (k) {
           var lbl = k === 'all' ? t.all : t['lvl' + k];
           return '<button class="pbtn' + (k === 'all' ? ' on' : '') + '" data-lvl="' + k + '">' +
             esc(lbl) + '</button>';
         }).join('') +
         '<span class="sp" id="pcount"></span>' +
       '</div>' +
+      '<p class="psrc-note">' + esc(t.srcNote) + '</p>' +
       L.problems.map(function (p, i) {
         return '<article class="prob" data-lvl="' + p.lvl + '">' +
           '<div class="prob-top">' +

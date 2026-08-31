@@ -42,14 +42,25 @@ BLOCK_FIELDS = {
 }
 
 
+def _module(path, name):
+    spec = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def load(n):
     path = ROOT / 'content' / ('lesson_%02d.py' % n)
     if not path.exists():
         return None
-    spec = importlib.util.spec_from_file_location('lesson_%02d' % n, path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod.LESSON
+    lesson = _module(path, 'lesson_%02d' % n).LESSON
+
+    # A topic's problem set grows past what fits comfortably in one file, so the
+    # extra rounds live beside it in problems_NN.py and are appended here.
+    extra = ROOT / 'content' / ('problems_%02d.py' % n)
+    if extra.exists():
+        lesson['problems'] = lesson['problems'] + _module(extra, 'problems_%02d' % n).EXTRA
+    return lesson
 
 
 # --------------------------------------------------------------------------
@@ -148,13 +159,17 @@ def check_structure(lesson, issues):
         where = '%s problem %d' % (tag, pi)
         if not p.get('src'):
             issues.append('%s: no source' % where)
-        if p.get('lvl') not in (1, 2, 3):
-            issues.append('%s: level must be 1, 2 or 3' % where)
+        if p.get('lvl') not in (1, 2, 3, 4):
+            issues.append('%s: level must be 1, 2, 3 or 4' % where)
         for f in ('q', 'hint', 'sol'):
             for lang in LANGS:
                 if not p.get(f, {}).get(lang):
                     issues.append('%s: %s has no %s' % (where, f, lang))
-        key = p.get('q', {}).get('en', '')[:60]
+        # Compare the whole statement, not a prefix: two different problems
+        # can legitimately open with the same wording ('Find all pairs of
+        # positive integers (a,b) with ...').  Punctuation and spacing are
+        # dropped so a reformatted copy still counts as a duplicate.
+        key = re.sub(r'[^0-9a-z]+', '', p.get('q', {}).get('en', '').lower())
         if key in seen:
             issues.append('%s: looks like a duplicate of an earlier problem' % where)
         seen.add(key)

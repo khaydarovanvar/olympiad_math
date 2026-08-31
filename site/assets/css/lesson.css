@@ -194,3 +194,7 @@
   .lfig svg text{font-size:15px}
   .lfig svg text.sm,.lfig svg text.acc{font-size:13px}
 }
+
+/* a fourth difficulty band, for international-level problems */
+.lvl-4{background:#EDE9FE;color:#5B21B6}
+.psrc-note{font-size:.8rem;color:var(--muted);margin:-.4rem 0 1.4rem;max-width:70ch;line-height:1.55}
