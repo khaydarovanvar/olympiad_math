@@ -38,6 +38,7 @@ BLOCK_FIELDS = {
     'table': ('head', 'rows'),
     'ex':    ('q', 'steps', 'ans'),
     'eq':    ('tex',),
+    'fig':   ('svg', 'cap'),
 }
 
 
@@ -105,8 +106,8 @@ def check_structure(lesson, issues):
                     issues.append('%s block %d (%s): missing %s' % (where, bi, t, f))
                     continue
                 val = b[f]
-                if f == 'tex':
-                    continue          # one shared formula, not per-language
+                if f in ('tex', 'svg'):
+                    continue          # shared across languages, not translated
                 if not isinstance(val, dict):
                     issues.append('%s block %d (%s): %s is not per-language' % (where, bi, t, f))
                     continue

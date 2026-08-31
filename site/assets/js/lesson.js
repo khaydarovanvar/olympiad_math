@@ -150,6 +150,13 @@
           }).join('') + '</tbody></table></div>';
       }
 
+      /* A figure. The SVG is authored in the lesson file and is language-free;
+         only its caption is translated. It carries no width/height so the CSS
+         can scale it with the column on a phone. */
+      case 'fig':
+        return '<figure class="lfig">' + b.svg +
+          '<figcaption>' + inline(pick(b.cap, lang)) + '</figcaption></figure>';
+
       case 'ex': {
         var steps = pick(b.steps, lang) || [];
         return '<div class="ex">' +
@@ -228,6 +235,8 @@
             '<span class="lvl lvl-' + p.lvl + '">' + esc(t['lvl' + p.lvl]) + '</span>' +
           '</div>' +
           '<div class="prob-q">' + inline(pick(p.q, lang)) + '</div>' +
+          /* an optional diagram, for the geometry problems */
+          (p.svg ? '<figure class="lfig lfig--prob">' + p.svg + '</figure>' : '') +
           '<div class="prob-acts">' +
             '<button class="pbtn" data-open="hint">' + esc(t.showHint) + '</button>' +
             '<button class="pbtn" data-open="sol">' + esc(t.showSol) + '</button>' +

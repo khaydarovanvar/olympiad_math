@@ -149,6 +149,26 @@ body.menu-open .langsw button.on{background:var(--gold);color:#0F1B2A}
 .lnav a:hover{color:var(--c)}
 .lnav .next{text-align:right;margin-left:auto}
 
+/* ---------- figures ---------- */
+/* The SVG carries a viewBox but no width/height, so it takes the column width
+   and keeps its ratio; the max-width stops a small diagram being blown up. */
+.lfig{margin:1.5rem 0;text-align:center}
+.lfig svg{width:100%;max-width:var(--fw,420px);height:auto;display:inline-block;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:.6rem}
+.lfig svg .ln{stroke:var(--ink);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lfig svg .lnc{stroke:var(--c);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lfig svg .dsh{stroke:var(--muted);stroke-width:1.2;fill:none;stroke-dasharray:5 4}
+.lfig svg .fil{fill:var(--t);stroke:none}
+.lfig svg .pt{fill:var(--ink);stroke:var(--paper);stroke-width:1.5}
+.lfig svg .ptc{fill:var(--c);stroke:var(--paper);stroke-width:1.5}
+.lfig svg text{fill:var(--ink);font-family:var(--font-mono);font-size:13px;
+  font-style:italic;dominant-baseline:middle}
+.lfig svg text.sm{font-size:11px;fill:var(--muted);font-style:normal}
+.lfig svg text.acc{fill:var(--c);font-style:normal;font-size:11px}
+.lfig--prob{margin:.2rem 0 1rem;padding-inline:1.15rem}
+.lfig figcaption{margin-top:.6rem;font-size:.82rem;color:var(--muted);
+  max-width:52ch;margin-inline:auto;line-height:1.5}
+
 /* ---------- KaTeX fitting ---------- */
 .katex{font-size:1.045em}
 .katex-display{margin:1.1rem 0;overflow-x:auto;overflow-y:hidden;padding:.2rem 0}
@@ -177,4 +197,9 @@ body.menu-open .langsw button.on{background:var(--gold);color:#0F1B2A}
   .katex{font-size:1em}
   /* long display formulas scroll rather than overflow the phone */
   .katex-display{margin-inline:-.95rem;padding-inline:.95rem}
+}
+@media (max-width:640px){
+  .lfig{margin:1.2rem 0}
+  .lfig svg text{font-size:15px}
+  .lfig svg text.sm,.lfig svg text.acc{font-size:13px}
 }

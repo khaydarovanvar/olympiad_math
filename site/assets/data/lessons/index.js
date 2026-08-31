@@ -111,5 +111,19 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 5
+ },
+ {
+  "n": 9,
+  "cat": "geo",
+  "title": {
+   "ru": "Треугольники и равенство",
+   "en": "Triangles and congruence"
+  },
+  "sub": {
+   "ru": "Углы, три признака равенства, равнобедренный треугольник, средняя линия, подобие и медианы.",
+   "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians."
+  },
+  "problems": 20,
+  "sections": 6
  }
 ];
