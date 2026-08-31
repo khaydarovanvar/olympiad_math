@@ -220,6 +220,218 @@ window.LESSONS[16] = {
       "ru": "Последние полчаса тура тратьте **не на новую задачу**, а на проверку и дописывание уже решённых. Типичная потеря — задача, решённая верно, но без разбора одного случая или без вывода. Такие баллы возвращаются за пять минут, а новая задача за полчаса, скорее всего, не решится.",
       "en": "Spend the last half hour **not on a new problem** but on checking and finishing the ones already done. The typical loss is a problem solved correctly but with one case missing or no conclusion written. Those marks come back in five minutes, whereas a new problem probably will not fall in thirty."
      }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Арифметика распределения времени",
+      "en": "The arithmetic of time management"
+     },
+     "text": {
+      "ru": "Пусть в туре $n$ задач и $T$ минут. Первые $\\dfrac{T}{4}$ отведите на **чтение всех условий и разведку**: по несколько минут на задачу, чтобы понять, какая из них ваша. Оставшиеся $\\dfrac{3T}{4}$ распределяйте не поровну, а по принципу «сначала то, что решается».",
+      "en": "With $n$ problems and $T$ minutes, spend the first $\\dfrac{T}{4}$ on **reading every statement and scouting**: a few minutes per problem, enough to see which one is yours. Divide the remaining $\\dfrac{3T}{4}$ not equally but by the rule \"the solvable ones first\"."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "**Почему разведка окупается.** Задачи в туре обычно расставлены по возрастанию сложности, но эта сложность — средняя по всем участникам, а не ваша. Вполне может оказаться, что четвёртая задача — из вашей любимой темы, а вторая — из нелюбимой. Полные баллы за четвёртую стоят больше, чем половина за вторую.\n\n**Правило двадцати минут.** Если за $20$ минут не появилось ни одной идеи, переходите к следующей задаче и вернитесь позже. Мозг продолжает работать над задачей в фоне — очень часто идея приходит именно при возвращении.",
+      "en": "**Why scouting pays.** Problems in a round are usually ordered by difficulty, but that difficulty is the average over all contestants, not yours. The fourth problem may well be from your favourite topic and the second from your least favourite. Full marks on the fourth are worth more than half marks on the second.\n\n**The twenty-minute rule.** If twenty minutes bring no idea at all, move on and come back later. The brain keeps working in the background — very often the idea arrives precisely on the return."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Что делать, когда идей нет.** Пройдите по этому списку — он редко подводит.\n\n1. Разберите **маленькие случаи**: $n=1,2,3$. Найдите закономерность.\n2. Нарисуйте **аккуратный** чертёж (для геометрии — крупный и по линейке).\n3. Спросите: **что здесь инвариант?** Что не меняется?\n4. Спросите: **где достигается равенство?** Ответ подскажет метод.\n5. Попробуйте **от противного**: что было бы, если утверждение неверно?\n6. Найдите **крайний объект**: наибольший, наименьший, первый.\n7. Переформулируйте задачу на другом языке: числа → точки, множества → граф, геометрия → координаты.\n8. Решите **более простую** задачу: с меньшим числом переменных, с частным значением параметра.\n\nЗапишите всё, что успели: частные случаи, оценку в одну сторону, разобранный случай — за это ставят баллы.",
+      "en": "**What to do when nothing comes.** Work down this list; it rarely fails.\n\n1. Do the **small cases**: $n=1,2,3$. Look for a pattern.\n2. Draw an **accurate** figure (for geometry: large and with a ruler).\n3. Ask: **what is invariant here?** What never changes?\n4. Ask: **where does equality hold?** The answer suggests the method.\n5. Try **contradiction**: what would follow if the claim were false?\n6. Find the **extremal object**: the largest, the smallest, the first.\n7. Restate the problem in another language: numbers → points, sets → a graph, geometry → coordinates.\n8. Solve an **easier** problem: fewer variables, a special value of the parameter.\n\nWrite down whatever you did reach: the small cases, one direction of the bound, the case you did settle — those earn marks."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Анатомия строгого решения",
+    "en": "The anatomy of a rigorous solution"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Разница между «я решил задачу» и «я получил за неё баллы» — это строгость записи. Ниже разобрано, из чего складывается полное решение и где чаще всего теряются баллы.",
+      "en": "The gap between \"I solved it\" and \"I scored on it\" is rigour of exposition. Below is what a complete solution consists of, and where marks are most often lost."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Что обязано содержать решение",
+      "en": "What a solution must contain"
+     },
+     "text": {
+      "ru": "Полное решение задачи вида «найдите все объекты со свойством $P$» состоит из **двух** частей:\n\n1. **Оценка (необходимость):** доказательство того, что всякий объект со свойством $P$ принадлежит найденному списку.\n2. **Пример (достаточность):** проверка того, что каждый объект из списка действительно обладает свойством $P$.\n\nОдной части недостаточно никогда.",
+      "en": "A complete solution to \"find all objects with property $P$\" has **two** parts:\n\n1. **The bound (necessity):** a proof that every object with property $P$ is on your list.\n2. **The example (sufficiency):** a verification that every object on the list really has property $P$.\n\nOne part alone is never enough."
+     }
+    },
+    {
+     "t": "note",
+     "text": {
+      "ru": "Тот же принцип в других формулировках задач:\n\n- «Найдите наибольшее $n$, при котором…» → построить пример для $n_0$ **и** доказать, что при $n_0+1$ невозможно.\n- «Какое наименьшее число ходов нужно?» → предъявить стратегию за $k$ ходов **и** доказать, что за $k-1$ нельзя.\n- «Докажите, что всегда можно…» → предъявить способ **и** обосновать, что он работает при любых данных.\n\nЗа половину задачи обычно ставят половину баллов — но только если эта половина доказана полностью.",
+      "en": "The same principle in other phrasings:\n\n- \"Find the largest $n$ such that…\" → give a construction for $n_0$ **and** prove $n_0+1$ is impossible.\n- \"What is the least number of moves?\" → exhibit a strategy in $k$ moves **and** prove $k-1$ cannot work.\n- \"Prove that one can always…\" → give a method **and** justify that it works for all data.\n\nHalf a problem usually earns half the marks — but only if that half is proved completely."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Когда законно писать «без ограничения общности»",
+      "en": "When \"without loss of generality\" is legitimate"
+     },
+     "text": {
+      "ru": "Фраза «без ограничения общности $a\\le b\\le c$» законна ровно тогда, когда **условие и заключение задачи не меняются** при перестановке $a,b,c$. Тогда достаточно разобрать один порядок: остальные получаются переименованием.",
+      "en": "The phrase \"without loss of generality $a\\le b\\le c$\" is legitimate exactly when **both the hypothesis and the conclusion are unchanged** by permuting $a,b,c$. Then one ordering suffices: the rest follow by renaming."
+     }
+    },
+    {
+     "t": "warn",
+     "text": {
+      "ru": "В неравенстве $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32$$ упорядочить переменные можно: и левая часть, и условие $a,b,c>0$ симметричны ✓\n\nА в неравенстве $$a^{2}b+b^{2}c+c^{2}a\\ \\ge\\ 3abc$$ левая часть **циклична**, но не симметрична: перестановка $a\\leftrightarrow b$ превращает её в $b^{2}a+a^{2}c+c^{2}b$ — другое выражение. Здесь допустимо лишь считать, что $a$ — наибольшее (циклический сдвиг сохраняет выражение), но не упорядочивать все три ✗\n\nПроверка занимает пять секунд и спасает решение.",
+      "en": "In the inequality $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32$$ ordering the variables is fine: both the left side and the hypothesis $a,b,c>0$ are symmetric ✓\n\nBut in $$a^{2}b+b^{2}c+c^{2}a\\ \\ge\\ 3abc$$ the left side is **cyclic**, not symmetric: swapping $a\\leftrightarrow b$ turns it into $b^{2}a+a^{2}c+c^{2}b$, a different expression. Here you may only assume that $a$ is the largest (a cyclic shift preserves the expression), not order all three ✗\n\nThe check takes five seconds and saves the solution."
+     }
+    },
+    {
+     "t": "thm",
+     "name": {
+      "ru": "Полнота разбора случаев",
+      "en": "Completeness of a case analysis"
+     },
+     "text": {
+      "ru": "Разбор случаев корректен, если выполнены два условия: случаи **покрывают** все возможности и каждый разобран до конца. Пересекаться случаи могут — это не ошибка; пропуск же хотя бы одного делает решение неверным.",
+      "en": "A case analysis is correct when two things hold: the cases **cover** every possibility, and each is carried through. Overlapping cases are harmless; missing even one makes the solution wrong."
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "Явно выписывайте, почему случаи покрывают всё: «число $n$ либо чётно, либо нечётно», «либо $x\\le0$, либо $0<x<1$, либо $x\\ge1$». Одна такая фраза — и проверяющий видит, что разбор полон.\n\nСлово «аналогично» допустимо, но только если аналогия действительно дословная. Если во втором случае меняется хотя бы знак, «аналогично» превращается в потерю баллов; напишите две строки честного вывода.",
+      "en": "Say explicitly why the cases cover everything: \"$n$ is either even or odd\", \"either $x\\le0$, or $0<x<1$, or $x\\ge1$\". One such sentence and the marker can see the analysis is complete.\n\nThe word \"similarly\" is allowed, but only when the analogy really is word-for-word. If even a sign changes in the second case, \"similarly\" becomes lost marks; write the two honest lines."
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Частая потеря баллов",
+       "Как исправить"
+      ],
+      "en": [
+       "A common way to lose marks",
+       "The fix"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "найдены все решения, но не доказано, что других нет",
+        "добавить оценку"
+       ],
+       [
+        "построен пример, но не проверено условие",
+        "проверить прямым вычислением"
+       ],
+       [
+        "«очевидно, что…»",
+        "либо доказать, либо убрать"
+       ],
+       [
+        "деление на выражение, которое может быть нулём",
+        "разобрать случай нуля отдельно"
+       ],
+       [
+        "возведение в квадрат без проверки корней",
+        "подставить найденные корни в исходное уравнение"
+       ],
+       [
+        "«не умаляя общности» для несимметричного условия",
+        "разобрать все порядки или сослаться на цикличность"
+       ],
+       [
+        "ссылка на чертёж вместо доказательства",
+        "заменить чертёж словами о взаимном расположении"
+       ],
+       [
+        "индукция без базы",
+        "проверить наименьший случай"
+       ],
+       [
+        "ответ без единиц измерения или без проверки по смыслу",
+        "вернуться к условию и проверить"
+       ]
+      ],
+      "en": [
+       [
+        "all solutions found, but no proof there are no others",
+        "add the bound"
+       ],
+       [
+        "an example built but its property never checked",
+        "verify it by direct computation"
+       ],
+       [
+        "\"it is obvious that…\"",
+        "prove it, or delete it"
+       ],
+       [
+        "dividing by something that may be zero",
+        "treat the zero case separately"
+       ],
+       [
+        "squaring without checking the roots",
+        "substitute each root into the original equation"
+       ],
+       [
+        "\"without loss of generality\" for a non-symmetric hypothesis",
+        "do all orderings, or invoke cyclicity"
+       ],
+       [
+        "appealing to the picture instead of proving",
+        "replace the picture by a statement about positions"
+       ],
+       [
+        "induction with no base case",
+        "check the smallest case"
+       ],
+       [
+        "an answer with no units or no sanity check",
+        "go back to the statement and check"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "ex",
+     "q": {
+      "ru": "Решите уравнение $\\sqrt{x+3}=x+1$ и объясните, где здесь спрятана типичная ошибка.",
+      "en": "Solve $\\sqrt{x+3}=x+1$ and explain where the usual mistake hides."
+     },
+     "steps": {
+      "ru": [
+       "**Область определения.** Подкоренное выражение неотрицательно: $x\\ge-3$. Кроме того, левая часть неотрицательна, значит и правая: $x+1\\ge0$, то есть $x\\ge-1$.",
+       "**Возведение в квадрат.** При $x\\ge-1$ обе части неотрицательны, поэтому возведение в квадрат равносильно: $$x+3=x^{2}+2x+1\\quad\\Longrightarrow\\quad x^{2}+x-2=0 .$$",
+       "Корни: $x=1$ и $x=-2$.",
+       "**Отбор.** Условие $x\\ge-1$ отбрасывает $x=-2$. Проверим оставшийся: $\\sqrt{1+3}=2$ и $1+1=2$ ✓",
+       "**Где ошибка.** Если не выписать условие $x+1\\ge0$, корень $x=-2$ покажется решением: $\\sqrt{-2+3}=1$, но $-2+1=-1\\ne1$. Возведение в квадрат — **не** равносильное преобразование, оно может добавлять корни. Поэтому либо выписывайте условия заранее, либо проверяйте все найденные корни подстановкой."
+      ],
+      "en": [
+       "**Domain.** The radicand must be non-negative: $x\\ge-3$. The left side is non-negative, so the right side must be too: $x+1\\ge0$, i.e. $x\\ge-1$.",
+       "**Squaring.** For $x\\ge-1$ both sides are non-negative, so squaring is an equivalence: $$x+3=x^{2}+2x+1\\quad\\Longrightarrow\\quad x^{2}+x-2=0 .$$",
+       "The roots are $x=1$ and $x=-2$.",
+       "**Selection.** The condition $x\\ge-1$ rules out $x=-2$. Check the survivor: $\\sqrt{1+3}=2$ and $1+1=2$ ✓",
+       "**Where the mistake hides.** Without the condition $x+1\\ge0$ the value $x=-2$ looks like a solution: $\\sqrt{-2+3}=1$, but $-2+1=-1\\ne1$. Squaring is **not** an equivalence — it can create roots. So either state the conditions in advance or substitute every root back."
+      ]
+     },
+     "ans": {
+      "ru": "$x=1$; корень $x=-2$ посторонний.",
+      "en": "$x=1$; the root $x=-2$ is extraneous."
+     }
     }
    ]
   },
@@ -266,6 +478,552 @@ window.LESSONS[16] = {
      "text": {
       "ru": "Ниже — четыре пробных варианта по пять задач. Задачи перемешаны по темам, как на настоящем туре: по условию не сказано, какой раздел применять. Решайте вариант целиком за $2$–$2{,}5$ часа, не подглядывая в подсказки, и только потом сверяйтесь с разбором.",
       "en": "Below are four mock papers of five problems each. The topics are shuffled, as in a real round: nothing in the statement says which section to use. Sit a paper whole in $2$–$2.5$ hours without looking at the hints, and only then compare with the solutions."
+     }
+    }
+   ]
+  },
+  {
+   "h": {
+    "ru": "Справочник: что нужно помнить наизусть",
+    "en": "Reference: what to know by heart"
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "text": {
+      "ru": "Перед туром полезно за полчаса пробежать список фактов, которые должны быть в голове без вывода. Ниже собрано всё существенное из предыдущих пятнадцати тем — по разделам.",
+      "en": "Half an hour before a round it helps to run through the facts that must be available without derivation. Below is everything essential from the previous fifteen topics, by area."
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Теория чисел",
+       "Формулировка"
+      ],
+      "en": [
+       "Number theory",
+       "Statement"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "деление с остатком",
+        "$a=bq+r$, $0\\le r<b$, единственно"
+       ],
+       [
+        "алгоритм Евклида",
+        "$\\gcd(a,b)=\\gcd(b,\\,a\\bmod b)$"
+       ],
+       [
+        "соотношение Безу",
+        "$\\gcd(a,b)=ax+by$ для некоторых целых $x,y$"
+       ],
+       [
+        "основная теорема арифметики",
+        "разложение на простые единственно"
+       ],
+       [
+        "число делителей",
+        "$\\tau(n)=\\prod\\left(\\alpha_i+1\\right)$"
+       ],
+       [
+        "сумма делителей",
+        "$\\sigma(n)=\\prod\\dfrac{p_i^{\\,\\alpha_i+1}-1}{p_i-1}$"
+       ],
+       [
+        "функция Эйлера",
+        "$\\varphi(n)=n\\prod\\left(1-\\tfrac1{p_i}\\right)$"
+       ],
+       [
+        "малая теорема Ферма",
+        "$a^{p-1}\\equiv1\\pmod p$ при $p\\nmid a$"
+       ],
+       [
+        "теорема Эйлера",
+        "$a^{\\varphi(m)}\\equiv1\\pmod m$ при $\\gcd(a,m)=1$"
+       ],
+       [
+        "теорема Вильсона",
+        "$(p-1)!\\equiv-1\\pmod p$ ⟺ $p$ просто"
+       ],
+       [
+        "китайская теорема об остатках",
+        "система с попарно взаимно простыми модулями разрешима"
+       ],
+       [
+        "формула Лежандра",
+        "$v_p(n!)=\\sum_{k\\ge1}\\left\\lfloor\\tfrac{n}{p^{k}}\\right\\rfloor$"
+       ],
+       [
+        "разность степеней",
+        "$(a-b)\\mid(a^{n}-b^{n})$ всегда"
+       ],
+       [
+        "gcd степеней",
+        "$\\gcd\\left(a^{m}-1,a^{n}-1\\right)=a^{\\gcd(m,n)}-1$"
+       ],
+       [
+        "пифагоровы тройки",
+        "$x=2mn$, $y=m^{2}-n^{2}$, $z=m^{2}+n^{2}$"
+       ]
+      ],
+      "en": [
+       [
+        "division with remainder",
+        "$a=bq+r$, $0\\le r<b$, unique"
+       ],
+       [
+        "Euclidean algorithm",
+        "$\\gcd(a,b)=\\gcd(b,\\,a\\bmod b)$"
+       ],
+       [
+        "Bezout relation",
+        "$\\gcd(a,b)=ax+by$ for some integers $x,y$"
+       ],
+       [
+        "fundamental theorem of arithmetic",
+        "the prime factorisation is unique"
+       ],
+       [
+        "number of divisors",
+        "$\\tau(n)=\\prod\\left(\\alpha_i+1\\right)$"
+       ],
+       [
+        "sum of divisors",
+        "$\\sigma(n)=\\prod\\dfrac{p_i^{\\,\\alpha_i+1}-1}{p_i-1}$"
+       ],
+       [
+        "totient",
+        "$\\varphi(n)=n\\prod\\left(1-\\tfrac1{p_i}\\right)$"
+       ],
+       [
+        "little theorem of Fermat",
+        "$a^{p-1}\\equiv1\\pmod p$ when $p\\nmid a$"
+       ],
+       [
+        "theorem of Euler",
+        "$a^{\\varphi(m)}\\equiv1\\pmod m$ when $\\gcd(a,m)=1$"
+       ],
+       [
+        "theorem of Wilson",
+        "$(p-1)!\\equiv-1\\pmod p$ ⟺ $p$ is prime"
+       ],
+       [
+        "Chinese remainder theorem",
+        "a system with pairwise coprime moduli is solvable"
+       ],
+       [
+        "formula of Legendre",
+        "$v_p(n!)=\\sum_{k\\ge1}\\left\\lfloor\\tfrac{n}{p^{k}}\\right\\rfloor$"
+       ],
+       [
+        "difference of powers",
+        "$(a-b)\\mid(a^{n}-b^{n})$ always"
+       ],
+       [
+        "gcd of powers",
+        "$\\gcd\\left(a^{m}-1,a^{n}-1\\right)=a^{\\gcd(m,n)}-1$"
+       ],
+       [
+        "Pythagorean triples",
+        "$x=2mn$, $y=m^{2}-n^{2}$, $z=m^{2}+n^{2}$"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Алгебра",
+       "Формулировка"
+      ],
+      "en": [
+       "Algebra",
+       "Statement"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "теорема Виета",
+        "$x_1+x_2=-\\tfrac{b}{a}$, $x_1x_2=\\tfrac{c}{a}$"
+       ],
+       [
+        "неравенство о средних",
+        "$Q\\ge A\\ge G\\ge H$"
+       ],
+       [
+        "Коши–Буняковский",
+        "$\\left(\\sum a_ib_i\\right)^{2}\\le\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)$"
+       ],
+       [
+        "форма Энгеля",
+        "$\\sum\\dfrac{x_i^{2}}{y_i}\\ge\\dfrac{\\left(\\sum x_i\\right)^{2}}{\\sum y_i}$"
+       ],
+       [
+        "Йенсен (выпуклая $f$)",
+        "$f\\left(\\sum w_ix_i\\right)\\le\\sum w_if(x_i)$"
+       ],
+       [
+        "Чебышёв (одинаково упорядочены)",
+        "$n\\sum a_ib_i\\ge\\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$"
+       ],
+       [
+        "бином Ньютона",
+        "$(a+b)^{n}=\\sum\\binom{n}{k}a^{\\,n-k}b^{k}$"
+       ],
+       [
+        "Софи Жермен",
+        "$a^{4}+4b^{4}=\\left(a^{2}-2ab+2b^{2}\\right)\\left(a^{2}+2ab+2b^{2}\\right)$"
+       ],
+       [
+        "три куба",
+        "$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)$"
+       ],
+       [
+        "арифметическая прогрессия",
+        "$S_n=\\dfrac{a_1+a_n}{2}\\,n$"
+       ],
+       [
+        "геометрическая прогрессия",
+        "$S_n=b_1\\dfrac{1-q^{n}}{1-q}$, $S_\\infty=\\dfrac{b_1}{1-q}$ при $|q|<1$"
+       ],
+       [
+        "суммы степеней",
+        "$\\sum k=\\tfrac{n(n+1)}{2}$, $\\sum k^{2}=\\tfrac{n(n+1)(2n+1)}{6}$, $\\sum k^{3}=\\left(\\sum k\\right)^{2}$"
+       ],
+       [
+        "формула Бине",
+        "$F_n=\\tfrac1{\\sqrt5}\\left(\\varphi^{n}-\\psi^{n}\\right)$"
+       ]
+      ],
+      "en": [
+       [
+        "Vieta",
+        "$x_1+x_2=-\\tfrac{b}{a}$, $x_1x_2=\\tfrac{c}{a}$"
+       ],
+       [
+        "the mean inequalities",
+        "$Q\\ge A\\ge G\\ge H$"
+       ],
+       [
+        "Cauchy–Schwarz",
+        "$\\left(\\sum a_ib_i\\right)^{2}\\le\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)$"
+       ],
+       [
+        "Engel form",
+        "$\\sum\\dfrac{x_i^{2}}{y_i}\\ge\\dfrac{\\left(\\sum x_i\\right)^{2}}{\\sum y_i}$"
+       ],
+       [
+        "Jensen (convex $f$)",
+        "$f\\left(\\sum w_ix_i\\right)\\le\\sum w_if(x_i)$"
+       ],
+       [
+        "Chebyshev (similarly sorted)",
+        "$n\\sum a_ib_i\\ge\\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$"
+       ],
+       [
+        "binomial theorem",
+        "$(a+b)^{n}=\\sum\\binom{n}{k}a^{\\,n-k}b^{k}$"
+       ],
+       [
+        "Sophie Germain",
+        "$a^{4}+4b^{4}=\\left(a^{2}-2ab+2b^{2}\\right)\\left(a^{2}+2ab+2b^{2}\\right)$"
+       ],
+       [
+        "three cubes",
+        "$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)$"
+       ],
+       [
+        "arithmetic progression",
+        "$S_n=\\dfrac{a_1+a_n}{2}\\,n$"
+       ],
+       [
+        "geometric progression",
+        "$S_n=b_1\\dfrac{1-q^{n}}{1-q}$, $S_\\infty=\\dfrac{b_1}{1-q}$ for $|q|<1$"
+       ],
+       [
+        "power sums",
+        "$\\sum k=\\tfrac{n(n+1)}{2}$, $\\sum k^{2}=\\tfrac{n(n+1)(2n+1)}{6}$, $\\sum k^{3}=\\left(\\sum k\\right)^{2}$"
+       ],
+       [
+        "Binet formula",
+        "$F_n=\\tfrac1{\\sqrt5}\\left(\\varphi^{n}-\\psi^{n}\\right)$"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Геометрия",
+       "Формулировка"
+      ],
+      "en": [
+       "Geometry",
+       "Statement"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "теорема синусов",
+        "$\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=\\dfrac{c}{\\sin C}=2R$"
+       ],
+       [
+        "теорема косинусов",
+        "$a^{2}=b^{2}+c^{2}-2bc\\cos A$"
+       ],
+       [
+        "площадь",
+        "$\\tfrac12 ab\\sin C=pr=\\tfrac{abc}{4R}=\\sqrt{p(p-a)(p-b)(p-c)}$"
+       ],
+       [
+        "медиана",
+        "$m_a^{2}=\\dfrac{2b^{2}+2c^{2}-a^{2}}{4}$"
+       ],
+       [
+        "биссектриса",
+        "$\\dfrac{BL}{LC}=\\dfrac{AB}{AC}$"
+       ],
+       [
+        "вписанный угол",
+        "половина центрального, опирающегося на ту же дугу"
+       ],
+       [
+        "вписанный четырёхугольник",
+        "$\\angle A+\\angle C=180^{\\circ}$"
+       ],
+       [
+        "степень точки",
+        "$PA\\cdot PB=PC\\cdot PD=PT^{2}=\\left|OP^{2}-R^{2}\\right|$"
+       ],
+       [
+        "Птолемей",
+        "$AC\\cdot BD=AB\\cdot CD+BC\\cdot AD$"
+       ],
+       [
+        "Чева",
+        "$\\dfrac{BX}{XC}\\cdot\\dfrac{CY}{YA}\\cdot\\dfrac{AZ}{ZB}=1$ (чевианы конкурентны)"
+       ],
+       [
+        "Менелай",
+        "то же произведение $=1$ (точки коллинеарны)"
+       ],
+       [
+        "прямая Эйлера",
+        "$O$, $G$, $H$ коллинеарны, $HG=2GO$"
+       ],
+       [
+        "формула Эйлера",
+        "$OI^{2}=R^{2}-2Rr$, отсюда $R\\ge2r$"
+       ],
+       [
+        "формула Пика",
+        "$S=B+\\tfrac{\\Gamma}{2}-1$"
+       ],
+       [
+        "расстояние до прямой",
+        "$d=\\dfrac{\\left|Ax_0+By_0+C\\right|}{\\sqrt{A^{2}+B^{2}}}$"
+       ]
+      ],
+      "en": [
+       [
+        "law of sines",
+        "$\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=\\dfrac{c}{\\sin C}=2R$"
+       ],
+       [
+        "law of cosines",
+        "$a^{2}=b^{2}+c^{2}-2bc\\cos A$"
+       ],
+       [
+        "area",
+        "$\\tfrac12 ab\\sin C=pr=\\tfrac{abc}{4R}=\\sqrt{p(p-a)(p-b)(p-c)}$"
+       ],
+       [
+        "median",
+        "$m_a^{2}=\\dfrac{2b^{2}+2c^{2}-a^{2}}{4}$"
+       ],
+       [
+        "angle bisector",
+        "$\\dfrac{BL}{LC}=\\dfrac{AB}{AC}$"
+       ],
+       [
+        "inscribed angle",
+        "half the central angle on the same arc"
+       ],
+       [
+        "cyclic quadrilateral",
+        "$\\angle A+\\angle C=180^{\\circ}$"
+       ],
+       [
+        "power of a point",
+        "$PA\\cdot PB=PC\\cdot PD=PT^{2}=\\left|OP^{2}-R^{2}\\right|$"
+       ],
+       [
+        "Ptolemy",
+        "$AC\\cdot BD=AB\\cdot CD+BC\\cdot AD$"
+       ],
+       [
+        "Ceva",
+        "$\\dfrac{BX}{XC}\\cdot\\dfrac{CY}{YA}\\cdot\\dfrac{AZ}{ZB}=1$ (cevians concurrent)"
+       ],
+       [
+        "Menelaus",
+        "the same product $=1$ (points collinear)"
+       ],
+       [
+        "Euler line",
+        "$O$, $G$, $H$ collinear with $HG=2GO$"
+       ],
+       [
+        "formula of Euler",
+        "$OI^{2}=R^{2}-2Rr$, hence $R\\ge2r$"
+       ],
+       [
+        "formula of Pick",
+        "$S=B+\\tfrac{\\Gamma}{2}-1$"
+       ],
+       [
+        "point-to-line distance",
+        "$d=\\dfrac{\\left|Ax_0+By_0+C\\right|}{\\sqrt{A^{2}+B^{2}}}$"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "table",
+     "head": {
+      "ru": [
+       "Комбинаторика и логика",
+       "Формулировка"
+      ],
+      "en": [
+       "Combinatorics and logic",
+       "Statement"
+      ]
+     },
+     "rows": {
+      "ru": [
+       [
+        "правило произведения",
+        "независимые шаги — перемножить"
+       ],
+       [
+        "размещения / сочетания",
+        "$A_n^{k}=\\tfrac{n!}{(n-k)!}$, $C_n^{k}=\\tfrac{n!}{k!(n-k)!}$"
+       ],
+       [
+        "перестановки с повторениями",
+        "$\\dfrac{n!}{k_1!\\cdots k_m!}$"
+       ],
+       [
+        "шары и перегородки",
+        "$\\binom{n+k-1}{k}$"
+       ],
+       [
+        "правило Паскаля",
+        "$\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}$"
+       ],
+       [
+        "включения и исключения",
+        "$\\left|\\bigcup A_i\\right|=\\sum\\left|A_i\\right|-\\sum\\left|A_i\\cap A_j\\right|+\\dots$"
+       ],
+       [
+        "беспорядки",
+        "$D_n=n!\\sum_{j=0}^{n}\\tfrac{(-1)^{j}}{j!}$"
+       ],
+       [
+        "числа Каталана",
+        "$C_n=\\tfrac1{n+1}\\binom{2n}{n}$"
+       ],
+       [
+        "принцип Дирихле",
+        "$n$ предметов в $k$ клетках → где-то $\\ge\\left\\lceil\\tfrac{n}{k}\\right\\rceil$"
+       ],
+       [
+        "принцип крайнего",
+        "взять наибольший или наименьший объект"
+       ],
+       [
+        "инвариант",
+        "величина, не меняющаяся при ходе"
+       ],
+       [
+        "монотонная величина",
+        "строго убывает → процесс конечен"
+       ],
+       [
+        "контрапозиция",
+        "$A\\Rightarrow B$ равносильно $\\overline{B}\\Rightarrow\\overline{A}$"
+       ]
+      ],
+      "en": [
+       [
+        "product rule",
+        "independent steps multiply"
+       ],
+       [
+        "arrangements / combinations",
+        "$A_n^{k}=\\tfrac{n!}{(n-k)!}$, $C_n^{k}=\\tfrac{n!}{k!(n-k)!}$"
+       ],
+       [
+        "permutations with repetition",
+        "$\\dfrac{n!}{k_1!\\cdots k_m!}$"
+       ],
+       [
+        "stars and bars",
+        "$\\binom{n+k-1}{k}$"
+       ],
+       [
+        "rule of Pascal",
+        "$\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}$"
+       ],
+       [
+        "inclusion–exclusion",
+        "$\\left|\\bigcup A_i\\right|=\\sum\\left|A_i\\right|-\\sum\\left|A_i\\cap A_j\\right|+\\dots$"
+       ],
+       [
+        "derangements",
+        "$D_n=n!\\sum_{j=0}^{n}\\tfrac{(-1)^{j}}{j!}$"
+       ],
+       [
+        "Catalan numbers",
+        "$C_n=\\tfrac1{n+1}\\binom{2n}{n}$"
+       ],
+       [
+        "pigeonhole",
+        "$n$ objects in $k$ boxes → some box has $\\ge\\left\\lceil\\tfrac{n}{k}\\right\\rceil$"
+       ],
+       [
+        "extremal principle",
+        "take the largest or the smallest object"
+       ],
+       [
+        "invariant",
+        "a quantity unchanged by a move"
+       ],
+       [
+        "monovariant",
+        "strictly decreasing → the process is finite"
+       ],
+       [
+        "contrapositive",
+        "$A\\Rightarrow B$ is equivalent to $\\overline{B}\\Rightarrow\\overline{A}$"
+       ]
+      ]
+     }
+    },
+    {
+     "t": "idea",
+     "text": {
+      "ru": "**Как пользоваться этим списком.** Не читайте его подряд накануне тура — это бесполезно. Вместо этого закройте правый столбец и попробуйте восстановить формулировки по названиям. То, что не вспомнилось, вернитесь и перечитайте в соответствующей теме вместе с доказательством: помнится надолго только то, что понято.",
+      "en": "**How to use this list.** Do not read it top to bottom the night before — that achieves nothing. Instead cover the right column and try to reconstruct each statement from its name. Whatever fails to come back, revisit in its own topic together with the proof: only what is understood is remembered for long."
      }
     }
    ]

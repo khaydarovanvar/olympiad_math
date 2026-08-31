@@ -194,7 +194,7 @@ window.LESSON_INDEX = [
    "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself."
   },
   "problems": 50,
-  "sections": 5
+  "sections": 7
  },
  {
   "n": 15,
@@ -208,7 +208,7 @@ window.LESSON_INDEX = [
    "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in."
   },
   "problems": 50,
-  "sections": 6
+  "sections": 8
  },
  {
   "n": 16,
@@ -222,6 +222,6 @@ window.LESSON_INDEX = [
    "en": "How a round works, how to spend the time and how to write a solution — plus four mock papers drawing on every topic."
   },
   "problems": 50,
-  "sections": 3
+  "sections": 5
  }
 ];
