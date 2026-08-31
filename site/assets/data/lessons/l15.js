@@ -778,6 +778,486 @@ window.LESSONS[15] = {
     "ru": "**Случай 1: все ученики попарно знакомы.** Тогда у каждого по $29$ знакомых, и утверждение очевидно.\n\n**Случай 2: есть двое незнакомых.** Пусть ученики $A$ и $B$ не знакомы.\n\nВозьмём любого третьего ученика $C$. По условию среди тройки $\\{A,B,C\\}$ найдутся двое знакомых. Знакомыми не могут быть $A$ и $B$, значит $C$ знаком с $A$ или с $B$ (возможно, с обоими).\n\nЗначит **каждый** из оставшихся $28$ учеников знаком хотя бы с одним из $A$, $B$.\n\nОбозначим через $x$ число знакомых у $A$ и через $y$ — у $B$. Каждый из $28$ учеников учтён хотя бы в одном из этих чисел, поэтому $$x+y\\ \\ge\\ 28 .$$\n\nПо принципу среднего одно из чисел $x$, $y$ не меньше $\\dfrac{28}{2}=14$. Если хотя бы одно из них не меньше $15$, утверждение доказано.\n\n**Остаётся случай $x=y=14$.** Тогда $x+y=28$, а значит **каждый** из $28$ учеников знаком ровно с одним из $A$, $B$ — если бы кто-то был знаком с обоими, сумма превысила бы $28$. Разобьём этих $28$ на две группы: $P$ — знакомые $A$ (их $14$) и $Q$ — знакомые $B$ (их $14$).\n\nВозьмём любого $p\\in P$ и любого $q\\in Q$. Рассмотрим тройку $\\{p,q,A\\}$: ученик $q$ не знаком с $A$ (иначе он попал бы и в $P$), поэтому знакомыми должны быть $p$ и $q$.\n\nЗначит **каждый** ученик из $P$ знаком с **каждым** из $Q$. Тогда у любого $p\\in P$ есть как минимум $14$ знакомых в $Q$ плюс сам $A$ — итого не менее $15$ знакомых.\n\n**Вывод.** В любом случае найдётся ученик, у которого не менее $15$ знакомых. $\\blacksquare$",
     "en": "**Case 1: everybody knows everybody.** Then each pupil has $29$ acquaintances and the claim is clear.\n\n**Case 2: two pupils are unacquainted.** Say $A$ and $B$ do not know each other.\n\nTake any third pupil $C$. By hypothesis two of $\\{A,B,C\\}$ are acquainted, and it cannot be $A$ and $B$, so $C$ knows $A$ or $B$ (possibly both).\n\nSo **every** one of the remaining $28$ pupils knows at least one of $A$, $B$.\n\nLet $x$ be the number of acquaintances of $A$ and $y$ that of $B$. Each of the $28$ is counted in at least one of these, so $$x+y\\ \\ge\\ 28 ,$$ and the averaging principle gives $\\max(x,y)\\ge14$. If one of them is at least $15$ we are done.\n\n**The remaining case is $x=y=14$.** Then $x+y=28$, so **each** of the $28$ knows exactly one of $A$, $B$ — anyone knowing both would push the sum above $28$. Split them into $P$, the acquaintances of $A$ ($14$ of them), and $Q$, those of $B$ ($14$ of them).\n\nTake any $p\\in P$ and any $q\\in Q$ and look at the triple $\\{p,q,A\\}$: the pupil $q$ does not know $A$ (else $q$ would be in $P$ too), so $p$ and $q$ must be acquainted.\n\nHence **every** pupil of $P$ knows **every** pupil of $Q$. So any $p\\in P$ has at least $14$ acquaintances in $Q$ plus $A$ himself — at least $15$ in all.\n\n**Conclusion.** In every case some pupil has at least $15$ acquaintances. $\\blacksquare$"
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что сумма двух чётных чисел чётна.",
+    "en": "Prove that the sum of two even numbers is even."
+   },
+   "hint": {
+    "ru": "Чётное число имеет вид $2k$.",
+    "en": "An even number has the form $2k$."
+   },
+   "sol": {
+    "ru": "Пусть числа чётные: $$a=2m,\\qquad b=2n ,$$ где $m$ и $n$ целые.\n\nТогда $$a+b=2m+2n=2(m+n),$$ и множитель $m+n$ целый. Значит сумма делится на $2$, то есть чётна. $\\blacksquare$\n\n**Заметьте**, как устроено доказательство: мы **записали** определение чётности, а не проверяли отдельные примеры. Одна такая выкладка заменяет бесконечный перебор.",
+    "en": "Let the numbers be even: $$a=2m,\\qquad b=2n $$ with $m$, $n$ integers.\n\nThen $$a+b=2m+2n=2(m+n),$$ and $m+n$ is an integer. So the sum is divisible by $2$, i.e. even. $\\blacksquare$\n\n**Note** the shape of the proof: we **wrote out** the definition rather than checking examples. One such line replaces an infinite search."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Запишите отрицание утверждения «каждый ученик сдал экзамен».",
+    "en": "Write the negation of \"every student passed the exam\"."
+   },
+   "hint": {
+    "ru": "Отрицание «для всех» — это «существует такой, что не…».",
+    "en": "The negation of \"for all\" is \"there exists one that does not…\"."
+   },
+   "sol": {
+    "ru": "Исходное утверждение имеет вид «для **каждого** ученика верно: он сдал».\n\nЕго отрицание — «**существует** ученик, для которого неверно, что он сдал», то есть $$\\textbf{«некоторый ученик не сдал экзамен»} .$$\n\n**Частая ошибка.** Отрицанием **не** является «ни один ученик не сдал» — это гораздо более сильное утверждение.\n\n**Схема.** $$\\neg\\bigl(\\forall x\\ P(x)\\bigr)\\ \\equiv\\ \\exists x\\ \\neg P(x) ,$$ $$\\neg\\bigl(\\exists x\\ P(x)\\bigr)\\ \\equiv\\ \\forall x\\ \\neg P(x) .$$",
+    "en": "The original says \"for **every** student: they passed\".\n\nIts negation is \"**there exists** a student for whom it is false that they passed\", i.e. $$\\textbf{\"some student did not pass the exam\"} .$$\n\n**A common mistake.** The negation is **not** \"no student passed\" — that is a far stronger claim.\n\n**The scheme.** $$\\neg\\bigl(\\forall x\\ P(x)\\bigr)\\ \\equiv\\ \\exists x\\ \\neg P(x) ,$$ $$\\neg\\bigl(\\exists x\\ P(x)\\bigr)\\ \\equiv\\ \\forall x\\ \\neg P(x) .$$"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Равносильны ли утверждения «если идёт дождь, то земля мокрая» и «если земля мокрая, то идёт дождь»?",
+    "en": "Are the statements \"if it rains, the ground is wet\" and \"if the ground is wet, it rains\" equivalent?"
+   },
+   "hint": {
+    "ru": "Второе — это обратное утверждение, а не противоположное.",
+    "en": "The second is the converse, not the contrapositive."
+   },
+   "sol": {
+    "ru": "Нет, не равносильны. Второе утверждение — **обратное** к первому, а обратное вовсе не обязано быть верным.\n\n**Контрпример.** Землю могли полить из шланга: земля мокрая, а дождя нет. Значит первое утверждение может быть истинным, а второе — ложным.\n\n**Что действительно равносильно первому** — это **противоположное к обратному** (контрапозиция): $$\\textbf{«если земля не мокрая, то дождя нет»} .$$\n\n**Схема.** $$\\left(P\\Rightarrow Q\\right)\\ \\equiv\\ \\left(\\neg Q\\Rightarrow\\neg P\\right),\\qquad\\text{но}\\qquad \\left(P\\Rightarrow Q\\right)\\ \\not\\equiv\\ \\left(Q\\Rightarrow P\\right).$$",
+    "en": "No. The second is the **converse** of the first, and a converse need not hold.\n\n**Counterexample.** Someone watered the ground with a hose: it is wet, yet there is no rain. So the first can be true while the second is false.\n\n**What really is equivalent to the first** is the **contrapositive**: $$\\textbf{\"if the ground is not wet, it is not raining\"} .$$\n\n**The scheme.** $$\\left(P\\Rightarrow Q\\right)\\ \\equiv\\ \\left(\\neg Q\\Rightarrow\\neg P\\right),\\qquad\\text{but}\\qquad \\left(P\\Rightarrow Q\\right)\\ \\not\\equiv\\ \\left(Q\\Rightarrow P\\right).$$"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что сумма чётного и нечётного числа нечётна.",
+    "en": "Prove that the sum of an even and an odd number is odd."
+   },
+   "hint": {
+    "ru": "Нечётное число имеет вид $2k+1$.",
+    "en": "An odd number has the form $2k+1$."
+   },
+   "sol": {
+    "ru": "Пусть $a=2m$ чётно, а $b=2n+1$ нечётно. Тогда $$a+b=2m+2n+1=2(m+n)+1 ,$$ а число вида $2k+1$ по определению нечётно. $\\blacksquare$\n\n**Полная таблица чётности сложения:** $$\\text{ч}+\\text{ч}=\\text{ч},\\qquad \\text{ч}+\\text{н}=\\text{н},\\qquad \\text{н}+\\text{н}=\\text{ч} .$$\n\n**Зачем это нужно.** Чётность — простейший **инвариант**: величина, которая не меняется (или меняется предсказуемо) при разрешённых операциях. Именно на ней держится большинство задач «докажите, что нельзя».",
+    "en": "Let $a=2m$ be even and $b=2n+1$ odd. Then $$a+b=2m+2n+1=2(m+n)+1 ,$$ and a number of the form $2k+1$ is odd by definition. $\\blacksquare$\n\n**The full parity table for addition:** $$\\text{even}+\\text{even}=\\text{even},\\qquad \\text{even}+\\text{odd}=\\text{odd},\\qquad \\text{odd}+\\text{odd}=\\text{even} .$$\n\n**Why it matters.** Parity is the simplest **invariant** — a quantity unchanged (or changed predictably) by the allowed moves. Most \"prove it is impossible\" problems rest on one."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите по индукции, что $1+2+\\dots+n=\\dfrac{n(n+1)}{2}$.",
+    "en": "Prove by induction that $1+2+\\dots+n=\\dfrac{n(n+1)}{2}$."
+   },
+   "hint": {
+    "ru": "База и переход.",
+    "en": "Base case and inductive step."
+   },
+   "sol": {
+    "ru": "**База $n=1$.** Слева $1$, справа $\\dfrac{1\\cdot2}{2}=1$ ✓\n\n**Переход.** Пусть формула верна для $n$. Тогда $$1+2+\\dots+n+(n+1)=\\frac{n(n+1)}{2}+(n+1).$$\n\nВынесем общий множитель $n+1$: $$(n+1)\\left(\\frac n2+1\\right)=(n+1)\\cdot\\frac{n+2}{2}=\\frac{(n+1)(n+2)}{2} ,$$ а это в точности формула при $n+1$ ✓\n\nПо принципу математической индукции формула верна при всех натуральных $n$. $\\blacksquare$\n\n**Из чего состоит индукция.** База (утверждение верно в начальной точке) и переход (из верности для $n$ следует верность для $n+1$). Пропуск любого из двух шагов делает доказательство недействительным.",
+    "en": "**Base $n=1$.** The left side is $1$, the right $\\dfrac{1\\cdot2}{2}=1$ ✓\n\n**Step.** Suppose the formula holds for $n$. Then $$1+2+\\dots+n+(n+1)=\\frac{n(n+1)}{2}+(n+1).$$\n\nTake out $n+1$: $$(n+1)\\left(\\frac n2+1\\right)=\\frac{(n+1)(n+2)}{2} ,$$ exactly the formula at $n+1$ ✓\n\nBy induction the formula holds for all positive integers. $\\blacksquare$\n\n**What induction consists of.** A base (the statement holds at the start) and a step (from $n$ to $n+1$). Skipping either invalidates the proof."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что если $n$ нечётно, то $n^{2}$ нечётно.",
+    "en": "Prove that if $n$ is odd then $n^{2}$ is odd."
+   },
+   "hint": {
+    "ru": "Подставьте $n=2k+1$.",
+    "en": "Substitute $n=2k+1$."
+   },
+   "sol": {
+    "ru": "Пусть $n=2k+1$. Тогда $$n^{2}=(2k+1)^{2}=4k^{2}+4k+1=2\\left(2k^{2}+2k\\right)+1 ,$$ то есть $n^{2}$ имеет вид «чётное плюс один» — нечётно. $\\blacksquare$\n\n**Контрапозиция.** Это же утверждение можно прочитать так: «если $n^{2}$ чётно, то $n$ чётно» — и именно в такой форме оно используется в доказательстве иррациональности $\\sqrt2$.",
+    "en": "Let $n=2k+1$. Then $$n^{2}=(2k+1)^{2}=4k^{2}+4k+1=2\\left(2k^{2}+2k\\right)+1 ,$$ so $n^{2}$ is \"even plus one\" — odd. $\\blacksquare$\n\n**Contrapositive.** The same statement reads: \"if $n^{2}$ is even then $n$ is even\" — and it is in this form that it is used to prove $\\sqrt2$ irrational."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите по индукции, что $6^{n}-1$ делится на $5$ при всех целых $n\\ge1$.",
+    "en": "Prove by induction that $6^{n}-1$ is divisible by $5$ for every integer $n\\ge1$."
+   },
+   "hint": {
+    "ru": "В переходе выделите $6^{n}-1$.",
+    "en": "In the step, isolate $6^{n}-1$."
+   },
+   "sol": {
+    "ru": "**База $n=1$.** $6-1=5$ делится на $5$ ✓\n\n**Переход.** Пусть $5\\mid6^{n}-1$. Тогда $$6^{\\,n+1}-1=6\\cdot6^{n}-1=6\\left(6^{n}-1\\right)+5 .$$\n\nПервое слагаемое делится на $5$ по предположению индукции, второе — очевидно. Значит и вся сумма делится на $5$ ✓\n\nПо индукции утверждение верно при всех $n\\ge1$. $\\blacksquare$\n\n**Тот же результат без индукции:** $$6^{n}-1=(6-1)\\left(6^{\\,n-1}+6^{\\,n-2}+\\dots+1\\right)=5\\cdot(\\dots) .$$\n\n**Полезно уметь и так, и так:** индукция работает всегда, а разложение на множители — быстрее, когда оно есть.",
+    "en": "**Base $n=1$.** $6-1=5$ is divisible by $5$ ✓\n\n**Step.** Suppose $5\\mid6^{n}-1$. Then $$6^{\\,n+1}-1=6\\cdot6^{n}-1=6\\left(6^{n}-1\\right)+5 .$$\n\nThe first term is divisible by $5$ by the induction hypothesis and the second obviously is, so the whole sum is ✓\n\nBy induction the claim holds for all $n\\ge1$. $\\blacksquare$\n\n**The same without induction:** $$6^{n}-1=(6-1)\\left(6^{\\,n-1}+\\dots+1\\right)=5\\cdot(\\dots) .$$\n\n**Both are worth knowing:** induction always works, while a factorisation is faster when one exists."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что $\\log_2 3$ — иррациональное число.",
+    "en": "Prove that $\\log_2 3$ is irrational."
+   },
+   "hint": {
+    "ru": "Предположите $\\log_2 3=\\frac pq$ и избавьтесь от логарифма.",
+    "en": "Assume $\\log_2 3=\\frac pq$ and clear the logarithm."
+   },
+   "sol": {
+    "ru": "Заметим сразу, что $\\log_2 3>0$ (ведь $3>1$).\n\n**Предположим противное:** $$\\log_2 3=\\frac pq $$ с натуральными $p$ и $q$.\n\nПо определению логарифма это означает $$2^{\\,p/q}=3\\quad\\Longleftrightarrow\\quad 2^{p}=3^{q} .$$\n\n**Противоречие.** Левая часть чётна (ведь $p\\ge1$), а правая нечётна как степень нечётного числа ✗\n\nМожно и иначе: по основной теореме арифметики разложение числа на простые единственно, а слева стоят только двойки, справа — только тройки; равенство невозможно при $p,q\\ge1$.\n\nЗначит $\\log_2 3$ иррационально. $\\blacksquare$\n\n**То же рассуждение** показывает, что $\\log_a b$ иррационален всегда, когда $a$ и $b$ — натуральные числа больше единицы с разными наборами простых делителей.",
+    "en": "Note first that $\\log_2 3>0$ (since $3>1$).\n\n**Suppose the contrary:** $$\\log_2 3=\\frac pq $$ with $p$, $q$ positive integers.\n\nBy the definition of the logarithm this means $$2^{\\,p/q}=3\\quad\\Longleftrightarrow\\quad 2^{p}=3^{q} .$$\n\n**Contradiction.** The left side is even (as $p\\ge1$) while the right is odd, being a power of an odd number ✗\n\nAlternatively: by unique factorisation the left side has only twos and the right only threes, so equality is impossible for $p,q\\ge1$.\n\nHence $\\log_2 3$ is irrational. $\\blacksquare$\n\n**The same argument** shows $\\log_a b$ is irrational whenever $a$ and $b$ are integers greater than one with different sets of prime divisors."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "На доске написаны числа $1,2,\\dots,10$. За один ход разрешается стереть два числа и написать их разность (в любом порядке). Может ли в конце остаться число $0$?",
+    "en": "The numbers $1,2,\\dots,10$ are on a board. A move erases two of them and writes their difference (in either order). Can the final number be $0$?"
+   },
+   "hint": {
+    "ru": "Следите за чётностью суммы всех чисел.",
+    "en": "Track the parity of the total sum."
+   },
+   "sol": {
+    "ru": "**Инвариант — чётность суммы.** Пусть на доске стёрли числа $a$ и $b$, а написали $a-b$. Сумма всех чисел изменилась на $$(a-b)-(a+b)=-2b ,$$ то есть на чётную величину. Значит **чётность суммы не меняется** ни при каком ходе.\n\n**Начальная сумма.** $$1+2+\\dots+10=\\frac{10\\cdot11}{2}=55 $$ — нечётна.\n\n**Вывод.** Сумма остаётся нечётной всё время, значит и последнее оставшееся число нечётно. А $0$ чётно ✗\n\n**Ответ:** нет, нельзя.\n\n**А что может остаться?** Любое нечётное число от $1$ до $55$ подходящей чётности — например, единицу получить легко: $2-1=1$, затем $4-3=1$ и так далее, а из полученных единиц собрать нужное.",
+    "en": "**The invariant is the parity of the sum.** If $a$ and $b$ are erased and $a-b$ written, the total changes by $$(a-b)-(a+b)=-2b ,$$ an even amount. So **the parity of the sum never changes**.\n\n**The initial sum.** $$1+2+\\dots+10=\\frac{10\\cdot11}{2}=55 $$ is odd.\n\n**Conclusion.** The sum stays odd throughout, so the last remaining number is odd. But $0$ is even ✗\n\n**Answer:** no, it is impossible.\n\n**What can remain?** Any odd number of the right size — for instance $1$ is easy: $2-1=1$, $4-3=1$, and so on."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Может ли конь обойти все клетки доски $5\\times5$, побывав в каждой ровно один раз, и вернуться в исходную клетку?",
+    "en": "Can a knight tour all squares of a $5\\times5$ board, visiting each exactly once, and return to the starting square?"
+   },
+   "hint": {
+    "ru": "Конь всегда меняет цвет клетки.",
+    "en": "A knight always changes the colour of its square."
+   },
+   "sol": {
+    "ru": "Покрасим доску $5\\times5$ в шахматном порядке, начиная с чёрного угла. Тогда чёрных клеток $13$, а белых $12$ (всего $25$).\n\n**Ключевое свойство коня.** Любой ход коня переводит его с клетки одного цвета на клетку другого цвета.\n\n**Замкнутый обход.** Он состоит из $25$ ходов (по одному на каждый переход, включая возвращение). Цвета вдоль обхода чередуются, значит после $25$ ходов — нечётного числа — конь окажется на клетке **другого** цвета, чем стартовая ✗\n\nНо он должен вернуться в исходную клетку того же цвета. Противоречие.\n\n**Ответ:** нельзя.\n\n**Другой способ увидеть то же.** В замкнутом обходе клетки двух цветов чередуются, значит их должно быть поровну; а у нас $13\\ne12$.\n\n**Замечание.** Незамкнутый обход доски $5\\times5$ существует — он обязан начинаться и заканчиваться на клетках «многочисленного» цвета.",
+    "en": "Colour the $5\\times5$ board like a chessboard, starting from a black corner. Then there are $13$ black and $12$ white squares.\n\n**The knight’s key property.** Every knight move changes the colour of the square.\n\n**A closed tour.** It consists of $25$ moves (one per step, including the return). The colours alternate along the tour, so after $25$ moves — an odd number — the knight stands on a square of the **opposite** colour to the start ✗\n\nBut it must return to the starting square, of the same colour. Contradiction.\n\n**Answer:** it is impossible.\n\n**Another way to see it.** In a closed tour the two colours alternate, so their counts must be equal; here $13\\ne12$.\n\n**Remark.** An open tour of the $5\\times5$ board does exist — it must begin and end on squares of the majority colour."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что в любой компании число людей, имеющих нечётное количество знакомых внутри компании, чётно.",
+    "en": "Prove that in any company the number of people having an odd number of acquaintances inside the company is even."
+   },
+   "hint": {
+    "ru": "Посчитайте сумму всех «количеств знакомых».",
+    "en": "Add up everybody’s number of acquaintances."
+   },
+   "sol": {
+    "ru": "Обозначим через $d_i$ число знакомых $i$-го человека и посчитаем сумму $$S=d_1+d_2+\\dots+d_n .$$\n\n**Ключевое наблюдение.** Каждое знакомство — это пара людей, и оно вносит в сумму ровно $2$ (по единице каждому из двоих). Значит $$S=2\\cdot(\\text{число знакомств}) $$ — **чётное** число.\n\n**Вывод.** В сумме $S$ чётные слагаемые чётности не портят, значит чётность $S$ совпадает с чётностью количества **нечётных** слагаемых. Раз $S$ чётно, нечётных слагаемых чётное число. $\\blacksquare$\n\n**Это «лемма о рукопожатиях».** Из неё, например, следует, что в компании не может быть ровно один человек с нечётным числом знакомых.\n\n**Следствие.** Если в стране каждый город соединён дорогами ровно с тремя другими, то городов чётное число: сумма степеней $3n$ должна быть чётной.",
+    "en": "Let $d_i$ be the number of acquaintances of person $i$ and consider $$S=d_1+d_2+\\dots+d_n .$$\n\n**Key observation.** Each acquaintance is a pair of people and contributes exactly $2$ to the sum (one to each). So $$S=2\\cdot(\\text{number of acquaintanceships}) $$ is **even**.\n\n**Conclusion.** Even summands do not affect parity, so the parity of $S$ equals the parity of the number of **odd** summands. As $S$ is even, that number is even. $\\blacksquare$\n\n**This is the handshake lemma.** It implies, for instance, that a company cannot contain exactly one person with an odd number of acquaintances.\n\n**Corollary.** If in a country every city is joined by roads to exactly three others, the number of cities is even: the degree sum $3n$ must be even."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что доску $6\\times6$ нельзя разрезать на прямоугольники $1\\times4$.",
+    "en": "Prove that a $6\\times6$ board cannot be cut into $1\\times4$ rectangles."
+   },
+   "hint": {
+    "ru": "Покрасьте клетку $(i,j)$ в цвет $(i+j)\\bmod 4$.",
+    "en": "Colour the cell $(i,j)$ with $(i+j)\\bmod 4$."
+   },
+   "sol": {
+    "ru": "Пронумеруем строки и столбцы числами $0,1,\\dots,5$ и покрасим клетку $(i,j)$ в цвет $$c(i,j)=(i+j)\\bmod 4 .$$\n\n**Что делает деталь $1\\times4$.** Горизонтальная деталь занимает клетки $(i,j),(i,j+1),(i,j+2),(i,j+3)$, их цвета — четыре подряд идущих остатка, то есть **все четыре цвета по одному разу**. То же верно и для вертикальной детали.\n\n**Считаем клетки каждого цвета.** В строке $i$ столбцы $j=0,\\dots,5$ дают цвета $$i,\\ i+1,\\ i+2,\\ i+3,\\ i,\\ i+1 \\pmod 4 ,$$ то есть цвета $i$ и $i+1$ встречаются дважды, а $i+2$ и $i+3$ — по одному разу.\n\nПросуммировав по всем шести строкам, получаем количества $$9,\\quad 10,\\quad 9,\\quad 8 $$ клеток цветов $0,1,2,3$ соответственно.\n\n**Противоречие.** Если бы разрезание существовало, деталей было бы $\\dfrac{36}{4}=9$, и каждая покрывала бы по одной клетке каждого цвета — значит всех цветов было бы ровно по $9$. Но у нас $10$ и $8$ ✗\n\n**Ответ:** разрезать нельзя. $\\blacksquare$\n\n**Сравните:** доску $4\\times4$ на такие детали разрезать можно, а $6\\times6$ — нет, хотя площадь и делится на $4$. Делимость площади необходима, но не достаточна.",
+    "en": "Number the rows and columns $0,1,\\dots,5$ and colour the cell $(i,j)$ with $$c(i,j)=(i+j)\\bmod 4 .$$\n\n**What a $1\\times4$ piece does.** A horizontal piece covers $(i,j),(i,j+1),(i,j+2),(i,j+3)$, whose colours are four consecutive residues — **all four colours once each**. The same holds for a vertical piece.\n\n**Count the cells of each colour.** In row $i$ the columns $j=0,\\dots,5$ give colours $$i,\\ i+1,\\ i+2,\\ i+3,\\ i,\\ i+1 \\pmod 4 ,$$ so colours $i$ and $i+1$ occur twice while $i+2$, $i+3$ occur once.\n\nSumming over the six rows gives $$9,\\quad 10,\\quad 9,\\quad 8 $$ cells of colours $0,1,2,3$.\n\n**Contradiction.** A tiling would use $\\dfrac{36}{4}=9$ pieces, each covering one cell of every colour — so every colour would appear exactly $9$ times. But we have $10$ and $8$ ✗\n\n**Answer:** no such cutting exists. $\\blacksquare$\n\n**Compare:** a $4\\times4$ board *can* be cut into such pieces, a $6\\times6$ cannot, even though the area is divisible by $4$. Divisibility of the area is necessary but not sufficient."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что если $a^{2}+b^{2}$ делится на $3$, то и $a$, и $b$ делятся на $3$.",
+    "en": "Prove that if $a^{2}+b^{2}$ is divisible by $3$ then both $a$ and $b$ are divisible by $3$."
+   },
+   "hint": {
+    "ru": "Какие остатки даёт квадрат по модулю $3$?",
+    "en": "What remainders can a square leave modulo $3$?"
+   },
+   "sol": {
+    "ru": "**Квадраты по модулю $3$.** Если $3\\mid a$, то $a^{2}\\equiv0$. Если $a\\equiv\\pm1$, то $a^{2}\\equiv1$. Значит $$a^{2}\\in\\{0,1\\}\\pmod 3 ,$$ и то же для $b^{2}$.\n\n**Разбор сумм.** Возможные значения $a^{2}+b^{2}$ по модулю $3$: $$0+0=0,\\qquad 0+1=1,\\qquad 1+0=1,\\qquad 1+1=2 .$$\n\nНоль получается **только** в первом случае, то есть когда $a^{2}\\equiv0$ и $b^{2}\\equiv0$, а это и означает $3\\mid a$ и $3\\mid b$. $\\blacksquare$\n\n**Следствие.** Уравнение $a^{2}+b^{2}=3c^{2}$ не имеет решений в натуральных числах: из доказанного $3\\mid a$ и $3\\mid b$, откуда после подстановки получается меньшее решение — бесконечный спуск.\n\n**Осторожно:** для модуля $5$ аналогичное утверждение неверно: $1^{2}+2^{2}=5$, но ни $1$, ни $2$ на $5$ не делятся.",
+    "en": "**Squares modulo $3$.** If $3\\mid a$ then $a^{2}\\equiv0$; if $a\\equiv\\pm1$ then $a^{2}\\equiv1$. So $$a^{2}\\in\\{0,1\\}\\pmod 3 ,$$ and likewise for $b^{2}$.\n\n**The possible sums.** Modulo $3$, $a^{2}+b^{2}$ can be $$0+0=0,\\qquad 0+1=1,\\qquad 1+0=1,\\qquad 1+1=2 .$$\n\nZero arises **only** in the first case, i.e. when $a^{2}\\equiv0$ and $b^{2}\\equiv0$, which means $3\\mid a$ and $3\\mid b$. $\\blacksquare$\n\n**Corollary.** The equation $a^{2}+b^{2}=3c^{2}$ has no positive solutions: the statement forces $3\\mid a$, $3\\mid b$, and substituting produces a smaller solution — infinite descent.\n\n**Careful:** the analogue for the modulus $5$ is false: $1^{2}+2^{2}=5$, yet neither $1$ nor $2$ is divisible by $5$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "На столе стоят семь стаканов вверх дном. За один ход разрешается перевернуть ровно два стакана. Можно ли поставить все стаканы правильно?",
+    "en": "Seven glasses stand upside down on a table. A move turns over exactly two glasses. Can all the glasses be made to stand upright?"
+   },
+   "hint": {
+    "ru": "Следите за чётностью числа перевёрнутых стаканов.",
+    "en": "Track the parity of the number of upside-down glasses."
+   },
+   "sol": {
+    "ru": "**Инвариант — чётность числа стаканов, стоящих вверх дном.** За один ход мы переворачиваем два стакана, и число «неправильных» меняется на $$+2,\\qquad 0\\qquad\\text{или}\\qquad -2 $$ (в зависимости от того, были ли перевёрнутые стаканы правильными, разными или неправильными).\n\nВо всех случаях изменение чётное, значит **чётность этого числа сохраняется**.\n\n**Начало и цель.** В начале неправильных стаканов $7$ — нечётное число. В цели их должно быть $0$ — чётное ✗\n\n**Ответ:** нельзя.\n\n**А если стаканов восемь?** Тогда всё получается: разбейте их на четыре пары и переверните каждую пару.\n\n**Общее правило:** задача разрешима ровно тогда, когда число перевёрнутых стаканов чётно.",
+    "en": "**The invariant is the parity of the number of upside-down glasses.** A move turns two glasses, so that count changes by $$+2,\\qquad 0\\qquad\\text{or}\\qquad -2 ,$$ depending on how the two were standing.\n\nIn every case the change is even, so **the parity is preserved**.\n\n**Start and goal.** Initially $7$ glasses are wrong — an odd number. The goal has $0$ — even ✗\n\n**Answer:** it is impossible.\n\n**What if there were eight glasses?** Then it works: split them into four pairs and flip each pair.\n\n**General rule:** the task is solvable exactly when the number of upside-down glasses is even."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите по индукции, что $n!>2^{n}$ при всех целых $n\\ge4$.",
+    "en": "Prove by induction that $n!>2^{n}$ for every integer $n\\ge4$."
+   },
+   "hint": {
+    "ru": "В переходе воспользуйтесь тем, что $n+1>2$.",
+    "en": "In the step use that $n+1>2$."
+   },
+   "sol": {
+    "ru": "**База $n=4$.** $$4!=24>16=2^{4} \\quad\\checkmark$$\n\n**Переход.** Пусть $n!>2^{n}$ для некоторого $n\\ge4$. Тогда $$(n+1)!=(n+1)\\cdot n!\\ >\\ (n+1)\\cdot2^{n} .$$\n\nТак как $n\\ge4$, имеем $n+1\\ge5>2$, поэтому $$(n+1)\\cdot2^{n}\\ >\\ 2\\cdot2^{n}=2^{\\,n+1} .$$\n\nЗначит $(n+1)!>2^{\\,n+1}$ ✓\n\nПо индукции неравенство верно при всех $n\\ge4$. $\\blacksquare$\n\n**Почему нельзя начать раньше.** При $n=1,2,3$ неравенство неверно: $1<2$, $2<4$, $6<8$. Именно поэтому база берётся при $n=4$.\n\n**Заодно видно**, насколько быстро факториал обгоняет показательную функцию: $10!=3\\,628\\,800$, а $2^{10}=1024$.",
+    "en": "**Base $n=4$.** $$4!=24>16=2^{4} \\quad\\checkmark$$\n\n**Step.** Suppose $n!>2^{n}$ for some $n\\ge4$. Then $$(n+1)!=(n+1)\\cdot n!\\ >\\ (n+1)\\cdot2^{n} .$$\n\nSince $n\\ge4$ we have $n+1\\ge5>2$, so $$(n+1)\\cdot2^{n}\\ >\\ 2\\cdot2^{n}=2^{\\,n+1} ,$$ giving $(n+1)!>2^{\\,n+1}$ ✓\n\nBy induction the inequality holds for all $n\\ge4$. $\\blacksquare$\n\n**Why not start earlier.** For $n=1,2,3$ it fails: $1<2$, $2<4$, $6<8$. That is exactly why the base is at $n=4$.\n\n**It also shows** how fast the factorial overtakes the exponential: $10!=3\\,628\\,800$ against $2^{10}=1024$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите от противного: если произведение двух целых чисел нечётно, то оба множителя нечётны.",
+    "en": "Prove by contradiction: if the product of two integers is odd, both factors are odd."
+   },
+   "hint": {
+    "ru": "Предположите, что хотя бы один множитель чётен.",
+    "en": "Suppose at least one factor is even."
+   },
+   "sol": {
+    "ru": "**Предположим противное:** хотя бы один множитель чётен, скажем $a=2k$.\n\nТогда $$ab=2kb=2(kb) ,$$ то есть произведение чётно — противоречие с условием ✗\n\nЗначит оба множителя нечётны. $\\blacksquare$\n\n**Заметьте:** отрицанием утверждения «оба нечётны» является «хотя бы один чётен» (а не «оба чётны»). Правильно построить отрицание — половина дела в доказательстве от противного.\n\n**Прямое доказательство** тоже возможно, через контрапозицию: если хотя бы один множитель чётен, то произведение чётно.",
+    "en": "**Suppose the contrary:** at least one factor is even, say $a=2k$.\n\nThen $$ab=2kb=2(kb) ,$$ so the product is even — contradicting the hypothesis ✗\n\nHence both factors are odd. $\\blacksquare$\n\n**Note:** the negation of \"both are odd\" is \"at least one is even\" (not \"both are even\"). Getting the negation right is half the work in a proof by contradiction.\n\n**A direct proof** is possible too, via the contrapositive: if at least one factor is even then the product is even."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что $\\sqrt2+\\sqrt3$ — иррациональное число.",
+    "en": "Prove that $\\sqrt2+\\sqrt3$ is irrational."
+   },
+   "hint": {
+    "ru": "Возведите в квадрат и сведите к иррациональности $\\sqrt6$.",
+    "en": "Square it and reduce to the irrationality of $\\sqrt6$."
+   },
+   "sol": {
+    "ru": "**Шаг 1: сведение.** Предположим противное: $$r=\\sqrt2+\\sqrt3 $$ рационально. Возведём в квадрат: $$r^{2}=2+2\\sqrt6+3=5+2\\sqrt6 ,$$ откуда $$\\sqrt6=\\frac{r^{2}-5}{2} .$$ Правая часть рациональна, значит и $\\sqrt6$ рационально.\n\n**Шаг 2: $\\sqrt6$ иррационально.** Предположим $$\\sqrt6=\\frac pq $$ — несократимая дробь. Тогда $$p^{2}=6q^{2} .$$\n\nЛевая часть делится на $2$, значит $p$ чётно (квадрат нечётного нечётен); положим $p=2m$: $$4m^{2}=6q^{2}\\quad\\Longrightarrow\\quad 2m^{2}=3q^{2} .$$\n\nТеперь левая часть чётна, значит $3q^{2}$ чётно, а поскольку $3$ нечётно, чётно $q^{2}$, а с ним и $q$.\n\nНо тогда $p$ и $q$ оба чётны — противоречие с несократимостью ✗\n\n**Вывод.** $\\sqrt6$ иррационально, значит и исходное предположение неверно: число $\\sqrt2+\\sqrt3$ иррационально. $\\blacksquare$\n\n**Замечание.** Само по себе «сумма двух иррациональных иррациональна» — **неверно**: $\\sqrt2+\\left(-\\sqrt2\\right)=0$. Поэтому нужен именно такой обходной путь.",
+    "en": "**Step 1: reduction.** Suppose $$r=\\sqrt2+\\sqrt3 $$ is rational. Squaring, $$r^{2}=2+2\\sqrt6+3=5+2\\sqrt6 ,$$ so $$\\sqrt6=\\frac{r^{2}-5}{2} ,$$ a rational number.\n\n**Step 2: $\\sqrt6$ is irrational.** Suppose $$\\sqrt6=\\frac pq $$ in lowest terms. Then $$p^{2}=6q^{2} .$$\n\nThe left side is even, so $p$ is even (an odd square is odd); write $p=2m$: $$4m^{2}=6q^{2}\\quad\\Longrightarrow\\quad 2m^{2}=3q^{2} .$$\n\nNow the left side is even, so $3q^{2}$ is even, and since $3$ is odd, $q^{2}$ is even and so is $q$.\n\nBut then $p$ and $q$ are both even, contradicting lowest terms ✗\n\n**Conclusion.** $\\sqrt6$ is irrational, so the original assumption fails: $\\sqrt2+\\sqrt3$ is irrational. $\\blacksquare$\n\n**Remark.** \"A sum of two irrationals is irrational\" is **false** in general: $\\sqrt2+\\left(-\\sqrt2\\right)=0$. Hence the detour above is genuinely needed."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Из доски $8\\times8$ вырезали две противоположные угловые клетки. Докажите, что оставшуюся фигуру нельзя замостить костями домино $1\\times2$.",
+    "en": "Two opposite corner squares are cut from an $8\\times8$ board. Prove that the rest cannot be tiled by $1\\times2$ dominoes."
+   },
+   "hint": {
+    "ru": "Противоположные углы одного цвета.",
+    "en": "Opposite corners have the same colour."
+   },
+   "sol": {
+    "ru": "Покрасим доску в шахматном порядке: $32$ белых и $32$ чёрных клетки.\n\n**Шаг 1: какого цвета вырезанные клетки.** Противоположные углы доски всегда одного цвета (скажем, оба чёрные). Значит после вырезания остаётся $$32\\ \\text{белых}\\qquad\\text{и}\\qquad 30\\ \\text{чёрных} $$ клеток.\n\n**Шаг 2: что покрывает домино.** Любая кость $1\\times2$ занимает две соседние по стороне клетки, а соседние клетки всегда разного цвета. Значит каждая кость покрывает ровно одну белую и одну чёрную клетку.\n\n**Шаг 3: противоречие.** Если бы замощение существовало, оно состояло бы из $\\dfrac{62}{2}=31$ кости и покрывало бы поровну белых и чёрных клеток — по $31$. Но белых $32$, а чёрных $30$ ✗\n\n**Ответ:** замостить нельзя. $\\blacksquare$\n\n**Сравните с обратным фактом:** если вырезать две клетки **разных** цветов, замощение всегда существует (это уже более трудная теорема).\n\n**Мораль.** Раскраска — самый частый способ строить инвариант в задачах о замощениях.",
+    "en": "Colour the board like a chessboard: $32$ white and $32$ black squares.\n\n**Step 1: the colour of the removed squares.** Opposite corners always share a colour (say both black). So what remains is $$32\\ \\text{white}\\qquad\\text{and}\\qquad 30\\ \\text{black} $$ squares.\n\n**Step 2: what a domino covers.** A $1\\times2$ domino occupies two side-adjacent squares, and adjacent squares always differ in colour. So each domino covers exactly one white and one black square.\n\n**Step 3: contradiction.** A tiling would consist of $\\dfrac{62}{2}=31$ dominoes covering $31$ squares of each colour. But there are $32$ white and $30$ black ✗\n\n**Answer:** no tiling exists. $\\blacksquare$\n\n**Compare with the converse fact:** removing two squares of **different** colours always leaves a tileable region (a harder theorem).\n\n**Moral.** Colouring is the commonest way to build an invariant in tiling problems."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что доску $2^{n}\\times2^{n}$ с одной вырезанной клеткой всегда можно замостить уголками из трёх клеток.",
+    "en": "Prove that a $2^{n}\\times2^{n}$ board with one square removed can always be tiled by L-shaped trominoes."
+   },
+   "hint": {
+    "ru": "Индукция: разрежьте доску на четыре четверти.",
+    "en": "Induct: split the board into four quarters."
+   },
+   "sol": {
+    "ru": "**База $n=1$.** Доска $2\\times2$ без одной клетки — это ровно уголок из трёх клеток ✓\n\n**Переход.** Пусть утверждение верно для доски $2^{n}\\times2^{n}$; докажем его для $2^{\\,n+1}\\times2^{\\,n+1}$.\n\nРазрежем большую доску на **четыре** квадранта размером $2^{n}\\times2^{n}$. Вырезанная клетка попала ровно в один из них.\n\n**Ключевой ход.** Положим один уголок в центр доски так, чтобы он занял по одной клетке в каждом из **трёх остальных** квадрантов (уголок как раз накрывает три из четырёх центральных клеток).\n\nТеперь в каждом квадранте ровно одна клетка «занята»: в первом — вырезанная, в остальных трёх — клетка, накрытая центральным уголком.\n\n**Применяем предположение индукции.** Каждый квадрант — это доска $2^{n}\\times2^{n}$ с одной недостающей клеткой, значит он замощается уголками ✓\n\nСобирая четыре замощения вместе с центральным уголком, получаем замощение всей доски. $\\blacksquare$\n\n**Проверка по площади:** $$\\frac{4^{n}-1}{3} $$ — целое число при любом $n$, ведь $4^{n}-1$ делится на $3$. Это необходимое условие, и индукция показывает, что оно ещё и достаточно.\n\n**Пример.** Доска $4\\times4$ без одной клетки замощается пятью уголками: $\\dfrac{16-1}{3}=5$ ✓",
+    "en": "**Base $n=1$.** A $2\\times2$ board minus one square *is* an L-tromino ✓\n\n**Step.** Assume the claim for $2^{n}\\times2^{n}$ and prove it for $2^{\\,n+1}\\times2^{\\,n+1}$.\n\nCut the big board into **four** quadrants of size $2^{n}\\times2^{n}$. The removed square lies in exactly one of them.\n\n**The key move.** Place one tromino at the centre so that it occupies one square in each of the **other three** quadrants (an L covers exactly three of the four central squares).\n\nNow every quadrant has exactly one occupied square: the removed one in the first, and the tromino’s square in the other three.\n\n**Apply the induction hypothesis.** Each quadrant is a $2^{n}\\times2^{n}$ board with one square missing, hence tileable ✓\n\nCombining the four tilings with the central tromino tiles the whole board. $\\blacksquare$\n\n**Area check:** $$\\frac{4^{n}-1}{3} $$ is an integer for every $n$, since $3\\mid4^{n}-1$. That is a necessary condition, and the induction shows it is sufficient too.\n\n**Example.** A $4\\times4$ board minus a square takes five trominoes: $\\dfrac{16-1}{3}=5$ ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "В турнире каждые двое сыграли ровно одну партию, ничьих не было. Докажите, что найдётся участник, который каждого из остальных либо обыграл сам, либо обыграл того, кто обыграл этого остальных (то есть победил его «в один или два хода»).",
+    "en": "In a tournament every two players met exactly once and there were no draws. Prove that some player beat every other player either directly or through one intermediate player."
+   },
+   "hint": {
+    "ru": "Возьмите участника с наибольшим числом побед.",
+    "en": "Take a player with the most wins."
+   },
+   "sol": {
+    "ru": "Возьмём участника $A$ с **наибольшим** числом побед (если таких несколько — любого из них). Докажем, что он и есть искомый.\n\n**Предположим противное:** найдётся участник $B$, которого $A$ не побеждает ни напрямую, ни через одного посредника. Это значит:\n\n$B$ обыграл $A$;\n\n$B$ обыграл **каждого**, кого обыграл $A$ (иначе нашёлся бы посредник).\n\n**Считаем победы $B$.** Он выиграл у всех, у кого выиграл $A$ — это $k$ побед, где $k$ — число побед $A$; и сверх того он выиграл у самого $A$. Значит у $B$ не менее $$k+1 $$ побед.\n\n**Противоречие.** Но $A$ был выбран как участник с наибольшим числом побед, то есть $k\\ge k+1$ ✗\n\nЗначит такого $B$ нет, и участник $A$ подходит. $\\blacksquare$\n\n**Такого участника называют «королём» турнира.** Королей может быть несколько, и король вовсе не обязан быть победителем турнира по числу очков — он лишь «достаёт» каждого не более чем за два шага.\n\n**Пример.** Если трое игроков победили друг друга по кругу, то каждый из них — король.",
+    "en": "Take a player $A$ with the **greatest** number of wins (any one, if several tie). We claim $A$ works.\n\n**Suppose not:** some player $B$ is beaten by $A$ neither directly nor through one intermediary. That means:\n\n$B$ beat $A$;\n\n$B$ beat **everyone** whom $A$ beat (otherwise there would be an intermediary).\n\n**Count $B$’s wins.** $B$ beat everyone $A$ beat — that is $k$ wins, where $k$ is $A$’s total — and in addition beat $A$ itself. So $B$ has at least $$k+1 $$ wins.\n\n**Contradiction.** But $A$ was chosen with the most wins, so $k\\ge k+1$ ✗\n\nHence no such $B$ exists and $A$ works. $\\blacksquare$\n\n**Such a player is called a \"king\".** There may be several kings, and a king need not be the tournament winner on points — it merely reaches everyone in at most two steps.\n\n**Example.** If three players beat one another cyclically, each of them is a king."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "В куче лежит $20$ камней. Двое по очереди берут $1$, $2$ или $3$ камня; берущий последний камень выигрывает. Кто выигрывает при правильной игре?",
+    "en": "A pile has $20$ stones. Two players alternately take $1$, $2$ or $3$ stones; whoever takes the last stone wins. Who wins with correct play?"
+   },
+   "hint": {
+    "ru": "Какие количества камней проигрышны для того, кто ходит?",
+    "en": "Which pile sizes are losing for the player to move?"
+   },
+   "sol": {
+    "ru": "**Идея: найти проигрышные позиции.** Назовём позицию **проигрышной**, если игрок, которому ходить, при правильной игре соперника проигрывает.\n\n**Утверждение:** проигрышны ровно те позиции, где число камней кратно $4$.\n\n**Доказательство индукцией по числу камней.**\n\nПозиция $0$ проигрышна: ходящему нечего брать, значит последний камень взял соперник ✓\n\nЕсли камней $4k$, то любой ход оставляет $4k-1$, $4k-2$ или $4k-3$ — ни одно из этих чисел не кратно четырём, то есть соперник получает выигрышную позицию.\n\nЕсли камней **не** кратно четырём, то, взяв остаток от деления на $4$ (это $1$, $2$ или $3$ камня), можно оставить сопернику кратное четырём число — то есть проигрышную позицию.\n\n**Применяем.** $20=4\\cdot5$ кратно четырём, значит начальная позиция **проигрышна для первого игрока**.\n\n**Ответ:** выигрывает второй.\n\n**Его стратегия.** Каждым своим ходом дополнять ход соперника до четырёх камней: взял тот $1$ — берём $3$, взял $2$ — берём $2$, взял $3$ — берём $1$. Тогда после каждой пары ходов из кучи уходит ровно $4$ камня, и второй игрок в итоге забирает последний. $\\blacksquare$\n\n**Обобщение.** В игре с кучей из $n$ камней и разрешёнными ходами $1,\\dots,k$ проигрышны ровно позиции, кратные $k+1$.",
+    "en": "**The idea: find the losing positions.** Call a position **losing** if the player to move loses against correct play.\n\n**Claim:** the losing positions are exactly those where the number of stones is a multiple of $4$.\n\n**Proof by induction on the pile size.**\n\nPosition $0$ is losing: there is nothing to take, so the opponent took the last stone ✓\n\nIf there are $4k$ stones, every move leaves $4k-1$, $4k-2$ or $4k-3$ — none a multiple of four, so the opponent gets a winning position.\n\nIf the number is **not** a multiple of four, taking its remainder mod $4$ (that is $1$, $2$ or $3$ stones) leaves the opponent a multiple of four — a losing position.\n\n**Apply it.** $20=4\\cdot5$ is a multiple of four, so the initial position is **losing for the first player**.\n\n**Answer:** the second player wins.\n\n**The strategy.** Always complete the opponent’s move to four stones: they take $1$, you take $3$; they take $2$, you take $2$; they take $3$, you take $1$. Each pair of moves removes exactly $4$ stones, and the second player takes the last one. $\\blacksquare$\n\n**Generalisation.** With moves $1,\\dots,k$ allowed, the losing positions are exactly the multiples of $k+1$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "В таблице $4\\times4$ расставлены числа $+1$ и $-1$. Разрешается менять знак у всех чисел любой строки или любого столбца. Докажите, что можно добиться того, чтобы сумма всех чисел таблицы стала неотрицательной.",
+    "en": "A $4\\times4$ table is filled with $+1$ and $-1$. One may flip the sign of every entry in a chosen row or column. Prove that one can make the total sum non-negative."
+   },
+   "hint": {
+    "ru": "Следите за общей суммой: она может только расти.",
+    "en": "Track the total sum: it can only increase."
+   },
+   "sol": {
+    "ru": "Обозначим через $S$ сумму всех $16$ чисел таблицы.\n\n**Монотонная величина.** Пусть у какой-то строки сумма её элементов равна $s<0$. Поменяв знаки в этой строке, мы заменим её вклад $s$ на $-s$, то есть общая сумма изменится на $$-s-s=-2s>0 .$$\n\nЗначит **каждая такая операция строго увеличивает $S$**. То же верно для столбца.\n\n**Процесс конечен.** Величина $S$ принимает лишь конечное число значений (это целые числа от $-16$ до $16$) и при каждой операции строго растёт. Значит операций можно сделать лишь конечное число, и процесс обязательно остановится.\n\n**Что означает остановка.** Останавливаемся мы ровно тогда, когда **ни у одной строки и ни у одного столбца сумма не отрицательна**.\n\n**Вывод.** В этот момент $$S=\\sum_{\\text{строки}}\\left(\\text{сумма строки}\\right)\\ \\ge\\ 0 ,$$ поскольку каждое слагаемое неотрицательно. $\\blacksquare$\n\n**Что здесь работает.** Это приём **монотонной величины** (монова́рианта): мы не описываем алгоритм явно, а лишь показываем, что «жадные» шаги не могут продолжаться вечно.\n\n**Замечание.** Тот же довод работает для любой таблицы $m\\times n$ с любыми вещественными числами — важна только конечность числа возможных значений суммы, которую даёт конечность числа расстановок знаков.",
+    "en": "Let $S$ be the sum of all $16$ entries.\n\n**A monotone quantity.** Suppose some row has entry-sum $s<0$. Flipping that row replaces its contribution $s$ by $-s$, so the total changes by $$-s-s=-2s>0 .$$\n\nSo **each such operation strictly increases $S$**. The same holds for a column.\n\n**The process is finite.** The value $S$ takes only finitely many values (integers from $-16$ to $16$) and strictly increases at each operation, so only finitely many operations are possible and the process must stop.\n\n**What stopping means.** We stop exactly when **no row and no column has a negative sum**.\n\n**Conclusion.** At that moment $$S=\\sum_{\\text{rows}}\\left(\\text{row sum}\\right)\\ \\ge\\ 0 ,$$ every summand being non-negative. $\\blacksquare$\n\n**The technique.** This is a **monovariant** argument: instead of describing an algorithm we merely show that greedy steps cannot go on forever.\n\n**Remark.** The same reasoning works for any $m\\times n$ table — all that matters is that there are finitely many sign patterns."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что каждое натуральное число представимо в двоичной системе счисления, и притом единственным образом.",
+    "en": "Prove that every positive integer has a binary representation, and that it is unique."
+   },
+   "hint": {
+    "ru": "Существование — сильная индукция; единственность — сравнение с суммой геометрической прогрессии.",
+    "en": "Existence: strong induction. Uniqueness: compare with a geometric sum."
+   },
+   "sol": {
+    "ru": "**Существование (сильная индукция).** Пусть утверждение верно для всех чисел, меньших $n$; докажем его для $n$.\n\nЕсли $n=1$, то $n=2^{0}$ ✓ Пусть $n\\ge2$ и $2^{k}$ — наибольшая степень двойки, не превосходящая $n$. Рассмотрим $$m=n-2^{k} .$$ По максимальности $2^{k}$ имеем $n<2^{\\,k+1}$, значит $$0\\le m=n-2^{k}<2^{\\,k+1}-2^{k}=2^{k} .$$\n\nЕсли $m=0$, то $n=2^{k}$ ✓ Иначе $m<n$, и по предположению индукции $m$ раскладывается в сумму различных степеней двойки, причём все они меньше $2^{k}$. Добавив $2^{k}$, получаем разложение для $n$ ✓\n\n**Единственность.** Предположим, что у числа два разных разложения в сумму различных степеней двойки. Выбросим общие слагаемые — останутся два **непустых** набора без общих элементов и с равными суммами (непустых, потому что иначе один из наборов был бы пуст, а его сумма — нулём, что невозможно при непустом втором).\n\nПусть $2^{k}$ — наибольшая степень, встречающаяся в первом наборе. Все элементы второго набора строго меньше $2^{k}$ (они отличны от $2^{k}$, а больших там быть не может — иначе взяли бы их), значит его сумма не превосходит $$2^{\\,k-1}+2^{\\,k-2}+\\dots+2^{0}=2^{k}-1\\ <\\ 2^{k} .$$\n\nНо сумма первого набора не меньше $2^{k}$ ✗\n\nПротиворечие завершает доказательство. $\\blacksquare$\n\n**Пример.** $$100=64+32+4=2^{6}+2^{5}+2^{2}\\ \\longrightarrow\\ 1100100_2 .$$\n\n**Ключевое неравенство** $2^{0}+\\dots+2^{\\,k-1}<2^{k}$ — то же самое, что делает двоичную запись «жадной»: старший разряд всегда важнее всех младших вместе взятых.",
+    "en": "**Existence (strong induction).** Assume the claim for all numbers below $n$ and prove it for $n$.\n\nIf $n=1$ then $n=2^{0}$ ✓ Let $n\\ge2$ and let $2^{k}$ be the largest power of two not exceeding $n$. Put $$m=n-2^{k} .$$ Maximality gives $n<2^{\\,k+1}$, so $$0\\le m<2^{\\,k+1}-2^{k}=2^{k} .$$\n\nIf $m=0$ then $n=2^{k}$ ✓ Otherwise $m<n$, and by the induction hypothesis $m$ is a sum of distinct powers of two, all below $2^{k}$. Adding $2^{k}$ gives a representation of $n$ ✓\n\n**Uniqueness.** Suppose a number has two different representations as sums of distinct powers of two. Discard the common terms — two **non-empty** sets with no common element and equal sums remain.\n\nLet $2^{k}$ be the largest power in the first set. Every element of the second set is strictly below $2^{k}$, so its sum is at most $$2^{\\,k-1}+\\dots+2^{0}=2^{k}-1\\ <\\ 2^{k} ,$$ while the first set sums to at least $2^{k}$ ✗\n\nThe contradiction finishes the proof. $\\blacksquare$\n\n**Example.** $$100=64+32+4=2^{6}+2^{5}+2^{2}\\ \\longrightarrow\\ 1100100_2 .$$\n\n**The key inequality** $2^{0}+\\dots+2^{\\,k-1}<2^{k}$ is exactly what makes binary greedy: the leading digit outweighs all the lower ones together."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что у любого выпуклого многогранника есть грань, у которой не более пяти сторон.",
+    "en": "Prove that every convex polyhedron has a face with at most five edges."
+   },
+   "hint": {
+    "ru": "Воспользуйтесь формулой Эйлера $V-E+F=2$ и подсчётом «грань — ребро».",
+    "en": "Use Euler’s formula $V-E+F=2$ and a face–edge count."
+   },
+   "sol": {
+    "ru": "**Предположим противное:** у каждой грани не менее шести сторон.\n\n**Подсчёт «грань — ребро».** Каждое ребро принадлежит ровно двум граням, поэтому $$2E=\\sum_{\\text{грани}}\\left(\\text{число сторон грани}\\right)\\ \\ge\\ 6F\\quad\\Longrightarrow\\quad F\\ \\le\\ \\frac E3 .$$\n\n**Подсчёт «вершина — ребро».** В каждой вершине выпуклого многогранника сходятся не менее трёх рёбер, а каждое ребро имеет два конца, значит $$2E\\ \\ge\\ 3V\\quad\\Longrightarrow\\quad V\\ \\le\\ \\frac{2E}{3} .$$\n\n**Формула Эйлера.** $$2=V-E+F\\ \\le\\ \\frac{2E}{3}-E+\\frac E3=E\\left(\\frac23-1+\\frac13\\right)=0 ,$$ то есть $2\\le0$ ✗\n\nПротиворечие показывает, что грань с не более чем пятью сторонами обязательно найдётся. $\\blacksquare$\n\n**Примеры «на грани».** У додекаэдра все грани пятиугольные — оценка достигается. У куба грани квадратные, у тетраэдра — треугольные.\n\n**Двойственное утверждение.** Точно так же доказывается, что есть вершина, в которой сходится не более пяти рёбер.\n\n**Зачем это нужно.** Именно этот факт лежит в основе доказательства того, что любую карту можно раскрасить в шесть (а на самом деле в четыре) цвета.",
+    "en": "**Suppose the contrary:** every face has at least six edges.\n\n**A face–edge count.** Each edge belongs to exactly two faces, so $$2E=\\sum_{\\text{faces}}\\left(\\text{edges of the face}\\right)\\ \\ge\\ 6F\\quad\\Longrightarrow\\quad F\\ \\le\\ \\frac E3 .$$\n\n**A vertex–edge count.** At every vertex of a convex polyhedron at least three edges meet, and each edge has two ends, so $$2E\\ \\ge\\ 3V\\quad\\Longrightarrow\\quad V\\ \\le\\ \\frac{2E}{3} .$$\n\n**Euler’s formula.** $$2=V-E+F\\ \\le\\ \\frac{2E}{3}-E+\\frac E3=0 ,$$ i.e. $2\\le0$ ✗\n\nThe contradiction shows that a face with at most five edges must exist. $\\blacksquare$\n\n**Sharp examples.** The dodecahedron has all faces pentagonal — the bound is attained. The cube has squares, the tetrahedron triangles.\n\n**The dual statement.** The same argument shows there is a vertex where at most five edges meet.\n\n**Why it matters.** This is precisely the fact behind the proof that any map can be coloured in six (in fact four) colours."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Числа $1,2,\\dots,2025$ выписаны на доске. За ход стирают два числа $a$ и $b$ и пишут $a+b$. Так делают, пока не останется одно число. Может ли оно быть чётным?",
+    "en": "The numbers $1,2,\\dots,2025$ are on a board. A move erases two numbers $a$, $b$ and writes $a+b$. This continues until one number remains. Can it be even?"
+   },
+   "hint": {
+    "ru": "Что происходит с суммой всех чисел на доске?",
+    "en": "What happens to the sum of all the numbers on the board?"
+   },
+   "sol": {
+    "ru": "**Инвариант — сумма всех чисел.** При замене $a$ и $b$ на $a+b$ сумма всех чисел на доске **не меняется вовсе**: мы убрали $a+b$ и добавили $a+b$.\n\n**Начальная сумма.** $$1+2+\\dots+2025=\\frac{2025\\cdot2026}{2}=2025\\cdot1013 .$$\n\nОба множителя нечётны, значит произведение нечётно.\n\n**Вывод.** Сумма всё время остаётся равной этому нечётному числу. Когда останется одно число, оно и будет этой суммой, то есть **нечётным**.\n\n**Ответ:** нет, чётным оно быть не может — последнее число обязательно равно $2025\\cdot1013=2\\,051\\,325$.\n\n**Сравните** с задачей, где вместо суммы пишут **разность**: там сохраняется лишь чётность суммы, и результат может быть любым числом нужной чётности. Полезно всегда спрашивать себя: сохраняется сама величина или только её остаток?",
+    "en": "**The invariant is the total sum.** Replacing $a$ and $b$ by $a+b$ leaves the total **completely unchanged**: we removed $a+b$ and added $a+b$.\n\n**The initial sum.** $$1+2+\\dots+2025=\\frac{2025\\cdot2026}{2}=2025\\cdot1013 .$$\n\nBoth factors are odd, so the product is odd.\n\n**Conclusion.** The total stays equal to that odd number throughout. When one number is left it *is* the total, hence **odd**.\n\n**Answer:** no — the final number is necessarily $2025\\cdot1013=2\\,051\\,325$.\n\n**Compare** with the variant where the **difference** is written: there only the parity of the sum is preserved, and the result can be any number of that parity. Always ask: is the quantity itself invariant, or only its residue?"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите формулу Эйлера $V-E+F=2$ для выпуклого многогранника (или, что то же самое, для связного плоского графа с учётом внешней области).",
+    "en": "Prove Euler’s formula $V-E+F=2$ for a convex polyhedron (equivalently, for a connected plane graph counting the outer region)."
+   },
+   "hint": {
+    "ru": "Спроецируйте многогранник на плоскость и ведите индукцию по числу рёбер.",
+    "en": "Project the polyhedron onto the plane and induct on the number of edges."
+   },
+   "sol": {
+    "ru": "**Шаг 1: сведение к плоскости.** Выберем точку внутри многогранника и спроецируем его поверхность на плоскость (или, что нагляднее, «раздуем» многогранник в сферу и проколем её в одной точке внутри какой-нибудь грани). Получится связный **плоский граф**: вершины и рёбра сохранятся, а грани превратятся в области плоскости, причём проколотая грань станет внешней бесконечной областью.\n\nТаким образом, $V$, $E$ и $F$ не изменились, и достаточно доказать формулу для связного плоского графа.\n\n**Шаг 2: индукция по числу рёбер.**\n\n**База:** у связного графа без циклов (дерева) $$E=V-1,\\qquad F=1 $$ (единственная область — внешняя), и $$V-E+F=V-(V-1)+1=2 \\quad\\checkmark$$\n\n**Переход.** Пусть в графе есть цикл. Возьмём любое ребро $e$, лежащее на цикле. Оно разделяет две **разные** области (внутреннюю и внешнюю по отношению к циклу). Удалим $e$:\n\nграф останется связным (концы $e$ по-прежнему соединены остатком цикла);\n\nчисло рёбер уменьшится на $1$;\n\nдве области сольются в одну, значит число граней уменьшится на $1$;\n\nчисло вершин не изменится.\n\nВыражение $V-E+F$ при этом не меняется: $$V-(E-1)+(F-1)=V-E+F .$$\n\nПовторяя удаления, доберёмся до дерева, для которого формула уже доказана. $\\blacksquare$\n\n**Проверка на примерах.** Куб: $8-12+6=2$ ✓ Тетраэдр: $4-6+4=2$ ✓ Додекаэдр: $20-30+12=2$ ✓\n\n**Где это работает и где нет.** Формула верна для многогранников, «похожих на сферу». Для тора (баранки) получается $V-E+F=0$ — число $2$ здесь не универсально, а отражает форму поверхности.",
+    "en": "**Step 1: reduce to the plane.** Pick a point inside the polyhedron and project its surface onto a plane (equivalently, inflate the polyhedron into a sphere and puncture it inside one face). The result is a connected **plane graph**: vertices and edges survive, faces become regions of the plane, and the punctured face becomes the outer infinite region.\n\nSo $V$, $E$, $F$ are unchanged and it suffices to prove the formula for a connected plane graph.\n\n**Step 2: induct on the number of edges.**\n\n**Base:** a connected acyclic graph (a tree) has $$E=V-1,\\qquad F=1 $$ (only the outer region), and $$V-E+F=V-(V-1)+1=2 \\quad\\checkmark$$\n\n**Step.** Suppose the graph has a cycle. Take an edge $e$ on that cycle. It separates two **different** regions (inside and outside the cycle). Delete $e$:\n\nthe graph stays connected (the ends of $e$ are still joined by the rest of the cycle);\n\nthe edge count drops by $1$;\n\nthe two regions merge, so the face count drops by $1$;\n\nthe vertex count is unchanged.\n\nThe expression $V-E+F$ is therefore unchanged: $$V-(E-1)+(F-1)=V-E+F .$$\n\nRepeating the deletions reaches a tree, where the formula is already proved. $\\blacksquare$\n\n**Examples.** Cube: $8-12+6=2$ ✓ Tetrahedron: $4-6+4=2$ ✓ Dodecahedron: $20-30+12=2$ ✓\n\n**Scope.** The formula holds for polyhedra \"shaped like a sphere\". For a torus one gets $V-E+F=0$ — the $2$ is not universal but reflects the shape of the surface."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что принцип математической индукции и принцип наименьшего числа (всякое непустое множество натуральных чисел имеет наименьший элемент) равносильны.",
+    "en": "Prove that the principle of mathematical induction and the least-number principle (every non-empty set of positive integers has a least element) are equivalent."
+   },
+   "hint": {
+    "ru": "В обе стороны рассуждайте от противного, рассматривая множество «плохих» чисел.",
+    "en": "In both directions argue by contradiction, looking at the set of \"bad\" numbers."
+   },
+   "sol": {
+    "ru": "**Из индукции следует принцип наименьшего числа.**\n\nПусть $M$ — непустое множество натуральных чисел, и предположим, что наименьшего элемента у него нет. Обозначим через $P(n)$ утверждение «ни одно из чисел $1,2,\\dots,n$ не лежит в $M$».\n\n$P(1)$ верно: иначе $1$ лежало бы в $M$ и было бы наименьшим.\n\nПусть верно $P(n)$. Если бы $n+1$ лежало в $M$, оно было бы наименьшим элементом (все меньшие не в $M$) — противоречие. Значит верно $P(n+1)$.\n\nПо индукции $P(n)$ верно при всех $n$, то есть $M$ не содержит **ни одного** натурального числа — противоречие с непустотой ✗\n\n**Из принципа наименьшего числа следует индукция.**\n\nПусть $P(1)$ верно и из $P(n)$ следует $P(n+1)$. Обозначим $$M=\\{n:\\ P(n)\\ \\text{ложно}\\} .$$\n\nЕсли $M$ непусто, у него есть наименьший элемент $m$. Так как $P(1)$ верно, $m\\ne1$, значит $m\\ge2$ и число $m-1$ натуральное. По минимальности $m$ утверждение $P(m-1)$ верно, а тогда по условию перехода верно и $P(m)$ — противоречие с $m\\in M$ ✗\n\nЗначит $M$ пусто, то есть $P(n)$ верно при всех $n$. $\\blacksquare$\n\n**Практический смысл.** Это объясняет, почему «спуск Ферма» (взять наименьшее решение и построить меньшее) и обычная индукция — по сути один и тот же инструмент, только повёрнутый разными сторонами.\n\n**Осторожно:** принцип наименьшего числа неверен для целых чисел (у множества всех целых нет наименьшего) и для положительных рациональных — именно дискретность натурального ряда делает его работоспособным.",
+    "en": "**Induction implies the least-number principle.**\n\nLet $M$ be a non-empty set of positive integers and suppose it has no least element. Let $P(n)$ be \"none of $1,2,\\dots,n$ lies in $M$\".\n\n$P(1)$ holds: otherwise $1$ would be in $M$ and would be least.\n\nSuppose $P(n)$ holds. If $n+1$ were in $M$ it would be the least element (all smaller numbers are outside) — a contradiction. So $P(n+1)$ holds.\n\nBy induction $P(n)$ holds for all $n$, so $M$ contains **no** positive integer — contradicting non-emptiness ✗\n\n**The least-number principle implies induction.**\n\nSuppose $P(1)$ holds and $P(n)$ implies $P(n+1)$. Let $$M=\\{n:\\ P(n)\\ \\text{is false}\\} .$$\n\nIf $M$ is non-empty it has a least element $m$. Since $P(1)$ holds, $m\\ne1$, so $m\\ge2$ and $m-1$ is a positive integer. By minimality $P(m-1)$ holds, and the inductive step then gives $P(m)$ — contradicting $m\\in M$ ✗\n\nSo $M$ is empty and $P(n)$ holds for all $n$. $\\blacksquare$\n\n**Practical meaning.** This explains why Fermat descent (take a least solution and build a smaller one) and ordinary induction are the same tool seen from two sides.\n\n**Careful:** the least-number principle fails for the integers (no least element) and for the positive rationals — it is the discreteness of the positive integers that makes it work."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Игра «ним»: несколько куч камней, за ход берут любое положительное число камней из одной кучи, берущий последний камень выигрывает. Докажите, что позиция проигрышна для того, кто ходит, тогда и только тогда, когда «исключающее ИЛИ» размеров куч (побитовая сумма по модулю $2$) равно нулю.",
+    "en": "The game of Nim: several piles of stones; a move takes any positive number of stones from one pile, and whoever takes the last stone wins. Prove that a position is losing for the player to move exactly when the bitwise XOR of the pile sizes is zero."
+   },
+   "hint": {
+    "ru": "Проверьте два свойства: из нулевой суммы любой ход выводит, а из ненулевой всегда можно попасть в нулевую.",
+    "en": "Check two properties: from XOR zero every move leaves it non-zero, and from non-zero one can always reach zero."
+   },
+   "sol": {
+    "ru": "Обозначим через $x_1,\\dots,x_k$ размеры куч, а через $$N=x_1\\oplus x_2\\oplus\\dots\\oplus x_k $$ их побитовую сумму по модулю $2$ («ним-сумму»).\n\n**Свойство 1: если $N=0$, то любой ход делает её ненулевой.**\n\nХод меняет одну кучу с $x_i$ на $y_i<x_i$. Новая ним-сумма равна $$N\\oplus x_i\\oplus y_i=0\\oplus x_i\\oplus y_i=x_i\\oplus y_i ,$$ и она равна нулю только при $x_i=y_i$, что запрещено (надо взять хотя бы один камень). Значит она ненулевая ✓\n\n**Свойство 2: если $N\\ne0$, то есть ход, делающий её нулевой.**\n\nПусть $2^{m}$ — старший разряд, в котором у $N$ стоит единица. Тогда хотя бы у одной кучи $x_i$ в этом разряде тоже единица (иначе единица в $N$ не появилась бы). Положим $$y_i=x_i\\oplus N .$$\n\nВ разряде $2^{m}$ у $x_i$ была единица, а у $N$ единица, значит у $y_i$ там ноль; в старших разрядах $N$ нулей, поэтому они не изменились. Следовательно $$y_i<x_i ,$$ то есть ход законен. При этом новая ним-сумма равна $$N\\oplus x_i\\oplus y_i=N\\oplus x_i\\oplus\\left(x_i\\oplus N\\right)=0 \\quad\\checkmark$$\n\n**Свойство 3: конечная позиция.** Позиция без камней имеет $N=0$ и проигрышна для того, кто ходит (он уже проиграл — камни забрал соперник) ✓\n\n**Вывод.** Позиции с $N=0$ проигрышны: из них любой ход ведёт в позицию с $N\\ne0$, откуда соперник вернёт вас в $N=0$ (свойство 2), и так до пустой позиции. Позиции с $N\\ne0$ выигрышны: одним ходом переводим соперника в $N=0$. $\\blacksquare$\n\n**Пример.** Кучи $3,4,5$: $$3\\oplus4\\oplus5=(011)\\oplus(100)\\oplus(101)=(010)=2\\ne0 ,$$ значит первый выигрывает. Правильный ход: заменить кучу $3$ на $3\\oplus2=1$, то есть взять из неё $2$ камня; останутся кучи $1,4,5$ с ним-суммой $0$.\n\n**Историческая справка.** Эту теорию построил Чарльз Бутон в $1901$ году; она стала отправной точкой всей комбинаторной теории игр.",
+    "en": "Write $x_1,\\dots,x_k$ for the pile sizes and $$N=x_1\\oplus x_2\\oplus\\dots\\oplus x_k $$ for their bitwise XOR (the \"Nim-sum\").\n\n**Property 1: if $N=0$, every move makes it non-zero.**\n\nA move changes one pile from $x_i$ to $y_i<x_i$. The new Nim-sum is $$N\\oplus x_i\\oplus y_i=x_i\\oplus y_i ,$$ which vanishes only if $x_i=y_i$ — forbidden, since at least one stone must be taken ✓\n\n**Property 2: if $N\\ne0$, some move makes it zero.**\n\nLet $2^{m}$ be the highest bit set in $N$. Then some pile $x_i$ also has that bit set (otherwise the bit could not appear in $N$). Put $$y_i=x_i\\oplus N .$$\n\nAt the bit $2^{m}$ both $x_i$ and $N$ have a one, so $y_i$ has a zero there; higher bits of $N$ are zero, so they are unchanged. Hence $$y_i<x_i ,$$ a legal move, and the new Nim-sum is $$N\\oplus x_i\\oplus\\left(x_i\\oplus N\\right)=0 \\quad\\checkmark$$\n\n**Property 3: the terminal position.** The empty position has $N=0$ and is losing for the player to move (the opponent took the last stone) ✓\n\n**Conclusion.** Positions with $N=0$ are losing: every move leaves $N\\ne0$, from which the opponent restores $N=0$ (Property 2), down to the empty position. Positions with $N\\ne0$ are winning: one move hands the opponent $N=0$. $\\blacksquare$\n\n**Example.** Piles $3,4,5$: $$3\\oplus4\\oplus5=(011)\\oplus(100)\\oplus(101)=(010)=2\\ne0 ,$$ so the first player wins. The correct move: change the pile $3$ into $3\\oplus2=1$, i.e. take $2$ stones; the piles $1,4,5$ have Nim-sum $0$.\n\n**Historical note.** Charles Bouton developed this theory in $1901$; it became the starting point of all combinatorial game theory."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Игра «шоколадка»: есть прямоугольник $m\\times n$ клеток, левая нижняя клетка «отравлена». За ход игрок выбирает клетку и съедает её вместе со всеми клетками правее и выше; съевший отравленную клетку проигрывает. Докажите, что при $m,n\\ge1$ и $(m,n)\\ne(1,1)$ у первого игрока есть выигрышная стратегия.",
+    "en": "The game of Chomp: an $m\\times n$ rectangle of cells, the bottom-left cell being poisoned. A move picks a cell and eats it together with all cells to the right and above; whoever eats the poisoned cell loses. Prove that for $m,n\\ge1$ with $(m,n)\\ne(1,1)$ the first player has a winning strategy."
+   },
+   "hint": {
+    "ru": "Приём «кражи стратегии»: посмотрите на ход, съедающий одну верхнюю правую клетку.",
+    "en": "Strategy stealing: consider the move that eats just the top-right cell."
+   },
+   "sol": {
+    "ru": "**Шаг 1: игра конечна и без ничьих.** Каждый ход строго уменьшает число клеток, значит партия обрывается. Ничьих нет: кто-то обязательно съест отравленную клетку. Значит по теореме Цермело у одного из игроков есть выигрышная стратегия.\n\n**Шаг 2: кража стратегии.** Предположим противное — выигрышная стратегия есть у **второго** игрока.\n\nРассмотрим ход первого игрока «съесть только правую верхнюю клетку». По предположению у второго есть выигрышный ответ; пусть это ход $H$, то есть выбор некоторой клетки.\n\n**Ключевое наблюдение.** Ход $H$, сделанный **из начальной позиции**, съедает все те же клетки, что и в описанном сценарии, **плюс, возможно, правую верхнюю клетку** — но её и так уже не было. Точнее: позиция после «съесть правую верхнюю, затем $H$» совпадает с позицией после одного хода $H$ из начальной позиции. (Ведь правая верхняя клетка либо съедается ходом $H$ сама, либо была съедена раньше.)\n\n**Шаг 3: противоречие.** Значит первый игрок мог **сразу** сделать ход $H$ и оказаться в той же позиции, которую по предположению выигрывает тот, чья очередь **не** ходить. То есть первый игрок получил бы выигрышную позицию — противоречие с тем, что выигрывает второй ✗\n\nЗначит выигрышная стратегия есть у первого игрока. $\\blacksquare$\n\n**Что мы НЕ узнали.** Доказательство **неконструктивно**: оно гарантирует существование выигрышной стратегии, но не даёт её. Для квадратной шоколадки $n\\times n$ первый ход известен (съесть клетку, соседнюю с отравленной по диагонали), а для общего прямоугольника выигрышная стратегия в явном виде не описана до сих пор.\n\n**Почему исключён случай $1\\times1$.** Там единственная клетка отравлена, и первый игрок обязан её съесть, то есть сразу проигрывает.",
+    "en": "**Step 1: the game is finite with no draws.** Every move strictly decreases the number of cells, so play terminates, and someone must eat the poisoned cell. By Zermelo’s theorem one of the players has a winning strategy.\n\n**Step 2: stealing the strategy.** Suppose, for contradiction, that the **second** player has one.\n\nConsider the first player’s move \"eat only the top-right cell\". By assumption the second player has a winning reply; call it $H$, the choice of some cell.\n\n**Key observation.** The move $H$ played **from the initial position** eats exactly the same cells as in that scenario, possibly together with the top-right cell — which was gone anyway. Precisely: the position after \"eat the top-right cell, then $H$\" coincides with the position after the single move $H$ from the start.\n\n**Step 3: contradiction.** So the first player could have played $H$ **immediately** and reached a position that, by assumption, is winning for the player **not** to move. That makes the position winning for the first player — contradicting that the second player wins ✗\n\nHence the first player has a winning strategy. $\\blacksquare$\n\n**What we did NOT learn.** The proof is **non-constructive**: it guarantees a winning strategy without exhibiting one. For a square $n\\times n$ bar the first move is known (eat the cell diagonally adjacent to the poison), but for a general rectangle no explicit winning strategy is known to this day.\n\n**Why $1\\times1$ is excluded.** There the only cell is poisoned and the first player must eat it, losing at once."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "В «пятнашках» фишки $1,\\dots,15$ стоят в коробке $4\\times4$ по порядку, а правый нижний угол пуст. Докажите, что из позиции, отличающейся от исходной лишь тем, что фишки $14$ и $15$ поменяны местами, вернуться к исходной невозможно.",
+    "en": "In the 15-puzzle the tiles $1,\\dots,15$ sit in a $4\\times4$ box in order, with the bottom-right corner empty. Prove that from the position differing only by swapping the tiles $14$ and $15$ it is impossible to reach the ordered one."
+   },
+   "hint": {
+    "ru": "Следите за суммой: чётность перестановки плюс номер строки пустой клетки.",
+    "en": "Track the sum: the parity of the permutation plus the row of the empty cell."
+   },
+   "sol": {
+    "ru": "**Инвариант.** Каждой позиции сопоставим число $$J=\\varepsilon+d ,$$ где $\\varepsilon$ — чётность перестановки шестнадцати позиций (пустую клетку считаем шестнадцатой «фишкой»), а $d$ — расстояние по клеткам от пустой клетки до её «домашнего» правого нижнего угла (сумма разностей координат). Утверждаем: **чётность $J$ не меняется ни при каком ходе**.\n\n**Почему.** Любой ход меняет местами пустую клетку и соседнюю фишку. Как перестановка это ровно одна **транспозиция**, поэтому $\\varepsilon$ меняется на $1$. Одновременно пустая клетка сдвигается в соседнюю клетку, значит её расстояние $d$ до угла меняется ровно на $1$.\n\nОба слагаемых меняются на единицу, значит их сумма меняется на $2$ или на $0$ — в любом случае чётность $J$ сохраняется ✓\n\n**Применяем.** В исходной позиции $\\varepsilon=0$ (тождественная перестановка) и $d=0$, значит $J$ чётно.\n\nВ позиции с переставленными $14$ и $15$ пустая клетка на месте, значит $d=0$, а перестановка отличается от тождественной ровно одной транспозицией, значит $\\varepsilon=1$ и $J$ нечётно.\n\n**Вывод.** Чётности $J$ у двух позиций разные, а ходы её сохраняют. Значит одна позиция из другой недостижима. $\\blacksquare$\n\n**Следствие.** Ровно половина из $16!$ расстановок достижима из исходной; вторая половина образует «параллельный мир».\n\n**История.** Сэм Лойд в $1880$-х объявил награду в $1000$ долларов за решение именно этой позиции — награда была абсолютно безопасна.",
+    "en": "**The invariant.** To each position attach $$J=\\varepsilon+d ,$$ where $\\varepsilon$ is the parity of the permutation of the sixteen positions (treating the empty cell as a sixteenth tile), and $d$ is the taxicab distance from the empty cell to its home square in the bottom-right corner. We claim **the parity of $J$ never changes**.\n\n**Why.** Every move swaps the empty cell with a neighbouring tile. As a permutation this is exactly one **transposition**, so $\\varepsilon$ changes by $1$. At the same time the empty cell moves to an adjacent square, so its taxicab distance $d$ to the corner changes by exactly $1$.\n\nBoth terms change by $1$, hence their sum changes by $2$ or $0$ — in either case the parity of $J$ is preserved ✓\n\n**Applying it.** In the ordered position $\\varepsilon=0$ (the identity permutation) and $d=0$, so $J$ is even.\n\nIn the position with $14$ and $15$ swapped the empty cell is at home, so $d=0$, while the permutation differs from the identity by a single transposition, so $\\varepsilon=1$ and $J$ is odd.\n\n**Conclusion.** The two positions have different parities of $J$, and moves preserve it. So neither is reachable from the other. $\\blacksquare$\n\n**Corollary.** Exactly half of the $16!$ arrangements are reachable from the ordered one; the other half form a \"parallel world\".\n\n**History.** In the 1880s Sam Loyd offered a $1000$-dollar prize for solving precisely this position — an entirely safe offer."
+   }
   }
  ]
 };

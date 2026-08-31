@@ -207,7 +207,7 @@ window.LESSON_INDEX = [
    "ru": "Отрицание и импликация, доказательство от противного, индукция, инварианты и раскраски — язык, на котором пишут решения.",
    "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 6
  },
  {
