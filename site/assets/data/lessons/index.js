@@ -41,5 +41,33 @@ window.LESSON_INDEX = [
   },
   "problems": 20,
   "sections": 4
+ },
+ {
+  "n": 4,
+  "cat": "nt",
+  "title": {
+   "ru": "Диофантовы уравнения",
+   "en": "Diophantine equations"
+  },
+  "sub": {
+   "ru": "Уравнения, у которых ответ обязан быть целым: линейный случай, разложение на множители, оценки, остатки и бесконечный спуск.",
+   "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent."
+  },
+  "problems": 20,
+  "sections": 6
+ },
+ {
+  "n": 5,
+  "cat": "alg",
+  "title": {
+   "ru": "Тождества и разложение на множители",
+   "en": "Identities and factoring"
+  },
+  "sub": {
+   "ru": "Формулы сокращённого умножения, группировка, симметричные суммы и теорема Безу — инструменты, которые превращают выражение в произведение.",
+   "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product."
+  },
+  "problems": 20,
+  "sections": 6
  }
 ];
