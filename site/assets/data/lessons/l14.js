@@ -706,6 +706,486 @@ window.LESSONS[14] = {
     "ru": "**Проекции.** Спроецируем все круги на нижнюю сторону квадрата (то есть на отрезок длины $1$). Проекция круга диаметра $d$ — это отрезок длины ровно $d$.\n\nЕсли длина граничной окружности круга равна $c$, то его диаметр равен $d=\\dfrac{c}{\\pi}$. Значит суммарная длина всех проекций равна $$\\sum d_i=\\frac{1}{\\pi}\\sum c_i=\\frac{10}{\\pi}.$$\n\n**Оценка.** $\\pi<3{,}15$, поэтому $$\\frac{10}{\\pi}>\\frac{10}{3{,}15}>3{,}17>3 .$$ Итак, суммарная длина проекций строго больше $3$.\n\n**Рассуждение о среднем.** Все проекции лежат внутри отрезка длины $1$. Пусть $f(t)$ — количество проекций, покрывающих точку $t$ этого отрезка. Тогда $$\\int_0^1 f(t)\\,dt=\\sum d_i>3 ,$$ потому что интеграл по отрезку от «кратности покрытия» равен сумме длин покрывающих отрезков.\n\nЕсли бы во всех точках было $f(t)\\le3$, то интеграл не превзошёл бы $3\\cdot1=3$. Значит найдётся точка $t_0$, в которой $f\\left(t_0\\right)\\ge4$.\n\n*Без интеграла.* То же можно сказать так: если каждая точка отрезка покрыта не более чем тремя проекциями, то суммарная длина проекций не больше $3$ (каждая из трёх «слоёв» покрытия имеет длину не больше $1$). Раз суммарная длина больше $3$, какая-то точка покрыта хотя бы четырьмя проекциями.\n\n**Заключение.** Проведём через точку $t_0$ прямую, перпендикулярную стороне, на которую мы проецировали. Она пересекает каждый круг, чья проекция накрывает $t_0$, — а таких кругов не менее четырёх. $\\blacksquare$\n\n*Замечание.* Это типичное «рассуждение о среднем»: мы не указали прямую явно, но доказали, что она существует, сравнив суммарную длину с длиной отрезка.",
     "en": "**Projections.** Project every disc onto the bottom side of the square, a segment of length $1$. The projection of a disc of diameter $d$ is a segment of length exactly $d$.\n\nIf the boundary circle has length $c$ then the diameter is $d=\\dfrac{c}{\\pi}$, so the total length of the projections is $$\\sum d_i=\\frac{1}{\\pi}\\sum c_i=\\frac{10}{\\pi}.$$\n\n**A bound.** Since $\\pi<3.15$, $$\\frac{10}{\\pi}>\\frac{10}{3.15}>3.17>3 .$$ So the projections have total length strictly greater than $3$.\n\n**The averaging argument.** All the projections lie inside a segment of length $1$. Let $f(t)$ be the number of projections covering the point $t$. Then $$\\int_0^1 f(t)\\,dt=\\sum d_i>3 ,$$ since integrating the covering multiplicity gives the total length of the covering segments.\n\nIf $f(t)\\le3$ everywhere, the integral would be at most $3\\cdot1=3$. So there is a point $t_0$ with $f\\left(t_0\\right)\\ge4$.\n\n*Without integration.* The same in words: if every point of the segment were covered by at most three projections, the total length of the projections would be at most $3$ (each of the three \"layers\" has length at most $1$). As the total exceeds $3$, some point is covered by at least four.\n\n**Conclusion.** Draw through $t_0$ the line perpendicular to the side we projected onto. It meets every disc whose projection covers $t_0$ — and there are at least four of them. $\\blacksquare$\n\n*Remark.* This is a typical averaging argument: the line is never exhibited, but its existence follows from comparing a total length with the length of the segment."
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что среди любых $13$ человек найдутся двое, родившихся в один и тот же месяц.",
+    "en": "Prove that among any $13$ people two were born in the same month."
+   },
+   "hint": {
+    "ru": "Месяцев двенадцать.",
+    "en": "There are twelve months."
+   },
+   "sol": {
+    "ru": "«Клетки» — это $12$ месяцев, «зайцы» — $13$ человек.\n\nЕсли бы все родились в разные месяцы, людей было бы не больше $12$ — противоречие с тем, что их $13$.\n\nЗначит какие-то двое родились в один месяц. $\\blacksquare$\n\n**Принцип Дирихле:** если $n+1$ предметов разложить по $n$ ящикам, то в каком-то ящике окажется не менее двух предметов.",
+    "en": "The \"boxes\" are the $12$ months and the \"objects\" are the $13$ people.\n\nIf all were born in different months there would be at most $12$ people — contradicting that there are $13$.\n\nSo two share a birth month. $\\blacksquare$\n\n**The pigeonhole principle:** if $n+1$ objects are placed in $n$ boxes, some box holds at least two."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "В ящике лежат носки трёх цветов. Сколько носков надо вытащить не глядя, чтобы наверняка получить пару одного цвета?",
+    "en": "A drawer contains socks of three colours. How many must be drawn blindly to be sure of a matching pair?"
+   },
+   "hint": {
+    "ru": "Три носка могут оказаться разных цветов.",
+    "en": "Three socks could be three different colours."
+   },
+   "sol": {
+    "ru": "**Трёх носков мало:** они могут оказаться трёх разных цветов.\n\n**Четырёх хватает:** цветов всего три, значит среди четырёх носков какие-то два одного цвета (принцип Дирихле).\n\n**Ответ:** $4$.\n\n**Обобщение:** при $k$ цветах достаточно $k+1$ носка.",
+    "en": "**Three is not enough:** they could be three different colours.\n\n**Four suffices:** there are only three colours, so among four socks two share a colour (pigeonhole).\n\n**Answer:** $4$.\n\n**Generalisation:** with $k$ colours, $k+1$ socks suffice."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "В квадрате со стороной $1$ отмечены пять точек. Докажите, что какие-то две из них удалены друг от друга не более чем на $\\dfrac{\\sqrt2}{2}$.",
+    "en": "Five points are marked in a unit square. Prove that two of them are at distance at most $\\dfrac{\\sqrt2}{2}$."
+   },
+   "hint": {
+    "ru": "Разрежьте квадрат на четыре части.",
+    "en": "Cut the square into four pieces."
+   },
+   "sol": {
+    "ru": "Разрежем квадрат на четыре маленьких квадрата со стороной $\\tfrac12$.\n\nТочек пять, квадратиков четыре, значит по принципу Дирихле в какой-то квадратик попали хотя бы две точки (точку на границе относим к любому из соседних квадратиков).\n\nДва любых расстояния внутри квадрата со стороной $\\tfrac12$ не превосходят его диагонали: $$\\sqrt{\\left(\\tfrac12\\right)^{2}+\\left(\\tfrac12\\right)^{2}}=\\frac{\\sqrt2}{2} . \\qquad\\blacksquare$$\n\n**Оценка точна:** для четырёх вершин квадрата и его центра минимальное расстояние как раз равно $\\tfrac{\\sqrt2}{2}$.",
+    "en": "Cut the square into four small squares of side $\\tfrac12$.\n\nThere are five points and four small squares, so by the pigeonhole principle some small square contains at least two points (a point on a boundary may be assigned to either neighbour).\n\nAny two points inside a square of side $\\tfrac12$ are at most its diagonal apart: $$\\sqrt{\\left(\\tfrac12\\right)^{2}+\\left(\\tfrac12\\right)^{2}}=\\frac{\\sqrt2}{2} . \\qquad\\blacksquare$$\n\n**The bound is sharp:** for the four corners plus the centre the minimum distance is exactly $\\tfrac{\\sqrt2}{2}$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Докажите, что среди любых трёх целых чисел найдутся два одинаковой чётности.",
+    "en": "Prove that among any three integers two have the same parity."
+   },
+   "hint": {
+    "ru": "Чётностей всего две.",
+    "en": "There are only two parities."
+   },
+   "sol": {
+    "ru": "Каждое целое число либо чётно, либо нечётно — это две «клетки». Чисел три.\n\nПо принципу Дирихле какие-то два попадут в одну клетку, то есть будут одинаковой чётности. $\\blacksquare$\n\n**Следствие.** Разность этих двух чисел чётна. Значит **среди любых трёх целых чисел найдутся два с чётной разностью**.",
+    "en": "Every integer is either even or odd — two \"boxes\", and there are three numbers.\n\nBy the pigeonhole principle two land in the same box, i.e. share a parity. $\\blacksquare$\n\n**Corollary.** Their difference is even. So **among any three integers two have an even difference**."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "В классе $25$ учеников. Докажите, что четверо из них родились в один и тот же день недели.",
+    "en": "A class has $25$ pupils. Prove that four of them were born on the same day of the week."
+   },
+   "hint": {
+    "ru": "Что если в каждый день недели родилось не больше троих?",
+    "en": "What if at most three were born on each day?"
+   },
+   "sol": {
+    "ru": "Предположим противное: на каждый из семи дней недели приходится не более трёх учеников.\n\nТогда всего учеников было бы не больше $$7\\cdot3=21<25 ,$$ что неверно ✗\n\nЗначит какой-то день недели «набрал» хотя бы четверых. $\\blacksquare$\n\n**Обобщённый принцип Дирихле:** если $N$ предметов разложены по $n$ ящикам, то в каком-то ящике не менее $\\left\\lceil\\dfrac Nn\\right\\rceil$ предметов; здесь $\\left\\lceil\\tfrac{25}{7}\\right\\rceil=4$.",
+    "en": "Suppose not: each of the seven days accounts for at most three pupils.\n\nThen there would be at most $$7\\cdot3=21<25 $$ pupils — false ✗\n\nSo some day of the week collects at least four. $\\blacksquare$\n\n**Generalised pigeonhole:** if $N$ objects go into $n$ boxes, some box holds at least $\\left\\lceil\\dfrac Nn\\right\\rceil$ of them; here $\\left\\lceil\\tfrac{25}{7}\\right\\rceil=4$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Десять шаров разложили по трём ящикам. Докажите, что в каком-то ящике не менее четырёх шаров.",
+    "en": "Ten balls are put into three boxes. Prove that some box holds at least four."
+   },
+   "hint": {
+    "ru": "Что будет, если в каждом ящике не больше трёх?",
+    "en": "What if every box holds at most three?"
+   },
+   "sol": {
+    "ru": "Если бы в каждом ящике было не более трёх шаров, всего шаров оказалось бы не больше $$3\\cdot3=9<10 \\quad ✗$$\n\nЗначит в каком-то ящике не менее четырёх. $\\blacksquare$\n\n**Точность оценки:** больше утверждать нельзя — раскладка $4+3+3$ показывает, что ящика с пятью шарами может и не быть.",
+    "en": "If every box held at most three balls, there would be at most $$3\\cdot3=9<10 \\quad ✗$$\n\nSo some box holds at least four. $\\blacksquare$\n\n**Sharpness:** nothing stronger is true — the split $4+3+3$ shows there need be no box with five."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что среди любых пяти целых чисел найдутся два, разность которых делится на $4$.",
+    "en": "Prove that among any five integers two have a difference divisible by $4$."
+   },
+   "hint": {
+    "ru": "Остатков по модулю $4$ всего четыре.",
+    "en": "There are only four residues modulo $4$."
+   },
+   "sol": {
+    "ru": "При делении на $4$ бывает четыре остатка: $0,1,2,3$ — это наши «клетки». Чисел пять.\n\nПо принципу Дирихле какие-то два числа дают один и тот же остаток, скажем $$a=4q_1+r,\\qquad b=4q_2+r .$$\n\nТогда $$a-b=4\\left(q_1-q_2\\right) $$ делится на $4$. $\\blacksquare$\n\n**Общее правило:** среди любых $n+1$ целых чисел найдутся два с разностью, кратной $n$.",
+    "en": "Division by $4$ leaves one of four remainders $0,1,2,3$ — our boxes. There are five numbers.\n\nBy the pigeonhole principle two share a remainder, say $$a=4q_1+r,\\qquad b=4q_2+r .$$\n\nThen $$a-b=4\\left(q_1-q_2\\right) $$ is divisible by $4$. $\\blacksquare$\n\n**General rule:** among any $n+1$ integers two have a difference divisible by $n$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что среди любых семи различных целых чисел найдутся два, сумма или разность которых делится на $10$.",
+    "en": "Prove that among any seven distinct integers two have a sum or a difference divisible by $10$."
+   },
+   "hint": {
+    "ru": "Объедините остатки в пары $\\{r,10-r\\}$.",
+    "en": "Group the residues into pairs $\\{r,10-r\\}$."
+   },
+   "sol": {
+    "ru": "Разобьём остатки по модулю $10$ на группы, объединяя $r$ и $10-r$: $$\\{0\\},\\quad\\{1,9\\},\\quad\\{2,8\\},\\quad\\{3,7\\},\\quad\\{4,6\\},\\quad\\{5\\} .$$\n\nГрупп ровно **шесть**, а чисел семь, значит какие-то два числа попали в одну группу.\n\n**Разбор.** Если их остатки равны ($r$ и $r$), разность делится на $10$. Если остатки разные ($r$ и $10-r$), сумма даёт остаток $$r+(10-r)=10\\equiv0\\pmod{10} ,$$ то есть делится на $10$. $\\blacksquare$\n\n**Точность.** Шести чисел не хватает: например, у чисел $0,1,2,3,4,5$ никакие два не дают ни суммы, ни разности, кратной $10$.",
+    "en": "Split the residues modulo $10$ into groups, pairing $r$ with $10-r$: $$\\{0\\},\\quad\\{1,9\\},\\quad\\{2,8\\},\\quad\\{3,7\\},\\quad\\{4,6\\},\\quad\\{5\\} .$$\n\nThere are exactly **six** groups and seven numbers, so two numbers land in one group.\n\n**Two cases.** If their residues are equal, the difference is divisible by $10$. If the residues are $r$ and $10-r$, the sum is $\\equiv0\\pmod{10}$. $\\blacksquare$\n\n**Sharpness.** Six numbers are not enough: for $0,1,2,3,4,5$ no two give a sum or difference divisible by $10$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "В прямоугольнике $3\\times4$ отмечены $13$ точек. Докажите, что какие-то две из них удалены не более чем на $\\sqrt2$.",
+    "en": "Thirteen points are marked in a $3\\times4$ rectangle. Prove that two of them are at distance at most $\\sqrt2$."
+   },
+   "hint": {
+    "ru": "Разрежьте прямоугольник на единичные квадраты.",
+    "en": "Cut the rectangle into unit squares."
+   },
+   "sol": {
+    "ru": "Разрежем прямоугольник на $3\\cdot4=12$ единичных квадратов.\n\nТочек $13$, квадратов $12$, значит по принципу Дирихле в какой-то квадрат попали хотя бы две точки.\n\nРасстояние между двумя точками единичного квадрата не превосходит его диагонали: $$\\sqrt{1^{2}+1^{2}}=\\sqrt2 . \\qquad\\blacksquare$$\n\n**Замечание.** Оценку можно улучшить, если резать не на квадраты, а на более «круглые» части — но тогда рассуждение усложняется.",
+    "en": "Cut the rectangle into $3\\cdot4=12$ unit squares.\n\nThere are $13$ points and $12$ squares, so by the pigeonhole principle some square contains at least two points.\n\nTwo points of a unit square are at most its diagonal apart: $$\\sqrt{1^{2}+1^{2}}=\\sqrt2 . \\qquad\\blacksquare$$\n\n**Remark.** The bound improves if one cuts into rounder pieces instead of squares — at the price of a harder argument."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что среди любых $19$ двузначных чисел найдутся два с одинаковой суммой цифр.",
+    "en": "Prove that among any $19$ two-digit numbers two have the same digit sum."
+   },
+   "hint": {
+    "ru": "Какие значения принимает сумма цифр двузначного числа?",
+    "en": "What values can the digit sum of a two-digit number take?"
+   },
+   "sol": {
+    "ru": "У двузначного числа $\\overline{ab}$ первая цифра $a$ лежит между $1$ и $9$, вторая $b$ — между $0$ и $9$. Значит сумма цифр $a+b$ принимает значения от $$1+0=1\\qquad\\text{до}\\qquad 9+9=18 ,$$ то есть не более $18$ различных значений.\n\nЧисел $19$, «клеток» $18$, значит по принципу Дирихле у каких-то двух чисел суммы цифр совпадают. $\\blacksquare$\n\n**Точность.** Восемнадцати чисел не хватило бы: например, у чисел $$10,\\ 11,\\ 12,\\ \\dots,\\ 19,\\ 29,\\ 39,\\ \\dots,\\ 99 $$ суммы цифр $1,2,\\dots,18$ попарно различны.",
+    "en": "For a two-digit number $\\overline{ab}$ the first digit $a$ runs from $1$ to $9$ and the second $b$ from $0$ to $9$. So the digit sum $a+b$ takes values from $$1+0=1\\qquad\\text{to}\\qquad 9+9=18 ,$$ at most $18$ different values.\n\nWith $19$ numbers and $18$ boxes, the pigeonhole principle gives two with equal digit sums. $\\blacksquare$\n\n**Sharpness.** Eighteen numbers would not suffice: the numbers $$10,\\ 11,\\ \\dots,\\ 19,\\ 29,\\ 39,\\ \\dots,\\ 99 $$ have digit sums $1,2,\\dots,18$, pairwise distinct."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что найдётся число вида $\\underbrace{11\\ldots1}_{k}$, делящееся на $7$.",
+    "en": "Prove that some number of the form $\\underbrace{11\\ldots1}_{k}$ is divisible by $7$."
+   },
+   "hint": {
+    "ru": "Рассмотрите остатки первых восьми таких чисел.",
+    "en": "Look at the remainders of the first eight such numbers."
+   },
+   "sol": {
+    "ru": "Рассмотрим восемь чисел $$1,\\ 11,\\ 111,\\ \\dots,\\ \\underbrace{11\\ldots1}_{8} .$$\n\nОстатков по модулю $7$ всего семь, а чисел восемь, значит какие-то два дают одинаковый остаток: $$\\underbrace{11\\ldots1}_{m}\\equiv\\underbrace{11\\ldots1}_{n}\\pmod 7,\\qquad m>n .$$\n\n**Вычтем.** Разность равна $$\\underbrace{11\\ldots1}_{m}-\\underbrace{11\\ldots1}_{n}=\\underbrace{11\\ldots1}_{m-n}\\cdot10^{n} ,$$ и она делится на $7$.\n\nТак как $\\gcd(10^{n},7)=1$, отсюда $$7\\ \\Big|\\ \\underbrace{11\\ldots1}_{m-n} . \\qquad\\blacksquare$$\n\n**Ответ на практике:** наименьшее такое число — $111111=7\\cdot15873$.\n\n**Обобщение.** То же рассуждение работает для любого $n$, взаимно простого с $10$.",
+    "en": "Consider the eight numbers $$1,\\ 11,\\ 111,\\ \\dots,\\ \\underbrace{11\\ldots1}_{8} .$$\n\nThere are only seven residues modulo $7$ and eight numbers, so two share a residue: $$\\underbrace{11\\ldots1}_{m}\\equiv\\underbrace{11\\ldots1}_{n}\\pmod 7,\\qquad m>n .$$\n\n**Subtract.** The difference is $$\\underbrace{11\\ldots1}_{m}-\\underbrace{11\\ldots1}_{n}=\\underbrace{11\\ldots1}_{m-n}\\cdot10^{n} ,$$ divisible by $7$.\n\nSince $\\gcd(10^{n},7)=1$, we get $$7\\ \\Big|\\ \\underbrace{11\\ldots1}_{m-n} . \\qquad\\blacksquare$$\n\n**In practice:** the smallest example is $111111=7\\cdot15873$.\n\n**Generalisation.** The same argument works for any $n$ coprime to $10$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "В шкафу лежат $10$ пар ботинок (все пары различны). Сколько ботинок надо вытащить не глядя, чтобы наверняка получить хотя бы одну подходящую пару?",
+    "en": "A cupboard holds $10$ pairs of shoes (all pairs different). How many shoes must be taken blindly to be sure of getting a matching pair?"
+   },
+   "hint": {
+    "ru": "Можно вытащить по одному ботинку из каждой пары.",
+    "en": "One could pick one shoe from each pair."
+   },
+   "sol": {
+    "ru": "**Десяти мало.** Можно неудачно вытащить ровно по одному ботинку из каждой из десяти пар — тогда подходящей пары не будет.\n\n**Одиннадцати хватает.** Пар всего $10$; если вытащено $11$ ботинок, то по принципу Дирихле какие-то два принадлежат одной паре.\n\n**Ответ:** $11$.\n\n**Осторожно с формулировкой.** Если бы спрашивали про пару **одинакового размера** (а не именно «парные»), ответ зависел бы от того, сколько размеров встречается.",
+    "en": "**Ten is not enough.** One might unluckily draw exactly one shoe from each of the ten pairs, with no match.\n\n**Eleven suffices.** There are only $10$ pairs, so among $11$ shoes two belong to the same pair by the pigeonhole principle.\n\n**Answer:** $11$.\n\n**A wording caution.** Had the question asked for two shoes of the same **size** rather than a genuine pair, the answer would depend on how many sizes occur."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что в любой последовательности из пяти попарно различных чисел есть возрастающая или убывающая подпоследовательность длины $3$.",
+    "en": "Prove that any sequence of five pairwise distinct numbers contains an increasing or a decreasing subsequence of length $3$."
+   },
+   "hint": {
+    "ru": "Каждому члену сопоставьте пару чисел: длины самых длинных возрастающей и убывающей подпоследовательностей, начинающихся в нём.",
+    "en": "To each term attach a pair: the lengths of the longest increasing and decreasing subsequences starting there."
+   },
+   "sol": {
+    "ru": "Пусть последовательность $a_1,\\dots,a_5$, и пусть для каждого $i$ $$x_i=\\text{длина самой длинной возрастающей подпоследовательности, начинающейся с } a_i ,$$ $$y_i=\\text{длина самой длинной убывающей подпоследовательности, начинающейся с } a_i .$$\n\n**Предположим противное:** нет ни возрастающей, ни убывающей длины $3$. Тогда $$x_i\\in\\{1,2\\},\\qquad y_i\\in\\{1,2\\} $$ для всех $i$, то есть пара $\\left(x_i,y_i\\right)$ принимает не более $2\\cdot2=4$ значений.\n\nИндексов пять, значений четыре, значит по принципу Дирихле найдутся $i<j$ с $$\\left(x_i,y_i\\right)=\\left(x_j,y_j\\right).$$\n\n**Противоречие.** Числа различны, значит либо $a_i<a_j$, либо $a_i>a_j$.\n\nЕсли $a_i<a_j$, то, приписав $a_i$ к возрастающей подпоследовательности, начинающейся с $a_j$, получим $x_i\\ge x_j+1>x_j$ ✗\n\nЕсли $a_i>a_j$, то аналогично $y_i>y_j$ ✗\n\nВ обоих случаях пары не могли совпасть. $\\blacksquare$\n\n**Точность.** Для четырёх чисел утверждение неверно: например, $2,1,4,3$.\n\n**Общая теорема (Эрдёша — Секереша):** в любой последовательности длины $mn+1$ есть возрастающая подпоследовательность длины $m+1$ или убывающая длины $n+1$.",
+    "en": "Let the sequence be $a_1,\\dots,a_5$ and for each $i$ put $$x_i=\\text{length of the longest increasing subsequence starting at } a_i ,$$ $$y_i=\\text{length of the longest decreasing subsequence starting at } a_i .$$\n\n**Suppose not:** there is no monotone subsequence of length $3$. Then $$x_i\\in\\{1,2\\},\\qquad y_i\\in\\{1,2\\} ,$$ so the pair $\\left(x_i,y_i\\right)$ takes at most $2\\cdot2=4$ values.\n\nWith five indices and four values, the pigeonhole principle gives $i<j$ with $$\\left(x_i,y_i\\right)=\\left(x_j,y_j\\right).$$\n\n**Contradiction.** The numbers are distinct, so either $a_i<a_j$ or $a_i>a_j$.\n\nIf $a_i<a_j$, prepending $a_i$ to an increasing subsequence starting at $a_j$ gives $x_i\\ge x_j+1>x_j$ ✗\n\nIf $a_i>a_j$, likewise $y_i>y_j$ ✗\n\nEither way the pairs could not have coincided. $\\blacksquare$\n\n**Sharpness.** For four numbers the claim fails: e.g. $2,1,4,3$.\n\n**The general theorem (Erdős–Szekeres):** any sequence of length $mn+1$ has an increasing subsequence of length $m+1$ or a decreasing one of length $n+1$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 2,
+   "q": {
+    "ru": "Докажите, что среди любых пяти точек с целыми координатами найдутся две, середина отрезка между которыми тоже имеет целые координаты.",
+    "en": "Prove that among any five points with integer coordinates two have a midpoint with integer coordinates."
+   },
+   "hint": {
+    "ru": "Посмотрите на чётности координат.",
+    "en": "Look at the parities of the coordinates."
+   },
+   "sol": {
+    "ru": "Каждой точке $(x,y)$ сопоставим пару чётностей $$\\left(x\\bmod 2,\\ y\\bmod 2\\right)\\in\\{(0,0),(0,1),(1,0),(1,1)\\} .$$\n\nВозможных пар четыре, точек пять, значит по принципу Дирихле у каких-то двух точек $\\left(x_1,y_1\\right)$ и $\\left(x_2,y_2\\right)$ обе координаты совпадают по чётности.\n\n**Тогда середина целая.** Разности $x_1-x_2$ и $y_1-y_2$ чётны, а значит суммы $x_1+x_2$ и $y_1+y_2$ тоже чётны, и $$\\left(\\frac{x_1+x_2}{2},\\ \\frac{y_1+y_2}{2}\\right)$$ — точка с целыми координатами. $\\blacksquare$\n\n**В пространстве** классов чётности $2^{3}=8$, поэтому там нужно $9$ точек.\n\n**Точность.** Четырёх точек мало: у точек $(0,0)$, $(0,1)$, $(1,0)$, $(1,1)$ все середины полуцелые.",
+    "en": "To each point $(x,y)$ attach its parity pair $$\\left(x\\bmod 2,\\ y\\bmod 2\\right)\\in\\{(0,0),(0,1),(1,0),(1,1)\\} .$$\n\nThere are four possible pairs and five points, so by the pigeonhole principle two points $\\left(x_1,y_1\\right)$, $\\left(x_2,y_2\\right)$ agree in both parities.\n\n**Then the midpoint is integral.** The differences $x_1-x_2$ and $y_1-y_2$ are even, hence so are the sums $x_1+x_2$ and $y_1+y_2$, and $$\\left(\\frac{x_1+x_2}{2},\\ \\frac{y_1+y_2}{2}\\right)$$ has integer coordinates. $\\blacksquare$\n\n**In space** there are $2^{3}=8$ parity classes, so $9$ points are needed.\n\n**Sharpness.** Four points do not suffice: for $(0,0)$, $(0,1)$, $(1,0)$, $(1,1)$ every midpoint is half-integral."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Из чисел $1,2,\\dots,10$ выбрали шесть. Докажите, что какие-то два из выбранных в сумме дают $11$.",
+    "en": "Six numbers are chosen from $1,2,\\dots,10$. Prove that two of them add up to $11$."
+   },
+   "hint": {
+    "ru": "Разбейте числа на пары с суммой $11$.",
+    "en": "Split the numbers into pairs summing to $11$."
+   },
+   "sol": {
+    "ru": "Разобьём числа на пары с суммой $11$: $$\\{1,10\\},\\quad\\{2,9\\},\\quad\\{3,8\\},\\quad\\{4,7\\},\\quad\\{5,6\\} .$$\n\nПар ровно пять, а выбрано шесть чисел, значит по принципу Дирихле какие-то два выбранных числа лежат в одной паре — и их сумма равна $11$. $\\blacksquare$\n\n**Точность.** Пяти чисел мало: набор $\\{1,2,3,4,5\\}$ не содержит пары с суммой $11$.",
+    "en": "Split the numbers into pairs summing to $11$: $$\\{1,10\\},\\quad\\{2,9\\},\\quad\\{3,8\\},\\quad\\{4,7\\},\\quad\\{5,6\\} .$$\n\nThere are exactly five pairs and six chosen numbers, so two chosen numbers lie in the same pair — and they sum to $11$. $\\blacksquare$\n\n**Sharpness.** Five numbers do not suffice: $\\{1,2,3,4,5\\}$ contains no pair summing to $11$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Каждая клетка таблицы $4\\times4$ заполнена числом $-1$, $0$ или $1$. Докажите, что среди четырёх сумм по строкам, четырёх сумм по столбцам и двух сумм по диагоналям какие-то две равны.",
+    "en": "Every cell of a $4\\times4$ table holds $-1$, $0$ or $1$. Prove that among the four row sums, four column sums and two diagonal sums, two are equal."
+   },
+   "hint": {
+    "ru": "Оцените, какие значения могут принимать эти суммы.",
+    "en": "Bound the possible values of these sums."
+   },
+   "sol": {
+    "ru": "Каждая из указанных сумм — это сумма **четырёх** чисел, каждое из которых равно $-1$, $0$ или $1$.\n\n**Диапазон значений.** Наименьшая возможная сумма равна $-4$, наибольшая $4$, и все значения целые. Значит вариантов не больше $$4-(-4)+1=9 .$$\n\n**Сколько сумм.** Строк четыре, столбцов четыре, диагоналей две — всего $$4+4+2=10 $$ сумм.\n\nСумм десять, возможных значений девять, значит по принципу Дирихле какие-то две суммы совпадают. $\\blacksquare$\n\n**Замечание.** Для таблицы $n\\times n$ рассуждение даёт то же: сумм $2n+2$, значений $2n+1$ — и вывод сохраняется при любом $n$.",
+    "en": "Each of these sums adds **four** numbers, each $-1$, $0$ or $1$.\n\n**The range.** The smallest possible sum is $-4$ and the largest $4$, all values integers, so there are at most $$4-(-4)+1=9 $$ possibilities.\n\n**How many sums.** Four rows, four columns and two diagonals: $$4+4+2=10 .$$\n\nTen sums and nine possible values, so by the pigeonhole principle two coincide. $\\blacksquare$\n\n**Remark.** For an $n\\times n$ table the same count gives $2n+2$ sums and $2n+1$ values — the conclusion survives for every $n$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Шахматист играет каждый день хотя бы одну партию, а за $77$ дней сыграл не более $132$ партий. Докажите, что найдётся несколько дней подряд, за которые он сыграл ровно $21$ партию.",
+    "en": "A chess player plays at least one game a day and at most $132$ games over $77$ days. Prove that there is a run of consecutive days in which exactly $21$ games were played."
+   },
+   "hint": {
+    "ru": "Рассмотрите частичные суммы $a_k$ и числа $a_k+21$.",
+    "en": "Consider the partial sums $a_k$ and the numbers $a_k+21$."
+   },
+   "sol": {
+    "ru": "Пусть $a_k$ — общее число партий за первые $k$ дней. Каждый день сыграна хотя бы одна партия, значит последовательность **строго возрастает**: $$1\\le a_1<a_2<\\dots<a_{77}\\le132 .$$\n\n**Рассмотрим удвоенный набор.** Возьмём $154$ числа $$a_1,\\ a_2,\\ \\dots,\\ a_{77},\\qquad a_1+21,\\ a_2+21,\\ \\dots,\\ a_{77}+21 .$$\n\nВсе они лежат в промежутке от $1$ до $132+21=153$, то есть принимают не более $153$ значений.\n\n**Принцип Дирихле.** Чисел $154$, значений $153$, значит какие-то два числа совпадают. Внутри каждой из двух половин все числа различны (обе последовательности строго возрастают), значит совпадение может быть только между половинами: $$a_j=a_i+21 $$ для некоторых $i<j$.\n\n**Вывод.** Это означает, что за дни с $i+1$-го по $j$-й сыграно ровно $$a_j-a_i=21 $$ партий. $\\blacksquare$\n\n**Замечание.** Числа $77$, $132$ и $21$ подобраны так, чтобы «сумма помещалась»: важно неравенство $132+21<2\\cdot77$.",
+    "en": "Let $a_k$ be the total number of games in the first $k$ days. At least one game a day makes the sequence **strictly increasing**: $$1\\le a_1<a_2<\\dots<a_{77}\\le132 .$$\n\n**Double the list.** Take the $154$ numbers $$a_1,\\ \\dots,\\ a_{77},\\qquad a_1+21,\\ \\dots,\\ a_{77}+21 .$$\n\nThey all lie between $1$ and $132+21=153$, i.e. take at most $153$ values.\n\n**Pigeonhole.** With $154$ numbers and $153$ values, two coincide. Within each half all numbers are distinct (both sequences strictly increase), so the coincidence is across the halves: $$a_j=a_i+21 $$ for some $i<j$.\n\n**Conclusion.** So on days $i+1$ through $j$ exactly $$a_j-a_i=21 $$ games were played. $\\blacksquare$\n\n**Remark.** The numbers $77$, $132$, $21$ are chosen so the count fits: what matters is $132+21<2\\cdot77$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что найдутся две различные степени тройки, разность которых делится на $1000$.",
+    "en": "Prove that there exist two different powers of three whose difference is divisible by $1000$."
+   },
+   "hint": {
+    "ru": "Рассмотрите $1001$ степень и их остатки.",
+    "en": "Look at $1001$ powers and their remainders."
+   },
+   "sol": {
+    "ru": "Рассмотрим $1001$ число $$3^{0},\\ 3^{1},\\ 3^{2},\\ \\dots,\\ 3^{1000} .$$\n\nОстатков по модулю $1000$ ровно $1000$, а чисел $1001$, значит по принципу Дирихле какие-то две степени дают одинаковый остаток: $$3^{m}\\equiv3^{n}\\pmod{1000},\\qquad m>n .$$\n\nТогда $$1000\\ \\big|\\ 3^{m}-3^{n} . \\qquad\\blacksquare$$\n\n**Больше того.** Вынесем общий множитель: $$3^{m}-3^{n}=3^{n}\\left(3^{\\,m-n}-1\\right),$$ и так как $\\gcd\\left(3^{n},1000\\right)=1$, получаем $$1000\\ \\big|\\ 3^{\\,m-n}-1 ,$$ то есть **некоторая степень тройки оканчивается на $001$**.\n\n**Проверка:** наименьшая такая степень — $3^{100}$; уже $3^{20}=3\\,486\\,784\\,401$ оканчивается на $401$, а не на $001$.",
+    "en": "Consider the $1001$ numbers $$3^{0},\\ 3^{1},\\ \\dots,\\ 3^{1000} .$$\n\nThere are exactly $1000$ residues modulo $1000$, so by the pigeonhole principle two powers share a residue: $$3^{m}\\equiv3^{n}\\pmod{1000},\\qquad m>n ,$$ hence $$1000\\ \\big|\\ 3^{m}-3^{n} . \\qquad\\blacksquare$$\n\n**Moreover.** Factoring, $$3^{m}-3^{n}=3^{n}\\left(3^{\\,m-n}-1\\right),$$ and since $\\gcd\\left(3^{n},1000\\right)=1$ we get $$1000\\ \\big|\\ 3^{\\,m-n}-1 ,$$ i.e. **some power of three ends in $001$**.\n\n**Check:** the smallest such power is $3^{100}$; already $3^{20}=3\\,486\\,784\\,401$ ends in $401$, not $001$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Каждая клетка таблицы $3\\times9$ покрашена в один из двух цветов. Докажите, что найдётся прямоугольник (со сторонами по линиям сетки), все четыре угловые клетки которого одного цвета.",
+    "en": "Every cell of a $3\\times9$ table is coloured in one of two colours. Prove that some rectangle (with sides along the grid lines) has all four corner cells of the same colour."
+   },
+   "hint": {
+    "ru": "В каждом столбце найдите две клетки одного цвета.",
+    "en": "In each column find two cells of the same colour."
+   },
+   "sol": {
+    "ru": "**Шаг 1: в каждом столбце есть одноцветная пара.** В столбце три клетки и два цвета, значит по принципу Дирихле какие-то две клетки столбца одного цвета.\n\nСопоставим столбцу «метку»: какая именно пара строк оказалась одноцветной и какого она цвета. Пар строк три: $$\\{1,2\\},\\quad\\{1,3\\},\\quad\\{2,3\\} ,$$ цветов два, значит меток не больше $$3\\cdot2=6 .$$\n\n**Шаг 2: два столбца с одной меткой.** Столбцов девять, меток шесть, значит по принципу Дирихле у каких-то двух столбцов метки совпадают.\n\n**Шаг 3: прямоугольник найден.** У этих двух столбцов одна и та же пара строк окрашена в один и тот же цвет. Четыре клетки на пересечении этих двух столбцов и этих двух строк — вершины прямоугольника, и все они одного цвета. $\\blacksquare$\n\n**Точность оценки.** Уже семи столбцов достаточно (шесть меток плюс один), а вот при шести столбцах можно раскрасить без одноцветного прямоугольника — по одному столбцу на каждую метку.",
+    "en": "**Step 1: every column has a monochromatic pair.** A column has three cells and there are two colours, so two cells of the column share a colour.\n\nLabel each column by which pair of rows is monochromatic and in which colour. There are three pairs of rows, $$\\{1,2\\},\\quad\\{1,3\\},\\quad\\{2,3\\} ,$$ and two colours, so at most $$3\\cdot2=6 $$ labels.\n\n**Step 2: two columns share a label.** With nine columns and six labels, two columns get the same label.\n\n**Step 3: the rectangle.** For those two columns the same pair of rows carries the same colour. The four cells where these two columns meet these two rows are the corners of a rectangle, all of one colour. $\\blacksquare$\n\n**Sharpness.** Seven columns already suffice (six labels plus one), while with six columns one can colour without a monochromatic rectangle — one column per label."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "В группе из $100$ человек каждый знаком по крайней мере с $51$ другим. Докажите, что у любых двух человек есть общий знакомый.",
+    "en": "In a group of $100$ people everybody knows at least $51$ others. Prove that any two people have a common acquaintance."
+   },
+   "hint": {
+    "ru": "Посчитайте размер объединения двух множеств знакомых.",
+    "en": "Count the size of the union of two acquaintance sets."
+   },
+   "sol": {
+    "ru": "Возьмём любых двух человек $A$ и $B$ и обозначим через $N(A)$ и $N(B)$ множества их знакомых.\n\n**Предположим противное:** общего знакомого нет, то есть $$N(A)\\cap N(B)=\\varnothing .$$\n\n**Считаем объединение.** Тогда $$\\left|N(A)\\cup N(B)\\right|=|N(A)|+|N(B)|\\ \\ge\\ 51+51=102 .$$\n\n**Противоречие.** Но все знакомые — это люди из той же группы, в которой всего $100$ человек, значит $$\\left|N(A)\\cup N(B)\\right|\\le100<102 \\quad ✗$$\n\nЗначит общий знакомый есть. $\\blacksquare$\n\n**Точность.** Число $51$ существенно: если бы каждый был знаком ровно с $50$ другими, группа могла бы распасться на две «половины» по $50$ человек, знакомых только внутри своей половины (плюс себя не считаем) — и у людей из разных половин общих знакомых не было бы.",
+    "en": "Take any two people $A$ and $B$, and let $N(A)$, $N(B)$ be their sets of acquaintances.\n\n**Suppose not:** there is no common acquaintance, i.e. $$N(A)\\cap N(B)=\\varnothing .$$\n\n**Count the union.** Then $$\\left|N(A)\\cup N(B)\\right|=|N(A)|+|N(B)|\\ \\ge\\ 51+51=102 .$$\n\n**Contradiction.** But all acquaintances live in the same group of $100$ people, so $$\\left|N(A)\\cup N(B)\\right|\\le100<102 \\quad ✗$$\n\nHence a common acquaintance exists. $\\blacksquare$\n\n**Sharpness.** The number $51$ matters: if everyone knew exactly $50$ others, the group could split into two halves of $50$ acquainted only within themselves, and people from different halves would share no acquaintance."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что из любых $n$ целых чисел можно выбрать несколько (хотя бы одно), сумма которых делится на $n$.",
+    "en": "Prove that from any $n$ integers one can choose several (at least one) whose sum is divisible by $n$."
+   },
+   "hint": {
+    "ru": "Рассмотрите частичные суммы $S_0,S_1,\\dots,S_n$.",
+    "en": "Consider the partial sums $S_0,S_1,\\dots,S_n$."
+   },
+   "sol": {
+    "ru": "Пусть даны числа $a_1,a_2,\\dots,a_n$. Определим частичные суммы $$S_0=0,\\qquad S_k=a_1+a_2+\\dots+a_k\\quad (k=1,\\dots,n).$$\n\n**Сколько их и какие остатки.** Всего сумм $n+1$ штука, а остатков по модулю $n$ ровно $n$.\n\nПо принципу Дирихле найдутся индексы $0\\le i<j\\le n$ с $$S_i\\equiv S_j\\pmod n .$$\n\n**Вычтем.** $$S_j-S_i=a_{i+1}+a_{i+2}+\\dots+a_j $$ делится на $n$, и это сумма хотя бы одного слагаемого (ведь $i<j$). $\\blacksquare$\n\n**Сильнее, чем кажется.** Выбранные числа идут **подряд** — это блок последовательных членов, а не произвольное подмножество.\n\n**Точность.** Из $n-1$ чисел выбрать так не всегда можно: возьмите $n-1$ единиц — любая сумма нескольких из них лежит между $1$ и $n-1$ и на $n$ не делится.",
+    "en": "Let the numbers be $a_1,\\dots,a_n$ and define the partial sums $$S_0=0,\\qquad S_k=a_1+\\dots+a_k\\quad (k=1,\\dots,n).$$\n\n**Counting.** There are $n+1$ such sums and exactly $n$ residues modulo $n$.\n\nBy the pigeonhole principle there are indices $0\\le i<j\\le n$ with $$S_i\\equiv S_j\\pmod n .$$\n\n**Subtract.** $$S_j-S_i=a_{i+1}+\\dots+a_j $$ is divisible by $n$, and it is a sum of at least one term (since $i<j$). $\\blacksquare$\n\n**Stronger than stated.** The chosen numbers are **consecutive** — a block, not an arbitrary subset.\n\n**Sharpness.** With $n-1$ numbers this can fail: take $n-1$ ones — any sum of some of them lies between $1$ and $n-1$ and is not divisible by $n$."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "В каждой клетке таблицы $10\\times10$ записано целое число, причём числа в клетках, имеющих общую сторону, отличаются не более чем на $5$. Докажите, что какие-то два числа в таблице равны.",
+    "en": "Each cell of a $10\\times10$ table holds an integer, and numbers in cells sharing a side differ by at most $5$. Prove that two numbers in the table are equal."
+   },
+   "hint": {
+    "ru": "Оцените разность самого большого и самого маленького чисел.",
+    "en": "Bound the difference between the largest and the smallest entries."
+   },
+   "sol": {
+    "ru": "Пусть $M$ — наибольшее число в таблице, $m$ — наименьшее.\n\n**Оценим $M-m$.** От клетки с числом $m$ до клетки с числом $M$ можно дойти по клеткам, каждый раз переходя в соседнюю по стороне. В таблице $10\\times10$ такой путь занимает не более $$9+9=18 $$ шагов (сначала по горизонтали, потом по вертикали).\n\nНа каждом шаге число меняется не более чем на $5$, значит $$M-m\\ \\le\\ 18\\cdot5=90 .$$\n\n**Сколько различных значений.** Все числа целые и лежат между $m$ и $M$, значит различных значений не больше $$90+1=91 .$$\n\n**Принцип Дирихле.** Клеток $100$, возможных значений не более $91$, значит какие-то две клетки содержат одно и то же число. $\\blacksquare$\n\n**Замечание.** Условие «отличаются не более чем на $5$» можно ослабить до $10$: тогда $M-m\\le180$, значений $181$ — и вывод уже неверен. Так что запас здесь невелик.",
+    "en": "Let $M$ be the largest entry and $m$ the smallest.\n\n**Bound $M-m$.** One can walk from the cell holding $m$ to the cell holding $M$ through side-adjacent cells. In a $10\\times10$ table such a path takes at most $$9+9=18 $$ steps (horizontally, then vertically).\n\nEach step changes the number by at most $5$, so $$M-m\\ \\le\\ 18\\cdot5=90 .$$\n\n**How many values.** All entries are integers between $m$ and $M$, so at most $$90+1=91 $$ distinct values occur.\n\n**Pigeonhole.** There are $100$ cells and at most $91$ values, so two cells hold the same number. $\\blacksquare$\n\n**Remark.** Relaxing \"at most $5$\" to \"at most $10$\" gives $M-m\\le180$ and $181$ values — and the conclusion fails. So there is little slack here."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что среди чисел Фибоначчи найдётся ненулевое, делящееся на $2024$.",
+    "en": "Prove that some non-zero Fibonacci number is divisible by $2024$."
+   },
+   "hint": {
+    "ru": "Рассмотрите пары соседних членов по модулю $2024$.",
+    "en": "Consider pairs of consecutive terms modulo $2024$."
+   },
+   "sol": {
+    "ru": "Работаем по модулю $n=2024$ и рассматриваем **пары соседних членов** $$P_k=\\left(F_k,\\ F_{k+1}\\right)\\bmod n .$$\n\n**Шаг 1: пары повторяются.** Различных пар остатков не больше $n^{2}$, значит среди $P_0,P_1,\\dots,P_{n^{2}}$ какие-то две совпадают: $$P_i=P_j,\\qquad i<j .$$\n\n**Шаг 2: последовательность периодична.** Из $F_{k+2}=F_{k+1}+F_k$ следует, что пара $P_{k+1}$ однозначно определяется парой $P_k$. Значит из $P_i=P_j$ вытекает $P_{i+1}=P_{j+1}$, и далее по индукции — совпадение всех последующих пар.\n\n**Шаг 3: можно «отмотать назад».** Соотношение $$F_{k-1}=F_{k+1}-F_k$$ показывает, что пара $P_{k-1}$ тоже однозначно восстанавливается по $P_k$. Значит из $P_i=P_j$ следует и $P_{i-1}=P_{j-1}$, и так до самого начала: $$P_0=P_{\\,j-i} .$$\n\n**Шаг 4: вывод.** Итак, $$F_{\\,j-i}\\equiv F_0=0\\pmod{2024} ,$$ причём $j-i>0$. Значит член $F_{\\,j-i}$ (он не равен нулю как число, ведь $F_k>0$ при $k\\ge1$) делится на $2024$. $\\blacksquare$\n\n**Замечание.** Длина периода последовательности Фибоначчи по модулю $n$ называется **периодом Пизано**; наше рассуждение показывает лишь, что он конечен.\n\n**Пример поменьше:** по модулю $10$ период равен $60$, и первое кратное десяти — это $F_{15}=610$.",
+    "en": "Work modulo $n=2024$ and consider **pairs of consecutive terms** $$P_k=\\left(F_k,\\ F_{k+1}\\right)\\bmod n .$$\n\n**Step 1: pairs repeat.** There are at most $n^{2}$ distinct pairs of residues, so among $P_0,\\dots,P_{n^{2}}$ two coincide: $$P_i=P_j,\\qquad i<j .$$\n\n**Step 2: the sequence is periodic.** From $F_{k+2}=F_{k+1}+F_k$ the pair $P_{k+1}$ is determined by $P_k$. So $P_i=P_j$ forces $P_{i+1}=P_{j+1}$ and, by induction, all later pairs.\n\n**Step 3: one can run backwards.** The relation $$F_{k-1}=F_{k+1}-F_k$$ shows $P_{k-1}$ is also determined by $P_k$. So $P_i=P_j$ gives $P_{i-1}=P_{j-1}$ and, going all the way back, $$P_0=P_{\\,j-i} .$$\n\n**Step 4: conclusion.** Hence $$F_{\\,j-i}\\equiv F_0=0\\pmod{2024} $$ with $j-i>0$. So the term $F_{\\,j-i}$ (non-zero as a number, since $F_k>0$ for $k\\ge1$) is divisible by $2024$. $\\blacksquare$\n\n**Remark.** The period of the Fibonacci sequence modulo $n$ is the **Pisano period**; our argument only shows it is finite.\n\n**A smaller example:** modulo $10$ the period is $60$, and the first multiple of ten is $F_{15}=610$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "В равностороннем треугольнике со стороной $2$ отмечены пять точек. Докажите, что какие-то две из них удалены не более чем на $1$.",
+    "en": "Five points are marked in an equilateral triangle of side $2$. Prove that two of them are at distance at most $1$."
+   },
+   "hint": {
+    "ru": "Разрежьте треугольник на четыре равных.",
+    "en": "Cut the triangle into four congruent ones."
+   },
+   "sol": {
+    "ru": "Соединим середины сторон — треугольник разобьётся на **четыре** равносторонних треугольника со стороной $1$.\n\nТочек пять, треугольничков четыре, значит по принципу Дирихле в какой-то из них попали хотя бы две точки (точку на общей границе относим к любому из соседей).\n\n**Оценка расстояния.** Расстояние между двумя точками равностороннего треугольника со стороной $1$ не превосходит его наибольшей стороны, то есть $$1 . \\qquad\\blacksquare$$\n\n**Точность.** Оценку нельзя улучшить: четыре вершины разбиения плюс центр... точнее, три вершины большого треугольника и три середины сторон дают шесть точек с попарными расстояниями ровно $1$ — то есть при пяти точках расстояние $1$ действительно может достигаться.",
+    "en": "Join the midpoints of the sides — the triangle splits into **four** equilateral triangles of side $1$.\n\nThere are five points and four small triangles, so some small triangle contains at least two points (points on a shared boundary may go to either neighbour).\n\n**The distance.** Two points of an equilateral triangle of side $1$ are at most its side apart, i.e. $$1 . \\qquad\\blacksquare$$\n\n**Sharpness.** The bound cannot be improved: the three vertices of the big triangle together with the three side midpoints give six points at pairwise distances exactly $1$, so a distance of exactly $1$ really can occur."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Из чисел $1,2,\\dots,200$ выбрали $101$ число. Докажите, что среди выбранных найдутся два, одно из которых делится на другое.",
+    "en": "From the numbers $1,2,\\dots,200$, one hundred and one are chosen. Prove that among them one divides another."
+   },
+   "hint": {
+    "ru": "Запишите каждое число как $2^{k}\\cdot(\\text{нечётное})$.",
+    "en": "Write each number as $2^{k}\\cdot(\\text{odd})$."
+   },
+   "sol": {
+    "ru": "Каждое натуральное число единственным образом записывается в виде $$m=2^{k}\\cdot q ,$$ где $q$ нечётно. Назовём $q$ **нечётной частью** числа.\n\n**Сколько бывает нечётных частей.** Для чисел от $1$ до $200$ нечётная часть — это нечётное число, не превосходящее $200$, то есть одно из $$1,\\ 3,\\ 5,\\ \\dots,\\ 199 $$ — ровно $100$ вариантов.\n\n**Принцип Дирихле.** Выбрано $101$ число, нечётных частей $100$, значит у каких-то двух выбранных чисел нечётные части совпадают: $$a=2^{k}q,\\qquad b=2^{\\ell}q,\\qquad k\\ne\\ell .$$\n\n**Вывод.** Если $k<\\ell$, то $$b=a\\cdot2^{\\,\\ell-k} ,$$ то есть $a$ делит $b$. $\\blacksquare$\n\n**Точность.** Ста чисел мало: набор $$101,\\ 102,\\ \\dots,\\ 200 $$ состоит из ста чисел, и ни одно из них не делит другое (частное было бы не меньше двух, а $2\\cdot101>200$).",
+    "en": "Every positive integer is uniquely $$m=2^{k}\\cdot q $$ with $q$ odd; call $q$ its **odd part**.\n\n**How many odd parts.** For numbers up to $200$ the odd part is an odd number at most $200$, i.e. one of $$1,\\ 3,\\ 5,\\ \\dots,\\ 199 $$ — exactly $100$ possibilities.\n\n**Pigeonhole.** With $101$ chosen numbers and $100$ odd parts, two chosen numbers share an odd part: $$a=2^{k}q,\\qquad b=2^{\\ell}q,\\qquad k\\ne\\ell .$$\n\n**Conclusion.** If $k<\\ell$ then $$b=a\\cdot2^{\\,\\ell-k} ,$$ so $a$ divides $b$. $\\blacksquare$\n\n**Sharpness.** A hundred numbers do not suffice: the set $$101,\\ 102,\\ \\dots,\\ 200 $$ has a hundred elements and none divides another (a quotient would be at least two, but $2\\cdot101>200$)."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Каждая пара из $17$ учёных переписывается ровно по одной из трёх тем. Докажите, что найдутся трое, переписывающиеся между собой по одной и той же теме.",
+    "en": "Every pair among $17$ scientists corresponds on exactly one of three topics. Prove that some three of them correspond with one another on the same topic."
+   },
+   "hint": {
+    "ru": "Зафиксируйте одного учёного и посмотрите, по какой теме он пишет чаще всего.",
+    "en": "Fix one scientist and look at their most frequent topic."
+   },
+   "sol": {
+    "ru": "**Шаг 1: у кого-то шесть собеседников по одной теме.** Возьмём учёного $A$. У него $16$ собеседников, а тем три. Если бы по каждой теме он переписывался не более чем с пятью, всего собеседников было бы не больше $$3\\cdot5=15<16 \\quad ✗$$\n\nЗначит есть тема (скажем, первая), по которой $A$ переписывается по крайней мере с шестью учёными. Обозначим этих шестерых через $M$.\n\n**Шаг 2: разбираем группу $M$.** Если какие-то двое из $M$ переписываются между собой **по первой теме**, то они вместе с $A$ дают искомую тройку ✓\n\nИначе все пары внутри $M$ используют только **две** оставшиеся темы.\n\n**Шаг 3: применяем случай двух тем.** Известно, что среди любых шести человек, каждая пара которых окрашена в один из двух цветов, найдётся одноцветная тройка (это утверждение $R(3,3)\\le6$).\n\nЗначит внутри $M$ найдутся трое, переписывающиеся между собой по одной теме ✓\n\nВ обоих случаях искомая тройка существует. $\\blacksquare$\n\n**Точность.** Число $17$ нельзя уменьшить: существует раскраска пар из $16$ учёных в три темы без одноцветной тройки, то есть $R(3,3,3)=17$.\n\n**Заодно напомним** доказательство для двух тем: у одного из шести есть три собеседника по одной теме; если какие-то двое из них переписываются по ней же — тройка готова, иначе эти трое образуют тройку по другой теме.",
+    "en": "**Step 1: someone has six partners on one topic.** Take a scientist $A$. They have $16$ partners and there are three topics. If each topic accounted for at most five, there would be at most $$3\\cdot5=15<16 \\quad ✗$$\n\nSo some topic (say the first) is shared by $A$ with at least six scientists; call this set $M$.\n\n**Step 2: examine $M$.** If two members of $M$ correspond with each other **on the first topic**, they and $A$ form the required triple ✓\n\nOtherwise all pairs inside $M$ use only the other **two** topics.\n\n**Step 3: apply the two-topic case.** Among any six people whose pairs are coloured in two colours there is a monochromatic triple (the statement $R(3,3)\\le6$).\n\nSo $M$ contains three scientists corresponding on one topic ✓\n\nIn both cases the triple exists. $\\blacksquare$\n\n**Sharpness.** The number $17$ cannot be lowered: there is a three-colouring of the pairs among $16$ scientists with no monochromatic triple, so $R(3,3,3)=17$.\n\n**Recall the two-colour proof:** one of six people has three partners in one colour; if two of those three are joined in that colour, done; otherwise those three form a triple in the other colour."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Числа $1,2,\\dots,9$ покрашены в два цвета. Докажите, что найдутся три числа одного цвета, образующие арифметическую прогрессию.",
+    "en": "The numbers $1,2,\\dots,9$ are coloured in two colours. Prove that three numbers of the same colour form an arithmetic progression."
+   },
+   "hint": {
+    "ru": "Начните с цвета числа $5$ и разберите случаи.",
+    "en": "Start from the colour of $5$ and split into cases."
+   },
+   "sol": {
+    "ru": "Предположим противное: одноцветной прогрессии из трёх членов нет. Цвета назовём К и С.\n\n**Симметрия.** Отражение $x\\mapsto10-x$ переводит арифметические прогрессии в арифметические прогрессии, поэтому им можно пользоваться для сокращения перебора. Кроме того, цвета равноправны.\n\n**Считаем, что $5$ — красное.**\n\nПрогрессии $\\{4,5,6\\}$, $\\{3,5,7\\}$, $\\{2,5,8\\}$, $\\{1,5,9\\}$ не могут быть одноцветными, значит в каждой из пар $$\\{4,6\\},\\quad\\{3,7\\},\\quad\\{2,8\\},\\quad\\{1,9\\} $$ есть хотя бы одно синее число.\n\n**Случай 1: $4$ — красное.**\n\nИз $\\{4,5,6\\}$: $6$ синее. Из $\\{3,4,5\\}$: $3$ синее.\n\nИз $\\{3,6,9\\}$ (оба крайних пока синие): $9$ красное.\n\nИз $\\{1,5,9\\}$: $1$ синее. Из $\\{5,7,9\\}$: $7$ синее.\n\nИз $\\{1,2,3\\}$ (числа $1$ и $3$ синие): $2$ красное.\n\nИз $\\{2,5,8\\}$ (числа $2$ и $5$ красные): $8$ синее.\n\nНо теперь $6$, $7$, $8$ — все синие, и это арифметическая прогрессия ✗\n\n**Случай 2: $4$ — синее, $6$ — красное.**\n\nПрименим отражение $x\\mapsto10-x$: оно меняет местами $4$ и $6$, оставляет $5$ на месте и переводит прогрессии в прогрессии. Полученная раскраска попадает в случай 1, где мы уже нашли одноцветную прогрессию; отражая её обратно, получаем прогрессию и в исходной раскраске ✗\n\n**Случай 3: и $4$, и $6$ — синие.**\n\nИз $\\{2,4,6\\}$: $2$ красное. Из $\\{4,6,8\\}$: $8$ красное.\n\nНо тогда $2$, $5$, $8$ — все красные, и это прогрессия ✗\n\nВо всех случаях получено противоречие. $\\blacksquare$\n\n**Точность.** Для чисел $1,\\dots,8$ утверждение неверно: раскраска $$\\text{К С С К К С С К}$$ (то есть $1,4,5,8$ — красные, $2,3,6,7$ — синие) не содержит одноцветной прогрессии из трёх членов. Значит нужное число ровно $9$.\n\n**Общая теорема Ван дер Вардена** утверждает, что для любых $k$ цветов и любой длины $\\ell$ найдётся $N$, при котором любая раскраска чисел $1,\\dots,N$ в $k$ цветов содержит одноцветную прогрессию длины $\\ell$.",
+    "en": "Suppose not: no three-term monochromatic progression exists. Call the colours R and B.\n\n**Symmetry.** The reflection $x\\mapsto10-x$ maps arithmetic progressions to arithmetic progressions, so it can be used to shorten the case analysis; the two colours are also interchangeable.\n\n**Assume $5$ is red.**\n\nThe progressions $\\{4,5,6\\}$, $\\{3,5,7\\}$, $\\{2,5,8\\}$, $\\{1,5,9\\}$ cannot be monochromatic, so each of the pairs $$\\{4,6\\},\\quad\\{3,7\\},\\quad\\{2,8\\},\\quad\\{1,9\\} $$ contains at least one blue number.\n\n**Case 1: $4$ is red.**\n\nFrom $\\{4,5,6\\}$: $6$ is blue. From $\\{3,4,5\\}$: $3$ is blue.\n\nFrom $\\{3,6,9\\}$ (the first two blue): $9$ is red.\n\nFrom $\\{1,5,9\\}$: $1$ is blue. From $\\{5,7,9\\}$: $7$ is blue.\n\nFrom $\\{1,2,3\\}$ ($1$ and $3$ blue): $2$ is red.\n\nFrom $\\{2,5,8\\}$ ($2$ and $5$ red): $8$ is blue.\n\nBut now $6$, $7$, $8$ are all blue — an arithmetic progression ✗\n\n**Case 2: $4$ blue, $6$ red.**\n\nApply the reflection $x\\mapsto10-x$: it swaps $4$ and $6$, fixes $5$ and preserves progressions. The reflected colouring falls into Case 1, where a monochromatic progression was found; reflecting it back gives one in the original colouring ✗\n\n**Case 3: both $4$ and $6$ blue.**\n\nFrom $\\{2,4,6\\}$: $2$ is red. From $\\{4,6,8\\}$: $8$ is red.\n\nBut then $2$, $5$, $8$ are all red — a progression ✗\n\nEvery case gives a contradiction. $\\blacksquare$\n\n**Sharpness.** For $1,\\dots,8$ the claim fails: colouring $1,4,5,8$ red and $2,3,6,7$ blue contains no monochromatic three-term progression. So $9$ is exactly the threshold.\n\n**Van der Waerden’s general theorem** says that for any $k$ colours and any length $\\ell$ there is an $N$ such that every $k$-colouring of $1,\\dots,N$ contains a monochromatic progression of length $\\ell$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что среди любых $10$ человек найдутся трое попарно знакомых или четверо попарно незнакомых.",
+    "en": "Prove that among any $10$ people there are three who all know one another, or four who are all mutual strangers."
+   },
+   "hint": {
+    "ru": "Зафиксируйте человека и разберите два случая: у него много знакомых или много незнакомых.",
+    "en": "Fix a person and split: they have many acquaintances, or many strangers."
+   },
+   "sol": {
+    "ru": "Возьмём человека $A$; у него $9$ «партнёров», каждый из которых ему знаком или незнаком. Обозначим через $K$ множество знакомых $A$, через $S$ — множество незнакомых, так что $$|K|+|S|=9 .$$\n\n**Ключевое наблюдение.** Либо $|K|\\ge4$, либо $|S|\\ge6$: если $|K|\\le3$, то $|S|\\ge6$.\n\n**Случай 1: $|K|\\ge4$.** Рассмотрим четверых знакомых $A$.\n\nЕсли какие-то двое из них знакомы между собой, то они вместе с $A$ дают **троих попарно знакомых** ✓\n\nИначе эти четверо попарно незнакомы — искомая четвёрка ✓\n\n**Случай 2: $|S|\\ge6$.** Рассмотрим шестерых незнакомых с $A$.\n\nСреди любых шести человек есть трое попарно знакомых или трое попарно незнакомых (это $R(3,3)\\le6$).\n\nЕсли есть трое попарно знакомых — готово ✓\n\nЕсли есть трое попарно незнакомых, то они все незнакомы ещё и с $A$, значит вместе с ним образуют **четвёрку попарно незнакомых** ✓\n\nВо всех случаях требуемая конфигурация найдена. $\\blacksquare$\n\n**Что это за число.** Мы доказали $R(3,4)\\le10$; на самом деле $R(3,4)=9$, но доказательство точной оценки заметно тоньше.\n\n**Схема рассуждения** типична для чисел Рамсея: $$R(s,t)\\ \\le\\ R(s-1,t)+R(s,t-1) ,$$ и здесь мы применили её в виде $R(3,4)\\le R(2,4)+R(3,3)=4+6=10$.",
+    "en": "Take a person $A$; they have $9$ others, each either an acquaintance or a stranger. Let $K$ be the acquaintances of $A$ and $S$ the strangers, so $$|K|+|S|=9 .$$\n\n**Key observation.** Either $|K|\\ge4$ or $|S|\\ge6$: if $|K|\\le3$ then $|S|\\ge6$.\n\n**Case 1: $|K|\\ge4$.** Look at four acquaintances of $A$.\n\nIf two of them know each other, they together with $A$ give **three mutual acquaintances** ✓\n\nOtherwise those four are pairwise strangers — the required foursome ✓\n\n**Case 2: $|S|\\ge6$.** Look at six strangers to $A$.\n\nAmong any six people there are three mutual acquaintances or three mutual strangers ($R(3,3)\\le6$).\n\nThree mutual acquaintances — done ✓\n\nThree mutual strangers are also strangers to $A$, so with $A$ they form **four mutual strangers** ✓\n\nIn every case the configuration exists. $\\blacksquare$\n\n**Which number is this.** We proved $R(3,4)\\le10$; in fact $R(3,4)=9$, but the exact bound needs a subtler argument.\n\n**The scheme** is typical for Ramsey numbers: $$R(s,t)\\ \\le\\ R(s-1,t)+R(s,t-1) ,$$ used here as $R(3,4)\\le R(2,4)+R(3,3)=4+6=10$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "На плоскости отмечены пять точек, никакие три из которых не лежат на одной прямой. Докажите, что какие-то четыре из них — вершины выпуклого четырёхугольника.",
+    "en": "Five points are marked in the plane, no three collinear. Prove that four of them are the vertices of a convex quadrilateral."
+   },
+   "hint": {
+    "ru": "Рассмотрите выпуклую оболочку пяти точек.",
+    "en": "Consider the convex hull of the five points."
+   },
+   "sol": {
+    "ru": "Рассмотрим **выпуклую оболочку** данных пяти точек — наименьший выпуклый многоугольник, их содержащий. Так как никакие три точки не лежат на одной прямой, его вершинами являются какие-то из наших точек, и их может быть $3$, $4$ или $5$.\n\n**Случай A: оболочка — пятиугольник.** Тогда любые четыре его вершины образуют выпуклый четырёхугольник ✓\n\n**Случай B: оболочка — четырёхугольник.** Он сам и есть искомый ✓\n\n**Случай C: оболочка — треугольник $ABC$.** Тогда две оставшиеся точки $D$ и $E$ лежат строго внутри треугольника.\n\nПроведём прямую через $D$ и $E$. Она делит плоскость на две полуплоскости, а вершины $A$, $B$, $C$ на этой прямой не лежат (иначе три точки были бы коллинеарны). Значит по принципу Дирихле какие-то **две** вершины, скажем $A$ и $B$, попали в одну полуплоскость.\n\n**Утверждение:** тогда $A$, $B$, $D$, $E$ — вершины выпуклого четырёхугольника (в подходящем порядке).\n\nДействительно, отрезок $DE$ лежит на прямой, а точки $A$ и $B$ — по одну сторону от неё. Рассмотрим четырёхугольник с вершинами $A$, $B$ и $D$, $E$, взятыми в порядке обхода. Его диагонали — это отрезок, соединяющий $A$ или $B$ с одной из точек $D$, $E$, и они пересекаются: одна пара противоположных вершин ($D$ и $E$) лежит на прямой, вторая пара ($A$ и $B$) — по одну сторону, и обход по границе не имеет самопересечений.\n\nФормально: четырёхугольник выпуклый тогда и только тогда, когда его диагонали пересекаются внутри; здесь это выполняется по построению, если занумеровать вершины в порядке обхода выпуклой оболочки набора $\\{A,B,D,E\\}$ — а её вершинами являются все четыре точки, поскольку ни одна из них не лежит внутри треугольника, образованного тремя другими (точки $D$ и $E$ лежат внутри $ABC$, но не внутри треугольников, составленных из $A$, $B$ и одной из них, — иначе прямая $DE$ разделила бы $A$ и $B$). ✓\n\n$\\blacksquare$\n\n**История.** Это задача Эстер Клейн, известная как «задача о счастливом конце»: обсуждение привело к женитьбе Дьёрдя Секереша и Эстер Клейн.\n\n**Обобщение (гипотеза Эрдёша — Секереша).** Для выпуклого $n$-угольника достаточно $2^{\\,n-2}+1$ точек в общем положении; при $n=5$ это $9$ точек, и это доказано.",
+    "en": "Consider the **convex hull** of the five points — the smallest convex polygon containing them. Since no three are collinear, its vertices are among our points, and there are $3$, $4$ or $5$ of them.\n\n**Case A: the hull is a pentagon.** Any four of its vertices form a convex quadrilateral ✓\n\n**Case B: the hull is a quadrilateral.** It is the required one ✓\n\n**Case C: the hull is a triangle $ABC$.** The remaining two points $D$ and $E$ lie strictly inside it.\n\nDraw the line through $D$ and $E$. It splits the plane into two half-planes, and none of $A$, $B$, $C$ lies on it (else three points would be collinear). By the pigeonhole principle **two** vertices, say $A$ and $B$, lie in the same half-plane.\n\n**Claim:** then $A$, $B$, $D$, $E$ are the vertices of a convex quadrilateral (in a suitable order).\n\nIndeed, the segment $DE$ lies on the line while $A$ and $B$ are on one side of it. Take the convex hull of $\\{A,B,D,E\\}$: all four points are its vertices, since none lies inside the triangle formed by the other three (the points $D$, $E$ lie inside $ABC$, but neither lies inside a triangle made from $A$, $B$ and the other — that would force the line $DE$ to separate $A$ from $B$). A four-point set all of whose points are hull vertices is exactly a convex quadrilateral ✓\n\n$\\blacksquare$\n\n**History.** This is Esther Klein’s problem, known as the \"happy ending problem\": the discussion around it led to the marriage of George Szekeres and Esther Klein.\n\n**Generalisation (Erdős–Szekeres conjecture).** For a convex $n$-gon, $2^{\\,n-2}+1$ points in general position should suffice; for $n=5$ this means $9$ points, and that case is proved."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Числа $1,2,3,4,5$ покрашены в два цвета. Докажите, что найдутся числа $x$, $y$, $z$ одного цвета (не обязательно различные) с $x+y=z$.",
+    "en": "The numbers $1,2,3,4,5$ are coloured in two colours. Prove that there exist $x$, $y$, $z$ of the same colour (not necessarily distinct) with $x+y=z$."
+   },
+   "hint": {
+    "ru": "Начните с цвета единицы и последовательно выводите цвета остальных.",
+    "en": "Start from the colour of $1$ and deduce the rest step by step."
+   },
+   "sol": {
+    "ru": "Предположим противное: одноцветного решения уравнения $x+y=z$ нет. Цвета назовём К и С; они равноправны, поэтому можно считать, что $$1\\ \\text{— красное}.$$\n\n**Шаг 1: цвет двойки.** Если бы $2$ было красным, то тройка $$1+1=2 $$ была бы одноцветной ✗ Значит $2$ — синее.\n\n**Шаг 2: цвет четвёрки.** Если бы $4$ было синим, то $$2+2=4 $$ дало бы одноцветную тройку ✗ Значит $4$ — красное.\n\n**Шаг 3: цвет тройки.** Если бы $3$ было красным, то $$1+3=4 $$ — все три числа красные ✗ Значит $3$ — синее.\n\n**Шаг 4: цвет пятёрки.** Числа $2$ и $3$ синие, и $$2+3=5 ,$$ поэтому $5$ не может быть синим. Значит $5$ — красное.\n\n**Противоречие.** Теперь $1$, $4$ и $5$ — все красные, а $$1+4=5 \\quad ✗$$\n\nПротиворечие завершает доказательство. $\\blacksquare$\n\n**Точность.** Для чисел $1,\\dots,4$ утверждение неверно: покрасив $1,4$ в красный, а $2,3$ — в синий, одноцветного решения не получим (проверьте: $1+1=2$ разноцветно, $2+2=4$ разноцветно, $1+3=4$ разноцветно).\n\n**Теорема Шура.** Для любого числа цветов $k$ существует $N$, при котором любая раскраска чисел $1,\\dots,N$ в $k$ цветов содержит одноцветное решение уравнения $x+y=z$. Мы разобрали случай $k=2$, где минимальное $N$ равно $5$.",
+    "en": "Suppose not: there is no monochromatic solution of $x+y=z$. Call the colours R and B; they are interchangeable, so we may assume $$1\\ \\text{is red}.$$\n\n**Step 1: the colour of $2$.** If $2$ were red, then $$1+1=2 $$ would be monochromatic ✗ So $2$ is blue.\n\n**Step 2: the colour of $4$.** If $4$ were blue, then $$2+2=4 $$ would be monochromatic ✗ So $4$ is red.\n\n**Step 3: the colour of $3$.** If $3$ were red, then $$1+3=4 $$ would be all red ✗ So $3$ is blue.\n\n**Step 4: the colour of $5$.** Both $2$ and $3$ are blue and $$2+3=5 ,$$ so $5$ cannot be blue. Hence $5$ is red.\n\n**Contradiction.** Now $1$, $4$, $5$ are all red while $$1+4=5 \\quad ✗$$\n\nThe contradiction completes the proof. $\\blacksquare$\n\n**Sharpness.** For $1,\\dots,4$ the claim fails: colour $1,4$ red and $2,3$ blue and check that $1+1=2$, $2+2=4$, $1+3=4$ all mix colours.\n\n**Schur’s theorem.** For any number of colours $k$ there is an $N$ such that every $k$-colouring of $1,\\dots,N$ has a monochromatic solution of $x+y=z$. We treated $k=2$, where the least such $N$ is $5$."
+   }
   }
  ]
 };

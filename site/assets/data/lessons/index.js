@@ -165,7 +165,7 @@ window.LESSON_INDEX = [
    "ru": "Расстояния, прямые, окружности и площади в координатах — и умение выбрать систему так, чтобы задача стала вычислением.",
    "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 4
  },
  {
@@ -179,7 +179,7 @@ window.LESSON_INDEX = [
    "ru": "Правила суммы и произведения, перестановки и сочетания, треугольник Паскаля, включения-исключения и двойной подсчёт.",
    "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {
@@ -193,7 +193,7 @@ window.LESSON_INDEX = [
    "ru": "Самое простое утверждение в математике — и одно из самых сильных: как выбрать «клетки» так, чтобы задача решилась сама.",
    "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself."
   },
-  "problems": 20,
+  "problems": 50,
   "sections": 5
  },
  {

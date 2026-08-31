@@ -739,6 +739,486 @@ window.LESSONS[13] = {
     "ru": "Обозначим через $A$, $H$, $\\Phi$ множества знающих английский, немецкий и французский.\n\nПо формуле включений-исключений $$|A\\cup H\\cup\\Phi|=|A|+|H|+|\\Phi|-|A\\cap H|-|A\\cap\\Phi|-|H\\cap\\Phi|+|A\\cap H\\cap\\Phi| .$$ Подставляем: $$25+20+15-12-8-6+4=38 .$$\n\nЗначит хотя бы один язык знают $38$ студентов, а не знают ни одного $$40-38=2 .$$\n\n**Ответ:** $2$ студента.\n\n*Проверка по частям.* Ровно три языка знают $4$ человека. Ровно два языка: по каждой паре надо вычесть тех, кто знает все три, — получаем $(12-4)+(8-4)+(6-4)=8+4+2=14$. Ровно один язык: например, только английский знают $25-12-8+4=9$ человек (вычли обе пары и вернули тройное пересечение, посчитанное дважды); аналогично только немецкий — $20-12-6+4=6$, только французский — $15-8-6+4=5$; всего $9+6+5=20$. Итог: $4+14+20=38$ ✓",
     "en": "Write $A$, $G$, $F$ for the sets of students knowing English, German and French.\n\nInclusion–exclusion gives $$|A\\cup G\\cup F|=|A|+|G|+|F|-|A\\cap G|-|A\\cap F|-|G\\cap F|+|A\\cap G\\cap F| ,$$ that is $$25+20+15-12-8-6+4=38 .$$\n\nSo $38$ students know at least one language, and $$40-38=2$$ know none.\n\n**Answer:** $2$ students.\n\n*Check by parts.* Exactly three languages: $4$ students. Exactly two: for each pair subtract those knowing all three, giving $(12-4)+(8-4)+(6-4)=8+4+2=14$. Exactly one: English only is $25-12-8+4=9$ (both pairs subtracted, the triple intersection added back once because it was removed twice); likewise German only is $20-12-6+4=6$ and French only $15-8-6+4=5$, so $9+6+5=20$. In total $4+14+20=38$ ✓"
    }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько всего двузначных чисел?",
+    "en": "How many two-digit numbers are there?"
+   },
+   "hint": {
+    "ru": "Первая цифра не может быть нулём.",
+    "en": "The first digit cannot be zero."
+   },
+   "sol": {
+    "ru": "Первая цифра выбирается из $1,\\dots,9$ — девять способов; вторая из $0,\\dots,9$ — десять способов.\n\nПо правилу произведения $$9\\cdot10=90 .$$\n\n**Проверка:** это числа от $10$ до $99$, их $99-10+1=90$ ✓\n\n**Ответ:** $90$.",
+    "en": "The first digit is chosen from $1,\\dots,9$ — nine ways; the second from $0,\\dots,9$ — ten ways.\n\nBy the multiplication rule $$9\\cdot10=90 .$$\n\n**Check:** these are the numbers $10$ to $99$, and $99-10+1=90$ ✓\n\n**Answer:** $90$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколькими способами можно выбрать одну из $5$ рубашек и одни из $3$ брюк?",
+    "en": "In how many ways can one choose one of $5$ shirts and one of $3$ pairs of trousers?"
+   },
+   "hint": {
+    "ru": "Правило произведения.",
+    "en": "The multiplication rule."
+   },
+   "sol": {
+    "ru": "Выбор рубашки и выбор брюк независимы, поэтому по правилу произведения $$5\\cdot3=15 .$$\n\n**Ответ:** $15$.\n\n**Правило произведения:** если первый выбор делается $m$ способами, а второй (независимо от первого) $n$ способами, то вместе — $mn$ способами.",
+    "en": "The two choices are independent, so by the multiplication rule $$5\\cdot3=15 .$$\n\n**Answer:** $15$.\n\n**The multiplication rule:** if the first choice can be made in $m$ ways and the second (independently) in $n$ ways, then together there are $mn$ ways."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько различных «слов» можно составить, переставляя буквы слова «МИР»?",
+    "en": "How many different \"words\" can be made by rearranging the letters of \"МИР\"?"
+   },
+   "hint": {
+    "ru": "Все буквы различны.",
+    "en": "All the letters are distinct."
+   },
+   "sol": {
+    "ru": "Все три буквы различны, значит речь о числе перестановок трёх объектов: $$3!=3\\cdot2\\cdot1=6 .$$\n\n**Выпишем их:** МИР, МРИ, ИМР, ИРМ, РМИ, РИМ ✓\n\n**Ответ:** $6$.",
+    "en": "All three letters are different, so we count permutations of three objects: $$3!=3\\cdot2\\cdot1=6 .$$\n\n**Listing them:** МИР, МРИ, ИМР, ИРМ, РМИ, РИМ ✓\n\n**Answer:** $6$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько чётных чисел среди $1,2,\\dots,100$?",
+    "en": "How many even numbers are there among $1,2,\\dots,100$?"
+   },
+   "hint": {
+    "ru": "Чётные — это $2k$.",
+    "en": "The even ones are $2k$."
+   },
+   "sol": {
+    "ru": "Чётные числа в этом промежутке — это $$2,\\ 4,\\ 6,\\ \\dots,\\ 100 ,$$ то есть $2k$ при $k=1,2,\\dots,50$.\n\nЗначит их ровно $50$.\n\n**Ответ:** $50$.\n\n**Приём.** Чтобы посчитать элементы арифметической прогрессии, поделите разность крайних на шаг и прибавьте единицу: $\\dfrac{100-2}{2}+1=50$ ✓",
+    "en": "The even numbers here are $$2,\\ 4,\\ 6,\\ \\dots,\\ 100 ,$$ i.e. $2k$ for $k=1,2,\\dots,50$.\n\nSo there are exactly $50$.\n\n**Answer:** $50$.\n\n**Technique.** To count an arithmetic progression, divide the range by the step and add one: $\\dfrac{100-2}{2}+1=50$ ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Из $8$ человек надо выбрать двоих дежурных. Сколькими способами?",
+    "en": "Two people on duty are to be chosen from $8$. In how many ways?"
+   },
+   "hint": {
+    "ru": "Порядок не важен — это сочетания.",
+    "en": "The order does not matter — combinations."
+   },
+   "sol": {
+    "ru": "Дежурные не различаются по ролям, значит порядок не важен: $$\\binom82=\\frac{8\\cdot7}{2}=28 .$$\n\n**Ответ:** $28$.\n\n**Сравните.** Если бы одного назначали старшим, порядок стал бы важен, и получилось бы $8\\cdot7=56$ — ровно вдвое больше.",
+    "en": "The two roles are identical, so order does not matter: $$\\binom82=\\frac{8\\cdot7}{2}=28 .$$\n\n**Answer:** $28$.\n\n**Compare.** If one of them were made senior, order would matter and the count would be $8\\cdot7=56$ — exactly twice as many."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 1,
+   "q": {
+    "ru": "Сколько различных результатов может дать подбрасывание трёх монет?",
+    "en": "How many different outcomes are possible when tossing three coins?"
+   },
+   "hint": {
+    "ru": "У каждой монеты два исхода.",
+    "en": "Each coin has two outcomes."
+   },
+   "sol": {
+    "ru": "Каждая монета даёт два исхода независимо от остальных, поэтому $$2\\cdot2\\cdot2=2^{3}=8 .$$\n\n**Выпишем:** ООО, ООР, ОРО, ОРР, РОО, РОР, РРО, РРР ✓\n\n**Ответ:** $8$.\n\n**Обобщение:** для $n$ монет получится $2^{n}$ исходов — столько же, сколько подмножеств у множества из $n$ элементов.",
+    "en": "Each coin gives two outcomes independently of the others, so $$2\\cdot2\\cdot2=2^{3}=8 .$$\n\n**Listing:** HHH, HHT, HTH, HTT, THH, THT, TTH, TTT ✓\n\n**Answer:** $8$.\n\n**Generalisation:** for $n$ coins there are $2^{n}$ outcomes — as many as the subsets of an $n$-element set."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько четырёхзначных чисел можно составить из цифр $1,2,\\dots,9$ без повторений?",
+    "en": "How many four-digit numbers can be made from the digits $1,2,\\dots,9$ without repetition?"
+   },
+   "hint": {
+    "ru": "Каждая следующая цифра выбирается из оставшихся.",
+    "en": "Each next digit is chosen from those left."
+   },
+   "sol": {
+    "ru": "Первую цифру можно выбрать девятью способами, вторую — восемью (одна уже занята), третью — семью, четвёртую — шестью: $$9\\cdot8\\cdot7\\cdot6=3024 .$$\n\n**Ответ:** $3024$.\n\n**В обозначениях размещений:** $$A_9^{4}=\\frac{9!}{5!}=3024 \\quad\\checkmark$$\n\n**Заметьте:** нуля среди цифр нет, поэтому ограничения «первая цифра не ноль» не возникает.",
+    "en": "The first digit can be chosen in nine ways, the second in eight (one is used), the third in seven, the fourth in six: $$9\\cdot8\\cdot7\\cdot6=3024 .$$\n\n**Answer:** $3024$.\n\n**In arrangement notation:** $$A_9^{4}=\\frac{9!}{5!}=3024 \\quad\\checkmark$$\n\n**Note:** zero is not among the digits, so no \"leading digit\" restriction arises."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколькими способами можно рассадить четырёх человек за круглым столом? (Рассадки, отличающиеся поворотом, считаются одинаковыми.)",
+    "en": "In how many ways can four people be seated at a round table? (Seatings differing by a rotation count as the same.)"
+   },
+   "hint": {
+    "ru": "Зафиксируйте одного человека.",
+    "en": "Fix one person in place."
+   },
+   "sol": {
+    "ru": "Посадим одного человека на любое место — этим мы «убираем» повороты, ведь любую рассадку можно повернуть так, чтобы он оказался именно там.\n\nОстальных троих рассаживаем по оставшимся местам произвольно: $$3!=6 .$$\n\n**Ответ:** $6$.\n\n**Общая формула:** для $n$ человек за круглым столом получается $(n-1)!$ рассадок.\n\n**Осторожно:** если стол можно ещё и перевернуть (например, речь об ожерелье из бусин), число снова уменьшается вдвое.",
+    "en": "Seat one person anywhere — this removes the rotations, since any seating can be rotated to put that person there.\n\nThe other three fill the remaining seats freely: $$3!=6 .$$\n\n**Answer:** $6$.\n\n**General formula:** $n$ people at a round table give $(n-1)!$ seatings.\n\n**Careful:** if the arrangement can also be flipped over (a necklace of beads, say), the count halves again."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько существует трёхбуквенных «слов» из букв алфавита, содержащего $26$ букв, если буквы не повторяются?",
+    "en": "How many three-letter \"words\" can be made from a $26$-letter alphabet if letters do not repeat?"
+   },
+   "hint": {
+    "ru": "Правило произведения с уменьшающимся выбором.",
+    "en": "The multiplication rule with a shrinking pool."
+   },
+   "sol": {
+    "ru": "Первую букву выбираем $26$ способами, вторую $25$, третью $24$: $$26\\cdot25\\cdot24=15\\,600 .$$\n\n**Ответ:** $15\\,600$.\n\n**Сравните с повторениями:** если буквы можно повторять, получилось бы $26^{3}=17\\,576$ — заметно больше.",
+    "en": "The first letter can be chosen in $26$ ways, the second in $25$, the third in $24$: $$26\\cdot25\\cdot24=15\\,600 .$$\n\n**Answer:** $15\\,600$.\n\n**Compare with repetition allowed:** that would give $26^{3}=17\\,576$ — noticeably more."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколькими способами можно пройти из левого нижнего угла сетки $3\\times3$ в правый верхний, двигаясь только вправо и вверх по линиям сетки?",
+    "en": "In how many ways can one go from the bottom-left corner of a $3\\times3$ grid to the top-right corner, moving only right and up along the grid lines?"
+   },
+   "hint": {
+    "ru": "Каждый путь — последовательность из трёх «вправо» и трёх «вверх».",
+    "en": "Each path is a sequence of three \"rights\" and three \"ups\"."
+   },
+   "sol": {
+    "ru": "Любой путь состоит ровно из шести шагов: трёх шагов вправо и трёх вверх, в каком-то порядке. Путь полностью определяется тем, **на каких местах** стоят шаги вправо.\n\nЗначит число путей равно числу способов выбрать $3$ места из $6$: $$\\binom63=\\frac{6\\cdot5\\cdot4}{3\\cdot2\\cdot1}=20 .$$\n\n**Ответ:** $20$.\n\n**Общая формула:** для сетки $m\\times n$ получается $\\dbinom{m+n}{m}$ путей.\n\n**Проверка на маленьком случае:** для сетки $1\\times1$ формула даёт $\\binom21=2$ — действительно два пути ✓",
+    "en": "Every path consists of exactly six steps: three to the right and three up, in some order. A path is determined by **which positions** carry the rightward steps.\n\nSo the number of paths is the number of ways to choose $3$ positions out of $6$: $$\\binom63=20 .$$\n\n**Answer:** $20$.\n\n**General formula:** an $m\\times n$ grid gives $\\dbinom{m+n}{m}$ paths.\n\n**Check on a small case:** for a $1\\times1$ grid the formula gives $\\binom21=2$ — indeed two paths ✓"
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "На окружности отмечены $8$ точек. Сколько треугольников с вершинами в этих точках можно построить?",
+    "en": "Eight points are marked on a circle. How many triangles have all their vertices among these points?"
+   },
+   "hint": {
+    "ru": "Никакие три из них не лежат на одной прямой.",
+    "en": "No three of them are collinear."
+   },
+   "sol": {
+    "ru": "Треугольник задаётся тройкой вершин, а порядок вершин неважен: $$\\binom83=\\frac{8\\cdot7\\cdot6}{3\\cdot2\\cdot1}=56 .$$\n\nНикакие три точки окружности не лежат на одной прямой, поэтому каждая тройка действительно даёт невырожденный треугольник.\n\n**Ответ:** $56$.\n\n**Важная оговорка.** Если бы точки лежали как попало, из общего числа $\\binom83$ пришлось бы вычесть коллинеарные тройки.",
+    "en": "A triangle is a set of three vertices, and the order does not matter: $$\\binom83=56 .$$\n\nNo three points of a circle are collinear, so every triple really gives a non-degenerate triangle.\n\n**Answer:** $56$.\n\n**An important caveat.** For points in general position one would have to subtract the collinear triples from $\\binom83$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько трёхзначных чисел делится на $5$?",
+    "en": "How many three-digit numbers are divisible by $5$?"
+   },
+   "hint": {
+    "ru": "Они образуют арифметическую прогрессию.",
+    "en": "They form an arithmetic progression."
+   },
+   "sol": {
+    "ru": "Наименьшее трёхзначное кратное пяти — $100$, наибольшее — $995$. Они образуют арифметическую прогрессию с шагом $5$: $$100,\\ 105,\\ \\dots,\\ 995 .$$\n\nЧисло членов: $$\\frac{995-100}{5}+1=179+1=180 .$$\n\n**Ответ:** $180$.\n\n**Другой подсчёт.** Такие числа — это $5k$ при $20\\le k\\le199$, то есть $199-20+1=180$ ✓",
+    "en": "The smallest three-digit multiple of five is $100$ and the largest $995$. They form an arithmetic progression of step $5$: $$100,\\ 105,\\ \\dots,\\ 995 .$$\n\nThe number of terms is $$\\frac{995-100}{5}+1=180 .$$\n\n**Answer:** $180$.\n\n**Another count.** They are $5k$ with $20\\le k\\le199$, i.e. $199-20+1=180$ ✓"
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколькими способами можно раздать $10$ одинаковых конфет троим детям (кому-то может не достаться ничего)?",
+    "en": "In how many ways can $10$ identical sweets be given to three children (some may get none)?"
+   },
+   "hint": {
+    "ru": "Метод «шаров и перегородок».",
+    "en": "Stars and bars."
+   },
+   "sol": {
+    "ru": "Изобразим конфеты десятью звёздочками и поставим между ними две перегородки, разделяющие доли трёх детей: $$\\star\\star\\mid\\star\\star\\star\\star\\star\\mid\\star\\star\\star $$ — эта картинка означает $2$, $5$ и $3$ конфеты.\n\nЛюбая расстановка $10$ звёздочек и $2$ перегородок в ряд из $12$ мест задаёт раздачу, и наоборот. Значит достаточно выбрать $2$ места под перегородки: $$\\binom{12}{2}=\\frac{12\\cdot11}{2}=66 .$$\n\n**Ответ:** $66$.\n\n**Общая формула:** число неотрицательных целых решений уравнения $x_1+\\dots+x_k=n$ равно $\\dbinom{n+k-1}{k-1}$.",
+    "en": "Draw the sweets as ten stars and insert two bars separating the three children’s shares: $$\\star\\star\\mid\\star\\star\\star\\star\\star\\mid\\star\\star\\star $$ — this picture means $2$, $5$ and $3$ sweets.\n\nEvery arrangement of $10$ stars and $2$ bars in a row of $12$ places is a distribution, and vice versa. So we just choose the $2$ places for the bars: $$\\binom{12}{2}=66 .$$\n\n**Answer:** $66$.\n\n**General formula:** the number of non-negative integer solutions of $x_1+\\dots+x_k=n$ is $\\dbinom{n+k-1}{k-1}$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Из $6$ мужчин и $4$ женщин надо выбрать комиссию из $5$ человек, в которой ровно две женщины. Сколькими способами?",
+    "en": "A committee of $5$ is to be chosen from $6$ men and $4$ women, with exactly two women. In how many ways?"
+   },
+   "hint": {
+    "ru": "Выберите женщин и мужчин по отдельности.",
+    "en": "Choose the women and the men separately."
+   },
+   "sol": {
+    "ru": "Выбираем двух женщин из четырёх и троих мужчин из шести — эти выборы независимы: $$\\binom42\\cdot\\binom63=6\\cdot20=120 .$$\n\n**Ответ:** $120$.\n\n**Проверка здравым смыслом.** Всего комиссий из пяти человек — $\\binom{10}{5}=252$; наш ответ должен быть меньше, и он меньше ✓\n\n**Полезное упражнение:** посчитайте, сколько комиссий содержат **хотя бы одну** женщину; ответ $252-\\binom65=252-6=246$.",
+    "en": "Choose two women out of four and three men out of six — independent choices: $$\\binom42\\cdot\\binom63=6\\cdot20=120 .$$\n\n**Answer:** $120$.\n\n**Sanity check.** There are $\\binom{10}{5}=252$ committees of five in total, so our answer should be smaller — and it is ✓\n\n**A useful exercise:** count the committees with **at least one** woman; the answer is $252-\\binom65=246$."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Сколько различных перестановок букв слова «МАТЕМАТИКА»?",
+    "en": "How many distinct rearrangements does the word \"МАТЕМАТИКА\" have?"
+   },
+   "hint": {
+    "ru": "Некоторые буквы повторяются.",
+    "en": "Some letters repeat."
+   },
+   "sol": {
+    "ru": "В слове $10$ букв, среди них $$\\text{А}\\ \\text{— трижды},\\qquad \\text{М}\\ \\text{— дважды},\\qquad \\text{Т}\\ \\text{— дважды},$$ а буквы Е, И, К встречаются по одному разу.\n\nЕсли бы все буквы были различны, перестановок было бы $10!$. Но перестановки одинаковых букв между собой ничего не меняют, поэтому надо поделить: $$\\frac{10!}{3!\\cdot2!\\cdot2!}=\\frac{3\\,628\\,800}{6\\cdot2\\cdot2}=\\frac{3\\,628\\,800}{24}=151\\,200 .$$\n\n**Ответ:** $151\\,200$.\n\n**Общая формула:** для слова длины $n$, в котором буквы встречаются $k_1,k_2,\\dots$ раз, число перестановок равно $\\dfrac{n!}{k_1!\\,k_2!\\cdots}$.",
+    "en": "The word has $10$ letters, among them $$\\text{А}\\ \\text{three times},\\qquad \\text{М}\\ \\text{twice},\\qquad \\text{Т}\\ \\text{twice},$$ while Е, И, К appear once each.\n\nIf all letters were distinct there would be $10!$ arrangements. But permuting identical letters changes nothing, so we divide: $$\\frac{10!}{3!\\cdot2!\\cdot2!}=\\frac{3\\,628\\,800}{24}=151\\,200 .$$\n\n**Answer:** $151\\,200$.\n\n**General formula:** for a word of length $n$ whose letters occur $k_1,k_2,\\dots$ times, the count is $\\dfrac{n!}{k_1!\\,k_2!\\cdots}$."
+   }
+  },
+  {
+   "src": "Школьный тур · уровень / School-round level",
+   "lvl": 2,
+   "q": {
+    "ru": "Из $10$ человек выбирают двоих. Сколькими способами это можно сделать так, чтобы двое конкретных людей не были выбраны оба сразу?",
+    "en": "Two people are chosen from $10$. In how many ways can this be done so that two particular people are not both chosen?"
+   },
+   "hint": {
+    "ru": "Посчитайте все способы и вычтите «плохие».",
+    "en": "Count everything and subtract the bad case."
+   },
+   "sol": {
+    "ru": "**Всего** способов выбрать двоих: $$\\binom{10}{2}=45 .$$\n\n**«Плохих»** способов, когда выбраны именно эти двое, ровно один.\n\nЗначит подходящих $$45-1=44 .$$\n\n**Ответ:** $44$.\n\n**Приём «от противного».** Часто проще посчитать все варианты и вычесть запрещённые, чем перебирать разрешённые напрямую.",
+    "en": "**In total** there are $$\\binom{10}{2}=45 $$ ways to choose two.\n\n**The bad case** — choosing exactly those two — occurs once.\n\nSo the answer is $$45-1=44 .$$\n\n**Answer:** $44$.\n\n**Complementary counting.** It is often easier to count everything and subtract the forbidden cases than to enumerate the allowed ones directly."
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколько пятизначных чисел, у которых цифры идут в неубывающем порядке?",
+    "en": "How many five-digit numbers have their digits in non-decreasing order?"
+   },
+   "hint": {
+    "ru": "Первая цифра не ноль, значит все цифры не меньше единицы; это выбор мультимножества.",
+    "en": "The leading digit is non-zero, so all digits are at least one; this is a multiset choice."
+   },
+   "sol": {
+    "ru": "Пусть цифры числа — $d_1\\le d_2\\le\\dots\\le d_5$. Первая цифра не ноль, значит $d_1\\ge1$, а тогда и все остальные не меньше единицы.\n\nЗначит нам нужно выбрать **мультимножество** из $5$ цифр из набора $\\{1,2,\\dots,9\\}$ — порядок восстанавливается однозначно (по возрастанию).\n\n**Шары и перегородки.** Число мультимножеств размера $k$ из $n$ типов равно $$\\binom{n+k-1}{k} .$$ Здесь $n=9$, $k=5$: $$\\binom{13}{5}=1287 .$$\n\n**Ответ:** $1287$.\n\n**Проверка на маленьком случае.** Двузначных чисел с неубывающими цифрами должно быть $\\binom{10}{2}=45$: и правда, это пары $1\\le d_1\\le d_2\\le9$, то есть $9+8+\\dots+1=45$ ✓\n\n**Сравните** со **строго** возрастающими: там всё проще, $\\dbinom95=126$.",
+    "en": "Let the digits be $d_1\\le d_2\\le\\dots\\le d_5$. The leading digit is non-zero, so $d_1\\ge1$, and hence all digits are at least one.\n\nSo we must choose a **multiset** of $5$ digits from $\\{1,2,\\dots,9\\}$ — the order is then forced (increasing).\n\n**Stars and bars.** The number of multisets of size $k$ from $n$ types is $$\\binom{n+k-1}{k} .$$ Here $n=9$, $k=5$: $$\\binom{13}{5}=1287 .$$\n\n**Answer:** $1287$.\n\n**Check on a small case.** Two-digit numbers with non-decreasing digits should number $\\binom{10}{2}=45$: indeed these are pairs $1\\le d_1\\le d_2\\le9$, i.e. $9+8+\\dots+1=45$ ✓\n\n**Compare** with **strictly** increasing digits: simply $\\dbinom95=126$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Четверо друзей сдали в гардероб четыре шляпы, а при выходе разобрали их случайно. Сколькими способами могло случиться, что никто не получил свою шляпу?",
+    "en": "Four friends leave four hats in a cloakroom and pick them up at random. In how many ways can it happen that nobody gets their own hat?"
+   },
+   "hint": {
+    "ru": "Это число беспорядков; посчитайте включениями и исключениями.",
+    "en": "This is the derangement number; count by inclusion–exclusion."
+   },
+   "sol": {
+    "ru": "Обозначим через $A_i$ множество перестановок, в которых $i$-й человек получил **свою** шляпу. Нам нужно число перестановок вне объединения всех $A_i$.\n\n**Считаем размеры.** Если зафиксировать, что $k$ конкретных человек получили свои шляпы, остальные $4-k$ шляп распределяются как угодно: $(4-k)!$ способов. Выбрать этих $k$ человек можно $\\binom4k$ способами.\n\n**Формула включений и исключений.** $$D_4=\\sum_{k=0}^{4}(-1)^{k}\\binom4k(4-k)!=24-4\\cdot6+6\\cdot2-4\\cdot1+1 .$$\n\nПосчитаем: $$24-24+12-4+1=9 .$$\n\n**Ответ:** $9$.\n\n**Проверка перебором** для трёх человек: $D_3=6-6+3-1=2$, и действительно из шести перестановок трёх элементов ровно две не имеют неподвижных точек ✓\n\n**Общая формула:** $$D_n=n!\\sum_{k=0}^{n}\\frac{(-1)^{k}}{k!}\\ \\approx\\ \\frac{n!}{e} ,$$ то есть примерно $37\\%$ всех перестановок — беспорядки.",
+    "en": "Let $A_i$ be the set of permutations in which person $i$ gets their **own** hat. We want the permutations outside the union of all $A_i$.\n\n**The sizes.** Fixing $k$ specific people to get their own hats leaves the other $4-k$ hats free: $(4-k)!$ ways, and the $k$ people can be chosen in $\\binom4k$ ways.\n\n**Inclusion–exclusion.** $$D_4=\\sum_{k=0}^{4}(-1)^{k}\\binom4k(4-k)!=24-24+12-4+1=9 .$$\n\n**Answer:** $9$.\n\n**Check by hand** for three people: $D_3=6-6+3-1=2$, and indeed exactly two of the six permutations of three elements have no fixed point ✓\n\n**General formula:** $$D_n=n!\\sum_{k=0}^{n}\\frac{(-1)^{k}}{k!}\\ \\approx\\ \\frac{n!}{e} ,$$ so roughly $37\\%$ of all permutations are derangements."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколькими способами можно расставить трёх ладей на шахматной доске $8\\times8$ так, чтобы они не били друг друга?",
+    "en": "In how many ways can three rooks be placed on an $8\\times8$ chessboard so that no two attack each other?"
+   },
+   "hint": {
+    "ru": "Ладьи не бьют друг друга, если все они в разных строках и разных столбцах.",
+    "en": "Rooks do not attack each other iff they occupy distinct rows and distinct columns."
+   },
+   "sol": {
+    "ru": "Ладьи не бьют друг друга ровно тогда, когда никакие две не стоят в одной строке и никакие две — в одном столбце.\n\n**Способ 1: по шагам.** Выберем три строки: $\\binom83=56$ способов. Выберем три столбца: тоже $\\binom83=56$. Теперь надо сопоставить строкам столбцы — это перестановка трёх элементов, $3!=6$ способов. Итого $$56\\cdot56\\cdot6=18\\,816 .$$\n\n**Способ 2: последовательная расстановка.** Первую ладью ставим на любую из $64$ клеток; вторая не должна попасть в её строку и столбец — остаётся $7\\cdot7=49$ клеток; третья — $6\\cdot6=36$. Ладьи неразличимы, поэтому делим на $3!$: $$\\frac{64\\cdot49\\cdot36}{6}=\\frac{112\\,896}{6}=18\\,816 \\quad\\checkmark$$\n\n**Ответ:** $18\\,816$.\n\n**Сравните** с задачей про восемь ладей: там ответ $8!=40\\,320$ — расставить их можно только «по одной в каждой строке и каждом столбце».",
+    "en": "Rooks are mutually non-attacking exactly when no two share a row and no two share a column.\n\n**Method 1: step by step.** Choose three rows: $\\binom83=56$ ways. Choose three columns: another $56$. Then match rows to columns — a permutation of three elements, $3!=6$ ways. In total $$56\\cdot56\\cdot6=18\\,816 .$$\n\n**Method 2: place them in turn.** The first rook goes on any of $64$ squares; the second must avoid its row and column, leaving $7\\cdot7=49$ squares; the third leaves $6\\cdot6=36$. The rooks are indistinguishable, so divide by $3!$: $$\\frac{64\\cdot49\\cdot36}{6}=18\\,816 \\quad\\checkmark$$\n\n**Answer:** $18\\,816$.\n\n**Compare** with the eight-rook problem, where the answer is $8!=40\\,320$ — one rook per row and per column."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколько чисел от $1$ до $1000$ не делятся ни на $2$, ни на $3$, ни на $5$?",
+    "en": "How many numbers from $1$ to $1000$ are divisible by none of $2$, $3$, $5$?"
+   },
+   "hint": {
+    "ru": "Формула включений и исключений.",
+    "en": "Inclusion–exclusion."
+   },
+   "sol": {
+    "ru": "Обозначим через $A$, $B$, $C$ множества чисел, кратных $2$, $3$, $5$ соответственно.\n\n**Размеры.** $$|A|=\\left\\lfloor\\frac{1000}{2}\\right\\rfloor=500,\\quad |B|=333,\\quad |C|=200 ;$$ $$|A\\cap B|=\\left\\lfloor\\frac{1000}{6}\\right\\rfloor=166,\\quad |A\\cap C|=100,\\quad |B\\cap C|=66 ;$$ $$|A\\cap B\\cap C|=\\left\\lfloor\\frac{1000}{30}\\right\\rfloor=33 .$$\n\n**Объединение.** $$|A\\cup B\\cup C|=500+333+200-166-100-66+33=734 .$$\n\n**Ответ.** Искомых чисел $$1000-734=266 .$$\n\n**Проверка через функцию Эйлера.** Доля чисел, взаимно простых с $30$, равна $$\\left(1-\\frac12\\right)\\left(1-\\frac13\\right)\\left(1-\\frac15\\right)=\\frac{4}{15} ,$$ и $\\dfrac{4}{15}\\cdot1000\\approx266{,}7$ — совпадает с точностью до округления ✓",
+    "en": "Let $A$, $B$, $C$ be the sets of multiples of $2$, $3$, $5$.\n\n**Sizes.** $$|A|=500,\\quad |B|=333,\\quad |C|=200 ;$$ $$|A\\cap B|=166,\\quad |A\\cap C|=100,\\quad |B\\cap C|=66 ;$$ $$|A\\cap B\\cap C|=33 .$$\n\n**The union.** $$|A\\cup B\\cup C|=500+333+200-166-100-66+33=734 .$$\n\n**Answer.** The count is $$1000-734=266 .$$\n\n**Check via Euler’s function.** The density of numbers coprime to $30$ is $$\\left(1-\\frac12\\right)\\left(1-\\frac13\\right)\\left(1-\\frac15\\right)=\\frac{4}{15} ,$$ and $\\dfrac{4}{15}\\cdot1000\\approx266.7$ — matching up to rounding ✓"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколько подмножеств множества $\\{1,2,\\dots,10\\}$ не содержат двух соседних чисел?",
+    "en": "How many subsets of $\\{1,2,\\dots,10\\}$ contain no two consecutive numbers?"
+   },
+   "hint": {
+    "ru": "Обозначьте ответ $a_n$ и разберите, входит ли в подмножество число $n$.",
+    "en": "Call the answer $a_n$ and split by whether $n$ is in the subset."
+   },
+   "sol": {
+    "ru": "Пусть $a_n$ — число подмножеств множества $\\{1,\\dots,n\\}$ без двух соседних элементов.\n\n**Рекуррентность.** Разберём два случая:\n\nчисло $n$ **не входит** — тогда остаётся любое подходящее подмножество из $\\{1,\\dots,n-1\\}$: $a_{n-1}$ штук;\n\nчисло $n$ **входит** — тогда $n-1$ входить не может, и остаётся подходящее подмножество из $\\{1,\\dots,n-2\\}$: $a_{n-2}$ штук.\n\nЗначит $$a_n=a_{n-1}+a_{n-2} .$$\n\n**Начальные значения.** $a_0=1$ (пустое множество), $a_1=2$ (пустое и $\\{1\\}$).\n\n**Считаем.** $$1,\\ 2,\\ 3,\\ 5,\\ 8,\\ 13,\\ 21,\\ 34,\\ 55,\\ 89,\\ 144 .$$\n\nЗначит $a_{10}=144$.\n\n**Ответ:** $144$.\n\n**Наблюдение.** Это числа Фибоначчи: $a_n=F_{n+2}$. Задача про «несоседние подмножества» — один из самых частых способов, которым Фибоначчи возникают в комбинаторике.",
+    "en": "Let $a_n$ be the number of subsets of $\\{1,\\dots,n\\}$ with no two consecutive elements.\n\n**Recursion.** Split by cases:\n\nif $n$ is **not** in the subset, what remains is any valid subset of $\\{1,\\dots,n-1\\}$: $a_{n-1}$ of them;\n\nif $n$ **is** in it, then $n-1$ cannot be, leaving a valid subset of $\\{1,\\dots,n-2\\}$: $a_{n-2}$ of them.\n\nHence $$a_n=a_{n-1}+a_{n-2} .$$\n\n**Initial values.** $a_0=1$ (the empty set), $a_1=2$ (empty and $\\{1\\}$).\n\n**Computing.** $$1,\\ 2,\\ 3,\\ 5,\\ 8,\\ 13,\\ 21,\\ 34,\\ 55,\\ 89,\\ 144 .$$\n\nSo $a_{10}=144$.\n\n**Answer:** $144$.\n\n**Observation.** These are Fibonacci numbers: $a_n=F_{n+2}$. The \"no two consecutive\" problem is one of the commonest ways Fibonacci numbers appear in combinatorics."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколькими способами можно рассадить $8$ человек за круглым столом, если двое из них не хотят сидеть рядом?",
+    "en": "In how many ways can $8$ people sit at a round table if two of them refuse to sit next to each other?"
+   },
+   "hint": {
+    "ru": "Посчитайте все рассадки и вычтите те, где эти двое рядом.",
+    "en": "Count all seatings and subtract those with the two together."
+   },
+   "sol": {
+    "ru": "**Все рассадки.** За круглым столом $8$ человек рассаживаются $(8-1)!=5040$ способами.\n\n**«Плохие» рассадки.** Склеим двух непримиримых в один «блок». Тогда за столом окажется $7$ объектов, и их рассадок $(7-1)!=720$. Внутри блока двое могут поменяться местами — ещё множитель $2$: $$720\\cdot2=1440 .$$\n\n**Ответ.** $$5040-1440=3600 .$$\n\n**Проверка на маленьком случае.** Для трёх человек, двое из которых не хотят сидеть рядом: всего $(3-1)!=2$ рассадки, но за круглым столом из трёх мест любые двое сидят рядом, значит «плохих» $2\\cdot1\\cdot2/2=2$, и ответ $0$ — верно, ведь такое рассадить невозможно ✓",
+    "en": "**All seatings.** Eight people at a round table: $(8-1)!=5040$ ways.\n\n**Bad seatings.** Glue the two irreconcilables into one block. Then there are $7$ objects at the table, giving $(7-1)!=720$ seatings, and the two can swap inside the block — a factor of $2$: $$720\\cdot2=1440 .$$\n\n**Answer.** $$5040-1440=3600 .$$\n\n**Check on a small case.** With three people, two of whom refuse to be adjacent: at a round table of three every pair is adjacent, so the answer must be $0$ — and the computation gives $2-2=0$ ✓"
+   }
+  },
+  {
+   "src": "Областной тур · уровень / Regional-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколько двоичных строк длины $8$ содержат ровно три единицы, причём никакие две единицы не стоят рядом?",
+    "en": "How many binary strings of length $8$ contain exactly three ones, no two of them adjacent?"
+   },
+   "hint": {
+    "ru": "Сначала расставьте нули, потом вставьте единицы в промежутки.",
+    "en": "Place the zeros first, then slot the ones into the gaps."
+   },
+   "sol": {
+    "ru": "Единиц три, значит нулей пять. Расставим сначала пять нулей: $$\\_\\ 0\\ \\_\\ 0\\ \\_\\ 0\\ \\_\\ 0\\ \\_\\ 0\\ \\_$$\n\nМежду ними и по краям образуется **шесть** промежутков. Чтобы никакие две единицы не стояли рядом, в каждый промежуток можно поставить не больше одной единицы.\n\nЗначит надо выбрать $3$ промежутка из $6$: $$\\binom63=20 .$$\n\n**Ответ:** $20$.\n\n**Общая формула.** Число способов выбрать $k$ несоседних позиций из $n$ в ряд равно $$\\binom{n-k+1}{k} ,$$ и здесь $\\dbinom{8-3+1}{3}=\\dbinom63=20$ ✓\n\n**Связь с предыдущей задачей.** Просуммировав по всем $k$, получим как раз число «несоседних» подмножеств, то есть число Фибоначчи.",
+    "en": "Three ones means five zeros. Lay out the five zeros first: $$\\_\\ 0\\ \\_\\ 0\\ \\_\\ 0\\ \\_\\ 0\\ \\_\\ 0\\ \\_$$\n\nBetween and around them there are **six** gaps. For no two ones to be adjacent, each gap may hold at most one one.\n\nSo we choose $3$ gaps out of $6$: $$\\binom63=20 .$$\n\n**Answer:** $20$.\n\n**General formula.** The number of ways to pick $k$ non-adjacent positions out of $n$ in a row is $$\\binom{n-k+1}{k} ,$$ and here $\\dbinom63=20$ ✓\n\n**Link to the previous problem.** Summing over all $k$ gives exactly the count of \"no two consecutive\" subsets — a Fibonacci number."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 3,
+   "q": {
+    "ru": "Докажите, что натуральное число $n$ можно представить в виде **упорядоченной** суммы натуральных слагаемых ровно $2^{\\,n-1}$ способами.",
+    "en": "Prove that a positive integer $n$ can be written as an **ordered** sum of positive integers in exactly $2^{\\,n-1}$ ways."
+   },
+   "hint": {
+    "ru": "Выложите $n$ единиц в ряд и решайте, где ставить «плюсы».",
+    "en": "Lay out $n$ ones in a row and decide where to put the plus signs."
+   },
+   "sol": {
+    "ru": "Выложим $n$ единиц в ряд: $$1\\ \\ 1\\ \\ 1\\ \\ \\dots\\ \\ 1 .$$\n\nМежду соседними единицами есть ровно $n-1$ промежутков. В каждый промежуток мы либо ставим знак «$+$», либо ничего (тогда единицы сливаются в одно слагаемое).\n\n**Соответствие.** Каждому набору решений отвечает ровно одно представление, и наоборот. Например, при $n=4$ набор «$+$, нет, $+$» даёт $$1+2+1 .$$\n\n**Подсчёт.** Решений в каждом из $n-1$ промежутков по два, и они независимы: $$2^{\\,n-1} . \\qquad\\blacksquare$$\n\n**Проверка** при $n=3$: должно быть $2^{2}=4$ представления, и действительно $$3,\\quad 1+2,\\quad 2+1,\\quad 1+1+1 \\quad\\checkmark$$\n\n**Осторожно:** если порядок слагаемых **не** важен (разбиения, а не композиции), задача становится куда труднее — простой формулы для числа разбиений нет.",
+    "en": "Lay out $n$ ones in a row: $$1\\ \\ 1\\ \\ 1\\ \\ \\dots\\ \\ 1 .$$\n\nThere are exactly $n-1$ gaps between neighbours. In each gap we either put a \"$+$\" or nothing (in which case the ones merge into one summand).\n\n**The correspondence.** Each set of choices gives exactly one representation and vice versa. For $n=4$, the choices \"$+$, no, $+$\" give $$1+2+1 .$$\n\n**The count.** Two choices in each of the $n-1$ gaps, independently: $$2^{\\,n-1} . \\qquad\\blacksquare$$\n\n**Check** at $n=3$: there should be $2^{2}=4$ representations, and indeed $$3,\\quad 1+2,\\quad 2+1,\\quad 1+1+1 \\quad\\checkmark$$\n\n**Careful:** if the order does **not** matter (partitions rather than compositions) the problem becomes far harder — there is no simple formula."
+   }
+  },
+  {
+   "src": "Районный тур · уровень / District-round level",
+   "lvl": 3,
+   "q": {
+    "ru": "Сколькими способами можно разложить $12$ одинаковых шаров по $4$ различным ящикам так, чтобы ни один ящик не остался пустым?",
+    "en": "In how many ways can $12$ identical balls be put into $4$ distinct boxes so that no box is empty?"
+   },
+   "hint": {
+    "ru": "Сначала положите по одному шару в каждый ящик.",
+    "en": "First put one ball in each box."
+   },
+   "sol": {
+    "ru": "**Способ 1: убрать ограничение.** Положим сразу по одному шару в каждый ящик — это обязательное условие, и способ такой ровно один. Останется $12-4=8$ шаров, которые можно распределять уже как угодно.\n\nПо формуле «шаров и перегородок» число неотрицательных решений уравнения $y_1+y_2+y_3+y_4=8$ равно $$\\binom{8+3}{3}=\\binom{11}{3}=165 .$$\n\n**Способ 2: сразу перегородки.** Выложим $12$ шаров в ряд; между ними $11$ промежутков, и надо выбрать $3$ из них под перегородки (по одной перегородке в промежуток — тогда ни одна часть не будет пустой): $$\\binom{11}{3}=165 \\quad\\checkmark$$\n\n**Ответ:** $165$.\n\n**Общая формула:** число **положительных** целых решений уравнения $x_1+\\dots+x_k=n$ равно $\\dbinom{n-1}{k-1}$.",
+    "en": "**Method 1: remove the restriction.** Put one ball into each box first — a forced move, in exactly one way. That leaves $12-4=8$ balls to distribute freely.\n\nBy stars and bars, the number of non-negative solutions of $y_1+y_2+y_3+y_4=8$ is $$\\binom{11}{3}=165 .$$\n\n**Method 2: bars directly.** Lay the $12$ balls in a row; there are $11$ gaps, and we choose $3$ of them for bars (one bar per gap, so no part is empty): $$\\binom{11}{3}=165 \\quad\\checkmark$$\n\n**Answer:** $165$.\n\n**General formula:** the number of **positive** integer solutions of $x_1+\\dots+x_k=n$ is $\\dbinom{n-1}{k-1}$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите формулу бинома Ньютона $$(a+b)^{n}=\\sum_{k=0}^{n}\\binom nk a^{\\,n-k}b^{k} .$$",
+    "en": "Prove the binomial theorem $$(a+b)^{n}=\\sum_{k=0}^{n}\\binom nk a^{\\,n-k}b^{k} .$$"
+   },
+   "hint": {
+    "ru": "Раскройте произведение $n$ скобок и посчитайте, сколько раз встречается каждый одночлен.",
+    "en": "Expand the product of $n$ brackets and count how often each monomial appears."
+   },
+   "sol": {
+    "ru": "**Комбинаторное доказательство.** Запишем $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{скобок}} .$$\n\nРаскрывая скобки, мы из каждой скобки выбираем либо $a$, либо $b$, и перемножаем выбранное. Каждый такой выбор даёт одночлен вида $a^{\\,n-k}b^{k}$, где $k$ — число скобок, из которых взяли $b$.\n\n**Сколько раз встречается $a^{\\,n-k}b^{k}$?** Ровно столько, сколькими способами можно выбрать $k$ скобок из $n$, то есть $\\dbinom nk$ раз.\n\nСобирая подобные, получаем требуемую формулу. $\\blacksquare$\n\n**Доказательство индукцией** (для полноты). База $n=1$ очевидна. Переход: $$(a+b)^{\\,n+1}=(a+b)\\sum_{k}\\binom nk a^{\\,n-k}b^{k}=\\sum_k\\binom nk a^{\\,n+1-k}b^{k}+\\sum_k\\binom nk a^{\\,n-k}b^{\\,k+1} .$$ Сдвинув индекс во второй сумме и сложив, при $a^{\\,n+1-k}b^{k}$ получим коэффициент $$\\binom nk+\\binom n{k-1}=\\binom{n+1}{k} $$ — это правило треугольника Паскаля ✓\n\n**Следствия.** При $a=b=1$ получаем $\\sum_k\\binom nk=2^{n}$; при $a=1$, $b=-1$ — что знакопеременная сумма биномиальных коэффициентов равна нулю (при $n\\ge1$).",
+    "en": "**Combinatorial proof.** Write $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{brackets}} .$$\n\nExpanding, from each bracket we pick either $a$ or $b$ and multiply the choices. Each choice yields a monomial $a^{\\,n-k}b^{k}$, where $k$ is the number of brackets from which $b$ was taken.\n\n**How often does $a^{\\,n-k}b^{k}$ occur?** Exactly as often as one can choose $k$ brackets out of $n$, i.e. $\\dbinom nk$ times.\n\nCollecting like terms gives the formula. $\\blacksquare$\n\n**Proof by induction** (for completeness). The base $n=1$ is clear. For the step, $$(a+b)^{\\,n+1}=\\sum_k\\binom nk a^{\\,n+1-k}b^{k}+\\sum_k\\binom nk a^{\\,n-k}b^{\\,k+1} .$$ Shifting the index in the second sum, the coefficient of $a^{\\,n+1-k}b^{k}$ becomes $$\\binom nk+\\binom n{k-1}=\\binom{n+1}{k} $$ — Pascal’s rule ✓\n\n**Consequences.** With $a=b=1$ we get $\\sum_k\\binom nk=2^{n}$; with $a=1$, $b=-1$, the alternating sum of binomial coefficients is zero (for $n\\ge1$)."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите формулу включений и исключений: $$\\left|A_1\\cup\\dots\\cup A_n\\right|=\\sum_i\\left|A_i\\right|-\\sum_{i<j}\\left|A_i\\cap A_j\\right|+\\dots+(-1)^{\\,n-1}\\left|A_1\\cap\\dots\\cap A_n\\right| .$$",
+    "en": "Prove the inclusion–exclusion principle: $$\\left|A_1\\cup\\dots\\cup A_n\\right|=\\sum_i\\left|A_i\\right|-\\sum_{i<j}\\left|A_i\\cap A_j\\right|+\\dots+(-1)^{\\,n-1}\\left|A_1\\cap\\dots\\cap A_n\\right| .$$"
+   },
+   "hint": {
+    "ru": "Посчитайте, сколько раз учтён элемент, лежащий ровно в $m$ множествах.",
+    "en": "Count how often an element lying in exactly $m$ of the sets is tallied."
+   },
+   "sol": {
+    "ru": "Проверим, что каждый элемент объединения учтён в правой части ровно один раз (а элемент вне объединения — ноль раз).\n\n**Элемент вне объединения** не попадает ни в одно $A_i$, значит не даёт вклада ни в одно слагаемое ✓\n\n**Элемент, лежащий ровно в $m\\ge1$ множествах.** Посмотрим, в скольких слагаемых он учитывается.\n\nВ суммах по одиночным множествам он учтён $\\dbinom m1$ раз;\n\nв суммах по парам — $\\dbinom m2$ раз;\n\nвообще, в суммах по $k$-элементным пересечениям — $\\dbinom mk$ раз (нужно выбрать $k$ из тех $m$ множеств, которые его содержат; пересечения, включающие «чужое» множество, его не содержат).\n\nС учётом знаков суммарный вклад равен $$\\binom m1-\\binom m2+\\binom m3-\\dots=\\sum_{k=1}^{m}(-1)^{\\,k-1}\\binom mk .$$\n\n**Считаем эту сумму.** По биному Ньютона при $a=1$, $b=-1$ $$\\sum_{k=0}^{m}(-1)^{k}\\binom mk=(1-1)^{m}=0 \\qquad (m\\ge1),$$ откуда $$\\sum_{k=1}^{m}(-1)^{\\,k-1}\\binom mk=\\binom m0=1 .$$\n\nЗначит каждый элемент объединения учтён ровно один раз, что и требовалось. $\\blacksquare$\n\n**Проверка при $n=2$:** $|A\\cup B|=|A|+|B|-|A\\cap B|$ — знакомая формула ✓\n\n**Главное применение** — подсчёт «ни одного из свойств»: число элементов, не обладающих ни одним из свойств, равно $$N-\\left|A_1\\cup\\dots\\cup A_n\\right| .$$",
+    "en": "We check that every element of the union is counted exactly once on the right (and every element outside, zero times).\n\n**An element outside the union** lies in no $A_i$ and contributes to no term ✓\n\n**An element lying in exactly $m\\ge1$ of the sets.** Count the terms in which it appears.\n\nIn the single-set sums it is counted $\\dbinom m1$ times;\n\nin the pairwise sums, $\\dbinom m2$ times;\n\nin general, in the $k$-fold intersections, $\\dbinom mk$ times (choose $k$ of the $m$ sets containing it; intersections involving any other set miss it).\n\nWith the signs, its total contribution is $$\\sum_{k=1}^{m}(-1)^{\\,k-1}\\binom mk .$$\n\n**Evaluating that sum.** The binomial theorem at $a=1$, $b=-1$ gives $$\\sum_{k=0}^{m}(-1)^{k}\\binom mk=(1-1)^{m}=0 \\qquad (m\\ge1),$$ hence $$\\sum_{k=1}^{m}(-1)^{\\,k-1}\\binom mk=\\binom m0=1 .$$\n\nSo every element of the union is counted exactly once. $\\blacksquare$\n\n**Check at $n=2$:** $|A\\cup B|=|A|+|B|-|A\\cap B|$ — the familiar formula ✓\n\n**The main use** is counting \"none of the properties\": the number of elements with no property is $$N-\\left|A_1\\cup\\dots\\cup A_n\\right| .$$"
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите формулу для числа беспорядков: $$D_n=n!\\sum_{k=0}^{n}\\frac{(-1)^{k}}{k!} .$$",
+    "en": "Prove the derangement formula $$D_n=n!\\sum_{k=0}^{n}\\frac{(-1)^{k}}{k!} .$$"
+   },
+   "hint": {
+    "ru": "Примените включения и исключения к событиям «$i$-й элемент неподвижен».",
+    "en": "Apply inclusion–exclusion to the events \"element $i$ is fixed\"."
+   },
+   "sol": {
+    "ru": "Беспорядок — это перестановка без неподвижных точек. Обозначим через $A_i$ множество перестановок, у которых $i$-й элемент **неподвижен**.\n\n**Размер пересечения.** Если зафиксировать $k$ конкретных элементов, остальные $n-k$ переставляются как угодно: $$\\left|A_{i_1}\\cap\\dots\\cap A_{i_k}\\right|=(n-k)! ,$$ и таких пересечений $\\dbinom nk$ штук.\n\n**Включения и исключения.** $$\\left|A_1\\cup\\dots\\cup A_n\\right|=\\sum_{k=1}^{n}(-1)^{\\,k-1}\\binom nk(n-k)! .$$\n\n**Беспорядки — дополнение.** $$D_n=n!-\\left|A_1\\cup\\dots\\cup A_n\\right|=\\sum_{k=0}^{n}(-1)^{k}\\binom nk(n-k)! .$$\n\n**Упрощаем.** Так как $$\\binom nk(n-k)!=\\frac{n!}{k!\\,(n-k)!}\\cdot(n-k)!=\\frac{n!}{k!} ,$$ получаем $$D_n=\\sum_{k=0}^{n}(-1)^{k}\\frac{n!}{k!}=n!\\sum_{k=0}^{n}\\frac{(-1)^{k}}{k!} . \\qquad\\blacksquare$$\n\n**Проверка.** $$D_1=0,\\quad D_2=1,\\quad D_3=2,\\quad D_4=9,\\quad D_5=44 \\quad\\checkmark$$\n\n**Асимптотика.** Сумма — это частичная сумма ряда для $e^{-1}$, поэтому $$D_n\\approx\\frac{n!}{e} ,$$ и, более того, $D_n$ — ближайшее целое к $\\dfrac{n!}{e}$ при $n\\ge1$.\n\n**Забавное следствие.** Вероятность, что при случайной раздаче шляп **никто** не получит свою, почти не зависит от числа людей и составляет примерно $0{,}368$.",
+    "en": "A derangement is a permutation with no fixed point. Let $A_i$ be the set of permutations fixing element $i$.\n\n**Size of an intersection.** Fixing $k$ specific elements leaves the other $n-k$ free: $$\\left|A_{i_1}\\cap\\dots\\cap A_{i_k}\\right|=(n-k)! ,$$ and there are $\\dbinom nk$ such intersections.\n\n**Inclusion–exclusion.** $$\\left|A_1\\cup\\dots\\cup A_n\\right|=\\sum_{k=1}^{n}(-1)^{\\,k-1}\\binom nk(n-k)! .$$\n\n**Derangements are the complement.** $$D_n=n!-\\left|A_1\\cup\\dots\\cup A_n\\right|=\\sum_{k=0}^{n}(-1)^{k}\\binom nk(n-k)! .$$\n\n**Simplify.** Since $$\\binom nk(n-k)!=\\frac{n!}{k!} ,$$ we get $$D_n=n!\\sum_{k=0}^{n}\\frac{(-1)^{k}}{k!} . \\qquad\\blacksquare$$\n\n**Check.** $$D_1=0,\\quad D_2=1,\\quad D_3=2,\\quad D_4=9,\\quad D_5=44 \\quad\\checkmark$$\n\n**Asymptotics.** The sum is a partial sum of the series for $e^{-1}$, so $$D_n\\approx\\frac{n!}{e} ,$$ and in fact $D_n$ is the nearest integer to $\\dfrac{n!}{e}$ for $n\\ge1$.\n\n**An amusing consequence.** The probability that **nobody** gets their own hat barely depends on the number of people: it is about $0.368$."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите, что число способов выбрать $k$ элементов из $n$, стоящих в ряд, так, чтобы никакие два выбранных не были соседними, равно $\\dbinom{n-k+1}{k}$.",
+    "en": "Prove that the number of ways to choose $k$ elements from $n$ in a row so that no two chosen are adjacent equals $\\dbinom{n-k+1}{k}$."
+   },
+   "hint": {
+    "ru": "Постройте взаимно однозначное соответствие: вычтите из выбранных номеров $0,1,2,\\dots$",
+    "en": "Build a bijection: subtract $0,1,2,\\dots$ from the chosen indices."
+   },
+   "sol": {
+    "ru": "Пусть выбраны номера $$1\\le i_1<i_2<\\dots<i_k\\le n ,$$ причём никакие два не соседние, то есть $$i_{j+1}\\ \\ge\\ i_j+2 \\qquad\\text{для всех } j .$$\n\n**Сжатие.** Положим $$j_1=i_1,\\quad j_2=i_2-1,\\quad j_3=i_3-2,\\quad\\dots,\\quad j_k=i_k-(k-1).$$\n\nТогда из $i_{j+1}\\ge i_j+2$ следует $$j_{m+1}=i_{m+1}-m\\ \\ge\\ i_m+2-m=j_m+1 ,$$ то есть новые числа строго возрастают — но уже без всяких дополнительных условий. Кроме того $$1\\le j_1\\quad\\text{и}\\quad j_k=i_k-(k-1)\\le n-k+1 .$$\n\n**Обратное соответствие.** По любому набору $$1\\le j_1<j_2<\\dots<j_k\\le n-k+1 $$ восстанавливаем $i_m=j_m+(m-1)$, и условие несоседства выполняется автоматически.\n\nЗначит соответствие взаимно однозначно, и искомое число равно числу способов выбрать $k$ чисел из $n-k+1$: $$\\binom{n-k+1}{k} . \\qquad\\blacksquare$$\n\n**Проверка.** При $n=8$, $k=3$ формула даёт $\\dbinom63=20$ — совпадает с ранее посчитанным числом двоичных строк ✓\n\n**Следствие.** Суммируя по всем $k$, получаем $$\\sum_k\\binom{n-k+1}{k}=F_{n+2} $$ — знакомое «диагональное» тождество для чисел Фибоначчи в треугольнике Паскаля.",
+    "en": "Suppose the chosen indices are $$1\\le i_1<i_2<\\dots<i_k\\le n ,$$ with no two adjacent, i.e. $$i_{j+1}\\ \\ge\\ i_j+2 \\qquad\\text{for all } j .$$\n\n**Compression.** Put $$j_1=i_1,\\quad j_2=i_2-1,\\quad j_3=i_3-2,\\quad\\dots,\\quad j_k=i_k-(k-1).$$\n\nThen $i_{m+1}\\ge i_m+2$ gives $$j_{m+1}=i_{m+1}-m\\ \\ge\\ j_m+1 ,$$ so the new numbers are strictly increasing — with no further condition. Moreover $$1\\le j_1\\quad\\text{and}\\quad j_k=i_k-(k-1)\\le n-k+1 .$$\n\n**The inverse map.** From any $$1\\le j_1<j_2<\\dots<j_k\\le n-k+1 $$ recover $i_m=j_m+(m-1)$; the non-adjacency then holds automatically.\n\nThe correspondence is a bijection, so the count equals the number of ways to choose $k$ numbers from $n-k+1$: $$\\binom{n-k+1}{k} . \\qquad\\blacksquare$$\n\n**Check.** At $n=8$, $k=3$ the formula gives $\\dbinom63=20$ — matching the binary-string count found earlier ✓\n\n**Corollary.** Summing over $k$ gives $$\\sum_k\\binom{n-k+1}{k}=F_{n+2} ,$$ the familiar diagonal identity for Fibonacci numbers in Pascal’s triangle."
+   }
+  },
+  {
+   "src": "Классическая задача / Classic",
+   "lvl": 4,
+   "q": {
+    "ru": "Докажите формулу «шаров и перегородок»: число неотрицательных целых решений уравнения $x_1+x_2+\\dots+x_k=n$ равно $\\dbinom{n+k-1}{k-1}$.",
+    "en": "Prove the stars-and-bars formula: the number of non-negative integer solutions of $x_1+x_2+\\dots+x_k=n$ is $\\dbinom{n+k-1}{k-1}$."
+   },
+   "hint": {
+    "ru": "Закодируйте решение строкой из $n$ звёздочек и $k-1$ перегородок.",
+    "en": "Encode a solution as a string of $n$ stars and $k-1$ bars."
+   },
+   "sol": {
+    "ru": "**Кодирование.** Каждому решению $\\left(x_1,\\dots,x_k\\right)$ сопоставим строку из $n$ звёздочек и $k-1$ перегородок: сначала $x_1$ звёздочек, потом перегородка, потом $x_2$ звёздочек, снова перегородка, и так далее.\n\nНапример, при $k=3$, $n=5$ решение $(2,0,3)$ кодируется как $$\\star\\star\\mid\\ \\mid\\star\\star\\star $$ (между двумя перегородками пусто — это и означает $x_2=0$).\n\n**Взаимная однозначность.** По любой строке из $n$ звёздочек и $k-1$ перегородок однозначно восстанавливается решение: $x_i$ — это число звёздочек между $(i-1)$-й и $i$-й перегородками. И наоборот, разные решения дают разные строки.\n\n**Подсчёт строк.** Строка имеет длину $n+(k-1)$, и она полностью определяется тем, какие $k-1$ позиций заняты перегородками: $$\\binom{n+k-1}{k-1} . \\qquad\\blacksquare$$\n\n**Проверка** при $k=2$: решений уравнения $x_1+x_2=n$ ровно $n+1$ (значение $x_1$ пробегает $0,\\dots,n$), и формула даёт $\\dbinom{n+1}{1}=n+1$ ✓\n\n**Вариант с положительными переменными.** Если требовать $x_i\\ge1$, положим $y_i=x_i-1$; тогда $y_1+\\dots+y_k=n-k$, и ответ равен $$\\binom{n-1}{k-1} .$$\n\n**Ещё вариант.** Число мультимножеств размера $n$ из $k$ типов — это ровно то же число $\\dbinom{n+k-1}{k-1}$: «сколько раз взят $i$-й тип» и есть $x_i$.",
+    "en": "**The encoding.** To a solution $\\left(x_1,\\dots,x_k\\right)$ associate a string of $n$ stars and $k-1$ bars: $x_1$ stars, a bar, $x_2$ stars, a bar, and so on.\n\nFor $k=3$, $n=5$ the solution $(2,0,3)$ becomes $$\\star\\star\\mid\\ \\mid\\star\\star\\star $$ (nothing between the two bars means $x_2=0$).\n\n**Bijectivity.** From any string of $n$ stars and $k-1$ bars the solution is recovered uniquely: $x_i$ is the number of stars between the $(i-1)$-st and $i$-th bars. Conversely, different solutions give different strings.\n\n**Counting strings.** The string has length $n+(k-1)$ and is determined by which $k-1$ positions hold bars: $$\\binom{n+k-1}{k-1} . \\qquad\\blacksquare$$\n\n**Check** at $k=2$: the equation $x_1+x_2=n$ has $n+1$ solutions, and the formula gives $\\dbinom{n+1}{1}=n+1$ ✓\n\n**The positive variant.** Requiring $x_i\\ge1$, put $y_i=x_i-1$; then $y_1+\\dots+y_k=n-k$ and the answer is $$\\binom{n-1}{k-1} .$$\n\n**Another reading.** The number of multisets of size $n$ from $k$ types is the same $\\dbinom{n+k-1}{k-1}$: \"how many times type $i$ was taken\" is precisely $x_i$."
+   }
   }
  ]
 };
