@@ -1,15 +1,17 @@
-/* Renders one lesson from window.LESSONS, in Russian or English.
+/* Renders one lesson from window.LESSONS, in Russian, English or Uzbek.
 
    Russian is the default: a first-time visitor gets `ru`, and the choice is
-   remembered afterwards.  `?lang=en` in the address always wins, so a link can
-   point at either version.
+   remembered afterwards.  `?lang=en` or `?lang=uz` in the address always wins,
+   so a link can point at any version.  A string that has no Uzbek yet falls
+   back to English rather than disappearing.
 
    Text carries a very small amount of markup — **bold**, *italic* — and TeX
    between $…$ or $$…$$, which KaTeX renders after the page is built.        */
 (function (w, d) {
   'use strict';
 
-  var LANGS = ['ru', 'en'];
+  var LANGS = ['ru', 'en', 'uz'];
+  var LABEL = { ru: 'РУС', en: 'ENG', uz: 'OʻZB' };
   var KEY = 'ml-lang';
 
   /* ---------------- interface strings ---------------- */
@@ -65,6 +67,34 @@
       noLesson: 'The lesson for this topic is still being written.',
       openResources: 'Open the topic resources',
       readingTime: function (m) { return '≈ ' + m + ' min read'; }
+    },
+    uz: {
+      home: 'Bosh sahifa', topics: 'Mavzular', library: 'Kutubxona', lessons: 'Darslar',
+      crumbTopics: 'Darslar',
+      goals: 'Nimalarni oʻrganasiz',
+      contents: 'Mundarija',
+      theory: 'Nazariya',
+      problems: 'Masalalar',
+      /* Uzbek takes the singular after a numeral, so one form is enough — the
+         plural helper below never reaches the second entry. */
+      problemsWords: ['masala', 'masala'],
+      sectionWords: ['boʻlim', 'boʻlim'],
+      example: 'Misol',
+      answer: 'Javob',
+      def: 'Taʼrif', thm: 'Teorema', lemma: 'Lemma', proof: 'Isbot',
+      note: 'Izoh', warn: 'Ehtiyot boʻling', idea: 'Usul',
+      hint: 'Koʻrsatma', solution: 'Yechim',
+      showHint: 'Koʻrsatma', showSol: 'Yechim',
+      hideHint: 'Koʻrsatmani yashirish', hideSol: 'Yechimni yashirish',
+      all: 'Hammasi', lvl1: 'Yengil', lvl2: 'Oʻrtacha', lvl3: 'Qiyin', lvl4: 'Olimpiada',
+      srcNote: 'Chapdagi belgi masala qaysi tur uchun xos ekanini koʻrsatadi. Aniq musobaqa faqat manbasi ishonchli maʼlum boʻlgan joyda nomlangan.',
+      shown: function (a, b) { return b + ' tadan ' + a + ' tasi koʻrsatildi'; },
+      prev: 'Oldingi mavzu', next: 'Keyingi mavzu',
+      section: 'Boʻlim', topic: 'Mavzu', of: '/',
+      backToTopic: 'Mavzu resurslari',
+      noLesson: 'Bu mavzu boʻyicha dars hali yozilmoqda.',
+      openResources: 'Mavzu resurslarini ochish',
+      readingTime: function (m) { return '≈ ' + m + ' daqiqa oʻqish'; }
     }
   };
 
@@ -102,8 +132,10 @@
     });
   }
 
-  /* Russian needs three forms; English needs two. */
+  /* Russian needs three forms, English two, Uzbek none: a numeral there is
+     always followed by the singular. */
   function plural(lang, n, forms) {
+    if (lang === 'uz') return n + ' ' + forms[0];
     if (lang !== 'ru') return n + ' ' + forms[n === 1 ? 0 : 1];
     var a = n % 10, b = n % 100;
     var f = (a === 1 && b !== 11) ? 0
@@ -344,7 +376,7 @@
 
   /* ---------------- language ---------------- */
   function currentLang() {
-    var q = (location.search.match(/[?&]lang=(ru|en)/) || [])[1];
+    var q = (location.search.match(/[?&]lang=(ru|en|uz)/) || [])[1];
     if (q) return q;
     try {
       var saved = localStorage.getItem(KEY);
@@ -364,7 +396,7 @@
     Array.prototype.forEach.call(d.querySelectorAll('.langsw'), function (sw) {
       sw.innerHTML = LANGS.map(function (l) {
         return '<button data-lang="' + l + '"' + (l === lang ? ' class="on"' : '') + '>' +
-          (l === 'ru' ? 'РУС' : 'ENG') + '</button>';
+          LABEL[l] + '</button>';
       }).join('');
       sw.addEventListener('click', function (e) {
         var b = e.target.closest('[data-lang]');

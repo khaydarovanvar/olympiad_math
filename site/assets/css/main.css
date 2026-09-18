@@ -424,8 +424,12 @@ body.menu-open .m-link{transform:none}
 .foot li{margin-bottom:.45rem;font-size:.9rem}
 .foot .brand{color:#fff}
 .foot .brand small{color:rgba(234,240,246,.5)}
-.foot-bot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
-  padding-top:1.6rem;font-size:.8rem;color:rgba(234,240,246,.45)}
+.foot-bot{display:flex;justify-content:space-between;align-items:baseline;gap:1rem 1.6rem;
+  flex-wrap:wrap;padding-top:1.6rem;font-size:.8rem;color:rgba(234,240,246,.45)}
+/* the author credit sits between the strapline and the slogan, and keeps the
+   name a shade brighter than the words around it */
+.foot-author{color:rgba(234,240,246,.55)}
+.foot-author b{color:rgba(234,240,246,.9);font-weight:600}
 
 /* ---------- utilities ---------- */
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.2rem}
@@ -461,9 +465,12 @@ body.menu-open .m-link{transform:none}
 /* ---------- language switch (every page) ---------- */
 .langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
 .langsw button{
-  padding:.34rem .74rem;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.09em;
-  color:var(--muted);transition:background .25s,color .25s;
+  padding:.34rem .62rem;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.07em;
+  color:var(--muted);transition:background .25s,color .25s;white-space:nowrap;
 }
+/* three languages rather than two: the switch gives up a little padding on a
+   phone so the header still fits on one row */
+@media (max-width:460px){ .langsw button{padding:.32rem .46rem;font-size:.64rem;letter-spacing:.04em} }
 .langsw button.on{background:var(--ink);color:var(--canvas)}
 .langsw button:hover:not(.on){color:var(--accent)}
 body.menu-open .langsw{border-color:rgba(255,255,255,.25)}

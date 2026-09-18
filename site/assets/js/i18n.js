@@ -3,16 +3,17 @@
    The lesson renderer carries its own copy of this logic (it needs the
    language before it can build anything), but it reads and writes the same
    localStorage key, so a choice made on any page follows the reader
-   everywhere.  Russian is the default; ?lang=en overrides it for one visit
-   and the switch makes the choice stick. */
+   everywhere.  Russian is the default; ?lang=en or ?lang=uz overrides it for
+   one visit and the switch makes the choice stick. */
 (function (w, d) {
   'use strict';
 
-  var LANGS = ['ru', 'en'];
+  var LANGS = ['ru', 'en', 'uz'];
+  var LABEL = { ru: 'РУС', en: 'ENG', uz: 'OʻZB' };
   var KEY = 'ml-lang';
 
   function lang() {
-    var q = (location.search.match(/[?&]lang=(ru|en)/) || [])[1];
+    var q = (location.search.match(/[?&]lang=(ru|en|uz)/) || [])[1];
     if (q) return q;
     try {
       var saved = localStorage.getItem(KEY);
@@ -28,8 +29,9 @@
     location.replace(url.toString());
   }
 
-  /* Pull the right half out of a {ru, en} pair; plain strings pass through,
-     so half-translated data still renders. */
+  /* Pull the right language out of a {ru, en, uz} triple; plain strings pass
+     through, and a language that is not written yet falls back to English, so
+     half-translated data still renders. */
   function pick(v, l) {
     if (v && typeof v === 'object' && !Array.isArray(v)) {
       return v[l] != null ? v[l] : v.en;
@@ -41,7 +43,7 @@
     Array.prototype.forEach.call(d.querySelectorAll('.langsw'), function (sw) {
       sw.innerHTML = LANGS.map(function (l) {
         return '<button type="button" data-lang="' + l + '"' +
-          (l === cur ? ' class="on"' : '') + '>' + (l === 'ru' ? 'РУС' : 'ENG') + '</button>';
+          (l === cur ? ' class="on"' : '') + '>' + LABEL[l] + '</button>';
       }).join('');
       sw.addEventListener('click', function (e) {
         var b = e.target.closest('[data-lang]');
