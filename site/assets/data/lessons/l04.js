@@ -45,39 +45,45 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Уравнение $2x+3y=12$ на уроке алгебры имеет бесконечно много решений: возьмите любое $x$ и выразите $y$. Но если потребовать, чтобы $x$ и $y$ были **целыми**, задача становится совсем другой — и гораздо интереснее. Именно такие задачи и составляют половину олимпиадной теории чисел.",
-      "en": "In an algebra lesson the equation $2x+3y=12$ has infinitely many solutions: pick any $x$ and solve for $y$. But if $x$ and $y$ are required to be **integers**, the problem becomes a completely different one — and far more interesting. Problems of exactly this kind make up half of olympiad number theory."
+      "en": "In an algebra lesson the equation $2x+3y=12$ has infinitely many solutions: pick any $x$ and solve for $y$. But if $x$ and $y$ are required to be **integers**, the problem becomes a completely different one — and far more interesting. Problems of exactly this kind make up half of olympiad number theory.",
+      "uz": "Algebra darsida $2x+3y=12$ tenglamasining cheksiz koʻp yechimi bor: istalgan $x$ ni olib, $y$ ni topasiz. Ammo $x$ va $y$ dan **butun son** boʻlish talab qilinsa, masala butunlay boshqacha — va ancha qiziqarli — boʻlib qoladi. Aynan shunday masalalar olimpiada sonlar nazariyasining yarmini tashkil qiladi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Диофантово уравнение",
-      "en": "Diophantine equation"
+      "en": "Diophantine equation",
+      "uz": "Diofant tenglamasi"
      },
      "text": {
       "ru": "**Диофантовым** называют уравнение (или систему) с целыми коэффициентами, решения которого ищут **среди целых чисел** — иногда среди натуральных. Само уравнение может быть каким угодно; диофантовым его делает требование к ответу.",
-      "en": "A **Diophantine** equation (or system) is one with integer coefficients whose solutions are sought **among the integers** — sometimes among the positive integers. The equation itself can be anything; what makes it Diophantine is the demand placed on the answer."
+      "en": "A **Diophantine** equation (or system) is one with integer coefficients whose solutions are sought **among the integers** — sometimes among the positive integers. The equation itself can be anything; what makes it Diophantine is the demand placed on the answer.",
+      "uz": "**Diofant** tenglamasi (yoki sistemasi) — bu butun koeffitsiyentli, yechimlari **butun sonlar** orasidan, baʼzan esa musbat butun sonlar orasidan qidiriladigan tenglama. Tenglamaning oʻzi istalgan koʻrinishda boʻlishi mumkin; uni Diofant tenglamasi qiladigan narsa — javobga qoʻyilgan talab."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Название — в честь Диофанта Александрийского, математика III века. Его «Арифметика» — первая книга, где такие задачи решают систематически. На полях именно этой книги Ферма и записал свою знаменитую заметку про $x^n+y^n=z^n$.",
-      "en": "The name honours Diophantus of Alexandria, a third-century mathematician. His *Arithmetica* is the first book to treat such problems systematically. It was in the margin of that very book that Fermat wrote his famous note about $x^n+y^n=z^n$."
+      "en": "The name honours Diophantus of Alexandria, a third-century mathematician. His *Arithmetica* is the first book to treat such problems systematically. It was in the margin of that very book that Fermat wrote his famous note about $x^n+y^n=z^n$.",
+      "uz": "Nom uchinchi asrda yashagan Aleksandriyalik Diofant sharafiga qoʻyilgan. Uning «Arifmetika» asari bunday masalalarni tizimli koʻrib chiqqan birinchi kitob. Aynan oʻsha kitobning chekkasiga Ferma $x^n+y^n=z^n$ haqidagi mashhur qaydini yozgan."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "В олимпиадной задаче спрашивают одну из трёх вещей: **есть ли решения**, **сколько их**, или **найдите все**. Третий вопрос самый честный: ответ засчитывают, только если вы и предъявили решения, и доказали, что других нет.",
-      "en": "An olympiad problem asks one of three things: **are there solutions**, **how many are there**, or **find them all**. The third is the most demanding: you get the marks only if you both exhibit the solutions and prove there are no others."
+      "en": "An olympiad problem asks one of three things: **are there solutions**, **how many are there**, or **find them all**. The third is the most demanding: you get the marks only if you both exhibit the solutions and prove there are no others.",
+      "uz": "Olimpiada masalasi uchta narsadan birini soʻraydi: **yechim bormi**, **nechta**, yoki **hammasini toping**. Uchinchisi eng talabchan: ball faqat yechimlarni koʻrsatib, boshqasi yoʻqligini ham isbotlasangiz beriladi."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Весь арсенал сводится к пяти приёмам, и почти каждая задача берётся одним из них:\n\n**1)** линейное уравнение — теория НОД;\n**2)** разложить на множители и перебрать делители;\n**3)** оценить переменные сверху и снизу;\n**4)** взять остаток по удачному модулю и получить противоречие;\n**5)** бесконечный спуск.\n\nПорядок в списке — это и порядок, в котором стоит их пробовать.",
-      "en": "The whole arsenal comes down to five moves, and almost every problem falls to one of them:\n\n**1)** a linear equation — use GCD theory;\n**2)** factor it and run through the divisors;\n**3)** bound the variables above and below;\n**4)** take remainders modulo a well-chosen number and reach a contradiction;\n**5)** infinite descent.\n\nThe order of the list is also the order in which to try them."
+      "en": "The whole arsenal comes down to five moves, and almost every problem falls to one of them:\n\n**1)** a linear equation — use GCD theory;\n**2)** factor it and run through the divisors;\n**3)** bound the variables above and below;\n**4)** take remainders modulo a well-chosen number and reach a contradiction;\n**5)** infinite descent.\n\nThe order of the list is also the order in which to try them.",
+      "uz": "Butun arsenal beshta usulga keladi va deyarli har bir masala ulardan biriga tushadi:\n\n**1)** chiziqli tenglama — EKUB nazariyasidan foydalaning;\n**2)** koʻpaytuvchilarga ajrating va boʻluvchilarni saralang;\n**3)** oʻzgaruvchilarni yuqoridan va quyidan baholang;\n**4)** yaxshi tanlangan son boʻyicha qoldiqlarni oling va ziddiyatga keling;\n**5)** cheksiz tushish.\n\nRoʻyxatning tartibi — bu ularni sinash tartibi hamdir."
      }
     }
    ]
@@ -93,57 +99,66 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Это единственный класс, который решён полностью: есть критерий разрешимости и формула для всех решений. Всё держится на одном факте из темы о НОД: числа вида $ax+by$ — это в точности числа, кратные $\\gcd(a,b)$.",
-      "en": "This is the one class that is completely solved: there is a criterion for solvability and a formula for every solution. It all rests on one fact from the GCD topic: the numbers of the form $ax+by$ are exactly the multiples of $\\gcd(a,b)$."
+      "en": "This is the one class that is completely solved: there is a criterion for solvability and a formula for every solution. It all rests on one fact from the GCD topic: the numbers of the form $ax+by$ are exactly the multiples of $\\gcd(a,b)$.",
+      "uz": "Bu — toʻliq yechilgan yagona sinf: yechiluvchanlik mezoni ham, har bir yechim uchun formula ham bor. Hammasi EKUB mavzusidagi bitta faktga tayanadi: $ax+by$ koʻrinishidagi sonlar aynan $\\gcd(a,b)$ ning karralilari."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Критерий разрешимости",
-      "en": "Criterion for solvability"
+      "en": "Criterion for solvability",
+      "uz": "Yechiluvchanlik mezoni"
      },
      "text": {
       "ru": "Пусть $a,b$ не равны нулю одновременно и $d=\\gcd(a,b)$. Уравнение $ax+by=c$ имеет решение в целых числах **тогда и только тогда, когда** $d\\mid c$.",
-      "en": "Let $a,b$ be not both zero and put $d=\\gcd(a,b)$. The equation $ax+by=c$ has an integer solution **if and only if** $d\\mid c$."
+      "en": "Let $a,b$ be not both zero and put $d=\\gcd(a,b)$. The equation $ax+by=c$ has an integer solution **if and only if** $d\\mid c$.",
+      "uz": "$a,b$ ikkalasi ham nol boʻlmasin va $d=\\gcd(a,b)$ boʻlsin. $ax+by=c$ tenglamasining butun yechimi boʻlishi uchun $d\\mid c$ boʻlishi **zarur va yetarli**."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Необходимость.** Если $ax+by=c$, то $d$ делит $a$ и $b$, значит делит и $ax+by=c$.\n\n**Достаточность.** По соотношению Безу найдутся целые $u,v$ с $au+bv=d$. Пусть $c=dk$. Умножим на $k$: $$a(uk)+b(vk)=dk=c,$$ то есть пара $x=uk$, $y=vk$ — решение. $\\blacksquare$",
-      "en": "**Necessity.** If $ax+by=c$ then $d$ divides both $a$ and $b$, hence divides $ax+by=c$.\n\n**Sufficiency.** By Bezout there are integers $u,v$ with $au+bv=d$. Write $c=dk$ and multiply by $k$: $$a(uk)+b(vk)=dk=c,$$ so $x=uk$, $y=vk$ is a solution. $\\blacksquare$"
+      "en": "**Necessity.** If $ax+by=c$ then $d$ divides both $a$ and $b$, hence divides $ax+by=c$.\n\n**Sufficiency.** By Bezout there are integers $u,v$ with $au+bv=d$. Write $c=dk$ and multiply by $k$: $$a(uk)+b(vk)=dk=c,$$ so $x=uk$, $y=vk$ is a solution. $\\blacksquare$",
+      "uz": "**Zarurligi.** Agar $ax+by=c$ boʻlsa, $d$ soni $a$ ni ham, $b$ ni ham boʻladi, demak $ax+by=c$ ni ham.\n\n**Yetarliligi.** Bezuga koʻra $au+bv=d$ boʻladigan butun $u,v$ bor. $c=dk$ deb yozamiz va $k$ ga koʻpaytiramiz: $$a(uk)+b(vk)=dk=c,$$ demak $x=uk$, $y=vk$ — yechim. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Все решения сразу",
-      "en": "Every solution at once"
+      "en": "Every solution at once",
+      "uz": "Barcha yechimlar birdaniga"
      },
      "text": {
       "ru": "Пусть $d=\\gcd(a,b)$ делит $c$ и пусть $(x_0,y_0)$ — какое-нибудь одно решение. Тогда все целые решения даются формулой $$x=x_0+\\frac{b}{d}\\,t,\\qquad y=y_0-\\frac{a}{d}\\,t,\\qquad t\\in\\mathbb{Z},$$ и разным $t$ отвечают разные решения.",
-      "en": "Let $d=\\gcd(a,b)$ divide $c$ and let $(x_0,y_0)$ be any one solution. Then every integer solution is given by $$x=x_0+\\frac{b}{d}\\,t,\\qquad y=y_0-\\frac{a}{d}\\,t,\\qquad t\\in\\mathbb{Z},$$ and different values of $t$ give different solutions."
+      "en": "Let $d=\\gcd(a,b)$ divide $c$ and let $(x_0,y_0)$ be any one solution. Then every integer solution is given by $$x=x_0+\\frac{b}{d}\\,t,\\qquad y=y_0-\\frac{a}{d}\\,t,\\qquad t\\in\\mathbb{Z},$$ and different values of $t$ give different solutions.",
+      "uz": "$d=\\gcd(a,b)$ soni $c$ ni boʻlsin va $(x_0,y_0)$ — istalgan bitta yechim boʻlsin. U holda har bir butun yechim $$x=x_0+\\frac{b}{d}\\,t,\\qquad y=y_0-\\frac{a}{d}\\,t,\\qquad t\\in\\mathbb{Z}$$ koʻrinishida beriladi va $t$ ning turli qiymatlari turli yechim beradi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Подстановка показывает, что каждая такая пара подходит: $$a\\Big(x_0+\\frac{b}{d}t\\Big)+b\\Big(y_0-\\frac{a}{d}t\\Big)=ax_0+by_0+\\frac{abt}{d}-\\frac{abt}{d}=c.$$ Обратно, пусть $(x,y)$ — решение. Вычтем равенства $ax+by=c$ и $ax_0+by_0=c$: $$a(x-x_0)=-b(y-y_0).$$ Поделим на $d$ и обозначим $a_1=a/d$, $b_1=b/d$; тогда $\\gcd(a_1,b_1)=1$ и $a_1(x-x_0)=-b_1(y-y_0)$. Значит $b_1$ делит $a_1(x-x_0)$, а так как $b_1$ взаимно просто с $a_1$, то $b_1\\mid x-x_0$. Запишем $x-x_0=b_1t$; подставив, получаем $y-y_0=-a_1t$. Это и есть формула. $\\blacksquare$",
-      "en": "Substitution shows each such pair works: $$a\\Big(x_0+\\frac{b}{d}t\\Big)+b\\Big(y_0-\\frac{a}{d}t\\Big)=ax_0+by_0+\\frac{abt}{d}-\\frac{abt}{d}=c.$$ Conversely, let $(x,y)$ be a solution. Subtract $ax_0+by_0=c$ from $ax+by=c$: $$a(x-x_0)=-b(y-y_0).$$ Divide by $d$ and write $a_1=a/d$, $b_1=b/d$; then $\\gcd(a_1,b_1)=1$ and $a_1(x-x_0)=-b_1(y-y_0)$. So $b_1$ divides $a_1(x-x_0)$, and since $b_1$ is coprime to $a_1$ we get $b_1\\mid x-x_0$. Write $x-x_0=b_1t$; substituting gives $y-y_0=-a_1t$, which is the formula. $\\blacksquare$"
+      "en": "Substitution shows each such pair works: $$a\\Big(x_0+\\frac{b}{d}t\\Big)+b\\Big(y_0-\\frac{a}{d}t\\Big)=ax_0+by_0+\\frac{abt}{d}-\\frac{abt}{d}=c.$$ Conversely, let $(x,y)$ be a solution. Subtract $ax_0+by_0=c$ from $ax+by=c$: $$a(x-x_0)=-b(y-y_0).$$ Divide by $d$ and write $a_1=a/d$, $b_1=b/d$; then $\\gcd(a_1,b_1)=1$ and $a_1(x-x_0)=-b_1(y-y_0)$. So $b_1$ divides $a_1(x-x_0)$, and since $b_1$ is coprime to $a_1$ we get $b_1\\mid x-x_0$. Write $x-x_0=b_1t$; substituting gives $y-y_0=-a_1t$, which is the formula. $\\blacksquare$",
+      "uz": "Oʻrniga qoʻyish har bir bunday juftlik yechim ekanini koʻrsatadi: $$a\\Big(x_0+\\frac{b}{d}t\\Big)+b\\Big(y_0-\\frac{a}{d}t\\Big)=ax_0+by_0+\\frac{abt}{d}-\\frac{abt}{d}=c.$$ Aksincha, $(x,y)$ yechim boʻlsin. $ax+by=c$ dan $ax_0+by_0=c$ ni ayiramiz: $$a(x-x_0)=-b(y-y_0).$$ $d$ ga boʻlamiz va $a_1=a/d$, $b_1=b/d$ deb belgilaymiz; u holda $\\gcd(a_1,b_1)=1$ va $a_1(x-x_0)=-b_1(y-y_0)$. Demak $b_1$ soni $a_1(x-x_0)$ ni boʻladi, $b_1$ esa $a_1$ ga oʻzaro tub boʻlgani uchun $b_1\\mid x-x_0$. $x-x_0=b_1t$ deb yozamiz; oʻrniga qoʻysak $y-y_0=-a_1t$ chiqadi, bu esa oʻsha formula. $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "На олимпиаде алгоритм Евклида обычно не нужен: одно решение проще угадать, взяв остатки. Из $ax+by=c$ следует $ax\\equiv c\\pmod{b}$ — а это уже одно уравнение с одной неизвестной по маленькому модулю.",
-      "en": "In a competition you rarely need the Euclidean algorithm: it is quicker to spot one solution using remainders. From $ax+by=c$ we get $ax\\equiv c\\pmod{b}$ — one equation in one unknown, modulo something small."
+      "en": "In a competition you rarely need the Euclidean algorithm: it is quicker to spot one solution using remainders. From $ax+by=c$ we get $ax\\equiv c\\pmod{b}$ — one equation in one unknown, modulo something small.",
+      "uz": "Musobaqada Yevklid algoritmi kamdan-kam kerak boʻladi: bitta yechimni qoldiqlar yordamida topish tezroq. $ax+by=c$ dan $ax\\equiv c\\pmod{b}$ chiqadi — bitta nomaʼlumli bitta tenglama, kichik modul boʻyicha."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите все целые решения уравнения $7x+11y=100$, а затем все решения в неотрицательных целых числах.",
-      "en": "Find all integer solutions of $7x+11y=100$, and then all solutions in non-negative integers."
+      "en": "Find all integer solutions of $7x+11y=100$, and then all solutions in non-negative integers.",
+      "uz": "$7x+11y=100$ ning barcha butun yechimlarini, soʻng manfiy boʻlmagan butun yechimlarini toping."
      },
      "steps": {
       "ru": [
@@ -161,18 +176,28 @@ window.LESSONS[4] = {
        "By the theorem every solution is $x=8+11t$, $y=4-7t$ with $t\\in\\mathbb{Z}$.",
        "Ask for $x\\ge0$ and $y\\ge0$: from $8+11t\\ge0$ we get $t\\ge-\\tfrac{8}{11}$, i.e. $t\\ge0$; from $4-7t\\ge0$ we get $t\\le\\tfrac47$, i.e. $t\\le0$.",
        "Only $t=0$ survives."
+      ],
+      "uz": [
+       "$\\gcd(7,11)=1$ va $1\\mid100$, demak yechimlar bor.",
+       "Bitta yechimni modul $7$ boʻyicha topamiz: $11y\\equiv100\\pmod 7$, yaʼni $4y\\equiv2\\pmod7$. $2$ ga koʻpaytiramiz: $8y\\equiv4$, $8\\equiv1$, demak $y\\equiv4\\pmod7$.",
+       "$y_0=4$ olamiz: u holda $7x=100-44=56$, demak $x_0=8$. Tekshirish: $56+44=100$ ✓",
+       "Teoremaga koʻra har bir yechim $x=8+11t$, $y=4-7t$, bunda $t\\in\\mathbb{Z}$.",
+       "$x\\ge0$ va $y\\ge0$ ni talab qilamiz: $8+11t\\ge0$ dan $t\\ge-\\tfrac{8}{11}$, yaʼni $t\\ge0$; $4-7t\\ge0$ dan $t\\le\\tfrac47$, yaʼni $t\\le0$.",
+       "Faqat $t=0$ qoladi."
       ]
      },
      "ans": {
       "ru": "Все целые решения: $(8+11t,\\;4-7t)$, $t\\in\\mathbb{Z}$. В неотрицательных числах решение единственно: $(8,4)$.",
-      "en": "All integer solutions: $(8+11t,\\;4-7t)$, $t\\in\\mathbb{Z}$. In non-negative integers the solution is unique: $(8,4)$."
+      "en": "All integer solutions: $(8+11t,\\;4-7t)$, $t\\in\\mathbb{Z}$. In non-negative integers the solution is unique: $(8,4)$.",
+      "uz": "Barcha butun yechimlar: $(8+11t,\\;4-7t)$, $t\\in\\mathbb{Z}$. Manfiy boʻlmagan butun sonlarda yechim yagona: $(8,4)$."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Обратите внимание на структуру ответа: целых решений бесконечно много, они идут с шагом $11$ по $x$ и $-7$ по $y$; а условие неотрицательности вырезает из этой прогрессии короткий отрезок. Почти все «денежные» задачи («сколько монет по 7 и по 11 сум») устроены именно так.",
-      "en": "Look at the shape of the answer: there are infinitely many integer solutions, spaced $11$ apart in $x$ and $-7$ in $y$; the non-negativity condition then cuts a short stretch out of that progression. Almost every \"coins and change\" problem works exactly like this."
+      "en": "Look at the shape of the answer: there are infinitely many integer solutions, spaced $11$ apart in $x$ and $-7$ in $y$; the non-negativity condition then cuts a short stretch out of that progression. Almost every \"coins and change\" problem works exactly like this.",
+      "uz": "Javobning koʻrinishiga eʼtibor bering: butun yechimlar cheksiz koʻp, $x$ boʻyicha $11$, $y$ boʻyicha $-7$ qadam bilan joylashgan; manfiy emaslik sharti esa oʻsha progressiyadan qisqa boʻlakni kesib oladi. «Tanga va qaytim» haqidagi deyarli har bir masala aynan shunday ishlaydi."
      }
     }
    ]
@@ -188,14 +213,16 @@ window.LESSONS[4] = {
      "t": "idea",
      "text": {
       "ru": "Главный приём всей темы. Если уравнение удалось привести к виду $$(\\text{целое})\\cdot(\\text{целое})=N,$$ то дальше работает арифметика: множители — делители числа $N$, а делителей у $N$ конечное число. Задача превращается в перебор.",
-      "en": "The central move of the whole topic. If the equation can be brought to the form $$(\\text{integer})\\cdot(\\text{integer})=N,$$ arithmetic takes over: the factors are divisors of $N$, and $N$ has only finitely many divisors. The problem becomes a finite check."
+      "en": "The central move of the whole topic. If the equation can be brought to the form $$(\\text{integer})\\cdot(\\text{integer})=N,$$ arithmetic takes over: the factors are divisors of $N$, and $N$ has only finitely many divisors. The problem becomes a finite check.",
+      "uz": "Butun mavzuning markaziy usuli. Agar tenglamani $$(\\text{butun son})\\cdot(\\text{butun son})=N$$ koʻrinishiga keltirish mumkin boʻlsa, arifmetika ishni oʻz qoʻliga oladi: koʻpaytuvchilar $N$ ning boʻluvchilari, $N$ ning esa chekli sondagi boʻluvchisi bor. Masala chekli tekshiruvga aylanadi."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Когда в уравнении есть слагаемое $xy$ и линейные слагаемые, помогает **добавление константы**. Тождество, которое стоит выучить наизусть:",
-      "en": "When the equation has an $xy$ term together with linear terms, **adding a constant** does the job. The identity worth memorising is:"
+      "en": "When the equation has an $xy$ term together with linear terms, **adding a constant** does the job. The identity worth memorising is:",
+      "uz": "Agar tenglamada $xy$ hadi chiziqli hadlar bilan birga uchrasa, ishni **doimiy son qoʻshish** bitiradi. Yodlashga arzigulik ayniyat:"
      }
     },
     {
@@ -206,14 +233,16 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Проверьте раскрытием скобок: $(x+b)(y+a)=xy+ax+by+ab$. Значит, чтобы разложить левую часть, достаточно прибавить к обеим частям уравнения число $ab$.",
-      "en": "Check by expanding: $(x+b)(y+a)=xy+ax+by+ab$. So to factor the left side it is enough to add $ab$ to both sides of the equation."
+      "en": "Check by expanding: $(x+b)(y+a)=xy+ax+by+ab$. So to factor the left side it is enough to add $ab$ to both sides of the equation.",
+      "uz": "Qavslarni ochib tekshiring: $(x+b)(y+a)=xy+ax+by+ab$. Demak chap tomonni ajratish uchun tenglamaning ikkala tomoniga $ab$ qoʻshish yetarli."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите все пары целых чисел с $xy+2x-3y=17$.",
-      "en": "Find every pair of integers with $xy+2x-3y=17$."
+      "en": "Find every pair of integers with $xy+2x-3y=17$.",
+      "uz": "$xy+2x-3y=17$ boʻladigan barcha butun sonlar juftligini toping."
      },
      "steps": {
       "ru": [
@@ -231,6 +260,14 @@ window.LESSONS[4] = {
        "$x-3=1,\\;y+2=11\\Rightarrow(4,9)$; $x-3=11,\\;y+2=1\\Rightarrow(14,-1)$;",
        "$x-3=-1,\\;y+2=-11\\Rightarrow(2,-13)$; $x-3=-11,\\;y+2=-1\\Rightarrow(-8,-3)$.",
        "Check one pair: $x=14,y=-1$ gives $-14+28+3=17$ ✓"
+      ],
+      "uz": [
+       "Bu yerda $a=2$, $b=-3$, demak $ab=-6$ va $xy+2x-3y=(x-3)(y+2)+6$.",
+       "Tenglama $(x-3)(y+2)=11$ koʻrinishiga keladi.",
+       "$11$ tub boʻlgani uchun koʻpaytuvchilar juftligi toʻrttadan biri: $(1,11),(11,1),(-1,-11),(-11,-1)$.",
+       "$x-3=1,\\;y+2=11\\Rightarrow(4,9)$; $x-3=11,\\;y+2=1\\Rightarrow(14,-1)$;",
+       "$x-3=-1,\\;y+2=-11\\Rightarrow(2,-13)$; $x-3=-11,\\;y+2=-1\\Rightarrow(-8,-3)$.",
+       "Bitta juftlikni tekshiramiz: $x=14,y=-1$ da $-14+28+3=17$ ✓"
       ]
      },
      "ans": {
@@ -242,14 +279,16 @@ window.LESSONS[4] = {
      "t": "warn",
      "text": {
       "ru": "Самая частая потеря баллов в этой теме: перебрали только **положительные** делители, хотя в условии сказано «в целых числах». У числа $11$ четыре делителя, а не два: $\\pm1,\\pm11$. Если же в условии стоит «в натуральных», отрицательные случаи, наоборот, надо отбросить — но написать, почему.",
-      "en": "The commonest way to lose marks here: running through only the **positive** divisors when the problem says \"in integers\". The number $11$ has four divisors, not two: $\\pm1,\\pm11$. If the problem says \"in positive integers\" then the negative cases must be discarded instead — but say why."
+      "en": "The commonest way to lose marks here: running through only the **positive** divisors when the problem says \"in integers\". The number $11$ has four divisors, not two: $\\pm1,\\pm11$. If the problem says \"in positive integers\" then the negative cases must be discarded instead — but say why.",
+      "uz": "Bu yerda ball yoʻqotishning eng koʻp uchraydigan yoʻli: masalada «butun sonlarda» deyilganda faqat **musbat** boʻluvchilarni saralash. $11$ sonining ikkita emas, toʻrtta boʻluvchisi bor: $\\pm1,\\pm11$. Agar masalada «musbat butun sonlarda» deyilgan boʻlsa, manfiy hollarni tashlab yuborish kerak — ammo sababini ayting."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Тот же приём решает все уравнения с дробями вида $\\dfrac1x+\\dfrac1y=\\dfrac1n$. Приведём к общему знаменателю: $n(x+y)=xy$, то есть $xy-nx-ny=0$. Прибавим $n^2$:",
-      "en": "The same move settles every fraction equation of the form $\\dfrac1x+\\dfrac1y=\\dfrac1n$. Clear denominators: $n(x+y)=xy$, that is $xy-nx-ny=0$. Add $n^2$:"
+      "en": "The same move settles every fraction equation of the form $\\dfrac1x+\\dfrac1y=\\dfrac1n$. Clear denominators: $n(x+y)=xy$, that is $xy-nx-ny=0$. Add $n^2$:",
+      "uz": "Xuddi shu usul $\\dfrac1x+\\dfrac1y=\\dfrac1n$ koʻrinishidagi har bir kasrli tenglamani hal qiladi. Maxrajlardan qutulamiz: $n(x+y)=xy$, yaʼni $xy-nx-ny=0$. $n^2$ qoʻshamiz:"
      }
     },
     {
@@ -260,7 +299,8 @@ window.LESSONS[4] = {
      "t": "ex",
      "q": {
       "ru": "Сколько пар натуральных чисел $(x,y)$ удовлетворяют равенству $\\dfrac1x+\\dfrac1y=\\dfrac1{12}$?",
-      "en": "How many pairs of positive integers $(x,y)$ satisfy $\\dfrac1x+\\dfrac1y=\\dfrac1{12}$?"
+      "en": "How many pairs of positive integers $(x,y)$ satisfy $\\dfrac1x+\\dfrac1y=\\dfrac1{12}$?",
+      "uz": "$\\dfrac1x+\\dfrac1y=\\dfrac1{12}$ ni qanoatlantiruvchi nechta musbat butun $(x,y)$ juftlik bor?"
      },
      "steps": {
       "ru": [
@@ -276,11 +316,19 @@ window.LESSONS[4] = {
        "Each positive divisor $d$ of $144$ gives exactly one pair: $x=12+d$, $y=12+\\tfrac{144}{d}$.",
        "$144=2^4\\cdot3^2$, so the number of divisors is $(4+1)(2+1)=15$.",
        "For instance $d=1$ gives $(13,156)$, and $d=12$ gives the \"square\" pair $(24,24)$."
+      ],
+      "uz": [
+       "Yuqoridagi formulaga koʻra $(x-12)(y-12)=144$.",
+       "Agar $x\\le12$ boʻlsa, $\\tfrac1x\\ge\\tfrac1{12}$ va $\\tfrac1y>0$ uchun joy qolmaydi. Demak $x>12$ va $y>12$, yaʼni ikkala koʻpaytuvchi ham musbat.",
+       "$144$ ning har bir musbat $d$ boʻluvchisi roppa-rosa bitta juftlik beradi: $x=12+d$, $y=12+\\tfrac{144}{d}$.",
+       "$144=2^4\\cdot3^2$, demak boʻluvchilar soni $(4+1)(2+1)=15$.",
+       "Masalan, $d=1$ da $(13,156)$, $d=12$ da esa «kvadrat» juftlik $(24,24)$ chiqadi."
       ]
      },
      "ans": {
       "ru": "$15$ пар (если пары $(x,y)$ и $(y,x)$ считать разными).",
-      "en": "$15$ pairs (counting $(x,y)$ and $(y,x)$ as different)."
+      "en": "$15$ pairs (counting $(x,y)$ and $(y,x)$ as different).",
+      "uz": "$15$ ta juftlik ($(x,y)$ va $(y,x)$ turli deb hisoblanganda)."
      }
     }
    ]
@@ -296,14 +344,16 @@ window.LESSONS[4] = {
      "t": "idea",
      "text": {
       "ru": "Если переменные симметричны, введите порядок — например $x\\le y\\le z$ — и оцените **самую маленькую** из них. Тогда для неё останется несколько значений, каждое из которых разбирается отдельно. Это самый надёжный способ превратить бесконечный поиск в конечный.",
-      "en": "If the variables are symmetric, impose an order — say $x\\le y\\le z$ — and bound the **smallest** one. Only a few values are then left for it, and each is handled separately. This is the most reliable way to turn an infinite search into a finite one."
+      "en": "If the variables are symmetric, impose an order — say $x\\le y\\le z$ — and bound the **smallest** one. Only a few values are then left for it, and each is handled separately. This is the most reliable way to turn an infinite search into a finite one.",
+      "uz": "Agar oʻzgaruvchilar simmetrik boʻlsa, tartib kiriting — masalan $x\\le y\\le z$ — va **eng kichigini** baholang. Unga bir necha qiymatgina qoladi, har biri alohida koʻriladi. Bu cheksiz saralashni chekliga aylantirishning eng ishonchli yoʻli."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите все тройки натуральных чисел с $\\dfrac1x+\\dfrac1y+\\dfrac1z=1$.",
-      "en": "Find every triple of positive integers with $\\dfrac1x+\\dfrac1y+\\dfrac1z=1$."
+      "en": "Find every triple of positive integers with $\\dfrac1x+\\dfrac1y+\\dfrac1z=1$.",
+      "uz": "$\\dfrac1x+\\dfrac1y+\\dfrac1z=1$ boʻladigan barcha musbat butun uchliklarni toping."
      },
      "steps": {
       "ru": [
@@ -323,29 +373,42 @@ window.LESSONS[4] = {
        "**$x=2$:** then $\\tfrac1y+\\tfrac1z=\\tfrac12$, and by the factoring formula $(y-2)(z-2)=4$.",
        "The positive divisor pairs of $4$ with $y\\le z$ are $(1,4)$ and $(2,2)$, giving $(y,z)=(3,6)$ and $(4,4)$.",
        "So there are three triples up to order."
+      ],
+      "uz": [
+       "Tenglama simmetrik, shuning uchun $x\\le y\\le z$ deb faraz qilamiz va oxirida oʻrin almashtirishlarni qoʻshamiz.",
+       "U holda $\\tfrac1x$ — uchala kasrning eng kattasi, demak $1=\\tfrac1x+\\tfrac1y+\\tfrac1z\\le\\tfrac3x$, bundan $x\\le3$.",
+       "Boshqa tomondan $\\tfrac1x<1$, demak $x\\ge2$. Faqat $x=2$ va $x=3$ qoladi.",
+       "**$x=3$:** u holda $\\tfrac1y+\\tfrac1z=\\tfrac23$ va $\\tfrac23\\le\\tfrac2y$, demak $y\\le3$; ammo $y\\ge x=3$, shuning uchun $y=3$ va $z=3$. $(3,3,3)$ uchligi.",
+       "**$x=2$:** u holda $\\tfrac1y+\\tfrac1z=\\tfrac12$, ajratish formulasiga koʻra esa $(y-2)(z-2)=4$.",
+       "$4$ ning $y\\le z$ boʻlgan musbat boʻluvchilari juftliklari $(1,4)$ va $(2,2)$, ular $(y,z)=(3,6)$ va $(4,4)$ ni beradi.",
+       "Demak tartibdan qatʼi nazar uchta uchlik bor."
       ]
      },
      "ans": {
       "ru": "$(3,3,3)$, $(2,4,4)$, $(2,3,6)$ и их перестановки.",
-      "en": "$(3,3,3)$, $(2,4,4)$, $(2,3,6)$ and their permutations."
+      "en": "$(3,3,3)$, $(2,4,4)$, $(2,3,6)$ and their permutations.",
+      "uz": "$(3,3,3)$, $(2,4,4)$, $(2,3,6)$ va ularning oʻrin almashtirishlari."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Зажать между соседними квадратами",
-      "en": "Squeeze between neighbouring squares"
+      "en": "Squeeze between neighbouring squares",
+      "uz": "Qoʻshni kvadratlar orasiga qisish"
      },
      "text": {
       "ru": "Второй вид оценки. Если требуется, чтобы выражение $f(n)$ было точным квадратом, попробуйте показать, что при больших $n$ оно строго лежит **между двумя соседними квадратами**: $$k^2<f(n)<(k+1)^2 .$$ Между ними квадратов нет, значит больших $n$ не бывает — и остаётся проверить несколько маленьких.",
-      "en": "The second kind of bound. If some expression $f(n)$ is required to be a perfect square, try to show that for large $n$ it lies strictly **between two neighbouring squares**: $$k^2<f(n)<(k+1)^2 .$$ There is no square in between, so large $n$ are impossible — and only a few small ones are left to check."
+      "en": "The second kind of bound. If some expression $f(n)$ is required to be a perfect square, try to show that for large $n$ it lies strictly **between two neighbouring squares**: $$k^2<f(n)<(k+1)^2 .$$ There is no square in between, so large $n$ are impossible — and only a few small ones are left to check.",
+      "uz": "Baholashning ikkinchi turi. Agar biror $f(n)$ ifodadan toʻliq kvadrat boʻlish talab qilinsa, katta $n$ larda uning **ikkita qoʻshni kvadrat orasida** qatʼiy yotishini koʻrsatishga urining: $$k^2<f(n)<(k+1)^2 .$$ Ular orasida kvadrat yoʻq, demak katta $n$ lar mumkin emas — tekshirishga faqat bir necha kichik qiymat qoladi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "При каких натуральных $n$ число $n^{2}+2n+4$ является точным квадратом?",
-      "en": "For which positive integers $n$ is $n^{2}+2n+4$ a perfect square?"
+      "en": "For which positive integers $n$ is $n^{2}+2n+4$ a perfect square?",
+      "uz": "Qaysi musbat butun $n$ larda $n^{2}+2n+4$ toʻliq kvadrat boʻladi?"
      },
      "steps": {
       "ru": [
@@ -359,11 +422,18 @@ window.LESSONS[4] = {
        "The nearest above is $(n+2)^2=n^2+4n+4$. The difference is $2n>0$ for $n\\ge1$, so $n^2+2n+4<(n+2)^2$.",
        "Hence $(n+1)^2<n^2+2n+4<(n+2)^2$ for every $n\\ge1$.",
        "There is no perfect square strictly between the neighbouring squares $(n+1)^2$ and $(n+2)^2$."
+      ],
+      "uz": [
+       "Quyidagi eng yaqin kvadrat $(n+1)^2=n^2+2n+1$. Ayirma $3>0$, demak $n^2+2n+4>(n+1)^2$.",
+       "Yuqoridagi eng yaqini $(n+2)^2=n^2+4n+4$. Ayirma $n\\ge1$ da $2n>0$, demak $n^2+2n+4<(n+2)^2$.",
+       "Shunday qilib, har bir $n\\ge1$ uchun $(n+1)^2<n^2+2n+4<(n+2)^2$.",
+       "$(n+1)^2$ va $(n+2)^2$ qoʻshni kvadratlari orasida qatʼiy yotgan toʻliq kvadrat yoʻq."
       ]
      },
      "ans": {
       "ru": "Ни при каких натуральных $n$. (При $n=0$ получается $4=2^2$.)",
-      "en": "For no positive integer $n$. (At $n=0$ it equals $4=2^2$.)"
+      "en": "For no positive integer $n$. (At $n=0$ it equals $4=2^2$.)",
+      "uz": "Hech bir musbat butun $n$ da. ($n=0$ da u $4=2^2$ ga teng.)"
      }
     }
    ]
@@ -379,14 +449,16 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Чтобы доказать, что решений **нет**, чаще всего берут остатки. Идея простая: если равенство верно в целых числах, оно верно и по любому модулю. Достаточно найти модуль, по которому левая и правая части никогда не совпадают.",
-      "en": "To prove that there are **no** solutions, remainders are the usual tool. The idea is simple: if an equality holds in the integers it holds modulo anything. It is enough to find a modulus for which the two sides never agree."
+      "en": "To prove that there are **no** solutions, remainders are the usual tool. The idea is simple: if an equality holds in the integers it holds modulo anything. It is enough to find a modulus for which the two sides never agree.",
+      "uz": "Yechim **yoʻq**ligini isbotlash uchun odatdagi qurol — qoldiqlar. Gʻoya oddiy: agar tenglik butun sonlarda oʻrinli boʻlsa, u istalgan modul boʻyicha ham oʻrinli. Ikkala tomon hech qachon mos tushmaydigan modulni topish yetarli."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Работает это потому, что степени принимают очень мало остатков. Вот таблица, которую стоит держать в голове:",
-      "en": "It works because powers take very few remainders. Here is the table worth carrying in your head:"
+      "en": "It works because powers take very few remainders. Here is the table worth carrying in your head:",
+      "uz": "Bu ishlaydi, chunki darajalar juda kam sondagi qoldiq oladi. Mana boshda saqlashga arzigulik jadval:"
      }
     },
     {
@@ -401,6 +473,11 @@ window.LESSONS[4] = {
        "Expression",
        "Modulus",
        "Possible remainders"
+      ],
+      "uz": [
+       "Ifoda",
+       "Modul",
+       "Mumkin boʻlgan qoldiqlar"
       ]
      },
      "rows": {
@@ -494,14 +571,16 @@ window.LESSONS[4] = {
      "t": "note",
      "text": {
       "ru": "Каждую строку проверяют за минуту: достаточно возвести в нужную степень числа $0,1,\\dots,m-1$. Например, для $n^2$ по модулю $8$: $0,1,4,9\\equiv1,16\\equiv0,25\\equiv1,36\\equiv4,49\\equiv1$ — всего три значения $0,1,4$.",
-      "en": "Each row takes a minute to verify: just raise $0,1,\\dots,m-1$ to the required power. For $n^2$ modulo $8$: $0,1,4,9\\equiv1,16\\equiv0,25\\equiv1,36\\equiv4,49\\equiv1$ — only the three values $0,1,4$."
+      "en": "Each row takes a minute to verify: just raise $0,1,\\dots,m-1$ to the required power. For $n^2$ modulo $8$: $0,1,4,9\\equiv1,16\\equiv0,25\\equiv1,36\\equiv4,49\\equiv1$ — only the three values $0,1,4$.",
+      "uz": "Har bir satrni tekshirish bir daqiqa oladi: $0,1,\\dots,m-1$ ni kerakli darajaga koʻtaring. Modul $8$ boʻyicha $n^2$ uchun: $0,1,4,9\\equiv1,16\\equiv0,25\\equiv1,36\\equiv4,49\\equiv1$ — faqat uchta qiymat $0,1,4$."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что уравнение $x^{2}-3y^{2}=5$ не имеет решений в целых числах.",
-      "en": "Prove that $x^{2}-3y^{2}=5$ has no integer solutions."
+      "en": "Prove that $x^{2}-3y^{2}=5$ has no integer solutions.",
+      "uz": "$x^{2}-3y^{2}=5$ ning butun yechimlari yoʻqligini isbotlang."
      },
      "steps": {
       "ru": [
@@ -515,18 +594,26 @@ window.LESSONS[4] = {
        "$5=3+2$, so we need $x^2\\equiv2\\pmod3$.",
        "But a square modulo $3$ is only $0$ or $1$ (see the table).",
        "A square can never leave remainder $2$ — contradiction."
+      ],
+      "uz": [
+       "Modul $3$ ni olamiz: $3y^2$ hadi yoʻqoladi va $x^2\\equiv5\\pmod3$ qoladi.",
+       "$5=3+2$, demak bizga $x^2\\equiv2\\pmod3$ kerak.",
+       "Ammo modul $3$ boʻyicha kvadrat faqat $0$ yoki $1$ (jadvalga qarang).",
+       "Kvadrat hech qachon $2$ qoldiq bera olmaydi — ziddiyat."
       ]
      },
      "ans": {
       "ru": "Решений нет. $\\blacksquare$",
-      "en": "There are no solutions. $\\blacksquare$"
+      "en": "There are no solutions. $\\blacksquare$",
+      "uz": "Yechim yoʻq. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $2023$ нельзя представить в виде суммы двух точных квадратов.",
-      "en": "Prove that $2023$ is not a sum of two perfect squares."
+      "en": "Prove that $2023$ is not a sum of two perfect squares.",
+      "uz": "$2023$ ikkita toʻliq kvadrat yigʻindisi emasligini isbotlang."
      },
      "steps": {
       "ru": [
@@ -540,18 +627,26 @@ window.LESSONS[4] = {
        "Every square is $0$ or $1$ modulo $4$, so a sum of two squares is $0$, $1$ or $2$.",
        "The remainder $3$ modulo $4$ is out of reach.",
        "But $2023=4\\cdot505+3$, that is $2023\\equiv3\\pmod4$."
+      ],
+      "uz": [
+       "$x^2+y^2=2023$ deb faraz qilamiz va modul $4$ ni olamiz.",
+       "Har bir kvadrat modul $4$ boʻyicha $0$ yoki $1$, demak ikkita kvadrat yigʻindisi $0$, $1$ yoki $2$.",
+       "Modul $4$ boʻyicha $3$ qoldiq erishib boʻlmaydigan joyda.",
+       "Ammo $2023=4\\cdot505+3$, yaʼni $2023\\equiv3\\pmod4$."
       ]
      },
      "ans": {
       "ru": "Представления нет. $\\blacksquare$",
-      "en": "No such representation exists. $\\blacksquare$"
+      "en": "No such representation exists. $\\blacksquare$",
+      "uz": "Bunday tasvir mavjud emas. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Остатки умеют доказывать только **отсутствие** решений. Если по всем модулям противоречия нет, это ещё ничего не значит: уравнение $x^2-2y^2=7$ проходит любую проверку по модулю, но и решения у него есть ($x=3,y=1$). Не пишите «противоречия не нашлось, значит решения есть» — это не доказательство.",
-      "en": "Remainders can only prove that solutions are **absent**. If no modulus gives a contradiction, that alone proves nothing: the equation $x^2-2y^2=7$ survives every modular test — and it does have solutions ($x=3,y=1$). Never write \"no contradiction was found, so a solution exists\" — that is not a proof."
+      "en": "Remainders can only prove that solutions are **absent**. If no modulus gives a contradiction, that alone proves nothing: the equation $x^2-2y^2=7$ survives every modular test — and it does have solutions ($x=3,y=1$). Never write \"no contradiction was found, so a solution exists\" — that is not a proof.",
+      "uz": "Qoldiqlar faqat yechimlar **yoʻq**ligini isbotlay oladi. Agar hech bir modul ziddiyat bermasa, bu oʻzi hech narsani isbotlamaydi: $x^2-2y^2=7$ tenglamasi har qanday modul sinovidan oʻtadi — va uning yechimi bor ($x=3,y=1$). Hech qachon «ziddiyat topilmadi, demak yechim bor» deb yozmang — bu isbot emas."
      }
     }
    ]
@@ -567,54 +662,63 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Уравнение $x^{2}+y^{2}=z^{2}$ — самое знаменитое диофантово уравнение. Его решения известны полностью, и вывод формулы — образец того, как разложение на множители и взаимная простота вместе решают задачу.",
-      "en": "The equation $x^{2}+y^{2}=z^{2}$ is the most famous Diophantine equation of all. Its solutions are known completely, and deriving them shows how factorisation and coprimality together finish a problem."
+      "en": "The equation $x^{2}+y^{2}=z^{2}$ is the most famous Diophantine equation of all. Its solutions are known completely, and deriving them shows how factorisation and coprimality together finish a problem.",
+      "uz": "$x^{2}+y^{2}=z^{2}$ tenglamasi — barcha Diofant tenglamalari ichida eng mashhuri. Uning yechimlari toʻliq maʼlum, ularni keltirib chiqarish esa koʻpaytuvchilarga ajratish va oʻzaro tublik birgalikda masalani qanday tugatishini koʻrsatadi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Примитивная тройка",
-      "en": "Primitive triple"
+      "en": "Primitive triple",
+      "uz": "Boshlangʻich uchlik"
      },
      "text": {
       "ru": "Тройка натуральных чисел $(x,y,z)$ с $x^{2}+y^{2}=z^{2}$ называется **примитивной**, если $\\gcd(x,y,z)=1$. Любая тройка получается из примитивной умножением на общий множитель, поэтому достаточно описать примитивные.",
-      "en": "A triple of positive integers $(x,y,z)$ with $x^{2}+y^{2}=z^{2}$ is **primitive** if $\\gcd(x,y,z)=1$. Every triple is a primitive one scaled by a common factor, so it suffices to describe the primitive ones."
+      "en": "A triple of positive integers $(x,y,z)$ with $x^{2}+y^{2}=z^{2}$ is **primitive** if $\\gcd(x,y,z)=1$. Every triple is a primitive one scaled by a common factor, so it suffices to describe the primitive ones.",
+      "uz": "$x^{2}+y^{2}=z^{2}$ boʻlgan musbat butun $(x,y,z)$ uchlik, agar $\\gcd(x,y,z)=1$ boʻlsa, **boshlangʻich** deyiladi. Har bir uchlik boshlangʻichning umumiy koʻpaytuvchiga koʻpaytirilgani, demak boshlangʻichlarini tavsiflash yetarli."
      }
     },
     {
      "t": "lemma",
      "name": {
       "ru": "Чётности в примитивной тройке",
-      "en": "Parities in a primitive triple"
+      "en": "Parities in a primitive triple",
+      "uz": "Boshlangʻich uchlikdagi juftliklar"
      },
      "text": {
       "ru": "В примитивной тройке ровно одно из чисел $x,y$ чётно, а $z$ нечётно.",
-      "en": "In a primitive triple exactly one of $x,y$ is even, and $z$ is odd."
+      "en": "In a primitive triple exactly one of $x,y$ is even, and $z$ is odd.",
+      "uz": "Boshlangʻich uchlikda $x,y$ dan roppa-rosa bittasi juft, $z$ esa toq."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Оба чётными быть не могут:** тогда $z^{2}=x^{2}+y^{2}$ было бы чётно, значит и $z$ чётно, и $\\gcd(x,y,z)\\ge2$ ✗\n\n**Оба нечётными тоже:** квадрат нечётного числа даёт остаток $1$ по модулю $4$, поэтому $$z^{2}=x^{2}+y^{2}\\equiv1+1=2\\pmod4 .$$ Но квадрат сравним с $0$ или $1$ по модулю $4$, а не с $2$ ✗\n\nЗначит ровно одно из $x,y$ чётно, и тогда $z^{2}\\equiv0+1=1\\pmod4$, то есть $z$ нечётно. $\\blacksquare$",
-      "en": "**They cannot both be even:** then $z^{2}=x^{2}+y^{2}$ would be even, so $z$ would be even and $\\gcd(x,y,z)\\ge2$ ✗\n\n**Nor both odd:** the square of an odd number is $1$ mod $4$, so $$z^{2}=x^{2}+y^{2}\\equiv2\\pmod4 .$$ But a square is $0$ or $1$ mod $4$, never $2$ ✗\n\nSo exactly one of $x,y$ is even, and then $z^{2}\\equiv1\\pmod4$, making $z$ odd. $\\blacksquare$"
+      "en": "**They cannot both be even:** then $z^{2}=x^{2}+y^{2}$ would be even, so $z$ would be even and $\\gcd(x,y,z)\\ge2$ ✗\n\n**Nor both odd:** the square of an odd number is $1$ mod $4$, so $$z^{2}=x^{2}+y^{2}\\equiv2\\pmod4 .$$ But a square is $0$ or $1$ mod $4$, never $2$ ✗\n\nSo exactly one of $x,y$ is even, and then $z^{2}\\equiv1\\pmod4$, making $z$ odd. $\\blacksquare$",
+      "uz": "**Ikkalasi ham juft boʻla olmaydi:** u holda $z^{2}=x^{2}+y^{2}$ juft boʻlar, demak $z$ juft boʻlar va $\\gcd(x,y,z)\\ge2$ boʻlar edi ✗\n\n**Ikkalasi ham toq boʻla olmaydi:** toq sonning kvadrati modul $4$ boʻyicha $1$, demak $$z^{2}=x^{2}+y^{2}\\equiv2\\pmod4 .$$ Ammo kvadrat modul $4$ boʻyicha $0$ yoki $1$, hech qachon $2$ emas ✗\n\nDemak $x,y$ dan roppa-rosa bittasi juft, u holda $z^{2}\\equiv1\\pmod4$ va $z$ toq. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Описание всех примитивных троек",
-      "en": "All primitive triples"
+      "en": "All primitive triples",
+      "uz": "Barcha boshlangʻich uchliklar"
      },
      "text": {
       "ru": "Примитивные тройки с чётным $x$ — это в точности $$x=2mn,\\qquad y=m^{2}-n^{2},\\qquad z=m^{2}+n^{2},$$ где $m>n>0$, $\\gcd(m,n)=1$ и числа $m,n$ разной чётности. Разным парам $(m,n)$ отвечают разные тройки.",
-      "en": "The primitive triples with $x$ even are exactly $$x=2mn,\\qquad y=m^{2}-n^{2},\\qquad z=m^{2}+n^{2},$$ with $m>n>0$, $\\gcd(m,n)=1$ and $m,n$ of opposite parity. Different pairs $(m,n)$ give different triples."
+      "en": "The primitive triples with $x$ even are exactly $$x=2mn,\\qquad y=m^{2}-n^{2},\\qquad z=m^{2}+n^{2},$$ with $m>n>0$, $\\gcd(m,n)=1$ and $m,n$ of opposite parity. Different pairs $(m,n)$ give different triples.",
+      "uz": "$x$ juft boʻlgan boshlangʻich uchliklar aynan $$x=2mn,\\qquad y=m^{2}-n^{2},\\qquad z=m^{2}+n^{2}$$ koʻrinishida, bunda $m>n>0$, $\\gcd(m,n)=1$ va $m,n$ turli juftlikda. Turli $(m,n)$ juftliklar turli uchlik beradi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Эти тройки подходят.** Проверим прямо: $$(2mn)^{2}+\\left(m^{2}-n^{2}\\right)^{2}=4m^{2}n^{2}+m^{4}-2m^{2}n^{2}+n^{4}=m^{4}+2m^{2}n^{2}+n^{4}=\\left(m^{2}+n^{2}\\right)^{2} \\quad\\checkmark$$\n\n**Других нет.** Пусть $(x,y,z)$ примитивна и $x$ чётно. Перепишем уравнение: $$x^{2}=z^{2}-y^{2}=(z-y)(z+y).$$\n\nПо лемме $y$ и $z$ нечётны, значит $z-y$ и $z+y$ чётны. Положим $$u=\\frac{z-y}{2},\\qquad v=\\frac{z+y}{2},\\qquad\\text{тогда}\\qquad uv=\\left(\\frac x2\\right)^{2} .$$\n\n**Числа $u$ и $v$ взаимно просты.** Общий делитель $d$ делит их сумму $z$ и разность $y$. Но $\\gcd(y,z)=1$: общий делитель $y$ и $z$ делил бы и $x^{2}=z^{2}-y^{2}$, а значит и $x$, вопреки примитивности. Значит $d=1$.\n\n**Взаимно простые множители полного квадрата — сами квадраты.** Отсюда $$u=n^{2},\\qquad v=m^{2}$$ для некоторых натуральных $m>n>0$ с $\\gcd(m,n)=1$.\n\nВозвращаясь, $$z=v+u=m^{2}+n^{2},\\qquad y=v-u=m^{2}-n^{2},\\qquad x=2\\sqrt{uv}=2mn .$$\n\nНаконец, нечётность $y=m^{2}-n^{2}$ требует, чтобы $m$ и $n$ имели разную чётность. $\\blacksquare$",
-      "en": "**These triples work.** Check directly: $$(2mn)^{2}+\\left(m^{2}-n^{2}\\right)^{2}=m^{4}+2m^{2}n^{2}+n^{4}=\\left(m^{2}+n^{2}\\right)^{2} \\quad\\checkmark$$\n\n**There are no others.** Let $(x,y,z)$ be primitive with $x$ even. Rewrite the equation: $$x^{2}=z^{2}-y^{2}=(z-y)(z+y).$$\n\nBy the lemma $y$ and $z$ are odd, so $z-y$ and $z+y$ are even. Put $$u=\\frac{z-y}{2},\\qquad v=\\frac{z+y}{2},\\qquad\\text{so}\\qquad uv=\\left(\\frac x2\\right)^{2} .$$\n\n**The numbers $u,v$ are coprime.** A common divisor $d$ divides their sum $z$ and difference $y$. But $\\gcd(y,z)=1$: a common divisor of $y$ and $z$ would divide $x^{2}=z^{2}-y^{2}$, hence $x$, against primitivity. So $d=1$.\n\n**Coprime factors of a perfect square are themselves squares.** Hence $$u=n^{2},\\qquad v=m^{2}$$ for some $m>n>0$ with $\\gcd(m,n)=1$.\n\nGoing back, $$z=m^{2}+n^{2},\\qquad y=m^{2}-n^{2},\\qquad x=2mn .$$\n\nFinally, $y=m^{2}-n^{2}$ being odd forces $m$ and $n$ to have opposite parity. $\\blacksquare$"
+      "en": "**These triples work.** Check directly: $$(2mn)^{2}+\\left(m^{2}-n^{2}\\right)^{2}=m^{4}+2m^{2}n^{2}+n^{4}=\\left(m^{2}+n^{2}\\right)^{2} \\quad\\checkmark$$\n\n**There are no others.** Let $(x,y,z)$ be primitive with $x$ even. Rewrite the equation: $$x^{2}=z^{2}-y^{2}=(z-y)(z+y).$$\n\nBy the lemma $y$ and $z$ are odd, so $z-y$ and $z+y$ are even. Put $$u=\\frac{z-y}{2},\\qquad v=\\frac{z+y}{2},\\qquad\\text{so}\\qquad uv=\\left(\\frac x2\\right)^{2} .$$\n\n**The numbers $u,v$ are coprime.** A common divisor $d$ divides their sum $z$ and difference $y$. But $\\gcd(y,z)=1$: a common divisor of $y$ and $z$ would divide $x^{2}=z^{2}-y^{2}$, hence $x$, against primitivity. So $d=1$.\n\n**Coprime factors of a perfect square are themselves squares.** Hence $$u=n^{2},\\qquad v=m^{2}$$ for some $m>n>0$ with $\\gcd(m,n)=1$.\n\nGoing back, $$z=m^{2}+n^{2},\\qquad y=m^{2}-n^{2},\\qquad x=2mn .$$\n\nFinally, $y=m^{2}-n^{2}$ being odd forces $m$ and $n$ to have opposite parity. $\\blacksquare$",
+      "uz": "**Bu uchliklar mos keladi.** Bevosita tekshiramiz: $$(2mn)^{2}+\\left(m^{2}-n^{2}\\right)^{2}=m^{4}+2m^{2}n^{2}+n^{4}=\\left(m^{2}+n^{2}\\right)^{2} \\quad\\checkmark$$\n\n**Boshqasi yoʻq.** $(x,y,z)$ boshlangʻich va $x$ juft boʻlsin. Tenglamani qayta yozamiz: $$x^{2}=z^{2}-y^{2}=(z-y)(z+y).$$\n\nLemmaga koʻra $y$ va $z$ toq, demak $z-y$ va $z+y$ juft. $$u=\\frac{z-y}{2},\\qquad v=\\frac{z+y}{2},\\qquad\\text{demak}\\qquad uv=\\left(\\frac x2\\right)^{2} .$$\n\n**$u,v$ sonlari oʻzaro tub.** Umumiy boʻluvchi $d$ ularning yigʻindisi $z$ ni va ayirmasi $y$ ni boʻladi. Ammo $\\gcd(y,z)=1$: $y$ va $z$ ning umumiy boʻluvchisi $x^{2}=z^{2}-y^{2}$ ni, demak $x$ ni ham boʻlar edi, bu esa boshlangʻichlikka zid. Demak $d=1$.\n\n**Toʻliq kvadratning oʻzaro tub koʻpaytuvchilari oʻzlari ham kvadrat.** Demak biror $m>n>0$ va $\\gcd(m,n)=1$ uchun $$u=n^{2},\\qquad v=m^{2} .$$\n\nOrqaga qaytsak, $$z=m^{2}+n^{2},\\qquad y=m^{2}-n^{2},\\qquad x=2mn .$$\n\nNihoyat, $y=m^{2}-n^{2}$ ning toqligi $m$ va $n$ ni turli juftlikda boʻlishga majbur qiladi. $\\blacksquare$"
      }
     },
     {
@@ -716,7 +820,8 @@ window.LESSONS[4] = {
      "t": "ex",
      "q": {
       "ru": "Найдите все пифагоровы треугольники, у которых один из катетов равен $15$.",
-      "en": "Find all Pythagorean triangles with a leg equal to $15$."
+      "en": "Find all Pythagorean triangles with a leg equal to $15$.",
+      "uz": "Katetlaridan biri $15$ ga teng boʻlgan barcha Pifagor uchburchaklarini toping."
      },
      "steps": {
       "ru": [
@@ -734,18 +839,28 @@ window.LESSONS[4] = {
        "Compute $z=\\tfrac{(z-b)+(z+b)}2$ and $b=\\tfrac{(z+b)-(z-b)}2$.",
        "This gives $(b,z)=(112,113),\\ (36,39),\\ (20,25),\\ (8,17)$.",
        "Check for $(8,15,17)$: $64+225=289=17^{2}$ ✓"
+      ],
+      "uz": [
+       "$15$ kateti toq, demak u «toq» katet; $z^{2}-b^{2}=225$ deb yozamiz.",
+       "Ajratamiz: $(z-b)(z+b)=225$, ikkala koʻpaytuvchi toq va $z-b<z+b$.",
+       "$225=3^{2}\\cdot5^{2}$ ni shunday juftliklarga ajratishlar: $1\\cdot225$, $3\\cdot75$, $5\\cdot45$, $9\\cdot25$.",
+       "$z=\\tfrac{(z-b)+(z+b)}2$ va $b=\\tfrac{(z+b)-(z-b)}2$ ni hisoblaymiz.",
+       "Bu $(b,z)=(112,113),\\ (36,39),\\ (20,25),\\ (8,17)$ ni beradi.",
+       "$(8,15,17)$ uchun tekshirish: $64+225=289=17^{2}$ ✓"
       ]
      },
      "ans": {
       "ru": "Четыре треугольника: $(15,8,17)$, $(15,20,25)$, $(15,36,39)$, $(15,112,113)$.",
-      "en": "Four triangles: $(15,8,17)$, $(15,20,25)$, $(15,36,39)$, $(15,112,113)$."
+      "en": "Four triangles: $(15,8,17)$, $(15,20,25)$, $(15,36,39)$, $(15,112,113)$.",
+      "uz": "Toʻrtta uchburchak: $(15,8,17)$, $(15,20,25)$, $(15,36,39)$, $(15,112,113)$."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Великая теорема Ферма.** При показателе $2$ решений бесконечно много, а при $n\\ge3$ уравнение $$x^{n}+y^{n}=z^{n}$$ не имеет решений в натуральных числах. Ферма записал это на полях книги в $1637$ году, добавив, что нашёл «поистине чудесное доказательство», для которого не хватило полей. Доказательство нашли лишь в $1995$ году (Эндрю Уайлс), и оно занимает более сотни страниц. Случай $n=4$ доступен школьными средствами — он разбирается методом спуска.",
-      "en": "**Fermat’s Last Theorem.** With exponent $2$ there are infinitely many solutions, but for $n\\ge3$ the equation $$x^{n}+y^{n}=z^{n}$$ has no solutions in positive integers. Fermat wrote this in a book margin in $1637$, adding that he had a \"truly marvellous proof\" that the margin was too small to hold. A proof appeared only in $1995$ (Andrew Wiles) and runs to well over a hundred pages. The case $n=4$ is within reach of school methods — by infinite descent."
+      "en": "**Fermat’s Last Theorem.** With exponent $2$ there are infinitely many solutions, but for $n\\ge3$ the equation $$x^{n}+y^{n}=z^{n}$$ has no solutions in positive integers. Fermat wrote this in a book margin in $1637$, adding that he had a \"truly marvellous proof\" that the margin was too small to hold. A proof appeared only in $1995$ (Andrew Wiles) and runs to well over a hundred pages. The case $n=4$ is within reach of school methods — by infinite descent.",
+      "uz": "**Fermaning katta teoremasi.** Koʻrsatkich $2$ boʻlganda yechimlar cheksiz koʻp, ammo $n\\ge3$ da $$x^{n}+y^{n}=z^{n}$$ tenglamasining musbat butun yechimlari yoʻq. Ferma buni $1637$-yilda kitob chekkasiga yozgan va «haqiqatan ajoyib isbot» topganini, ammo chekka uni sigʻdira olmasligini qoʻshib qoʻygan. Isbot faqat $1995$-yilda paydo boʻldi (Endryu Uayls) va yuz betdan oshadi. $n=4$ holi maktab usullari bilan yechiladi — cheksiz tushish orqali."
      }
     }
    ]
@@ -761,79 +876,92 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Какие числа представимы в виде $a^{2}+b^{2}$? Ответ красив и полностью известен, и главную роль в нём играют остатки простых по модулю $4$.",
-      "en": "Which numbers can be written as $a^{2}+b^{2}$? The answer is beautiful and completely known, and the leading role is played by the residues of primes modulo $4$."
+      "en": "Which numbers can be written as $a^{2}+b^{2}$? The answer is beautiful and completely known, and the leading role is played by the residues of primes modulo $4$.",
+      "uz": "Qaysi sonlarni $a^{2}+b^{2}$ koʻrinishida yozish mumkin? Javob goʻzal va toʻliq maʼlum, bosh rolni esa tub sonlarning modul $4$ boʻyicha qoldiqlari oʻynaydi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Тождество Брахмагупты — Фибоначчи",
-      "en": "The Brahmagupta–Fibonacci identity"
+      "en": "The Brahmagupta–Fibonacci identity",
+      "uz": "Brahmagupta–Fibonachchi ayniyati"
      },
      "text": {
       "ru": "$$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}=(ac-bd)^{2}+(ad+bc)^{2} .$$ Значит **произведение двух сумм двух квадратов снова является суммой двух квадратов**.",
-      "en": "$$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}=(ac-bd)^{2}+(ad+bc)^{2} .$$ So **a product of two sums of two squares is again a sum of two squares**."
+      "en": "$$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}=(ac-bd)^{2}+(ad+bc)^{2} .$$ So **a product of two sums of two squares is again a sum of two squares**.",
+      "uz": "$$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}=(ac-bd)^{2}+(ad+bc)^{2} .$$ Demak **ikkita kvadrat yigʻindisi boʻlgan ikki sonning koʻpaytmasi yana ikkita kvadrat yigʻindisi**."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Раскроем правую часть первого равенства: $$(ac+bd)^{2}=a^{2}c^{2}+2abcd+b^{2}d^{2} ,$$ $$(ad-bc)^{2}=a^{2}d^{2}-2abcd+b^{2}c^{2} .$$\n\nСлагаемые $\\pm2abcd$ уничтожаются, и остаётся $$a^{2}c^{2}+b^{2}d^{2}+a^{2}d^{2}+b^{2}c^{2}=a^{2}\\left(c^{2}+d^{2}\\right)+b^{2}\\left(c^{2}+d^{2}\\right)=\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right) \\quad\\checkmark$$\n\nВторое равенство получается заменой $d\\to-d$. $\\blacksquare$",
-      "en": "Expand the first right-hand side: $$(ac+bd)^{2}=a^{2}c^{2}+2abcd+b^{2}d^{2} ,$$ $$(ad-bc)^{2}=a^{2}d^{2}-2abcd+b^{2}c^{2} .$$\n\nThe terms $\\pm2abcd$ cancel, leaving $$a^{2}c^{2}+b^{2}d^{2}+a^{2}d^{2}+b^{2}c^{2}=\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right) \\quad\\checkmark$$\n\nThe second identity comes from replacing $d$ by $-d$. $\\blacksquare$"
+      "en": "Expand the first right-hand side: $$(ac+bd)^{2}=a^{2}c^{2}+2abcd+b^{2}d^{2} ,$$ $$(ad-bc)^{2}=a^{2}d^{2}-2abcd+b^{2}c^{2} .$$\n\nThe terms $\\pm2abcd$ cancel, leaving $$a^{2}c^{2}+b^{2}d^{2}+a^{2}d^{2}+b^{2}c^{2}=\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right) \\quad\\checkmark$$\n\nThe second identity comes from replacing $d$ by $-d$. $\\blacksquare$",
+      "uz": "Birinchi oʻng tomonni ochamiz: $$(ac+bd)^{2}=a^{2}c^{2}+2abcd+b^{2}d^{2} ,$$ $$(ad-bc)^{2}=a^{2}d^{2}-2abcd+b^{2}c^{2} .$$\n\n$\\pm2abcd$ hadlari qisqaradi va $$a^{2}c^{2}+b^{2}d^{2}+a^{2}d^{2}+b^{2}c^{2}=\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right) \\quad\\checkmark$$ qoladi.\n\nIkkinchi ayniyat $d$ ni $-d$ ga almashtirishdan chiqadi. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Препятствие по модулю 4",
-      "en": "The obstruction modulo 4"
+      "en": "The obstruction modulo 4",
+      "uz": "Modul $4$ boʻyicha toʻsiq"
      },
      "text": {
       "ru": "Сумма двух квадратов никогда не даёт остаток $3$ при делении на $4$. Значит ни одно число вида $4k+3$ не представимо в виде $a^{2}+b^{2}$.",
-      "en": "A sum of two squares never leaves remainder $3$ on division by $4$. So no number of the form $4k+3$ is a sum of two squares."
+      "en": "A sum of two squares never leaves remainder $3$ on division by $4$. So no number of the form $4k+3$ is a sum of two squares.",
+      "uz": "Ikkita kvadrat yigʻindisi $4$ ga boʻlganda hech qachon $3$ qoldiq bermaydi. Demak $4k+3$ koʻrinishidagi hech bir son ikkita kvadrat yigʻindisi emas."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Квадрат целого числа сравним с $0$ или $1$ по модулю $4$: чётное даёт $(2k)^{2}=4k^{2}\\equiv0$, нечётное — $(2k+1)^{2}=4k(k+1)+1\\equiv1$.\n\nЗначит сумма двух квадратов сравнима с одним из чисел $$0+0=0,\\qquad 0+1=1,\\qquad 1+1=2 ,$$ то есть с $0$, $1$ или $2$, но не с $3$. $\\blacksquare$",
-      "en": "A square is $0$ or $1$ mod $4$: an even number gives $(2k)^{2}\\equiv0$, an odd one $(2k+1)^{2}=4k(k+1)+1\\equiv1$.\n\nSo a sum of two squares is congruent to one of $$0+0=0,\\qquad 0+1=1,\\qquad 1+1=2 ,$$ never to $3$. $\\blacksquare$"
+      "en": "A square is $0$ or $1$ mod $4$: an even number gives $(2k)^{2}\\equiv0$, an odd one $(2k+1)^{2}=4k(k+1)+1\\equiv1$.\n\nSo a sum of two squares is congruent to one of $$0+0=0,\\qquad 0+1=1,\\qquad 1+1=2 ,$$ never to $3$. $\\blacksquare$",
+      "uz": "Kvadrat modul $4$ boʻyicha $0$ yoki $1$: juft son $(2k)^{2}\\equiv0$, toq son esa $(2k+1)^{2}=4k(k+1)+1\\equiv1$ beradi.\n\nDemak ikkita kvadrat yigʻindisi $$0+0=0,\\qquad 0+1=1,\\qquad 1+1=2$$ dan biriga taqqoslanadi, hech qachon $3$ ga emas. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема Ферма о двух квадратах",
-      "en": "Fermat’s two-square theorem"
+      "en": "Fermat’s two-square theorem",
+      "uz": "Fermaning ikki kvadrat haqidagi teoremasi"
      },
      "text": {
       "ru": "Нечётное простое $p$ представимо в виде $p=a^{2}+b^{2}$ **тогда и только тогда**, когда $p\\equiv1\\pmod4$. Такое представление единственно с точностью до порядка и знаков.",
-      "en": "An odd prime $p$ is a sum of two squares $p=a^{2}+b^{2}$ **if and only if** $p\\equiv1\\pmod4$, and the representation is unique up to order and signs."
+      "en": "An odd prime $p$ is a sum of two squares $p=a^{2}+b^{2}$ **if and only if** $p\\equiv1\\pmod4$, and the representation is unique up to order and signs.",
+      "uz": "Toq tub $p$ son $p=a^{2}+b^{2}$ koʻrinishida ikkita kvadrat yigʻindisi boʻlishi uchun $p\\equiv1\\pmod4$ boʻlishi **zarur va yetarli**, tasvir esa tartib va ishoralardan qatʼi nazar yagona."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Необходимость** — это предыдущая теорема: при $p\\equiv3\\pmod4$ представления нет.\n\n**Достаточность (набросок).** Пусть $p\\equiv1\\pmod4$. По критерию Эйлера сравнение $x^{2}\\equiv-1\\pmod p$ разрешимо; возьмём такое $x$, то есть $p\\mid x^{2}+1$.\n\nДалее применяют **лемму Туэ**: если $p\\mid x^{2}+1$, то найдутся целые $a,b$ с $0<|a|,|b|<\\sqrt p$ и $a\\equiv xb\\pmod p$. (Лемма доказывается принципом Дирихле: пар $(u,v)$ с $0\\le u,v<\\sqrt p$ больше, чем $p$ вычетов, значит две пары дают одинаковое $u-xv$.)\n\nТогда $$a^{2}+b^{2}\\equiv x^{2}b^{2}+b^{2}=b^{2}\\left(x^{2}+1\\right)\\equiv0\\pmod p ,$$ то есть $p\\mid a^{2}+b^{2}$. Но $$0<a^{2}+b^{2}<p+p=2p ,$$ значит $a^{2}+b^{2}=p$ ✓ $\\blacksquare$",
-      "en": "**Necessity** is the previous theorem: for $p\\equiv3\\pmod4$ no representation exists.\n\n**Sufficiency (sketch).** Let $p\\equiv1\\pmod4$. Euler’s criterion makes $x^{2}\\equiv-1\\pmod p$ solvable; take such an $x$, so $p\\mid x^{2}+1$.\n\nNow apply **Thue’s lemma**: if $p\\mid x^{2}+1$ there are integers $a,b$ with $0<|a|,|b|<\\sqrt p$ and $a\\equiv xb\\pmod p$. (The lemma follows from the pigeonhole principle: there are more pairs $(u,v)$ with $0\\le u,v<\\sqrt p$ than there are $p$ residues, so two pairs give the same $u-xv$.)\n\nThen $$a^{2}+b^{2}\\equiv x^{2}b^{2}+b^{2}=b^{2}\\left(x^{2}+1\\right)\\equiv0\\pmod p ,$$ so $p\\mid a^{2}+b^{2}$. But $$0<a^{2}+b^{2}<2p ,$$ hence $a^{2}+b^{2}=p$ ✓ $\\blacksquare$"
+      "en": "**Necessity** is the previous theorem: for $p\\equiv3\\pmod4$ no representation exists.\n\n**Sufficiency (sketch).** Let $p\\equiv1\\pmod4$. Euler’s criterion makes $x^{2}\\equiv-1\\pmod p$ solvable; take such an $x$, so $p\\mid x^{2}+1$.\n\nNow apply **Thue’s lemma**: if $p\\mid x^{2}+1$ there are integers $a,b$ with $0<|a|,|b|<\\sqrt p$ and $a\\equiv xb\\pmod p$. (The lemma follows from the pigeonhole principle: there are more pairs $(u,v)$ with $0\\le u,v<\\sqrt p$ than there are $p$ residues, so two pairs give the same $u-xv$.)\n\nThen $$a^{2}+b^{2}\\equiv x^{2}b^{2}+b^{2}=b^{2}\\left(x^{2}+1\\right)\\equiv0\\pmod p ,$$ so $p\\mid a^{2}+b^{2}$. But $$0<a^{2}+b^{2}<2p ,$$ hence $a^{2}+b^{2}=p$ ✓ $\\blacksquare$",
+      "uz": "**Zarurligi** — oldingi teorema: $p\\equiv3\\pmod4$ uchun tasvir mavjud emas.\n\n**Yetarliligi (sxema).** $p\\equiv1\\pmod4$ boʻlsin. Eyler mezoni $x^{2}\\equiv-1\\pmod p$ ni yechiladigan qiladi; shunday $x$ ni olamiz, demak $p\\mid x^{2}+1$.\n\nEndi **Tue lemmasini** qoʻllaymiz: agar $p\\mid x^{2}+1$ boʻlsa, $0<|a|,|b|<\\sqrt p$ va $a\\equiv xb\\pmod p$ boʻladigan butun $a,b$ mavjud. (Lemma Dirixle prinsipidan chiqadi: $0\\le u,v<\\sqrt p$ boʻlgan $(u,v)$ juftliklar $p$ ta qoldiqdan koʻp, demak ikkita juftlik bir xil $u-xv$ beradi.)\n\nU holda $$a^{2}+b^{2}\\equiv x^{2}b^{2}+b^{2}=b^{2}\\left(x^{2}+1\\right)\\equiv0\\pmod p ,$$ demak $p\\mid a^{2}+b^{2}$. Ammo $$0<a^{2}+b^{2}<2p ,$$ shuning uchun $a^{2}+b^{2}=p$ ✓ $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Какие числа вообще представимы",
-      "en": "Which numbers are sums of two squares"
+      "en": "Which numbers are sums of two squares",
+      "uz": "Qaysi sonlar ikkita kvadrat yigʻindisi"
      },
      "text": {
       "ru": "Натуральное число $n$ представимо в виде суммы двух квадратов **тогда и только тогда**, когда в его разложении каждое простое вида $4k+3$ входит в **чётной** степени.",
-      "en": "A positive integer $n$ is a sum of two squares **if and only if** every prime of the form $4k+3$ occurs in its factorisation to an **even** power."
+      "en": "A positive integer $n$ is a sum of two squares **if and only if** every prime of the form $4k+3$ occurs in its factorisation to an **even** power.",
+      "uz": "Musbat butun $n$ son ikkita kvadrat yigʻindisi boʻlishi uchun uning ajratmasida $4k+3$ koʻrinishidagi har bir tub son **juft** darajada qatnashishi zarur va yetarli."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Представимы ли числа $45$, $2025$ и $2023$ в виде суммы двух квадратов?",
-      "en": "Are $45$, $2025$ and $2023$ sums of two squares?"
+      "en": "Are $45$, $2025$ and $2023$ sums of two squares?",
+      "uz": "$45$, $2025$ va $2023$ ikkita kvadrat yigʻindisimi?"
      },
      "steps": {
       "ru": [
@@ -849,18 +977,27 @@ window.LESSONS[4] = {
        "$2025=3^{4}\\cdot5^{2}$. The exponent of $3$ is $4$, even ✓ And indeed $2025=27^{2}+36^{2}$.",
        "$2023=7\\cdot17^{2}$. The prime $7\\equiv3\\pmod4$ appears to the **first** power ✗ So it is not representable.",
        "A shortcut for $2023$: it is $\\equiv3\\pmod4$, which already settles it."
+      ],
+      "uz": [
+       "$45=3^{2}\\cdot5$. $3\\equiv3\\pmod4$ tub soni juft darajada qatnashadi ✓ Demak tasvirlanadi.",
+       "Oshkor koʻrinishda: $5=1^{2}+2^{2}$, buni $9=3^{2}$ ga koʻpaytirsak $45=3^{2}+6^{2}=9+36$ ✓",
+       "$2025=3^{4}\\cdot5^{2}$. $3$ ning darajasi $4$ — juft ✓ Va haqiqatan $2025=27^{2}+36^{2}$.",
+       "$2023=7\\cdot17^{2}$. $7\\equiv3\\pmod4$ tub soni **birinchi** darajada qatnashadi ✗ Demak tasvirlanmaydi.",
+       "$2023$ uchun qisqa yoʻl: u $\\equiv3\\pmod4$, bu allaqachon masalani hal qiladi."
       ]
      },
      "ans": {
       "ru": "$45$ и $2025$ представимы, $2023$ — нет.",
-      "en": "$45$ and $2025$ are; $2023$ is not."
+      "en": "$45$ and $2025$ are; $2023$ is not.",
+      "uz": "$45$ va $2025$ — ha; $2023$ — yoʻq."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "В олимпиадных задачах чаще нужна **отрицательная** часть теории: чтобы доказать, что уравнение не имеет решений, достаточно найти простое $p\\equiv3\\pmod4$, входящее в нечётной степени, — или просто посмотреть на остаток по модулю $4$.",
-      "en": "In olympiad problems the **negative** half is what is usually needed: to show an equation has no solutions it is enough to find a prime $p\\equiv3\\pmod4$ occurring to an odd power — or simply to look at the residue mod $4$."
+      "en": "In olympiad problems the **negative** half is what is usually needed: to show an equation has no solutions it is enough to find a prime $p\\equiv3\\pmod4$ occurring to an odd power — or simply to look at the residue mod $4$.",
+      "uz": "Olimpiada masalalarida odatda **salbiy** yarmi kerak boʻladi: tenglamaning yechimi yoʻqligini koʻrsatish uchun toq darajada qatnashuvchi $p\\equiv3\\pmod4$ tub sonni topish — yoki shunchaki modul $4$ boʻyicha qoldiqqa qarash — yetarli."
      }
     }
    ]
@@ -876,68 +1013,79 @@ window.LESSONS[4] = {
      "t": "p",
      "text": {
       "ru": "Уравнение $x^{2}-Dy^{2}=1$ с неквадратным натуральным $D$ ведёт себя удивительно: у него либо нет нетривиальных решений, либо их сразу бесконечно много, и все они порождаются одним-единственным.",
-      "en": "The equation $x^{2}-Dy^{2}=1$ with $D$ a non-square positive integer behaves remarkably: it either has no non-trivial solution or infinitely many at once, all generated by a single one."
+      "en": "The equation $x^{2}-Dy^{2}=1$ with $D$ a non-square positive integer behaves remarkably: it either has no non-trivial solution or infinitely many at once, all generated by a single one.",
+      "uz": "$D$ toʻliq kvadrat boʻlmagan musbat butun son boʻlganda $x^{2}-Dy^{2}=1$ tenglamasi ajoyib tutadi: uning yo notrivial yechimi umuman yoʻq, yo birdaniga cheksiz koʻp, va ularning hammasi bittasidan hosil qilinadi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Уравнение Пелля",
-      "en": "Pell’s equation"
+      "en": "Pell’s equation",
+      "uz": "Pell tenglamasi"
      },
      "text": {
       "ru": "$$x^{2}-Dy^{2}=1 ,$$ где $D$ — натуральное число, не являющееся полным квадратом. Решение $(x,y)=(1,0)$ называют тривиальным; наименьшее решение с $y>0$ — **фундаментальным**.",
-      "en": "$$x^{2}-Dy^{2}=1 ,$$ with $D$ a positive non-square integer. The solution $(x,y)=(1,0)$ is called trivial; the smallest solution with $y>0$ is the **fundamental** one."
+      "en": "$$x^{2}-Dy^{2}=1 ,$$ with $D$ a positive non-square integer. The solution $(x,y)=(1,0)$ is called trivial; the smallest solution with $y>0$ is the **fundamental** one.",
+      "uz": "$$x^{2}-Dy^{2}=1 ,$$ bunda $D$ — toʻliq kvadrat boʻlmagan musbat butun son. $(x,y)=(1,0)$ yechim trivial deyiladi; $y>0$ boʻlgan eng kichik yechim **asosiy** deyiladi."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Условие «$D$ не квадрат» существенно. При $D=k^{2}$ уравнение превращается в $$(x-ky)(x+ky)=1 ,$$ откуда $x=\\pm1$, $y=0$ — только тривиальные решения.",
-      "en": "The hypothesis that $D$ is not a square matters. For $D=k^{2}$ the equation becomes $$(x-ky)(x+ky)=1 ,$$ forcing $x=\\pm1$, $y=0$ — only the trivial solutions."
+      "en": "The hypothesis that $D$ is not a square matters. For $D=k^{2}$ the equation becomes $$(x-ky)(x+ky)=1 ,$$ forcing $x=\\pm1$, $y=0$ — only the trivial solutions.",
+      "uz": "$D$ ning kvadrat emasligi sharti muhim. $D=k^{2}$ da tenglama $$(x-ky)(x+ky)=1$$ koʻrinishiga keladi va $x=\\pm1$, $y=0$ ni majbur qiladi — faqat trivial yechimlar."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Из одного решения — бесконечно много",
-      "en": "One solution breeds infinitely many"
+      "en": "One solution breeds infinitely many",
+      "uz": "Bitta yechim cheksiz koʻpini tugʻadi"
      },
      "text": {
       "ru": "Пусть $\\left(x_1,y_1\\right)$ — решение уравнения $x^{2}-Dy^{2}=1$ с $y_1>0$. Тогда пара $$x_{k+1}=x_1x_k+Dy_1y_k,\\qquad y_{k+1}=x_1y_k+y_1x_k$$ тоже является решением, и все получаемые решения попарно различны.",
-      "en": "Let $\\left(x_1,y_1\\right)$ solve $x^{2}-Dy^{2}=1$ with $y_1>0$. Then $$x_{k+1}=x_1x_k+Dy_1y_k,\\qquad y_{k+1}=x_1y_k+y_1x_k$$ is again a solution, and all the solutions produced are pairwise distinct."
+      "en": "Let $\\left(x_1,y_1\\right)$ solve $x^{2}-Dy^{2}=1$ with $y_1>0$. Then $$x_{k+1}=x_1x_k+Dy_1y_k,\\qquad y_{k+1}=x_1y_k+y_1x_k$$ is again a solution, and all the solutions produced are pairwise distinct.",
+      "uz": "$\\left(x_1,y_1\\right)$ — $y_1>0$ boʻlgan $x^{2}-Dy^{2}=1$ ning yechimi boʻlsin. U holda $$x_{k+1}=x_1x_k+Dy_1y_k,\\qquad y_{k+1}=x_1y_k+y_1x_k$$ yana yechim boʻladi va hosil qilingan barcha yechimlar juft-jufti bilan turli."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Это решение.** Подставим и раскроем: $$x_{k+1}^{2}-Dy_{k+1}^{2}=\\left(x_1x_k+Dy_1y_k\\right)^{2}-D\\left(x_1y_k+y_1x_k\\right)^{2}.$$\n\nПервая скобка даёт $$x_1^{2}x_k^{2}+2Dx_1x_ky_1y_k+D^{2}y_1^{2}y_k^{2} ,$$ вторая, умноженная на $D$, — $$D x_1^{2}y_k^{2}+2Dx_1y_ky_1x_k+Dy_1^{2}x_k^{2} .$$\n\nСредние члены одинаковы и уничтожаются, остаётся $$x_1^{2}x_k^{2}+D^{2}y_1^{2}y_k^{2}-Dx_1^{2}y_k^{2}-Dy_1^{2}x_k^{2}=\\left(x_1^{2}-Dy_1^{2}\\right)\\left(x_k^{2}-Dy_k^{2}\\right)=1\\cdot1=1 \\quad\\checkmark$$\n\n**Решения различны.** При $x_k,y_k>0$ имеем $y_{k+1}=x_1y_k+y_1x_k>y_k$, значит вторая координата строго растёт, и повторений нет. $\\blacksquare$\n\n**Откуда взялась формула.** Она отвечает умножению в кольце $\\mathbb{Z}\\left[\\sqrt D\\right]$: если $x_k+y_k\\sqrt D$ имеет норму $1$, то и произведение $$\\left(x_1+y_1\\sqrt D\\right)\\left(x_k+y_k\\sqrt D\\right)=\\left(x_1x_k+Dy_1y_k\\right)+\\left(x_1y_k+y_1x_k\\right)\\sqrt D$$ имеет норму $1\\cdot1=1$.",
-      "en": "**It is a solution.** Substitute and expand: $$x_{k+1}^{2}-Dy_{k+1}^{2}=\\left(x_1x_k+Dy_1y_k\\right)^{2}-D\\left(x_1y_k+y_1x_k\\right)^{2}.$$\n\nThe cross terms match and cancel, leaving $$\\left(x_1^{2}-Dy_1^{2}\\right)\\left(x_k^{2}-Dy_k^{2}\\right)=1\\cdot1=1 \\quad\\checkmark$$\n\n**The solutions are distinct.** For $x_k,y_k>0$ we get $y_{k+1}=x_1y_k+y_1x_k>y_k$, so the second coordinate strictly increases and nothing repeats. $\\blacksquare$\n\n**Where the formula comes from.** It is multiplication in the ring $\\mathbb{Z}\\left[\\sqrt D\\right]$: if $x_k+y_k\\sqrt D$ has norm $1$, so does $$\\left(x_1+y_1\\sqrt D\\right)\\left(x_k+y_k\\sqrt D\\right)=\\left(x_1x_k+Dy_1y_k\\right)+\\left(x_1y_k+y_1x_k\\right)\\sqrt D .$$"
+      "en": "**It is a solution.** Substitute and expand: $$x_{k+1}^{2}-Dy_{k+1}^{2}=\\left(x_1x_k+Dy_1y_k\\right)^{2}-D\\left(x_1y_k+y_1x_k\\right)^{2}.$$\n\nThe cross terms match and cancel, leaving $$\\left(x_1^{2}-Dy_1^{2}\\right)\\left(x_k^{2}-Dy_k^{2}\\right)=1\\cdot1=1 \\quad\\checkmark$$\n\n**The solutions are distinct.** For $x_k,y_k>0$ we get $y_{k+1}=x_1y_k+y_1x_k>y_k$, so the second coordinate strictly increases and nothing repeats. $\\blacksquare$\n\n**Where the formula comes from.** It is multiplication in the ring $\\mathbb{Z}\\left[\\sqrt D\\right]$: if $x_k+y_k\\sqrt D$ has norm $1$, so does $$\\left(x_1+y_1\\sqrt D\\right)\\left(x_k+y_k\\sqrt D\\right)=\\left(x_1x_k+Dy_1y_k\\right)+\\left(x_1y_k+y_1x_k\\right)\\sqrt D .$$",
+      "uz": "**Bu yechim.** Oʻrniga qoʻyib ochamiz: $$x_{k+1}^{2}-Dy_{k+1}^{2}=\\left(x_1x_k+Dy_1y_k\\right)^{2}-D\\left(x_1y_k+y_1x_k\\right)^{2}.$$\n\nAralash hadlar mos tushib qisqaradi va $$\\left(x_1^{2}-Dy_1^{2}\\right)\\left(x_k^{2}-Dy_k^{2}\\right)=1\\cdot1=1 \\quad\\checkmark$$ qoladi.\n\n**Yechimlar turli.** $x_k,y_k>0$ da $y_{k+1}=x_1y_k+y_1x_k>y_k$, demak ikkinchi koordinata qatʼiy oʻsadi va hech narsa takrorlanmaydi. $\\blacksquare$\n\n**Formula qayerdan kelgan.** Bu $\\mathbb{Z}\\left[\\sqrt D\\right]$ halqasidagi koʻpaytirish: agar $x_k+y_k\\sqrt D$ ning normasi $1$ boʻlsa, $$\\left(x_1+y_1\\sqrt D\\right)\\left(x_k+y_k\\sqrt D\\right)=\\left(x_1x_k+Dy_1y_k\\right)+\\left(x_1y_k+y_1x_k\\right)\\sqrt D$$ ning normasi ham $1$."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема Лагранжа",
-      "en": "Lagrange’s theorem"
+      "en": "Lagrange’s theorem",
+      "uz": "Lagranj teoremasi"
      },
      "text": {
       "ru": "Для любого неквадратного натурального $D$ уравнение $x^{2}-Dy^{2}=1$ имеет решение с $y>0$. Более того, **все** решения в натуральных числах получаются из фундаментального по формуле $$x_k+y_k\\sqrt D=\\left(x_1+y_1\\sqrt D\\right)^{k},\\qquad k=1,2,3,\\dots$$",
-      "en": "For every non-square positive integer $D$ the equation $x^{2}-Dy^{2}=1$ has a solution with $y>0$. Moreover **every** solution in positive integers arises from the fundamental one as $$x_k+y_k\\sqrt D=\\left(x_1+y_1\\sqrt D\\right)^{k},\\qquad k=1,2,3,\\dots$$"
+      "en": "For every non-square positive integer $D$ the equation $x^{2}-Dy^{2}=1$ has a solution with $y>0$. Moreover **every** solution in positive integers arises from the fundamental one as $$x_k+y_k\\sqrt D=\\left(x_1+y_1\\sqrt D\\right)^{k},\\qquad k=1,2,3,\\dots$$",
+      "uz": "Toʻliq kvadrat boʻlmagan har bir musbat butun $D$ uchun $x^{2}-Dy^{2}=1$ tenglamasining $y>0$ boʻlgan yechimi bor. Bundan tashqari musbat butun sonlardagi **har bir** yechim asosiysidan $$x_k+y_k\\sqrt D=\\left(x_1+y_1\\sqrt D\\right)^{k},\\qquad k=1,2,3,\\dots$$ koʻrinishida hosil boʻladi."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Доказательство существования опирается на приближение иррационального числа $\\sqrt D$ рациональными дробями (теорема Дирихле о приближениях) и на принцип Дирихле — оно вполне элементарно, но длиннее, чем уместно здесь. Фундаментальное решение находят разложением $\\sqrt D$ в цепную дробь.\n\n**Осторожно:** фундаментальное решение может быть неожиданно огромным. Для $D=61$ это $$x_1=1\\,766\\,319\\,049,\\qquad y_1=226\\,153\\,980 .$$",
-      "en": "The existence proof rests on approximating the irrational $\\sqrt D$ by rationals (Dirichlet’s approximation theorem) together with the pigeonhole principle — elementary, but longer than fits here. The fundamental solution is found from the continued fraction of $\\sqrt D$.\n\n**Careful:** it can be startlingly large. For $D=61$ it is $$x_1=1\\,766\\,319\\,049,\\qquad y_1=226\\,153\\,980 .$$"
+      "en": "The existence proof rests on approximating the irrational $\\sqrt D$ by rationals (Dirichlet’s approximation theorem) together with the pigeonhole principle — elementary, but longer than fits here. The fundamental solution is found from the continued fraction of $\\sqrt D$.\n\n**Careful:** it can be startlingly large. For $D=61$ it is $$x_1=1\\,766\\,319\\,049,\\qquad y_1=226\\,153\\,980 .$$",
+      "uz": "Mavjudlik isboti irratsional $\\sqrt D$ ni ratsional sonlar bilan yaqinlashtirishga (Dirixlening yaqinlashtirish teoremasi) va Dirixle prinsipiga tayanadi — elementar, ammo bu yerga sigʻmaydigan darajada uzun. Asosiy yechim $\\sqrt D$ ning uzluksiz kasridan topiladi.\n\n**Ehtiyot boʻling:** u hayratlanarli darajada katta boʻlishi mumkin. $D=61$ uchun u $$x_1=1\\,766\\,319\\,049,\\qquad y_1=226\\,153\\,980 .$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите три наименьших решения уравнения $x^{2}-2y^{2}=1$ в натуральных числах.",
-      "en": "Find the three smallest positive solutions of $x^{2}-2y^{2}=1$."
+      "en": "Find the three smallest positive solutions of $x^{2}-2y^{2}=1$.",
+      "uz": "$x^{2}-2y^{2}=1$ ning eng kichik uchta musbat yechimini toping."
      },
      "steps": {
       "ru": [
@@ -955,6 +1103,14 @@ window.LESSONS[4] = {
        "$(3,2)\\to(17,12)$.",
        "$(17,12)\\to(99,70)$.",
        "Check: $17^{2}-2\\cdot12^{2}=1$ ✓ and $99^{2}-2\\cdot70^{2}=1$ ✓"
+      ],
+      "uz": [
+       "Asosiysini qidiramiz: $y=1$ da $x^{2}=3$ ✗; $y=2$ da $x^{2}=9$, yaʼni $x=3$ ✓",
+       "Demak $\\left(x_1,y_1\\right)=(3,2)$.",
+       "$D=2$ bilan rekurrensiya: $x_{k+1}=3x_k+4y_k$, $y_{k+1}=3y_k+2x_k$.",
+       "$(3,2)\\to(17,12)$.",
+       "$(17,12)\\to(99,70)$.",
+       "Tekshirish: $17^{2}-2\\cdot12^{2}=1$ ✓ va $99^{2}-2\\cdot70^{2}=1$ ✓"
       ]
      },
      "ans": {
@@ -966,7 +1122,8 @@ window.LESSONS[4] = {
      "t": "note",
      "text": {
       "ru": "**Откуда название.** Эйлер по ошибке приписал уравнение английскому математику Джону Пеллю, который к нему отношения почти не имел; впервые его систематически изучали индийские математики — Брахмагупта в VII веке и Бхаскара II в XII-м. Историческая несправедливость закрепилась в названии.\n\n**Где встречается.** Уравнение Пелля возникает всюду, где нужно «почти равенство» двух величин: треугольные числа, являющиеся квадратами; приближения $\\sqrt2\\approx\\tfrac{99}{70}$; задача Архимеда о быках.",
-      "en": "**About the name.** Euler mistakenly attributed the equation to the English mathematician John Pell, who had little to do with it; it was studied systematically much earlier by Indian mathematicians — Brahmagupta in the seventh century and Bhāskara II in the twelfth. The historical injustice stuck.\n\n**Where it appears.** Pell’s equation turns up wherever two quantities must be \"almost equal\": triangular numbers that are squares, approximations such as $\\sqrt2\\approx\\tfrac{99}{70}$, and Archimedes’ cattle problem."
+      "en": "**About the name.** Euler mistakenly attributed the equation to the English mathematician John Pell, who had little to do with it; it was studied systematically much earlier by Indian mathematicians — Brahmagupta in the seventh century and Bhāskara II in the twelfth. The historical injustice stuck.\n\n**Where it appears.** Pell’s equation turns up wherever two quantities must be \"almost equal\": triangular numbers that are squares, approximations such as $\\sqrt2\\approx\\tfrac{99}{70}$, and Archimedes’ cattle problem.",
+      "uz": "**Nom haqida.** Eyler tenglamani xato ravishda ingliz matematigi Jon Pellga bogʻlagan, u esa bunga deyarli aloqador emas edi; tenglamani ancha oldin hind matematiklari — yettinchi asrda Brahmagupta va oʻn ikkinchi asrda Bhaskara II — tizimli oʻrgangan. Tarixiy adolatsizlik saqlanib qoldi.\n\n**Qayerda uchraydi.** Pell tenglamasi ikkita kattalik «deyarli teng» boʻlishi kerak boʻlgan hamma joyda paydo boʻladi: kvadrat boʻlgan uchburchakli sonlar, $\\sqrt2\\approx\\tfrac{99}{70}$ kabi yaqinlashtirishlar va Arximedning buqalar haqidagi masalasi."
      }
     }
    ]
@@ -982,82 +1139,95 @@ window.LESSONS[4] = {
      "t": "idea",
      "text": {
       "ru": "Приём Ферма и самый красивый в теме. Предположим, что решение есть. Из него строим **новое решение, меньшее прежнего**. Повторяя, получаем бесконечную убывающую последовательность натуральных чисел — а такой не бывает. Значит исходное предположение ложно.",
-      "en": "Fermat’s move, and the most beautiful in the topic. Suppose a solution exists. From it, construct a **new solution smaller than the old one**. Repeating gives an infinite strictly decreasing sequence of positive integers — and no such sequence exists. So the original assumption was false."
+      "en": "Fermat’s move, and the most beautiful in the topic. Suppose a solution exists. From it, construct a **new solution smaller than the old one**. Repeating gives an infinite strictly decreasing sequence of positive integers — and no such sequence exists. So the original assumption was false.",
+      "uz": "Fermaning usuli va mavzudagi eng goʻzali. Yechim bor deb faraz qiling. Undan **eskisidan kichikroq yangi yechim** yasang. Buni takrorlash musbat butun sonlarning cheksiz qatʼiy kamayuvchi ketma-ketligini beradi — bunday ketma-ketlik esa mavjud emas. Demak dastlabki faraz notoʻgʻri edi."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "На практике удобнее так: возьмём решение с **наименьшим** возможным значением какой-нибудь положительной величины (скажем, $z$) и получим из него меньшее. Противоречие с минимальностью — и доказательство закончено.",
-      "en": "In practice it is neater to say: take a solution with the **smallest** possible value of some positive quantity (say $z$) and produce a smaller one from it. That contradicts minimality and the proof is done."
+      "en": "In practice it is neater to say: take a solution with the **smallest** possible value of some positive quantity (say $z$) and produce a smaller one from it. That contradicts minimality and the proof is done.",
+      "uz": "Amalda shunday aytish tozaroq: biror musbat kattalikning (masalan $z$ ning) **eng kichik** qiymatiga ega yechimni oling va undan kichikrogʻini yasang. Bu minimallikka zid, isbot esa tugadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Пример спуска",
-      "en": "A model descent"
+      "en": "A model descent",
+      "uz": "Namunaviy tushish"
      },
      "text": {
       "ru": "Уравнение $x^{2}+y^{2}=3z^{2}$ имеет в целых числах единственное решение $x=y=z=0$.",
-      "en": "The equation $x^{2}+y^{2}=3z^{2}$ has exactly one solution in integers: $x=y=z=0$."
+      "en": "The equation $x^{2}+y^{2}=3z^{2}$ has exactly one solution in integers: $x=y=z=0$.",
+      "uz": "$x^{2}+y^{2}=3z^{2}$ tenglamasining butun sonlarda roppa-rosa bitta yechimi bor: $x=y=z=0$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Предположим, что решение с $z\\ne0$ существует, и среди всех таких выберем решение с **наименьшим** $|z|$.\n\n**Шаг 1.** По модулю $3$ имеем $x^2+y^2\\equiv0$. Квадрат по модулю $3$ равен $0$ или $1$, поэтому сумма двух квадратов равна $0,1$ или $2$. Ноль получается **только** когда оба слагаемых нулевые, то есть $x\\equiv y\\equiv0\\pmod3$.\n\n**Шаг 2.** Запишем $x=3a$, $y=3b$. Тогда $$9a^{2}+9b^{2}=3z^{2}\\quad\\Longrightarrow\\quad 3(a^{2}+b^{2})=z^{2}.$$\n\n**Шаг 3.** Значит $3\\mid z^{2}$, а так как $3$ простое, то $3\\mid z$. Пишем $z=3c$: $$3(a^{2}+b^{2})=9c^{2}\\quad\\Longrightarrow\\quad a^{2}+b^{2}=3c^{2}.$$\n\n**Шаг 4.** Мы получили новое решение $(a,b,c)$ того же уравнения, причём $|c|=|z|/3<|z|$ и $c\\ne0$ (иначе и $z=0$). Это противоречит минимальности $|z|$.\n\nЗначит решений с $z\\ne0$ нет; а при $z=0$ из $x^2+y^2=0$ следует $x=y=0$. $\\blacksquare$",
-      "en": "Suppose a solution with $z\\ne0$ exists, and among all of them choose one with the **smallest** $|z|$.\n\n**Step 1.** Modulo $3$ we have $x^2+y^2\\equiv0$. A square is $0$ or $1$ modulo $3$, so a sum of two squares is $0,1$ or $2$. It is zero **only** when both terms are zero, that is $x\\equiv y\\equiv0\\pmod3$.\n\n**Step 2.** Write $x=3a$, $y=3b$. Then $$9a^{2}+9b^{2}=3z^{2}\\quad\\Longrightarrow\\quad 3(a^{2}+b^{2})=z^{2}.$$\n\n**Step 3.** So $3\\mid z^{2}$, and since $3$ is prime, $3\\mid z$. Write $z=3c$: $$3(a^{2}+b^{2})=9c^{2}\\quad\\Longrightarrow\\quad a^{2}+b^{2}=3c^{2}.$$\n\n**Step 4.** We have produced a new solution $(a,b,c)$ of the same equation with $|c|=|z|/3<|z|$ and $c\\ne0$ (otherwise $z=0$ too). This contradicts the minimality of $|z|$.\n\nSo there is no solution with $z\\ne0$; and when $z=0$, $x^2+y^2=0$ forces $x=y=0$. $\\blacksquare$"
+      "en": "Suppose a solution with $z\\ne0$ exists, and among all of them choose one with the **smallest** $|z|$.\n\n**Step 1.** Modulo $3$ we have $x^2+y^2\\equiv0$. A square is $0$ or $1$ modulo $3$, so a sum of two squares is $0,1$ or $2$. It is zero **only** when both terms are zero, that is $x\\equiv y\\equiv0\\pmod3$.\n\n**Step 2.** Write $x=3a$, $y=3b$. Then $$9a^{2}+9b^{2}=3z^{2}\\quad\\Longrightarrow\\quad 3(a^{2}+b^{2})=z^{2}.$$\n\n**Step 3.** So $3\\mid z^{2}$, and since $3$ is prime, $3\\mid z$. Write $z=3c$: $$3(a^{2}+b^{2})=9c^{2}\\quad\\Longrightarrow\\quad a^{2}+b^{2}=3c^{2}.$$\n\n**Step 4.** We have produced a new solution $(a,b,c)$ of the same equation with $|c|=|z|/3<|z|$ and $c\\ne0$ (otherwise $z=0$ too). This contradicts the minimality of $|z|$.\n\nSo there is no solution with $z\\ne0$; and when $z=0$, $x^2+y^2=0$ forces $x=y=0$. $\\blacksquare$",
+      "uz": "$z\\ne0$ boʻlgan yechim bor deb faraz qilamiz va ular orasidan $|z|$ **eng kichik** boʻlganini tanlaymiz.\n\n**1-qadam.** Modul $3$ boʻyicha $x^2+y^2\\equiv0$. Kvadrat modul $3$ boʻyicha $0$ yoki $1$, demak ikkita kvadrat yigʻindisi $0,1$ yoki $2$. U **faqat** ikkala had ham nol boʻlgandagina nolga teng, yaʼni $x\\equiv y\\equiv0\\pmod3$.\n\n**2-qadam.** $x=3a$, $y=3b$ deb yozamiz. U holda $$9a^{2}+9b^{2}=3z^{2}\\quad\\Longrightarrow\\quad 3(a^{2}+b^{2})=z^{2}.$$\n\n**3-qadam.** Demak $3\\mid z^{2}$, $3$ tub boʻlgani uchun esa $3\\mid z$. $z=3c$ deb yozamiz: $$3(a^{2}+b^{2})=9c^{2}\\quad\\Longrightarrow\\quad a^{2}+b^{2}=3c^{2}.$$\n\n**4-qadam.** Biz xuddi shu tenglamaning yangi $(a,b,c)$ yechimini yasadik, bunda $|c|=|z|/3<|z|$ va $c\\ne0$ (aks holda $z=0$ boʻlar edi). Bu $|z|$ ning minimalligiga zid.\n\nDemak $z\\ne0$ boʻlgan yechim yoʻq; $z=0$ boʻlganda esa $x^2+y^2=0$ dan $x=y=0$. $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Тем же спуском Ферма доказал, что $x^{4}+y^{4}=z^{2}$ не имеет решений в натуральных числах — а отсюда сразу следует его Великая теорема для показателя $4$. Эта задача стоит последней в списке ниже.",
-      "en": "The same descent is how Fermat proved that $x^{4}+y^{4}=z^{2}$ has no solution in positive integers — which immediately gives his Last Theorem for exponent $4$. That problem is waiting for you in the list below."
+      "en": "The same descent is how Fermat proved that $x^{4}+y^{4}=z^{2}$ has no solution in positive integers — which immediately gives his Last Theorem for exponent $4$. That problem is waiting for you in the list below.",
+      "uz": "Xuddi shu tushish bilan Ferma $x^{4}+y^{4}=z^{2}$ ning musbat butun yechimlari yoʻqligini isbotlagan — bundan darhol uning katta teoremasi $4$ koʻrsatkich uchun kelib chiqadi. Bu masala quyidagi roʻyxatda sizni kutmoqda."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Как узнать, что нужен спуск",
-      "en": "How to spot that descent is needed"
+      "en": "How to spot that descent is needed",
+      "uz": "Tushish kerakligini qanday sezish mumkin"
      },
      "text": {
       "ru": "Признаки: уравнение **однородно** (все слагаемые одной степени, как $x^2+y^2=3z^2$), либо все переменные входят симметрично, либо после взятия остатков выясняется, что все переменные делятся на одно и то же простое. Последнее — почти верный знак: делите и повторяйте.",
-      "en": "The signs: the equation is **homogeneous** (all terms of the same degree, as in $x^2+y^2=3z^2$), or the variables enter symmetrically, or a remainder argument shows that every variable is divisible by the same prime. That last one is an almost certain signal: divide and repeat."
+      "en": "The signs: the equation is **homogeneous** (all terms of the same degree, as in $x^2+y^2=3z^2$), or the variables enter symmetrically, or a remainder argument shows that every variable is divisible by the same prime. That last one is an almost certain signal: divide and repeat.",
+      "uz": "Belgilari: tenglama **bir jinsli** (barcha hadlar bir xil darajada, $x^2+y^2=3z^2$ dagidek), yoki oʻzgaruvchilar simmetrik kiradi, yoki qoldiqlar mulohazasi har bir oʻzgaruvchi bir xil tub songa boʻlinishini koʻrsatadi. Oxirgisi deyarli aniq signal: boʻling va takrorlang."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Принцип бесконечного спуска",
-      "en": "The principle of infinite descent"
+      "en": "The principle of infinite descent",
+      "uz": "Cheksiz tushish prinsipi"
      },
      "text": {
       "ru": "Пусть из каждого решения задачи в натуральных числах можно построить **строго меньшее** решение. Тогда решений нет вовсе.",
-      "en": "Suppose that from every solution in positive integers one can build a **strictly smaller** solution. Then there are no solutions at all."
+      "en": "Suppose that from every solution in positive integers one can build a **strictly smaller** solution. Then there are no solutions at all.",
+      "uz": "Musbat butun sonlardagi har bir yechimdan **qatʼiy kichikroq** yechim yasash mumkin deb faraz qilaylik. U holda yechim umuman yoʻq."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Предположим, что решение существует. Рассмотрим множество всех натуральных значений некоторой выбранной величины (например, $z$ или суммы $x+y+z$) по всем решениям. Это непустое множество натуральных чисел, значит по принципу наименьшего числа в нём есть наименьший элемент.\n\nВозьмём отвечающее ему решение. По условию из него строится решение со строго меньшим значением той же величины — противоречие с минимальностью ✗ $\\blacksquare$",
-      "en": "Suppose a solution exists. Consider the set of positive values taken by some chosen quantity (say $z$, or the sum $x+y+z$) over all solutions. This is a non-empty set of positive integers, so by the least-number principle it has a smallest element.\n\nTake the corresponding solution. By hypothesis it yields a solution with a strictly smaller value of that quantity — contradicting minimality ✗ $\\blacksquare$"
+      "en": "Suppose a solution exists. Consider the set of positive values taken by some chosen quantity (say $z$, or the sum $x+y+z$) over all solutions. This is a non-empty set of positive integers, so by the least-number principle it has a smallest element.\n\nTake the corresponding solution. By hypothesis it yields a solution with a strictly smaller value of that quantity — contradicting minimality ✗ $\\blacksquare$",
+      "uz": "Yechim bor deb faraz qilaylik. Barcha yechimlar boʻyicha tanlangan biror kattalik (masalan $z$ yoki $x+y+z$ yigʻindisi) qabul qiladigan musbat qiymatlar toʻplamini koʻramiz. Bu musbat butun sonlarning boʻsh boʻlmagan toʻplami, demak eng kichik son prinsipiga koʻra unda eng kichik element bor.\n\nUnga mos yechimni olamiz. Farazga koʻra u oʻsha kattalikning qatʼiy kichikroq qiymatiga ega yechim beradi — bu minimallikka zid ✗ $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Спуск — это индукция, повёрнутая наоборот. Практически он выглядит так: показываем, что все неизвестные обязаны делиться на некоторое $d>1$, делим на $d$ и получаем решение поменьше. Если делимость выводится **всегда**, спуск не останавливается — значит решений нет.",
-      "en": "Descent is induction turned around. In practice it looks like this: show that every unknown must be divisible by some $d>1$, divide through by $d$ and obtain a smaller solution. If the divisibility follows **every** time, the descent never stops — so there is no solution."
+      "en": "Descent is induction turned around. In practice it looks like this: show that every unknown must be divisible by some $d>1$, divide through by $d$ and obtain a smaller solution. If the divisibility follows **every** time, the descent never stops — so there is no solution.",
+      "uz": "Tushish — bu teskariga burilgan induksiya. Amalda u shunday koʻrinadi: har bir nomaʼlum biror $d>1$ ga boʻlinishini koʻrsating, $d$ ga boʻling va kichikroq yechim oling. Agar boʻlinuvchanlik **har safar** kelib chiqsa, tushish hech qachon toʻxtamaydi — demak yechim yoʻq."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что уравнение $x^{2}+y^{2}=3z^{2}$ не имеет решений в натуральных числах.",
-      "en": "Prove that $x^{2}+y^{2}=3z^{2}$ has no solutions in positive integers."
+      "en": "Prove that $x^{2}+y^{2}=3z^{2}$ has no solutions in positive integers.",
+      "uz": "$x^{2}+y^{2}=3z^{2}$ ning musbat butun yechimlari yoʻqligini isbotlang."
      },
      "steps": {
       "ru": [
@@ -1075,11 +1245,20 @@ window.LESSONS[4] = {
        "Substituting, $9a^{2}+9b^{2}=3z^{2}$, i.e. $3\\left(a^{2}+b^{2}\\right)=z^{2}$.",
        "So $3\\mid z^{2}$ and $3\\mid z$; write $z=3c$ and cancel: $a^{2}+b^{2}=3c^{2}$.",
        "This is a solution with $c=\\tfrac z3<z$ — contradicting minimality ✗"
+      ],
+      "uz": [
+       "$z$ eng kichik boʻlgan yechimni olamiz.",
+       "Modul $3$ boʻyicha kvadratlar faqat $0$ va $1$, demak $x^{2}+y^{2}\\equiv0\\pmod3$ dan $x^{2}\\equiv y^{2}\\equiv0$.",
+       "Shuning uchun $3\\mid x$ va $3\\mid y$; $x=3a$, $y=3b$ deb yozamiz.",
+       "Oʻrniga qoʻysak, $9a^{2}+9b^{2}=3z^{2}$, yaʼni $3\\left(a^{2}+b^{2}\\right)=z^{2}$.",
+       "Demak $3\\mid z^{2}$ va $3\\mid z$; $z=3c$ deb yozib qisqartiramiz: $a^{2}+b^{2}=3c^{2}$.",
+       "Bu $c=\\tfrac z3<z$ boʻlgan yechim — minimallikka zid ✗"
       ]
      },
      "ans": {
       "ru": "Решений нет.",
-      "en": "There are no solutions."
+      "en": "There are no solutions.",
+      "uz": "Yechim yoʻq."
      }
     }
    ]

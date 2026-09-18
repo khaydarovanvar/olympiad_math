@@ -45,54 +45,63 @@ window.LESSONS[2] = {
      "t": "def",
      "name": {
       "ru": "Простое и составное",
-      "en": "Prime and composite"
+      "en": "Prime and composite",
+      "uz": "Tub va murakkab sonlar"
      },
      "text": {
       "ru": "Натуральное число $p>1$ называется **простым**, если его единственные натуральные делители — $1$ и $p$. Число $n>1$, не являющееся простым, называется **составным**. Число $1$ не является ни простым, ни составным.",
-      "en": "A positive integer $p>1$ is **prime** if its only positive divisors are $1$ and $p$. An integer $n>1$ that is not prime is **composite**. The number $1$ is neither prime nor composite."
+      "en": "A positive integer $p>1$ is **prime** if its only positive divisors are $1$ and $p$. An integer $n>1$ that is not prime is **composite**. The number $1$ is neither prime nor composite.",
+      "uz": "Musbat butun $p>1$ soni, agar uning yagona musbat boʻluvchilari $1$ va $p$ boʻlsa, **tub** deyiladi. Tub boʻlmagan $n>1$ butun son **murakkab** deyiladi. $1$ soni na tub, na murakkab."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Почему $1$ исключают? Чтобы разложение на простые множители было **единственным**. Иначе $6=2\\cdot3=1\\cdot2\\cdot3=1\\cdot1\\cdot2\\cdot3$ — и никакой единственности.",
-      "en": "Why exclude $1$? So that factorisation into primes is **unique**. Otherwise $6=2\\cdot3=1\\cdot2\\cdot3=1\\cdot1\\cdot2\\cdot3$, and uniqueness is gone."
+      "en": "Why exclude $1$? So that factorisation into primes is **unique**. Otherwise $6=2\\cdot3=1\\cdot2\\cdot3=1\\cdot1\\cdot2\\cdot3$, and uniqueness is gone.",
+      "uz": "$1$ nega chiqarib tashlanadi? Tub koʻpaytuvchilarga ajratish **yagona** boʻlishi uchun. Aks holda $6=2\\cdot3=1\\cdot2\\cdot3=1\\cdot1\\cdot2\\cdot3$ boʻlar va yagonalik yoʻqolar edi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Наименьший делитель",
-      "en": "The smallest divisor"
+      "en": "The smallest divisor",
+      "uz": "Eng kichik boʻluvchi"
      },
      "text": {
       "ru": "Наименьший делитель $d>1$ составного числа $n$ — простое число, и $d\\le\\sqrt{n}$.",
-      "en": "The smallest divisor $d>1$ of a composite number $n$ is prime, and $d\\le\\sqrt{n}$."
+      "en": "The smallest divisor $d>1$ of a composite number $n$ is prime, and $d\\le\\sqrt{n}$.",
+      "uz": "Murakkab $n$ sonining $d>1$ boʻlgan eng kichik boʻluvchisi tub son va $d\\le\\sqrt{n}$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Если бы $d$ было составным, у него нашёлся бы делитель $1<e<d$, который делил бы и $n$ — противоречие с минимальностью $d$. Значит $d$ простое. Далее, $n=d\\cdot m$, где $m\\ge d$ (иначе $m$ был бы меньшим делителем). Тогда $n=dm\\ge d^2$, то есть $d\\le\\sqrt{n}$.",
-      "en": "If $d$ were composite it would have a divisor $1<e<d$, which would also divide $n$ — contradicting the minimality of $d$. So $d$ is prime. Next, $n=d\\cdot m$ with $m\\ge d$ (otherwise $m$ would be a smaller divisor). Then $n=dm\\ge d^2$, that is $d\\le\\sqrt{n}$."
+      "en": "If $d$ were composite it would have a divisor $1<e<d$, which would also divide $n$ — contradicting the minimality of $d$. So $d$ is prime. Next, $n=d\\cdot m$ with $m\\ge d$ (otherwise $m$ would be a smaller divisor). Then $n=dm\\ge d^2$, that is $d\\le\\sqrt{n}$.",
+      "uz": "Agar $d$ murakkab boʻlganda, uning $1<e<d$ boʻluvchisi boʻlar, u esa $n$ ni ham boʻlar edi — bu $d$ ning minimalligiga zid. Demak $d$ tub. Keyin $n=d\\cdot m$, bunda $m\\ge d$ (aks holda $m$ kichikroq boʻluvchi boʻlar edi). U holda $n=dm\\ge d^2$, yaʼni $d\\le\\sqrt{n}$."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Как проверить простоту",
-      "en": "How to test for primality"
+      "en": "How to test for primality",
+      "uz": "Tublikni qanday tekshirish kerak"
      },
      "text": {
       "ru": "Из теоремы следует практический рецепт: чтобы проверить $n$ на простоту, достаточно перебрать простые делители до $\\sqrt{n}$. Для $n=323$ хватает простых до $17$: $2,3,5,7,11,13,17$. Находим $323=17\\cdot19$ — составное.",
-      "en": "The theorem gives a practical recipe: to test $n$, it is enough to try the primes up to $\\sqrt{n}$. For $n=323$ the primes up to $17$ suffice: $2,3,5,7,11,13,17$. We find $323=17\\cdot19$ — composite."
+      "en": "The theorem gives a practical recipe: to test $n$, it is enough to try the primes up to $\\sqrt{n}$. For $n=323$ the primes up to $17$ suffice: $2,3,5,7,11,13,17$. We find $323=17\\cdot19$ — composite.",
+      "uz": "Teorema amaliy tartib beradi: $n$ ni tekshirish uchun $\\sqrt{n}$ gacha boʻlgan tub sonlarni sinash yetarli. $n=323$ uchun $17$ gacha boʻlgan tub sonlar yetarli: $2,3,5,7,11,13,17$. Topamiz: $323=17\\cdot19$ — murakkab."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Простое ли число $221$?",
-      "en": "Is $221$ prime?"
+      "en": "Is $221$ prime?",
+      "uz": "$221$ tubmi?"
      },
      "steps": {
       "ru": [
@@ -104,36 +113,46 @@ window.LESSONS[2] = {
        "$\\sqrt{221}\\approx14.9$, so it is enough to try $2,3,5,7,11,13$.",
        "$221$ is odd, its digit sum is $5$ — not divisible by $3$ — and it does not end in $0$ or $5$.",
        "$221=7\\cdot31+4$; $221=11\\cdot20+1$; $221=13\\cdot17$ — it divides!"
+      ],
+      "uz": [
+       "$\\sqrt{221}\\approx14.9$, demak $2,3,5,7,11,13$ ni sinash yetarli.",
+       "$221$ toq, raqamlari yigʻindisi $5$ — $3$ ga boʻlinmaydi — va $0$ yoki $5$ bilan tugamaydi.",
+       "$221=7\\cdot31+4$; $221=11\\cdot20+1$; $221=13\\cdot17$ — boʻlinadi!"
       ]
      },
      "ans": {
       "ru": "Составное: $221=13\\cdot17$",
-      "en": "Composite: $221=13\\cdot17$"
+      "en": "Composite: $221=13\\cdot17$",
+      "uz": "Murakkab: $221=13\\cdot17$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Проверка простоты перебором",
-      "en": "Primality by trial division"
+      "en": "Primality by trial division",
+      "uz": "Boʻluvchilarni saralash orqali tublik"
      },
      "text": {
       "ru": "Число $n>1$ простое тогда и только тогда, когда оно не делится ни на одно простое $p\\le\\sqrt n$.",
-      "en": "An integer $n>1$ is prime if and only if it is divisible by no prime $p\\le\\sqrt n$."
+      "en": "An integer $n>1$ is prime if and only if it is divisible by no prime $p\\le\\sqrt n$.",
+      "uz": "$n>1$ butun son tub boʻlishi uchun u $\\sqrt n$ dan oshmaydigan hech bir tub $p$ ga boʻlinmasligi zarur va yetarli."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Если $n$ простое, то оно вообще не имеет делителей, кроме $1$ и $n$, и утверждение очевидно.\n\nОбратно, пусть $n$ составное; тогда $n=ab$ с $1<a\\le b<n$. Если бы оба множителя превосходили $\\sqrt n$, то $$n=ab>\\sqrt n\\cdot\\sqrt n=n \\quad ✗$$\n\nЗначит $a\\le\\sqrt n$. У числа $a>1$ есть простой делитель $p\\le a\\le\\sqrt n$, и он делит $n$. $\\blacksquare$",
-      "en": "If $n$ is prime it has no divisors besides $1$ and $n$, and the claim is clear.\n\nConversely let $n$ be composite, $n=ab$ with $1<a\\le b<n$. If both factors exceeded $\\sqrt n$ then $$n=ab>\\sqrt n\\cdot\\sqrt n=n \\quad ✗$$\n\nSo $a\\le\\sqrt n$. The number $a>1$ has a prime divisor $p\\le a\\le\\sqrt n$, and it divides $n$. $\\blacksquare$"
+      "en": "If $n$ is prime it has no divisors besides $1$ and $n$, and the claim is clear.\n\nConversely let $n$ be composite, $n=ab$ with $1<a\\le b<n$. If both factors exceeded $\\sqrt n$ then $$n=ab>\\sqrt n\\cdot\\sqrt n=n \\quad ✗$$\n\nSo $a\\le\\sqrt n$. The number $a>1$ has a prime divisor $p\\le a\\le\\sqrt n$, and it divides $n$. $\\blacksquare$",
+      "uz": "Agar $n$ tub boʻlsa, uning $1$ va $n$ dan boshqa boʻluvchisi yoʻq, tasdiq ravshan.\n\nAksincha, $n$ murakkab boʻlsin, $n=ab$, bunda $1<a\\le b<n$. Agar ikkala koʻpaytuvchi ham $\\sqrt n$ dan katta boʻlsa, $$n=ab>\\sqrt n\\cdot\\sqrt n=n \\quad ✗$$\n\nDemak $a\\le\\sqrt n$. $a>1$ sonining $p\\le a\\le\\sqrt n$ tub boʻluvchisi bor va u $n$ ni boʻladi. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Простое ли число $211$?",
-      "en": "Is $211$ prime?"
+      "en": "Is $211$ prime?",
+      "uz": "$211$ tubmi?"
      },
      "steps": {
       "ru": [
@@ -149,18 +168,27 @@ window.LESSONS[2] = {
        "$211$ is odd; its digit sum $4$ is not a multiple of $3$; it ends in neither $0$ nor $5$.",
        "$211=7\\cdot30+1$; $211=11\\cdot19+2$; $211=13\\cdot16+3$.",
        "None divides it."
+      ],
+      "uz": [
+       "$14^{2}=196<211<225=15^{2}$, demak $14$ gacha boʻlgan tub sonlarni sinash yetarli.",
+       "Ular $2,3,5,7,11,13$.",
+       "$211$ toq; raqamlari yigʻindisi $4$ — $3$ ga karrali emas; $0$ ham, $5$ ham bilan tugamaydi.",
+       "$211=7\\cdot30+1$; $211=11\\cdot19+2$; $211=13\\cdot16+3$.",
+       "Hech biri uni boʻlmaydi."
       ]
      },
      "ans": {
       "ru": "Да, $211$ простое.",
-      "en": "Yes, $211$ is prime."
+      "en": "Yes, $211$ is prime.",
+      "uz": "Ha, $211$ tub son."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Эта теорема — причина, по которой перебор делителей на практике вообще осуществим: чтобы проверить шестизначное число, хватает простых до $1000$, а их всего $168$.",
-      "en": "This theorem is why trial division is feasible at all: to test a six-digit number one needs the primes below $1000$, and there are only $168$ of them."
+      "en": "This theorem is why trial division is feasible at all: to test a six-digit number one needs the primes below $1000$, and there are only $168$ of them.",
+      "uz": "Bu teorema boʻluvchilarni saralash umuman amalga oshadigan boʻlishining sababi: olti xonali sonni tekshirish uchun $1000$ gacha boʻlgan tub sonlar kerak, ular esa atigi $168$ ta."
      }
     }
    ]
@@ -176,36 +204,42 @@ window.LESSONS[2] = {
      "t": "thm",
      "name": {
       "ru": "Единственность разложения",
-      "en": "Unique factorisation"
+      "en": "Unique factorisation",
+      "uz": "Ajratmaning yagonaligi"
      },
      "text": {
       "ru": "Каждое натуральное число $n>1$ единственным образом (с точностью до порядка сомножителей) записывается в виде $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},$$ где $p_1<p_2<\\cdots<p_k$ — простые, а $\\alpha_i\\ge1$.",
-      "en": "Every integer $n>1$ can be written, in exactly one way up to the order of the factors, as $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},$$ where $p_1<p_2<\\cdots<p_k$ are primes and $\\alpha_i\\ge1$."
+      "en": "Every integer $n>1$ can be written, in exactly one way up to the order of the factors, as $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},$$ where $p_1<p_2<\\cdots<p_k$ are primes and $\\alpha_i\\ge1$.",
+      "uz": "$n>1$ boʻlgan har bir butun sonni koʻpaytuvchilar tartibidan qatʼi nazar roppa-rosa bir usulda $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k}$$ koʻrinishida yozish mumkin, bunda $p_1<p_2<\\cdots<p_k$ — tub sonlar va $\\alpha_i\\ge1$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "*Существование* — индукцией: если $n$ простое, готово; иначе $n=ab$ с $1<a,b<n$, и оба множителя раскладываются по предположению индукции. *Единственность* опирается на лемму Евклида (см. тему 1): если $p$ простое и $p\\mid ab$, то $p\\mid a$ или $p\\mid b$. Пусть у $n$ есть два разложения. Простое $p_1$ из первого делит произведение во втором, значит делит один из его сомножителей, а тот простой — значит равен $p_1$. Сокращаем на $p_1$ и повторяем.",
-      "en": "*Existence* by induction: if $n$ is prime we are done; otherwise $n=ab$ with $1<a,b<n$, and both factors split by the induction hypothesis. *Uniqueness* rests on Euclid\\'s lemma (topic 1): if $p$ is prime and $p\\mid ab$ then $p\\mid a$ or $p\\mid b$. Suppose $n$ has two factorisations. The prime $p_1$ from the first divides the product in the second, hence divides one of its factors, which is prime — so that factor equals $p_1$. Cancel $p_1$ and repeat."
+      "en": "*Existence* by induction: if $n$ is prime we are done; otherwise $n=ab$ with $1<a,b<n$, and both factors split by the induction hypothesis. *Uniqueness* rests on Euclid\\'s lemma (topic 1): if $p$ is prime and $p\\mid ab$ then $p\\mid a$ or $p\\mid b$. Suppose $n$ has two factorisations. The prime $p_1$ from the first divides the product in the second, hence divides one of its factors, which is prime — so that factor equals $p_1$. Cancel $p_1$ and repeat.",
+      "uz": "*Mavjudligi* induksiya bilan: agar $n$ tub boʻlsa, tugadi; aks holda $n=ab$, bunda $1<a,b<n$, va induksiya farazi boʻyicha ikkala koʻpaytuvchi ham ajraladi. *Yagonaligi* Yevklid lemmasiga tayanadi (1-mavzu): agar $p$ tub va $p\\mid ab$ boʻlsa, $p\\mid a$ yoki $p\\mid b$. $n$ ning ikkita ajratmasi bor deb faraz qilamiz. Birinchisidagi $p_1$ tub son ikkinchisidagi koʻpaytmani boʻladi, demak uning biror koʻpaytuvchisini boʻladi, u esa tub — shuning uchun oʻsha koʻpaytuvchi $p_1$ ga teng. $p_1$ ni qisqartiramiz va takrorlaymiz."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Язык показателей",
-      "en": "The language of exponents"
+      "en": "The language of exponents",
+      "uz": "Darajalar tili"
      },
      "text": {
       "ru": "Обозначим через $v_p(n)$ показатель простого $p$ в разложении $n$. Тогда всё становится арифметикой показателей: $$v_p(ab)=v_p(a)+v_p(b),\\qquad a\\mid b\\iff v_p(a)\\le v_p(b)\\ \\text{для всех } p.$$ Число — точный квадрат тогда и только тогда, когда все $v_p$ чётны; точный куб — когда все делятся на $3$.",
-      "en": "Write $v_p(n)$ for the exponent of the prime $p$ in $n$. Everything becomes arithmetic of exponents: $$v_p(ab)=v_p(a)+v_p(b),\\qquad a\\mid b\\iff v_p(a)\\le v_p(b)\\ \\text{for every } p.$$ A number is a perfect square exactly when every $v_p$ is even, and a perfect cube exactly when every $v_p$ is a multiple of $3$."
+      "en": "Write $v_p(n)$ for the exponent of the prime $p$ in $n$. Everything becomes arithmetic of exponents: $$v_p(ab)=v_p(a)+v_p(b),\\qquad a\\mid b\\iff v_p(a)\\le v_p(b)\\ \\text{for every } p.$$ A number is a perfect square exactly when every $v_p$ is even, and a perfect cube exactly when every $v_p$ is a multiple of $3$.",
+      "uz": "$n$ dagi tub $p$ sonning darajasini $v_p(n)$ deb belgilaymiz. Hamma narsa darajalar arifmetikasiga aylanadi: $$v_p(ab)=v_p(a)+v_p(b),\\qquad a\\mid b\\iff \\text{har bir } p \\text{ uchun } v_p(a)\\le v_p(b).$$ Son toʻliq kvadrat boʻlishi uchun barcha $v_p$ juft boʻlishi, toʻliq kub boʻlishi uchun esa barcha $v_p$ $3$ ga karrali boʻlishi zarur va yetarli."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите наименьшее натуральное $k$, при котором $2^5\\cdot3^3\\cdot5\\cdot k$ — точный квадрат.",
-      "en": "Find the smallest positive integer $k$ for which $2^5\\cdot3^3\\cdot5\\cdot k$ is a perfect square."
+      "en": "Find the smallest positive integer $k$ for which $2^5\\cdot3^3\\cdot5\\cdot k$ is a perfect square.",
+      "uz": "$2^5\\cdot3^3\\cdot5\\cdot k$ toʻliq kvadrat boʻladigan eng kichik musbat butun $k$ ni toping."
      },
      "steps": {
       "ru": [
@@ -217,6 +251,11 @@ window.LESSONS[2] = {
        "The exponents now are $v_2=5$, $v_3=3$, $v_5=1$ — all odd.",
        "To make them all even, one more copy of each prime is needed.",
        "$k=2\\cdot3\\cdot5=30$. Check: $2^6\\cdot3^4\\cdot5^2=(2^3\\cdot3^2\\cdot5)^2=360^2$."
+      ],
+      "uz": [
+       "Hozirgi darajalar: $v_2=5$, $v_3=3$, $v_5=1$ — hammasi toq.",
+       "Ularni juft qilish uchun har bir tub sondan yana bittadan kerak.",
+       "$k=2\\cdot3\\cdot5=30$. Tekshirish: $2^6\\cdot3^4\\cdot5^2=(2^3\\cdot3^2\\cdot5)^2=360^2$."
       ]
      },
      "ans": {
@@ -237,50 +276,58 @@ window.LESSONS[2] = {
      "t": "thm",
      "name": {
       "ru": "Теорема Евклида",
-      "en": "Euclid's theorem"
+      "en": "Euclid's theorem",
+      "uz": "Yevklid teoremasi"
      },
      "text": {
       "ru": "Простых чисел бесконечно много.",
-      "en": "There are infinitely many primes."
+      "en": "There are infinitely many primes.",
+      "uz": "Tub sonlar cheksiz koʻp."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Предположим противное: простых конечное число, скажем $p_1,p_2,\\ldots,p_k$ — все они. Рассмотрим $$N=p_1p_2\\cdots p_k+1.$$ Число $N>1$, значит у него есть простой делитель $p$. Но $p$ — одно из $p_i$, и тогда $p$ делит и произведение $p_1\\cdots p_k$, и $N$, а значит делит их разность, равную $1$. Противоречие. $\\blacksquare$",
-      "en": "Suppose not: there are finitely many primes, say $p_1,p_2,\\ldots,p_k$, and those are all of them. Consider $$N=p_1p_2\\cdots p_k+1.$$ Since $N>1$ it has a prime divisor $p$. But $p$ is one of the $p_i$, so $p$ divides both the product $p_1\\cdots p_k$ and $N$, hence their difference, which is $1$. Contradiction. $\\blacksquare$"
+      "en": "Suppose not: there are finitely many primes, say $p_1,p_2,\\ldots,p_k$, and those are all of them. Consider $$N=p_1p_2\\cdots p_k+1.$$ Since $N>1$ it has a prime divisor $p$. But $p$ is one of the $p_i$, so $p$ divides both the product $p_1\\cdots p_k$ and $N$, hence their difference, which is $1$. Contradiction. $\\blacksquare$",
+      "uz": "Teskarisini faraz qilamiz: tub sonlar chekli sonda, ular $p_1,p_2,\\ldots,p_k$ va boshqasi yoʻq. $$N=p_1p_2\\cdots p_k+1$$ sonini koʻramiz. $N>1$ boʻlgani uchun uning tub $p$ boʻluvchisi bor. Ammo $p$ — $p_i$ lardan biri, demak $p$ ham $p_1\\cdots p_k$ koʻpaytmani, ham $N$ ni boʻladi, demak ularning ayirmasi $1$ ni ham. Ziddiyat. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Частая ошибка: думать, что $p_1p_2\\cdots p_k+1$ **само** простое. Это неверно: $$2\\cdot3\\cdot5\\cdot7\\cdot11\\cdot13+1=30031=59\\cdot509.$$ Доказательство утверждает лишь, что у этого числа есть простой делитель вне списка.",
-      "en": "A common slip is to think $p_1p_2\\cdots p_k+1$ is **itself** prime. It need not be: $$2\\cdot3\\cdot5\\cdot7\\cdot11\\cdot13+1=30031=59\\cdot509.$$ The proof only claims that this number has a prime divisor outside the list."
+      "en": "A common slip is to think $p_1p_2\\cdots p_k+1$ is **itself** prime. It need not be: $$2\\cdot3\\cdot5\\cdot7\\cdot11\\cdot13+1=30031=59\\cdot509.$$ The proof only claims that this number has a prime divisor outside the list.",
+      "uz": "Koʻp uchraydigan xato — $p_1p_2\\cdots p_k+1$ ning **oʻzi** tub deb oʻylash. Bu shart emas: $$2\\cdot3\\cdot5\\cdot7\\cdot11\\cdot13+1=30031=59\\cdot509.$$ Isbot faqat bu sonning roʻyxatdan tashqaridagi tub boʻluvchisi borligini daʼvo qiladi."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Тот же приём с поправкой даёт больше. Чтобы доказать бесконечность простых вида $4k+3$, берут $N=4p_1p_2\\cdots p_k-1$: такое $N$ даёт остаток $3$ по модулю $4$, а произведение простых вида $4k+1$ снова имеет вид $4k+1$ — значит у $N$ есть простой делитель вида $4k+3$, и он не из списка.",
-      "en": "The same trick, adjusted, gives more. To prove there are infinitely many primes of the form $4k+3$, take $N=4p_1p_2\\cdots p_k-1$: this $N$ leaves remainder $3$ modulo $4$, and a product of primes of the form $4k+1$ is again of the form $4k+1$ — so $N$ has a prime divisor of the form $4k+3$, and it is not on the list."
+      "en": "The same trick, adjusted, gives more. To prove there are infinitely many primes of the form $4k+3$, take $N=4p_1p_2\\cdots p_k-1$: this $N$ leaves remainder $3$ modulo $4$, and a product of primes of the form $4k+1$ is again of the form $4k+1$ — so $N$ has a prime divisor of the form $4k+3$, and it is not on the list.",
+      "uz": "Xuddi shu usul, biroz oʻzgartirilgan holda, koʻproq narsa beradi. $4k+3$ koʻrinishidagi tub sonlar cheksiz koʻpligini isbotlash uchun $N=4p_1p_2\\cdots p_k-1$ olamiz: bu $N$ modul $4$ boʻyicha $3$ qoldiq beradi, $4k+1$ koʻrinishidagi tub sonlarning koʻpaytmasi esa yana $4k+1$ koʻrinishida boʻladi — demak $N$ ning $4k+3$ koʻrinishidagi tub boʻluvchisi bor va u roʻyxatda yoʻq."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Сколь угодно длинные промежутки без простых",
-      "en": "Arbitrarily long prime-free gaps"
+      "en": "Arbitrarily long prime-free gaps",
+      "uz": "Istalgancha uzun tubsiz oraliqlar"
      },
      "text": {
       "ru": "Числа $$n!+2,\\;n!+3,\\;\\ldots,\\;n!+n$$ составные: $k$ делит $n!+k$ при $2\\le k\\le n$. Значит существует промежуток длины $n-1$ вообще без простых — простые распределены крайне неравномерно.",
-      "en": "The numbers $$n!+2,\\;n!+3,\\;\\ldots,\\;n!+n$$ are all composite: $k$ divides $n!+k$ for $2\\le k\\le n$. So there is a run of $n-1$ consecutive integers containing no prime at all — primes are spread very unevenly."
+      "en": "The numbers $$n!+2,\\;n!+3,\\;\\ldots,\\;n!+n$$ are all composite: $k$ divides $n!+k$ for $2\\le k\\le n$. So there is a run of $n-1$ consecutive integers containing no prime at all — primes are spread very unevenly.",
+      "uz": "$$n!+2,\\;n!+3,\\;\\ldots,\\;n!+n$$ sonlarining hammasi murakkab: $2\\le k\\le n$ uchun $k$ soni $n!+k$ ni boʻladi. Demak ketma-ket kelgan $n-1$ ta son orasida birorta ham tub son boʻlmasligi mumkin — tub sonlar juda notekis joylashgan."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Другие доказательства бесконечности.** Приём Евклида — не единственный. Числа Ферма дают доказательство через попарную взаимную простоту (см. ниже). Эйлер получил гораздо более сильный результат: ряд $$\\sum_{p\\ \\text{простое}}\\frac1p$$ **расходится**, а это невозможно для конечного набора. Расходимость к тому же говорит, что простые встречаются «чаще», чем квадраты: сумма $\\sum\\tfrac1{n^{2}}$ сходится.",
-      "en": "**Other proofs of infinitude.** Euclid’s is not the only one. Fermat numbers give a proof via pairwise coprimality (below). Euler proved something far stronger: the series $$\\sum_{p\\ \\text{prime}}\\frac1p$$ **diverges**, which is impossible for a finite set. Divergence also says primes are \"commoner\" than squares, since $\\sum\\tfrac1{n^{2}}$ converges."
+      "en": "**Other proofs of infinitude.** Euclid’s is not the only one. Fermat numbers give a proof via pairwise coprimality (below). Euler proved something far stronger: the series $$\\sum_{p\\ \\text{prime}}\\frac1p$$ **diverges**, which is impossible for a finite set. Divergence also says primes are \"commoner\" than squares, since $\\sum\\tfrac1{n^{2}}$ converges.",
+      "uz": "**Cheksizlikning boshqa isbotlari.** Yevklidniki yagona emas. Ferma sonlari juft-jufti bilan oʻzaro tublik orqali isbot beradi (quyida). Eyler ancha kuchliroq narsani isbotladi: $$\\sum_{p\\ \\text{tub}}\\frac1p$$ qatori **uzoqlashadi**, chekli toʻplam uchun esa bu mumkin emas. Uzoqlashish yana shuni bildiradiki, tub sonlar kvadratlardan «koʻproq», chunki $\\sum\\tfrac1{n^{2}}$ yaqinlashadi."
      }
     }
    ]
@@ -296,50 +343,58 @@ window.LESSONS[2] = {
      "t": "p",
      "text": {
       "ru": "Теорема Евклида говорит, что простых бесконечно много. Естественный следующий вопрос: а бесконечно ли много простых **каждого** допустимого вида — $4k+1$, $4k+3$, $6k+5$? Для некоторых форм ответ получается тем же приёмом, что и у Евклида.",
-      "en": "Euclid’s theorem says the primes never run out. The natural next question: are there infinitely many primes of **each** admissible shape — $4k+1$, $4k+3$, $6k+5$? For some shapes Euclid’s own trick still works."
+      "en": "Euclid’s theorem says the primes never run out. The natural next question: are there infinitely many primes of **each** admissible shape — $4k+1$, $4k+3$, $6k+5$? For some shapes Euclid’s own trick still works.",
+      "uz": "Yevklid teoremasi tub sonlar tugamasligini aytadi. Tabiiy keyingi savol: **har bir** mumkin boʻlgan koʻrinishdagi — $4k+1$, $4k+3$, $6k+5$ — tub sonlar cheksiz koʻpmi? Baʼzi koʻrinishlar uchun Yevklidning oʻz usuli hamon ishlaydi."
      }
     },
     {
      "t": "lemma",
      "name": {
       "ru": "Произведение сохраняет форму",
-      "en": "Products keep the shape"
+      "en": "Products keep the shape",
+      "uz": "Koʻpaytma koʻrinishni saqlaydi"
      },
      "text": {
       "ru": "Произведение чисел вида $4k+1$ снова имеет вид $4k+1$. То же верно для формы $6k+1$.",
-      "en": "A product of numbers of the form $4k+1$ is again of the form $4k+1$. The same holds for the form $6k+1$."
+      "en": "A product of numbers of the form $4k+1$ is again of the form $4k+1$. The same holds for the form $6k+1$.",
+      "uz": "$4k+1$ koʻrinishidagi sonlarning koʻpaytmasi yana $4k+1$ koʻrinishida boʻladi. $6k+1$ koʻrinishi uchun ham shunday."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Прямое вычисление: $$(4a+1)(4b+1)=16ab+4a+4b+1=4(4ab+a+b)+1 ,$$ $$(6a+1)(6b+1)=36ab+6a+6b+1=6(6ab+a+b)+1 .$$ Индукцией это распространяется на любое число сомножителей. $\\blacksquare$",
-      "en": "Direct computation: $$(4a+1)(4b+1)=4(4ab+a+b)+1 ,$$ $$(6a+1)(6b+1)=6(6ab+a+b)+1 .$$ Induction extends this to any number of factors. $\\blacksquare$"
+      "en": "Direct computation: $$(4a+1)(4b+1)=4(4ab+a+b)+1 ,$$ $$(6a+1)(6b+1)=6(6ab+a+b)+1 .$$ Induction extends this to any number of factors. $\\blacksquare$",
+      "uz": "Bevosita hisoblash: $$(4a+1)(4b+1)=4(4ab+a+b)+1 ,$$ $$(6a+1)(6b+1)=6(6ab+a+b)+1 .$$ Induksiya buni istalgan sondagi koʻpaytuvchiga kengaytiradi. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Простых вида $4k+3$ бесконечно много",
-      "en": "There are infinitely many primes $4k+3$"
+      "en": "There are infinitely many primes $4k+3$",
+      "uz": "$4k+3$ koʻrinishidagi tub sonlar cheksiz koʻp"
      },
      "text": {
       "ru": "Множество простых, дающих остаток $3$ при делении на $4$, бесконечно.",
-      "en": "The set of primes leaving remainder $3$ on division by $4$ is infinite."
+      "en": "The set of primes leaving remainder $3$ on division by $4$ is infinite.",
+      "uz": "$4$ ga boʻlganda $3$ qoldiq beradigan tub sonlar toʻplami cheksiz."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Предположим противное: таких простых конечное число, $p_1=3,\\ p_2,\\ \\dots,\\ p_k$. Рассмотрим $$N=4p_1p_2\\cdots p_k-1 .$$\n\nЧисло $N$ нечётно и $N\\equiv-1\\equiv3\\pmod4$.\n\nВсе простые делители $N$ нечётны, то есть каждый имеет вид $4k+1$ или $4k+3$. Если бы все они были вида $4k+1$, то по лемме и само $N$ было бы вида $4k+1$ ✗ Значит у $N$ есть простой делитель $q$ вида $4k+3$.\n\nПо предположению $q$ — одно из $p_i$, но тогда $q$ делит и произведение $4p_1\\cdots p_k$, и $N$, а значит делит их разность $$4p_1\\cdots p_k-N=1 ,$$ что невозможно ✗ $\\blacksquare$",
-      "en": "Suppose not: the primes of this form are $p_1=3,\\ p_2,\\ \\dots,\\ p_k$. Consider $$N=4p_1p_2\\cdots p_k-1 .$$\n\nThen $N$ is odd and $N\\equiv3\\pmod4$.\n\nEvery prime divisor of $N$ is odd, hence of the form $4k+1$ or $4k+3$. If all were $4k+1$, the lemma would make $N$ itself $4k+1$ ✗ So $N$ has a prime divisor $q\\equiv3\\pmod4$.\n\nBy assumption $q$ is one of the $p_i$; then $q$ divides both $4p_1\\cdots p_k$ and $N$, hence their difference $$4p_1\\cdots p_k-N=1 ,$$ which is impossible ✗ $\\blacksquare$"
+      "en": "Suppose not: the primes of this form are $p_1=3,\\ p_2,\\ \\dots,\\ p_k$. Consider $$N=4p_1p_2\\cdots p_k-1 .$$\n\nThen $N$ is odd and $N\\equiv3\\pmod4$.\n\nEvery prime divisor of $N$ is odd, hence of the form $4k+1$ or $4k+3$. If all were $4k+1$, the lemma would make $N$ itself $4k+1$ ✗ So $N$ has a prime divisor $q\\equiv3\\pmod4$.\n\nBy assumption $q$ is one of the $p_i$; then $q$ divides both $4p_1\\cdots p_k$ and $N$, hence their difference $$4p_1\\cdots p_k-N=1 ,$$ which is impossible ✗ $\\blacksquare$",
+      "uz": "Teskarisini faraz qilamiz: bu koʻrinishdagi tub sonlar $p_1=3,\\ p_2,\\ \\dots,\\ p_k$. $$N=4p_1p_2\\cdots p_k-1$$ sonini koʻramiz.\n\nU holda $N$ toq va $N\\equiv3\\pmod4$.\n\n$N$ ning har bir tub boʻluvchisi toq, demak $4k+1$ yoki $4k+3$ koʻrinishida. Agar hammasi $4k+1$ boʻlsa, lemma $N$ ning oʻzini ham $4k+1$ qilar edi ✗ Demak $N$ ning $q\\equiv3\\pmod4$ tub boʻluvchisi bor.\n\nFarazga koʻra $q$ — $p_i$ lardan biri; u holda $q$ ham $4p_1\\cdots p_k$ ni, ham $N$ ni boʻladi, demak ularning ayirmasini $$4p_1\\cdots p_k-N=1 ,$$ bu esa mumkin emas ✗ $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Повторите рассуждение для формы $6k+5$ и проверьте его на первых простых.",
-      "en": "Repeat the argument for the shape $6k+5$ and test it on the first few primes."
+      "en": "Repeat the argument for the shape $6k+5$ and test it on the first few primes.",
+      "uz": "Mulohazani $6k+5$ koʻrinishi uchun takrorlang va uni dastlabki bir necha tub sonda tekshiring."
      },
      "steps": {
       "ru": [
@@ -357,36 +412,49 @@ window.LESSONS[2] = {
        "If all were $6k+1$, so would $N$ be — contradicting $N\\equiv5$.",
        "The rest is as in the theorem: such a divisor would have to divide $1$ ✗",
        "A small check: $6\\cdot5-1=29$ is prime and $\\equiv5\\pmod6$ ✓"
+      ],
+      "uz": [
+       "$N=6p_1p_2\\cdots p_k-1$ ni olamiz, bunda $p_i$ — $6k+5$ koʻrinishidagi barcha tub sonlar.",
+       "U holda $N\\equiv5\\pmod6$; xususan $N$ toq va $3$ ga boʻlinmaydi.",
+       "Demak $N$ ning har bir tub boʻluvchisi na $2$, na $3$, yaʼni $6k+1$ yoki $6k+5$ koʻrinishida.",
+       "Agar hammasi $6k+1$ boʻlsa, $N$ ham shunday boʻlar edi — bu $N\\equiv5$ ga zid.",
+       "Qolgani teoremadagidek: bunday boʻluvchi $1$ ni boʻlishi kerak boʻlar edi ✗",
+       "Kichik tekshirish: $6\\cdot5-1=29$ tub va $\\equiv5\\pmod6$ ✓"
       ]
      },
      "ans": {
       "ru": "Простых вида $6k+5$ тоже бесконечно много.",
-      "en": "There are infinitely many primes of the form $6k+5$ as well."
+      "en": "There are infinitely many primes of the form $6k+5$ as well.",
+      "uz": "$6k+5$ koʻrinishidagi tub sonlar ham cheksiz koʻp."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Для формы $4k+1$ этот приём **не проходит**: произведение чисел вида $4k+3$ может дать как $4k+1$, так и $4k+3$, поэтому «лишний» делитель не выделяется. Бесконечность простых вида $4k+1$ доказывается иначе — через тот факт, что нечётный простой делитель числа $n^{2}+1$ всегда сравним с $1$ по модулю $4$.",
-      "en": "For the shape $4k+1$ this trick **fails**: a product of numbers $\\equiv3\\pmod4$ can be either $1$ or $3$ mod $4$, so no divisor is forced. Infinitude for $4k+1$ is proved differently — via the fact that every odd prime divisor of $n^{2}+1$ is $\\equiv1\\pmod4$."
+      "en": "For the shape $4k+1$ this trick **fails**: a product of numbers $\\equiv3\\pmod4$ can be either $1$ or $3$ mod $4$, so no divisor is forced. Infinitude for $4k+1$ is proved differently — via the fact that every odd prime divisor of $n^{2}+1$ is $\\equiv1\\pmod4$.",
+      "uz": "$4k+1$ koʻrinishi uchun bu usul **ishlamaydi**: $\\equiv3\\pmod4$ boʻlgan sonlarning koʻpaytmasi modul $4$ boʻyicha $1$ ham, $3$ ham boʻlishi mumkin, demak hech qanday boʻluvchi majburlanmaydi. $4k+1$ uchun cheksizlik boshqacha isbotlanadi — $n^{2}+1$ ning har bir toq tub boʻluvchisi $\\equiv1\\pmod4$ ekani orqali."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема Дирихле",
-      "en": "Dirichlet’s theorem"
+      "en": "Dirichlet’s theorem",
+      "uz": "Dirixle teoremasi"
      },
      "text": {
       "ru": "Если $\\gcd(a,d)=1$, то в арифметической прогрессии $$a,\\ a+d,\\ a+2d,\\ a+3d,\\ \\dots$$ содержится бесконечно много простых чисел.",
-      "en": "If $\\gcd(a,d)=1$ then the arithmetic progression $$a,\\ a+d,\\ a+2d,\\ a+3d,\\ \\dots$$ contains infinitely many primes."
+      "en": "If $\\gcd(a,d)=1$ then the arithmetic progression $$a,\\ a+d,\\ a+2d,\\ a+3d,\\ \\dots$$ contains infinitely many primes.",
+      "uz": "Agar $\\gcd(a,d)=1$ boʻlsa, $$a,\\ a+d,\\ a+2d,\\ a+3d,\\ \\dots$$ arifmetik progressiyasida cheksiz koʻp tub son bor."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Доказательство теоремы Дирихле выходит далеко за рамки школьной математики: оно использует аналитические методы (ряды Дирихле и $L$-функции). Но пользоваться формулировкой можно — она объясняет, почему отдельные случаи вроде $4k+3$ и $6k+5$ вообще имеют шанс быть верными.\n\n**Условие $\\gcd(a,d)=1$ необходимо:** в прогрессии $2,4,6,8,\\dots$ простое ровно одно.",
-      "en": "Proving Dirichlet’s theorem goes far beyond school mathematics: it uses analytic tools (Dirichlet series and $L$-functions). The statement is still worth knowing — it explains why special cases like $4k+3$ and $6k+5$ stand a chance at all.\n\n**The hypothesis $\\gcd(a,d)=1$ is necessary:** the progression $2,4,6,8,\\dots$ contains exactly one prime."
+      "en": "Proving Dirichlet’s theorem goes far beyond school mathematics: it uses analytic tools (Dirichlet series and $L$-functions). The statement is still worth knowing — it explains why special cases like $4k+3$ and $6k+5$ stand a chance at all.\n\n**The hypothesis $\\gcd(a,d)=1$ is necessary:** the progression $2,4,6,8,\\dots$ contains exactly one prime.",
+      "uz": "Dirixle teoremasini isbotlash maktab matematikasidan ancha uzoqqa ketadi: unda analitik qurollar (Dirixle qatorlari va $L$-funksiyalar) ishlatiladi. Tasdiqning oʻzini bilish baribir foydali — u $4k+3$ va $6k+5$ kabi xususiy hollar nega umuman imkoniyatga ega ekanini tushuntiradi.\n\n**$\\gcd(a,d)=1$ sharti zarur:** $2,4,6,8,\\dots$ progressiyasida roppa-rosa bitta tub son bor."
      }
     }
    ]
@@ -402,36 +470,42 @@ window.LESSONS[2] = {
      "t": "thm",
      "name": {
       "ru": "Вид простого числа",
-      "en": "The shape of a prime"
+      "en": "The shape of a prime",
+      "uz": "Tub sonning koʻrinishi"
      },
      "text": {
       "ru": "Каждое простое $p>3$ имеет вид $6k+1$ или $6k-1$.",
-      "en": "Every prime $p>3$ has the form $6k+1$ or $6k-1$."
+      "en": "Every prime $p>3$ has the form $6k+1$ or $6k-1$.",
+      "uz": "$p>3$ boʻlgan har bir tub son $6k+1$ yoki $6k-1$ koʻrinishida boʻladi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Любое целое имеет вид $6k,6k\\pm1,6k\\pm2,6k+3$. Числа $6k$, $6k\\pm2$ чётны, а $6k+3$ делится на $3$; при $p>3$ ни то, ни другое невозможно. Остаются $6k\\pm1$. $\\blacksquare$",
-      "en": "Every integer has one of the forms $6k,6k\\pm1,6k\\pm2,6k+3$. The numbers $6k$ and $6k\\pm2$ are even, and $6k+3$ is divisible by $3$; for $p>3$ neither is possible. Only $6k\\pm1$ remains. $\\blacksquare$"
+      "en": "Every integer has one of the forms $6k,6k\\pm1,6k\\pm2,6k+3$. The numbers $6k$ and $6k\\pm2$ are even, and $6k+3$ is divisible by $3$; for $p>3$ neither is possible. Only $6k\\pm1$ remains. $\\blacksquare$",
+      "uz": "Har bir butun son $6k,6k\\pm1,6k\\pm2,6k+3$ koʻrinishlardan birida. $6k$ va $6k\\pm2$ juft, $6k+3$ esa $3$ ga boʻlinadi; $p>3$ uchun bularning hech biri mumkin emas. Faqat $6k\\pm1$ qoladi. $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Главный приём темы",
-      "en": "The main move of the topic"
+      "en": "The main move of the topic",
+      "uz": "Mavzuning asosiy usuli"
      },
      "text": {
       "ru": "Если в задаче есть простое $p$, спросите: **что будет, если $p$ мало?** Обычно случаи $p=2$ и $p=3$ разбираются вручную, а для $p>3$ работает $p^2\\equiv1\\pmod{24}$ или сравнение по модулю $3$. Так решается огромное число задач вида «найдите все простые, для которых…».",
-      "en": "When a prime $p$ appears in a problem, ask: **what if $p$ is small?** Usually $p=2$ and $p=3$ are handled by hand, and for $p>3$ either $p^2\\equiv1\\pmod{24}$ or a congruence modulo $3$ does the work. A great many \"find all primes such that…\" problems fall to exactly this."
+      "en": "When a prime $p$ appears in a problem, ask: **what if $p$ is small?** Usually $p=2$ and $p=3$ are handled by hand, and for $p>3$ either $p^2\\equiv1\\pmod{24}$ or a congruence modulo $3$ does the work. A great many \"find all primes such that…\" problems fall to exactly this.",
+      "uz": "Masalada tub $p$ paydo boʻlsa, soʻrang: **$p$ kichik boʻlsa-chi?** Odatda $p=2$ va $p=3$ qoʻlda koʻriladi, $p>3$ uchun esa yo $p^2\\equiv1\\pmod{24}$, yo modul $3$ boʻyicha taqqoslama ishni bitiradi. «Shunday barcha tub $p$ larni toping…» turidagi juda koʻp masala aynan shunga tushadi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите все простые $p$, при которых $p^2+2$ тоже простое.",
-      "en": "Find all primes $p$ for which $p^2+2$ is also prime."
+      "en": "Find all primes $p$ for which $p^2+2$ is also prime.",
+      "uz": "$p^2+2$ ham tub boʻladigan barcha tub $p$ larni toping."
      },
      "steps": {
       "ru": [
@@ -443,11 +517,17 @@ window.LESSONS[2] = {
        "Try the small ones: $p=2$ gives $6$, composite; $p=3$ gives $11$, prime.",
        "Now let $p>3$. Then $3\\nmid p$, so $p^2$ leaves remainder $1$ on division by $3$.",
        "Hence $p^2+2$ is divisible by $3$ and larger than $3$ — composite."
+      ],
+      "uz": [
+       "Kichiklarini sinaymiz: $p=2$ da $6$ chiqadi — murakkab; $p=3$ da $11$ — tub.",
+       "Endi $p>3$ boʻlsin. U holda $3\\nmid p$, demak $p^2$ ni $3$ ga boʻlganda qoldiq $1$.",
+       "Demak $p^2+2$ soni $3$ ga boʻlinadi va $3$ dan katta — murakkab."
       ]
      },
      "ans": {
       "ru": "Только $p=3$",
-      "en": "Only $p=3$"
+      "en": "Only $p=3$",
+      "uz": "Faqat $p=3$"
      }
     },
     {
@@ -462,6 +542,11 @@ window.LESSONS[2] = {
        "Modulus",
        "What it gives",
        "When to use it"
+      ],
+      "uz": [
+       "Modul",
+       "Nima beradi",
+       "Qachon ishlatiladi"
       ]
      },
      "rows": {
@@ -518,6 +603,33 @@ window.LESSONS[2] = {
         "the digit sum",
         "decimal representation"
        ]
+      ],
+      "uz": [
+       [
+        "$2$",
+        "juftlik",
+        "yigʻindilar, koʻpaytmalar, «ikkitadan biri»"
+       ],
+       [
+        "$3$",
+        "$3\\nmid p$ boʻlganda $p^2\\equiv1$",
+        "$p^2$ qatnashgan ifodalar"
+       ],
+       [
+        "$4$",
+        "$n^2\\equiv0,1$",
+        "kvadratlar yigʻindisi"
+       ],
+       [
+        "$8$",
+        "toq sonning kvadrati $\\equiv1$",
+        "$2q^2$ qatnashgan tenglamalar"
+       ],
+       [
+        "$9$",
+        "raqamlar yigʻindisi",
+        "oʻnlik yozuv"
+       ]
       ]
      }
     }
@@ -534,7 +646,8 @@ window.LESSONS[2] = {
      "t": "p",
      "text": {
       "ru": "Чтобы выписать все простые до $N$, выпишите числа от $2$ до $N$ и последовательно вычёркивайте кратные каждого нового невычеркнутого числа, начиная с его квадрата. Остановиться можно, как только текущее простое превысит $\\sqrt{N}$.",
-      "en": "To list every prime up to $N$, write the numbers from $2$ to $N$ and cross out the multiples of each new uncrossed number, starting from its square. You may stop as soon as the current prime exceeds $\\sqrt{N}$."
+      "en": "To list every prime up to $N$, write the numbers from $2$ to $N$ and cross out the multiples of each new uncrossed number, starting from its square. You may stop as soon as the current prime exceeds $\\sqrt{N}$.",
+      "uz": "$N$ gacha boʻlgan barcha tub sonlarni roʻyxatlash uchun $2$ dan $N$ gacha sonlarni yozing va har bir yangi oʻchirilmagan sonning karralilarini uning kvadratidan boshlab oʻchiring. Joriy tub son $\\sqrt{N}$ dan oshishi bilan toʻxtash mumkin."
      }
     },
     {
@@ -551,6 +664,12 @@ window.LESSONS[2] = {
        "The next uncrossed number is $3$; cross out from $9$.",
        "Then $5$ (from $25$) and $7$ (from $49$). For $N=100$ that is enough, since $11^2=121>100$.",
        "What is left is prime: there are $25$ primes below $100$."
+      ],
+      "uz": [
+       "$2$ ning karralilarini $4$ dan boshlab oʻchiring.",
+       "Keyingi oʻchirilmagan son — $3$; $9$ dan boshlab oʻchiring.",
+       "Soʻng $5$ ($25$ dan) va $7$ ($49$ dan). $N=100$ uchun shu yetarli, chunki $11^2=121>100$.",
+       "Qolgani tub: $100$ dan kichik $25$ ta tub son bor."
       ]
      }
     },
@@ -558,39 +677,45 @@ window.LESSONS[2] = {
      "t": "note",
      "text": {
       "ru": "Первые простые стоит знать наизусть: $2,3,5,7,11,13,17,19,23,29,31,37,41,43,47$. На олимпиаде это экономит минуты.",
-      "en": "The first primes are worth knowing by heart: $2,3,5,7,11,13,17,19,23,29,31,37,41,43,47$. In a contest this saves minutes."
+      "en": "The first primes are worth knowing by heart: $2,3,5,7,11,13,17,19,23,29,31,37,41,43,47$. In a contest this saves minutes.",
+      "uz": "Dastlabki tub sonlarni yoddan bilish foydali: $2,3,5,7,11,13,17,19,23,29,31,37,41,43,47$. Musobaqada bu daqiqalarni tejaydi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Почему решето останавливается на $\\sqrt N$",
-      "en": "Why the sieve stops at $\\sqrt N$"
+      "en": "Why the sieve stops at $\\sqrt N$",
+      "uz": "Elak nega $\\sqrt N$ da toʻxtaydi"
      },
      "text": {
       "ru": "Чтобы найти все простые до $N$, достаточно вычеркнуть кратные простых $p\\le\\sqrt N$. После этого все невычеркнутые числа, большие единицы, — простые.",
-      "en": "To find all primes up to $N$ it suffices to cross out multiples of the primes $p\\le\\sqrt N$. Every surviving number greater than one is then prime."
+      "en": "To find all primes up to $N$ it suffices to cross out multiples of the primes $p\\le\\sqrt N$. Every surviving number greater than one is then prime.",
+      "uz": "$N$ gacha boʻlgan barcha tub sonlarni topish uchun $p\\le\\sqrt N$ tub sonlarning karralilarini oʻchirish yetarli. Shundan keyin birdan katta omon qolgan har bir son tub boʻladi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть число $m\\le N$ осталось невычеркнутым и $m>1$. Если бы $m$ было составным, у него был бы простой делитель $p\\le\\sqrt m\\le\\sqrt N$ (по теореме о проверке простоты). Но кратные всех таких $p$ мы вычеркнули, значит $m$ было бы вычеркнуто ✗\n\nЗначит $m$ простое. $\\blacksquare$",
-      "en": "Let $m\\le N$ survive and $m>1$. If $m$ were composite it would have a prime divisor $p\\le\\sqrt m\\le\\sqrt N$ (by the trial-division theorem). But we crossed out the multiples of every such $p$, so $m$ would have been crossed out ✗\n\nHence $m$ is prime. $\\blacksquare$"
+      "en": "Let $m\\le N$ survive and $m>1$. If $m$ were composite it would have a prime divisor $p\\le\\sqrt m\\le\\sqrt N$ (by the trial-division theorem). But we crossed out the multiples of every such $p$, so $m$ would have been crossed out ✗\n\nHence $m$ is prime. $\\blacksquare$",
+      "uz": "$m\\le N$ omon qolgan va $m>1$ boʻlsin. Agar $m$ murakkab boʻlsa, uning $p\\le\\sqrt m\\le\\sqrt N$ tub boʻluvchisi boʻlar edi (boʻluvchilarni saralash teoremasiga koʻra). Ammo biz har bir shunday $p$ ning karralilarini oʻchirgan edik, demak $m$ ham oʻchirilgan boʻlar edi ✗\n\nDemak $m$ tub. $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Ещё одно ускорение: вычёркивание кратных простого $p$ можно начинать не с $2p$, а сразу с $p^{2}$. Все меньшие кратные $p$ имеют вид $kp$ с $k<p$, а значит уже вычеркнуты как кратные меньшего простого делителя числа $k$.",
-      "en": "One more speed-up: when crossing out multiples of $p$, start at $p^{2}$ rather than $2p$. Every smaller multiple is $kp$ with $k<p$ and has already been crossed out as a multiple of some smaller prime factor of $k$."
+      "en": "One more speed-up: when crossing out multiples of $p$, start at $p^{2}$ rather than $2p$. Every smaller multiple is $kp$ with $k<p$ and has already been crossed out as a multiple of some smaller prime factor of $k$.",
+      "uz": "Yana bitta tezlashtirish: $p$ ning karralilarini oʻchirganda $2p$ dan emas, $p^{2}$ dan boshlang. Undan kichik har bir karrali $kp$ koʻrinishida, bunda $k<p$, va u $k$ ning biror kichikroq tub koʻpaytuvchisining karralisi sifatida allaqachon oʻchirilgan."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Сколько простых чисел не превосходит $100$, и где решето может остановиться?",
-      "en": "How many primes are there up to $100$, and where may the sieve stop?"
+      "en": "How many primes are there up to $100$, and where may the sieve stop?",
+      "uz": "$100$ gacha nechta tub son bor va elak qayerda toʻxtashi mumkin?"
      },
      "steps": {
       "ru": [
@@ -604,11 +729,18 @@ window.LESSONS[2] = {
        "Start the multiples of two at $4$, of three at $9$, of five at $25$, of seven at $49$.",
        "What survives is $2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97$.",
        "Counting: $25$ of them."
+      ],
+      "uz": [
+       "$\\sqrt{100}=10$, demak $2,3,5,7$ ning karralilarini oʻchiramiz, boshqa hech narsani emas.",
+       "Ikkining karralilarini $4$ dan, uchniki $9$ dan, beshniki $25$ dan, yettiniki $49$ dan boshlaymiz.",
+       "Omon qolganlari: $2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97$.",
+       "Sanaymiz: $25$ ta."
       ]
      },
      "ans": {
       "ru": "$25$ простых; решето останавливается после семёрки.",
-      "en": "$25$ primes; the sieve stops after seven."
+      "en": "$25$ primes; the sieve stops after seven.",
+      "uz": "$25$ ta tub son; elak yettidan keyin toʻxtaydi."
      }
     }
    ]
@@ -624,50 +756,58 @@ window.LESSONS[2] = {
      "t": "p",
      "text": {
       "ru": "Простых бесконечно много — но насколько густо они расставлены? Оказывается, они и «редеют», и при этом никогда не исчезают надолго.",
-      "en": "The primes never run out — but how densely are they placed? They thin out, and yet they never disappear for long."
+      "en": "The primes never run out — but how densely are they placed? They thin out, and yet they never disappear for long.",
+      "uz": "Tub sonlar tugamaydi — ammo ular qanchalik zich joylashgan? Ular siyraklashadi, lekin hech qachon uzoq vaqtga yoʻqolmaydi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Промежутки бывают сколь угодно длинными",
-      "en": "Arbitrarily long prime-free gaps"
+      "en": "Arbitrarily long prime-free gaps",
+      "uz": "Istalgancha uzun tubsiz oraliqlar"
      },
      "text": {
       "ru": "Для любого $n$ существуют $n$ подряд идущих составных чисел.",
-      "en": "For every $n$ there exist $n$ consecutive composite numbers."
+      "en": "For every $n$ there exist $n$ consecutive composite numbers.",
+      "uz": "Har bir $n$ uchun ketma-ket kelgan $n$ ta murakkab son mavjud."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Положим $M=(n+1)!$ и рассмотрим числа $$M+2,\\ M+3,\\ \\dots,\\ M+(n+1).$$\n\nВозьмём любое $k$ с $2\\le k\\le n+1$. Тогда $k$ входит множителем в $(n+1)!$, значит $k\\mid M$, а также $k\\mid k$, поэтому $$k\\ \\big|\\ M+k .$$\n\nПри этом $M+k>k>1$, значит у числа $M+k$ есть делитель, отличный от единицы и от него самого — оно составное.\n\nВсе $n$ чисел оказались составными. $\\blacksquare$",
-      "en": "Put $M=(n+1)!$ and consider $$M+2,\\ M+3,\\ \\dots,\\ M+(n+1).$$\n\nTake any $k$ with $2\\le k\\le n+1$. Then $k$ is a factor of $(n+1)!$, so $k\\mid M$ and $k\\mid k$, hence $$k\\ \\big|\\ M+k .$$\n\nSince $M+k>k>1$, the number $M+k$ has a divisor other than $1$ and itself — it is composite.\n\nAll $n$ numbers are composite. $\\blacksquare$"
+      "en": "Put $M=(n+1)!$ and consider $$M+2,\\ M+3,\\ \\dots,\\ M+(n+1).$$\n\nTake any $k$ with $2\\le k\\le n+1$. Then $k$ is a factor of $(n+1)!$, so $k\\mid M$ and $k\\mid k$, hence $$k\\ \\big|\\ M+k .$$\n\nSince $M+k>k>1$, the number $M+k$ has a divisor other than $1$ and itself — it is composite.\n\nAll $n$ numbers are composite. $\\blacksquare$",
+      "uz": "$M=(n+1)!$ deb olamiz va $$M+2,\\ M+3,\\ \\dots,\\ M+(n+1)$$ sonlarini koʻramiz.\n\n$2\\le k\\le n+1$ boʻlgan istalgan $k$ ni olamiz. U holda $k$ — $(n+1)!$ ning koʻpaytuvchisi, demak $k\\mid M$ va $k\\mid k$, shuning uchun $$k\\ \\big|\\ M+k .$$\n\n$M+k>k>1$ boʻlgani uchun $M+k$ sonining $1$ va oʻzidan boshqa boʻluvchisi bor — u murakkab.\n\nBarcha $n$ ta son murakkab. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Постулат Бертрана",
-      "en": "Bertrand’s postulate"
+      "en": "Bertrand’s postulate",
+      "uz": "Bertran postulati"
      },
      "text": {
       "ru": "Для любого целого $n\\ge1$ между $n$ и $2n$ найдётся простое число: $$n<p\\le2n .$$",
-      "en": "For every integer $n\\ge1$ there is a prime between $n$ and $2n$: $$n<p\\le2n .$$"
+      "en": "For every integer $n\\ge1$ there is a prime between $n$ and $2n$: $$n<p\\le2n .$$",
+      "uz": "Har bir $n\\ge1$ butun son uchun $n$ va $2n$ orasida tub son bor: $$n<p\\le2n .$$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Постулат высказан Бертраном в $1845$ году и доказан Чебышёвым в $1852$-м; изящное элементарное доказательство дал Эрдёш в $1932$-м, оценивая биномиальный коэффициент $\\binom{2n}{n}$.\n\n**Как этим пользуются.** Утверждение «между $n$ и $2n$ всегда есть простое» позволяет строить нужные простые в задачах: например, доказать, что при $n>1$ число $n!$ не является точной степенью, или что сумма $1+\\tfrac12+\\dots+\\tfrac1n$ не целая.",
-      "en": "Bertrand stated it in $1845$; Chebyshev proved it in $1852$, and Erdős gave an elegant elementary proof in $1932$ by estimating the binomial coefficient $\\binom{2n}{n}$.\n\n**How it is used.** \"There is always a prime between $n$ and $2n$\" lets one manufacture a prime when a problem needs one: to show that $n!$ is never a perfect power for $n>1$, say, or that $1+\\tfrac12+\\dots+\\tfrac1n$ is never an integer."
+      "en": "Bertrand stated it in $1845$; Chebyshev proved it in $1852$, and Erdős gave an elegant elementary proof in $1932$ by estimating the binomial coefficient $\\binom{2n}{n}$.\n\n**How it is used.** \"There is always a prime between $n$ and $2n$\" lets one manufacture a prime when a problem needs one: to show that $n!$ is never a perfect power for $n>1$, say, or that $1+\\tfrac12+\\dots+\\tfrac1n$ is never an integer.",
+      "uz": "Bertran buni $1845$-yilda taʼriflagan; Chebishyov $1852$-yilda isbotlagan, Erdyosh esa $1932$-yilda $\\binom{2n}{n}$ binomial koeffitsiyentini baholash orqali nafis elementar isbot bergan.\n\n**Qanday ishlatiladi.** «$n$ va $2n$ orasida har doim tub son bor» degani masalaga tub son kerak boʻlganda uni ishlab chiqarishga imkon beradi: masalan, $n>1$ da $n!$ hech qachon toʻliq daraja boʻlmasligini yoki $1+\\tfrac12+\\dots+\\tfrac1n$ hech qachon butun son boʻlmasligini koʻrsatish uchun."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Пользуясь постулатом Бертрана, докажите, что сумма $H_n=1+\\tfrac12+\\dots+\\tfrac1n$ не является целым числом при $n\\ge2$.",
-      "en": "Using Bertrand’s postulate, prove that $H_n=1+\\tfrac12+\\dots+\\tfrac1n$ is never an integer for $n\\ge2$."
+      "en": "Using Bertrand’s postulate, prove that $H_n=1+\\tfrac12+\\dots+\\tfrac1n$ is never an integer for $n\\ge2$.",
+      "uz": "Bertran postulatidan foydalanib, $n\\ge2$ da $H_n=1+\\tfrac12+\\dots+\\tfrac1n$ hech qachon butun son boʻlmasligini isbotlang."
      },
      "steps": {
       "ru": [
@@ -685,22 +825,33 @@ window.LESSONS[2] = {
        "Put the sum over the common denominator $L=\\operatorname{lcm}(1,\\dots,n)$, in which $p$ appears to the first power.",
        "In the numerator every term except one carries a factor $p$; the term coming from $\\tfrac1p$ does not.",
        "So the numerator is not divisible by $p$ while the denominator is — the fraction cannot be an integer ✗"
+      ],
+      "uz": [
+       "Bertran $\\tfrac n2<p\\le n$ boʻladigan tub $p$ ni beradi.",
+       "$p\\le n$ boʻlgani uchun yigʻindida $\\tfrac1p$ hadi bor.",
+       "$2p>n$ boʻlgani uchun $1,\\dots,n$ orasida $p$ ning yagona karralisi $p$ ning oʻzi — boshqa hech bir maxraj $p$ ga boʻlinmaydi.",
+       "Yigʻindini $L=\\operatorname{lcm}(1,\\dots,n)$ umumiy maxrajga keltiramiz; unda $p$ birinchi darajada qatnashadi.",
+       "Suratdagi bitta haddan tashqari hammasi $p$ koʻpaytuvchisini oladi; $\\tfrac1p$ dan kelgan had esa olmaydi.",
+       "Demak surat $p$ ga boʻlinmaydi, maxraj esa boʻlinadi — kasr butun son boʻla olmaydi ✗"
       ]
      },
      "ans": {
       "ru": "$H_n$ не целое ни при каком $n\\ge2$.",
-      "en": "$H_n$ is not an integer for any $n\\ge2$."
+      "en": "$H_n$ is not an integer for any $n\\ge2$.",
+      "uz": "Hech bir $n\\ge2$ uchun $H_n$ butun son emas."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Закон распределения простых",
-      "en": "The prime number theorem"
+      "en": "The prime number theorem",
+      "uz": "Tub sonlar taqsimoti teoremasi"
      },
      "text": {
       "ru": "Обозначим через $\\pi(x)$ количество простых, не превосходящих $x$. Тогда $$\\pi(x)\\ \\sim\\ \\frac{x}{\\ln x},$$ то есть отношение $\\pi(x)\\big/\\dfrac{x}{\\ln x}$ стремится к единице при $x\\to\\infty$.",
-      "en": "Write $\\pi(x)$ for the number of primes up to $x$. Then $$\\pi(x)\\ \\sim\\ \\frac{x}{\\ln x},$$ meaning the ratio $\\pi(x)\\big/\\dfrac{x}{\\ln x}$ tends to one as $x\\to\\infty$."
+      "en": "Write $\\pi(x)$ for the number of primes up to $x$. Then $$\\pi(x)\\ \\sim\\ \\frac{x}{\\ln x},$$ meaning the ratio $\\pi(x)\\big/\\dfrac{x}{\\ln x}$ tends to one as $x\\to\\infty$.",
+      "uz": "$x$ gacha boʻlgan tub sonlar sonini $\\pi(x)$ deb belgilaymiz. U holda $$\\pi(x)\\ \\sim\\ \\frac{x}{\\ln x},$$ yaʼni $x\\to\\infty$ da $\\pi(x)\\big/\\dfrac{x}{\\ln x}$ nisbati birga intiladi."
      }
     },
     {
@@ -717,6 +868,12 @@ window.LESSONS[2] = {
        "$\\pi(x)$",
        "$x/\\ln x$",
        "ratio"
+      ],
+      "uz": [
+       "$x$",
+       "$\\pi(x)$",
+       "$x/\\ln x$",
+       "nisbat"
       ]
      },
      "rows": {
@@ -778,14 +935,16 @@ window.LESSONS[2] = {
      "t": "note",
      "text": {
       "ru": "Теорема доказана в $1896$ году независимо Адамаром и Валле-Пуссеном; элементарное (но всё равно трудное) доказательство нашли Эрдёш и Сельберг в $1949$-м.\n\n**Что она означает на практике.** Вблизи числа $x$ доля простых примерно равна $\\tfrac1{\\ln x}$. Среди стозначных чисел простым оказывается примерно каждое $230$-е — именно поэтому криптографические ключи удаётся находить случайным перебором.",
-      "en": "The theorem was proved in $1896$ independently by Hadamard and de la Vallée Poussin; an elementary (though still hard) proof was found by Erdős and Selberg in $1949$.\n\n**What it means in practice.** Near $x$ the proportion of primes is about $\\tfrac1{\\ln x}$. Roughly one in $230$ hundred-digit numbers is prime — which is why cryptographic keys can be found by random search."
+      "en": "The theorem was proved in $1896$ independently by Hadamard and de la Vallée Poussin; an elementary (though still hard) proof was found by Erdős and Selberg in $1949$.\n\n**What it means in practice.** Near $x$ the proportion of primes is about $\\tfrac1{\\ln x}$. Roughly one in $230$ hundred-digit numbers is prime — which is why cryptographic keys can be found by random search.",
+      "uz": "Teorema $1896$-yilda Adamar va de la Valle-Pussen tomonidan mustaqil ravishda isbotlangan; elementar (lekin baribir qiyin) isbotni $1949$-yilda Erdyosh va Selberg topgan.\n\n**Amalda bu nimani bildiradi.** $x$ atrofida tub sonlarning ulushi taxminan $\\tfrac1{\\ln x}$. Taxminan har $230$ ta yuz xonali sondan bittasi tub — aynan shuning uchun kriptografik kalitlarni tasodifiy qidiruv bilan topish mumkin."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Открытые вопросы.** Про простые известно гораздо меньше, чем кажется. До сих пор не доказаны: гипотеза о простых-близнецах (бесконечно ли много пар $p$, $p+2$), гипотеза Гольдбаха (всякое чётное число, большее двух, — сумма двух простых), бесконечность простых вида $n^{2}+1$. Все они проверены компьютером до колоссальных границ, но проверка — не доказательство.",
-      "en": "**Open questions.** Far less is known about primes than one might think. Still unproved: the twin prime conjecture (are there infinitely many pairs $p$, $p+2$), Goldbach’s conjecture (every even number above two is a sum of two primes), the infinitude of primes of the form $n^{2}+1$. All have been checked by computer to enormous bounds — but checking is not proving."
+      "en": "**Open questions.** Far less is known about primes than one might think. Still unproved: the twin prime conjecture (are there infinitely many pairs $p$, $p+2$), Goldbach’s conjecture (every even number above two is a sum of two primes), the infinitude of primes of the form $n^{2}+1$. All have been checked by computer to enormous bounds — but checking is not proving.",
+      "uz": "**Ochiq savollar.** Tub sonlar haqida oʻylanganidan ancha kam narsa maʼlum. Hanuz isbotlanmagan: egizak tub sonlar gipotezasi ($p$, $p+2$ juftliklari cheksiz koʻpmi), Goldbax gipotezasi (ikkidan katta har bir juft son ikkita tub son yigʻindisimi), $n^{2}+1$ koʻrinishidagi tub sonlarning cheksizligi. Bularning hammasi kompyuterda juda katta chegaralargacha tekshirilgan — ammo tekshirish isbot emas."
      }
     }
    ]
@@ -801,86 +960,100 @@ window.LESSONS[2] = {
      "t": "p",
      "text": {
       "ru": "Два семейства чисел веками служат «охотничьими угодьями» для поиска больших простых. Оба устроены так, что показатель степени сильно ограничен — и это ограничение доказывается элементарно.",
-      "en": "Two families of numbers have been the hunting grounds for large primes for centuries. In both, the exponent is severely constrained — and the constraint has an elementary proof."
+      "en": "Two families of numbers have been the hunting grounds for large primes for centuries. In both, the exponent is severely constrained — and the constraint has an elementary proof.",
+      "uz": "Ikki oila sonlar asrlar davomida katta tub sonlarni ovlash maydoni boʻlib kelgan. Ikkalasida ham koʻrsatkich qatʼiy cheklangan — va bu cheklovning elementar isboti bor."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Показатель числа Мерсенна прост",
-      "en": "A Mersenne exponent must be prime"
+      "en": "A Mersenne exponent must be prime",
+      "uz": "Mersenn koʻrsatkichi tub boʻlishi shart"
      },
      "text": {
       "ru": "Если число $2^{n}-1$ простое, то и $n$ простое.",
-      "en": "If $2^{n}-1$ is prime then $n$ is prime."
+      "en": "If $2^{n}-1$ is prime then $n$ is prime.",
+      "uz": "Agar $2^{n}-1$ tub boʻlsa, $n$ ham tub."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Докажем противоположное: если $n$ составное, то и $2^{n}-1$ составное.\n\nПусть $n=ab$ с $1<a,b<n$. Воспользуемся тождеством $$x^{b}-1=(x-1)\\left(x^{\\,b-1}+x^{\\,b-2}+\\dots+x+1\\right)$$ при $x=2^{a}$: $$2^{n}-1=\\left(2^{a}\\right)^{b}-1=\\left(2^{a}-1\\right)\\left(2^{a(b-1)}+\\dots+2^{a}+1\\right).$$\n\nОстаётся проверить, что оба множителя больше единицы. Первый: $a\\ge2$ даёт $2^{a}-1\\ge3$. Второй — сумма $b\\ge2$ положительных слагаемых, каждое не меньше единицы, значит он не меньше $2$.\n\nЗначит $2^{n}-1$ составное. $\\blacksquare$",
-      "en": "We prove the contrapositive: if $n$ is composite then so is $2^{n}-1$.\n\nLet $n=ab$ with $1<a,b<n$. Use the identity $$x^{b}-1=(x-1)\\left(x^{\\,b-1}+\\dots+x+1\\right)$$ with $x=2^{a}$: $$2^{n}-1=\\left(2^{a}-1\\right)\\left(2^{a(b-1)}+\\dots+2^{a}+1\\right).$$\n\nBoth factors exceed one: $a\\ge2$ gives $2^{a}-1\\ge3$, and the second is a sum of $b\\ge2$ terms each at least $1$.\n\nSo $2^{n}-1$ is composite. $\\blacksquare$"
+      "en": "We prove the contrapositive: if $n$ is composite then so is $2^{n}-1$.\n\nLet $n=ab$ with $1<a,b<n$. Use the identity $$x^{b}-1=(x-1)\\left(x^{\\,b-1}+\\dots+x+1\\right)$$ with $x=2^{a}$: $$2^{n}-1=\\left(2^{a}-1\\right)\\left(2^{a(b-1)}+\\dots+2^{a}+1\\right).$$\n\nBoth factors exceed one: $a\\ge2$ gives $2^{a}-1\\ge3$, and the second is a sum of $b\\ge2$ terms each at least $1$.\n\nSo $2^{n}-1$ is composite. $\\blacksquare$",
+      "uz": "Kontrapozitsiyani isbotlaymiz: agar $n$ murakkab boʻlsa, $2^{n}-1$ ham murakkab.\n\n$n=ab$ boʻlsin, bunda $1<a,b<n$. $x=2^{a}$ bilan $$x^{b}-1=(x-1)\\left(x^{\\,b-1}+\\dots+x+1\\right)$$ ayniyatidan foydalanamiz: $$2^{n}-1=\\left(2^{a}-1\\right)\\left(2^{a(b-1)}+\\dots+2^{a}+1\\right).$$\n\nIkkala koʻpaytuvchi ham birdan katta: $a\\ge2$ dan $2^{a}-1\\ge3$, ikkinchisi esa har biri kamida $1$ boʻlgan $b\\ge2$ ta hadning yigʻindisi.\n\nDemak $2^{n}-1$ murakkab. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Обратное **неверно**: простота $n$ не гарантирует простоты $2^{n}-1$. Наименьший контрпример — $$2^{11}-1=2047=23\\cdot89 ,$$ хотя $11$ простое.",
-      "en": "The converse is **false**: $n$ prime does not make $2^{n}-1$ prime. The smallest counterexample is $$2^{11}-1=2047=23\\cdot89 ,$$ although $11$ is prime."
+      "en": "The converse is **false**: $n$ prime does not make $2^{n}-1$ prime. The smallest counterexample is $$2^{11}-1=2047=23\\cdot89 ,$$ although $11$ is prime.",
+      "uz": "Teskarisi **notoʻgʻri**: $n$ tub boʻlgani $2^{n}-1$ ni tub qilmaydi. Eng kichik qarshi misol $$2^{11}-1=2047=23\\cdot89 ,$$ garchi $11$ tub boʻlsa ham."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Показатель числа Ферма — степень двойки",
-      "en": "A Fermat exponent must be a power of two"
+      "en": "A Fermat exponent must be a power of two",
+      "uz": "Ferma koʻrsatkichi ikkining darajasi boʻlishi shart"
      },
      "text": {
       "ru": "Если число $2^{n}+1$ простое при $n\\ge1$, то $n$ — степень двойки.",
-      "en": "If $2^{n}+1$ is prime for some $n\\ge1$, then $n$ is a power of two."
+      "en": "If $2^{n}+1$ is prime for some $n\\ge1$, then $n$ is a power of two.",
+      "uz": "Agar biror $n\\ge1$ uchun $2^{n}+1$ tub boʻlsa, u holda $n$ — ikkining darajasi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $n$ **не** степень двойки. Тогда у $n$ есть нечётный делитель $m>1$; запишем $n=km$.\n\nВоспользуемся тождеством для **нечётного** $m$: $$x^{m}+1=(x+1)\\left(x^{\\,m-1}-x^{\\,m-2}+\\dots-x+1\\right)$$ (знаки чередуются, и последний член равен $+1$ именно потому, что $m$ нечётно). Подставим $x=2^{k}$: $$2^{n}+1=\\left(2^{k}\\right)^{m}+1=\\left(2^{k}+1\\right)\\left(\\dots\\right).$$\n\nПервый множитель $2^{k}+1\\ge3$, а второй равен $\\dfrac{2^{n}+1}{2^{k}+1}$ и больше единицы, потому что $m>1$ означает $n>k$.\n\nЗначит $2^{n}+1$ составное — противоречие. $\\blacksquare$",
-      "en": "Suppose $n$ is **not** a power of two. Then $n$ has an odd divisor $m>1$; write $n=km$.\n\nUse the identity for **odd** $m$: $$x^{m}+1=(x+1)\\left(x^{\\,m-1}-x^{\\,m-2}+\\dots-x+1\\right)$$ (the signs alternate, and the last term is $+1$ precisely because $m$ is odd). Substitute $x=2^{k}$: $$2^{n}+1=\\left(2^{k}+1\\right)\\left(\\dots\\right).$$\n\nThe first factor is $2^{k}+1\\ge3$, and the second equals $\\dfrac{2^{n}+1}{2^{k}+1}>1$ because $m>1$ means $n>k$.\n\nSo $2^{n}+1$ is composite — a contradiction. $\\blacksquare$"
+      "en": "Suppose $n$ is **not** a power of two. Then $n$ has an odd divisor $m>1$; write $n=km$.\n\nUse the identity for **odd** $m$: $$x^{m}+1=(x+1)\\left(x^{\\,m-1}-x^{\\,m-2}+\\dots-x+1\\right)$$ (the signs alternate, and the last term is $+1$ precisely because $m$ is odd). Substitute $x=2^{k}$: $$2^{n}+1=\\left(2^{k}+1\\right)\\left(\\dots\\right).$$\n\nThe first factor is $2^{k}+1\\ge3$, and the second equals $\\dfrac{2^{n}+1}{2^{k}+1}>1$ because $m>1$ means $n>k$.\n\nSo $2^{n}+1$ is composite — a contradiction. $\\blacksquare$",
+      "uz": "$n$ ikkining darajasi **emas** deb faraz qilamiz. U holda $n$ ning $m>1$ toq boʻluvchisi bor; $n=km$ deb yozamiz.\n\n**Toq** $m$ uchun ayniyatdan foydalanamiz: $$x^{m}+1=(x+1)\\left(x^{\\,m-1}-x^{\\,m-2}+\\dots-x+1\\right)$$ (ishoralar almashinadi, oxirgi had esa aynan $m$ toq boʻlgani uchun $+1$). $x=2^{k}$ ni qoʻyamiz: $$2^{n}+1=\\left(2^{k}+1\\right)\\left(\\dots\\right).$$\n\nBirinchi koʻpaytuvchi $2^{k}+1\\ge3$, ikkinchisi esa $\\dfrac{2^{n}+1}{2^{k}+1}>1$, chunki $m>1$ boʻlgani $n>k$ ni bildiradi.\n\nDemak $2^{n}+1$ murakkab — ziddiyat. $\\blacksquare$"
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Числа Ферма",
-      "en": "Fermat numbers"
+      "en": "Fermat numbers",
+      "uz": "Ferma sonlari"
      },
      "text": {
       "ru": "$F_n=2^{2^{n}}+1$. Первые из них $$F_0=3,\\quad F_1=5,\\quad F_2=17,\\quad F_3=257,\\quad F_4=65\\,537 $$ — все простые. Ферма предположил, что простыми будут все, но Эйлер в $1732$ году нашёл, что $$F_5=4\\,294\\,967\\,297=641\\cdot6\\,700\\,417 .$$",
-      "en": "$F_n=2^{2^{n}}+1$. The first few, $$F_0=3,\\quad F_1=5,\\quad F_2=17,\\quad F_3=257,\\quad F_4=65\\,537 ,$$ are all prime. Fermat conjectured they always would be, but in $1732$ Euler found $$F_5=4\\,294\\,967\\,297=641\\cdot6\\,700\\,417 .$$"
+      "en": "$F_n=2^{2^{n}}+1$. The first few, $$F_0=3,\\quad F_1=5,\\quad F_2=17,\\quad F_3=257,\\quad F_4=65\\,537 ,$$ are all prime. Fermat conjectured they always would be, but in $1732$ Euler found $$F_5=4\\,294\\,967\\,297=641\\cdot6\\,700\\,417 .$$",
+      "uz": "$F_n=2^{2^{n}}+1$. Dastlabki bir nechtasi, $$F_0=3,\\quad F_1=5,\\quad F_2=17,\\quad F_3=257,\\quad F_4=65\\,537 ,$$ hammasi tub. Ferma ular har doim tub boʻladi deb taxmin qilgan, ammo $1732$-yilda Eyler $$F_5=4\\,294\\,967\\,297=641\\cdot6\\,700\\,417$$ ekanini topdi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Числа Ферма попарно взаимно просты",
-      "en": "Fermat numbers are pairwise coprime"
+      "en": "Fermat numbers are pairwise coprime",
+      "uz": "Ferma sonlari juft-jufti bilan oʻzaro tub"
      },
      "text": {
       "ru": "При $m\\ne n$ выполняется $\\gcd\\left(F_m,F_n\\right)=1$. Отсюда получается ещё одно доказательство бесконечности множества простых.",
-      "en": "For $m\\ne n$ we have $\\gcd\\left(F_m,F_n\\right)=1$. This yields yet another proof that there are infinitely many primes."
+      "en": "For $m\\ne n$ we have $\\gcd\\left(F_m,F_n\\right)=1$. This yields yet another proof that there are infinitely many primes.",
+      "uz": "$m\\ne n$ uchun $\\gcd\\left(F_m,F_n\\right)=1$. Bu tub sonlar cheksiz koʻpligining yana bir isbotini beradi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Шаг 1: тождество $F_0F_1\\cdots F_{n-1}=F_n-2$.** Индукция по $n$. База $n=1$: слева $F_0=3$, справа $5-2=3$ ✓ Переход: если $F_0\\cdots F_{n-1}=2^{2^{n}}-1$, то $$F_0\\cdots F_{n-1}F_n=\\left(2^{2^{n}}-1\\right)\\left(2^{2^{n}}+1\\right)=2^{2^{n+1}}-1=F_{n+1}-2 \\quad\\checkmark$$\n\n**Шаг 2.** Пусть $m<n$ и $d$ делит и $F_m$, и $F_n$. По шагу 1 число $F_m$ входит множителем в произведение $F_0\\cdots F_{n-1}=F_n-2$, значит $d\\mid F_n-2$. Вместе с $d\\mid F_n$ это даёт $d\\mid2$.\n\nНо все числа Ферма нечётны, поэтому $d$ нечётно, откуда $d=1$. $\\blacksquare$\n\n**Следствие.** У каждого $F_n$ есть простой делитель, и у разных $F_n$ эти делители различны — значит простых бесконечно много.",
-      "en": "**Step 1: the identity $F_0F_1\\cdots F_{n-1}=F_n-2$.** Induction on $n$. Base $n=1$: the left side is $F_0=3$, the right $5-2=3$ ✓ Step: if $F_0\\cdots F_{n-1}=2^{2^{n}}-1$ then $$F_0\\cdots F_{n-1}F_n=\\left(2^{2^{n}}-1\\right)\\left(2^{2^{n}}+1\\right)=2^{2^{n+1}}-1=F_{n+1}-2 \\quad\\checkmark$$\n\n**Step 2.** Let $m<n$ and let $d$ divide both $F_m$ and $F_n$. By Step 1 the number $F_m$ is a factor of $F_0\\cdots F_{n-1}=F_n-2$, so $d\\mid F_n-2$. With $d\\mid F_n$ this gives $d\\mid2$.\n\nBut Fermat numbers are odd, so $d$ is odd and $d=1$. $\\blacksquare$\n\n**Corollary.** Each $F_n$ has a prime divisor, and different $F_n$ have different ones — so there are infinitely many primes."
+      "en": "**Step 1: the identity $F_0F_1\\cdots F_{n-1}=F_n-2$.** Induction on $n$. Base $n=1$: the left side is $F_0=3$, the right $5-2=3$ ✓ Step: if $F_0\\cdots F_{n-1}=2^{2^{n}}-1$ then $$F_0\\cdots F_{n-1}F_n=\\left(2^{2^{n}}-1\\right)\\left(2^{2^{n}}+1\\right)=2^{2^{n+1}}-1=F_{n+1}-2 \\quad\\checkmark$$\n\n**Step 2.** Let $m<n$ and let $d$ divide both $F_m$ and $F_n$. By Step 1 the number $F_m$ is a factor of $F_0\\cdots F_{n-1}=F_n-2$, so $d\\mid F_n-2$. With $d\\mid F_n$ this gives $d\\mid2$.\n\nBut Fermat numbers are odd, so $d$ is odd and $d=1$. $\\blacksquare$\n\n**Corollary.** Each $F_n$ has a prime divisor, and different $F_n$ have different ones — so there are infinitely many primes.",
+      "uz": "**1-qadam: $F_0F_1\\cdots F_{n-1}=F_n-2$ ayniyati.** $n$ boʻyicha induksiya. Baza $n=1$: chap tomon $F_0=3$, oʻng tomon $5-2=3$ ✓ Qadam: agar $F_0\\cdots F_{n-1}=2^{2^{n}}-1$ boʻlsa, $$F_0\\cdots F_{n-1}F_n=\\left(2^{2^{n}}-1\\right)\\left(2^{2^{n}}+1\\right)=2^{2^{n+1}}-1=F_{n+1}-2 \\quad\\checkmark$$\n\n**2-qadam.** $m<n$ boʻlsin va $d$ soni $F_m$ ni ham, $F_n$ ni ham boʻlsin. 1-qadamga koʻra $F_m$ — $F_0\\cdots F_{n-1}=F_n-2$ ning koʻpaytuvchisi, demak $d\\mid F_n-2$. $d\\mid F_n$ bilan birga bu $d\\mid2$ ni beradi.\n\nAmmo Ferma sonlari toq, demak $d$ toq va $d=1$. $\\blacksquare$\n\n**Natija.** Har bir $F_n$ ning tub boʻluvchisi bor va turli $F_n$ lar turli boʻluvchiga ega — demak tub sonlar cheksiz koʻp."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Зачем это нужно.** Самые большие известные простые — числа Мерсенна: их простоту умеют проверять особенно быстро (тест Люка — Лемера). А числа Ферма связаны с классической геометрией: Гаусс доказал, что правильный $n$-угольник строится циркулем и линейкой ровно тогда, когда $n$ — произведение степени двойки и различных **простых** чисел Ферма. Поэтому строится правильный $17$-угольник, а $7$-угольник — нет.",
-      "en": "**Why they matter.** The largest known primes are Mersenne numbers: their primality can be tested unusually fast (the Lucas–Lehmer test). Fermat numbers connect to classical geometry: Gauss proved that a regular $n$-gon is constructible with ruler and compass exactly when $n$ is a power of two times distinct **prime** Fermat numbers. Hence the regular $17$-gon is constructible and the $7$-gon is not."
+      "en": "**Why they matter.** The largest known primes are Mersenne numbers: their primality can be tested unusually fast (the Lucas–Lehmer test). Fermat numbers connect to classical geometry: Gauss proved that a regular $n$-gon is constructible with ruler and compass exactly when $n$ is a power of two times distinct **prime** Fermat numbers. Hence the regular $17$-gon is constructible and the $7$-gon is not.",
+      "uz": "**Nega ular muhim.** Maʼlum boʻlgan eng katta tub sonlar — Mersenn sonlari: ularning tubligini gʻayrioddiy tez tekshirish mumkin (Lukas–Lemer testi). Ferma sonlari klassik geometriya bilan bogʻlanadi: Gauss isbotladiki, muntazam $n$-burchakni sirkul va chizgʻich bilan yasash mumkin boʻlishi uchun $n$ ikkining darajasi va turli **tub** Ferma sonlari koʻpaytmasi boʻlishi zarur va yetarli. Shuning uchun muntazam $17$-burchak yasaladi, $7$-burchak esa yasalmaydi."
      }
     }
    ]
