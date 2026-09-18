@@ -1031,7 +1031,11 @@ window.LESSONS[16] = {
  ],
  "problems": [
   {
-   "src": "Пробный тур 1, задача 1 / Mock round 1, problem 1",
+   "src": {
+    "ru": "Пробный тур 1, задача 1",
+    "en": "Mock round 1, problem 1",
+    "uz": "1-sinov turi, 1-masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите наименьшее натуральное $n$, при котором $n!$ делится на $1000$.",
@@ -1047,7 +1051,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 1, задача 2 / Mock round 1, problem 2",
+   "src": {
+    "ru": "Пробный тур 1, задача 2",
+    "en": "Mock round 1, problem 2",
+    "uz": "1-sinov turi, 2-masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколькими способами можно выбрать из восьми человек комиссию **нечётной** численности (комиссия не может быть пустой)?",
@@ -1063,7 +1071,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 1, задача 3 / Mock round 1, problem 3",
+   "src": {
+    "ru": "Пробный тур 1, задача 3",
+    "en": "Mock round 1, problem 3",
+    "uz": "1-sinov turi, 3-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Гипотенуза прямоугольного треугольника равна $10$, а высота, проведённая к ней, равна $4$. Найдите катеты.",
@@ -1079,7 +1091,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 1, задача 4 / Mock round 1, problem 4",
+   "src": {
+    "ru": "Пробный тур 1, задача 4",
+    "en": "Mock round 1, problem 4",
+    "uz": "1-sinov turi, 4-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что для любых положительных $a$, $b$, $c$ $$\\frac{a+b}{c}+\\frac{b+c}{a}+\\frac{c+a}{b}\\ \\ge\\ 6 .$$",
@@ -1095,7 +1111,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 1, задача 5 / Mock round 1, problem 5",
+   "src": {
+    "ru": "Пробный тур 1, задача 5",
+    "en": "Mock round 1, problem 5",
+    "uz": "1-sinov turi, 5-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Числа $1,2,\\dots,100$ расставлены по кругу в произвольном порядке. Докажите, что найдутся два стоящих рядом числа, сумма которых не меньше $101$.",
@@ -1111,7 +1131,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 2, задача 1 / Mock round 2, problem 1",
+   "src": {
+    "ru": "Пробный тур 2, задача 1",
+    "en": "Mock round 2, problem 1",
+    "uz": "2-sinov turi, 1-masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Упростите выражение $\\sqrt{7+4\\sqrt3}$.",
@@ -1127,7 +1151,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 2, задача 2 / Mock round 2, problem 2",
+   "src": {
+    "ru": "Пробный тур 2, задача 2",
+    "en": "Mock round 2, problem 2",
+    "uz": "2-sinov turi, 2-masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Периметр прямоугольного треугольника равен $30$, а гипотенуза равна $13$. Найдите катеты.",
@@ -1143,7 +1171,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 2, задача 3 / Mock round 2, problem 3",
+   "src": {
+    "ru": "Пробный тур 2, задача 3",
+    "en": "Mock round 2, problem 3",
+    "uz": "2-sinov turi, 3-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите последнюю цифру числа $2^{2024}+3^{2024}$.",
@@ -1159,7 +1191,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 2, задача 4 / Mock round 2, problem 4",
+   "src": {
+    "ru": "Пробный тур 2, задача 4",
+    "en": "Mock round 2, problem 4",
+    "uz": "2-sinov turi, 4-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Сколькими способами можно поставить на шахматную доску $8\\times8$ две ладьи так, чтобы они **не били** друг друга? Ладьи считаются одинаковыми.",
@@ -1175,7 +1211,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 2, задача 5 / Mock round 2, problem 5",
+   "src": {
+    "ru": "Пробный тур 2, задача 5",
+    "en": "Mock round 2, problem 5",
+    "uz": "2-sinov turi, 5-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "В треугольнике $ABC$ известно, что $AB=6$, $AC=8$, а медиана $AM$, проведённая к стороне $BC$, равна $5$. Найдите $BC$ и величину угла $A$.",
@@ -1191,7 +1231,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 3, задача 1 / Mock round 3, problem 1",
+   "src": {
+    "ru": "Пробный тур 3, задача 1",
+    "en": "Mock round 3, problem 1",
+    "uz": "3-sinov turi, 1-masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколько существует четырёхзначных чисел, которые читаются одинаково слева направо и справа налево?",
@@ -1207,7 +1251,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 3, задача 2 / Mock round 3, problem 2",
+   "src": {
+    "ru": "Пробный тур 3, задача 2",
+    "en": "Mock round 3, problem 2",
+    "uz": "3-sinov turi, 2-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Известно, что $x+\\dfrac1x=3$. Найдите $x^{2}+\\dfrac1{x^{2}}$ и $x^{3}+\\dfrac1{x^{3}}$.",
@@ -1223,7 +1271,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 3, задача 3 / Mock round 3, problem 3",
+   "src": {
+    "ru": "Пробный тур 3, задача 3",
+    "en": "Mock round 3, problem 3",
+    "uz": "3-sinov turi, 3-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $n^{3}+2n$ делится на $3$ при любом целом $n$.",
@@ -1239,7 +1291,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 3, задача 4 / Mock round 3, problem 4",
+   "src": {
+    "ru": "Пробный тур 3, задача 4",
+    "en": "Mock round 3, problem 4",
+    "uz": "3-sinov turi, 4-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Из точки $P$ вне окружности проведены касательная длины $8$ и секущая. Ближняя точка пересечения секущей с окружностью удалена от $P$ на $4$. Найдите длину всей секущей от $P$ до дальней точки пересечения.",
@@ -1255,7 +1311,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 3, задача 5 / Mock round 3, problem 5",
+   "src": {
+    "ru": "Пробный тур 3, задача 5",
+    "en": "Mock round 3, problem 5",
+    "uz": "3-sinov turi, 5-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Даны пять произвольных целых чисел. Докажите, что из них можно выбрать три, сумма которых делится на $3$.",
@@ -1271,7 +1331,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 4, задача 1 / Mock round 4, problem 1",
+   "src": {
+    "ru": "Пробный тур 4, задача 1",
+    "en": "Mock round 4, problem 1",
+    "uz": "4-sinov turi, 1-masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколькими нулями оканчивается число $100!$?",
@@ -1287,7 +1351,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 4, задача 2 / Mock round 4, problem 2",
+   "src": {
+    "ru": "Пробный тур 4, задача 2",
+    "en": "Mock round 4, problem 2",
+    "uz": "4-sinov turi, 2-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Решите уравнение $\\sqrt{x+3}-\\sqrt{x-2}=1$.",
@@ -1303,7 +1371,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 4, задача 3 / Mock round 4, problem 3",
+   "src": {
+    "ru": "Пробный тур 4, задача 3",
+    "en": "Mock round 4, problem 3",
+    "uz": "4-sinov turi, 3-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите $\\gcd\\left(2^{30}-1,\\ 2^{24}-1\\right)$.",
@@ -1319,7 +1391,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 4, задача 4 / Mock round 4, problem 4",
+   "src": {
+    "ru": "Пробный тур 4, задача 4",
+    "en": "Mock round 4, problem 4",
+    "uz": "4-sinov turi, 4-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что если в треугольнике медиана и биссектриса, проведённые из одной вершины, совпадают, то треугольник равнобедренный.",
@@ -1335,7 +1411,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Пробный тур 4, задача 5 / Mock round 4, problem 5",
+   "src": {
+    "ru": "Пробный тур 4, задача 5",
+    "en": "Mock round 4, problem 5",
+    "uz": "4-sinov turi, 5-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что сумма кубов трёх последовательных натуральных чисел делится на $9$.",
@@ -1351,7 +1431,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите $1-2+3-4+\\dots+99-100$.",
@@ -1367,7 +1451,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Какой цифрой оканчивается число $7^{100}$?",
@@ -1383,7 +1471,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Площадь квадрата равна $49$. Найдите его диагональ.",
@@ -1399,7 +1491,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите $\\dfrac{2^{10}\\cdot5^{10}}{10^{8}}$.",
@@ -1415,7 +1511,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколько двузначных чисел имеют сумму цифр, равную $9$?",
@@ -1431,7 +1531,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Решите уравнение $|x-3|=5$.",
@@ -1447,7 +1551,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Решите уравнение $x^{2}-5|x|+6=0$.",
@@ -1463,7 +1571,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Сколькими способами можно выбрать три книги из семи?",
@@ -1479,7 +1591,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите остаток от деления $3^{100}$ на $13$.",
@@ -1495,7 +1611,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Основания трапеции равны $5$ и $11$, высота равна $4$. Найдите площадь.",
@@ -1511,7 +1631,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите сумму коэффициентов многочлена $(2x-3)^{5}$ после раскрытия скобок.",
@@ -1527,7 +1651,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Решите систему $$x+y=7,\\qquad x^{2}-y^{2}=21 .$$",
@@ -1543,7 +1671,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Сколько двузначных чисел делится на $7$?",
@@ -1559,7 +1691,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Углы выпуклого пятиугольника относятся как $2:3:4:5:6$. Найдите наибольший из них.",
@@ -1575,7 +1711,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что произведение четырёх подряд идущих целых чисел делится на $24$.",
@@ -1591,7 +1731,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Вычислите $$\\left(1-\\frac1{4}\\right)\\left(1-\\frac1{9}\\right)\\left(1-\\frac1{16}\\right)\\cdots\\left(1-\\frac1{100}\\right).$$",
@@ -1607,7 +1751,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все простые $p$, для которых число $p^{2}+2^{p}$ — простое.",
@@ -1623,7 +1771,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Стороны треугольника равны $13$, $14$ и $15$. Найдите его площадь и высоту, проведённую к стороне $14$.",
@@ -1639,7 +1791,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Решите уравнение $\\sqrt{x+5}+\\sqrt{x}=5$.",
@@ -1655,7 +1811,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Сколькими нулями оканчивается число $2025!$?",
@@ -1671,7 +1831,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все решения уравнения $x^{2}-y^{2}=2024$ в натуральных числах.",
@@ -1687,7 +1851,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Гипотенуза прямоугольного треугольника равна $25$, один из катетов — $15$. Найдите радиус вписанной окружности.",
@@ -1703,7 +1871,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Вычислите $\\displaystyle\\sum_{k=1}^{100}\\frac{1}{\\sqrt k+\\sqrt{k+1}}$.",
@@ -1719,7 +1891,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Положительные числа $a,b,c$ удовлетворяют $a+b+c=1$. Докажите, что $$\\frac1a+\\frac1b+\\frac1c\\ \\ge\\ 9 .$$",
@@ -1735,7 +1911,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Сколькими способами число $100$ можно представить в виде суммы трёх натуральных слагаемых, если порядок слагаемых важен?",
@@ -1751,7 +1931,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что число $\\underbrace{4\\ldots4}_{n}\\underbrace{8\\ldots8}_{n-1}9$ — полный квадрат при любом натуральном $n$.",
@@ -1767,7 +1951,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Решите уравнение $(x-1)^{3}+(2x+1)^{3}=(3x)^{3}$.",
@@ -1783,7 +1971,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что в выпуклом четырёхугольнике сумма диагоналей меньше периметра, но больше его половины.",
@@ -1799,7 +1991,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что $\\sqrt[3]{2}$ — иррациональное число.",
@@ -1815,7 +2011,11 @@ window.LESSONS[16] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $ab^{2}+b+7$ делит $a^{2}b+a+b$. **(IMO 1998, задача 4)**",

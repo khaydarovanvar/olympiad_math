@@ -1202,7 +1202,11 @@ window.LESSONS[6] = {
  ],
  "problems": [
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $x+\\dfrac1x\\ge2$ при всех $x>0$, и выясните, когда достигается равенство. Что происходит при $x<0$?",
@@ -1218,7 +1222,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $\\dfrac{a}{b}+\\dfrac{b}{a}\\ge2$ для любых положительных $a$ и $b$.",
@@ -1234,7 +1242,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $(a+b)\\left(\\dfrac1a+\\dfrac1b\\right)\\ge4$ для положительных $a,b$.",
@@ -1250,7 +1262,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Периметр прямоугольника равен $20$. Какую наибольшую площадь он может иметь?",
@@ -1266,7 +1282,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $(a+b+c)^{2}\\le3\\left(a^{2}+b^{2}+c^{2}\\right)$ для любых вещественных $a,b,c$.",
@@ -1282,7 +1302,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $\\sqrt{a}+\\sqrt{b}\\le\\sqrt{2(a+b)}$ для неотрицательных $a,b$.",
@@ -1298,7 +1322,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $(a+b+c)\\left(\\dfrac1a+\\dfrac1b+\\dfrac1c\\right)\\ge9$ для положительных $a,b,c$.",
@@ -1314,7 +1342,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $a^{3}+b^{3}+c^{3}\\ge3abc$ для неотрицательных $a,b,c$, и укажите, когда достигается равенство.",
@@ -1330,7 +1362,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Положительные числа $a,b,c$ удовлетворяют условию $a+b+c=1$. Докажите, что $$\\left(\\frac1a-1\\right)\\left(\\frac1b-1\\right)\\left(\\frac1c-1\\right)\\ \\ge\\ 8 .$$",
@@ -1346,7 +1382,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $\\dfrac1{1^{2}}+\\dfrac1{2^{2}}+\\dots+\\dfrac1{n^{2}}<2$ при любом натуральном $n$.",
@@ -1362,7 +1402,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $n!<\\left(\\dfrac{n+1}{2}\\right)^{n}$ при любом натуральном $n\\ge2$.",
@@ -1378,7 +1422,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Положительные числа удовлетворяют условию $abc=1$. Докажите, что $a+b+c\\ge3$ и $ab+bc+ca\\ge3$.",
@@ -1394,7 +1442,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что для положительных $a,b,c$ $$\\frac{a^{2}}{b}+\\frac{b^{2}}{c}+\\frac{c^{2}}{a}\\ \\ge\\ a+b+c .$$",
@@ -1410,7 +1462,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $\\dfrac{a^{2}}{b+c}+\\dfrac{b^{2}}{c+a}+\\dfrac{c^{2}}{a+b}\\ \\ge\\ \\dfrac{a+b+c}{2}$ для положительных $a,b,c$.",
@@ -1426,7 +1482,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите наименьшее значение выражения $\\dfrac{(x+4)(x+9)}{x}$ при $x>0$.",
@@ -1442,7 +1502,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите неравенство Коши–Буняковского для двух пар чисел: $$\\left(a^{2}+b^{2}\\right)\\left(x^{2}+y^{2}\\right)\\ \\ge\\ (ax+by)^{2},$$ и выясните, когда достигается равенство.",
@@ -1458,7 +1522,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "IMO 1964, задача 2 / IMO 1964 Problem 2",
+   "src": {
+    "ru": "IMO 1964, задача 2",
+    "en": "IMO 1964 Problem 2",
+    "uz": "IMO 1964, 2-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Пусть $a,b,c$ — стороны треугольника. Докажите, что $$a^{2}(b+c-a)+b^{2}(c+a-b)+c^{2}(a+b-c)\\ \\le\\ 3abc .$$",
@@ -1474,7 +1542,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "IMO 1995, задача 2 / IMO 1995 Problem 2",
+   "src": {
+    "ru": "IMO 1995, задача 2",
+    "en": "IMO 1995 Problem 2",
+    "uz": "IMO 1995, 2-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Положительные числа $a,b,c$ удовлетворяют условию $abc=1$. Докажите, что $$\\frac{1}{a^{3}(b+c)}+\\frac{1}{b^{3}(c+a)}+\\frac{1}{c^{3}(a+b)}\\ \\ge\\ \\frac32 .$$",
@@ -1490,7 +1562,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача Коши / Cauchy, classic",
+   "src": {
+    "ru": "Классическая задача Коши",
+    "en": "Cauchy, classic",
+    "uz": "Koshining klassik masalasi"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите неравенство AM–GM для четырёх неотрицательных чисел, а затем выведите из него случай трёх чисел.",
@@ -1506,7 +1582,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $a^{4}+b^{4}+c^{4}\\ge abc\\,(a+b+c)$ для любых вещественных $a,b,c$.",
@@ -1522,7 +1602,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $a^{2}+b^{2}\\ge2ab$ для любых действительных $a,b$. Когда достигается равенство?",
@@ -1538,7 +1622,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите неравенство между средним арифметическим и средним геометрическим: $\\dfrac{a+b}{2}\\ge\\sqrt{ab}$ при $a,b\\ge0$.",
@@ -1554,7 +1642,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите наименьшее значение выражения $x^{2}-6x+11$.",
@@ -1570,7 +1662,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $x^{2}+4\\ge4x$ для любого действительного $x$.",
@@ -1586,7 +1682,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $a^{2}+1\\ge2|a|$ для любого действительного $a$.",
@@ -1602,7 +1702,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Площадь прямоугольника равна $36$. Каков наименьший возможный периметр?",
@@ -1618,7 +1722,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $a^{2}+b^{2}+c^{2}+3\\ge2(a+b+c)$ для любых действительных $a,b,c$.",
@@ -1634,7 +1742,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $\\dfrac ab+\\dfrac bc+\\dfrac ca\\ge3$ для любых положительных $a,b,c$.",
@@ -1650,7 +1762,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $(a+b+c)^{2}\\ge3(ab+bc+ca)$ для любых действительных $a,b,c$.",
@@ -1666,7 +1782,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $a^{2}+b^{2}+1\\ge ab+a+b$ для любых действительных $a,b$.",
@@ -1682,7 +1802,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите наибольшее значение выражения $x(10-x)$ при действительном $x$.",
@@ -1698,7 +1822,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $x+\\dfrac4x\\ge4$ при $x>0$, и найдите, когда достигается равенство.",
@@ -1714,7 +1842,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $(1+a)(1+b)\\ge\\left(1+\\sqrt{ab}\\right)^{2}$ при $a,b\\ge0$.",
@@ -1730,7 +1862,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $a^{4}+b^{4}\\ge a^{3}b+ab^{3}$ для любых действительных $a,b$.",
@@ -1746,7 +1882,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Положительные числа $a,b,c$ удовлетворяют $a+b+c=3$. Докажите, что $ab+bc+ca\\le3$.",
@@ -1762,7 +1902,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $(a+b)(b+c)(c+a)\\ge8abc$ для положительных $a,b,c$.",
@@ -1778,7 +1922,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите неравенство Несбитта: для положительных $a,b,c$ $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32 .$$",
@@ -1794,7 +1942,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что для положительных $a,b$ среднее геометрическое не меньше среднего гармонического: $$\\sqrt{ab}\\ \\ge\\ \\frac{2ab}{a+b} .$$",
@@ -1810,7 +1962,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $(a+b+c)\\left(a^{2}+b^{2}+c^{2}\\right)\\ge9abc$ для положительных $a,b,c$.",
@@ -1826,7 +1982,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Пусть $a,b,c$ — стороны треугольника. Докажите, что $$(a+b-c)(b+c-a)(c+a-b)\\ \\le\\ abc .$$",
@@ -1842,7 +2002,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите наименьшее значение выражения $\\dfrac{x^{2}+2}{\\sqrt{x^{2}+1}}$ при действительном $x$.",
@@ -1858,7 +2022,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $2^{n}>n^{2}$ при всех целых $n\\ge5$.",
@@ -1874,7 +2042,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что среди всех треугольников с данным периметром наибольшую площадь имеет равносторонний.",
@@ -1890,7 +2062,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $\\left(1+\\dfrac1n\\right)^{n}<3$ при любом натуральном $n$.",
@@ -1906,7 +2082,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $a^{3}+b^{3}+c^{3}\\ge a^{2}b+b^{2}c+c^{2}a$ для положительных $a,b,c$.",
@@ -1922,7 +2102,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите неравенство о среднем арифметическом и геометрическом для любого числа слагаемых: $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n}\\qquad (a_i\\ge0).$$",
@@ -1938,7 +2122,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите неравенство Коши — Буняковского в форме Энгеля («лемма о дробях»): для положительных $b_i$ $$\\frac{a_1^{2}}{b_1}+\\frac{a_2^{2}}{b_2}+\\dots+\\frac{a_n^{2}}{b_n}\\ \\ge\\ \\frac{\\left(a_1+a_2+\\dots+a_n\\right)^{2}}{b_1+b_2+\\dots+b_n} ,$$ и выведите из него неравенство Несбитта.",
@@ -1954,7 +2142,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите неравенство о перестановках: если $a_1\\le a_2\\le\\dots\\le a_n$ и $b_1\\le b_2\\le\\dots\\le b_n$, то для любой перестановки $\\sigma$ $$\\sum_i a_ib_{\\sigma(i)}\\ \\le\\ \\sum_i a_ib_i .$$",
@@ -1970,7 +2162,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите неравенство Шура (при $t=1$): для неотрицательных $a,b,c$ $$a(a-b)(a-c)+b(b-a)(b-c)+c(c-a)(c-b)\\ \\ge\\ 0 ,$$ и выведите из него, что $$a^{3}+b^{3}+c^{3}+abc\\cdot 3\\ \\ge\\ ab(a+b)+bc(b+c)+ca(c+a)-3abc .$$",
@@ -1986,7 +2182,11 @@ window.LESSONS[6] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите неравенство Минковского для двух слагаемых: $$\\sqrt{a^{2}+b^{2}}+\\sqrt{c^{2}+d^{2}}\\ \\ge\\ \\sqrt{(a+c)^{2}+(b+d)^{2}} .$$",

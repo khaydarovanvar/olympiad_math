@@ -977,7 +977,11 @@ window.LESSONS[5] = {
  ],
  "problems": [
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите без калькулятора: $2024^{2}-2023\\cdot2025$.",
@@ -993,7 +997,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Разложите на множители $a^{2}-b^{2}-c^{2}+2bc$.",
@@ -1009,7 +1017,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Числа $a$ и $b$ удовлетворяют условиям $a+b=7$ и $ab=10$. Найдите $a^{2}+b^{2}$, $a^{3}+b^{3}$ и $(a-b)^{2}$.",
@@ -1025,7 +1037,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $n^{3}-n$ делится на $6$ при любом целом $n$.",
@@ -1041,7 +1057,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Разложите на множители $x^{3}-3x+2$.",
@@ -1057,7 +1077,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Упростите выражение $(a+b)^{2}-(a-b)^{2}$ и вычислите $101{,}5^{2}-98{,}5^{2}$.",
@@ -1073,7 +1097,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $n^{4}+4$ составное при любом натуральном $n>1$.",
@@ -1089,7 +1117,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $3^{105}+4^{105}$ делится на $7$.",
@@ -1105,7 +1137,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите тождество $a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)$ и выведите: если $a+b+c=0$, то $a^{3}+b^{3}+c^{3}=3abc$.",
@@ -1121,7 +1157,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $n^{5}-n$ делится на $30$ при любом целом $n$.",
@@ -1137,7 +1177,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Разложите на множители $(x+y)^{5}-x^{5}-y^{5}$.",
@@ -1153,7 +1197,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Решите систему $x+y=5$, $x^{3}+y^{3}=35$.",
@@ -1169,7 +1217,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Разложите на множители $x^{8}+x^{4}+1$.",
@@ -1185,7 +1237,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Известно, что $a+b+c=0$. Докажите, что $a^{4}+b^{4}+c^{4}=\\dfrac{\\left(a^{2}+b^{2}+c^{2}\\right)^{2}}{2}$.",
@@ -1201,7 +1257,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите тождество $(a+b+c)^{3}-a^{3}-b^{3}-c^{3}=3(a+b)(b+c)(c+a)$.",
@@ -1217,7 +1277,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $n^{4}+4^{n}$ составное при любом натуральном $n>1$.",
@@ -1233,7 +1297,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Стороны треугольника $a,b,c$ удовлетворяют равенству $a^{2}+b^{2}+c^{2}=ab+bc+ca$. Докажите, что треугольник равносторонний.",
@@ -1249,7 +1317,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Разложите на множители $x^{4}+y^{4}+z^{4}-2x^{2}y^{2}-2y^{2}z^{2}-2z^{2}x^{2}$.",
@@ -1265,7 +1337,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все натуральные $n$, при которых число $n^{4}+n^{3}+n^{2}+n+1$ является точным квадратом.",
@@ -1281,7 +1357,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Числа $a,b,c$ удовлетворяют условию $a+b+c=0$. Докажите, что $$\\frac{a^{5}+b^{5}+c^{5}}{5}=\\frac{a^{2}+b^{2}+c^{2}}{2}\\cdot\\frac{a^{3}+b^{3}+c^{3}}{3}.$$",
@@ -1297,7 +1377,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите $99^{2}$ в уме.",
@@ -1313,7 +1397,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Разложите на множители $x^{2}-9y^{2}$.",
@@ -1329,7 +1417,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите $2025^{2}-2024^{2}$ без калькулятора.",
@@ -1345,7 +1437,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Раскройте скобки: $(2x-3y)^{2}$.",
@@ -1361,7 +1457,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Разложите на множители $x^{3}+8$.",
@@ -1377,7 +1477,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Разложите на множители $a^{2}+6a+9-b^{2}$.",
@@ -1393,7 +1497,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Разложите $x^{4}-1$ на множители до конца (над действительными числами).",
@@ -1409,7 +1517,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что каждое нечётное число представимо в виде разности квадратов двух целых чисел.",
@@ -1425,7 +1537,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Упростите выражение $(a+b)^{3}-(a-b)^{3}$.",
@@ -1441,7 +1557,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Разложите на множители $x^{3}+y^{3}+x+y$.",
@@ -1457,7 +1577,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Решите уравнение $x^{4}+4x^{3}+6x^{2}+4x+1=16$.",
@@ -1473,7 +1597,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Известно, что $a-b=3$ и $ab=4$. Найдите $a^{3}-b^{3}$.",
@@ -1489,7 +1617,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Разложите на множители $a^{3}-b^{3}-a+b$.",
@@ -1505,7 +1637,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите разложением на множители, что $4^{n}-1$ делится на $3$ при любом целом $n\\ge1$.",
@@ -1521,7 +1657,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Разложите $x^{6}-y^{6}$ на множители до конца (над действительными числами).",
@@ -1537,7 +1677,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите тождество $$a^{2}+b^{2}+c^{2}-ab-bc-ca=\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]$$ и выведите, что левая часть неотрицательна.",
@@ -1553,7 +1697,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Разложите на множители $x^{5}+x+1$.",
@@ -1569,7 +1717,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите тождество $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=(ac+bd)^{2}+(ad-bc)^{2}$$ и представьте с его помощью число $65$ суммой двух квадратов двумя способами.",
@@ -1585,7 +1737,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $a^{n}-b^{n}$ делится на $a-b$ при всех целых $a,b$ и натуральных $n$, и выведите отсюда, что $6^{100}-1$ делится на $35$.",
@@ -1601,7 +1757,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что произведение четырёх подряд идущих целых чисел, увеличенное на единицу, — полный квадрат.",
@@ -1617,7 +1777,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что число $\\underbrace{11\\ldots1}_{2n}-\\underbrace{22\\ldots2}_{n}$ — полный квадрат.",
@@ -1633,7 +1797,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите тождество $$(a+b+c)(ab+bc+ca)-abc=(a+b)(b+c)(c+a).$$",
@@ -1649,7 +1817,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Пусть $x$ — действительное число и $x+\\dfrac1x$ — целое. Докажите, что $x^{n}+\\dfrac1{x^{n}}$ целое при всех натуральных $n$.",
@@ -1665,7 +1837,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $n^{5}+n^{4}+1$ составное при любом целом $n>1$.",
@@ -1681,7 +1857,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что при $x\\ne1$ $$(1+x)\\left(1+x^{2}\\right)\\left(1+x^{4}\\right)\\left(1+x^{8}\\right)=\\frac{1-x^{16}}{1-x} ,$$ и вычислите $3\\cdot5\\cdot17\\cdot257$.",
@@ -1697,7 +1877,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Числа $a,b,c$ отличны от нуля и $a+b+c=0$. Докажите, что $$\\frac{a^{2}}{2a^{2}+bc}+\\frac{b^{2}}{2b^{2}+ca}+\\frac{c^{2}}{2c^{2}+ab}=1 .$$",
@@ -1713,7 +1897,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Пусть $a+b+c=0$. Докажите, что $$\\frac{a^{7}+b^{7}+c^{7}}{7}=\\frac{a^{2}+b^{2}+c^{2}}{2}\\cdot\\frac{a^{5}+b^{5}+c^{5}}{5} .$$",
@@ -1729,7 +1917,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите тождество Лагранжа для трёх пар чисел $$\\left(a_1^{2}+a_2^{2}+a_3^{2}\\right)\\left(b_1^{2}+b_2^{2}+b_3^{2}\\right)-\\left(a_1b_1+a_2b_2+a_3b_3\\right)^{2}=\\sum_{i<j}\\left(a_ib_j-a_jb_i\\right)^{2}$$ и выведите из него неравенство Коши — Буняковского.",
@@ -1745,7 +1937,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Действительные числа $a,b,c$ удовлетворяют равенству $a^{3}+b^{3}+c^{3}=3abc$. Докажите, что либо $a+b+c=0$, либо $a=b=c$.",
@@ -1761,7 +1957,11 @@ window.LESSONS[5] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите тождество $$x^{4}+y^{4}+(x+y)^{4}=2\\left(x^{2}+xy+y^{2}\\right)^{2}.$$",

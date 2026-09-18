@@ -270,7 +270,9 @@
         return '<article class="prob" data-lvl="' + p.lvl + '">' +
           '<div class="prob-top">' +
             '<span class="prob-n">' + (i + 1) + '</span>' +
-            '<span class="prob-src">' + esc(p.src) + '</span>' +
+            /* the source label used to be one bilingual string; the build now
+               splits it into the same {ru, en, uz} shape as everything else */
+            '<span class="prob-src">' + esc(pick(p.src, lang)) + '</span>' +
             '<span class="lvl lvl-' + p.lvl + '">' + esc(t['lvl' + p.lvl]) + '</span>' +
           '</div>' +
           '<div class="prob-q">' + inline(pick(p.q, lang)) + '</div>' +

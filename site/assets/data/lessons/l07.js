@@ -906,7 +906,11 @@ window.LESSONS[7] = {
  ],
  "problems": [
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "В арифметической прогрессии $a_1=5$ и $d=3$. Найдите $a_{20}$ и сумму первых двадцати членов.",
@@ -922,7 +926,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите сумму $2+4+8+\\dots+2^{10}$.",
@@ -938,7 +946,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите сумму бесконечной прогрессии $1+\\dfrac13+\\dfrac19+\\dfrac1{27}+\\dots$",
@@ -954,7 +966,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Вычислите $\\dfrac1{1\\cdot3}+\\dfrac1{3\\cdot5}+\\dfrac1{5\\cdot7}+\\dots+\\dfrac1{(2n-1)(2n+1)}$.",
@@ -970,7 +986,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите сумму всех двузначных чисел, которые при делении на $5$ дают остаток $2$.",
@@ -986,7 +1006,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $1+3+5+\\dots+(2n-1)=n^{2}$.",
@@ -1002,7 +1026,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $1^{2}+2^{2}+\\dots+n^{2}=\\dfrac{n(n+1)(2n+1)}{6}$.",
@@ -1018,7 +1046,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $1^{3}+2^{3}+\\dots+n^{3}=\\left(\\dfrac{n(n+1)}{2}\\right)^{2}$.",
@@ -1034,7 +1066,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "В арифметической прогрессии сумма первых $m$ членов равна $n$, а сумма первых $n$ членов равна $m$ (причём $m\\ne n$). Найдите сумму первых $m+n$ членов.",
@@ -1050,7 +1086,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $1\\cdot1!+2\\cdot2!+\\dots+n\\cdot n!=(n+1)!-1$.",
@@ -1066,7 +1106,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите сумму $1+11+111+\\dots+\\underbrace{11\\ldots1}_{n}$.",
@@ -1082,7 +1126,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Три числа образуют арифметическую прогрессию, их сумма равна $15$. Если к первому прибавить $1$, ко второму $1$, а к третьему $4$, получится геометрическая прогрессия. Найдите исходные числа.",
@@ -1098,7 +1146,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $F_1+F_3+F_5+\\dots+F_{2n-1}=F_{2n}$.",
@@ -1114,7 +1166,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Последовательность задана условиями $a_1=1$ и $a_{n+1}=\\dfrac{a_n}{1+a_n}$. Найдите формулу общего члена.",
@@ -1130,7 +1186,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Вычислите сумму $\\dfrac1{\\sqrt1+\\sqrt2}+\\dfrac1{\\sqrt2+\\sqrt3}+\\dots+\\dfrac1{\\sqrt{n}+\\sqrt{n+1}}$.",
@@ -1146,7 +1206,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите формулу сложения для чисел Фибоначчи: $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n\\qquad(m\\ge1,\\ n\\ge0).$$",
@@ -1162,7 +1226,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $F_n^{2}+F_{n+1}^{2}=F_{2n+1}$.",
@@ -1178,7 +1246,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Последовательность задана условиями $a_1=2$ и $a_{n+1}=a_n^{2}-a_n+1$. Докажите, что $$\\frac1{a_1}+\\frac1{a_2}+\\dots+\\frac1{a_n}=1-\\frac1{a_{n+1}-1},$$ и выведите отсюда, что все члены попарно взаимно просты.",
@@ -1194,7 +1266,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что при любом натуральном $n$ выполнено $$\\frac{1}{2}\\cdot\\frac{3}{4}\\cdot\\frac{5}{6}\\cdots\\frac{2n-1}{2n}\\ \\le\\ \\frac1{\\sqrt{3n+1}},$$ причём равенство достигается только при $n=1$.",
@@ -1210,7 +1286,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите сумму $\\displaystyle\\sum_{k=1}^{n}\\frac{k}{(k+1)!}$.",
@@ -1226,7 +1306,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "В арифметической прогрессии $a_1=7$ и $d=-2$. Найдите $a_{10}$.",
@@ -1242,7 +1326,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите сумму $1+2+3+\\dots+100$.",
@@ -1258,7 +1346,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Геометрическая прогрессия начинается с $b_1=3$ и имеет знаменатель $q=2$. Найдите $b_6$ и сумму первых шести членов.",
@@ -1274,7 +1366,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколько членов в прогрессии $5,\\ 9,\\ 13,\\ \\dots,\\ 101$?",
@@ -1290,7 +1386,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите сумму первых двадцати чётных натуральных чисел.",
@@ -1306,7 +1406,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "При каких $x$ числа $3$, $x$, $27$ образуют геометрическую прогрессию?",
@@ -1322,7 +1426,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите сумму всех трёхзначных чисел, кратных $7$.",
@@ -1338,7 +1446,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "В геометрической прогрессии $b_2=6$ и $b_5=48$. Найдите $b_1$ и знаменатель.",
@@ -1354,7 +1466,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что в арифметической прогрессии каждый член (кроме первого) равен полусумме соседей: $a_n=\\dfrac{a_{n-1}+a_{n+1}}{2}$.",
@@ -1370,7 +1486,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Вычислите $\\dfrac1{1\\cdot2}+\\dfrac1{2\\cdot3}+\\dots+\\dfrac1{n(n+1)}$.",
@@ -1386,7 +1506,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Вычислите сумму $1\\cdot2+2\\cdot3+3\\cdot4+\\dots+n(n+1)$.",
@@ -1402,7 +1526,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Сумма бесконечной геометрической прогрессии равна $9$, а её первый член равен $6$. Найдите знаменатель.",
@@ -1418,7 +1546,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $1+2+4+\\dots+2^{\\,n-1}=2^{n}-1$.",
@@ -1434,7 +1566,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Сколько членов в прогрессии $100,\\ 97,\\ 94,\\ \\dots$, если все они положительны, и чему равна их сумма?",
@@ -1450,7 +1586,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите формулу суммы арифметической прогрессии $S_n=\\dfrac{\\left(a_1+a_n\\right)n}{2}$.",
@@ -1466,7 +1606,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $1^{2}+3^{2}+5^{2}+\\dots+(2n-1)^{2}=\\dfrac{n(2n-1)(2n+1)}{3}$.",
@@ -1482,7 +1626,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Вычислите $\\displaystyle\\sum_{k=1}^{n}\\frac1{k(k+2)}$.",
@@ -1498,7 +1646,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $F_1+F_2+\\dots+F_n=F_{n+2}-1$ для чисел Фибоначчи.",
@@ -1514,7 +1666,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите тождество Кассини: $F_{n-1}F_{n+1}-F_n^{2}=(-1)^{n}$.",
@@ -1530,7 +1686,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Последовательность задана условиями $a_1=2$ и $a_{n+1}=2a_n+1$. Найдите формулу общего члена.",
@@ -1546,7 +1706,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Вычислите $\\displaystyle\\sum_{k=1}^{n}k\\cdot2^{k}$.",
@@ -1562,7 +1726,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $\\displaystyle\\sum_{k=1}^{n}\\frac1{k^{2}}\\ \\le\\ 2-\\frac1n$ при всех натуральных $n$.",
@@ -1578,7 +1746,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Вычислите $\\displaystyle\\sum_{k=1}^{n}\\frac1{k(k+1)(k+2)}$.",
@@ -1594,7 +1766,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Вычислите $\\displaystyle\\sum_{k=1}^{n}\\frac{2k+1}{k^{2}(k+1)^{2}}$.",
@@ -1610,7 +1786,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $\\displaystyle\\sum_{k=1}^{n}\\frac1{\\sqrt k}\\ >\\ 2\\left(\\sqrt{n+1}-1\\right)$.",
@@ -1626,7 +1806,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Выведите формулу Бине для чисел Фибоначчи: $$F_n=\\frac{1}{\\sqrt5}\\left[\\left(\\frac{1+\\sqrt5}{2}\\right)^{n}-\\left(\\frac{1-\\sqrt5}{2}\\right)^{n}\\right].$$",
@@ -1642,7 +1826,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что гармоническая сумма $1+\\dfrac12+\\dfrac13+\\dots+\\dfrac1n$ неограниченно растёт.",
@@ -1658,7 +1846,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что последовательность $a_n=\\left(1+\\dfrac1n\\right)^{n}$ возрастает.",
@@ -1674,7 +1866,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите теорему Цекендорфа: каждое натуральное число единственным образом представимо суммой различных чисел Фибоначчи, среди которых нет двух соседних.",
@@ -1690,7 +1886,11 @@ window.LESSONS[7] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Последовательность задана условиями $a_1=1$ и $a_{n+1}=a_n+\\dfrac1{a_n}$. Докажите, что $a_{100}>14$.",

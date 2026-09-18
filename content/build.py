@@ -23,6 +23,12 @@ KATEX = ROOT / 'site' / 'assets' / 'vendor' / 'katex' / 'katex.min.js'
 
 LANGS = ('ru', 'en')
 
+# Uzbek is translated separately, in content/uz/uz_NN.py, so that the lesson
+# files stay exactly as they were written.  It is therefore not in LANGS: a
+# missing Uzbek string is reported as a count, not as a build failure, and the
+# renderer falls back to English for anything still outstanding.
+UZ_LANG = 'uz'
+
 # Every block type the renderer knows, with the fields it must carry.
 BLOCK_FIELDS = {
     'p':     ('text',),
@@ -69,7 +75,116 @@ def load(n):
     if deep.exists():
         lesson['sections'] = merge_theory(lesson['sections'],
                                           _module(deep, 'theory_%02d' % n))
+
+    split_sources(lesson)
     return lesson
+
+
+def split_sources(lesson):
+    """Turn a problem's `src` label into a per-language triple.
+
+    The label is authored as one string, 'Разминка / Warm-up', because it is
+    the same fact said twice.  The renderer wants the same {ru, en, uz} shape
+    as everything else, so it is split here and the Uzbek half looked up in
+    content/uz/sources.py."""
+    table = uz_sources()
+    for p in lesson.get('problems', []):
+        src = p.get('src')
+        if not isinstance(src, str):
+            continue
+        ru, _, en = src.partition(' / ')
+        en = en or ru
+        p['src'] = {'ru': ru, 'en': en, UZ_LANG: table.get(en, en)}
+
+
+_SOURCES = None
+
+
+def uz_sources():
+    global _SOURCES
+    if _SOURCES is None:
+        path = ROOT / 'content' / 'uz' / 'sources.py'
+        _SOURCES = _module(path, 'uz_sources').SOURCES if path.exists() else {}
+    return _SOURCES
+
+
+# --------------------------------------------------------------------------
+# Uzbek
+#
+# Every translatable string in a built lesson gets a short, stable address —
+# 's3.b7.text', 'p12.hint', 's0.b2.steps.1' — and content/uz/uz_NN.py is a flat
+# {address: Uzbek} table.  Addressing rather than mirroring the file structure
+# means the translation survives an edit to the surrounding prose, and it makes
+# "what is still missing" a set difference rather than a diff.
+
+LIST_FIELDS = ('items', 'steps', 'head')
+SKIP_FIELDS = ('tex', 'svg', 't', 'n', 'cat', 'lvl')
+
+
+def uz_slots(lesson):
+    """Yield (address, dict, english) for every translatable pair in a lesson."""
+    out = []
+
+    def pair(addr, d):
+        if isinstance(d, dict) and 'en' in d:
+            out.append((addr, d, d['en']))
+
+    def field(addr, d):
+        """A {ru, en} value that may hold a string, a list or a table body."""
+        if not isinstance(d, dict) or 'en' not in d:
+            return
+        en = d['en']
+        if isinstance(en, str):
+            out.append((addr, d, en))
+        elif isinstance(en, list) and en and isinstance(en[0], list):
+            for r, row in enumerate(en):           # table rows
+                for c, cell in enumerate(row):
+                    out.append(('%s.%d.%d' % (addr, r, c), (d, r, c), cell))
+        elif isinstance(en, list):
+            for i, item in enumerate(en):
+                out.append(('%s.%d' % (addr, i), (d, i), item))
+
+    pair('title', lesson.get('title'))
+    pair('sub', lesson.get('sub'))
+    field('goals', lesson.get('goals'))
+    for si, sec in enumerate(lesson.get('sections', [])):
+        pair('s%d.h' % si, sec.get('h'))
+        for bi, b in enumerate(sec.get('blocks', [])):
+            for f, v in b.items():
+                if f in SKIP_FIELDS:
+                    continue
+                field('s%d.b%d.%s' % (si, bi, f), v)
+    for pi, p in enumerate(lesson.get('problems', [])):
+        for f in ('q', 'hint', 'sol'):
+            field('p%d.%s' % (pi, f), p.get(f))
+    return out
+
+
+def apply_uz(lesson, n):
+    """Fill in the Uzbek half wherever content/uz/uz_NN.py has it.
+
+    Returns (translated, total) so the build can report how far along the
+    translation is."""
+    path = ROOT / 'content' / 'uz' / ('uz_%02d.py' % n)
+    table = _module(path, 'uz_%02d' % n).UZ if path.exists() else {}
+    slots = uz_slots(lesson)
+    done = 0
+    for addr, target, _en in slots:
+        text = table.get(addr)
+        if text is None:
+            continue
+        done += 1
+        if isinstance(target, dict):
+            target[UZ_LANG] = text
+        elif len(target) == 2:                     # (dict, index) — a list item
+            d, i = target
+            d.setdefault(UZ_LANG, list(d['en']))
+            d[UZ_LANG][i] = text
+        else:                                      # (dict, row, col) — a table
+            d, r, c = target
+            d.setdefault(UZ_LANG, [list(row) for row in d['en']])
+            d[UZ_LANG][r][c] = text
+    return done, len(slots)
 
 
 def merge_theory(sections, mod):
@@ -252,13 +367,15 @@ def main():
     wanted = [int(a) for a in sys.argv[1:]] or list(range(1, 17))
     OUT.mkdir(parents=True, exist_ok=True)
     issues, built, total_formulas, total_problems = [], [], 0, 0
-    index = []
+    index, uz_counts = [], []
 
     for n in wanted:
         lesson = load(n)
         if lesson is None:
             continue
         check_structure(lesson, issues)
+        uz_done, uz_total = apply_uz(lesson, n)
+        uz_counts.append((n, uz_done, uz_total))
         total_formulas += check_math(lesson, issues) or 0
         total_problems += len(lesson.get('problems', []))
 
@@ -294,6 +411,12 @@ def main():
 
     print('built lessons: %s' % (', '.join(str(b) for b in built) or 'none'))
     print('%d formulas checked · %d problems' % (total_formulas, total_problems))
+    if uz_counts:
+        done = sum(d for _, d, _ in uz_counts)
+        tot = sum(t for _, _, t in uz_counts)
+        print('uzbek: %d/%d strings (%d%%)%s' % (
+            done, tot, round(100 * done / tot) if tot else 0,
+            '' if done == tot else ' — the rest falls back to English'))
     if issues:
         print('ISSUES (%d):' % len(issues))
         for i in issues[:60]:

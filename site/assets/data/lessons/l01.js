@@ -1663,7 +1663,11 @@ window.LESSONS[1] = {
  ],
  "problems": [
   {
-   "src": "Разминка / Warm-up",
+   "src": {
+    "ru": "Разминка",
+    "en": "Warm-up",
+    "uz": "Mashq"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что произведение двух последовательных целых чисел $n(n+1)$ всегда чётно.",
@@ -1679,7 +1683,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $6\\mid n^3-n$ для любого целого $n$.",
@@ -1695,7 +1703,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите $\\gcd(1071,462)$ и $\\operatorname{lcm}(1071,462)$.",
@@ -1711,7 +1723,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколько натуральных делителей у числа $2^4\\cdot3^2\\cdot5$? Сколько из них чётных?",
@@ -1727,7 +1743,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 1,
    "q": {
     "ru": "Докажите, что $\\gcd(n,n+1)=1$ для любого натурального $n$.",
@@ -1743,7 +1763,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "IMO 1959, задача 1 / IMO 1959, Problem 1",
+   "src": {
+    "ru": "IMO 1959, задача 1",
+    "en": "IMO 1959, Problem 1",
+    "uz": "IMO 1959, 1-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что дробь $\\dfrac{21n+4}{14n+3}$ несократима при любом натуральном $n$.",
@@ -1759,7 +1783,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите все натуральные $n$, при которых $(n+1)\\mid(n^2+1)$.",
@@ -1775,7 +1803,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $30\\mid n^5-n$ при любом целом $n$.",
@@ -1791,7 +1823,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $\\gcd(a,b)=5$ и $\\operatorname{lcm}(a,b)=60$.",
@@ -1807,7 +1843,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $\\gcd(2n+1,\\,3n+1)=1$ при любом целом $n$.",
@@ -1823,7 +1863,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "IMO 1960, задача 1 / IMO 1960, Problem 1",
+   "src": {
+    "ru": "IMO 1960, задача 1",
+    "en": "IMO 1960, Problem 1",
+    "uz": "IMO 1960, 1-masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите все трёхзначные числа $N$, делящиеся на $11$, для которых $N/11$ равно сумме квадратов цифр числа $N$.",
@@ -1839,7 +1883,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что число и сумма его цифр дают одинаковые остатки при делении на $9$.",
@@ -1855,7 +1903,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что если $\\gcd(a,b)=1$ и $ab$ — точный квадрат, то $a$ и $b$ — точные квадраты (для натуральных $a,b$).",
@@ -1871,7 +1923,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите все натуральные $n$, для которых $n\\mid(2n+7)$.",
@@ -1887,7 +1943,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что число $\\underbrace{11\\ldots1}_{2024}$ не является точным квадратом.",
@@ -1903,7 +1963,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что дробь $\\dfrac{n^3+2n}{n^4+3n^2+1}$ несократима при любом натуральном $n$.",
@@ -1919,7 +1983,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $\\gcd\\!\\left(2^m-1,\\;2^n-1\\right)=2^{\\gcd(m,n)}-1$.",
@@ -1935,7 +2003,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что произведение любых $k$ последовательных целых чисел делится на $k!$.",
@@ -1951,7 +2023,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $\\underbrace{11\\ldots1}_{m}$ делит $\\underbrace{11\\ldots1}_{n}$ тогда и только тогда, когда $m\\mid n$.",
@@ -1967,7 +2043,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "IMO 1992, задача 1 / IMO 1992, Problem 1",
+   "src": {
+    "ru": "IMO 1992, задача 1",
+    "en": "IMO 1992, Problem 1",
+    "uz": "IMO 1992, 1-masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все целые числа $a>b>c>1$, для которых $(a-1)(b-1)(c-1)$ делит $abc-1$.",
@@ -1983,7 +2063,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите наименьшее натуральное число, которое делится на каждое из чисел $2,3,4,5,6$.",
@@ -1999,7 +2083,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите $\\gcd(84,120)$ и $\\operatorname{lcm}(84,120)$.",
@@ -2015,7 +2103,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколько чисел от $1$ до $200$ делится на $7$? А сколько из них делится и на $7$, и на $5$?",
@@ -2031,7 +2123,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Найдите наименьшее натуральное число, которое при делении на $5$ даёт остаток $3$, а при делении на $7$ — остаток $4$.",
@@ -2047,7 +2143,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Школьный тур · уровень / School-round level",
+   "src": {
+    "ru": "Школьный тур · уровень",
+    "en": "School-round level",
+    "uz": "Maktab bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сумма цифр натурального числа равна $27$. Может ли это число быть простым?",
@@ -2063,7 +2163,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 1,
    "q": {
     "ru": "Сколько натуральных делителей у числа $84$ и чему равна их сумма?",
@@ -2079,7 +2183,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $2^{2n+1}+3^{2n+1}$ делится на $5$ при любом целом $n\\ge0$.",
@@ -2095,7 +2203,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Чему может быть равен $\\gcd(n,\\,n+2)$ для натурального $n$? Разберите все случаи.",
@@ -2111,7 +2223,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите все натуральные $n$, для которых $n+1$ делит $n^{2}+1$.",
@@ -2127,7 +2243,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что среди любых $n$ подряд идущих целых чисел ровно одно делится на $n$.",
@@ -2143,7 +2263,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите наименьшее натуральное число, у которого ровно $12$ натуральных делителей.",
@@ -2159,7 +2283,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $\\gcd(a,b)=6$ и $\\operatorname{lcm}(a,b)=36$.",
@@ -2175,7 +2303,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $n^{2}-1$ делится на $8$ при любом нечётном $n$.",
@@ -2191,7 +2323,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Найдите $\\operatorname{lcm}(1,2,3,\\dots,10)$.",
@@ -2207,7 +2343,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Районный тур · уровень / District-round level",
+   "src": {
+    "ru": "Районный тур · уровень",
+    "en": "District-round level",
+    "uz": "Tuman bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Докажите, что $n(n+1)(2n+1)$ делится на $6$ при любом целом $n$.",
@@ -2223,7 +2363,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 2,
    "q": {
     "ru": "Сколькими нулями оканчивается число $50!$?",
@@ -2239,7 +2383,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все натуральные $n$, при которых $2^{n}-1$ делится на $7$.",
@@ -2255,7 +2403,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что если $\\gcd(a,b)=1$, то $\\gcd(a+b,\\,ab)=1$.",
@@ -2271,7 +2423,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все пары натуральных чисел $(a,b)$, для которых $a+b=100$ и $\\gcd(a,b)=10$.",
@@ -2287,7 +2443,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите наименьшее натуральное $n$, при котором $n!$ делится на $2^{10}$.",
@@ -2303,7 +2463,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Классическая задача / Classic",
+   "src": {
+    "ru": "Классическая задача",
+    "en": "Classic",
+    "uz": "Klassik masala"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что $\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$ для любых натуральных $a$ и $b$.",
@@ -2319,7 +2483,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Республиканский тур · уровень / Republic-round level",
+   "src": {
+    "ru": "Республиканский тур · уровень",
+    "en": "Republic-round level",
+    "uz": "Respublika bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что при $n\\ge2$ сумма $$1+\\frac12+\\frac13+\\dots+\\frac1n$$ не является целым числом.",
@@ -2335,7 +2503,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Областной тур · уровень / Regional-round level",
+   "src": {
+    "ru": "Областной тур · уровень",
+    "en": "Regional-round level",
+    "uz": "Viloyat bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите все натуральные $n$, для которых $n^{2}$ делит $(n+1)^{2}-1$.",
@@ -2351,7 +2523,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Республиканский тур · уровень / Republic-round level",
+   "src": {
+    "ru": "Республиканский тур · уровень",
+    "en": "Republic-round level",
+    "uz": "Respublika bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Докажите, что для любого простого $p>3$ число $p^{2}-1$ делится на $24$.",
@@ -2367,7 +2543,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Республиканский тур · уровень / Republic-round level",
+   "src": {
+    "ru": "Республиканский тур · уровень",
+    "en": "Republic-round level",
+    "uz": "Respublika bosqichi · daraja"
+   },
    "lvl": 3,
    "q": {
     "ru": "Найдите наибольшее натуральное число, на которое делится $n^{5}-n$ при **всех** целых $n$.",
@@ -2383,7 +2563,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что если число $2^{n}-1$ простое, то и показатель $n$ простой.",
@@ -2399,7 +2583,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что если число $2^{n}+1$ простое, то $n$ — степень двойки.",
@@ -2415,7 +2603,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Найдите все натуральные $n$, для которых $n$ делит $2^{n}-1$.",
@@ -2431,7 +2623,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что для чисел Фибоначчи выполнено $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$",
@@ -2447,7 +2643,11 @@ window.LESSONS[1] = {
    }
   },
   {
-   "src": "Международный уровень / International level",
+   "src": {
+    "ru": "Международный уровень",
+    "en": "International level",
+    "uz": "Xalqaro daraja"
+   },
    "lvl": 4,
    "q": {
     "ru": "Докажите, что число $$\\frac{(2n)!}{n!\\,(n+1)!}$$ является целым при любом натуральном $n$.",
