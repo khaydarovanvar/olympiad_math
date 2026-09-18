@@ -5,11 +5,13 @@ window.LESSONS[3] = {
  "cat": "nt",
  "title": {
   "ru": "Арифметика остатков",
-  "en": "Modular arithmetic"
+  "en": "Modular arithmetic",
+  "uz": "Qoldiqlar arifmetikasi"
  },
  "sub": {
   "ru": "Сравнения превращают громоздкие вычисления в короткие: последние цифры, циклы степеней и малая теорема Ферма.",
-  "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem."
+  "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem.",
+  "uz": "Taqqoslamalar ogʻir hisoblarni qisqartiradi: oxirgi raqamlar, darajalar sikli va Ferma kichik teoremasi."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[3] = {
    "Know that a congruence may not simply be divided, and know how to work around it.",
    "Find the last digits of large powers using cycles.",
    "Apply Fermat's little theorem and choose a modulus deliberately."
+  ],
+  "uz": [
+   "$a\\equiv b\\pmod m$ belgisini tushunish va taqqoslamalarni erkin qoʻshish, ayirish, koʻpaytirish.",
+   "Taqqoslamani shunchaki boʻlib boʻlmasligini bilish va bu qiyinchilikni qanday aylanib oʻtishni bilish.",
+   "Sikllar yordamida katta darajalarning oxirgi raqamlarini topish.",
+   "Ferma kichik teoremasini qoʻllash va modulni ongli ravishda tanlash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Сравнения",
-    "en": "Congruences"
+    "en": "Congruences",
+    "uz": "Taqqoslamalar"
    },
    "blocks": [
     {
@@ -128,7 +137,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Линейные сравнения и обратные элементы",
-    "en": "Linear congruences and inverses"
+    "en": "Linear congruences and inverses",
+    "uz": "Chiziqli taqqoslamalar va teskari elementlar"
    },
    "blocks": [
     {
@@ -251,7 +261,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Последние цифры и циклы степеней",
-    "en": "Last digits and cycles of powers"
+    "en": "Last digits and cycles of powers",
+    "uz": "Oxirgi raqamlar va darajalar sikli"
    },
    "blocks": [
     {
@@ -414,7 +425,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Малая теорема Ферма",
-    "en": "Fermat's little theorem"
+    "en": "Fermat's little theorem",
+    "uz": "Ferma kichik teoremasi"
    },
    "blocks": [
     {
@@ -529,7 +541,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Китайская теорема об остатках",
-    "en": "The Chinese remainder theorem"
+    "en": "The Chinese remainder theorem",
+    "uz": "Xitoy qoldiqlar teoremasi"
    },
    "blocks": [
     {
@@ -630,7 +643,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Порядок вычета: почему степени зацикливаются",
-    "en": "The order of a residue: why powers cycle"
+    "en": "The order of a residue: why powers cycle",
+    "uz": "Qoldiqning tartibi: darajalar nega takrorlanadi"
    },
    "blocks": [
     {
@@ -751,7 +765,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Квадраты по простому модулю",
-    "en": "Squares modulo a prime"
+    "en": "Squares modulo a prime",
+    "uz": "Tub modul boʻyicha kvadratlar"
    },
    "blocks": [
     {
@@ -870,7 +885,8 @@ window.LESSONS[3] = {
   {
    "h": {
     "ru": "Как выбирать модуль",
-    "en": "Choosing the modulus"
+    "en": "Choosing the modulus",
+    "uz": "Modulni tanlash"
    },
    "blocks": [
     {

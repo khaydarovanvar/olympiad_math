@@ -5,11 +5,13 @@ window.LESSONS[6] = {
  "cat": "alg",
  "title": {
   "ru": "Неравенства",
-  "en": "Inequalities"
+  "en": "Inequalities",
+  "uz": "Tengsizliklar"
  },
  "sub": {
   "ru": "От «квадрат неотрицателен» до Коши–Буняковского: как доказывать неравенства, а не угадывать их.",
-  "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them."
+  "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them.",
+  "uz": "«Kvadrat manfiy emas» dan Koshi–Bunyakovskiygacha: tengsizlikni taxmin qilish emas, isbotlash yoʻli."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[6] = {
    "Prove inequalities by moving everything left and assembling squares.",
    "Apply the AM–GM inequality confidently for two, three and $n$ numbers.",
    "Know Cauchy–Schwarz and its Engel form, and see when equality is attained."
+  ],
+  "uz": [
+   "Tengsizliklar qoidalaridan foydalanish va koʻpaytirishda ishorani hech qachon yoʻqotmaslik.",
+   "Hamma narsani chapga oʻtkazib, kvadratlar yigʻib tengsizlikni isbotlash.",
+   "Oʻrta arifmetik va oʻrta geometrik tengsizligini ikki, uch va $n$ ta son uchun ishonch bilan qoʻllash.",
+   "Koshi–Bunyakovskiy tengsizligini va uning Engel shaklini bilish, tenglik qachon boʻlishini koʻrish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Правила игры",
-    "en": "The rules of the game"
+    "en": "The rules of the game",
+    "uz": "Oʻyin qoidalari"
    },
    "blocks": [
     {
@@ -165,7 +174,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Неравенство о средних (AM–GM)",
-    "en": "The AM–GM inequality"
+    "en": "The AM–GM inequality",
+    "uz": "Oʻrta arifmetik va oʻrta geometrik tengsizligi"
    },
    "blocks": [
     {
@@ -290,7 +300,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Цепочка средних",
-    "en": "The chain of means"
+    "en": "The chain of means",
+    "uz": "Oʻrta qiymatlar zanjiri"
    },
    "blocks": [
     {
@@ -391,7 +402,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Степенные средние",
-    "en": "Power means"
+    "en": "Power means",
+    "uz": "Darajali oʻrtalar"
    },
    "blocks": [
     {
@@ -566,7 +578,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Неравенство Коши–Буняковского",
-    "en": "The Cauchy–Schwarz inequality"
+    "en": "The Cauchy–Schwarz inequality",
+    "uz": "Koshi–Bunyakovskiy tengsizligi"
    },
    "blocks": [
     {
@@ -669,7 +682,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Неравенство о перестановках и Чебышёв",
-    "en": "The rearrangement and Chebyshev inequalities"
+    "en": "The rearrangement and Chebyshev inequalities",
+    "uz": "Qayta tartiblash va Chebishyov tengsizliklari"
    },
    "blocks": [
     {
@@ -786,7 +800,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Выпуклость и неравенство Йенсена",
-    "en": "Convexity and Jensen inequality"
+    "en": "Convexity and Jensen inequality",
+    "uz": "Qavariqlik va Yensen tengsizligi"
    },
    "blocks": [
     {
@@ -915,7 +930,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Приёмы, которые решают задачи",
-    "en": "The moves that finish problems"
+    "en": "The moves that finish problems",
+    "uz": "Masalani yakunlaydigan usullar"
    },
    "blocks": [
     {
@@ -988,7 +1004,8 @@ window.LESSONS[6] = {
   {
    "h": {
     "ru": "Продвинутые приёмы",
-    "en": "Advanced techniques"
+    "en": "Advanced techniques",
+    "uz": "Murakkabroq usullar"
    },
    "blocks": [
     {

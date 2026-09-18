@@ -5,11 +5,13 @@ window.LESSONS[1] = {
  "cat": "nt",
  "title": {
   "ru": "Делимость, НОД и НОК",
-  "en": "Divisibility, GCD and LCM"
+  "en": "Divisibility, GCD and LCM",
+  "uz": "Boʻlinuvchanlik, EKUB va EKUK"
  },
  "sub": {
   "ru": "Фундамент всей теории чисел: деление с остатком, признаки делимости и алгоритм Евклида.",
-  "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm."
+  "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm.",
+  "uz": "Butun sonlar nazariyasining poydevori: qoldiqli boʻlish, boʻlinish alomatlari va Yevklid algoritmi."
  },
  "goals": {
   "ru": [
@@ -23,74 +25,91 @@ window.LESSONS[1] = {
    "Apply division with remainder and the divisibility rules for $2,3,4,5,8,9,11$.",
    "Find a GCD by the Euclidean algorithm and write it as $ax+by$.",
    "Use the identity $\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$ and count divisors."
+  ],
+  "uz": [
+   "Boʻlinuvchanlik taʼrifini tushunish va uning xossalaridan ishonch bilan foydalanish.",
+   "Qoldiqli boʻlishni va $2,3,4,5,8,9,11$ ga boʻlinish alomatlarini qoʻllash.",
+   "Yevklid algoritmi bilan EKUB topish va uni $ax+by$ koʻrinishida yozish.",
+   "$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$ ayniyatidan foydalanish va boʻluvchilar sonini sanash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Что такое делимость",
-    "en": "What divisibility means"
+    "en": "What divisibility means",
+    "uz": "Boʻlinuvchanlik nima degani"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "Делимость — это не «деление без калькулятора», а утверждение о существовании целого числа. Всё, что будет дальше в теории чисел, опирается на это одно определение.",
-      "en": "Divisibility is not \"division without a calculator\" — it is a statement that a certain integer exists. Everything that follows in number theory rests on this one definition."
+      "en": "Divisibility is not \"division without a calculator\" — it is a statement that a certain integer exists. Everything that follows in number theory rests on this one definition.",
+      "uz": "Boʻlinuvchanlik — bu «kalkulyatorsiz boʻlish» emas, balki maʼlum bir butun son mavjudligi haqidagi tasdiq. Sonlar nazariyasidagi qolgan hamma narsa shu bitta taʼrifga tayanadi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Делимость",
-      "en": "Divisibility"
+      "en": "Divisibility",
+      "uz": "Boʻlinuvchanlik"
      },
      "text": {
       "ru": "Пусть $a$ и $b$ — целые числа, $a\\neq 0$. Говорят, что **$a$ делит $b$** (пишут $a\\mid b$), если существует целое $k$ такое, что $b=ak$. В этом случае $a$ называют **делителем** $b$, а $b$ — **кратным** $a$.",
-      "en": "Let $a$ and $b$ be integers with $a\\neq 0$. We say **$a$ divides $b$** (written $a\\mid b$) if there is an integer $k$ with $b=ak$. Then $a$ is a **divisor** of $b$, and $b$ is a **multiple** of $a$."
+      "en": "Let $a$ and $b$ be integers with $a\\neq 0$. We say **$a$ divides $b$** (written $a\\mid b$) if there is an integer $k$ with $b=ak$. Then $a$ is a **divisor** of $b$, and $b$ is a **multiple** of $a$.",
+      "uz": "$a$ va $b$ butun sonlar, $a\\ne 0$ boʻlsin. Agar $b=ak$ boʻladigan butun $k$ mavjud boʻlsa, **$a$ soni $b$ ni boʻladi** deymiz va $a\\mid b$ deb yozamiz. Bunda $a$ — $b$ ning **boʻluvchisi**, $b$ esa $a$ ning **karralisi**."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Примеры: $3\\mid 12$, потому что $12=3\\cdot 4$; $7\\mid 0$, потому что $0=7\\cdot 0$; но $5\\nmid 17$. Обратите внимание: **ноль делится на всё** (кроме нуля), а на ноль не делится ничего.",
-      "en": "Examples: $3\\mid 12$ because $12=3\\cdot 4$; $7\\mid 0$ because $0=7\\cdot 0$; but $5\\nmid 17$. Note that **zero is divisible by everything** (except zero), while nothing is divisible by zero."
+      "en": "Examples: $3\\mid 12$ because $12=3\\cdot 4$; $7\\mid 0$ because $0=7\\cdot 0$; but $5\\nmid 17$. Note that **zero is divisible by everything** (except zero), while nothing is divisible by zero.",
+      "uz": "Misollar: $3\\mid 12$, chunki $12=3\\cdot 4$; $7\\mid 0$, chunki $0=7\\cdot 0$; ammo $5\\nmid 17$. Eʼtibor bering: **nol hamma songa boʻlinadi** (noldan tashqari), nolga esa hech narsa boʻlinmaydi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Основные свойства",
-      "en": "Basic properties"
+      "en": "Basic properties",
+      "uz": "Asosiy xossalar"
      },
      "text": {
       "ru": "Для целых $a,b,c$: $\\;$ (1) если $a\\mid b$ и $a\\mid c$, то $a\\mid(b\\pm c)$; $\\;$ (2) если $a\\mid b$, то $a\\mid bc$ для любого целого $c$; $\\;$ (3) если $a\\mid b$ и $b\\mid c$, то $a\\mid c$; $\\;$ (4) если $a\\mid b$ и $b\\mid a$, то $a=\\pm b$.",
-      "en": "For integers $a,b,c$: $\\;$ (1) if $a\\mid b$ and $a\\mid c$ then $a\\mid(b\\pm c)$; $\\;$ (2) if $a\\mid b$ then $a\\mid bc$ for every integer $c$; $\\;$ (3) if $a\\mid b$ and $b\\mid c$ then $a\\mid c$; $\\;$ (4) if $a\\mid b$ and $b\\mid a$ then $a=\\pm b$."
+      "en": "For integers $a,b,c$: $\\;$ (1) if $a\\mid b$ and $a\\mid c$ then $a\\mid(b\\pm c)$; $\\;$ (2) if $a\\mid b$ then $a\\mid bc$ for every integer $c$; $\\;$ (3) if $a\\mid b$ and $b\\mid c$ then $a\\mid c$; $\\;$ (4) if $a\\mid b$ and $b\\mid a$ then $a=\\pm b$.",
+      "uz": "$a,b,c$ butun sonlar uchun: $\\;$ (1) agar $a\\mid b$ va $a\\mid c$ boʻlsa, $a\\mid(b\\pm c)$; $\\;$ (2) agar $a\\mid b$ boʻlsa, istalgan butun $c$ uchun $a\\mid bc$; $\\;$ (3) agar $a\\mid b$ va $b\\mid c$ boʻlsa, $a\\mid c$; $\\;$ (4) agar $a\\mid b$ va $b\\mid a$ boʻlsa, $a=\\pm b$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "(1) По определению $b=ak$ и $c=am$. Тогда $b\\pm c=a(k\\pm m)$, а $k\\pm m$ — целое. $\\;$ (2) $bc=(ak)c=a(kc)$. $\\;$ (3) $b=ak$, $c=bm=(ak)m=a(km)$. $\\;$ (4) Из $b=ak$ и $a=bm$ получаем $a=akm$, значит $km=1$, и так как $k,m$ целые, $k=m=\\pm1$.",
-      "en": "(1) By definition $b=ak$ and $c=am$. Then $b\\pm c=a(k\\pm m)$, and $k\\pm m$ is an integer. $\\;$ (2) $bc=(ak)c=a(kc)$. $\\;$ (3) $b=ak$ and $c=bm=(ak)m=a(km)$. $\\;$ (4) From $b=ak$ and $a=bm$ we get $a=akm$, so $km=1$, and since $k,m$ are integers, $k=m=\\pm1$."
+      "en": "(1) By definition $b=ak$ and $c=am$. Then $b\\pm c=a(k\\pm m)$, and $k\\pm m$ is an integer. $\\;$ (2) $bc=(ak)c=a(kc)$. $\\;$ (3) $b=ak$ and $c=bm=(ak)m=a(km)$. $\\;$ (4) From $b=ak$ and $a=bm$ we get $a=akm$, so $km=1$, and since $k,m$ are integers, $k=m=\\pm1$.",
+      "uz": "(1) Taʼrifga koʻra $b=ak$ va $c=am$. U holda $b\\pm c=a(k\\pm m)$, va $k\\pm m$ butun son. $\\;$ (2) $bc=(ak)c=a(kc)$. $\\;$ (3) $b=ak$ va $c=bm=(ak)m=a(km)$. $\\;$ (4) $b=ak$ va $a=bm$ dan $a=akm$, demak $km=1$, $k,m$ butun boʻlgani uchun $k=m=\\pm1$."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Линейная комбинация — главный приём",
-      "en": "Linear combinations — the key move"
+      "en": "Linear combinations — the key move",
+      "uz": "Chiziqli kombinatsiyalar — asosiy usul"
      },
      "text": {
       "ru": "Свойства (1) и (2) вместе дают самое полезное утверждение всей темы: если $d\\mid a$ и $d\\mid b$, то $$d\\mid (ax+by)\\quad\\text{для любых целых } x,y.$$ Почти каждая олимпиадная задача на делимость решается так: из двух данных выражений составляют такую комбинацию, в которой неизвестное исчезает.",
-      "en": "Properties (1) and (2) together give the single most useful fact in the topic: if $d\\mid a$ and $d\\mid b$ then $$d\\mid (ax+by)\\quad\\text{for all integers } x,y.$$ Almost every olympiad divisibility problem is solved this way: combine the two given expressions so that the unknown cancels."
+      "en": "Properties (1) and (2) together give the single most useful fact in the topic: if $d\\mid a$ and $d\\mid b$ then $$d\\mid (ax+by)\\quad\\text{for all integers } x,y.$$ Almost every olympiad divisibility problem is solved this way: combine the two given expressions so that the unknown cancels.",
+      "uz": "(1) va (2) xossalar birgalikda mavzudagi eng foydali faktni beradi: agar $d\\mid a$ va $d\\mid b$ boʻlsa, u holda $$d\\mid (ax+by)\\quad\\text{barcha butun } x,y \\text{ uchun.}$$ Olimpiadadagi boʻlinuvchanlikka oid deyarli har bir masala shu yoʻl bilan yechiladi: berilgan ikkita ifodani nomaʼlum qisqaradigan qilib birlashtiring."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что если $d\\mid (5n+3)$ и $d\\mid (3n+2)$, то $d=\\pm1$.",
-      "en": "Prove that if $d\\mid (5n+3)$ and $d\\mid (3n+2)$ then $d=\\pm1$."
+      "en": "Prove that if $d\\mid (5n+3)$ and $d\\mid (3n+2)$ then $d=\\pm1$.",
+      "uz": "Agar $d\\mid (5n+3)$ va $d\\mid (3n+2)$ boʻlsa, $d=\\pm1$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -102,6 +121,11 @@ window.LESSONS[1] = {
        "Choose coefficients that kill $n$: take $3\\cdot(5n+3)-5\\cdot(3n+2)$.",
        "$3(5n+3)-5(3n+2)=15n+9-15n-10=-1$.",
        "By the linear-combination property $d\\mid -1$, so $d=\\pm1$."
+      ],
+      "uz": [
+       "$n$ ni yoʻqotadigan koeffitsiyentlarni tanlang: $3\\cdot(5n+3)-5\\cdot(3n+2)$ ni oling.",
+       "$3(5n+3)-5(3n+2)=15n+9-15n-10=-1$.",
+       "Chiziqli kombinatsiya xossasiga koʻra $d\\mid -1$, demak $d=\\pm1$."
       ]
      },
      "ans": {
@@ -113,50 +137,58 @@ window.LESSONS[1] = {
      "t": "thm",
      "name": {
       "ru": "Делитель не больше числа",
-      "en": "A divisor is no larger than the number"
+      "en": "A divisor is no larger than the number",
+      "uz": "Boʻluvchi sondan katta emas"
      },
      "text": {
       "ru": "Если $d\\mid a$ и $a\\ne0$, то $|d|\\le|a|$. В частности, у всякого ненулевого числа **конечное** число делителей.",
-      "en": "If $d\\mid a$ and $a\\ne0$ then $|d|\\le|a|$. In particular every non-zero number has **finitely many** divisors."
+      "en": "If $d\\mid a$ and $a\\ne0$ then $|d|\\le|a|$. In particular every non-zero number has **finitely many** divisors.",
+      "uz": "Agar $d\\mid a$ va $a\\ne0$ boʻlsa, $|d|\\le|a|$. Xususan, har bir noldan farqli sonning **chekli sondagi** boʻluvchisi bor."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $a=dk$. Число $a$ ненулевое, значит и $k\\ne0$, а тогда $|k|\\ge1$. Отсюда $$|a|=|d|\\cdot|k|\\ \\ge\\ |d| .$$\n\nЗначит все делители лежат в конечном промежутке от $-|a|$ до $|a|$, и их конечное число. $\\blacksquare$",
-      "en": "Let $a=dk$. Since $a\\ne0$ we have $k\\ne0$, hence $|k|\\ge1$ and $$|a|=|d|\\cdot|k|\\ \\ge\\ |d| .$$\n\nSo every divisor lies in the finite range from $-|a|$ to $|a|$, and there are finitely many. $\\blacksquare$"
+      "en": "Let $a=dk$. Since $a\\ne0$ we have $k\\ne0$, hence $|k|\\ge1$ and $$|a|=|d|\\cdot|k|\\ \\ge\\ |d| .$$\n\nSo every divisor lies in the finite range from $-|a|$ to $|a|$, and there are finitely many. $\\blacksquare$",
+      "uz": "$a=dk$ boʻlsin. $a\\ne0$ boʻlgani uchun $k\\ne0$, demak $|k|\\ge1$ va $$|a|=|d|\\cdot|k|\\ \\ge\\ |d| .$$\n\nDemak har bir boʻluvchi $-|a|$ dan $|a|$ gacha boʻlgan chekli oraliqda yotadi, ular esa chekli sonda. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Оговорка $a\\ne0$ существенна: у нуля делителей бесконечно много, ведь $d\\mid0$ при любом $d\\ne0$. Поэтому в задачах вида «найдите все $d$, делящие …» первым делом убеждаются, что делимое не обращается в нуль.",
-      "en": "The hypothesis $a\\ne0$ matters: zero has infinitely many divisors, since $d\\mid0$ for every $d\\ne0$. So in problems of the form \"find all $d$ dividing …\" the first move is to make sure the dividend is not zero."
+      "en": "The hypothesis $a\\ne0$ matters: zero has infinitely many divisors, since $d\\mid0$ for every $d\\ne0$. So in problems of the form \"find all $d$ dividing …\" the first move is to make sure the dividend is not zero.",
+      "uz": "$a\\ne0$ sharti muhim: nolning boʻluvchilari cheksiz koʻp, chunki har qanday $d\\ne0$ uchun $d\\mid0$. Shuning uchun «… ni boʻluvchi barcha $d$ larni toping» turidagi masalalarda birinchi qadam — boʻlinuvchi nolga teng emasligiga ishonch hosil qilish."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "У каждого числа есть простой делитель",
-      "en": "Every number has a prime divisor"
+      "en": "Every number has a prime divisor",
+      "uz": "Har bir sonning tub boʻluvchisi bor"
      },
      "text": {
       "ru": "Всякое целое $n>1$ имеет простой делитель; более того, его **наименьший** делитель, больший единицы, прост, и если $n$ составное, то этот делитель не превосходит $\\sqrt n$.",
-      "en": "Every integer $n>1$ has a prime divisor; moreover its **least** divisor greater than one is prime, and if $n$ is composite that divisor is at most $\\sqrt n$."
+      "en": "Every integer $n>1$ has a prime divisor; moreover its **least** divisor greater than one is prime, and if $n$ is composite that divisor is at most $\\sqrt n$.",
+      "uz": "$n>1$ boʻlgan har bir butun sonning tub boʻluvchisi bor; bundan tashqari uning birdan katta **eng kichik** boʻluvchisi tub son, agar $n$ murakkab boʻlsa, bu boʻluvchi $\\sqrt n$ dan oshmaydi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Множество делителей числа $n$, больших единицы, непусто (в нём есть само $n$), значит в нём есть наименьший элемент $p$.\n\n**$p$ простое.** Если бы $p=ab$ с $1<a<p$, то $a$ делил бы $n$ и был бы меньше $p$ — противоречие с минимальностью.\n\n**Оценка для составного $n$.** Запишем $n=pm$. Если $n$ составное, то $m>1$, значит $m$ тоже делитель, больший единицы, и по минимальности $m\\ge p$. Тогда $$n=pm\\ \\ge\\ p^{2}\\quad\\Longrightarrow\\quad p\\le\\sqrt n . \\qquad\\blacksquare$$",
-      "en": "The set of divisors of $n$ greater than one is non-empty (it contains $n$), so it has a least element $p$.\n\n**$p$ is prime.** If $p=ab$ with $1<a<p$, then $a$ would divide $n$ and be smaller than $p$, contradicting minimality.\n\n**The bound for composite $n$.** Write $n=pm$. If $n$ is composite then $m>1$, so $m$ is also a divisor greater than one and minimality gives $m\\ge p$. Hence $$n=pm\\ \\ge\\ p^{2}\\quad\\Longrightarrow\\quad p\\le\\sqrt n . \\qquad\\blacksquare$$"
+      "en": "The set of divisors of $n$ greater than one is non-empty (it contains $n$), so it has a least element $p$.\n\n**$p$ is prime.** If $p=ab$ with $1<a<p$, then $a$ would divide $n$ and be smaller than $p$, contradicting minimality.\n\n**The bound for composite $n$.** Write $n=pm$. If $n$ is composite then $m>1$, so $m$ is also a divisor greater than one and minimality gives $m\\ge p$. Hence $$n=pm\\ \\ge\\ p^{2}\\quad\\Longrightarrow\\quad p\\le\\sqrt n . \\qquad\\blacksquare$$",
+      "uz": "$n$ ning birdan katta boʻluvchilari toʻplami boʻsh emas (unda $n$ ning oʻzi bor), demak unda eng kichik element $p$ bor.\n\n**$p$ tub son.** Agar $p=ab$ va $1<a<p$ boʻlsa, $a$ ham $n$ ni boʻlar va $p$ dan kichik boʻlar edi — bu minimallikka zid.\n\n**Murakkab $n$ uchun baho.** $n=pm$ deb yozamiz. Agar $n$ murakkab boʻlsa, $m>1$, demak $m$ ham birdan katta boʻluvchi va minimallikdan $m\\ge p$. Demak $$n=pm\\ \\ge\\ p^{2}\\quad\\Longrightarrow\\quad p\\le\\sqrt n . \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Отсюда берётся стандартная проверка на простоту: чтобы убедиться, что $n$ простое, достаточно перебрать простые делители до $\\sqrt n$. Для $n=211$ хватает $2,3,5,7,11,13$, потому что $14^{2}=196<211<225=15^{2}$.",
-      "en": "This gives the standard primality check: to see that $n$ is prime it suffices to test prime divisors up to $\\sqrt n$. For $n=211$ the primes $2,3,5,7,11,13$ suffice, since $14^{2}=196<211<225=15^{2}$."
+      "en": "This gives the standard primality check: to see that $n$ is prime it suffices to test prime divisors up to $\\sqrt n$. For $n=211$ the primes $2,3,5,7,11,13$ suffice, since $14^{2}=196<211<225=15^{2}$.",
+      "uz": "Bu standart tublik tekshiruvini beradi: $n$ tub ekanini koʻrish uchun $\\sqrt n$ gacha boʻlgan tub boʻluvchilarni sinash yetarli. $n=211$ uchun $2,3,5,7,11,13$ tub sonlari yetarli, chunki $14^{2}=196<211<225=15^{2}$."
      }
     }
    ]
@@ -164,50 +196,58 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Деление с остатком",
-    "en": "Division with remainder"
+    "en": "Division with remainder",
+    "uz": "Qoldiqli boʻlish"
    },
    "blocks": [
     {
      "t": "thm",
      "name": {
       "ru": "Теорема о делении с остатком",
-      "en": "The division algorithm"
+      "en": "The division algorithm",
+      "uz": "Qoldiqli boʻlish teoremasi"
      },
      "text": {
       "ru": "Для любых целых $a$ и $b>0$ существует **единственная** пара целых чисел $q$ (неполное частное) и $r$ (остаток), для которых $$a=bq+r,\\qquad 0\\le r<b.$$",
-      "en": "For any integers $a$ and $b>0$ there is a **unique** pair of integers $q$ (the quotient) and $r$ (the remainder) with $$a=bq+r,\\qquad 0\\le r<b.$$"
+      "en": "For any integers $a$ and $b>0$ there is a **unique** pair of integers $q$ (the quotient) and $r$ (the remainder) with $$a=bq+r,\\qquad 0\\le r<b.$$",
+      "uz": "Istalgan $a$ butun son va $b>0$ uchun $$a=bq+r,\\qquad 0\\le r<b$$ shartlarni qanoatlantiruvchi **yagona** $q$ (toʻliqsiz boʻlinma) va $r$ (qoldiq) butun sonlar juftligi mavjud."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "*Существование.* Возьмём наибольшее целое $q$, для которого $bq\\le a$ (такое есть, потому что кратные $b$ уходят в обе стороны бесконечно). Положим $r=a-bq\\ge 0$. Если бы $r\\ge b$, то $b(q+1)=bq+b\\le a$, что противоречит выбору $q$. Значит $r<b$. $\\;$ *Единственность.* Пусть $a=bq_1+r_1=bq_2+r_2$ с $0\\le r_1,r_2<b$. Тогда $b(q_1-q_2)=r_2-r_1$, причём $|r_2-r_1|<b$. Число, кратное $b$ и меньшее $b$ по модулю, равно нулю, поэтому $r_1=r_2$ и $q_1=q_2$.",
-      "en": "*Existence.* Take the largest integer $q$ with $bq\\le a$ (it exists because the multiples of $b$ run off to infinity both ways). Put $r=a-bq\\ge 0$. If $r\\ge b$ then $b(q+1)=bq+b\\le a$, contradicting the choice of $q$. So $r<b$. $\\;$ *Uniqueness.* Suppose $a=bq_1+r_1=bq_2+r_2$ with $0\\le r_1,r_2<b$. Then $b(q_1-q_2)=r_2-r_1$ and $|r_2-r_1|<b$. A multiple of $b$ smaller than $b$ in absolute value must be zero, so $r_1=r_2$ and $q_1=q_2$."
+      "en": "*Existence.* Take the largest integer $q$ with $bq\\le a$ (it exists because the multiples of $b$ run off to infinity both ways). Put $r=a-bq\\ge 0$. If $r\\ge b$ then $b(q+1)=bq+b\\le a$, contradicting the choice of $q$. So $r<b$. $\\;$ *Uniqueness.* Suppose $a=bq_1+r_1=bq_2+r_2$ with $0\\le r_1,r_2<b$. Then $b(q_1-q_2)=r_2-r_1$ and $|r_2-r_1|<b$. A multiple of $b$ smaller than $b$ in absolute value must be zero, so $r_1=r_2$ and $q_1=q_2$.",
+      "uz": "*Mavjudligi.* $bq\\le a$ shartni qanoatlantiruvchi eng katta butun $q$ ni olamiz (u mavjud, chunki $b$ ning karralilari ikki tomonga ham cheksiz ketadi). $r=a-bq\\ge 0$ deymiz. Agar $r\\ge b$ boʻlsa, $b(q+1)=bq+b\\le a$ boʻlar edi — bu $q$ ning tanlanishiga zid. Demak $r<b$. $\\;$ *Yagonaligi.* $a=bq_1+r_1=bq_2+r_2$ va $0\\le r_1,r_2<b$ boʻlsin. U holda $b(q_1-q_2)=r_2-r_1$ va $|r_2-r_1|<b$. Absolyut qiymati $b$ dan kichik boʻlgan $b$ ning karralisi nolga teng, demak $r_1=r_2$ va $q_1=q_2$."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Остаток всегда **неотрицателен**. Например, $-17=5\\cdot(-4)+3$, то есть остаток равен $3$, а не $-2$. Эта мелочь ломает больше решений, чем любая другая в теме.",
-      "en": "The remainder is always **non-negative**. For instance $-17=5\\cdot(-4)+3$, so the remainder is $3$, not $-2$. This small point wrecks more solutions than anything else in the topic."
+      "en": "The remainder is always **non-negative**. For instance $-17=5\\cdot(-4)+3$, so the remainder is $3$, not $-2$. This small point wrecks more solutions than anything else in the topic.",
+      "uz": "Qoldiq har doim **manfiy emas**. Masalan, $-17=5\\cdot(-4)+3$, demak qoldiq $3$ ga teng, $-2$ ga emas. Bu kichik nuqta mavzudagi boshqa hamma narsadan koʻra koʻproq yechimni buzadi."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Разбор по остаткам",
-      "en": "Splitting into cases by remainder"
+      "en": "Splitting into cases by remainder",
+      "uz": "Qoldiq boʻyicha hollarga ajratish"
      },
      "text": {
       "ru": "Любое целое $n$ можно записать как $n=3k$, $n=3k+1$ или $n=3k+2$. Три случая — и утверждение проверяется в каждом. Это самый простой способ доказать делимость, когда никакая хитрость не приходит в голову.",
-      "en": "Every integer $n$ can be written as $n=3k$, $n=3k+1$ or $n=3k+2$. Three cases, and the claim is checked in each. This is the simplest way to prove a divisibility statement when no clever trick presents itself."
+      "en": "Every integer $n$ can be written as $n=3k$, $n=3k+1$ or $n=3k+2$. Three cases, and the claim is checked in each. This is the simplest way to prove a divisibility statement when no clever trick presents itself.",
+      "uz": "Har bir butun $n$ sonni $n=3k$, $n=3k+1$ yoki $n=3k+2$ koʻrinishida yozish mumkin. Uchta hol boʻladi va tasdiq har birida tekshiriladi. Hech qanday aqlli usul koʻrinmaganda boʻlinuvchanlikka oid tasdiqni isbotlashning eng sodda yoʻli shu."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $n^2$ при делении на $4$ даёт остаток $0$ или $1$.",
-      "en": "Prove that $n^2$ leaves remainder $0$ or $1$ on division by $4$."
+      "en": "Prove that $n^2$ leaves remainder $0$ or $1$ on division by $4$.",
+      "uz": "$n^2$ ni $4$ ga boʻlganda qoldiq $0$ yoki $1$ boʻlishini isbotlang."
      },
      "steps": {
       "ru": [
@@ -219,61 +259,75 @@ window.LESSONS[1] = {
        "If $n=2k$ then $n^2=4k^2$ — remainder $0$.",
        "If $n=2k+1$ then $n^2=4k^2+4k+1=4(k^2+k)+1$ — remainder $1$.",
        "There are no other cases, so the remainder is always $0$ or $1$."
+      ],
+      "uz": [
+       "Agar $n=2k$ boʻlsa, $n^2=4k^2$ — qoldiq $0$.",
+       "Agar $n=2k+1$ boʻlsa, $n^2=4k^2+4k+1=4(k^2+k)+1$ — qoldiq $1$.",
+       "Boshqa hol yoʻq, demak qoldiq har doim $0$ yoki $1$."
       ]
      },
      "ans": {
       "ru": "Остаток $\\in\\{0,1\\}$",
-      "en": "The remainder is $0$ or $1$"
+      "en": "The remainder is $0$ or $1$",
+      "uz": "Qoldiq $0$ yoki $1$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Это крошечное наблюдение — рабочий инструмент. Сумма двух квадратов даёт по модулю $4$ остатки $0,1,2$, но никогда $3$: поэтому, например, $n^2+m^2=2023$ решений не имеет ($2023=4\\cdot505+3$).",
-      "en": "That tiny observation is a working tool. A sum of two squares leaves remainder $0,1$ or $2$ modulo $4$, never $3$: so, for example, $n^2+m^2=2023$ has no solutions, since $2023=4\\cdot505+3$."
+      "en": "That tiny observation is a working tool. A sum of two squares leaves remainder $0,1$ or $2$ modulo $4$, never $3$: so, for example, $n^2+m^2=2023$ has no solutions, since $2023=4\\cdot505+3$.",
+      "uz": "Bu kichkina kuzatish ishchi qurol. Ikkita kvadrat yigʻindisi $4$ ga boʻlinganda $0,1$ yoki $2$ qoldiq beradi, hech qachon $3$ emas: demak, masalan, $n^2+m^2=2023$ tenglamasining yechimi yoʻq, chunki $2023=4\\cdot505+3$."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Частное — это целая часть",
-      "en": "The quotient is a floor"
+      "en": "The quotient is a floor",
+      "uz": "Toʻliqsiz boʻlinma — butun qism"
      },
      "text": {
       "ru": "В записи $a=bq+r$ с $0\\le r<b$ и $b>0$ частное и остаток выражаются явно: $$q=\\left\\lfloor\\frac ab\\right\\rfloor,\\qquad r=a-b\\left\\lfloor\\frac ab\\right\\rfloor .$$",
-      "en": "In $a=bq+r$ with $0\\le r<b$ and $b>0$, the quotient and remainder are given explicitly by $$q=\\left\\lfloor\\frac ab\\right\\rfloor,\\qquad r=a-b\\left\\lfloor\\frac ab\\right\\rfloor .$$"
+      "en": "In $a=bq+r$ with $0\\le r<b$ and $b>0$, the quotient and remainder are given explicitly by $$q=\\left\\lfloor\\frac ab\\right\\rfloor,\\qquad r=a-b\\left\\lfloor\\frac ab\\right\\rfloor .$$",
+      "uz": "$a=bq+r$ da $0\\le r<b$ va $b>0$ boʻlsa, boʻlinma va qoldiq oshkor koʻrinishda $$q=\\left\\lfloor\\frac ab\\right\\rfloor,\\qquad r=a-b\\left\\lfloor\\frac ab\\right\\rfloor$$ formulalar bilan beriladi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Условие $0\\le r<b$ равносильно $0\\le a-bq<b$, то есть $$bq\\le a<bq+b\\quad\\Longleftrightarrow\\quad q\\le\\frac ab<q+1 .$$\n\nА последнее и означает по определению, что $q=\\left\\lfloor\\tfrac ab\\right\\rfloor$. Формула для $r$ получается подстановкой. $\\blacksquare$",
-      "en": "The condition $0\\le r<b$ is equivalent to $0\\le a-bq<b$, that is $$bq\\le a<bq+b\\quad\\Longleftrightarrow\\quad q\\le\\frac ab<q+1 ,$$ which by definition says $q=\\left\\lfloor\\tfrac ab\\right\\rfloor$. The formula for $r$ follows by substitution. $\\blacksquare$"
+      "en": "The condition $0\\le r<b$ is equivalent to $0\\le a-bq<b$, that is $$bq\\le a<bq+b\\quad\\Longleftrightarrow\\quad q\\le\\frac ab<q+1 ,$$ which by definition says $q=\\left\\lfloor\\tfrac ab\\right\\rfloor$. The formula for $r$ follows by substitution. $\\blacksquare$",
+      "uz": "$0\\le r<b$ sharti $0\\le a-bq<b$ ga, yaʼni $$bq\\le a<bq+b\\quad\\Longleftrightarrow\\quad q\\le\\frac ab<q+1$$ ga teng kuchli, bu esa taʼrifga koʻra $q=\\left\\lfloor\\tfrac ab\\right\\rfloor$ degani. $r$ uchun formula oʻrniga qoʻyishdan kelib chiqadi. $\\blacksquare$"
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Полная система вычетов",
-      "en": "Complete residue system"
+      "en": "Complete residue system",
+      "uz": "Chegirmalarning toʻliq sistemasi"
      },
      "text": {
       "ru": "Набор из $n$ целых чисел называется **полной системой вычетов** по модулю $n$, если они дают попарно различные остатки при делении на $n$ — то есть покрывают все остатки $0,1,\\dots,n-1$ ровно по разу.",
-      "en": "A set of $n$ integers is a **complete residue system** modulo $n$ if they leave pairwise different remainders on division by $n$ — that is, they cover each of $0,1,\\dots,n-1$ exactly once."
+      "en": "A set of $n$ integers is a **complete residue system** modulo $n$ if they leave pairwise different remainders on division by $n$ — that is, they cover each of $0,1,\\dots,n-1$ exactly once.",
+      "uz": "$n$ ta butun sondan iborat toʻplam, agar ular $n$ ga boʻlinganda juft-jufti bilan turli qoldiq bersa — yaʼni $0,1,\\dots,n-1$ qoldiqlarning har birini roppa-rosa bir marta qamrasa — modul $n$ boʻyicha **chegirmalarning toʻliq sistemasi** deyiladi."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Самый привычный пример — сами числа $0,1,\\dots,n-1$. Но полезны и другие: например, $n$ подряд идущих целых чисел всегда образуют полную систему вычетов. Именно поэтому «среди любых $n$ подряд идущих чисел ровно одно делится на $n$».",
-      "en": "The familiar example is $0,1,\\dots,n-1$ itself. Others are useful too: any $n$ consecutive integers form a complete residue system. That is exactly why \"among any $n$ consecutive integers exactly one is divisible by $n$\"."
+      "en": "The familiar example is $0,1,\\dots,n-1$ itself. Others are useful too: any $n$ consecutive integers form a complete residue system. That is exactly why \"among any $n$ consecutive integers exactly one is divisible by $n$\".",
+      "uz": "Tanish misol — $0,1,\\dots,n-1$ ning oʻzi. Boshqalari ham foydali: ketma-ket kelgan istalgan $n$ ta butun son toʻliq sistema hosil qiladi. Aynan shuning uchun «ketma-ket kelgan $n$ ta butun son orasida roppa-rosa bittasi $n$ ga boʻlinadi»."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что произведение любых трёх подряд идущих целых чисел делится на $6$.",
-      "en": "Prove that the product of any three consecutive integers is divisible by $6$."
+      "en": "Prove that the product of any three consecutive integers is divisible by $6$.",
+      "uz": "Ketma-ket kelgan istalgan uchta butun sonning koʻpaytmasi $6$ ga boʻlinishini isbotlang."
      },
      "steps": {
       "ru": [
@@ -287,11 +341,18 @@ window.LESSONS[1] = {
        "Three consecutive integers form a complete residue system modulo $3$, so exactly one of them is divisible by $3$.",
        "Among three consecutive integers at least one is even, so the product is divisible by $2$.",
        "As $2$ and $3$ are coprime, the product is divisible by $6$."
+      ],
+      "uz": [
+       "Sonlarni $n,\\ n+1,\\ n+2$ deb belgilaymiz.",
+       "Ketma-ket kelgan uchta son modul $3$ boʻyicha toʻliq sistema hosil qiladi, demak ulardan roppa-rosa bittasi $3$ ga boʻlinadi.",
+       "Ketma-ket kelgan uchta son orasida kamida bittasi juft, demak koʻpaytma $2$ ga boʻlinadi.",
+       "$2$ va $3$ oʻzaro tub boʻlgani uchun koʻpaytma $6$ ga boʻlinadi."
       ]
      },
      "ans": {
       "ru": "Делится, и это частный случай общего факта: произведение $k$ подряд идущих чисел делится на $k!$.",
-      "en": "It is divisible — a special case of the general fact that a product of $k$ consecutive integers is divisible by $k!$."
+      "en": "It is divisible — a special case of the general fact that a product of $k$ consecutive integers is divisible by $k!$.",
+      "uz": "Boʻlinadi — bu ketma-ket kelgan $k$ ta sonning koʻpaytmasi $k!$ ga boʻlinishi haqidagi umumiy faktning xususiy holi."
      }
     }
    ]
@@ -299,14 +360,16 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Признаки делимости",
-    "en": "Divisibility rules"
+    "en": "Divisibility rules",
+    "uz": "Boʻlinish alomatlari"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "Пусть $N=\\overline{a_k a_{k-1}\\ldots a_1 a_0}$ — десятичная запись, то есть $N=a_k10^k+\\cdots+a_1\\cdot10+a_0$. Обозначим через $S(N)=a_k+\\cdots+a_0$ сумму цифр.",
-      "en": "Let $N=\\overline{a_k a_{k-1}\\ldots a_1 a_0}$ be the decimal form, that is $N=a_k10^k+\\cdots+a_1\\cdot10+a_0$. Write $S(N)=a_k+\\cdots+a_0$ for the digit sum."
+      "en": "Let $N=\\overline{a_k a_{k-1}\\ldots a_1 a_0}$ be the decimal form, that is $N=a_k10^k+\\cdots+a_1\\cdot10+a_0$. Write $S(N)=a_k+\\cdots+a_0$ for the digit sum.",
+      "uz": "$N=\\overline{a_k a_{k-1}\\ldots a_1 a_0}$ oʻnlik yozuv boʻlsin, yaʼni $N=a_k10^k+\\cdots+a_1\\cdot10+a_0$. Raqamlar yigʻindisini $S(N)=a_k+\\cdots+a_0$ deb belgilaymiz."
      }
     },
     {
@@ -321,6 +384,11 @@ window.LESSONS[1] = {
        "Divisor",
        "Rule",
        "Example"
+      ],
+      "uz": [
+       "Boʻluvchi",
+       "Alomat",
+       "Misol"
       ]
      },
      "rows": {
@@ -407,6 +475,48 @@ window.LESSONS[1] = {
         "divisible by both $2$ and $3$",
         "$114$ ✓"
        ]
+      ],
+      "uz": [
+       [
+        "$2$",
+        "oxirgi raqam juft",
+        "$346$ ✓, $579$ ✗"
+       ],
+       [
+        "$4$",
+        "oxirgi ikki raqam $4$ ga karrali son hosil qiladi",
+        "$1332\\to32$ ✓"
+       ],
+       [
+        "$8$",
+        "oxirgi uch raqam $8$ ga karrali son hosil qiladi",
+        "$5312\\to312=8\\cdot39$ ✓"
+       ],
+       [
+        "$5$",
+        "oxirgi raqam $0$ yoki $5$",
+        "$720$ ✓"
+       ],
+       [
+        "$3$",
+        "$3\\mid S(N)$",
+        "$2025\\to 9$ ✓"
+       ],
+       [
+        "$9$",
+        "$9\\mid S(N)$",
+        "$2025\\to 9$ ✓"
+       ],
+       [
+        "$11$",
+        "$11$ raqamlarning ishorali yigʻindisini boʻladi",
+        "$1001\\to1-0+0-1=0$ ✓"
+       ],
+       [
+        "$6$",
+        "ham $2$ ga, ham $3$ ga boʻlinadi",
+        "$114$ ✓"
+       ]
       ]
      }
     },
@@ -414,68 +524,79 @@ window.LESSONS[1] = {
      "t": "thm",
      "name": {
       "ru": "Признак делимости на 9 (и на 3)",
-      "en": "The rule for 9 (and for 3)"
+      "en": "The rule for 9 (and for 3)",
+      "uz": "$9$ ga (va $3$ ga) boʻlinish alomati"
      },
      "text": {
       "ru": "$9\\mid N$ тогда и только тогда, когда $9\\mid S(N)$. То же самое верно для $3$.",
-      "en": "$9\\mid N$ if and only if $9\\mid S(N)$. The same holds for $3$."
+      "en": "$9\\mid N$ if and only if $9\\mid S(N)$. The same holds for $3$.",
+      "uz": "$9\\mid N$ boʻlishi uchun $9\\mid S(N)$ boʻlishi zarur va yetarli. $3$ uchun ham xuddi shunday."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Заметим, что $10^j-1=\\underbrace{99\\ldots9}_{j}=9\\cdot\\underbrace{11\\ldots1}_{j}$ делится на $9$ при любом $j\\ge1$. Тогда $$N-S(N)=\\sum_{j\\ge1} a_j\\left(10^{j}-1\\right),$$ и каждое слагаемое справа делится на $9$. Значит $9\\mid N-S(N)$, и потому $9\\mid N$ равносильно $9\\mid S(N)$. Для $3$ рассуждение то же, так как $3\\mid 10^j-1$.",
-      "en": "Observe that $10^j-1=\\underbrace{99\\ldots9}_{j}=9\\cdot\\underbrace{11\\ldots1}_{j}$ is divisible by $9$ for every $j\\ge1$. Then $$N-S(N)=\\sum_{j\\ge1} a_j\\left(10^{j}-1\\right),$$ and every term on the right is divisible by $9$. So $9\\mid N-S(N)$, and therefore $9\\mid N$ is equivalent to $9\\mid S(N)$. For $3$ the argument is identical, since $3\\mid 10^j-1$."
+      "en": "Observe that $10^j-1=\\underbrace{99\\ldots9}_{j}=9\\cdot\\underbrace{11\\ldots1}_{j}$ is divisible by $9$ for every $j\\ge1$. Then $$N-S(N)=\\sum_{j\\ge1} a_j\\left(10^{j}-1\\right),$$ and every term on the right is divisible by $9$. So $9\\mid N-S(N)$, and therefore $9\\mid N$ is equivalent to $9\\mid S(N)$. For $3$ the argument is identical, since $3\\mid 10^j-1$.",
+      "uz": "Har bir $j\\ge1$ uchun $10^j-1=\\underbrace{99\\ldots9}_{j}=9\\cdot\\underbrace{11\\ldots1}_{j}$ soni $9$ ga boʻlinishini kuzatamiz. U holda $$N-S(N)=\\sum_{j\\ge1} a_j\\left(10^{j}-1\\right),$$ va oʻng tomondagi har bir had $9$ ga boʻlinadi. Demak $9\\mid N-S(N)$, shuning uchun $9\\mid N$ va $9\\mid S(N)$ teng kuchli. $3$ uchun mulohaza aynan shunday, chunki $3\\mid 10^j-1$."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Признак делимости на 11",
-      "en": "The rule for 11"
+      "en": "The rule for 11",
+      "uz": "$11$ ga boʻlinish alomati"
      },
      "text": {
       "ru": "$11\\mid N$ тогда и только тогда, когда $11$ делит $A(N)=a_0-a_1+a_2-\\cdots$",
-      "en": "$11\\mid N$ if and only if $11$ divides $A(N)=a_0-a_1+a_2-\\cdots$"
+      "en": "$11\\mid N$ if and only if $11$ divides $A(N)=a_0-a_1+a_2-\\cdots$",
+      "uz": "$11\\mid N$ boʻlishi uchun $11$ soni $A(N)=a_0-a_1+a_2-\\cdots$ ni boʻlishi zarur va yetarli."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Воспользуемся тождеством $x^j-y^j=(x-y)\\left(x^{j-1}+x^{j-2}y+\\cdots+y^{j-1}\\right)$, из которого следует, что $x-y$ всегда делит $x^j-y^j$. Возьмём $x=10$, $y=-1$: тогда $x-y=11$ делит $10^{j}-(-1)^{j}$. Поэтому $$N-A(N)=\\sum_{j\\ge0}a_j\\left(10^{j}-(-1)^{j}\\right)$$ делится на $11$, откуда и следует утверждение.",
-      "en": "Use the identity $x^j-y^j=(x-y)\\left(x^{j-1}+x^{j-2}y+\\cdots+y^{j-1}\\right)$, which shows that $x-y$ always divides $x^j-y^j$. Take $x=10$, $y=-1$: then $x-y=11$ divides $10^{j}-(-1)^{j}$. Hence $$N-A(N)=\\sum_{j\\ge0}a_j\\left(10^{j}-(-1)^{j}\\right)$$ is divisible by $11$, and the claim follows."
+      "en": "Use the identity $x^j-y^j=(x-y)\\left(x^{j-1}+x^{j-2}y+\\cdots+y^{j-1}\\right)$, which shows that $x-y$ always divides $x^j-y^j$. Take $x=10$, $y=-1$: then $x-y=11$ divides $10^{j}-(-1)^{j}$. Hence $$N-A(N)=\\sum_{j\\ge0}a_j\\left(10^{j}-(-1)^{j}\\right)$$ is divisible by $11$, and the claim follows.",
+      "uz": "$x^j-y^j=(x-y)\\left(x^{j-1}+x^{j-2}y+\\cdots+y^{j-1}\\right)$ ayniyatidan foydalanamiz; u $x-y$ har doim $x^j-y^j$ ni boʻlishini koʻrsatadi. $x=10$, $y=-1$ olamiz: u holda $x-y=11$ soni $10^{j}-(-1)^{j}$ ni boʻladi. Demak $$N-A(N)=\\sum_{j\\ge0}a_j\\left(10^{j}-(-1)^{j}\\right)$$ soni $11$ ga boʻlinadi, tasdiq esa shundan kelib chiqadi."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Тот же приём даёт признак для $7$, $11$ и $13$ сразу: $1001=7\\cdot11\\cdot13$, поэтому число делится на $7$, $11$ или $13$ тогда же, когда и знакочередующаяся сумма его трёхзначных групп справа налево.",
-      "en": "The same idea gives a rule for $7$, $11$ and $13$ at once: $1001=7\\cdot11\\cdot13$, so a number is divisible by $7$, $11$ or $13$ exactly when the alternating sum of its three-digit groups, taken from the right, is."
+      "en": "The same idea gives a rule for $7$, $11$ and $13$ at once: $1001=7\\cdot11\\cdot13$, so a number is divisible by $7$, $11$ or $13$ exactly when the alternating sum of its three-digit groups, taken from the right, is.",
+      "uz": "Xuddi shu gʻoya $7$, $11$ va $13$ uchun bir vaqtda alomat beradi: $1001=7\\cdot11\\cdot13$, demak son $7$, $11$ yoki $13$ ga aynan oʻngdan boshlab olingan uch xonali guruhlarining ishorali yigʻindisi shu songa boʻlinganda boʻlinadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Правила по последним цифрам",
-      "en": "Rules that read the last digits"
+      "en": "Rules that read the last digits",
+      "uz": "Oxirgi raqamlarni oʻqiydigan alomatlar"
      },
      "text": {
       "ru": "Для любого $k\\ge1$ и любого числа $N$ с «хвостом» $T_k$ из последних $k$ цифр $$2^{k}\\mid N\\ \\Longleftrightarrow\\ 2^{k}\\mid T_k ,\\qquad 5^{k}\\mid N\\ \\Longleftrightarrow\\ 5^{k}\\mid T_k .$$ В частности: на $2$ и на $5$ смотрит последняя цифра, на $4$ и на $25$ — две последние, на $8$ и на $125$ — три последние.",
-      "en": "For every $k\\ge1$ and every number $N$ with tail $T_k$ formed by its last $k$ digits, $$2^{k}\\mid N\\ \\Longleftrightarrow\\ 2^{k}\\mid T_k ,\\qquad 5^{k}\\mid N\\ \\Longleftrightarrow\\ 5^{k}\\mid T_k .$$ In particular $2$ and $5$ read the last digit, $4$ and $25$ the last two, $8$ and $125$ the last three."
+      "en": "For every $k\\ge1$ and every number $N$ with tail $T_k$ formed by its last $k$ digits, $$2^{k}\\mid N\\ \\Longleftrightarrow\\ 2^{k}\\mid T_k ,\\qquad 5^{k}\\mid N\\ \\Longleftrightarrow\\ 5^{k}\\mid T_k .$$ In particular $2$ and $5$ read the last digit, $4$ and $25$ the last two, $8$ and $125$ the last three.",
+      "uz": "Har bir $k\\ge1$ va oxirgi $k$ ta raqamidan tuzilgan $T_k$ dumga ega har bir $N$ son uchun $$2^{k}\\mid N\\ \\Longleftrightarrow\\ 2^{k}\\mid T_k ,\\qquad 5^{k}\\mid N\\ \\Longleftrightarrow\\ 5^{k}\\mid T_k .$$ Xususan, $2$ va $5$ oxirgi bitta raqamni, $4$ va $25$ oxirgi ikkitasini, $8$ va $125$ oxirgi uchtasini oʻqiydi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Запишем число, отделив хвост: $$N=10^{k}\\,q+T_k ,$$ где $q$ — то, что осталось слева.\n\nКлючевое наблюдение: $$10^{k}=2^{k}\\cdot5^{k} ,$$ поэтому $10^{k}$ делится и на $2^{k}$, и на $5^{k}$. Значит первое слагаемое кратно каждому из этих чисел, и $$N\\equiv T_k \\pmod{2^{k}},\\qquad N\\equiv T_k \\pmod{5^{k}} .$$\n\nОтсюда обе равносильности. $\\blacksquare$",
-      "en": "Split off the tail: $$N=10^{k}\\,q+T_k ,$$ where $q$ is whatever stands to the left.\n\nThe key observation is $$10^{k}=2^{k}\\cdot5^{k} ,$$ so $10^{k}$ is divisible by both $2^{k}$ and $5^{k}$. Hence the first term is a multiple of each, and $$N\\equiv T_k \\pmod{2^{k}},\\qquad N\\equiv T_k \\pmod{5^{k}} .$$\n\nBoth equivalences follow. $\\blacksquare$"
+      "en": "Split off the tail: $$N=10^{k}\\,q+T_k ,$$ where $q$ is whatever stands to the left.\n\nThe key observation is $$10^{k}=2^{k}\\cdot5^{k} ,$$ so $10^{k}$ is divisible by both $2^{k}$ and $5^{k}$. Hence the first term is a multiple of each, and $$N\\equiv T_k \\pmod{2^{k}},\\qquad N\\equiv T_k \\pmod{5^{k}} .$$\n\nBoth equivalences follow. $\\blacksquare$",
+      "uz": "Dumni ajratamiz: $$N=10^{k}\\,q+T_k ,$$ bu yerda $q$ — chapda turgan qism.\n\nAsosiy kuzatish: $$10^{k}=2^{k}\\cdot5^{k} ,$$ demak $10^{k}$ ham $2^{k}$ ga, ham $5^{k}$ ga boʻlinadi. Shuning uchun birinchi had ularning har biriga karrali va $$N\\equiv T_k \\pmod{2^{k}},\\qquad N\\equiv T_k \\pmod{5^{k}} .$$\n\nIkkala teng kuchlilik ham shundan kelib chiqadi. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Делится ли $37\\,516$ на $4$? А на $8$?",
-      "en": "Is $37\\,516$ divisible by $4$? By $8$?"
+      "en": "Is $37\\,516$ divisible by $4$? By $8$?",
+      "uz": "$37\\,516$ soni $4$ ga boʻlinadimi? $8$ ga-chi?"
      },
      "steps": {
       "ru": [
@@ -487,36 +608,46 @@ window.LESSONS[1] = {
        "For $4$ read the last two digits: $16=4\\cdot4$ — divisible ✓",
        "For $8$ read the last three: $516=8\\cdot64+4$ — not divisible ✗",
        "Check: $37\\,516=4\\cdot9379$ and $9379$ is odd, so $8$ indeed does not divide it."
+      ],
+      "uz": [
+       "$4$ uchun oxirgi ikki raqamni oʻqiymiz: $16=4\\cdot4$ — boʻlinadi ✓",
+       "$8$ uchun oxirgi uchtasini: $516=8\\cdot64+4$ — boʻlinmaydi ✗",
+       "Tekshirish: $37\\,516=4\\cdot9379$, $9379$ esa toq, demak $8$ haqiqatan ham uni boʻlmaydi."
       ]
      },
      "ans": {
       "ru": "На $4$ делится, на $8$ — нет.",
-      "en": "Divisible by $4$, not by $8$."
+      "en": "Divisible by $4$, not by $8$.",
+      "uz": "$4$ ga boʻlinadi, $8$ ga boʻlinmaydi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Признак для 7, 11 и 13 сразу",
-      "en": "One rule for 7, 11 and 13"
+      "en": "One rule for 7, 11 and 13",
+      "uz": "$7$, $11$ va $13$ uchun yagona alomat"
      },
      "text": {
       "ru": "Разобьём десятичную запись на группы по три цифры справа налево и обозначим их значения $g_0,g_1,g_2,\\dots$ Тогда для $m\\in\\{7,11,13\\}$ $$m\\mid N\\quad\\Longleftrightarrow\\quad m\\ \\big|\\ g_0-g_1+g_2-\\cdots$$",
-      "en": "Split the decimal expansion into three-digit groups from the right, with values $g_0,g_1,g_2,\\dots$ Then for $m\\in\\{7,11,13\\}$ $$m\\mid N\\quad\\Longleftrightarrow\\quad m\\ \\big|\\ g_0-g_1+g_2-\\cdots$$"
+      "en": "Split the decimal expansion into three-digit groups from the right, with values $g_0,g_1,g_2,\\dots$ Then for $m\\in\\{7,11,13\\}$ $$m\\mid N\\quad\\Longleftrightarrow\\quad m\\ \\big|\\ g_0-g_1+g_2-\\cdots$$",
+      "uz": "Oʻnlik yozuvni oʻngdan boshlab uch xonali guruhlarga ajratamiz, ularning qiymatlari $g_0,g_1,g_2,\\dots$ boʻlsin. U holda $m\\in\\{7,11,13\\}$ uchun $$m\\mid N\\quad\\Longleftrightarrow\\quad m\\ \\big|\\ g_0-g_1+g_2-\\cdots$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "По построению групп $$N=\\sum_{j\\ge0}g_j\\cdot1000^{\\,j} .$$\n\nКлючевое разложение: $$1001=7\\cdot11\\cdot13 ,$$ поэтому $1000\\equiv-1$ по каждому из модулей $7$, $11$, $13$. Возводя в степень, $$1000^{\\,j}\\equiv(-1)^{j} ,$$ откуда $$N\\equiv\\sum_{j\\ge0}(-1)^{j}g_j=g_0-g_1+g_2-\\cdots$$ по каждому из трёх модулей. $\\blacksquare$",
-      "en": "By construction $$N=\\sum_{j\\ge0}g_j\\cdot1000^{\\,j} .$$\n\nThe key factorisation is $$1001=7\\cdot11\\cdot13 ,$$ so $1000\\equiv-1$ modulo each of $7$, $11$, $13$. Raising to powers, $$1000^{\\,j}\\equiv(-1)^{j} ,$$ hence $$N\\equiv g_0-g_1+g_2-\\cdots$$ modulo each of the three. $\\blacksquare$"
+      "en": "By construction $$N=\\sum_{j\\ge0}g_j\\cdot1000^{\\,j} .$$\n\nThe key factorisation is $$1001=7\\cdot11\\cdot13 ,$$ so $1000\\equiv-1$ modulo each of $7$, $11$, $13$. Raising to powers, $$1000^{\\,j}\\equiv(-1)^{j} ,$$ hence $$N\\equiv g_0-g_1+g_2-\\cdots$$ modulo each of the three. $\\blacksquare$",
+      "uz": "Tuzilishiga koʻra $$N=\\sum_{j\\ge0}g_j\\cdot1000^{\\,j} .$$\n\nAsosiy ajratma: $$1001=7\\cdot11\\cdot13 ,$$ demak $7$, $11$, $13$ modullarining har biri boʻyicha $1000\\equiv-1$. Darajaga koʻtarib, $$1000^{\\,j}\\equiv(-1)^{j} ,$$ shuning uchun uchala modul boʻyicha ham $$N\\equiv g_0-g_1+g_2-\\cdots$$ $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Проверьте, делится ли $1\\,234\\,569$ на $7$, на $11$ и на $13$.",
-      "en": "Test whether $1\\,234\\,569$ is divisible by $7$, by $11$ and by $13$."
+      "en": "Test whether $1\\,234\\,569$ is divisible by $7$, by $11$ and by $13$.",
+      "uz": "$1\\,234\\,569$ soni $7$ ga, $11$ ga va $13$ ga boʻlinishini tekshiring."
      },
      "steps": {
       "ru": [
@@ -532,11 +663,19 @@ window.LESSONS[1] = {
        "$336=7\\cdot48$, so it is divisible by $7$ ✓",
        "$336=11\\cdot30+6$, not divisible by $11$ ✗",
        "$336=13\\cdot25+11$, not divisible by $13$ ✗"
+      ],
+      "uz": [
+       "Oʻngdan uchtalab guruhlar: $569$, $234$, $1$.",
+       "Ishorali yigʻindi: $569-234+1=336$.",
+       "$336=7\\cdot48$, demak $7$ ga boʻlinadi ✓",
+       "$336=11\\cdot30+6$, $11$ ga boʻlinmaydi ✗",
+       "$336=13\\cdot25+11$, $13$ ga boʻlinmaydi ✗"
       ]
      },
      "ans": {
       "ru": "Делится на $7$; на $11$ и $13$ — нет.",
-      "en": "Divisible by $7$; not by $11$ or $13$."
+      "en": "Divisible by $7$; not by $11$ or $13$.",
+      "uz": "$7$ ga boʻlinadi; $11$ va $13$ ga boʻlinmaydi."
      }
     }
    ]
@@ -544,54 +683,63 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "НОД и алгоритм Евклида",
-    "en": "GCD and the Euclidean algorithm"
+    "en": "GCD and the Euclidean algorithm",
+    "uz": "EKUB va Yevklid algoritmi"
    },
    "blocks": [
     {
      "t": "def",
      "name": {
       "ru": "Наибольший общий делитель",
-      "en": "Greatest common divisor"
+      "en": "Greatest common divisor",
+      "uz": "Eng katta umumiy boʻluvchi"
      },
      "text": {
       "ru": "$\\gcd(a,b)$ — наибольшее целое число, которое делит и $a$, и $b$ (при $a,b$ не равных нулю одновременно). Если $\\gcd(a,b)=1$, числа называют **взаимно простыми**.",
-      "en": "$\\gcd(a,b)$ is the largest integer dividing both $a$ and $b$ (with $a,b$ not both zero). If $\\gcd(a,b)=1$ the numbers are called **coprime**."
+      "en": "$\\gcd(a,b)$ is the largest integer dividing both $a$ and $b$ (with $a,b$ not both zero). If $\\gcd(a,b)=1$ the numbers are called **coprime**.",
+      "uz": "$\\gcd(a,b)$ — bu $a$ ni ham, $b$ ni ham boʻladigan eng katta butun son ($a,b$ ikkalasi ham nol emas). Agar $\\gcd(a,b)=1$ boʻlsa, sonlar **oʻzaro tub** deyiladi."
      }
     },
     {
      "t": "lemma",
      "name": {
       "ru": "Ключевая лемма",
-      "en": "The key lemma"
+      "en": "The key lemma",
+      "uz": "Asosiy lemma"
      },
      "text": {
       "ru": "Если $a=bq+r$, то $\\gcd(a,b)=\\gcd(b,r)$.",
-      "en": "If $a=bq+r$ then $\\gcd(a,b)=\\gcd(b,r)$."
+      "en": "If $a=bq+r$ then $\\gcd(a,b)=\\gcd(b,r)$.",
+      "uz": "Agar $a=bq+r$ boʻlsa, $\\gcd(a,b)=\\gcd(b,r)$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Докажем, что у пар $(a,b)$ и $(b,r)$ **одни и те же** общие делители. Пусть $d\\mid a$ и $d\\mid b$. Тогда $d\\mid a-bq=r$, значит $d$ — общий делитель $b$ и $r$. Обратно, пусть $d\\mid b$ и $d\\mid r$. Тогда $d\\mid bq+r=a$, значит $d$ — общий делитель $a$ и $b$. Множества общих делителей совпадают, поэтому совпадают и их наибольшие элементы.",
-      "en": "We show that the pairs $(a,b)$ and $(b,r)$ have **exactly the same** common divisors. Suppose $d\\mid a$ and $d\\mid b$. Then $d\\mid a-bq=r$, so $d$ is a common divisor of $b$ and $r$. Conversely, suppose $d\\mid b$ and $d\\mid r$. Then $d\\mid bq+r=a$, so $d$ is a common divisor of $a$ and $b$. The two sets of common divisors coincide, hence so do their largest elements."
+      "en": "We show that the pairs $(a,b)$ and $(b,r)$ have **exactly the same** common divisors. Suppose $d\\mid a$ and $d\\mid b$. Then $d\\mid a-bq=r$, so $d$ is a common divisor of $b$ and $r$. Conversely, suppose $d\\mid b$ and $d\\mid r$. Then $d\\mid bq+r=a$, so $d$ is a common divisor of $a$ and $b$. The two sets of common divisors coincide, hence so do their largest elements.",
+      "uz": "$(a,b)$ va $(b,r)$ juftliklarining umumiy boʻluvchilari **aynan bir xil** ekanini koʻrsatamiz. $d\\mid a$ va $d\\mid b$ boʻlsin. U holda $d\\mid a-bq=r$, demak $d$ — $b$ va $r$ ning umumiy boʻluvchisi. Aksincha, $d\\mid b$ va $d\\mid r$ boʻlsin. U holda $d\\mid bq+r=a$, demak $d$ — $a$ va $b$ ning umumiy boʻluvchisi. Umumiy boʻluvchilar toʻplamlari ustma-ust tushadi, demak ularning eng katta elementlari ham."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Алгоритм Евклида",
-      "en": "The Euclidean algorithm"
+      "en": "The Euclidean algorithm",
+      "uz": "Yevklid algoritmi"
      },
      "text": {
       "ru": "Лемма превращается в алгоритм: заменяем пару $(a,b)$ на $(b,\\,a\\bmod b)$ и повторяем, пока второе число не станет нулём. Последнее ненулевое число и есть НОД. Остатки строго убывают, поэтому процесс конечен.",
-      "en": "The lemma turns into an algorithm: replace the pair $(a,b)$ by $(b,\\,a\\bmod b)$ and repeat until the second number is zero. The last non-zero number is the GCD. The remainders strictly decrease, so the process terminates."
+      "en": "The lemma turns into an algorithm: replace the pair $(a,b)$ by $(b,\\,a\\bmod b)$ and repeat until the second number is zero. The last non-zero number is the GCD. The remainders strictly decrease, so the process terminates.",
+      "uz": "Lemma algoritmga aylanadi: $(a,b)$ juftlikni $(b,\\,a\\bmod b)$ bilan almashtiring va ikkinchi son nolga aylanguncha takrorlang. Oxirgi noldan farqli son — EKUB. Qoldiqlar qatʼiy kamayadi, demak jarayon tugaydi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите $\\gcd(1071,462)$.",
-      "en": "Find $\\gcd(1071,462)$."
+      "en": "Find $\\gcd(1071,462)$.",
+      "uz": "$\\gcd(1071,462)$ ni toping."
      },
      "steps": {
       "ru": [
@@ -603,6 +751,11 @@ window.LESSONS[1] = {
        "$1071=2\\cdot462+147$",
        "$462=3\\cdot147+21$",
        "$147=7\\cdot21+0$ — the remainder is zero, so we stop."
+      ],
+      "uz": [
+       "$1071=2\\cdot462+147$",
+       "$462=3\\cdot147+21$",
+       "$147=7\\cdot21+0$ — qoldiq nol, toʻxtaymiz."
       ]
      },
      "ans": {
@@ -614,25 +767,29 @@ window.LESSONS[1] = {
      "t": "thm",
      "name": {
       "ru": "Соотношение Безу",
-      "en": "Bézout's identity"
+      "en": "Bézout's identity",
+      "uz": "Bezu ayniyati"
      },
      "text": {
       "ru": "Для любых целых $a,b$ (не равных нулю одновременно) существуют целые $x,y$ такие, что $$ax+by=\\gcd(a,b).$$ Более того, $\\gcd(a,b)$ — **наименьшее** положительное число вида $ax+by$.",
-      "en": "For any integers $a,b$ (not both zero) there exist integers $x,y$ with $$ax+by=\\gcd(a,b).$$ Moreover $\\gcd(a,b)$ is the **smallest** positive number of the form $ax+by$."
+      "en": "For any integers $a,b$ (not both zero) there exist integers $x,y$ with $$ax+by=\\gcd(a,b).$$ Moreover $\\gcd(a,b)$ is the **smallest** positive number of the form $ax+by$.",
+      "uz": "Istalgan $a,b$ butun sonlar uchun (ikkalasi ham nol emas) $$ax+by=\\gcd(a,b)$$ boʻladigan butun $x,y$ mavjud. Bundan tashqari $\\gcd(a,b)$ — $ax+by$ koʻrinishidagi **eng kichik** musbat son."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $d$ — наименьшее положительное число вида $ax+by$, скажем $d=ax_0+by_0$. Разделим $a$ на $d$ с остатком: $a=dq+r$, $0\\le r<d$. Тогда $$r=a-dq=a-(ax_0+by_0)q=a(1-x_0q)+b(-y_0q),$$ то есть $r$ тоже имеет вид $ax+by$. Но $0\\le r<d$, а $d$ — наименьшее **положительное** такое число, значит $r=0$ и $d\\mid a$. Точно так же $d\\mid b$. Итак, $d$ — общий делитель. С другой стороны, любой общий делитель $c$ чисел $a,b$ делит $ax_0+by_0=d$, поэтому $c\\le d$. Значит $d=\\gcd(a,b)$.",
-      "en": "Let $d$ be the smallest positive number of the form $ax+by$, say $d=ax_0+by_0$. Divide $a$ by $d$ with remainder: $a=dq+r$, $0\\le r<d$. Then $$r=a-dq=a-(ax_0+by_0)q=a(1-x_0q)+b(-y_0q),$$ so $r$ also has the form $ax+by$. But $0\\le r<d$ and $d$ is the smallest **positive** such number, so $r=0$ and $d\\mid a$. In the same way $d\\mid b$. So $d$ is a common divisor. Conversely any common divisor $c$ of $a,b$ divides $ax_0+by_0=d$, hence $c\\le d$. Therefore $d=\\gcd(a,b)$."
+      "en": "Let $d$ be the smallest positive number of the form $ax+by$, say $d=ax_0+by_0$. Divide $a$ by $d$ with remainder: $a=dq+r$, $0\\le r<d$. Then $$r=a-dq=a-(ax_0+by_0)q=a(1-x_0q)+b(-y_0q),$$ so $r$ also has the form $ax+by$. But $0\\le r<d$ and $d$ is the smallest **positive** such number, so $r=0$ and $d\\mid a$. In the same way $d\\mid b$. So $d$ is a common divisor. Conversely any common divisor $c$ of $a,b$ divides $ax_0+by_0=d$, hence $c\\le d$. Therefore $d=\\gcd(a,b)$.",
+      "uz": "$d$ — $ax+by$ koʻrinishidagi eng kichik musbat son boʻlsin, $d=ax_0+by_0$. $a$ ni $d$ ga qoldiqli boʻlamiz: $a=dq+r$, $0\\le r<d$. U holda $$r=a-dq=a-(ax_0+by_0)q=a(1-x_0q)+b(-y_0q),$$ demak $r$ ham $ax+by$ koʻrinishida. Ammo $0\\le r<d$ va $d$ — shunday koʻrinishdagi eng kichik **musbat** son, demak $r=0$ va $d\\mid a$. Xuddi shunday $d\\mid b$. Demak $d$ — umumiy boʻluvchi. Aksincha, $a,b$ ning istalgan umumiy boʻluvchisi $c$ soni $ax_0+by_0=d$ ni boʻladi, demak $c\\le d$. Shuning uchun $d=\\gcd(a,b)$."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Запишите $\\gcd(1071,462)$ в виде $1071x+462y$.",
-      "en": "Write $\\gcd(1071,462)$ in the form $1071x+462y$."
+      "en": "Write $\\gcd(1071,462)$ in the form $1071x+462y$.",
+      "uz": "$\\gcd(1071,462)$ ni $1071x+462y$ koʻrinishida yozing."
      },
      "steps": {
       "ru": [
@@ -646,6 +803,12 @@ window.LESSONS[1] = {
        "From the second step: $21=462-3\\cdot147$.",
        "Substitute: $21=462-3(1071-2\\cdot462)=7\\cdot462-3\\cdot1071$.",
        "Check: $7\\cdot462=3234$, $3\\cdot1071=3213$, difference $21$ ✓"
+      ],
+      "uz": [
+       "Algoritmning birinchi qadamidan: $147=1071-2\\cdot462$.",
+       "Ikkinchi qadamdan: $21=462-3\\cdot147$.",
+       "Oʻrniga qoʻyamiz: $21=462-3(1071-2\\cdot462)=7\\cdot462-3\\cdot1071$.",
+       "Tekshirish: $7\\cdot462=3234$, $3\\cdot1071=3213$, ayirma $21$ ✓"
       ]
      },
      "ans": {
@@ -657,50 +820,58 @@ window.LESSONS[1] = {
      "t": "note",
      "text": {
       "ru": "Из Безу мгновенно следует **лемма Евклида**: если $p$ — простое и $p\\mid ab$, то $p\\mid a$ или $p\\mid b$. Действительно, если $p\\nmid a$, то $\\gcd(p,a)=1$, значит $px+ay=1$; умножив на $b$, получаем $pbx+aby=b$, и оба слагаемых слева делятся на $p$.",
-      "en": "Bézout gives **Euclid's lemma** at once: if $p$ is prime and $p\\mid ab$ then $p\\mid a$ or $p\\mid b$. Indeed, if $p\\nmid a$ then $\\gcd(p,a)=1$, so $px+ay=1$; multiplying by $b$ gives $pbx+aby=b$, and both terms on the left are divisible by $p$."
+      "en": "Bézout gives **Euclid's lemma** at once: if $p$ is prime and $p\\mid ab$ then $p\\mid a$ or $p\\mid b$. Indeed, if $p\\nmid a$ then $\\gcd(p,a)=1$, so $px+ay=1$; multiplying by $b$ gives $pbx+aby=b$, and both terms on the left are divisible by $p$.",
+      "uz": "Bezu darhol **Yevklid lemmasini** beradi: agar $p$ tub boʻlsa va $p\\mid ab$ boʻlsa, u holda $p\\mid a$ yoki $p\\mid b$. Haqiqatan, agar $p\\nmid a$ boʻlsa, $\\gcd(p,a)=1$, demak $px+ay=1$; buni $b$ ga koʻpaytirsak $pbx+aby=b$, chapdagi ikkala had ham $p$ ga boʻlinadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Свойства НОД",
-      "en": "Properties of the gcd"
+      "en": "Properties of the gcd",
+      "uz": "EKUB xossalari"
      },
      "text": {
       "ru": "Для целых $a,b$ (не равных нулю одновременно) и натурального $m$: $\\;$ (1) $\\gcd(a,b)=\\gcd(b,a)=\\gcd(|a|,|b|)$; $\\;$ (2) $\\gcd(a+kb,\\ b)=\\gcd(a,b)$ при любом целом $k$; $\\;$ (3) $\\gcd(ma,mb)=m\\gcd(a,b)$; $\\;$ (4) если $d=\\gcd(a,b)$, то $\\gcd\\!\\left(\\tfrac ad,\\tfrac bd\\right)=1$.",
-      "en": "For integers $a,b$ (not both zero) and a positive integer $m$: $\\;$ (1) $\\gcd(a,b)=\\gcd(b,a)=\\gcd(|a|,|b|)$; $\\;$ (2) $\\gcd(a+kb,\\ b)=\\gcd(a,b)$ for every integer $k$; $\\;$ (3) $\\gcd(ma,mb)=m\\gcd(a,b)$; $\\;$ (4) if $d=\\gcd(a,b)$ then $\\gcd\\!\\left(\\tfrac ad,\\tfrac bd\\right)=1$."
+      "en": "For integers $a,b$ (not both zero) and a positive integer $m$: $\\;$ (1) $\\gcd(a,b)=\\gcd(b,a)=\\gcd(|a|,|b|)$; $\\;$ (2) $\\gcd(a+kb,\\ b)=\\gcd(a,b)$ for every integer $k$; $\\;$ (3) $\\gcd(ma,mb)=m\\gcd(a,b)$; $\\;$ (4) if $d=\\gcd(a,b)$ then $\\gcd\\!\\left(\\tfrac ad,\\tfrac bd\\right)=1$.",
+      "uz": "$a,b$ butun sonlar (ikkalasi ham nol emas) va musbat butun $m$ uchun: $\\;$ (1) $\\gcd(a,b)=\\gcd(b,a)=\\gcd(|a|,|b|)$; $\\;$ (2) har bir butun $k$ uchun $\\gcd(a+kb,\\ b)=\\gcd(a,b)$; $\\;$ (3) $\\gcd(ma,mb)=m\\gcd(a,b)$; $\\;$ (4) agar $d=\\gcd(a,b)$ boʻlsa, $\\gcd\\!\\left(\\tfrac ad,\\tfrac bd\\right)=1$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**(1)** Делители числа и его модуля совпадают, а определение НОД симметрично.\n\n**(2)** Это ключевая лемма в чистом виде: если $d\\mid a$ и $d\\mid b$, то $d\\mid a+kb$; обратно, если $d\\mid a+kb$ и $d\\mid b$, то $d\\mid(a+kb)-kb=a$. Значит пары $(a,b)$ и $(a+kb,\\,b)$ имеют одни и те же общие делители, а с ними и один и тот же наибольший.\n\n**(3)** По соотношению Безу $\\gcd(a,b)$ — наименьшее положительное число вида $ax+by$. Тогда наименьшее положительное число вида $(ma)x+(mb)y=m(ax+by)$ равно $m\\gcd(a,b)$.\n\n**(4)** Применим (3) с $m=d$ к числам $\\tfrac ad$ и $\\tfrac bd$: $$d=\\gcd(a,b)=\\gcd\\left(d\\cdot\\tfrac ad,\\ d\\cdot\\tfrac bd\\right)=d\\cdot\\gcd\\left(\\tfrac ad,\\tfrac bd\\right),$$ откуда $\\gcd\\left(\\tfrac ad,\\tfrac bd\\right)=1$. $\\blacksquare$",
-      "en": "**(1)** A number and its absolute value have the same divisors, and the definition is symmetric.\n\n**(2)** This is the key lemma in bare form: if $d\\mid a$ and $d\\mid b$ then $d\\mid a+kb$; conversely if $d\\mid a+kb$ and $d\\mid b$ then $d\\mid(a+kb)-kb=a$. So the pairs $(a,b)$ and $(a+kb,\\,b)$ have exactly the same common divisors, hence the same greatest one.\n\n**(3)** By Bézout, $\\gcd(a,b)$ is the least positive number of the form $ax+by$. The least positive number of the form $(ma)x+(mb)y=m(ax+by)$ is then $m\\gcd(a,b)$.\n\n**(4)** Apply (3) with $m=d$ to $\\tfrac ad$ and $\\tfrac bd$: $$d=\\gcd(a,b)=d\\cdot\\gcd\\left(\\tfrac ad,\\tfrac bd\\right),$$ so $\\gcd\\left(\\tfrac ad,\\tfrac bd\\right)=1$. $\\blacksquare$"
+      "en": "**(1)** A number and its absolute value have the same divisors, and the definition is symmetric.\n\n**(2)** This is the key lemma in bare form: if $d\\mid a$ and $d\\mid b$ then $d\\mid a+kb$; conversely if $d\\mid a+kb$ and $d\\mid b$ then $d\\mid(a+kb)-kb=a$. So the pairs $(a,b)$ and $(a+kb,\\,b)$ have exactly the same common divisors, hence the same greatest one.\n\n**(3)** By Bézout, $\\gcd(a,b)$ is the least positive number of the form $ax+by$. The least positive number of the form $(ma)x+(mb)y=m(ax+by)$ is then $m\\gcd(a,b)$.\n\n**(4)** Apply (3) with $m=d$ to $\\tfrac ad$ and $\\tfrac bd$: $$d=\\gcd(a,b)=d\\cdot\\gcd\\left(\\tfrac ad,\\tfrac bd\\right),$$ so $\\gcd\\left(\\tfrac ad,\\tfrac bd\\right)=1$. $\\blacksquare$",
+      "uz": "**(1)** Son va uning absolyut qiymati bir xil boʻluvchilarga ega, taʼrif esa simmetrik.\n\n**(2)** Bu asosiy lemmaning yalangʻoch koʻrinishi: agar $d\\mid a$ va $d\\mid b$ boʻlsa, $d\\mid a+kb$; aksincha, agar $d\\mid a+kb$ va $d\\mid b$ boʻlsa, $d\\mid(a+kb)-kb=a$. Demak $(a,b)$ va $(a+kb,\\,b)$ juftliklari aynan bir xil umumiy boʻluvchilarga, demak bir xil eng kattasiga ega.\n\n**(3)** Bezuga koʻra $\\gcd(a,b)$ — $ax+by$ koʻrinishidagi eng kichik musbat son. U holda $(ma)x+(mb)y=m(ax+by)$ koʻrinishidagi eng kichik musbat son $m\\gcd(a,b)$ boʻladi.\n\n**(4)** (3) ni $m=d$ bilan $\\tfrac ad$ va $\\tfrac bd$ ga qoʻllaymiz: $$d=\\gcd(a,b)=d\\cdot\\gcd\\left(\\tfrac ad,\\tfrac bd\\right),$$ demak $\\gcd\\left(\\tfrac ad,\\tfrac bd\\right)=1$. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Универсальное свойство НОД",
-      "en": "The universal property of the gcd"
+      "en": "The universal property of the gcd",
+      "uz": "EKUB ning universal xossasi"
      },
      "text": {
       "ru": "Каждый общий делитель чисел $a$ и $b$ делит $\\gcd(a,b)$. Иначе говоря, НОД — не просто самый большой из общих делителей, а тот, через который «проходят» все остальные.",
-      "en": "Every common divisor of $a$ and $b$ divides $\\gcd(a,b)$. In other words the gcd is not merely the largest common divisor: it is the one all the others pass through."
+      "en": "Every common divisor of $a$ and $b$ divides $\\gcd(a,b)$. In other words the gcd is not merely the largest common divisor: it is the one all the others pass through.",
+      "uz": "$a$ va $b$ ning har bir umumiy boʻluvchisi $\\gcd(a,b)$ ni boʻladi. Boshqacha aytganda, EKUB shunchaki eng katta umumiy boʻluvchi emas: u qolgan hammasi oʻtadigan boʻluvchi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $c\\mid a$ и $c\\mid b$. По соотношению Безу $$\\gcd(a,b)=ax+by $$ для некоторых целых $x,y$. Число $c$ делит оба слагаемых справа, значит делит и сумму, то есть $c\\mid\\gcd(a,b)$. $\\blacksquare$",
-      "en": "Let $c\\mid a$ and $c\\mid b$. Bézout gives $$\\gcd(a,b)=ax+by $$ for some integers $x,y$. Since $c$ divides both terms on the right, it divides the sum, i.e. $c\\mid\\gcd(a,b)$. $\\blacksquare$"
+      "en": "Let $c\\mid a$ and $c\\mid b$. Bézout gives $$\\gcd(a,b)=ax+by $$ for some integers $x,y$. Since $c$ divides both terms on the right, it divides the sum, i.e. $c\\mid\\gcd(a,b)$. $\\blacksquare$",
+      "uz": "$c\\mid a$ va $c\\mid b$ boʻlsin. Bezu baʼzi butun $x,y$ lar uchun $$\\gcd(a,b)=ax+by $$ ni beradi. $c$ oʻngdagi ikkala hadni ham boʻlgani uchun yigʻindini ham boʻladi, yaʼni $c\\mid\\gcd(a,b)$. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите $\\gcd\\left(n,\\ n+6\\right)$ для всех натуральных $n$.",
-      "en": "Find $\\gcd\\left(n,\\ n+6\\right)$ for every positive integer $n$."
+      "en": "Find $\\gcd\\left(n,\\ n+6\\right)$ for every positive integer $n$.",
+      "uz": "Har bir musbat butun $n$ uchun $\\gcd\\left(n,\\ n+6\\right)$ ni toping."
      },
      "steps": {
       "ru": [
@@ -714,6 +885,12 @@ window.LESSONS[1] = {
        "So the answer depends only on $n$ modulo $6$.",
        "If $6\\mid n$ the gcd is $6$; if $n$ is a multiple of $3$ but not $2$, it is $3$; a multiple of $2$ but not $3$, it is $2$; otherwise $1$.",
        "Check: $\\gcd(9,15)=3$ ✓ and $\\gcd(8,14)=2$ ✓"
+      ],
+      "uz": [
+       "(2) xossaga koʻra $\\gcd(n,\\ n+6)=\\gcd(n,\\ 6)$.",
+       "Demak javob faqat $n$ ning $6$ ga boʻlgandagi qoldigʻiga bogʻliq.",
+       "Agar $6\\mid n$ boʻlsa, EKUB $6$ ga teng; agar $n$ $3$ ga karrali boʻlib $2$ ga karrali boʻlmasa — $3$; $2$ ga karrali boʻlib $3$ ga karrali boʻlmasa — $2$; aks holda $1$.",
+       "Tekshirish: $\\gcd(9,15)=3$ ✓ va $\\gcd(8,14)=2$ ✓"
       ]
      },
      "ans": {
@@ -725,7 +902,8 @@ window.LESSONS[1] = {
      "t": "note",
      "text": {
       "ru": "Приём «$\\gcd(n,\\ n+k)=\\gcd(n,k)$» решает целый класс задач: разность двух чисел ограничивает их общий делитель. Например, соседние числа всегда взаимно просты, ведь $\\gcd(n,n+1)=\\gcd(n,1)=1$.",
-      "en": "The move \"$\\gcd(n,\\ n+k)=\\gcd(n,k)$\" settles a whole class of problems: the difference of two numbers bounds their common divisor. Consecutive integers are always coprime, since $\\gcd(n,n+1)=\\gcd(n,1)=1$."
+      "en": "The move \"$\\gcd(n,\\ n+k)=\\gcd(n,k)$\" settles a whole class of problems: the difference of two numbers bounds their common divisor. Consecutive integers are always coprime, since $\\gcd(n,n+1)=\\gcd(n,1)=1$.",
+      "uz": "«$\\gcd(n,\\ n+k)=\\gcd(n,k)$» usuli butun bir sinf masalani hal qiladi: ikki sonning ayirmasi ularning umumiy boʻluvchisini chegaralaydi. Ketma-ket kelgan butun sonlar har doim oʻzaro tub, chunki $\\gcd(n,n+1)=\\gcd(n,1)=1$."
      }
     }
    ]
@@ -733,57 +911,66 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Линейные уравнения в целых числах",
-    "en": "Linear equations in integers"
+    "en": "Linear equations in integers",
+    "uz": "Butun sonlardagi chiziqli tenglamalar"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "Соотношение Безу — не просто красивый факт: оно полностью решает вопрос о том, когда уравнение $ax+by=c$ имеет целые решения, и позволяет выписать их все.",
-      "en": "Bézout’s identity is not just a pretty fact: it settles completely when the equation $ax+by=c$ has integer solutions, and lets us write down every one of them."
+      "en": "Bézout’s identity is not just a pretty fact: it settles completely when the equation $ax+by=c$ has integer solutions, and lets us write down every one of them.",
+      "uz": "Bezu ayniyati shunchaki chiroyli fakt emas: u $ax+by=c$ tenglamasining butun yechimi qachon borligini toʻliq hal qiladi va ularning barchasini yozib berishga imkon yaratadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Критерий разрешимости",
-      "en": "When a solution exists"
+      "en": "When a solution exists",
+      "uz": "Yechim qachon mavjud"
      },
      "text": {
       "ru": "Пусть $a,b$ — целые, не равные нулю одновременно, и $d=\\gcd(a,b)$. Уравнение $$ax+by=c$$ имеет решение в целых числах **тогда и только тогда**, когда $d\\mid c$.",
-      "en": "Let $a,b$ be integers, not both zero, and $d=\\gcd(a,b)$. The equation $$ax+by=c$$ has a solution in integers **if and only if** $d\\mid c$."
+      "en": "Let $a,b$ be integers, not both zero, and $d=\\gcd(a,b)$. The equation $$ax+by=c$$ has a solution in integers **if and only if** $d\\mid c$.",
+      "uz": "$a,b$ — ikkalasi ham nol boʻlmagan butun sonlar va $d=\\gcd(a,b)$ boʻlsin. $$ax+by=c$$ tenglamasining butun yechimi mavjud boʻlishi uchun $d\\mid c$ boʻlishi **zarur va yetarli**."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Необходимость.** Пусть $ax+by=c$ при некоторых целых $x,y$. Число $d$ делит и $a$, и $b$, значит делит любую их целую комбинацию, в частности $ax+by=c$.\n\n**Достаточность.** Пусть $d\\mid c$, скажем $c=dk$. По соотношению Безу найдутся $x_0,y_0$ с $ax_0+by_0=d$. Умножив это равенство на $k$, получаем $$a\\left(kx_0\\right)+b\\left(ky_0\\right)=dk=c ,$$ то есть пара $\\left(kx_0,\\ ky_0\\right)$ — решение. $\\blacksquare$",
-      "en": "**Necessity.** Suppose $ax+by=c$ for some integers $x,y$. The number $d$ divides both $a$ and $b$, hence every integer combination of them, in particular $ax+by=c$.\n\n**Sufficiency.** Suppose $d\\mid c$, say $c=dk$. Bézout gives $x_0,y_0$ with $ax_0+by_0=d$. Multiplying by $k$, $$a\\left(kx_0\\right)+b\\left(ky_0\\right)=dk=c ,$$ so the pair $\\left(kx_0,\\ ky_0\\right)$ is a solution. $\\blacksquare$"
+      "en": "**Necessity.** Suppose $ax+by=c$ for some integers $x,y$. The number $d$ divides both $a$ and $b$, hence every integer combination of them, in particular $ax+by=c$.\n\n**Sufficiency.** Suppose $d\\mid c$, say $c=dk$. Bézout gives $x_0,y_0$ with $ax_0+by_0=d$. Multiplying by $k$, $$a\\left(kx_0\\right)+b\\left(ky_0\\right)=dk=c ,$$ so the pair $\\left(kx_0,\\ ky_0\\right)$ is a solution. $\\blacksquare$",
+      "uz": "**Zarurligi.** Baʼzi butun $x,y$ lar uchun $ax+by=c$ boʻlsin. $d$ soni $a$ ni ham, $b$ ni ham boʻladi, demak ularning istalgan butun kombinatsiyasini, jumladan $ax+by=c$ ni ham.\n\n**Yetarliligi.** $d\\mid c$ boʻlsin, $c=dk$. Bezu $ax_0+by_0=d$ boʻladigan $x_0,y_0$ ni beradi. Buni $k$ ga koʻpaytirsak, $$a\\left(kx_0\\right)+b\\left(ky_0\\right)=dk=c ,$$ demak $\\left(kx_0,\\ ky_0\\right)$ juftlik yechim. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Все решения сразу",
-      "en": "The whole family of solutions"
+      "en": "The whole family of solutions",
+      "uz": "Yechimlarning butun oilasi"
      },
      "text": {
       "ru": "Пусть $d=\\gcd(a,b)$ делит $c$ и пусть $\\left(x_0,y_0\\right)$ — какое-нибудь одно решение уравнения $ax+by=c$. Тогда **все** целые решения задаются формулами $$x=x_0+\\frac bd\\,t,\\qquad y=y_0-\\frac ad\\,t,\\qquad t\\in\\mathbb{Z},$$ и разным $t$ отвечают разные решения.",
-      "en": "Let $d=\\gcd(a,b)$ divide $c$ and let $\\left(x_0,y_0\\right)$ be one solution of $ax+by=c$. Then **all** integer solutions are given by $$x=x_0+\\frac bd\\,t,\\qquad y=y_0-\\frac ad\\,t,\\qquad t\\in\\mathbb{Z},$$ and different $t$ give different solutions."
+      "en": "Let $d=\\gcd(a,b)$ divide $c$ and let $\\left(x_0,y_0\\right)$ be one solution of $ax+by=c$. Then **all** integer solutions are given by $$x=x_0+\\frac bd\\,t,\\qquad y=y_0-\\frac ad\\,t,\\qquad t\\in\\mathbb{Z},$$ and different $t$ give different solutions.",
+      "uz": "$d=\\gcd(a,b)$ soni $c$ ni boʻlsin va $\\left(x_0,y_0\\right)$ — $ax+by=c$ ning bitta yechimi boʻlsin. U holda **barcha** butun yechimlar $$x=x_0+\\frac bd\\,t,\\qquad y=y_0-\\frac ad\\,t,\\qquad t\\in\\mathbb{Z}$$ formulalar bilan beriladi va turli $t$ lar turli yechim beradi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Эти пары — решения.** Подставим: $$a\\left(x_0+\\frac bd t\\right)+b\\left(y_0-\\frac ad t\\right)=ax_0+by_0+\\frac{ab}{d}t-\\frac{ab}{d}t=c \\quad\\checkmark$$\n\n**Других нет.** Пусть $(x,y)$ — произвольное решение. Вычтем из него исходное: $$a\\left(x-x_0\\right)+b\\left(y-y_0\\right)=0\\quad\\Longrightarrow\\quad a\\left(x-x_0\\right)=-b\\left(y-y_0\\right).$$\n\nПоделим обе части на $d$ и обозначим $a=d\\alpha$, $b=d\\beta$, где $\\gcd(\\alpha,\\beta)=1$: $$\\alpha\\left(x-x_0\\right)=-\\beta\\left(y-y_0\\right).$$\n\nЛевая часть делится на $\\alpha$, значит и правая; но $\\gcd(\\alpha,\\beta)=1$, поэтому $\\alpha\\mid y-y_0$ — точнее, из взаимной простоты следует $\\beta\\mid x-x_0$. Запишем $x-x_0=\\beta t$ для некоторого целого $t$; подставив, получаем $\\alpha\\beta t=-\\beta\\left(y-y_0\\right)$, откуда $y-y_0=-\\alpha t$.\n\nЭто в точности объявленные формулы, ведь $\\beta=\\tfrac bd$ и $\\alpha=\\tfrac ad$. $\\blacksquare$",
-      "en": "**These pairs are solutions.** Substitute: $$a\\left(x_0+\\frac bd t\\right)+b\\left(y_0-\\frac ad t\\right)=ax_0+by_0+\\frac{ab}{d}t-\\frac{ab}{d}t=c \\quad\\checkmark$$\n\n**There are no others.** Let $(x,y)$ be any solution and subtract the given one: $$a\\left(x-x_0\\right)+b\\left(y-y_0\\right)=0\\quad\\Longrightarrow\\quad a\\left(x-x_0\\right)=-b\\left(y-y_0\\right).$$\n\nDivide by $d$ and write $a=d\\alpha$, $b=d\\beta$ with $\\gcd(\\alpha,\\beta)=1$: $$\\alpha\\left(x-x_0\\right)=-\\beta\\left(y-y_0\\right).$$\n\nThe right side is a multiple of $\\beta$, hence so is the left; since $\\gcd(\\alpha,\\beta)=1$, coprimality forces $\\beta\\mid x-x_0$. Write $x-x_0=\\beta t$; substituting gives $\\alpha\\beta t=-\\beta\\left(y-y_0\\right)$, so $y-y_0=-\\alpha t$.\n\nThese are exactly the stated formulas, since $\\beta=\\tfrac bd$ and $\\alpha=\\tfrac ad$. $\\blacksquare$"
+      "en": "**These pairs are solutions.** Substitute: $$a\\left(x_0+\\frac bd t\\right)+b\\left(y_0-\\frac ad t\\right)=ax_0+by_0+\\frac{ab}{d}t-\\frac{ab}{d}t=c \\quad\\checkmark$$\n\n**There are no others.** Let $(x,y)$ be any solution and subtract the given one: $$a\\left(x-x_0\\right)+b\\left(y-y_0\\right)=0\\quad\\Longrightarrow\\quad a\\left(x-x_0\\right)=-b\\left(y-y_0\\right).$$\n\nDivide by $d$ and write $a=d\\alpha$, $b=d\\beta$ with $\\gcd(\\alpha,\\beta)=1$: $$\\alpha\\left(x-x_0\\right)=-\\beta\\left(y-y_0\\right).$$\n\nThe right side is a multiple of $\\beta$, hence so is the left; since $\\gcd(\\alpha,\\beta)=1$, coprimality forces $\\beta\\mid x-x_0$. Write $x-x_0=\\beta t$; substituting gives $\\alpha\\beta t=-\\beta\\left(y-y_0\\right)$, so $y-y_0=-\\alpha t$.\n\nThese are exactly the stated formulas, since $\\beta=\\tfrac bd$ and $\\alpha=\\tfrac ad$. $\\blacksquare$",
+      "uz": "**Bu juftliklar yechim.** Oʻrniga qoʻyamiz: $$a\\left(x_0+\\frac bd t\\right)+b\\left(y_0-\\frac ad t\\right)=ax_0+by_0+\\frac{ab}{d}t-\\frac{ab}{d}t=c \\quad\\checkmark$$\n\n**Boshqa yechim yoʻq.** $(x,y)$ istalgan yechim boʻlsin va undan berilganini ayiramiz: $$a\\left(x-x_0\\right)+b\\left(y-y_0\\right)=0\\quad\\Longrightarrow\\quad a\\left(x-x_0\\right)=-b\\left(y-y_0\\right).$$\n\n$d$ ga boʻlib, $a=d\\alpha$, $b=d\\beta$ deb yozamiz, bunda $\\gcd(\\alpha,\\beta)=1$: $$\\alpha\\left(x-x_0\\right)=-\\beta\\left(y-y_0\\right).$$\n\nOʻng tomon $\\beta$ ga karrali, demak chap tomon ham; $\\gcd(\\alpha,\\beta)=1$ boʻlgani uchun oʻzaro tublik $\\beta\\mid x-x_0$ ni majbur qiladi. $x-x_0=\\beta t$ deb yozamiz; oʻrniga qoʻysak $\\alpha\\beta t=-\\beta\\left(y-y_0\\right)$, demak $y-y_0=-\\alpha t$.\n\nBular aynan keltirilgan formulalar, chunki $\\beta=\\tfrac bd$ va $\\alpha=\\tfrac ad$. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Решите в целых числах $6x+15y=27$.",
-      "en": "Solve $6x+15y=27$ in integers."
+      "en": "Solve $6x+15y=27$ in integers.",
+      "uz": "$6x+15y=27$ tenglamasini butun sonlarda yeching."
      },
      "steps": {
       "ru": [
@@ -799,18 +986,27 @@ window.LESSONS[1] = {
        "One solution is visible: $x_0=2$, $y_0=1$ (since $4+5=9$).",
        "By the theorem all solutions are $x=2+5t$, $y=1-2t$.",
        "Check at $t=1$: $x=7$, $y=-1$, and $6\\cdot7+15\\cdot(-1)=27$ ✓"
+      ],
+      "uz": [
+       "$\\gcd(6,15)=3$ va $3\\mid27$, demak yechim bor.",
+       "Butun tenglamani $3$ ga boʻlamiz: $\\ 2x+5y=9$.",
+       "Bitta yechim koʻrinib turibdi: $x_0=2$, $y_0=1$ (chunki $4+5=9$).",
+       "Teoremaga koʻra barcha yechimlar $x=2+5t$, $y=1-2t$.",
+       "$t=1$ da tekshirish: $x=7$, $y=-1$ va $6\\cdot7+15\\cdot(-1)=27$ ✓"
       ]
      },
      "ans": {
       "ru": "$x=2+5t$, $y=1-2t$ при $t\\in\\mathbb{Z}$.",
-      "en": "$x=2+5t$, $y=1-2t$ for $t\\in\\mathbb{Z}$."
+      "en": "$x=2+5t$, $y=1-2t$ for $t\\in\\mathbb{Z}$.",
+      "uz": "$t\\in\\mathbb{Z}$ uchun $x=2+5t$, $y=1-2t$."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Сколько решений в **натуральных** числах у уравнения $7x+11y=100$?",
-      "en": "How many solutions in **positive** integers does $7x+11y=100$ have?"
+      "en": "How many solutions in **positive** integers does $7x+11y=100$ have?",
+      "uz": "$7x+11y=100$ tenglamasining **musbat** butun yechimlari nechta?"
      },
      "steps": {
       "ru": [
@@ -826,18 +1022,27 @@ window.LESSONS[1] = {
        "All integer solutions: $x=8+11t$, $y=4-7t$.",
        "Requiring $x\\ge1$ gives $t\\ge0$; requiring $y\\ge1$ gives $t\\le0$.",
        "Only $t=0$ survives."
+      ],
+      "uz": [
+       "$\\gcd(7,11)=1$ soni $100$ ni boʻladi, demak butun yechimlar bor.",
+       "Bittasini topamiz: $y=4$ da $7x=56$, yaʼni $x=8$.",
+       "Barcha butun yechimlar: $x=8+11t$, $y=4-7t$.",
+       "$x\\ge1$ sharti $t\\ge0$ ni, $y\\ge1$ sharti esa $t\\le0$ ni beradi.",
+       "Faqat $t=0$ qoladi."
       ]
      },
      "ans": {
       "ru": "Ровно одно решение: $(x,y)=(8,4)$.",
-      "en": "Exactly one solution: $(x,y)=(8,4)$."
+      "en": "Exactly one solution: $(x,y)=(8,4)$.",
+      "uz": "Roppa-rosa bitta yechim: $(x,y)=(8,4)$."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Схема всегда одна и та же: **проверить делимость** $\\gcd(a,b)\\mid c$, **найти одно** решение (перебором или обратным ходом алгоритма Евклида), **выписать семейство**, и лишь потом накладывать дополнительные условия вроде положительности — они превращаются в неравенства на параметр $t$.",
-      "en": "The routine never changes: **check** that $\\gcd(a,b)\\mid c$, **find one** solution (by inspection or by running the Euclidean algorithm backwards), **write the family**, and only then impose extra conditions such as positivity — they turn into inequalities on the parameter $t$."
+      "en": "The routine never changes: **check** that $\\gcd(a,b)\\mid c$, **find one** solution (by inspection or by running the Euclidean algorithm backwards), **write the family**, and only then impose extra conditions such as positivity — they turn into inequalities on the parameter $t$.",
+      "uz": "Tartib hech qachon oʻzgarmaydi: $\\gcd(a,b)\\mid c$ ekanini **tekshiring**, bitta yechimni **toping** (koʻz bilan yoki Yevklid algoritmini teskari yurgizib), **oilani yozing**, va faqat shundan keyin musbatlik kabi qoʻshimcha shartlarni qoʻying — ular $t$ parametrga nisbatan tengsizliklarga aylanadi."
      }
     }
    ]
@@ -845,82 +1050,95 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Основная теорема арифметики",
-    "en": "The fundamental theorem of arithmetic"
+    "en": "The fundamental theorem of arithmetic",
+    "uz": "Arifmetikaning asosiy teoremasi"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "Мы уже пользовались разложением на простые множители — пора доказать, что оно существует и единственно. Именно единственность превращает разложение в инструмент: она позволяет сравнивать показатели и делать выводы о делимости.",
-      "en": "We have already used prime factorisation — it is time to prove that it exists and is unique. Uniqueness is what turns factorisation into a tool: it lets us compare exponents and read off divisibility."
+      "en": "We have already used prime factorisation — it is time to prove that it exists and is unique. Uniqueness is what turns factorisation into a tool: it lets us compare exponents and read off divisibility.",
+      "uz": "Biz tub koʻpaytuvchilarga ajratishdan allaqachon foydalandik — endi uning mavjudligi va yagonaligini isbotlash vaqti keldi. Aynan yagonalik ajratishni qurolga aylantiradi: u darajalarni solishtirish va boʻlinuvchanlikni oʻqish imkonini beradi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Лемма Евклида",
-      "en": "Euclid’s lemma"
+      "en": "Euclid’s lemma",
+      "uz": "Yevklid lemmasi"
      },
      "text": {
       "ru": "Если простое $p$ делит произведение $ab$, то $p\\mid a$ или $p\\mid b$.",
-      "en": "If a prime $p$ divides a product $ab$, then $p\\mid a$ or $p\\mid b$."
+      "en": "If a prime $p$ divides a product $ab$, then $p\\mid a$ or $p\\mid b$.",
+      "uz": "Agar tub $p$ son $ab$ koʻpaytmani boʻlsa, u holda $p\\mid a$ yoki $p\\mid b$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $p\\mid ab$ и $p\\nmid a$. Делители простого $p$ — только $1$ и $p$, поэтому $\\gcd(p,a)$ равен $1$ или $p$; второе означало бы $p\\mid a$, что исключено. Значит $\\gcd(p,a)=1$.\n\nПо соотношению Безу найдутся целые $u,v$ с $$up+va=1 .$$ Умножим на $b$: $$upb+v\\,ab=b .$$ Первое слагаемое делится на $p$ очевидно, второе — потому что $p\\mid ab$. Значит $p$ делит их сумму, то есть $p\\mid b$. $\\blacksquare$",
-      "en": "Suppose $p\\mid ab$ and $p\\nmid a$. The only divisors of the prime $p$ are $1$ and $p$, so $\\gcd(p,a)$ is $1$ or $p$; the latter would mean $p\\mid a$, which is excluded. Hence $\\gcd(p,a)=1$.\n\nBézout gives integers $u,v$ with $$up+va=1 .$$ Multiply by $b$: $$upb+v\\,ab=b .$$ The first term is visibly a multiple of $p$, the second because $p\\mid ab$. So $p$ divides their sum, i.e. $p\\mid b$. $\\blacksquare$"
+      "en": "Suppose $p\\mid ab$ and $p\\nmid a$. The only divisors of the prime $p$ are $1$ and $p$, so $\\gcd(p,a)$ is $1$ or $p$; the latter would mean $p\\mid a$, which is excluded. Hence $\\gcd(p,a)=1$.\n\nBézout gives integers $u,v$ with $$up+va=1 .$$ Multiply by $b$: $$upb+v\\,ab=b .$$ The first term is visibly a multiple of $p$, the second because $p\\mid ab$. So $p$ divides their sum, i.e. $p\\mid b$. $\\blacksquare$",
+      "uz": "$p\\mid ab$ va $p\\nmid a$ boʻlsin. Tub $p$ sonning yagona boʻluvchilari $1$ va $p$, demak $\\gcd(p,a)$ yo $1$, yo $p$; ikkinchisi $p\\mid a$ degani boʻlar edi, bu esa istisno qilingan. Demak $\\gcd(p,a)=1$.\n\nBezu $$up+va=1$$ boʻladigan butun $u,v$ ni beradi. Buni $b$ ga koʻpaytiramiz: $$upb+v\\,ab=b .$$ Birinchi had koʻrinib turganidek $p$ ga karrali, ikkinchisi esa $p\\mid ab$ boʻlgani uchun. Demak $p$ ularning yigʻindisini boʻladi, yaʼni $p\\mid b$. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Простота здесь необходима. Число $6$ делит $4\\cdot9=36$, но не делит ни $4$, ни $9$. Именно поэтому лемма Евклида — утверждение о **простых**, а не о любых делителях.",
-      "en": "Primality is essential here. The number $6$ divides $4\\cdot9=36$ but divides neither $4$ nor $9$. That is exactly why Euclid’s lemma is a statement about **primes**, not about divisors in general."
+      "en": "Primality is essential here. The number $6$ divides $4\\cdot9=36$ but divides neither $4$ nor $9$. That is exactly why Euclid’s lemma is a statement about **primes**, not about divisors in general.",
+      "uz": "Bu yerda tublik shart. $6$ soni $4\\cdot9=36$ ni boʻladi, ammo na $4$ ni, na $9$ ni boʻlmaydi. Aynan shuning uchun Yevklid lemmasi umuman boʻluvchilar haqida emas, **tub sonlar** haqidagi tasdiqdir."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Основная теорема арифметики",
-      "en": "The fundamental theorem of arithmetic"
+      "en": "The fundamental theorem of arithmetic",
+      "uz": "Arifmetikaning asosiy teoremasi"
      },
      "text": {
       "ru": "Каждое целое число $n>1$ раскладывается в произведение простых, и притом **единственным** образом с точностью до порядка сомножителей: $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},\\qquad p_1<p_2<\\dots<p_k,\\quad \\alpha_i\\ge1 .$$",
-      "en": "Every integer $n>1$ is a product of primes, and the factorisation is **unique** up to the order of the factors: $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},\\qquad p_1<p_2<\\dots<p_k,\\quad \\alpha_i\\ge1 .$$"
+      "en": "Every integer $n>1$ is a product of primes, and the factorisation is **unique** up to the order of the factors: $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},\\qquad p_1<p_2<\\dots<p_k,\\quad \\alpha_i\\ge1 .$$",
+      "uz": "$n>1$ boʻlgan har bir butun son tub sonlarning koʻpaytmasi boʻladi va bu ajratish koʻpaytuvchilar tartibidan qatʼi nazar **yagona**: $$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k},\\qquad p_1<p_2<\\dots<p_k,\\quad \\alpha_i\\ge1 .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Существование (сильная индукция).** Пусть утверждение верно для всех чисел, меньших $n$. Если $n$ простое, разложение состоит из одного множителя. Иначе $n=ab$ с $1<a,b<n$; по предположению индукции $a$ и $b$ раскладываются на простые, и произведение их разложений даёт разложение для $n$ ✓\n\n**Единственность (индукция и лемма Евклида).** Пусть $$n=p_1p_2\\cdots p_s=q_1q_2\\cdots q_t $$ — два разложения на простые (не обязательно различные). Простое $p_1$ делит правую часть, значит по лемме Евклида делит один из множителей $q_j$; но $q_j$ простое, поэтому $p_1=q_j$. Сократим обе части на $p_1$ и получим два разложения меньшего числа $n/p_1$. По индукции они совпадают с точностью до порядка, а значит совпадают и исходные. $\\blacksquare$",
-      "en": "**Existence (strong induction).** Assume the claim for all numbers below $n$. If $n$ is prime, the factorisation is a single factor. Otherwise $n=ab$ with $1<a,b<n$; by the induction hypothesis $a$ and $b$ factor into primes, and multiplying the two factorisations gives one for $n$ ✓\n\n**Uniqueness (induction plus Euclid’s lemma).** Suppose $$n=p_1p_2\\cdots p_s=q_1q_2\\cdots q_t $$ are two prime factorisations. The prime $p_1$ divides the right-hand side, so by Euclid’s lemma it divides some $q_j$; as $q_j$ is prime, $p_1=q_j$. Cancel $p_1$ from both sides to get two factorisations of the smaller number $n/p_1$. By induction they agree up to order, hence so do the originals. $\\blacksquare$"
+      "en": "**Existence (strong induction).** Assume the claim for all numbers below $n$. If $n$ is prime, the factorisation is a single factor. Otherwise $n=ab$ with $1<a,b<n$; by the induction hypothesis $a$ and $b$ factor into primes, and multiplying the two factorisations gives one for $n$ ✓\n\n**Uniqueness (induction plus Euclid’s lemma).** Suppose $$n=p_1p_2\\cdots p_s=q_1q_2\\cdots q_t $$ are two prime factorisations. The prime $p_1$ divides the right-hand side, so by Euclid’s lemma it divides some $q_j$; as $q_j$ is prime, $p_1=q_j$. Cancel $p_1$ from both sides to get two factorisations of the smaller number $n/p_1$. By induction they agree up to order, hence so do the originals. $\\blacksquare$",
+      "uz": "**Mavjudligi (kuchli induksiya).** Tasdiq $n$ dan kichik barcha sonlar uchun oʻrinli deb faraz qilamiz. Agar $n$ tub boʻlsa, ajratma bitta koʻpaytuvchidan iborat. Aks holda $n=ab$, bunda $1<a,b<n$; induksiya farazi boʻyicha $a$ va $b$ tub koʻpaytuvchilarga ajraladi, ikkala ajratmani koʻpaytirsak $n$ uchun ajratma chiqadi ✓\n\n**Yagonaligi (induksiya va Yevklid lemmasi).** $$n=p_1p_2\\cdots p_s=q_1q_2\\cdots q_t $$ ikkita tub ajratma boʻlsin. Tub $p_1$ son oʻng tomonni boʻladi, demak Yevklid lemmasiga koʻra u biror $q_j$ ni boʻladi; $q_j$ tub boʻlgani uchun $p_1=q_j$. $p_1$ ni ikkala tomondan qisqartirsak, kichikroq $n/p_1$ sonining ikkita ajratmasi chiqadi. Induksiya boʻyicha ular tartibdan qatʼi nazar bir xil, demak dastlabkilari ham. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Делимость на языке показателей",
-      "en": "Divisibility in the language of exponents"
+      "en": "Divisibility in the language of exponents",
+      "uz": "Boʻlinuvchanlik — darajalar tilida"
      },
      "text": {
       "ru": "Пусть $$a=\\prod_i p_i^{\\alpha_i},\\qquad b=\\prod_i p_i^{\\beta_i}$$ (по одному и тому же набору простых, нулевые показатели разрешены). Тогда $$a\\mid b\\quad\\Longleftrightarrow\\quad \\alpha_i\\le\\beta_i\\ \\text{для всех } i ,$$ $$\\gcd(a,b)=\\prod_i p_i^{\\min\\left(\\alpha_i,\\beta_i\\right)},\\qquad \\operatorname{lcm}(a,b)=\\prod_i p_i^{\\max\\left(\\alpha_i,\\beta_i\\right)} .$$",
-      "en": "Let $$a=\\prod_i p_i^{\\alpha_i},\\qquad b=\\prod_i p_i^{\\beta_i}$$ over the same list of primes, zero exponents allowed. Then $$a\\mid b\\quad\\Longleftrightarrow\\quad \\alpha_i\\le\\beta_i\\ \\text{for every } i ,$$ $$\\gcd(a,b)=\\prod_i p_i^{\\min\\left(\\alpha_i,\\beta_i\\right)},\\qquad \\operatorname{lcm}(a,b)=\\prod_i p_i^{\\max\\left(\\alpha_i,\\beta_i\\right)} .$$"
+      "en": "Let $$a=\\prod_i p_i^{\\alpha_i},\\qquad b=\\prod_i p_i^{\\beta_i}$$ over the same list of primes, zero exponents allowed. Then $$a\\mid b\\quad\\Longleftrightarrow\\quad \\alpha_i\\le\\beta_i\\ \\text{for every } i ,$$ $$\\gcd(a,b)=\\prod_i p_i^{\\min\\left(\\alpha_i,\\beta_i\\right)},\\qquad \\operatorname{lcm}(a,b)=\\prod_i p_i^{\\max\\left(\\alpha_i,\\beta_i\\right)} .$$",
+      "uz": "Bir xil tub sonlar roʻyxati boʻyicha, nol darajalarga ruxsat berilgan holda $$a=\\prod_i p_i^{\\alpha_i},\\qquad b=\\prod_i p_i^{\\beta_i}$$ boʻlsin. U holda $$a\\mid b\\quad\\Longleftrightarrow\\quad \\text{har bir } i \\text{ uchun } \\alpha_i\\le\\beta_i ,$$ $$\\gcd(a,b)=\\prod_i p_i^{\\min\\left(\\alpha_i,\\beta_i\\right)},\\qquad \\operatorname{lcm}(a,b)=\\prod_i p_i^{\\max\\left(\\alpha_i,\\beta_i\\right)} .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Критерий делимости.** Если $\\alpha_i\\le\\beta_i$ при всех $i$, то $b=a\\cdot\\prod_i p_i^{\\beta_i-\\alpha_i}$, и второй множитель целый — значит $a\\mid b$. Обратно, пусть $b=ac$. Разложим $c$ на простые; по единственности разложения показатель простого $p_i$ в правой части равен $\\alpha_i+(\\text{показатель в } c)\\ge\\alpha_i$, а слева он равен $\\beta_i$. Значит $\\beta_i\\ge\\alpha_i$ ✓\n\n**Формула для НОД.** Число $d=\\prod p_i^{\\gamma_i}$ делит и $a$, и $b$ тогда и только тогда, когда $\\gamma_i\\le\\alpha_i$ и $\\gamma_i\\le\\beta_i$, то есть $\\gamma_i\\le\\min\\left(\\alpha_i,\\beta_i\\right)$. Наибольшее такое $d$ получается при $\\gamma_i=\\min\\left(\\alpha_i,\\beta_i\\right)$ ✓\n\n**Формула для НОК** доказывается симметрично: кратные $a$ и $b$ — это числа с показателями не меньше $\\alpha_i$ и не меньше $\\beta_i$. $\\blacksquare$",
-      "en": "**The divisibility test.** If $\\alpha_i\\le\\beta_i$ for all $i$ then $b=a\\cdot\\prod_i p_i^{\\beta_i-\\alpha_i}$ with an integer second factor, so $a\\mid b$. Conversely let $b=ac$ and factor $c$; by uniqueness the exponent of $p_i$ on the right is $\\alpha_i+(\\text{its exponent in } c)\\ge\\alpha_i$, while on the left it is $\\beta_i$. So $\\beta_i\\ge\\alpha_i$ ✓\n\n**The gcd formula.** A number $d=\\prod p_i^{\\gamma_i}$ divides both $a$ and $b$ exactly when $\\gamma_i\\le\\alpha_i$ and $\\gamma_i\\le\\beta_i$, i.e. $\\gamma_i\\le\\min\\left(\\alpha_i,\\beta_i\\right)$. The largest such $d$ takes $\\gamma_i=\\min\\left(\\alpha_i,\\beta_i\\right)$ ✓\n\n**The lcm formula** is symmetric: common multiples are the numbers whose exponents are at least $\\alpha_i$ and at least $\\beta_i$. $\\blacksquare$"
+      "en": "**The divisibility test.** If $\\alpha_i\\le\\beta_i$ for all $i$ then $b=a\\cdot\\prod_i p_i^{\\beta_i-\\alpha_i}$ with an integer second factor, so $a\\mid b$. Conversely let $b=ac$ and factor $c$; by uniqueness the exponent of $p_i$ on the right is $\\alpha_i+(\\text{its exponent in } c)\\ge\\alpha_i$, while on the left it is $\\beta_i$. So $\\beta_i\\ge\\alpha_i$ ✓\n\n**The gcd formula.** A number $d=\\prod p_i^{\\gamma_i}$ divides both $a$ and $b$ exactly when $\\gamma_i\\le\\alpha_i$ and $\\gamma_i\\le\\beta_i$, i.e. $\\gamma_i\\le\\min\\left(\\alpha_i,\\beta_i\\right)$. The largest such $d$ takes $\\gamma_i=\\min\\left(\\alpha_i,\\beta_i\\right)$ ✓\n\n**The lcm formula** is symmetric: common multiples are the numbers whose exponents are at least $\\alpha_i$ and at least $\\beta_i$. $\\blacksquare$",
+      "uz": "**Boʻlinuvchanlik alomati.** Agar barcha $i$ uchun $\\alpha_i\\le\\beta_i$ boʻlsa, $b=a\\cdot\\prod_i p_i^{\\beta_i-\\alpha_i}$ va ikkinchi koʻpaytuvchi butun son, demak $a\\mid b$. Aksincha, $b=ac$ boʻlsin va $c$ ni ajratamiz; yagonalikka koʻra oʻngda $p_i$ ning darajasi $\\alpha_i+(c \\text{ dagi darajasi})\\ge\\alpha_i$, chapda esa $\\beta_i$. Demak $\\beta_i\\ge\\alpha_i$ ✓\n\n**EKUB formulasi.** $d=\\prod p_i^{\\gamma_i}$ soni $a$ ni ham, $b$ ni ham aynan $\\gamma_i\\le\\alpha_i$ va $\\gamma_i\\le\\beta_i$, yaʼni $\\gamma_i\\le\\min\\left(\\alpha_i,\\beta_i\\right)$ boʻlganda boʻladi. Eng kattasi $\\gamma_i=\\min\\left(\\alpha_i,\\beta_i\\right)$ da erishiladi ✓\n\n**EKUK formulasi** simmetrik: umumiy karralilar — darajalari $\\alpha_i$ dan ham, $\\beta_i$ dan ham kam boʻlmagan sonlar. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите $\\gcd$ и $\\operatorname{lcm}$ чисел $600$ и $540$ через разложения.",
-      "en": "Find the gcd and lcm of $600$ and $540$ from their factorisations."
+      "en": "Find the gcd and lcm of $600$ and $540$ from their factorisations.",
+      "uz": "$600$ va $540$ ning EKUB va EKUK ini ularning ajratmalaridan toping."
      },
      "steps": {
       "ru": [
@@ -936,6 +1154,13 @@ window.LESSONS[1] = {
        "So $\\gcd=4\\cdot3\\cdot5=60$.",
        "Maxima: $2^{3}\\cdot3^{3}\\cdot5^{2}=8\\cdot27\\cdot25=5400$.",
        "Check against the identity: $60\\cdot5400=324\\,000=600\\cdot540$ ✓"
+      ],
+      "uz": [
+       "$600=2^{3}\\cdot3\\cdot5^{2}$ va $540=2^{2}\\cdot3^{3}\\cdot5$.",
+       "Eng kichik darajalar: $2^{\\min(3,2)}=2^{2}$, $3^{\\min(1,3)}=3$, $5^{\\min(2,1)}=5$.",
+       "Demak $\\gcd=4\\cdot3\\cdot5=60$.",
+       "Eng kattalari: $2^{3}\\cdot3^{3}\\cdot5^{2}=8\\cdot27\\cdot25=5400$.",
+       "Ayniyat boʻyicha tekshirish: $60\\cdot5400=324\\,000=600\\cdot540$ ✓"
       ]
      },
      "ans": {
@@ -947,25 +1172,29 @@ window.LESSONS[1] = {
      "t": "thm",
      "name": {
       "ru": "Степень делит степень",
-      "en": "Powers inherit divisibility"
+      "en": "Powers inherit divisibility",
+      "uz": "Darajalar boʻlinuvchanlikni meros qiladi"
      },
      "text": {
       "ru": "Если $\\gcd(a,b)=1$ и $ab$ — точный $n$-й степень, то каждый из множителей $a$ и $b$ сам является точной $n$-й степенью (с точностью до знака при чётном $n$).",
-      "en": "If $\\gcd(a,b)=1$ and $ab$ is a perfect $n$-th power, then each of $a$ and $b$ is itself a perfect $n$-th power (up to sign when $n$ is even)."
+      "en": "If $\\gcd(a,b)=1$ and $ab$ is a perfect $n$-th power, then each of $a$ and $b$ is itself a perfect $n$-th power (up to sign when $n$ is even).",
+      "uz": "Agar $\\gcd(a,b)=1$ boʻlsa va $ab$ toʻliq $n$-daraja boʻlsa, u holda $a$ va $b$ ning har biri ham toʻliq $n$-daraja boʻladi ($n$ juft boʻlganda ishorasi aniqmas)."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Возьмём любое простое $p$ и обозначим через $\\alpha$ и $\\beta$ его показатели в $a$ и в $b$. Так как $\\gcd(a,b)=1$, простое $p$ не может делить оба числа, значит одно из чисел $\\alpha,\\beta$ равно нулю.\n\nПоказатель $p$ в произведении равен $\\alpha+\\beta$, а произведение — точная $n$-я степень, поэтому $n\\mid\\alpha+\\beta$. Но одно из слагаемых нулевое, значит $n$ делит и $\\alpha$, и $\\beta$.\n\nЭто верно для каждого простого, поэтому все показатели в $a$ (и в $b$) кратны $n$, то есть каждое из чисел — точная $n$-я степень. $\\blacksquare$",
-      "en": "Take any prime $p$ and let $\\alpha$, $\\beta$ be its exponents in $a$ and $b$. Since $\\gcd(a,b)=1$, the prime $p$ cannot divide both, so one of $\\alpha,\\beta$ is zero.\n\nThe exponent of $p$ in the product is $\\alpha+\\beta$, and the product is a perfect $n$-th power, so $n\\mid\\alpha+\\beta$. As one summand vanishes, $n$ divides both $\\alpha$ and $\\beta$.\n\nThis holds for every prime, so all exponents in $a$ (and in $b$) are multiples of $n$: each number is a perfect $n$-th power. $\\blacksquare$"
+      "en": "Take any prime $p$ and let $\\alpha$, $\\beta$ be its exponents in $a$ and $b$. Since $\\gcd(a,b)=1$, the prime $p$ cannot divide both, so one of $\\alpha,\\beta$ is zero.\n\nThe exponent of $p$ in the product is $\\alpha+\\beta$, and the product is a perfect $n$-th power, so $n\\mid\\alpha+\\beta$. As one summand vanishes, $n$ divides both $\\alpha$ and $\\beta$.\n\nThis holds for every prime, so all exponents in $a$ (and in $b$) are multiples of $n$: each number is a perfect $n$-th power. $\\blacksquare$",
+      "uz": "Istalgan tub $p$ ni olamiz va uning $a$ va $b$ dagi darajalarini $\\alpha$, $\\beta$ deb belgilaymiz. $\\gcd(a,b)=1$ boʻlgani uchun $p$ ikkalasini ham boʻla olmaydi, demak $\\alpha,\\beta$ dan biri nolga teng.\n\nKoʻpaytmadagi $p$ ning darajasi $\\alpha+\\beta$, koʻpaytma esa toʻliq $n$-daraja, demak $n\\mid\\alpha+\\beta$. Bitta qoʻshiluvchi nol boʻlgani uchun $n$ ham $\\alpha$ ni, ham $\\beta$ ni boʻladi.\n\nBu har bir tub son uchun oʻrinli, demak $a$ dagi (va $b$ dagi) barcha darajalar $n$ ga karrali: har bir son toʻliq $n$-daraja. $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Это одна из самых частых «рабочих лошадок» олимпиадной теории чисел. Например, из $xy=z^{2}$ при $\\gcd(x,y)=1$ сразу следует, что $x$ и $y$ — квадраты; именно так описывают все пифагоровы тройки.",
-      "en": "This is one of the great workhorses of olympiad number theory. From $xy=z^{2}$ with $\\gcd(x,y)=1$ it follows at once that $x$ and $y$ are squares — precisely the step that describes all Pythagorean triples."
+      "en": "This is one of the great workhorses of olympiad number theory. From $xy=z^{2}$ with $\\gcd(x,y)=1$ it follows at once that $x$ and $y$ are squares — precisely the step that describes all Pythagorean triples.",
+      "uz": "Bu — olimpiada sonlar nazariyasining eng ishonchli ish otlaridan biri. $\\gcd(x,y)=1$ boʻlganda $xy=z^{2}$ dan darhol $x$ va $y$ kvadrat ekani kelib chiqadi — bu aynan barcha Pifagor uchliklarini tavsiflaydigan qadam."
      }
     }
    ]
@@ -973,79 +1202,92 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "НОК и связь с НОД",
-    "en": "LCM and its link with the GCD"
+    "en": "LCM and its link with the GCD",
+    "uz": "EKUK va uning EKUB bilan bogʻliqligi"
    },
    "blocks": [
     {
      "t": "def",
      "name": {
       "ru": "Наименьшее общее кратное",
-      "en": "Least common multiple"
+      "en": "Least common multiple",
+      "uz": "Eng kichik umumiy karrali"
      },
      "text": {
       "ru": "$\\operatorname{lcm}(a,b)$ — наименьшее положительное число, которое делится и на $a$, и на $b$.",
-      "en": "$\\operatorname{lcm}(a,b)$ is the smallest positive number divisible by both $a$ and $b$."
+      "en": "$\\operatorname{lcm}(a,b)$ is the smallest positive number divisible by both $a$ and $b$.",
+      "uz": "$\\operatorname{lcm}(a,b)$ — bu $a$ ga ham, $b$ ga ham boʻlinadigan eng kichik musbat son."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Основное тождество",
-      "en": "The main identity"
+      "en": "The main identity",
+      "uz": "Asosiy ayniyat"
      },
      "text": {
       "ru": "Для положительных целых $a,b$: $$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab.$$",
-      "en": "For positive integers $a,b$: $$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab.$$"
+      "en": "For positive integers $a,b$: $$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab.$$",
+      "uz": "Musbat butun $a,b$ sonlar uchun: $$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Разложим оба числа на простые множители, разрешая нулевые показатели: $a=\\prod p_i^{\\alpha_i}$, $b=\\prod p_i^{\\beta_i}$. Тогда $$\\gcd(a,b)=\\prod p_i^{\\min(\\alpha_i,\\beta_i)},\\qquad \\operatorname{lcm}(a,b)=\\prod p_i^{\\max(\\alpha_i,\\beta_i)}.$$ Остаётся заметить, что для любых чисел $\\min(\\alpha,\\beta)+\\max(\\alpha,\\beta)=\\alpha+\\beta$, а значит показатели в произведении $\\gcd\\cdot\\operatorname{lcm}$ совпадают с показателями в $ab$.",
-      "en": "Factor both numbers into primes, allowing zero exponents: $a=\\prod p_i^{\\alpha_i}$, $b=\\prod p_i^{\\beta_i}$. Then $$\\gcd(a,b)=\\prod p_i^{\\min(\\alpha_i,\\beta_i)},\\qquad \\operatorname{lcm}(a,b)=\\prod p_i^{\\max(\\alpha_i,\\beta_i)}.$$ It only remains to note that $\\min(\\alpha,\\beta)+\\max(\\alpha,\\beta)=\\alpha+\\beta$ for any numbers, so the exponents in $\\gcd\\cdot\\operatorname{lcm}$ agree with those in $ab$."
+      "en": "Factor both numbers into primes, allowing zero exponents: $a=\\prod p_i^{\\alpha_i}$, $b=\\prod p_i^{\\beta_i}$. Then $$\\gcd(a,b)=\\prod p_i^{\\min(\\alpha_i,\\beta_i)},\\qquad \\operatorname{lcm}(a,b)=\\prod p_i^{\\max(\\alpha_i,\\beta_i)}.$$ It only remains to note that $\\min(\\alpha,\\beta)+\\max(\\alpha,\\beta)=\\alpha+\\beta$ for any numbers, so the exponents in $\\gcd\\cdot\\operatorname{lcm}$ agree with those in $ab$.",
+      "uz": "Ikkala sonni ham nol darajalarga ruxsat bergan holda tub koʻpaytuvchilarga ajratamiz: $a=\\prod p_i^{\\alpha_i}$, $b=\\prod p_i^{\\beta_i}$. U holda $$\\gcd(a,b)=\\prod p_i^{\\min(\\alpha_i,\\beta_i)},\\qquad \\operatorname{lcm}(a,b)=\\prod p_i^{\\max(\\alpha_i,\\beta_i)}.$$ Endi istalgan sonlar uchun $\\min(\\alpha,\\beta)+\\max(\\alpha,\\beta)=\\alpha+\\beta$ ekanini eslash qoladi, demak $\\gcd\\cdot\\operatorname{lcm}$ dagi darajalar $ab$ dagilari bilan mos tushadi."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Для трёх чисел тождество **неверно**: $\\gcd(a,b,c)\\cdot\\operatorname{lcm}(a,b,c)\\ne abc$ в общем случае. Например, при $a=b=c=2$ слева $2\\cdot2=4$, справа $8$.",
-      "en": "For three numbers the identity **fails**: $\\gcd(a,b,c)\\cdot\\operatorname{lcm}(a,b,c)\\ne abc$ in general. For instance with $a=b=c=2$ the left side is $2\\cdot2=4$ and the right side is $8$."
+      "en": "For three numbers the identity **fails**: $\\gcd(a,b,c)\\cdot\\operatorname{lcm}(a,b,c)\\ne abc$ in general. For instance with $a=b=c=2$ the left side is $2\\cdot2=4$ and the right side is $8$.",
+      "uz": "Uchta son uchun ayniyat **oʻrinli emas**: umumiy holda $\\gcd(a,b,c)\\cdot\\operatorname{lcm}(a,b,c)\\ne abc$. Masalan, $a=b=c=2$ da chap tomon $2\\cdot2=4$, oʻng tomon esa $8$."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Стандартная подстановка",
-      "en": "The standard substitution"
+      "en": "The standard substitution",
+      "uz": "Standart almashtirish"
      },
      "text": {
       "ru": "Если $\\gcd(a,b)=d$, пишем $a=dx$, $b=dy$, где $\\gcd(x,y)=1$. Тогда $\\operatorname{lcm}(a,b)=dxy$. Эта замена превращает почти любую задачу «дан НОД и НОК» в простое уравнение относительно взаимно простых $x,y$.",
-      "en": "If $\\gcd(a,b)=d$, write $a=dx$, $b=dy$ with $\\gcd(x,y)=1$. Then $\\operatorname{lcm}(a,b)=dxy$. This substitution turns almost any \"given the GCD and the LCM\" problem into a simple equation in coprime $x,y$."
+      "en": "If $\\gcd(a,b)=d$, write $a=dx$, $b=dy$ with $\\gcd(x,y)=1$. Then $\\operatorname{lcm}(a,b)=dxy$. This substitution turns almost any \"given the GCD and the LCM\" problem into a simple equation in coprime $x,y$.",
+      "uz": "Agar $\\gcd(a,b)=d$ boʻlsa, $a=dx$, $b=dy$ deb yozamiz, bunda $\\gcd(x,y)=1$. U holda $\\operatorname{lcm}(a,b)=dxy$. Bu almashtirish «EKUB va EKUK berilgan» turidagi deyarli har qanday masalani oʻzaro tub $x,y$ ga nisbatan oddiy tenglamaga aylantiradi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Универсальное свойство НОК",
-      "en": "The universal property of the lcm"
+      "en": "The universal property of the lcm",
+      "uz": "EKUK ning universal xossasi"
      },
      "text": {
       "ru": "Каждое общее кратное чисел $a$ и $b$ делится на $\\operatorname{lcm}(a,b)$. Симметрично к НОД: наименьшее общее кратное — то, которое делит все остальные.",
-      "en": "Every common multiple of $a$ and $b$ is divisible by $\\operatorname{lcm}(a,b)$. Symmetric to the gcd: the least common multiple is the one dividing all the others."
+      "en": "Every common multiple of $a$ and $b$ is divisible by $\\operatorname{lcm}(a,b)$. Symmetric to the gcd: the least common multiple is the one dividing all the others.",
+      "uz": "$a$ va $b$ ning har bir umumiy karralisi $\\operatorname{lcm}(a,b)$ ga boʻlinadi. EKUB ga simmetrik: eng kichik umumiy karrali — qolgan hammasini boʻladigan son."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Обозначим $L=\\operatorname{lcm}(a,b)$ и пусть $M$ — произвольное общее кратное. Разделим с остатком: $$M=Lq+r,\\qquad 0\\le r<L .$$\n\nЧисло $a$ делит и $M$, и $L$, значит делит $r=M-Lq$; то же верно для $b$. Значит $r$ — общее кратное чисел $a$ и $b$, причём $0\\le r<L$.\n\nНо $L$ — **наименьшее положительное** общее кратное, поэтому $r$ не может быть положительным. Значит $r=0$, то есть $L\\mid M$. $\\blacksquare$",
-      "en": "Write $L=\\operatorname{lcm}(a,b)$ and let $M$ be any common multiple. Divide with remainder: $$M=Lq+r,\\qquad 0\\le r<L .$$\n\nThe number $a$ divides both $M$ and $L$, hence divides $r=M-Lq$; the same holds for $b$. So $r$ is a common multiple of $a$ and $b$ with $0\\le r<L$.\n\nBut $L$ is the **least positive** common multiple, so $r$ cannot be positive. Hence $r=0$, i.e. $L\\mid M$. $\\blacksquare$"
+      "en": "Write $L=\\operatorname{lcm}(a,b)$ and let $M$ be any common multiple. Divide with remainder: $$M=Lq+r,\\qquad 0\\le r<L .$$\n\nThe number $a$ divides both $M$ and $L$, hence divides $r=M-Lq$; the same holds for $b$. So $r$ is a common multiple of $a$ and $b$ with $0\\le r<L$.\n\nBut $L$ is the **least positive** common multiple, so $r$ cannot be positive. Hence $r=0$, i.e. $L\\mid M$. $\\blacksquare$",
+      "uz": "$L=\\operatorname{lcm}(a,b)$ deb belgilaymiz va $M$ istalgan umumiy karrali boʻlsin. Qoldiqli boʻlamiz: $$M=Lq+r,\\qquad 0\\le r<L .$$\n\n$a$ soni $M$ ni ham, $L$ ni ham boʻladi, demak $r=M-Lq$ ni ham; $b$ uchun ham shunday. Demak $r$ — $a$ va $b$ ning umumiy karralisi va $0\\le r<L$.\n\nAmmo $L$ — **eng kichik musbat** umumiy karrali, demak $r$ musbat boʻla olmaydi. Shuning uchun $r=0$, yaʼni $L\\mid M$. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Автобусы трёх маршрутов отходят от вокзала каждые $12$, $18$ и $30$ минут и вышли одновременно в $6{:}00$. Когда они снова отойдут вместе?",
-      "en": "Buses on three routes leave the station every $12$, $18$ and $30$ minutes and departed together at $6{:}00$. When do they next leave together?"
+      "en": "Buses on three routes leave the station every $12$, $18$ and $30$ minutes and departed together at $6{:}00$. When do they next leave together?",
+      "uz": "Uchta yoʻnalishdagi avtobuslar bekatdan har $12$, $18$ va $30$ daqiqada joʻnaydi va $6{:}00$ da birga joʻnab ketishdi. Ular keyingi marta qachon birga joʻnaydi?"
      },
      "steps": {
       "ru": [
@@ -1061,18 +1303,27 @@ window.LESSONS[1] = {
        "Factor: $12=2^{2}\\cdot3$, $18=2\\cdot3^{2}$, $30=2\\cdot3\\cdot5$.",
        "Take each prime to its highest power: $2^{2}\\cdot3^{2}\\cdot5=180$.",
        "$180$ minutes is exactly three hours."
+      ],
+      "uz": [
+       "Birgalikdagi joʻnash $12$, $18$, $30$ ning umumiy karralisida sodir boʻladi.",
+       "Universal xossaga koʻra har bir shunday moment eng kichigining karralisi, demak bizga $\\operatorname{lcm}(12,18,30)$ kerak.",
+       "Ajratamiz: $12=2^{2}\\cdot3$, $18=2\\cdot3^{2}$, $30=2\\cdot3\\cdot5$.",
+       "Har bir tub sonni eng yuqori darajasida olamiz: $2^{2}\\cdot3^{2}\\cdot5=180$.",
+       "$180$ daqiqa — roppa-rosa uch soat."
       ]
      },
      "ans": {
       "ru": "В $9{:}00$, и далее каждые три часа.",
-      "en": "At $9{:}00$, and every three hours after that."
+      "en": "At $9{:}00$, and every three hours after that.",
+      "uz": "$9{:}00$ da va undan keyin har uch soatda."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Для трёх и более чисел формулы через показатели по-прежнему работают: $$\\gcd=\\prod p^{\\min},\\qquad \\operatorname{lcm}=\\prod p^{\\max},$$ где минимум и максимум берутся по всем числам набора. А вот тождество $\\gcd\\cdot\\operatorname{lcm}=$ произведение остаётся верным только для **двух** чисел.",
-      "en": "For three or more numbers the exponent formulas still hold: $$\\gcd=\\prod p^{\\min},\\qquad \\operatorname{lcm}=\\prod p^{\\max},$$ with the minimum and maximum over the whole list. The identity $\\gcd\\cdot\\operatorname{lcm}=$ product, however, survives only for **two** numbers."
+      "en": "For three or more numbers the exponent formulas still hold: $$\\gcd=\\prod p^{\\min},\\qquad \\operatorname{lcm}=\\prod p^{\\max},$$ with the minimum and maximum over the whole list. The identity $\\gcd\\cdot\\operatorname{lcm}=$ product, however, survives only for **two** numbers.",
+      "uz": "Uch va undan ortiq son uchun daraja formulalari oʻrinli qoladi: $$\\gcd=\\prod p^{\\min},\\qquad \\operatorname{lcm}=\\prod p^{\\max},$$ minimum va maksimum butun roʻyxat boʻyicha olinadi. $\\gcd\\cdot\\operatorname{lcm}=$ koʻpaytma ayniyati esa faqat **ikkita** son uchun saqlanadi."
      }
     }
    ]
@@ -1080,32 +1331,37 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Число делителей",
-    "en": "Counting divisors"
+    "en": "Counting divisors",
+    "uz": "Boʻluvchilarni sanash"
    },
    "blocks": [
     {
      "t": "thm",
      "name": {
       "ru": "Количество и сумма делителей",
-      "en": "Number and sum of divisors"
+      "en": "Number and sum of divisors",
+      "uz": "Boʻluvchilar soni va yigʻindisi"
      },
      "text": {
       "ru": "Пусть $n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k}$. Тогда число делителей и их сумма равны $$d(n)=\\prod_{i=1}^{k}(\\alpha_i+1),\\qquad \\sigma(n)=\\prod_{i=1}^{k}\\frac{p_i^{\\alpha_i+1}-1}{p_i-1}.$$",
-      "en": "Let $n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k}$. Then the number of divisors and their sum are $$d(n)=\\prod_{i=1}^{k}(\\alpha_i+1),\\qquad \\sigma(n)=\\prod_{i=1}^{k}\\frac{p_i^{\\alpha_i+1}-1}{p_i-1}.$$"
+      "en": "Let $n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k}$. Then the number of divisors and their sum are $$d(n)=\\prod_{i=1}^{k}(\\alpha_i+1),\\qquad \\sigma(n)=\\prod_{i=1}^{k}\\frac{p_i^{\\alpha_i+1}-1}{p_i-1}.$$",
+      "uz": "$n=p_1^{\\alpha_1}p_2^{\\alpha_2}\\cdots p_k^{\\alpha_k}$ boʻlsin. U holda boʻluvchilar soni va ularning yigʻindisi $$d(n)=\\prod_{i=1}^{k}(\\alpha_i+1),\\qquad \\sigma(n)=\\prod_{i=1}^{k}\\frac{p_i^{\\alpha_i+1}-1}{p_i-1}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Каждый делитель $n$ имеет вид $p_1^{c_1}\\cdots p_k^{c_k}$, где $0\\le c_i\\le \\alpha_i$, и разным наборам показателей отвечают разные делители. Значит вариантов ровно $(\\alpha_1+1)\\cdots(\\alpha_k+1)$. Для суммы раскроем скобки в произведении $$\\left(1+p_1+\\cdots+p_1^{\\alpha_1}\\right)\\cdots\\left(1+p_k+\\cdots+p_k^{\\alpha_k}\\right):$$ каждое слагаемое после раскрытия — ровно один делитель, и каждый делитель встречается ровно один раз. Остаётся свернуть геометрические прогрессии.",
-      "en": "Every divisor of $n$ has the form $p_1^{c_1}\\cdots p_k^{c_k}$ with $0\\le c_i\\le \\alpha_i$, and different exponent tuples give different divisors. So there are exactly $(\\alpha_1+1)\\cdots(\\alpha_k+1)$ of them. For the sum, expand the product $$\\left(1+p_1+\\cdots+p_1^{\\alpha_1}\\right)\\cdots\\left(1+p_k+\\cdots+p_k^{\\alpha_k}\\right):$$ each term after expansion is exactly one divisor, and each divisor appears exactly once. It remains to sum the geometric progressions."
+      "en": "Every divisor of $n$ has the form $p_1^{c_1}\\cdots p_k^{c_k}$ with $0\\le c_i\\le \\alpha_i$, and different exponent tuples give different divisors. So there are exactly $(\\alpha_1+1)\\cdots(\\alpha_k+1)$ of them. For the sum, expand the product $$\\left(1+p_1+\\cdots+p_1^{\\alpha_1}\\right)\\cdots\\left(1+p_k+\\cdots+p_k^{\\alpha_k}\\right):$$ each term after expansion is exactly one divisor, and each divisor appears exactly once. It remains to sum the geometric progressions.",
+      "uz": "$n$ ning har bir boʻluvchisi $p_1^{c_1}\\cdots p_k^{c_k}$ koʻrinishida, bunda $0\\le c_i\\le \\alpha_i$, va turli daraja toʻplamlari turli boʻluvchi beradi. Demak ular roppa-rosa $(\\alpha_1+1)\\cdots(\\alpha_k+1)$ ta. Yigʻindi uchun $$\\left(1+p_1+\\cdots+p_1^{\\alpha_1}\\right)\\cdots\\left(1+p_k+\\cdots+p_k^{\\alpha_k}\\right)$$ koʻpaytmani ochamiz: ochilgandan keyingi har bir had aynan bitta boʻluvchi, va har bir boʻluvchi aynan bir marta uchraydi. Geometrik progressiyalarni yigʻish qoladi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Сколько делителей у числа $360$ и чему равна их сумма?",
-      "en": "How many divisors has $360$, and what is their sum?"
+      "en": "How many divisors has $360$, and what is their sum?",
+      "uz": "$360$ ning nechta boʻluvchisi bor va ularning yigʻindisi nimaga teng?"
      },
      "steps": {
       "ru": [
@@ -1128,68 +1384,79 @@ window.LESSONS[1] = {
      "t": "note",
      "text": {
       "ru": "Полезное следствие: $d(n)$ нечётно тогда и только тогда, когда $n$ — полный квадрат. Делители разбиваются на пары $(e,\\,n/e)$, и непарным остаётся только $e=\\sqrt{n}$.",
-      "en": "A useful corollary: $d(n)$ is odd exactly when $n$ is a perfect square. Divisors pair up as $(e,\\,n/e)$, and the only one left without a partner is $e=\\sqrt{n}$."
+      "en": "A useful corollary: $d(n)$ is odd exactly when $n$ is a perfect square. Divisors pair up as $(e,\\,n/e)$, and the only one left without a partner is $e=\\sqrt{n}$.",
+      "uz": "Foydali natija: $d(n)$ toq boʻlishi uchun $n$ toʻliq kvadrat boʻlishi zarur va yetarli. Boʻluvchilar $(e,\\,n/e)$ juftliklarga birlashadi va juftsiz qoladigan yagona boʻluvchi $e=\\sqrt{n}$."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Мультипликативная функция",
-      "en": "Multiplicative function"
+      "en": "Multiplicative function",
+      "uz": "Multiplikativ funksiya"
      },
      "text": {
       "ru": "Функция $f$, определённая на натуральных числах, называется **мультипликативной**, если $f(1)=1$ и $$f(mn)=f(m)f(n)\\quad\\text{для всех взаимно простых } m,n .$$",
-      "en": "A function $f$ on the positive integers is **multiplicative** if $f(1)=1$ and $$f(mn)=f(m)f(n)\\quad\\text{for all coprime } m,n .$$"
+      "en": "A function $f$ on the positive integers is **multiplicative** if $f(1)=1$ and $$f(mn)=f(m)f(n)\\quad\\text{for all coprime } m,n .$$",
+      "uz": "Musbat butun sonlarda aniqlangan $f$ funksiya, agar $f(1)=1$ boʻlsa va $$\\text{barcha oʻzaro tub } m,n \\text{ uchun } f(mn)=f(m)f(n)$$ boʻlsa, **multiplikativ** deyiladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Мультипликативность $d$ и $\\sigma$",
-      "en": "Multiplicativity of $d$ and $\\sigma$"
+      "en": "Multiplicativity of $d$ and $\\sigma$",
+      "uz": "$d$ va $\\sigma$ ning multiplikativligi"
      },
      "text": {
       "ru": "Функции $d(n)$ (число делителей) и $\\sigma(n)$ (их сумма) мультипликативны: при $\\gcd(m,n)=1$ $$d(mn)=d(m)\\,d(n),\\qquad \\sigma(mn)=\\sigma(m)\\,\\sigma(n).$$",
-      "en": "The functions $d(n)$ (number of divisors) and $\\sigma(n)$ (their sum) are multiplicative: for $\\gcd(m,n)=1$ $$d(mn)=d(m)\\,d(n),\\qquad \\sigma(mn)=\\sigma(m)\\,\\sigma(n).$$"
+      "en": "The functions $d(n)$ (number of divisors) and $\\sigma(n)$ (their sum) are multiplicative: for $\\gcd(m,n)=1$ $$d(mn)=d(m)\\,d(n),\\qquad \\sigma(mn)=\\sigma(m)\\,\\sigma(n).$$",
+      "uz": "$d(n)$ (boʻluvchilar soni) va $\\sigma(n)$ (ularning yigʻindisi) funksiyalari multiplikativ: $\\gcd(m,n)=1$ boʻlganda $$d(mn)=d(m)\\,d(n),\\qquad \\sigma(mn)=\\sigma(m)\\,\\sigma(n).$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $\\gcd(m,n)=1$. Ключевое наблюдение: делители произведения $mn$ находятся во взаимно однозначном соответствии с **парами** делителей $$e\\mid m,\\qquad f\\mid n ,$$ причём соответствие задаётся произведением $e f$.\n\n**Почему это биекция.** Каждая пара даёт делитель $ef$ числа $mn$ — это очевидно. Обратно, пусть $g\\mid mn$; положим $$e=\\gcd(g,m),\\qquad f=\\gcd(g,n).$$ Из взаимной простоты $m$ и $n$ следует (сравнением показателей простых), что $g=ef$, и такое представление единственно: каждое простое числа $g$ делит ровно одно из чисел $m$, $n$ и потому попадает целиком либо в $e$, либо в $f$.\n\n**Считаем.** Число пар равно $d(m)d(n)$, откуда первая формула. Сумма всех произведений равна $$\\sum_{e\\mid m}\\ \\sum_{f\\mid n} ef=\\left(\\sum_{e\\mid m}e\\right)\\left(\\sum_{f\\mid n}f\\right)=\\sigma(m)\\sigma(n),$$ откуда вторая. $\\blacksquare$",
-      "en": "Let $\\gcd(m,n)=1$. The key observation is that the divisors of $mn$ correspond one-to-one with **pairs** of divisors $$e\\mid m,\\qquad f\\mid n ,$$ the correspondence being $(e,f)\\mapsto ef$.\n\n**Why it is a bijection.** Each pair clearly gives a divisor $ef$ of $mn$. Conversely, given $g\\mid mn$ put $$e=\\gcd(g,m),\\qquad f=\\gcd(g,n).$$ Coprimality of $m$ and $n$ shows (by comparing prime exponents) that $g=ef$, and the representation is unique: every prime of $g$ divides exactly one of $m$, $n$ and so lands entirely in $e$ or entirely in $f$.\n\n**Counting.** The number of pairs is $d(m)d(n)$, giving the first formula. The sum of all the products is $$\\sum_{e\\mid m}\\ \\sum_{f\\mid n} ef=\\left(\\sum_{e\\mid m}e\\right)\\left(\\sum_{f\\mid n}f\\right)=\\sigma(m)\\sigma(n),$$ giving the second. $\\blacksquare$"
+      "en": "Let $\\gcd(m,n)=1$. The key observation is that the divisors of $mn$ correspond one-to-one with **pairs** of divisors $$e\\mid m,\\qquad f\\mid n ,$$ the correspondence being $(e,f)\\mapsto ef$.\n\n**Why it is a bijection.** Each pair clearly gives a divisor $ef$ of $mn$. Conversely, given $g\\mid mn$ put $$e=\\gcd(g,m),\\qquad f=\\gcd(g,n).$$ Coprimality of $m$ and $n$ shows (by comparing prime exponents) that $g=ef$, and the representation is unique: every prime of $g$ divides exactly one of $m$, $n$ and so lands entirely in $e$ or entirely in $f$.\n\n**Counting.** The number of pairs is $d(m)d(n)$, giving the first formula. The sum of all the products is $$\\sum_{e\\mid m}\\ \\sum_{f\\mid n} ef=\\left(\\sum_{e\\mid m}e\\right)\\left(\\sum_{f\\mid n}f\\right)=\\sigma(m)\\sigma(n),$$ giving the second. $\\blacksquare$",
+      "uz": "$\\gcd(m,n)=1$ boʻlsin. Asosiy kuzatish shuki, $mn$ ning boʻluvchilari $$e\\mid m,\\qquad f\\mid n$$ boʻluvchilar **juftliklari** bilan oʻzaro bir qiymatli mos tushadi, moslik esa $(e,f)\\mapsto ef$.\n\n**Nega bu biyeksiya.** Har bir juftlik aniqki $mn$ ning $ef$ boʻluvchisini beradi. Aksincha, $g\\mid mn$ berilgan boʻlsa, $$e=\\gcd(g,m),\\qquad f=\\gcd(g,n)$$ deymiz. $m$ va $n$ ning oʻzaro tubligi (tub darajalarni solishtirish orqali) $g=ef$ ekanini koʻrsatadi va bu tasvir yagona: $g$ ning har bir tub boʻluvchisi $m$ va $n$ dan aynan bittasini boʻladi, demak butunlay $e$ ga yoki butunlay $f$ ga tushadi.\n\n**Sanash.** Juftliklar soni $d(m)d(n)$, bu birinchi formulani beradi. Barcha koʻpaytmalar yigʻindisi esa $$\\sum_{e\\mid m}\\ \\sum_{f\\mid n} ef=\\left(\\sum_{e\\mid m}e\\right)\\left(\\sum_{f\\mid n}f\\right)=\\sigma(m)\\sigma(n),$$ bu ikkinchisini beradi. $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Мультипликативность — причина, по которой формулы для $d(n)$ и $\\sigma(n)$ выглядят как **произведения по простым**: достаточно понять функцию на степенях простых, а дальше она собирается сама.",
-      "en": "Multiplicativity is why the formulas for $d(n)$ and $\\sigma(n)$ look like **products over primes**: understand the function on prime powers and it assembles itself."
+      "en": "Multiplicativity is why the formulas for $d(n)$ and $\\sigma(n)$ look like **products over primes**: understand the function on prime powers and it assembles itself.",
+      "uz": "Multiplikativlik aynan $d(n)$ va $\\sigma(n)$ formulalarining nega **tub sonlar boʻyicha koʻpaytma** koʻrinishida boʻlishini tushuntiradi: funksiyani tub darajalarda tushunsangiz, u oʻzi yigʻiladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Произведение всех делителей",
-      "en": "The product of all divisors"
+      "en": "The product of all divisors",
+      "uz": "Barcha boʻluvchilarning koʻpaytmasi"
      },
      "text": {
       "ru": "Произведение всех натуральных делителей числа $n>1$ равно $$\\prod_{e\\mid n}e=n^{\\,d(n)/2} .$$",
-      "en": "The product of all positive divisors of $n>1$ equals $$\\prod_{e\\mid n}e=n^{\\,d(n)/2} .$$"
+      "en": "The product of all positive divisors of $n>1$ equals $$\\prod_{e\\mid n}e=n^{\\,d(n)/2} .$$",
+      "uz": "$n>1$ ning barcha musbat boʻluvchilari koʻpaytmasi $$\\prod_{e\\mid n}e=n^{\\,d(n)/2}$$ ga teng."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Обозначим искомое произведение через $P$ и запишем его дважды — в возрастающем и в убывающем порядке делителей. Делители разбиваются на пары $\\left(e,\\ \\tfrac ne\\right)$, и произведение в каждой паре равно $n$.\n\nФормально: $$P^{2}=\\prod_{e\\mid n}e\\ \\cdot\\ \\prod_{e\\mid n}\\frac ne=\\prod_{e\\mid n}\\left(e\\cdot\\frac ne\\right)=n^{\\,d(n)} ,$$ где мы воспользовались тем, что при пробегании $e$ по всем делителям величина $\\tfrac ne$ тоже пробегает все делители.\n\nИзвлекая корень, получаем $P=n^{\\,d(n)/2}$. $\\blacksquare$\n\n**Заметьте:** показатель $\\tfrac{d(n)}2$ может быть полуцелым — это происходит ровно тогда, когда $n$ полный квадрат, и тогда «непарным» остаётся делитель $\\sqrt n$.",
-      "en": "Call the product $P$ and write it twice, once in increasing and once in decreasing order of divisors. The divisors pair up as $\\left(e,\\ \\tfrac ne\\right)$, each pair multiplying to $n$.\n\nFormally $$P^{2}=\\prod_{e\\mid n}e\\ \\cdot\\ \\prod_{e\\mid n}\\frac ne=\\prod_{e\\mid n}\\left(e\\cdot\\frac ne\\right)=n^{\\,d(n)} ,$$ using that as $e$ runs over all divisors so does $\\tfrac ne$.\n\nTaking square roots, $P=n^{\\,d(n)/2}$. $\\blacksquare$\n\n**Note:** the exponent $\\tfrac{d(n)}2$ may be a half-integer — exactly when $n$ is a perfect square, in which case the unpaired divisor is $\\sqrt n$."
+      "en": "Call the product $P$ and write it twice, once in increasing and once in decreasing order of divisors. The divisors pair up as $\\left(e,\\ \\tfrac ne\\right)$, each pair multiplying to $n$.\n\nFormally $$P^{2}=\\prod_{e\\mid n}e\\ \\cdot\\ \\prod_{e\\mid n}\\frac ne=\\prod_{e\\mid n}\\left(e\\cdot\\frac ne\\right)=n^{\\,d(n)} ,$$ using that as $e$ runs over all divisors so does $\\tfrac ne$.\n\nTaking square roots, $P=n^{\\,d(n)/2}$. $\\blacksquare$\n\n**Note:** the exponent $\\tfrac{d(n)}2$ may be a half-integer — exactly when $n$ is a perfect square, in which case the unpaired divisor is $\\sqrt n$.",
+      "uz": "Koʻpaytmani $P$ deb belgilaymiz va uni ikki marta — boʻluvchilarning oʻsish va kamayish tartibida yozamiz. Boʻluvchilar $\\left(e,\\ \\tfrac ne\\right)$ juftliklarga birlashadi, har bir juftlikning koʻpaytmasi $n$.\n\nRasmiy ravishda $$P^{2}=\\prod_{e\\mid n}e\\ \\cdot\\ \\prod_{e\\mid n}\\frac ne=\\prod_{e\\mid n}\\left(e\\cdot\\frac ne\\right)=n^{\\,d(n)} ,$$ chunki $e$ barcha boʻluvchilardan oʻtganda $\\tfrac ne$ ham shunday qiladi.\n\nKvadrat ildiz olib, $P=n^{\\,d(n)/2}$. $\\blacksquare$\n\n**Izoh:** $\\tfrac{d(n)}2$ darajasi yarim butun boʻlishi mumkin — bu aynan $n$ toʻliq kvadrat boʻlganda sodir boʻladi, bunda juftsiz boʻluvchi $\\sqrt n$."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите наименьшее натуральное число, имеющее ровно $10$ делителей.",
-      "en": "Find the smallest positive integer with exactly $10$ divisors."
+      "en": "Find the smallest positive integer with exactly $10$ divisors.",
+      "uz": "Roppa-rosa $10$ ta boʻluvchiga ega eng kichik musbat butun sonni toping."
      },
      "steps": {
       "ru": [
@@ -1205,18 +1472,27 @@ window.LESSONS[1] = {
        "The factorisation $10$ gives exponents $(9)$: the smallest such number is $2^{9}=512$.",
        "The factorisation $5\\cdot2$ gives exponents $(4,1)$; put the larger exponent on the smaller prime: $2^{4}\\cdot3=48$.",
        "Compare: $48<512$."
+      ],
+      "uz": [
+       "Agar $n=\\prod p_i^{\\alpha_i}$ boʻlsa, $d(n)=\\prod\\left(\\alpha_i+1\\right)$, demak $10$ ni birdan katta koʻpaytuvchilar koʻpaytmasi sifatida yozamiz.",
+       "Variantlar: $10$ va $5\\cdot2$.",
+       "$10$ ajratmasi $(9)$ darajalarni beradi: bunday sonlarning eng kichigi $2^{9}=512$.",
+       "$5\\cdot2$ ajratmasi $(4,1)$ darajalarni beradi; kattaroq darajani kichikroq tub songa qoʻyamiz: $2^{4}\\cdot3=48$.",
+       "Solishtiramiz: $48<512$."
       ]
      },
      "ans": {
       "ru": "$48$; его делители $1,2,3,4,6,8,12,16,24,48$ — ровно десять.",
-      "en": "$48$; its divisors are $1,2,3,4,6,8,12,16,24,48$ — exactly ten."
+      "en": "$48$; its divisors are $1,2,3,4,6,8,12,16,24,48$ — exactly ten.",
+      "uz": "$48$; uning boʻluvchilari $1,2,3,4,6,8,12,16,24,48$ — roppa-rosa oʻnta."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Функция $\\sigma$ стоит за старинным понятием: число называют **совершенным**, если $\\sigma(n)=2n$, то есть оно равно сумме своих собственных делителей. Первые совершенные числа — $6$, $28$, $496$, $8128$; все чётные совершенные числа имеют вид $2^{p-1}\\left(2^{p}-1\\right)$ с простым $2^{p}-1$, а существуют ли нечётные — не известно до сих пор.",
-      "en": "The function $\\sigma$ sits behind an ancient notion: $n$ is **perfect** if $\\sigma(n)=2n$, i.e. it equals the sum of its proper divisors. The first perfect numbers are $6$, $28$, $496$, $8128$; every even perfect number has the form $2^{p-1}\\left(2^{p}-1\\right)$ with $2^{p}-1$ prime, and whether an odd one exists is still unknown."
+      "en": "The function $\\sigma$ sits behind an ancient notion: $n$ is **perfect** if $\\sigma(n)=2n$, i.e. it equals the sum of its proper divisors. The first perfect numbers are $6$, $28$, $496$, $8128$; every even perfect number has the form $2^{p-1}\\left(2^{p}-1\\right)$ with $2^{p}-1$ prime, and whether an odd one exists is still unknown.",
+      "uz": "$\\sigma$ funksiyasi ortida qadimiy tushuncha turadi: agar $\\sigma(n)=2n$ boʻlsa, yaʼni $n$ oʻzining xos boʻluvchilari yigʻindisiga teng boʻlsa, u **mukammal** son deyiladi. Dastlabki mukammal sonlar $6$, $28$, $496$, $8128$; har bir juft mukammal son $2^{p-1}\\left(2^{p}-1\\right)$ koʻrinishida, bunda $2^{p}-1$ tub, toq mukammal son mavjudmi degan savol esa hanuz ochiq."
      }
     }
    ]
@@ -1224,39 +1500,45 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Простые внутри факториала",
-    "en": "Primes inside a factorial"
+    "en": "Primes inside a factorial",
+    "uz": "Faktorial ichidagi tub sonlar"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "Факториал $n!$ — произведение всех чисел до $n$, и часто нужно знать не сам факториал, а **сколько раз** в него входит данное простое. Ответ даёт формула Лежандра.",
-      "en": "The factorial $n!$ multiplies everything up to $n$, and one often needs not the factorial itself but **how many times** a given prime sits inside it. Legendre’s formula answers that."
+      "en": "The factorial $n!$ multiplies everything up to $n$, and one often needs not the factorial itself but **how many times** a given prime sits inside it. Legendre’s formula answers that.",
+      "uz": "$n!$ faktorial $n$ gacha boʻlgan hamma narsani koʻpaytiradi va koʻpincha faktorialning oʻzi emas, berilgan tub son uning ichida **necha marta** turgani kerak boʻladi. Lejandr formulasi shunga javob beradi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формула Лежандра",
-      "en": "Legendre’s formula"
+      "en": "Legendre’s formula",
+      "uz": "Lejandr formulasi"
      },
      "text": {
       "ru": "Показатель простого $p$ в разложении числа $n!$ равен $$v_p(n!)=\\left\\lfloor\\frac np\\right\\rfloor+\\left\\lfloor\\frac n{p^{2}}\\right\\rfloor+\\left\\lfloor\\frac n{p^{3}}\\right\\rfloor+\\cdots$$ (сумма конечна: слагаемые обращаются в нуль, как только $p^{k}>n$).",
-      "en": "The exponent of a prime $p$ in $n!$ equals $$v_p(n!)=\\left\\lfloor\\frac np\\right\\rfloor+\\left\\lfloor\\frac n{p^{2}}\\right\\rfloor+\\left\\lfloor\\frac n{p^{3}}\\right\\rfloor+\\cdots$$ (a finite sum: the terms vanish once $p^{k}>n$)."
+      "en": "The exponent of a prime $p$ in $n!$ equals $$v_p(n!)=\\left\\lfloor\\frac np\\right\\rfloor+\\left\\lfloor\\frac n{p^{2}}\\right\\rfloor+\\left\\lfloor\\frac n{p^{3}}\\right\\rfloor+\\cdots$$ (a finite sum: the terms vanish once $p^{k}>n$).",
+      "uz": "$n!$ dagi tub $p$ sonning darajasi $$v_p(n!)=\\left\\lfloor\\frac np\\right\\rfloor+\\left\\lfloor\\frac n{p^{2}}\\right\\rfloor+\\left\\lfloor\\frac n{p^{3}}\\right\\rfloor+\\cdots$$ ga teng (yigʻindi chekli: $p^{k}>n$ boʻlgach hadlar nolga aylanadi)."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Посчитаем вклад каждого сомножителя двумя способами — «по этажам».\n\nСреди чисел $1,2,\\dots,n$ ровно $\\left\\lfloor\\tfrac np\\right\\rfloor$ кратны $p$: это $p,2p,3p,\\dots$ Каждое из них вносит в произведение хотя бы одну степень $p$.\n\nСреди тех же чисел ровно $\\left\\lfloor\\tfrac n{p^{2}}\\right\\rfloor$ кратны $p^{2}$; каждое такое число вносит **ещё одну** степень сверх уже посчитанной.\n\nВообще, кратные $p^{k}$ вносят по одной дополнительной степени на $k$-м этаже, и их $\\left\\lfloor\\tfrac n{p^{k}}\\right\\rfloor$ штук.\n\nСложив вклады всех этажей, получаем ровно объявленную сумму: число, делящееся на $p^{m}$ и не более, будет посчитано ровно $m$ раз — по разу на каждом из первых $m$ этажей. $\\blacksquare$",
-      "en": "Count the contribution of each factor \"floor by floor\".\n\nAmong $1,2,\\dots,n$ exactly $\\left\\lfloor\\tfrac np\\right\\rfloor$ are multiples of $p$, namely $p,2p,3p,\\dots$; each contributes at least one power of $p$.\n\nAmong the same numbers exactly $\\left\\lfloor\\tfrac n{p^{2}}\\right\\rfloor$ are multiples of $p^{2}$; each of those contributes **one more** power beyond the one already counted.\n\nIn general the multiples of $p^{k}$ contribute one extra power each on the $k$-th floor, and there are $\\left\\lfloor\\tfrac n{p^{k}}\\right\\rfloor$ of them.\n\nAdding the floors gives exactly the stated sum: a number divisible by $p^{m}$ and no further is counted exactly $m$ times, once on each of the first $m$ floors. $\\blacksquare$"
+      "en": "Count the contribution of each factor \"floor by floor\".\n\nAmong $1,2,\\dots,n$ exactly $\\left\\lfloor\\tfrac np\\right\\rfloor$ are multiples of $p$, namely $p,2p,3p,\\dots$; each contributes at least one power of $p$.\n\nAmong the same numbers exactly $\\left\\lfloor\\tfrac n{p^{2}}\\right\\rfloor$ are multiples of $p^{2}$; each of those contributes **one more** power beyond the one already counted.\n\nIn general the multiples of $p^{k}$ contribute one extra power each on the $k$-th floor, and there are $\\left\\lfloor\\tfrac n{p^{k}}\\right\\rfloor$ of them.\n\nAdding the floors gives exactly the stated sum: a number divisible by $p^{m}$ and no further is counted exactly $m$ times, once on each of the first $m$ floors. $\\blacksquare$",
+      "uz": "Har bir koʻpaytuvchining hissasini «qavat-qavat» sanaymiz.\n\n$1,2,\\dots,n$ orasida roppa-rosa $\\left\\lfloor\\tfrac np\\right\\rfloor$ tasi $p$ ga karrali, yaʼni $p,2p,3p,\\dots$; ularning har biri kamida bitta $p$ darajasini beradi.\n\nXuddi shu sonlar orasida roppa-rosa $\\left\\lfloor\\tfrac n{p^{2}}\\right\\rfloor$ tasi $p^{2}$ ga karrali; ularning har biri allaqachon sanalganidan **yana bitta** daraja qoʻshadi.\n\nUmuman, $p^{k}$ ga karralilar $k$-qavatda bittadan qoʻshimcha daraja beradi, ular esa $\\left\\lfloor\\tfrac n{p^{k}}\\right\\rfloor$ ta.\n\nQavatlarni qoʻshsak aynan keltirilgan yigʻindi chiqadi: $p^{m}$ ga boʻlinadigan va undan nariga bormaydigan son roppa-rosa $m$ marta, dastlabki $m$ ta qavatning har birida bir martadan sanaladi. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Сколькими нулями оканчивается $100!$?",
-      "en": "In how many zeros does $100!$ end?"
+      "en": "In how many zeros does $100!$ end?",
+      "uz": "$100!$ nechta nol bilan tugaydi?"
      },
      "steps": {
       "ru": [
@@ -1270,18 +1552,26 @@ window.LESSONS[1] = {
        "So the answer is $v_5(100!)$.",
        "$\\left\\lfloor\\tfrac{100}{5}\\right\\rfloor=20$, $\\left\\lfloor\\tfrac{100}{25}\\right\\rfloor=4$, $\\left\\lfloor\\tfrac{100}{125}\\right\\rfloor=0$.",
        "Total $20+4=24$."
+      ],
+      "uz": [
+       "Oxiridagi nol — bu $10=2\\cdot5$ koʻpaytuvchi, faktorialda esa ikkilar beshlardan doim koʻp.",
+       "Demak javob $v_5(100!)$.",
+       "$\\left\\lfloor\\tfrac{100}{5}\\right\\rfloor=20$, $\\left\\lfloor\\tfrac{100}{25}\\right\\rfloor=4$, $\\left\\lfloor\\tfrac{100}{125}\\right\\rfloor=0$.",
+       "Jami $20+4=24$."
       ]
      },
      "ans": {
       "ru": "$24$ нуля.",
-      "en": "$24$ zeros."
+      "en": "$24$ zeros.",
+      "uz": "$24$ ta nol."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите наибольшее $k$, для которого $3^{k}$ делит $50!$.",
-      "en": "Find the largest $k$ with $3^{k}\\mid50!$."
+      "en": "Find the largest $k$ with $3^{k}\\mid50!$.",
+      "uz": "$3^{k}\\mid50!$ boʻladigan eng katta $k$ ni toping."
      },
      "steps": {
       "ru": [
@@ -1295,6 +1585,12 @@ window.LESSONS[1] = {
        "$\\left\\lfloor\\tfrac{50}{9}\\right\\rfloor=5$ multiples of nine give one more three each.",
        "$\\left\\lfloor\\tfrac{50}{27}\\right\\rfloor=1$, and $\\left\\lfloor\\tfrac{50}{81}\\right\\rfloor=0$.",
        "Adding: $16+5+1=22$."
+      ],
+      "uz": [
+       "$\\left\\lfloor\\tfrac{50}{3}\\right\\rfloor=16$ ta uchga karrali son.",
+       "$\\left\\lfloor\\tfrac{50}{9}\\right\\rfloor=5$ ta toʻqqizga karrali son yana bittadan uch beradi.",
+       "$\\left\\lfloor\\tfrac{50}{27}\\right\\rfloor=1$, va $\\left\\lfloor\\tfrac{50}{81}\\right\\rfloor=0$.",
+       "Qoʻshamiz: $16+5+1=22$."
       ]
      },
      "ans": {
@@ -1306,7 +1602,8 @@ window.LESSONS[1] = {
      "t": "note",
      "text": {
       "ru": "Отсюда же следует, что биномиальный коэффициент $\\dbinom nk=\\dfrac{n!}{k!\\,(n-k)!}$ всегда целый: показатель каждого простого в знаменателе не превосходит показателя в числителе, потому что $$\\left\\lfloor x+y\\right\\rfloor\\ \\ge\\ \\left\\lfloor x\\right\\rfloor+\\left\\lfloor y\\right\\rfloor .$$",
-      "en": "The same formula shows the binomial coefficient $\\dbinom nk=\\dfrac{n!}{k!\\,(n-k)!}$ is always an integer: every prime’s exponent in the denominator is at most its exponent in the numerator, because $$\\left\\lfloor x+y\\right\\rfloor\\ \\ge\\ \\left\\lfloor x\\right\\rfloor+\\left\\lfloor y\\right\\rfloor .$$"
+      "en": "The same formula shows the binomial coefficient $\\dbinom nk=\\dfrac{n!}{k!\\,(n-k)!}$ is always an integer: every prime’s exponent in the denominator is at most its exponent in the numerator, because $$\\left\\lfloor x+y\\right\\rfloor\\ \\ge\\ \\left\\lfloor x\\right\\rfloor+\\left\\lfloor y\\right\\rfloor .$$",
+      "uz": "Xuddi shu formula $\\dbinom nk=\\dfrac{n!}{k!\\,(n-k)!}$ binomial koeffitsiyenti har doim butun son ekanini koʻrsatadi: maxrajdagi har bir tub sonning darajasi suratdagisidan oshmaydi, chunki $$\\left\\lfloor x+y\\right\\rfloor\\ \\ge\\ \\left\\lfloor x\\right\\rfloor+\\left\\lfloor y\\right\\rfloor .$$"
      }
     }
    ]
@@ -1314,50 +1611,58 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Функция Эйлера и три классические теоремы",
-    "en": "Euler’s totient and three classical theorems"
+    "en": "Euler’s totient and three classical theorems",
+    "uz": "Eyler funksiyasi va uchta klassik teorema"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "До сих пор мы считали делители. Теперь посчитаем числа, **взаимно простые** с данным, — и обнаружим, что этот счёт управляет степенями по модулю $n$.",
-      "en": "So far we have counted divisors. Now we count the numbers **coprime** to a given one — and find that this count governs how powers behave modulo $n$."
+      "en": "So far we have counted divisors. Now we count the numbers **coprime** to a given one — and find that this count governs how powers behave modulo $n$.",
+      "uz": "Shu paytgacha biz boʻluvchilarni sanadik. Endi berilgan songa **oʻzaro tub** boʻlgan sonlarni sanaymiz — va bu sanoq darajalarning modul boʻyicha qanday tutishini boshqarishini koʻramiz."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Функция Эйлера",
-      "en": "Euler’s totient function"
+      "en": "Euler’s totient function",
+      "uz": "Eyler funksiyasi"
      },
      "text": {
       "ru": "$\\varphi(n)$ — количество чисел из набора $1,2,\\dots,n$, взаимно простых с $n$. Например, $$\\varphi(1)=1,\\quad\\varphi(6)=2\\ (\\text{это } 1,5),\\quad\\varphi(7)=6,\\quad\\varphi(12)=4\\ (\\text{это } 1,5,7,11).$$",
-      "en": "$\\varphi(n)$ counts the numbers among $1,2,\\dots,n$ that are coprime to $n$. For instance $$\\varphi(1)=1,\\quad\\varphi(6)=2\\ (\\text{namely } 1,5),\\quad\\varphi(7)=6,\\quad\\varphi(12)=4\\ (\\text{namely } 1,5,7,11).$$"
+      "en": "$\\varphi(n)$ counts the numbers among $1,2,\\dots,n$ that are coprime to $n$. For instance $$\\varphi(1)=1,\\quad\\varphi(6)=2\\ (\\text{namely } 1,5),\\quad\\varphi(7)=6,\\quad\\varphi(12)=4\\ (\\text{namely } 1,5,7,11).$$",
+      "uz": "$\\varphi(n)$ — $1,2,\\dots,n$ orasidagi $n$ ga oʻzaro tub sonlar soni. Masalan, $$\\varphi(1)=1,\\quad\\varphi(6)=2\\ (\\text{yaʼni } 1,5),\\quad\\varphi(7)=6,\\quad\\varphi(12)=4\\ (\\text{yaʼni } 1,5,7,11).$$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формула Эйлера",
-      "en": "Euler’s product formula"
+      "en": "Euler’s product formula",
+      "uz": "Eylerning koʻpaytma formulasi"
      },
      "text": {
       "ru": "Если $n=p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$, то $$\\varphi(n)=n\\prod_{i=1}^{k}\\left(1-\\frac1{p_i}\\right)=\\prod_{i=1}^{k}p_i^{\\alpha_i-1}\\left(p_i-1\\right).$$ В частности $\\varphi(p)=p-1$ и $\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}$ для простого $p$.",
-      "en": "If $n=p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$ then $$\\varphi(n)=n\\prod_{i=1}^{k}\\left(1-\\frac1{p_i}\\right)=\\prod_{i=1}^{k}p_i^{\\alpha_i-1}\\left(p_i-1\\right).$$ In particular $\\varphi(p)=p-1$ and $\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}$ for a prime $p$."
+      "en": "If $n=p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$ then $$\\varphi(n)=n\\prod_{i=1}^{k}\\left(1-\\frac1{p_i}\\right)=\\prod_{i=1}^{k}p_i^{\\alpha_i-1}\\left(p_i-1\\right).$$ In particular $\\varphi(p)=p-1$ and $\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}$ for a prime $p$.",
+      "uz": "Agar $n=p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$ boʻlsa, u holda $$\\varphi(n)=n\\prod_{i=1}^{k}\\left(1-\\frac1{p_i}\\right)=\\prod_{i=1}^{k}p_i^{\\alpha_i-1}\\left(p_i-1\\right).$$ Xususan, tub $p$ uchun $\\varphi(p)=p-1$ va $\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Шаг 1: степень простого.** Среди чисел $1,\\dots,p^{\\alpha}$ не взаимно просты с $p^{\\alpha}$ ровно кратные $p$, а их $p^{\\alpha-1}$ штук. Значит $$\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}=p^{\\alpha}\\left(1-\\frac1p\\right) \\quad\\checkmark$$\n\n**Шаг 2: мультипликативность.** Пусть $\\gcd(m,n)=1$; докажем $\\varphi(mn)=\\varphi(m)\\varphi(n)$. Выпишем числа $1,\\dots,mn$ в таблицу из $m$ строк и $n$ столбцов, поставив число $x$ в клетку с координатами $\\left(x\\bmod m,\\ x\\bmod n\\right)$. По китайской теореме об остатках это соответствие взаимно однозначно: каждая пара остатков встречается ровно один раз.\n\nЧисло $x$ взаимно просто с $mn$ тогда и только тогда, когда оно взаимно просто и с $m$, и с $n$, то есть когда **обе** его координаты взаимно просты со своими модулями. Первых координат подходит $\\varphi(m)$, вторых $\\varphi(n)$, и выбираются они независимо: $$\\varphi(mn)=\\varphi(m)\\varphi(n) \\quad\\checkmark$$\n\n**Шаг 3: сборка.** Степени разных простых попарно взаимно просты, поэтому $$\\varphi(n)=\\prod_i\\varphi\\left(p_i^{\\alpha_i}\\right)=\\prod_i p_i^{\\alpha_i}\\left(1-\\frac1{p_i}\\right)=n\\prod_i\\left(1-\\frac1{p_i}\\right). \\qquad\\blacksquare$$",
-      "en": "**Step 1: a prime power.** Among $1,\\dots,p^{\\alpha}$ the numbers *not* coprime to $p^{\\alpha}$ are exactly the multiples of $p$, and there are $p^{\\alpha-1}$ of them. Hence $$\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}=p^{\\alpha}\\left(1-\\frac1p\\right) \\quad\\checkmark$$\n\n**Step 2: multiplicativity.** Let $\\gcd(m,n)=1$; we show $\\varphi(mn)=\\varphi(m)\\varphi(n)$. Arrange $1,\\dots,mn$ in a table of $m$ rows and $n$ columns, placing $x$ at the cell $\\left(x\\bmod m,\\ x\\bmod n\\right)$. By the Chinese remainder theorem this is a bijection: each pair of residues occurs exactly once.\n\nNow $x$ is coprime to $mn$ exactly when it is coprime to both $m$ and $n$, i.e. when **both** coordinates are coprime to their moduli. There are $\\varphi(m)$ admissible first coordinates and $\\varphi(n)$ second ones, chosen independently: $$\\varphi(mn)=\\varphi(m)\\varphi(n) \\quad\\checkmark$$\n\n**Step 3: assembling.** Powers of distinct primes are pairwise coprime, so $$\\varphi(n)=\\prod_i\\varphi\\left(p_i^{\\alpha_i}\\right)=n\\prod_i\\left(1-\\frac1{p_i}\\right). \\qquad\\blacksquare$$"
+      "en": "**Step 1: a prime power.** Among $1,\\dots,p^{\\alpha}$ the numbers *not* coprime to $p^{\\alpha}$ are exactly the multiples of $p$, and there are $p^{\\alpha-1}$ of them. Hence $$\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}=p^{\\alpha}\\left(1-\\frac1p\\right) \\quad\\checkmark$$\n\n**Step 2: multiplicativity.** Let $\\gcd(m,n)=1$; we show $\\varphi(mn)=\\varphi(m)\\varphi(n)$. Arrange $1,\\dots,mn$ in a table of $m$ rows and $n$ columns, placing $x$ at the cell $\\left(x\\bmod m,\\ x\\bmod n\\right)$. By the Chinese remainder theorem this is a bijection: each pair of residues occurs exactly once.\n\nNow $x$ is coprime to $mn$ exactly when it is coprime to both $m$ and $n$, i.e. when **both** coordinates are coprime to their moduli. There are $\\varphi(m)$ admissible first coordinates and $\\varphi(n)$ second ones, chosen independently: $$\\varphi(mn)=\\varphi(m)\\varphi(n) \\quad\\checkmark$$\n\n**Step 3: assembling.** Powers of distinct primes are pairwise coprime, so $$\\varphi(n)=\\prod_i\\varphi\\left(p_i^{\\alpha_i}\\right)=n\\prod_i\\left(1-\\frac1{p_i}\\right). \\qquad\\blacksquare$$",
+      "uz": "**1-qadam: tub daraja.** $1,\\dots,p^{\\alpha}$ orasida $p^{\\alpha}$ ga oʻzaro tub *boʻlmagan* sonlar aynan $p$ ga karralilar, ular esa $p^{\\alpha-1}$ ta. Demak $$\\varphi\\left(p^{\\alpha}\\right)=p^{\\alpha}-p^{\\alpha-1}=p^{\\alpha}\\left(1-\\frac1p\\right) \\quad\\checkmark$$\n\n**2-qadam: multiplikativlik.** $\\gcd(m,n)=1$ boʻlsin; $\\varphi(mn)=\\varphi(m)\\varphi(n)$ ekanini koʻrsatamiz. $1,\\dots,mn$ sonlarni $m$ satr va $n$ ustundan iborat jadvalga joylaymiz, $x$ ni $\\left(x\\bmod m,\\ x\\bmod n\\right)$ katakka qoʻyamiz. Xitoy qoldiqlar teoremasiga koʻra bu biyeksiya: qoldiqlarning har bir juftligi roppa-rosa bir marta uchraydi.\n\nEndi $x$ soni $mn$ ga oʻzaro tub boʻlishi uchun u $m$ ga ham, $n$ ga ham oʻzaro tub boʻlishi, yaʼni **ikkala** koordinata oʻz moduliga oʻzaro tub boʻlishi kerak. Birinchi koordinata uchun $\\varphi(m)$ ta, ikkinchisi uchun $\\varphi(n)$ ta imkoniyat bor va ular mustaqil tanlanadi: $$\\varphi(mn)=\\varphi(m)\\varphi(n) \\quad\\checkmark$$\n\n**3-qadam: yigʻish.** Turli tub sonlarning darajalari juft-jufti bilan oʻzaro tub, demak $$\\varphi(n)=\\prod_i\\varphi\\left(p_i^{\\alpha_i}\\right)=n\\prod_i\\left(1-\\frac1{p_i}\\right). \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Вычислите $\\varphi(360)$.",
-      "en": "Compute $\\varphi(360)$."
+      "en": "Compute $\\varphi(360)$.",
+      "uz": "$\\varphi(360)$ ni hisoblang."
      },
      "steps": {
       "ru": [
@@ -1371,6 +1676,12 @@ window.LESSONS[1] = {
        "The formula gives $\\varphi(360)=360\\left(1-\\tfrac12\\right)\\left(1-\\tfrac13\\right)\\left(1-\\tfrac15\\right)$.",
        "Step by step: $360\\cdot\\tfrac12=180$, then $180\\cdot\\tfrac23=120$, then $120\\cdot\\tfrac45=96$.",
        "Check with the other form: $2^{2}\\cdot1\\ \\cdot\\ 3^{1}\\cdot2\\ \\cdot\\ 5^{0}\\cdot4=4\\cdot6\\cdot4=96$ ✓"
+      ],
+      "uz": [
+       "$360=2^{3}\\cdot3^{2}\\cdot5$.",
+       "Formula $\\varphi(360)=360\\left(1-\\tfrac12\\right)\\left(1-\\tfrac13\\right)\\left(1-\\tfrac15\\right)$ ni beradi.",
+       "Qadamma-qadam: $360\\cdot\\tfrac12=180$, soʻng $180\\cdot\\tfrac23=120$, soʻng $120\\cdot\\tfrac45=96$.",
+       "Ikkinchi koʻrinish bilan tekshirish: $2^{2}\\cdot1\\ \\cdot\\ 3^{1}\\cdot2\\ \\cdot\\ 5^{0}\\cdot4=4\\cdot6\\cdot4=96$ ✓"
       ]
      },
      "ans": {
@@ -1382,43 +1693,50 @@ window.LESSONS[1] = {
      "t": "thm",
      "name": {
       "ru": "Свойства функции Эйлера",
-      "en": "Properties of the totient"
+      "en": "Properties of the totient",
+      "uz": "Eyler funksiyasining xossalari"
      },
      "text": {
       "ru": "(1) $\\varphi(n)$ чётно при всех $n>2$; $\\;$ (2) $\\displaystyle\\sum_{d\\mid n}\\varphi(d)=n$; $\\;$ (3) $\\varphi(mn)=\\varphi(m)\\varphi(n)$ при $\\gcd(m,n)=1$.",
-      "en": "(1) $\\varphi(n)$ is even for every $n>2$; $\\;$ (2) $\\displaystyle\\sum_{d\\mid n}\\varphi(d)=n$; $\\;$ (3) $\\varphi(mn)=\\varphi(m)\\varphi(n)$ whenever $\\gcd(m,n)=1$."
+      "en": "(1) $\\varphi(n)$ is even for every $n>2$; $\\;$ (2) $\\displaystyle\\sum_{d\\mid n}\\varphi(d)=n$; $\\;$ (3) $\\varphi(mn)=\\varphi(m)\\varphi(n)$ whenever $\\gcd(m,n)=1$.",
+      "uz": "(1) Har bir $n>2$ uchun $\\varphi(n)$ juft; $\\;$ (2) $\\displaystyle\\sum_{d\\mid n}\\varphi(d)=n$; $\\;$ (3) $\\gcd(m,n)=1$ boʻlganda $\\varphi(mn)=\\varphi(m)\\varphi(n)$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**(1)** Если $n$ имеет нечётный простой делитель $p$, то множитель $p-1$ в формуле чётен, значит чётно и произведение. Иначе $n=2^{\\alpha}$ с $\\alpha\\ge2$ (случай $n>2$), и $\\varphi(n)=2^{\\alpha-1}$ чётно ✓\n\n**(2)** Разобьём числа $1,2,\\dots,n$ по значению $\\gcd$ с $n$. Числа с $\\gcd(x,n)=d$ — это в точности $x=d\\,y$, где $1\\le y\\le\\tfrac nd$ и $\\gcd\\left(y,\\tfrac nd\\right)=1$; таких $y$ ровно $\\varphi\\left(\\tfrac nd\\right)$.\n\nЗначит $$n=\\sum_{d\\mid n}\\varphi\\!\\left(\\frac nd\\right)=\\sum_{d\\mid n}\\varphi(d),$$ поскольку при пробегании $d$ по всем делителям величина $\\tfrac nd$ тоже пробегает все делители ✓\n\n**(3)** Доказано выше при выводе формулы. $\\blacksquare$",
-      "en": "**(1)** If $n$ has an odd prime divisor $p$, the factor $p-1$ in the formula is even, hence so is the product. Otherwise $n=2^{\\alpha}$ with $\\alpha\\ge2$ (as $n>2$), and $\\varphi(n)=2^{\\alpha-1}$ is even ✓\n\n**(2)** Sort $1,2,\\dots,n$ by the value of $\\gcd$ with $n$. The numbers with $\\gcd(x,n)=d$ are exactly $x=d\\,y$ with $1\\le y\\le\\tfrac nd$ and $\\gcd\\left(y,\\tfrac nd\\right)=1$; there are $\\varphi\\left(\\tfrac nd\\right)$ such $y$.\n\nHence $$n=\\sum_{d\\mid n}\\varphi\\!\\left(\\frac nd\\right)=\\sum_{d\\mid n}\\varphi(d),$$ since as $d$ runs over the divisors so does $\\tfrac nd$ ✓\n\n**(3)** Proved above while deriving the formula. $\\blacksquare$"
+      "en": "**(1)** If $n$ has an odd prime divisor $p$, the factor $p-1$ in the formula is even, hence so is the product. Otherwise $n=2^{\\alpha}$ with $\\alpha\\ge2$ (as $n>2$), and $\\varphi(n)=2^{\\alpha-1}$ is even ✓\n\n**(2)** Sort $1,2,\\dots,n$ by the value of $\\gcd$ with $n$. The numbers with $\\gcd(x,n)=d$ are exactly $x=d\\,y$ with $1\\le y\\le\\tfrac nd$ and $\\gcd\\left(y,\\tfrac nd\\right)=1$; there are $\\varphi\\left(\\tfrac nd\\right)$ such $y$.\n\nHence $$n=\\sum_{d\\mid n}\\varphi\\!\\left(\\frac nd\\right)=\\sum_{d\\mid n}\\varphi(d),$$ since as $d$ runs over the divisors so does $\\tfrac nd$ ✓\n\n**(3)** Proved above while deriving the formula. $\\blacksquare$",
+      "uz": "**(1)** Agar $n$ ning toq tub boʻluvchisi $p$ boʻlsa, formuladagi $p-1$ koʻpaytuvchi juft, demak koʻpaytma ham. Aks holda $n=2^{\\alpha}$ va $\\alpha\\ge2$ ($n>2$ boʻlgani uchun), $\\varphi(n)=2^{\\alpha-1}$ esa juft ✓\n\n**(2)** $1,2,\\dots,n$ sonlarni $n$ bilan EKUB qiymati boʻyicha saralaymiz. $\\gcd(x,n)=d$ boʻlgan sonlar aynan $x=d\\,y$ koʻrinishida, bunda $1\\le y\\le\\tfrac nd$ va $\\gcd\\left(y,\\tfrac nd\\right)=1$; bunday $y$ lar $\\varphi\\left(\\tfrac nd\\right)$ ta.\n\nDemak $$n=\\sum_{d\\mid n}\\varphi\\!\\left(\\frac nd\\right)=\\sum_{d\\mid n}\\varphi(d),$$ chunki $d$ boʻluvchilardan oʻtganda $\\tfrac nd$ ham shunday qiladi ✓\n\n**(3)** Formulani keltirib chiqarishda yuqorida isbotlandi. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Малая теорема Ферма",
-      "en": "Fermat’s little theorem"
+      "en": "Fermat’s little theorem",
+      "uz": "Ferma kichik teoremasi"
      },
      "text": {
       "ru": "Если $p$ простое и $p\\nmid a$, то $$a^{\\,p-1}\\equiv1\\pmod p .$$ Без условия $p\\nmid a$ верна форма $a^{p}\\equiv a\\pmod p$, справедливая для **всех** целых $a$.",
-      "en": "If $p$ is prime and $p\\nmid a$ then $$a^{\\,p-1}\\equiv1\\pmod p .$$ Without the hypothesis $p\\nmid a$ the form $a^{p}\\equiv a\\pmod p$ holds for **every** integer $a$."
+      "en": "If $p$ is prime and $p\\nmid a$ then $$a^{\\,p-1}\\equiv1\\pmod p .$$ Without the hypothesis $p\\nmid a$ the form $a^{p}\\equiv a\\pmod p$ holds for **every** integer $a$.",
+      "uz": "Agar $p$ tub boʻlsa va $p\\nmid a$ boʻlsa, u holda $$a^{\\,p-1}\\equiv1\\pmod p .$$ $p\\nmid a$ sharti boʻlmasa, $a^{p}\\equiv a\\pmod p$ koʻrinishi **har qanday** butun $a$ uchun oʻrinli."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Рассмотрим ненулевые остатки $1,2,\\dots,p-1$ и умножим каждый на $a$.\n\n**Шаг 1: получается тот же набор.** Числа $a\\cdot1,\\ a\\cdot2,\\ \\dots,\\ a(p-1)$ дают попарно различные ненулевые остатки: если $ai\\equiv aj$, то $p\\mid a(i-j)$, а так как $p\\nmid a$, по лемме Евклида $p\\mid i-j$, откуда $i=j$ (ведь $|i-j|<p$). Нулевых остатков нет, потому что $p\\nmid a$ и $p\\nmid i$.\n\nЗначит эти $p-1$ чисел — те же остатки $1,\\dots,p-1$, лишь переставленные.\n\n**Шаг 2: перемножаем.** $$a^{\\,p-1}(p-1)!\\ \\equiv\\ (p-1)!\\pmod p .$$\n\n**Шаг 3: сокращаем.** Число $(p-1)!$ не делится на $p$ (все множители меньше $p$), поэтому на него можно сократить: $$a^{\\,p-1}\\equiv1\\pmod p . \\qquad\\blacksquare$$",
-      "en": "Consider the non-zero residues $1,2,\\dots,p-1$ and multiply each by $a$.\n\n**Step 1: the same set comes back.** The numbers $a\\cdot1,\\dots,a(p-1)$ leave pairwise distinct non-zero residues: if $ai\\equiv aj$ then $p\\mid a(i-j)$, and since $p\\nmid a$ Euclid’s lemma gives $p\\mid i-j$, so $i=j$ (as $|i-j|<p$). None is zero because $p\\nmid a$ and $p\\nmid i$.\n\nSo these $p-1$ numbers are the residues $1,\\dots,p-1$ in some order.\n\n**Step 2: multiply them all.** $$a^{\\,p-1}(p-1)!\\ \\equiv\\ (p-1)!\\pmod p .$$\n\n**Step 3: cancel.** Since $(p-1)!$ is not divisible by $p$ (all its factors are smaller), we may cancel it: $$a^{\\,p-1}\\equiv1\\pmod p . \\qquad\\blacksquare$$"
+      "en": "Consider the non-zero residues $1,2,\\dots,p-1$ and multiply each by $a$.\n\n**Step 1: the same set comes back.** The numbers $a\\cdot1,\\dots,a(p-1)$ leave pairwise distinct non-zero residues: if $ai\\equiv aj$ then $p\\mid a(i-j)$, and since $p\\nmid a$ Euclid’s lemma gives $p\\mid i-j$, so $i=j$ (as $|i-j|<p$). None is zero because $p\\nmid a$ and $p\\nmid i$.\n\nSo these $p-1$ numbers are the residues $1,\\dots,p-1$ in some order.\n\n**Step 2: multiply them all.** $$a^{\\,p-1}(p-1)!\\ \\equiv\\ (p-1)!\\pmod p .$$\n\n**Step 3: cancel.** Since $(p-1)!$ is not divisible by $p$ (all its factors are smaller), we may cancel it: $$a^{\\,p-1}\\equiv1\\pmod p . \\qquad\\blacksquare$$",
+      "uz": "Noldan farqli $1,2,\\dots,p-1$ qoldiqlarni olamiz va har birini $a$ ga koʻpaytiramiz.\n\n**1-qadam: xuddi shu toʻplam qaytadi.** $a\\cdot1,\\dots,a(p-1)$ sonlari juft-jufti bilan turli, noldan farqli qoldiq beradi: agar $ai\\equiv aj$ boʻlsa, $p\\mid a(i-j)$, va $p\\nmid a$ boʻlgani uchun Yevklid lemmasi $p\\mid i-j$ ni beradi, demak $i=j$ (chunki $|i-j|<p$). Hech biri nol emas, chunki $p\\nmid a$ va $p\\nmid i$.\n\nDemak bu $p-1$ ta son $1,\\dots,p-1$ qoldiqlarning oʻzi, faqat boshqa tartibda.\n\n**2-qadam: hammasini koʻpaytiramiz.** $$a^{\\,p-1}(p-1)!\\ \\equiv\\ (p-1)!\\pmod p .$$\n\n**3-qadam: qisqartiramiz.** $(p-1)!$ soni $p$ ga boʻlinmaydi (uning barcha koʻpaytuvchilari kichikroq), demak uni qisqartirish mumkin: $$a^{\\,p-1}\\equiv1\\pmod p . \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите остаток от деления $2^{1000}$ на $13$.",
-      "en": "Find the remainder of $2^{1000}$ on division by $13$."
+      "en": "Find the remainder of $2^{1000}$ on division by $13$.",
+      "uz": "$2^{1000}$ ni $13$ ga boʻlgandagi qoldiqni toping."
      },
      "steps": {
       "ru": [
@@ -1430,36 +1748,46 @@ window.LESSONS[1] = {
        "$13$ is prime and $13\\nmid2$, so $2^{12}\\equiv1\\pmod{13}$.",
        "Divide the exponent by $12$: $1000=12\\cdot83+4$.",
        "Then $2^{1000}=\\left(2^{12}\\right)^{83}\\cdot2^{4}\\equiv16\\equiv3\\pmod{13}$."
+      ],
+      "uz": [
+       "$13$ tub va $13\\nmid2$, demak $2^{12}\\equiv1\\pmod{13}$.",
+       "Koʻrsatkichni $12$ ga boʻlamiz: $1000=12\\cdot83+4$.",
+       "U holda $2^{1000}=\\left(2^{12}\\right)^{83}\\cdot2^{4}\\equiv16\\equiv3\\pmod{13}$."
       ]
      },
      "ans": {
       "ru": "Остаток $3$.",
-      "en": "The remainder is $3$."
+      "en": "The remainder is $3$.",
+      "uz": "Qoldiq $3$ ga teng."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема Эйлера",
-      "en": "Euler’s theorem"
+      "en": "Euler’s theorem",
+      "uz": "Eyler teoremasi"
      },
      "text": {
       "ru": "Если $\\gcd(a,n)=1$, то $$a^{\\varphi(n)}\\equiv1\\pmod n .$$ При простом $n=p$ это в точности малая теорема Ферма, ведь $\\varphi(p)=p-1$.",
-      "en": "If $\\gcd(a,n)=1$ then $$a^{\\varphi(n)}\\equiv1\\pmod n .$$ For a prime $n=p$ this is exactly Fermat’s little theorem, since $\\varphi(p)=p-1$."
+      "en": "If $\\gcd(a,n)=1$ then $$a^{\\varphi(n)}\\equiv1\\pmod n .$$ For a prime $n=p$ this is exactly Fermat’s little theorem, since $\\varphi(p)=p-1$.",
+      "uz": "Agar $\\gcd(a,n)=1$ boʻlsa, u holda $$a^{\\varphi(n)}\\equiv1\\pmod n .$$ Tub $n=p$ uchun bu aynan Ferma kichik teoremasi, chunki $\\varphi(p)=p-1$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $r_1,\\dots,r_{\\varphi(n)}$ — все остатки от $1$ до $n$, взаимно простые с $n$.\n\n**Шаг 1: умножение на $a$ переставляет их.** Каждое $ar_i$ взаимно просто с $n$ (общий простой делитель делил бы $a$ или $r_i$), и они попарно различны по модулю $n$: из $ar_i\\equiv ar_j$ следует $n\\mid a\\left(r_i-r_j\\right)$, а при $\\gcd(a,n)=1$ отсюда $n\\mid r_i-r_j$, то есть $r_i=r_j$.\n\nЗначит набор $ar_1,\\dots,ar_{\\varphi(n)}$ — тот же самый набор остатков, лишь переставленный.\n\n**Шаг 2: перемножаем и сокращаем.** $$a^{\\varphi(n)}\\prod_i r_i\\ \\equiv\\ \\prod_i r_i\\pmod n ,$$ а произведение $\\prod_i r_i$ взаимно просто с $n$, поэтому на него можно сократить: $$a^{\\varphi(n)}\\equiv1\\pmod n . \\qquad\\blacksquare$$",
-      "en": "Let $r_1,\\dots,r_{\\varphi(n)}$ be the residues from $1$ to $n$ coprime to $n$.\n\n**Step 1: multiplying by $a$ permutes them.** Each $ar_i$ is coprime to $n$ (a common prime divisor would divide $a$ or $r_i$), and they are pairwise distinct mod $n$: from $ar_i\\equiv ar_j$ we get $n\\mid a\\left(r_i-r_j\\right)$, and $\\gcd(a,n)=1$ gives $n\\mid r_i-r_j$, i.e. $r_i=r_j$.\n\nSo $ar_1,\\dots,ar_{\\varphi(n)}$ is the same set of residues, permuted.\n\n**Step 2: multiply and cancel.** $$a^{\\varphi(n)}\\prod_i r_i\\ \\equiv\\ \\prod_i r_i\\pmod n ,$$ and $\\prod_i r_i$ is coprime to $n$, so it cancels: $$a^{\\varphi(n)}\\equiv1\\pmod n . \\qquad\\blacksquare$$"
+      "en": "Let $r_1,\\dots,r_{\\varphi(n)}$ be the residues from $1$ to $n$ coprime to $n$.\n\n**Step 1: multiplying by $a$ permutes them.** Each $ar_i$ is coprime to $n$ (a common prime divisor would divide $a$ or $r_i$), and they are pairwise distinct mod $n$: from $ar_i\\equiv ar_j$ we get $n\\mid a\\left(r_i-r_j\\right)$, and $\\gcd(a,n)=1$ gives $n\\mid r_i-r_j$, i.e. $r_i=r_j$.\n\nSo $ar_1,\\dots,ar_{\\varphi(n)}$ is the same set of residues, permuted.\n\n**Step 2: multiply and cancel.** $$a^{\\varphi(n)}\\prod_i r_i\\ \\equiv\\ \\prod_i r_i\\pmod n ,$$ and $\\prod_i r_i$ is coprime to $n$, so it cancels: $$a^{\\varphi(n)}\\equiv1\\pmod n . \\qquad\\blacksquare$$",
+      "uz": "$r_1,\\dots,r_{\\varphi(n)}$ — $1$ dan $n$ gacha boʻlgan, $n$ ga oʻzaro tub qoldiqlar boʻlsin.\n\n**1-qadam: $a$ ga koʻpaytirish ularni oʻrin almashtiradi.** Har bir $ar_i$ soni $n$ ga oʻzaro tub (umumiy tub boʻluvchi $a$ ni yoki $r_i$ ni boʻlar edi) va ular modul $n$ boʻyicha juft-jufti bilan turli: $ar_i\\equiv ar_j$ dan $n\\mid a\\left(r_i-r_j\\right)$, $\\gcd(a,n)=1$ esa $n\\mid r_i-r_j$ ni, yaʼni $r_i=r_j$ ni beradi.\n\nDemak $ar_1,\\dots,ar_{\\varphi(n)}$ — xuddi shu qoldiqlar toʻplami, faqat oʻrin almashtirilgan.\n\n**2-qadam: koʻpaytiramiz va qisqartiramiz.** $$a^{\\varphi(n)}\\prod_i r_i\\ \\equiv\\ \\prod_i r_i\\pmod n ,$$ va $\\prod_i r_i$ soni $n$ ga oʻzaro tub, demak u qisqaradi: $$a^{\\varphi(n)}\\equiv1\\pmod n . \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите две последние цифры числа $7^{2024}$.",
-      "en": "Find the last two digits of $7^{2024}$."
+      "en": "Find the last two digits of $7^{2024}$.",
+      "uz": "$7^{2024}$ ning oxirgi ikki raqamini toping."
      },
      "steps": {
       "ru": [
@@ -1477,43 +1805,57 @@ window.LESSONS[1] = {
        "$2024=40\\cdot50+24$, so $7^{2024}\\equiv7^{24}$.",
        "Compute: $7^{2}=49$ and $7^{4}=2401\\equiv1\\pmod{100}$.",
        "Hence $7^{24}=\\left(7^{4}\\right)^{6}\\equiv1$."
+      ],
+      "uz": [
+       "Oxirgi ikki raqam — bu modul $100$ boʻyicha qoldiq.",
+       "$\\gcd(7,100)=1$ va $\\varphi(100)=100\\left(1-\\tfrac12\\right)\\left(1-\\tfrac15\\right)=40$.",
+       "Eyler teoremasi $7^{40}\\equiv1\\pmod{100}$ ni beradi.",
+       "$2024=40\\cdot50+24$, demak $7^{2024}\\equiv7^{24}$.",
+       "Hisoblaymiz: $7^{2}=49$ va $7^{4}=2401\\equiv1\\pmod{100}$.",
+       "Demak $7^{24}=\\left(7^{4}\\right)^{6}\\equiv1$."
       ]
      },
      "ans": {
       "ru": "Оканчивается на $01$.",
-      "en": "It ends in $01$."
+      "en": "It ends in $01$.",
+      "uz": "U $01$ bilan tugaydi."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Заметьте: настоящий порядок семёрки по модулю $100$ равен $4$, а не $40$. Теорема Эйлера даёт **верхнюю** оценку показателя, после которой степень «зацикливается»; истинный период всегда делит $\\varphi(n)$, но может быть заметно меньше.",
-      "en": "Note that the true order of $7$ modulo $100$ is $4$, not $40$. Euler’s theorem gives an **upper bound** for the exponent after which powers repeat; the real period always divides $\\varphi(n)$ but may be much smaller."
+      "en": "Note that the true order of $7$ modulo $100$ is $4$, not $40$. Euler’s theorem gives an **upper bound** for the exponent after which powers repeat; the real period always divides $\\varphi(n)$ but may be much smaller.",
+      "uz": "Eʼtibor bering: $7$ ning modul $100$ boʻyicha haqiqiy tartibi $4$, $40$ emas. Eyler teoremasi darajalar takrorlana boshlaydigan koʻrsatkich uchun **yuqoridan baho** beradi; haqiqiy davr har doim $\\varphi(n)$ ni boʻladi, ammo ancha kichik boʻlishi mumkin."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема Вильсона",
-      "en": "Wilson’s theorem"
+      "en": "Wilson’s theorem",
+      "uz": "Vilson teoremasi"
      },
      "text": {
       "ru": "Целое число $p>1$ простое **тогда и только тогда**, когда $$(p-1)!\\ \\equiv\\ -1\\pmod p .$$",
-      "en": "An integer $p>1$ is prime **if and only if** $$(p-1)!\\ \\equiv\\ -1\\pmod p .$$"
+      "en": "An integer $p>1$ is prime **if and only if** $$(p-1)!\\ \\equiv\\ -1\\pmod p .$$",
+      "uz": "$p>1$ butun son tub boʻlishi uchun $$(p-1)!\\ \\equiv\\ -1\\pmod p$$ boʻlishi **zarur va yetarli**."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Пусть $p$ простое.** При $p=2$ проверяем прямо: $1!\\equiv-1\\pmod2$ ✓ Пусть $p$ нечётно.\n\nУ каждого $a\\in\\{1,\\dots,p-1\\}$ есть единственное обратное $a^{-1}$ в том же наборе: по Безу найдутся $u,v$ с $ua+vp=1$, то есть $ua\\equiv1$.\n\nКакие числа обратны сами себе? Условие $a^{2}\\equiv1$ означает $p\\mid(a-1)(a+1)$, откуда по лемме Евклида $a\\equiv1$ или $a\\equiv-1$, то есть $a=1$ или $a=p-1$.\n\nОстальные $p-3$ чисел разбиваются на $\\tfrac{p-3}{2}$ пар $\\left\\{a,a^{-1}\\right\\}$ с произведением $1$. Поэтому $$(p-1)!\\equiv1\\cdot(p-1)\\equiv-1\\pmod p \\quad\\checkmark$$\n\n**Пусть $p$ составное,** $p=ab$ с $1<a<p$. Тогда $a$ входит множителем в $(p-1)!$, значит $a\\mid(p-1)!$. Если бы выполнялось $(p-1)!\\equiv-1\\pmod p$, то $a$ делило бы и $(p-1)!+1$, а значит делило бы разность — единицу ✗ (Отдельный случай $p=4$ проверяется прямо: $3!=6\\equiv2\\pmod4$.) $\\blacksquare$",
-      "en": "**Suppose $p$ is prime.** For $p=2$ check directly: $1!\\equiv-1\\pmod2$ ✓ Let $p$ be odd.\n\nEvery $a\\in\\{1,\\dots,p-1\\}$ has a unique inverse $a^{-1}$ in the same range: Bézout gives $u,v$ with $ua+vp=1$, i.e. $ua\\equiv1$.\n\nWhich numbers are their own inverse? The condition $a^{2}\\equiv1$ means $p\\mid(a-1)(a+1)$, so Euclid’s lemma gives $a\\equiv1$ or $a\\equiv-1$, i.e. $a=1$ or $a=p-1$.\n\nThe remaining $p-3$ numbers split into $\\tfrac{p-3}{2}$ pairs $\\left\\{a,a^{-1}\\right\\}$ with product $1$. Hence $$(p-1)!\\equiv1\\cdot(p-1)\\equiv-1\\pmod p \\quad\\checkmark$$\n\n**Suppose $p$ is composite,** $p=ab$ with $1<a<p$. Then $a$ is one of the factors of $(p-1)!$, so $a\\mid(p-1)!$. If $(p-1)!\\equiv-1\\pmod p$ held, then $a$ would divide $(p-1)!+1$ too, hence their difference $1$ ✗ (The case $p=4$ is checked directly: $3!=6\\equiv2\\pmod4$.) $\\blacksquare$"
+      "en": "**Suppose $p$ is prime.** For $p=2$ check directly: $1!\\equiv-1\\pmod2$ ✓ Let $p$ be odd.\n\nEvery $a\\in\\{1,\\dots,p-1\\}$ has a unique inverse $a^{-1}$ in the same range: Bézout gives $u,v$ with $ua+vp=1$, i.e. $ua\\equiv1$.\n\nWhich numbers are their own inverse? The condition $a^{2}\\equiv1$ means $p\\mid(a-1)(a+1)$, so Euclid’s lemma gives $a\\equiv1$ or $a\\equiv-1$, i.e. $a=1$ or $a=p-1$.\n\nThe remaining $p-3$ numbers split into $\\tfrac{p-3}{2}$ pairs $\\left\\{a,a^{-1}\\right\\}$ with product $1$. Hence $$(p-1)!\\equiv1\\cdot(p-1)\\equiv-1\\pmod p \\quad\\checkmark$$\n\n**Suppose $p$ is composite,** $p=ab$ with $1<a<p$. Then $a$ is one of the factors of $(p-1)!$, so $a\\mid(p-1)!$. If $(p-1)!\\equiv-1\\pmod p$ held, then $a$ would divide $(p-1)!+1$ too, hence their difference $1$ ✗ (The case $p=4$ is checked directly: $3!=6\\equiv2\\pmod4$.) $\\blacksquare$",
+      "uz": "**$p$ tub boʻlsin.** $p=2$ uchun bevosita tekshiramiz: $1!\\equiv-1\\pmod2$ ✓ Endi $p$ toq boʻlsin.\n\nHar bir $a\\in\\{1,\\dots,p-1\\}$ shu oraliqda yagona teskari element $a^{-1}$ ga ega: Bezu $ua+vp=1$ boʻladigan $u,v$ ni beradi, yaʼni $ua\\equiv1$.\n\nQaysi sonlar oʻziga oʻzi teskari? $a^{2}\\equiv1$ sharti $p\\mid(a-1)(a+1)$ degani, demak Yevklid lemmasi $a\\equiv1$ yoki $a\\equiv-1$ ni, yaʼni $a=1$ yoki $a=p-1$ ni beradi.\n\nQolgan $p-3$ ta son koʻpaytmasi $1$ ga teng boʻlgan $\\tfrac{p-3}{2}$ ta $\\left\\{a,a^{-1}\\right\\}$ juftlikka ajraladi. Demak $$(p-1)!\\equiv1\\cdot(p-1)\\equiv-1\\pmod p \\quad\\checkmark$$\n\n**$p$ murakkab boʻlsin,** $p=ab$ va $1<a<p$. U holda $a$ — $(p-1)!$ koʻpaytuvchilaridan biri, demak $a\\mid(p-1)!$. Agar $(p-1)!\\equiv-1\\pmod p$ oʻrinli boʻlganda, $a$ soni $(p-1)!+1$ ni ham boʻlar, demak ularning ayirmasi $1$ ni ham boʻlar edi ✗ ($p=4$ holi bevosita tekshiriladi: $3!=6\\equiv2\\pmod4$.) $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Теорема Вильсона — единственный из школьных признаков простоты, который является **критерием**: он и необходим, и достаточен. Практической пользы для проверки больших чисел от него нет (считать $(p-1)!$ дороже, чем перебрать делители), зато в задачах он бывает решающим.\n\n**Следствие.** При простом $p>2$ произведение $(p-2)!\\equiv1\\pmod p$, ведь $(p-1)!=(p-1)\\cdot(p-2)!\\equiv-(p-2)!$.",
-      "en": "Wilson’s theorem is the one elementary primality statement that is a genuine **criterion**: necessary and sufficient. It is useless for testing large numbers (computing $(p-1)!$ costs more than trial division), but in problems it is sometimes decisive.\n\n**Corollary.** For a prime $p>2$ we get $(p-2)!\\equiv1\\pmod p$, since $(p-1)!=(p-1)\\cdot(p-2)!\\equiv-(p-2)!$."
+      "en": "Wilson’s theorem is the one elementary primality statement that is a genuine **criterion**: necessary and sufficient. It is useless for testing large numbers (computing $(p-1)!$ costs more than trial division), but in problems it is sometimes decisive.\n\n**Corollary.** For a prime $p>2$ we get $(p-2)!\\equiv1\\pmod p$, since $(p-1)!=(p-1)\\cdot(p-2)!\\equiv-(p-2)!$.",
+      "uz": "Vilson teoremasi — tublik haqidagi yagona elementar tasdiq boʻlib, u haqiqiy **mezon**: zarur va yetarli. Katta sonlarni tekshirish uchun u foydasiz ($(p-1)!$ ni hisoblash boʻluvchilarni saralashdan qimmatroq), ammo masalalarda baʼzan hal qiluvchi boʻladi.\n\n**Natija.** Tub $p>2$ uchun $(p-2)!\\equiv1\\pmod p$, chunki $(p-1)!=(p-1)\\cdot(p-2)!\\equiv-(p-2)!$."
      }
     }
    ]
@@ -1521,39 +1863,45 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Тождества с НОД, которые стоит знать",
-    "en": "GCD identities worth knowing"
+    "en": "GCD identities worth knowing",
+    "uz": "Bilish kerak boʻlgan EKUB ayniyatlari"
    },
    "blocks": [
     {
      "t": "p",
      "text": {
       "ru": "Алгоритм Евклида работает не только с числами. Если последовательность устроена «как повторное вычитание», её НОД тоже подчиняется алгоритму Евклида — но уже на уровне **индексов**.",
-      "en": "The Euclidean algorithm is not confined to plain numbers. When a sequence behaves like repeated subtraction, its gcd obeys the Euclidean algorithm too — but on the level of **indices**."
+      "en": "The Euclidean algorithm is not confined to plain numbers. When a sequence behaves like repeated subtraction, its gcd obeys the Euclidean algorithm too — but on the level of **indices**.",
+      "uz": "Yevklid algoritmi oddiy sonlar bilan cheklanmaydi. Ketma-ketlik takroriy ayirishdek tutsa, uning EKUB i ham Yevklid algoritmiga boʻysunadi — ammo **indekslar** darajasida."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "НОД чисел Мерсенна",
-      "en": "The gcd of Mersenne numbers"
+      "en": "The gcd of Mersenne numbers",
+      "uz": "Mersenn sonlarining EKUB i"
      },
      "text": {
       "ru": "Для любых натуральных $m,n$ и любого целого $a>1$ $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=a^{\\gcd(m,n)}-1 .$$",
-      "en": "For all positive integers $m,n$ and any integer $a>1$ $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=a^{\\gcd(m,n)}-1 .$$"
+      "en": "For all positive integers $m,n$ and any integer $a>1$ $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=a^{\\gcd(m,n)}-1 .$$",
+      "uz": "Barcha musbat butun $m,n$ va istalgan butun $a>1$ uchun $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=a^{\\gcd(m,n)}-1 .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $m>n$ и $m=nq+r$ — деление с остатком. Ключевое тождество: $$a^{m}-1=a^{\\,m-n}\\left(a^{n}-1\\right)+\\left(a^{\\,m-n}-1\\right).$$\n\nОно означает, что при вычислении НОД показатель можно уменьшать на $n$, не меняя ответа: $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=\\gcd\\left(a^{\\,m-n}-1,\\ a^{n}-1\\right).$$\n\nПовторяя этот шаг $q$ раз, приходим к $$\\gcd\\left(a^{r}-1,\\ a^{n}-1\\right),$$ то есть показатели ведут себя ровно как числа в алгоритме Евклида: $(m,n)\\to(n,r)$.\n\nАлгоритм заканчивается, когда один из показателей обращается в нуль, а второй равен $\\gcd(m,n)$; при этом $a^{0}-1=0$, и $$\\gcd\\left(a^{\\gcd(m,n)}-1,\\ 0\\right)=a^{\\gcd(m,n)}-1 . \\qquad\\blacksquare$$",
-      "en": "Let $m>n$ and let $m=nq+r$ be division with remainder. The key identity is $$a^{m}-1=a^{\\,m-n}\\left(a^{n}-1\\right)+\\left(a^{\\,m-n}-1\\right).$$\n\nIt says the exponent may be lowered by $n$ without changing the gcd: $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=\\gcd\\left(a^{\\,m-n}-1,\\ a^{n}-1\\right).$$\n\nRepeating $q$ times leads to $$\\gcd\\left(a^{r}-1,\\ a^{n}-1\\right),$$ so the exponents behave exactly like the numbers in the Euclidean algorithm: $(m,n)\\to(n,r)$.\n\nThe algorithm stops when one exponent hits zero and the other equals $\\gcd(m,n)$; since $a^{0}-1=0$, $$\\gcd\\left(a^{\\gcd(m,n)}-1,\\ 0\\right)=a^{\\gcd(m,n)}-1 . \\qquad\\blacksquare$$"
+      "en": "Let $m>n$ and let $m=nq+r$ be division with remainder. The key identity is $$a^{m}-1=a^{\\,m-n}\\left(a^{n}-1\\right)+\\left(a^{\\,m-n}-1\\right).$$\n\nIt says the exponent may be lowered by $n$ without changing the gcd: $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=\\gcd\\left(a^{\\,m-n}-1,\\ a^{n}-1\\right).$$\n\nRepeating $q$ times leads to $$\\gcd\\left(a^{r}-1,\\ a^{n}-1\\right),$$ so the exponents behave exactly like the numbers in the Euclidean algorithm: $(m,n)\\to(n,r)$.\n\nThe algorithm stops when one exponent hits zero and the other equals $\\gcd(m,n)$; since $a^{0}-1=0$, $$\\gcd\\left(a^{\\gcd(m,n)}-1,\\ 0\\right)=a^{\\gcd(m,n)}-1 . \\qquad\\blacksquare$$",
+      "uz": "$m>n$ boʻlsin va $m=nq+r$ qoldiqli boʻlish boʻlsin. Asosiy ayniyat: $$a^{m}-1=a^{\\,m-n}\\left(a^{n}-1\\right)+\\left(a^{\\,m-n}-1\\right).$$\n\nU koʻrsatadiki, koʻrsatkichni EKUB ni oʻzgartirmagan holda $n$ ga kamaytirish mumkin: $$\\gcd\\left(a^{m}-1,\\ a^{n}-1\\right)=\\gcd\\left(a^{\\,m-n}-1,\\ a^{n}-1\\right).$$\n\nBuni $q$ marta takrorlasak $$\\gcd\\left(a^{r}-1,\\ a^{n}-1\\right)$$ ga kelamiz, demak koʻrsatkichlar aynan Yevklid algoritmidagi sonlar kabi tutadi: $(m,n)\\to(n,r)$.\n\nAlgoritm koʻrsatkichlardan biri nolga aylanganda, ikkinchisi esa $\\gcd(m,n)$ ga teng boʻlganda toʻxtaydi; $a^{0}-1=0$ boʻlgani uchun $$\\gcd\\left(a^{\\gcd(m,n)}-1,\\ 0\\right)=a^{\\gcd(m,n)}-1 . \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите $\\gcd\\left(2^{30}-1,\\ 2^{24}-1\\right)$.",
-      "en": "Find $\\gcd\\left(2^{30}-1,\\ 2^{24}-1\\right)$."
+      "en": "Find $\\gcd\\left(2^{30}-1,\\ 2^{24}-1\\right)$.",
+      "uz": "$\\gcd\\left(2^{30}-1,\\ 2^{24}-1\\right)$ ni toping."
      },
      "steps": {
       "ru": [
@@ -1567,6 +1915,12 @@ window.LESSONS[1] = {
        "$\\gcd(30,24)=6$.",
        "So the gcd is $2^{6}-1=63$.",
        "Check: $2^{30}-1=1\\,073\\,741\\,823=63\\cdot17\\,043\\,521$ ✓"
+      ],
+      "uz": [
+       "Teorema $2^{\\gcd(30,24)}-1$ ni beradi.",
+       "$\\gcd(30,24)=6$.",
+       "Demak EKUB $2^{6}-1=63$.",
+       "Tekshirish: $2^{30}-1=1\\,073\\,741\\,823=63\\cdot17\\,043\\,521$ ✓"
       ]
      },
      "ans": {
@@ -1578,25 +1932,29 @@ window.LESSONS[1] = {
      "t": "thm",
      "name": {
       "ru": "НОД чисел Фибоначчи",
-      "en": "The gcd of Fibonacci numbers"
+      "en": "The gcd of Fibonacci numbers",
+      "uz": "Fibonachchi sonlarining EKUB i"
      },
      "text": {
       "ru": "Для чисел Фибоначчи $F_1=F_2=1$, $F_{k+1}=F_k+F_{k-1}$ выполняется $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$",
-      "en": "For the Fibonacci numbers $F_1=F_2=1$, $F_{k+1}=F_k+F_{k-1}$, $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$"
+      "en": "For the Fibonacci numbers $F_1=F_2=1$, $F_{k+1}=F_k+F_{k-1}$, $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$",
+      "uz": "$F_1=F_2=1$, $F_{k+1}=F_k+F_{k-1}$ Fibonachchi sonlari uchun $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd(m,n)} .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Шаг 1: соседние числа Фибоначчи взаимно просты.** Из $F_{k+1}=F_k+F_{k-1}$ следует $\\gcd\\left(F_{k+1},F_k\\right)=\\gcd\\left(F_k,F_{k-1}\\right)$, и спускаясь до начала, получаем $\\gcd\\left(F_2,F_1\\right)=1$.\n\n**Шаг 2: формула сложения.** Индукцией по $n$ проверяется тождество $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$\n\n**Шаг 3: шаг алгоритма Евклида.** Возьмём $m>n$ и применим формулу к $F_m=F_{(m-n)+n}$: $$F_m=F_{m-n}F_{n+1}+F_{m-n-1}F_n .$$\n\nВторое слагаемое кратно $F_n$, поэтому $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right).$$\n\nПо шагу 1 числа $F_{n+1}$ и $F_n$ взаимно просты, значит множитель $F_{n+1}$ можно выбросить: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n},\\ F_n\\right).$$\n\n**Шаг 4: спуск.** Индексы ведут себя как числа в алгоритме Евклида, поэтому процесс приводит к паре $\\left(F_{\\gcd(m,n)},\\ F_0\\right)$, где $F_0=0$, и ответ равен $F_{\\gcd(m,n)}$. $\\blacksquare$",
-      "en": "**Step 1: consecutive Fibonacci numbers are coprime.** From $F_{k+1}=F_k+F_{k-1}$ we get $\\gcd\\left(F_{k+1},F_k\\right)=\\gcd\\left(F_k,F_{k-1}\\right)$, and descending to the start gives $\\gcd\\left(F_2,F_1\\right)=1$.\n\n**Step 2: the addition formula.** Induction on $n$ verifies $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$\n\n**Step 3: one Euclidean step.** Take $m>n$ and apply the formula to $F_m=F_{(m-n)+n}$: $$F_m=F_{m-n}F_{n+1}+F_{m-n-1}F_n .$$\n\nThe second term is a multiple of $F_n$, so $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right).$$\n\nBy Step 1 the numbers $F_{n+1}$ and $F_n$ are coprime, so the factor $F_{n+1}$ may be dropped: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n},\\ F_n\\right).$$\n\n**Step 4: descent.** The indices now behave exactly like numbers in the Euclidean algorithm, so the process reaches the pair $\\left(F_{\\gcd(m,n)},\\ F_0\\right)$ with $F_0=0$, and the answer is $F_{\\gcd(m,n)}$. $\\blacksquare$"
+      "en": "**Step 1: consecutive Fibonacci numbers are coprime.** From $F_{k+1}=F_k+F_{k-1}$ we get $\\gcd\\left(F_{k+1},F_k\\right)=\\gcd\\left(F_k,F_{k-1}\\right)$, and descending to the start gives $\\gcd\\left(F_2,F_1\\right)=1$.\n\n**Step 2: the addition formula.** Induction on $n$ verifies $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$\n\n**Step 3: one Euclidean step.** Take $m>n$ and apply the formula to $F_m=F_{(m-n)+n}$: $$F_m=F_{m-n}F_{n+1}+F_{m-n-1}F_n .$$\n\nThe second term is a multiple of $F_n$, so $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right).$$\n\nBy Step 1 the numbers $F_{n+1}$ and $F_n$ are coprime, so the factor $F_{n+1}$ may be dropped: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n},\\ F_n\\right).$$\n\n**Step 4: descent.** The indices now behave exactly like numbers in the Euclidean algorithm, so the process reaches the pair $\\left(F_{\\gcd(m,n)},\\ F_0\\right)$ with $F_0=0$, and the answer is $F_{\\gcd(m,n)}$. $\\blacksquare$",
+      "uz": "**1-qadam: qoʻshni Fibonachchi sonlari oʻzaro tub.** $F_{k+1}=F_k+F_{k-1}$ dan $\\gcd\\left(F_{k+1},F_k\\right)=\\gcd\\left(F_k,F_{k-1}\\right)$, boshigacha tushsak $\\gcd\\left(F_2,F_1\\right)=1$.\n\n**2-qadam: qoʻshish formulasi.** $n$ boʻyicha induksiya $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n$$ ni tasdiqlaydi.\n\n**3-qadam: bitta Yevklid qadami.** $m>n$ olamiz va formulani $F_m=F_{(m-n)+n}$ ga qoʻllaymiz: $$F_m=F_{m-n}F_{n+1}+F_{m-n-1}F_n .$$\n\nIkkinchi had $F_n$ ga karrali, demak $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n}F_{n+1},\\ F_n\\right).$$\n\n1-qadamga koʻra $F_{n+1}$ va $F_n$ oʻzaro tub, demak $F_{n+1}$ koʻpaytuvchini tashlab yuborish mumkin: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_{m-n},\\ F_n\\right).$$\n\n**4-qadam: tushish.** Endi indekslar aynan Yevklid algoritmidagi sonlar kabi tutadi, demak jarayon $\\left(F_{\\gcd(m,n)},\\ F_0\\right)$ juftlikka yetadi, $F_0=0$, javob esa $F_{\\gcd(m,n)}$. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите $\\gcd\\left(F_{12},F_{18}\\right)$.",
-      "en": "Find $\\gcd\\left(F_{12},F_{18}\\right)$."
+      "en": "Find $\\gcd\\left(F_{12},F_{18}\\right)$.",
+      "uz": "$\\gcd\\left(F_{12},F_{18}\\right)$ ni toping."
      },
      "steps": {
       "ru": [
@@ -1608,6 +1966,11 @@ window.LESSONS[1] = {
        "$\\gcd(12,18)=6$, so the answer is $F_6$.",
        "List them: $F_1=1$, $F_2=1$, $F_3=2$, $F_4=3$, $F_5=5$, $F_6=8$.",
        "Check: $F_{12}=144$, $F_{18}=2584$, and $\\gcd(144,2584)=8$ ✓"
+      ],
+      "uz": [
+       "$\\gcd(12,18)=6$, demak javob $F_6$.",
+       "Roʻyxat: $F_1=1$, $F_2=1$, $F_3=2$, $F_4=3$, $F_5=5$, $F_6=8$.",
+       "Tekshirish: $F_{12}=144$, $F_{18}=2584$ va $\\gcd(144,2584)=8$ ✓"
       ]
      },
      "ans": {
@@ -1619,14 +1982,16 @@ window.LESSONS[1] = {
      "t": "idea",
      "text": {
       "ru": "Обе теоремы устроены одинаково: находим тождество, позволяющее заменить пару $(m,n)$ на $(m-n,\\ n)$, и запускаем алгоритм Евклида по индексам. Этот приём переносится на многие последовательности — важно лишь, чтобы «соседние» члены были взаимно просты.",
-      "en": "Both theorems work the same way: find an identity that replaces the pair $(m,n)$ by $(m-n,\\ n)$, then run the Euclidean algorithm on the indices. The trick transfers to many sequences — all that is needed is that neighbouring terms be coprime."
+      "en": "Both theorems work the same way: find an identity that replaces the pair $(m,n)$ by $(m-n,\\ n)$, then run the Euclidean algorithm on the indices. The trick transfers to many sequences — all that is needed is that neighbouring terms be coprime.",
+      "uz": "Ikkala teorema ham bir xil ishlaydi: $(m,n)$ juftlikni $(m-n,\\ n)$ bilan almashtiradigan ayniyat toping, soʻng indekslarda Yevklid algoritmini yurgizing. Bu usul koʻp ketma-ketliklarga koʻchadi — faqat qoʻshni hadlar oʻzaro tub boʻlishi kerak."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Из первой теоремы получается изящное следствие: **$a^{m}-1$ делится на $a^{n}-1$ тогда и только тогда, когда $m$ делится на $n$.** Именно поэтому число $2^{p}-1$ может быть простым только при простом $p$ — это первый шаг в теории чисел Мерсенна.",
-      "en": "The first theorem has an elegant corollary: **$a^{m}-1$ is divisible by $a^{n}-1$ exactly when $m$ is divisible by $n$.** That is why $2^{p}-1$ can be prime only for prime $p$ — the first step in the theory of Mersenne numbers."
+      "en": "The first theorem has an elegant corollary: **$a^{m}-1$ is divisible by $a^{n}-1$ exactly when $m$ is divisible by $n$.** That is why $2^{p}-1$ can be prime only for prime $p$ — the first step in the theory of Mersenne numbers.",
+      "uz": "Birinchi teoremaning nafis natijasi bor: **$a^{m}-1$ soni $a^{n}-1$ ga aynan $m$ soni $n$ ga boʻlinganda boʻlinadi.** Aynan shuning uchun $2^{p}-1$ faqat tub $p$ da tub boʻlishi mumkin — bu Mersenn sonlari nazariyasidagi birinchi qadam."
      }
     }
    ]
@@ -1634,7 +1999,8 @@ window.LESSONS[1] = {
   {
    "h": {
     "ru": "Приёмы, которые решают задачи",
-    "en": "The moves that solve problems"
+    "en": "The moves that solve problems",
+    "uz": "Masalani yechadigan usullar"
    },
    "blocks": [
     {
@@ -1655,6 +2021,14 @@ window.LESSONS[1] = {
        "**Use consecutive integers.** Among any $k$ consecutive integers exactly one is divisible by $k$; a product of $k$ consecutive integers is divisible by $k!$.",
        "**Move to prime factorisations.** Problems with the words \"square\", \"cube\", \"GCD\", \"LCM\" are almost always cleanest in the language of prime exponents.",
        "**Bound the size.** If $d\\mid N$ and $d>\\sqrt{N}$ then $N/d<\\sqrt{N}$ — this often cuts a search down to nothing."
+      ],
+      "uz": [
+       "**Nomaʼlumni chiziqli kombinatsiya bilan yoʻqoting.** Agar $d$ soni $n$ ga bogʻliq ikkita ifodani boʻlsa, koeffitsiyentlarni $n$ qisqaradigan qilib tanlang. «Bu kasr qisqarmasligini isbotlang» turidagi masalalarning uchdan ikki qismi shunga tushadi.",
+       "**Butun qismni ajrating.** $\\dfrac{n^2+1}{n+1}$ dan $n-1+\\dfrac{2}{n+1}$ chiqadi, demak $n+1\\mid 2$. Bu usul boʻlinuvchanlikni chekli saralashga aylantiradi.",
+       "**Qoldiq boʻyicha hollarga ajrating.** $m$ ga boʻlinishni isbotlash uchun $n=mk, mk+1,\\ldots,mk+(m-1)$ hollarni koʻring.",
+       "**Ketma-ket sonlardan foydalaning.** Ketma-ket kelgan istalgan $k$ ta son orasida roppa-rosa bittasi $k$ ga boʻlinadi; ketma-ket kelgan $k$ ta sonning koʻpaytmasi $k!$ ga boʻlinadi.",
+       "**Tub ajratmalarga oʻting.** «Kvadrat», «kub», «EKUB», «EKUK» soʻzlari qatnashgan masalalar deyarli har doim tub darajalar tilida eng toza koʻrinadi.",
+       "**Kattalikni baholang.** Agar $d\\mid N$ va $d>\\sqrt{N}$ boʻlsa, $N/d<\\sqrt{N}$ — bu koʻpincha saralashni deyarli yoʻqqa chiqaradi."
       ]
      }
     }

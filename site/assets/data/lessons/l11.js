@@ -5,11 +5,13 @@ window.LESSONS[11] = {
  "cat": "geo",
  "title": {
   "ru": "Окружности",
-  "en": "Circles"
+  "en": "Circles",
+  "uz": "Aylanalar"
  },
  "sub": {
   "ru": "Вписанный угол, касательные, вписанные и описанные четырёхугольники, степень точки и теорема Птолемея.",
-  "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem."
+  "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem.",
+  "uz": "Ichki chizilgan burchaklar, urinmalar, ichki va tashqi chizilgan toʻrtburchaklar, nuqtaning darajasi va Ptolemey teoremasi."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[11] = {
    "Use the tangent properties: perpendicularity to the radius, and equal tangent segments.",
    "Recognise cyclic quadrilaterals and prove that four points lie on one circle.",
    "Use the power of a point: intersecting chords, and a secant with a tangent."
+  ],
+  "uz": [
+   "Ichki chizilgan burchak teoremasini va uning natijalarini ishonch bilan qoʻllash.",
+   "Urinma xossalaridan foydalanish: radiusga perpendikulyarlik va urinma kesmalarning tengligi.",
+   "Aylanaga ichki chizilgan toʻrtburchakni tanish va toʻrtta nuqta bitta aylanada yotishini isbotlash.",
+   "Nuqtaning darajasidan foydalanish: kesishuvchi vatarlar hamda kesuvchi va urinma."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Вписанный угол",
-    "en": "The inscribed angle"
+    "en": "The inscribed angle",
+    "uz": "Ichki chizilgan burchak"
    },
    "blocks": [
     {
@@ -118,7 +127,8 @@ window.LESSONS[11] = {
   {
    "h": {
     "ru": "Все углы, связанные с окружностью",
-    "en": "Every angle a circle can make"
+    "en": "Every angle a circle can make",
+    "uz": "Aylana hosil qiladigan barcha burchaklar"
    },
    "blocks": [
     {
@@ -183,7 +193,8 @@ window.LESSONS[11] = {
   {
    "h": {
     "ru": "Касательная",
-    "en": "Tangents"
+    "en": "Tangents",
+    "uz": "Urinmalar"
    },
    "blocks": [
     {
@@ -269,7 +280,8 @@ window.LESSONS[11] = {
   {
    "h": {
     "ru": "Вписанные четырёхугольники",
-    "en": "Cyclic quadrilaterals"
+    "en": "Cyclic quadrilaterals",
+    "uz": "Aylanaga ichki chizilgan toʻrtburchaklar"
    },
    "blocks": [
     {
@@ -321,7 +333,8 @@ window.LESSONS[11] = {
   {
    "h": {
     "ru": "Степень точки",
-    "en": "The power of a point"
+    "en": "The power of a point",
+    "uz": "Nuqtaning darajasi"
    },
    "blocks": [
     {
@@ -409,7 +422,8 @@ window.LESSONS[11] = {
   {
    "h": {
     "ru": "Вписанная и описанная окружности треугольника",
-    "en": "The incircle and circumcircle of a triangle"
+    "en": "The incircle and circumcircle of a triangle",
+    "uz": "Uchburchakning ichki va tashqi chizilgan aylanalari"
    },
    "blocks": [
     {
@@ -520,7 +534,8 @@ window.LESSONS[11] = {
   {
    "h": {
     "ru": "Птолемей, радикальная ось и окружность девяти точек",
-    "en": "Ptolemy, the radical axis and the nine-point circle"
+    "en": "Ptolemy, the radical axis and the nine-point circle",
+    "uz": "Ptolemey, radikal oʻq va toʻqqiz nuqta aylanasi"
    },
    "blocks": [
     {

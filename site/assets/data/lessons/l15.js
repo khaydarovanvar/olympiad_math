@@ -5,11 +5,13 @@ window.LESSONS[15] = {
  "cat": "comb",
  "title": {
   "ru": "Логика, доказательства и инварианты",
-  "en": "Logic, proofs and invariants"
+  "en": "Logic, proofs and invariants",
+  "uz": "Mantiq, isbotlar va invariantlar"
  },
  "sub": {
   "ru": "Отрицание и импликация, доказательство от противного, индукция, инварианты и раскраски — язык, на котором пишут решения.",
-  "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in."
+  "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in.",
+  "uz": "Inkor va implikatsiya, teskarisini faraz qilish, induksiya, invariantlar va boʻyashlar — yechimlar yoziladigan til."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[15] = {
    "Run a proof by contradiction and a proof by induction with no gaps.",
    "Find an invariant — a quantity unchanged by the allowed moves.",
    "Use colourings and parity arguments."
+  ],
+  "uz": [
+   "Tasdiqni inkor qilish, teskari tasdiqni kontrapozitsiyadan ajratish.",
+   "Teskarisini faraz qilish va induksiya bilan isbotni boʻshliqsiz olib borish.",
+   "Invariant topish — ruxsat etilgan yurishlarda oʻzgarmaydigan kattalik.",
+   "Boʻyash va juftlik mulohazalaridan foydalanish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Язык утверждений",
-    "en": "The language of statements"
+    "en": "The language of statements",
+    "uz": "Tasdiqlar tili"
    },
    "blocks": [
     {
@@ -145,7 +154,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Кванторы, обращение и противоположное",
-    "en": "Quantifiers, converses and contrapositives"
+    "en": "Quantifiers, converses and contrapositives",
+    "uz": "Kvantorlar, teskari tasdiq va kontrapozitsiya"
    },
    "blocks": [
     {
@@ -284,7 +294,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Доказательство от противного",
-    "en": "Proof by contradiction"
+    "en": "Proof by contradiction",
+    "uz": "Teskarisini faraz qilib isbotlash"
    },
    "blocks": [
     {
@@ -335,7 +346,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Математическая индукция",
-    "en": "Mathematical induction"
+    "en": "Mathematical induction",
+    "uz": "Matematik induksiya"
    },
    "blocks": [
     {
@@ -426,7 +438,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Инварианты",
-    "en": "Invariants"
+    "en": "Invariants",
+    "uz": "Invariantlar"
    },
    "blocks": [
     {
@@ -498,7 +511,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Монотонные величины и принцип крайнего",
-    "en": "Monovariants and the extremal principle"
+    "en": "Monovariants and the extremal principle",
+    "uz": "Monovariantlar va chekka element prinsipi"
    },
    "blocks": [
     {
@@ -634,7 +648,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Раскраски",
-    "en": "Colourings"
+    "en": "Colourings",
+    "uz": "Boʻyashlar"
    },
    "blocks": [
     {
@@ -724,7 +739,8 @@ window.LESSONS[15] = {
   {
    "h": {
     "ru": "Как оформлять решение",
-    "en": "How to write a solution"
+    "en": "How to write a solution",
+    "uz": "Yechimni qanday yozish kerak"
    },
    "blocks": [
     {

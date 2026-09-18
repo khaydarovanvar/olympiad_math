@@ -5,11 +5,13 @@ window.LESSONS[13] = {
  "cat": "comb",
  "title": {
   "ru": "Комбинаторика: как считать",
-  "en": "Counting principles"
+  "en": "Counting principles",
+  "uz": "Kombinatorika: qanday sanash kerak"
  },
  "sub": {
   "ru": "Правила суммы и произведения, перестановки и сочетания, треугольник Паскаля, включения-исключения и двойной подсчёт.",
-  "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting."
+  "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting.",
+  "uz": "Qoʻshish va koʻpaytirish qoidalari, oʻrin almashtirish va guruhlashlar, Paskal uchburchagi, qoʻshish–ayirish formulasi va ikki xil sanash."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[13] = {
    "Count permutations, arrangements and combinations, and see how they differ.",
    "Use the properties of binomial coefficients and Pascal’s triangle.",
    "Apply inclusion–exclusion and the double-counting technique."
+  ],
+  "uz": [
+   "Qoʻshish qoidasi qachon, koʻpaytirish qoidasi qachon ishlashini ajrata bilish.",
+   "Oʻrin almashtirish, oʻrinlashtirish va guruhlashlarni sanash va farqini koʻrish.",
+   "Binomial koeffitsiyentlar va Paskal uchburchagi xossalaridan foydalanish.",
+   "Qoʻshish–ayirish formulasini va ikki xil sanash usulini qoʻllash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Два правила, из которых всё растёт",
-    "en": "The two rules everything grows from"
+    "en": "The two rules everything grows from",
+    "uz": "Hamma narsa oʻsib chiqadigan ikkita qoida"
    },
    "blocks": [
     {
@@ -123,7 +132,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Размещения, перестановки, сочетания: строгие формулы",
-    "en": "Arrangements, permutations, combinations: the formulas proved"
+    "en": "Arrangements, permutations, combinations: the formulas proved",
+    "uz": "Oʻrinlashtirish, oʻrin almashtirish, guruhlash: formulalar isboti bilan"
    },
    "blocks": [
     {
@@ -267,7 +277,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Перестановки, размещения, сочетания",
-    "en": "Permutations, arrangements, combinations"
+    "en": "Permutations, arrangements, combinations",
+    "uz": "Oʻrin almashtirish, oʻrinlashtirish, guruhlash"
    },
    "blocks": [
     {
@@ -389,7 +400,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Биномиальные коэффициенты",
-    "en": "Binomial coefficients"
+    "en": "Binomial coefficients",
+    "uz": "Binomial koeffitsiyentlar"
    },
    "blocks": [
     {
@@ -442,7 +454,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Тождества с биномиальными коэффициентами",
-    "en": "Identities for binomial coefficients"
+    "en": "Identities for binomial coefficients",
+    "uz": "Binomial koeffitsiyentlar uchun ayniyatlar"
    },
    "blocks": [
     {
@@ -525,7 +538,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Шары и перегородки",
-    "en": "Stars and bars"
+    "en": "Stars and bars",
+    "uz": "Shar va toʻsiqlar"
    },
    "blocks": [
     {
@@ -611,7 +625,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Включения и исключения",
-    "en": "Inclusion and exclusion"
+    "en": "Inclusion and exclusion",
+    "uz": "Qoʻshish va ayirish"
    },
    "blocks": [
     {
@@ -673,7 +688,8 @@ window.LESSONS[13] = {
   {
    "h": {
     "ru": "Биекции, двойной подсчёт и рекуррентные схемы",
-    "en": "Bijections, double counting and recursive schemes"
+    "en": "Bijections, double counting and recursive schemes",
+    "uz": "Biyeksiyalar, ikki xil sanash va rekurrent sxemalar"
    },
    "blocks": [
     {

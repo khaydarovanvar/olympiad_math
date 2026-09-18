@@ -5,11 +5,13 @@ window.LESSONS[7] = {
  "cat": "alg",
  "title": {
   "ru": "Последовательности и суммы",
-  "en": "Sequences and series"
+  "en": "Sequences and series",
+  "uz": "Ketma-ketliklar va yigʻindilar"
  },
  "sub": {
   "ru": "Арифметическая и геометрическая прогрессии, телескопические суммы, рекуррентные формулы и числа Фибоначчи.",
-  "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers."
+  "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers.",
+  "uz": "Arifmetik va geometrik progressiyalar, teleskopik yigʻindilar, rekurrent munosabatlar va Fibonachchi sonlari."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[7] = {
    "Evaluate sums by telescoping, splitting each term into a difference.",
    "Prove summation formulas by mathematical induction.",
    "Handle recurrences, the Fibonacci numbers included."
+  ],
+  "uz": [
+   "Ikkala progressiya uchun $n$-had va yigʻindi formulalaridan erkin foydalanish.",
+   "Har bir hadni ayirmaga ajratib, yigʻindilarni teleskoplash bilan hisoblash.",
+   "Yigʻindi formulalarini matematik induksiya bilan isbotlash.",
+   "Rekurrent munosabatlar bilan, jumladan Fibonachchi sonlari bilan ishlash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Два способа задать последовательность",
-    "en": "Two ways to define a sequence"
+    "en": "Two ways to define a sequence",
+    "uz": "Ketma-ketlikni berishning ikki usuli"
    },
    "blocks": [
     {
@@ -127,7 +136,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Арифметическая прогрессия",
-    "en": "Arithmetic progressions"
+    "en": "Arithmetic progressions",
+    "uz": "Arifmetik progressiyalar"
    },
    "blocks": [
     {
@@ -209,7 +219,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Геометрическая прогрессия",
-    "en": "Geometric progressions"
+    "en": "Geometric progressions",
+    "uz": "Geometrik progressiyalar"
    },
    "blocks": [
     {
@@ -303,7 +314,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Телескопические суммы",
-    "en": "Telescoping sums"
+    "en": "Telescoping sums",
+    "uz": "Teleskopik yigʻindilar"
    },
    "blocks": [
     {
@@ -372,7 +384,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Классические суммы",
-    "en": "The standard sums"
+    "en": "The standard sums",
+    "uz": "Klassik yigʻindilar"
    },
    "blocks": [
     {
@@ -491,7 +504,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Линейные рекуррентные последовательности",
-    "en": "Linear recurrences"
+    "en": "Linear recurrences",
+    "uz": "Chiziqli rekurrent ketma-ketliklar"
    },
    "blocks": [
     {
@@ -612,7 +626,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Числа Фибоначчи",
-    "en": "The Fibonacci numbers"
+    "en": "The Fibonacci numbers",
+    "uz": "Fibonachchi sonlari"
    },
    "blocks": [
     {
@@ -803,7 +818,8 @@ window.LESSONS[7] = {
   {
    "h": {
     "ru": "Пределы, монотонность и бесконечные суммы",
-    "en": "Limits, monotonicity and infinite sums"
+    "en": "Limits, monotonicity and infinite sums",
+    "uz": "Limitlar, monotonlik va cheksiz yigʻindilar"
    },
    "blocks": [
     {

@@ -5,11 +5,13 @@ window.LESSONS[14] = {
  "cat": "comb",
  "title": {
   "ru": "Принцип Дирихле",
-  "en": "The pigeonhole principle"
+  "en": "The pigeonhole principle",
+  "uz": "Dirixle prinsipi"
  },
  "sub": {
   "ru": "Самое простое утверждение в математике — и одно из самых сильных: как выбрать «клетки» так, чтобы задача решилась сама.",
-  "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself."
+  "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself.",
+  "uz": "Matematikadagi eng oddiy tasdiq va eng kuchlilaridan biri: «kataklar»ni shunday tanlash kerakki, masala oʻzi yechilsin."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[14] = {
    "Invent the \"boxes\" — remainders, regions, sets of features.",
    "Apply the principle to divisibility, geometry and acquaintance problems.",
    "Use the strengthened form — the averaging argument."
+  ],
+  "uz": [
+   "Dirixle prinsipining oddiy va umumlashgan shakllarini bilish.",
+   "«Kataklar»ni oʻylab topish — qoldiqlar, sohalar, belgilar toʻplamlari.",
+   "Prinsipni boʻlinuvchanlik, geometriya va tanishlik masalalariga qoʻllash.",
+   "Kuchaytirilgan shakldan — oʻrtacha qiymat mulohazasidan foydalanish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Формулировка",
-    "en": "The statement"
+    "en": "The statement",
+    "uz": "Taʼrif"
    },
    "blocks": [
     {
@@ -133,7 +142,8 @@ window.LESSONS[14] = {
   {
    "h": {
     "ru": "Клетки — это остатки",
-    "en": "The boxes are remainders"
+    "en": "The boxes are remainders",
+    "uz": "Kataklar — qoldiqlar"
    },
    "blocks": [
     {
@@ -202,7 +212,8 @@ window.LESSONS[14] = {
   {
    "h": {
     "ru": "Клетки — это области",
-    "en": "The boxes are regions"
+    "en": "The boxes are regions",
+    "uz": "Kataklar — sohalar"
    },
    "blocks": [
     {
@@ -284,7 +295,8 @@ window.LESSONS[14] = {
   {
    "h": {
     "ru": "Клетки — это признаки",
-    "en": "The boxes are features"
+    "en": "The boxes are features",
+    "uz": "Kataklar — belgilar"
    },
    "blocks": [
     {
@@ -344,7 +356,8 @@ window.LESSONS[14] = {
   {
    "h": {
     "ru": "Классические теоремы, доказанные принципом Дирихле",
-    "en": "Classical theorems proved by the pigeonhole principle"
+    "en": "Classical theorems proved by the pigeonhole principle",
+    "uz": "Dirixle prinsipi bilan isbotlangan klassik teoremalar"
    },
    "blocks": [
     {
@@ -450,7 +463,8 @@ window.LESSONS[14] = {
   {
    "h": {
     "ru": "Усиленный вариант: рассуждение о среднем",
-    "en": "The strengthened form: averaging"
+    "en": "The strengthened form: averaging",
+    "uz": "Kuchaytirilgan shakl: oʻrtachalash"
    },
    "blocks": [
     {
@@ -508,7 +522,8 @@ window.LESSONS[14] = {
   {
    "h": {
     "ru": "Как выбирать клетки",
-    "en": "How to choose the boxes"
+    "en": "How to choose the boxes",
+    "uz": "Kataklarni qanday tanlash kerak"
    },
    "blocks": [
     {

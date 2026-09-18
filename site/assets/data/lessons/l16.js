@@ -5,11 +5,13 @@ window.LESSONS[16] = {
  "cat": "mix",
  "title": {
   "ru": "Пробная олимпиада",
-  "en": "Mock olympiad"
+  "en": "Mock olympiad",
+  "uz": "Sinov olimpiadasi"
  },
  "sub": {
   "ru": "Как устроен тур, как распределить время и как оформить решение — и четыре пробных варианта из всех тем сразу.",
-  "en": "How a round works, how to spend the time and how to write a solution — plus four mock papers drawing on every topic."
+  "en": "How a round works, how to spend the time and how to write a solution — plus four mock papers drawing on every topic.",
+  "uz": "Tur qanday oʻtadi, vaqtni qanday taqsimlash va yechimni qanday yozish kerak — hamda barcha mavzularni qamrovchi toʻrtta sinov varianti."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[16] = {
    "Budget the time in a round and decide when to abandon a problem.",
    "Recognise a problem’s topic from its first signs and choose the opening move.",
    "Check a solution so that no marks are lost on small things."
+  ],
+  "uz": [
+   "Turlarning formatini va nima uchun ball berilishini tushunish.",
+   "Turda vaqtni taqsimlash va masalani qachon tashlab ketishni hal qilish.",
+   "Masalaning mavzusini dastlabki belgilaridan tanib, birinchi yurishni tanlash.",
+   "Yechimni shunday tekshirish kerakki, mayda narsalar uchun ball yoʻqotilmasin."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Как устроен тур",
-    "en": "How a round works"
+    "en": "How a round works",
+    "uz": "Tur qanday oʻtadi"
    },
    "blocks": [
     {
@@ -68,7 +77,8 @@ window.LESSONS[16] = {
   {
    "h": {
     "ru": "Стратегия на туре",
-    "en": "Strategy during a round"
+    "en": "Strategy during a round",
+    "uz": "Tur davomidagi strategiya"
    },
    "blocks": [
     {
@@ -251,7 +261,8 @@ window.LESSONS[16] = {
   {
    "h": {
     "ru": "Анатомия строгого решения",
-    "en": "The anatomy of a rigorous solution"
+    "en": "The anatomy of a rigorous solution",
+    "uz": "Qatʼiy yechimning tuzilishi"
    },
    "blocks": [
     {
@@ -438,7 +449,8 @@ window.LESSONS[16] = {
   {
    "h": {
     "ru": "Проверка решения",
-    "en": "Checking a solution"
+    "en": "Checking a solution",
+    "uz": "Yechimni tekshirish"
    },
    "blocks": [
     {
@@ -485,7 +497,8 @@ window.LESSONS[16] = {
   {
    "h": {
     "ru": "Справочник: что нужно помнить наизусть",
-    "en": "Reference: what to know by heart"
+    "en": "Reference: what to know by heart",
+    "uz": "Maʼlumotnoma: yoddan bilish kerak boʻlgan narsalar"
    },
    "blocks": [
     {

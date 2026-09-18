@@ -5,11 +5,13 @@ window.LESSONS[2] = {
  "cat": "nt",
  "title": {
   "ru": "Простые числа",
-  "en": "Prime numbers"
+  "en": "Prime numbers",
+  "uz": "Tub sonlar"
  },
  "sub": {
   "ru": "Кирпичи, из которых сложены все целые числа: разложение, бесконечность простых и приём «$p>3$ значит $p=6k\\pm1$».",
-  "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\"."
+  "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\".",
+  "uz": "Har bir butun son quriladigan gʻishtlar: koʻpaytuvchilarga ajratish, tub sonlarning cheksizligi va «$p>3$ boʻlsa $p=6k\\pm1$» usuli."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[2] = {
    "Test a number for primality by trial division up to $\\sqrt{n}$, and build a sieve.",
    "Know Euclid's proof that there are infinitely many primes, and reuse the trick.",
    "Use the $6k\\pm1$ form and small moduli to kill cases in problems."
+  ],
+  "uz": [
+   "Arifmetikaning asosiy teoremasini tushunish va tub darajalar bilan ishlash.",
+   "Sonni $\\sqrt{n}$ gacha boʻlish orqali tublikka tekshirish va elak qurish.",
+   "Tub sonlar cheksiz koʻp ekanining Yevklid isbotini bilish va bu usuldan qayta foydalanish.",
+   "Masalalarda hollarni yoʻqotish uchun $6k\\pm1$ koʻrinishi va kichik modullardan foydalanish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Определение и первые наблюдения",
-    "en": "Definition and first observations"
+    "en": "Definition and first observations",
+    "uz": "Taʼrif va dastlabki kuzatishlar"
    },
    "blocks": [
     {
@@ -159,7 +168,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Основная теорема арифметики",
-    "en": "The fundamental theorem of arithmetic"
+    "en": "The fundamental theorem of arithmetic",
+    "uz": "Arifmetikaning asosiy teoremasi"
    },
    "blocks": [
     {
@@ -219,7 +229,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Простых бесконечно много",
-    "en": "There are infinitely many primes"
+    "en": "There are infinitely many primes",
+    "uz": "Tub sonlar cheksiz koʻp"
    },
    "blocks": [
     {
@@ -277,7 +288,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Бесконечность простых особого вида",
-    "en": "Infinitely many primes of a special shape"
+    "en": "Infinitely many primes of a special shape",
+    "uz": "Maxsus koʻrinishdagi tub sonlar ham cheksiz koʻp"
    },
    "blocks": [
     {
@@ -382,7 +394,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Форма $6k\\pm1$ и малые модули",
-    "en": "The $6k\\pm1$ form and small moduli"
+    "en": "The $6k\\pm1$ form and small moduli",
+    "uz": "$6k\\pm1$ koʻrinishi va kichik modullar"
    },
    "blocks": [
     {
@@ -513,7 +526,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Решето Эратосфена",
-    "en": "The sieve of Eratosthenes"
+    "en": "The sieve of Eratosthenes",
+    "uz": "Eratosfen elagi"
    },
    "blocks": [
     {
@@ -602,7 +616,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Как простые расположены среди чисел",
-    "en": "How the primes are spread out"
+    "en": "How the primes are spread out",
+    "uz": "Tub sonlar qanday taqsimlangan"
    },
    "blocks": [
     {
@@ -778,7 +793,8 @@ window.LESSONS[2] = {
   {
    "h": {
     "ru": "Числа Мерсенна и Ферма",
-    "en": "Mersenne and Fermat numbers"
+    "en": "Mersenne and Fermat numbers",
+    "uz": "Mersenn va Ferma sonlari"
    },
    "blocks": [
     {

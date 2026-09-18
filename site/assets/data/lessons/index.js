@@ -5,11 +5,13 @@ window.LESSON_INDEX = [
   "cat": "nt",
   "title": {
    "ru": "Делимость, НОД и НОК",
-   "en": "Divisibility, GCD and LCM"
+   "en": "Divisibility, GCD and LCM",
+   "uz": "Boʻlinuvchanlik, EKUB va EKUK"
   },
   "sub": {
    "ru": "Фундамент всей теории чисел: деление с остатком, признаки делимости и алгоритм Евклида.",
-   "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm."
+   "en": "The foundation of all number theory: division with remainder, divisibility rules and the Euclidean algorithm.",
+   "uz": "Butun sonlar nazariyasining poydevori: qoldiqli boʻlish, boʻlinish alomatlari va Yevklid algoritmi."
   },
   "problems": 50,
   "sections": 12
@@ -19,11 +21,13 @@ window.LESSON_INDEX = [
   "cat": "nt",
   "title": {
    "ru": "Простые числа",
-   "en": "Prime numbers"
+   "en": "Prime numbers",
+   "uz": "Tub sonlar"
   },
   "sub": {
    "ru": "Кирпичи, из которых сложены все целые числа: разложение, бесконечность простых и приём «$p>3$ значит $p=6k\\pm1$».",
-   "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\"."
+   "en": "The bricks every integer is built from: factorisation, the infinitude of primes, and the move \"$p>3$ means $p=6k\\pm1$\".",
+   "uz": "Har bir butun son quriladigan gʻishtlar: koʻpaytuvchilarga ajratish, tub sonlarning cheksizligi va «$p>3$ boʻlsa $p=6k\\pm1$» usuli."
   },
   "problems": 50,
   "sections": 8
@@ -33,11 +37,13 @@ window.LESSON_INDEX = [
   "cat": "nt",
   "title": {
    "ru": "Арифметика остатков",
-   "en": "Modular arithmetic"
+   "en": "Modular arithmetic",
+   "uz": "Qoldiqlar arifmetikasi"
   },
   "sub": {
    "ru": "Сравнения превращают громоздкие вычисления в короткие: последние цифры, циклы степеней и малая теорема Ферма.",
-   "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem."
+   "en": "Congruences turn heavy computations into short ones: last digits, cycles of powers and Fermat's little theorem.",
+   "uz": "Taqqoslamalar ogʻir hisoblarni qisqartiradi: oxirgi raqamlar, darajalar sikli va Ferma kichik teoremasi."
   },
   "problems": 50,
   "sections": 8
@@ -47,11 +53,13 @@ window.LESSON_INDEX = [
   "cat": "nt",
   "title": {
    "ru": "Диофантовы уравнения",
-   "en": "Diophantine equations"
+   "en": "Diophantine equations",
+   "uz": "Diofant tenglamalari"
   },
   "sub": {
    "ru": "Уравнения, у которых ответ обязан быть целым: линейный случай, разложение на множители, оценки, остатки и бесконечный спуск.",
-   "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent."
+   "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent.",
+   "uz": "Javobi butun son boʻlishi shart tenglamalar: chiziqli hol, koʻpaytuvchilarga ajratish, baholash, qoldiqlar va cheksiz tushish."
   },
   "problems": 50,
   "sections": 9
@@ -61,11 +69,13 @@ window.LESSON_INDEX = [
   "cat": "alg",
   "title": {
    "ru": "Тождества и разложение на множители",
-   "en": "Identities and factoring"
+   "en": "Identities and factoring",
+   "uz": "Ayniyatlar va koʻpaytuvchilarga ajratish"
   },
   "sub": {
    "ru": "Формулы сокращённого умножения, группировка, симметричные суммы и теорема Безу — инструменты, которые превращают выражение в произведение.",
-   "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product."
+   "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product.",
+   "uz": "Standart ayniyatlar, guruhlash, simmetrik yigʻindilar va Bezu teoremasi — ifodani koʻpaytmaga aylantiradigan qurollar."
   },
   "problems": 50,
   "sections": 9
@@ -75,11 +85,13 @@ window.LESSON_INDEX = [
   "cat": "alg",
   "title": {
    "ru": "Неравенства",
-   "en": "Inequalities"
+   "en": "Inequalities",
+   "uz": "Tengsizliklar"
   },
   "sub": {
    "ru": "От «квадрат неотрицателен» до Коши–Буняковского: как доказывать неравенства, а не угадывать их.",
-   "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them."
+   "en": "From \"a square is non-negative\" to Cauchy–Schwarz: how to prove inequalities rather than guess them.",
+   "uz": "«Kvadrat manfiy emas» dan Koshi–Bunyakovskiygacha: tengsizlikni taxmin qilish emas, isbotlash yoʻli."
   },
   "problems": 50,
   "sections": 9
@@ -89,11 +101,13 @@ window.LESSON_INDEX = [
   "cat": "alg",
   "title": {
    "ru": "Последовательности и суммы",
-   "en": "Sequences and series"
+   "en": "Sequences and series",
+   "uz": "Ketma-ketliklar va yigʻindilar"
   },
   "sub": {
    "ru": "Арифметическая и геометрическая прогрессии, телескопические суммы, рекуррентные формулы и числа Фибоначчи.",
-   "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers."
+   "en": "Arithmetic and geometric progressions, telescoping sums, recurrences and the Fibonacci numbers.",
+   "uz": "Arifmetik va geometrik progressiyalar, teleskopik yigʻindilar, rekurrent munosabatlar va Fibonachchi sonlari."
   },
   "problems": 50,
   "sections": 8
@@ -103,11 +117,13 @@ window.LESSON_INDEX = [
   "cat": "alg",
   "title": {
    "ru": "Текстовые задачи и системы",
-   "en": "Word problems and systems"
+   "en": "Word problems and systems",
+   "uz": "Matnli masalalar va sistemalar"
   },
   "sub": {
    "ru": "Движение, работа, смеси и проценты: как перевести условие в уравнения и как решать получившиеся системы.",
-   "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out."
+   "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out.",
+   "uz": "Harakat, ish, aralashmalar va foizlar: hikoyani tenglamaga aylantirish va chiqqan sistemani yechish."
   },
   "problems": 50,
   "sections": 8
@@ -117,11 +133,13 @@ window.LESSON_INDEX = [
   "cat": "geo",
   "title": {
    "ru": "Треугольники и равенство",
-   "en": "Triangles and congruence"
+   "en": "Triangles and congruence",
+   "uz": "Uchburchaklar va tenglik"
   },
   "sub": {
    "ru": "Углы, три признака равенства, равнобедренный треугольник, средняя линия, подобие и медианы.",
-   "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians."
+   "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians.",
+   "uz": "Burchaklar, uchta tenglik alomati, teng yonli uchburchaklar, oʻrta chiziqlar, oʻxshashlik va medianalar."
   },
   "problems": 50,
   "sections": 10
@@ -131,11 +149,13 @@ window.LESSON_INDEX = [
   "cat": "geo",
   "title": {
    "ru": "Площади и метод площадей",
-   "en": "Areas and the area method"
+   "en": "Areas and the area method",
+   "uz": "Yuzalar va yuzalar usuli"
   },
   "sub": {
    "ru": "Формулы площади, отношения площадей как главный инструмент, теорема Чевы и формула Пика.",
-   "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula."
+   "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula.",
+   "uz": "Yuza formulalari, yuzalar nisbati asosiy qurol sifatida, Cheva teoremasi va Pik formulasi."
   },
   "problems": 50,
   "sections": 7
@@ -145,11 +165,13 @@ window.LESSON_INDEX = [
   "cat": "geo",
   "title": {
    "ru": "Окружности",
-   "en": "Circles"
+   "en": "Circles",
+   "uz": "Aylanalar"
   },
   "sub": {
    "ru": "Вписанный угол, касательные, вписанные и описанные четырёхугольники, степень точки и теорема Птолемея.",
-   "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem."
+   "en": "Inscribed angles, tangents, cyclic and tangential quadrilaterals, the power of a point and Ptolemy’s theorem.",
+   "uz": "Ichki chizilgan burchaklar, urinmalar, ichki va tashqi chizilgan toʻrtburchaklar, nuqtaning darajasi va Ptolemey teoremasi."
   },
   "problems": 50,
   "sections": 7
@@ -159,11 +181,13 @@ window.LESSON_INDEX = [
   "cat": "geo",
   "title": {
    "ru": "Координатный метод",
-   "en": "Coordinate geometry"
+   "en": "Coordinate geometry",
+   "uz": "Koordinatalar usuli"
   },
   "sub": {
    "ru": "Расстояния, прямые, окружности и площади в координатах — и умение выбрать систему так, чтобы задача стала вычислением.",
-   "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic."
+   "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic.",
+   "uz": "Koordinatalarda masofalar, toʻgʻri chiziqlar, aylanalar va yuzalar — hamda masalani arifmetikaga aylantiradigan sanoq sistemasini tanlash mahorati."
   },
   "problems": 50,
   "sections": 7
@@ -173,11 +197,13 @@ window.LESSON_INDEX = [
   "cat": "comb",
   "title": {
    "ru": "Комбинаторика: как считать",
-   "en": "Counting principles"
+   "en": "Counting principles",
+   "uz": "Kombinatorika: qanday sanash kerak"
   },
   "sub": {
    "ru": "Правила суммы и произведения, перестановки и сочетания, треугольник Паскаля, включения-исключения и двойной подсчёт.",
-   "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting."
+   "en": "The sum and product rules, permutations and combinations, Pascal’s triangle, inclusion–exclusion and double counting.",
+   "uz": "Qoʻshish va koʻpaytirish qoidalari, oʻrin almashtirish va guruhlashlar, Paskal uchburchagi, qoʻshish–ayirish formulasi va ikki xil sanash."
   },
   "problems": 50,
   "sections": 8
@@ -187,11 +213,13 @@ window.LESSON_INDEX = [
   "cat": "comb",
   "title": {
    "ru": "Принцип Дирихле",
-   "en": "The pigeonhole principle"
+   "en": "The pigeonhole principle",
+   "uz": "Dirixle prinsipi"
   },
   "sub": {
    "ru": "Самое простое утверждение в математике — и одно из самых сильных: как выбрать «клетки» так, чтобы задача решилась сама.",
-   "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself."
+   "en": "The simplest statement in mathematics and one of the most powerful: how to choose the \"boxes\" so the problem solves itself.",
+   "uz": "Matematikadagi eng oddiy tasdiq va eng kuchlilaridan biri: «kataklar»ni shunday tanlash kerakki, masala oʻzi yechilsin."
   },
   "problems": 50,
   "sections": 7
@@ -201,11 +229,13 @@ window.LESSON_INDEX = [
   "cat": "comb",
   "title": {
    "ru": "Логика, доказательства и инварианты",
-   "en": "Logic, proofs and invariants"
+   "en": "Logic, proofs and invariants",
+   "uz": "Mantiq, isbotlar va invariantlar"
   },
   "sub": {
    "ru": "Отрицание и импликация, доказательство от противного, индукция, инварианты и раскраски — язык, на котором пишут решения.",
-   "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in."
+   "en": "Negation and implication, proof by contradiction, induction, invariants and colourings — the language solutions are written in.",
+   "uz": "Inkor va implikatsiya, teskarisini faraz qilish, induksiya, invariantlar va boʻyashlar — yechimlar yoziladigan til."
   },
   "problems": 50,
   "sections": 8
@@ -215,11 +245,13 @@ window.LESSON_INDEX = [
   "cat": "mix",
   "title": {
    "ru": "Пробная олимпиада",
-   "en": "Mock olympiad"
+   "en": "Mock olympiad",
+   "uz": "Sinov olimpiadasi"
   },
   "sub": {
    "ru": "Как устроен тур, как распределить время и как оформить решение — и четыре пробных варианта из всех тем сразу.",
-   "en": "How a round works, how to spend the time and how to write a solution — plus four mock papers drawing on every topic."
+   "en": "How a round works, how to spend the time and how to write a solution — plus four mock papers drawing on every topic.",
+   "uz": "Tur qanday oʻtadi, vaqtni qanday taqsimlash va yechimni qanday yozish kerak — hamda barcha mavzularni qamrovchi toʻrtta sinov varianti."
   },
   "problems": 50,
   "sections": 5

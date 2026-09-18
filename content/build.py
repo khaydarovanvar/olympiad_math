@@ -120,6 +120,15 @@ def uz_sources():
 LIST_FIELDS = ('items', 'steps', 'head')
 SKIP_FIELDS = ('tex', 'svg', 't', 'n', 'cat', 'lvl')
 
+# A cell that is nothing but a formula — '$2$', '$346$ ✓', '$1071=2\cdot462+147$' —
+# reads the same in every language, so it is not counted as needing translation
+# and the English simply shows through.
+_WORDS = re.compile(r'[A-Za-z\u0400-\u04FF]')
+
+
+def needs_translation(en):
+    return bool(_WORDS.search(MATH_SPAN.sub(' ', en)))
+
 
 def uz_slots(lesson):
     """Yield (address, dict, english) for every translatable pair in a lesson."""
@@ -157,7 +166,7 @@ def uz_slots(lesson):
     for pi, p in enumerate(lesson.get('problems', [])):
         for f in ('q', 'hint', 'sol'):
             field('p%d.%s' % (pi, f), p.get(f))
-    return out
+    return [s for s in out if needs_translation(s[2])]
 
 
 def apply_uz(lesson, n):

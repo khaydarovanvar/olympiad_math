@@ -5,11 +5,13 @@ window.LESSONS[10] = {
  "cat": "geo",
  "title": {
   "ru": "Площади и метод площадей",
-  "en": "Areas and the area method"
+  "en": "Areas and the area method",
+  "uz": "Yuzalar va yuzalar usuli"
  },
  "sub": {
   "ru": "Формулы площади, отношения площадей как главный инструмент, теорема Чевы и формула Пика.",
-  "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula."
+  "en": "Area formulas, ratios of areas as the main tool, Ceva’s theorem and Pick’s formula.",
+  "uz": "Yuza formulalari, yuzalar nisbati asosiy qurol sifatida, Cheva teoremasi va Pik formulasi."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[10] = {
    "Find ratios of areas using a common height and using a common angle.",
    "Prove geometric statements by the area method, Ceva’s theorem included.",
    "Compute the area of a lattice polygon by Pick’s formula."
+  ],
+  "uz": [
+   "Uchburchak, parallelogramm va trapetsiya yuzasi formulalarini hamda Geron formulasini bilish.",
+   "Umumiy balandlik va umumiy burchak yordamida yuzalar nisbatini topish.",
+   "Geometrik tasdiqlarni yuzalar usuli bilan, jumladan Cheva teoremasi bilan isbotlash.",
+   "Tugunli koʻpburchak yuzasini Pik formulasi bilan hisoblash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Формулы, которые надо знать",
-    "en": "The formulas to know"
+    "en": "The formulas to know",
+    "uz": "Bilish kerak boʻlgan formulalar"
    },
    "blocks": [
     {
@@ -160,7 +169,8 @@ window.LESSONS[10] = {
   {
    "h": {
     "ru": "Откуда берутся формулы площади",
-    "en": "Where the area formulas come from"
+    "en": "Where the area formulas come from",
+    "uz": "Yuza formulalari qayerdan kelib chiqadi"
    },
    "blocks": [
     {
@@ -382,7 +392,8 @@ window.LESSONS[10] = {
   {
    "h": {
     "ru": "Отношения площадей — главный инструмент",
-    "en": "Ratios of areas — the main tool"
+    "en": "Ratios of areas — the main tool",
+    "uz": "Yuzalar nisbati — asosiy qurol"
    },
    "blocks": [
     {
@@ -479,7 +490,8 @@ window.LESSONS[10] = {
   {
    "h": {
     "ru": "Метод площадей",
-    "en": "The area method"
+    "en": "The area method",
+    "uz": "Yuzalar usuli"
    },
    "blocks": [
     {
@@ -607,7 +619,8 @@ window.LESSONS[10] = {
   {
    "h": {
     "ru": "Теорема Чевы",
-    "en": "Ceva’s theorem"
+    "en": "Ceva’s theorem",
+    "uz": "Cheva teoremasi"
    },
    "blocks": [
     {
@@ -651,7 +664,8 @@ window.LESSONS[10] = {
   {
    "h": {
     "ru": "Теорема Менелая и тригонометрическая Чева",
-    "en": "Menelaus and the trigonometric form of Ceva"
+    "en": "Menelaus and the trigonometric form of Ceva",
+    "uz": "Menelay va Chevaning trigonometrik shakli"
    },
    "blocks": [
     {
@@ -741,7 +755,8 @@ window.LESSONS[10] = {
   {
    "h": {
     "ru": "Клетчатая бумага и формула Пика",
-    "en": "Lattice paper and Pick’s formula"
+    "en": "Lattice paper and Pick’s formula",
+    "uz": "Katakli qogʻoz va Pik formulasi"
    },
    "blocks": [
     {

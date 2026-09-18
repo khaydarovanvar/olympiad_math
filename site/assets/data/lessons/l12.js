@@ -5,11 +5,13 @@ window.LESSONS[12] = {
  "cat": "geo",
  "title": {
   "ru": "Координатный метод",
-  "en": "Coordinate geometry"
+  "en": "Coordinate geometry",
+  "uz": "Koordinatalar usuli"
  },
  "sub": {
   "ru": "Расстояния, прямые, окружности и площади в координатах — и умение выбрать систему так, чтобы задача стала вычислением.",
-  "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic."
+  "en": "Distances, lines, circles and areas in coordinates — and the knack of choosing a frame that turns a problem into arithmetic.",
+  "uz": "Koordinatalarda masofalar, toʻgʻri chiziqlar, aylanalar va yuzalar — hamda masalani arifmetikaga aylantiradigan sanoq sistemasini tanlash mahorati."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[12] = {
    "Write the equation of a line and of a circle, and test parallelism and perpendicularity.",
    "Find the distance from a point to a line and the area of a triangle from coordinates.",
    "Choose a convenient frame and prove geometric facts by computation."
+  ],
+  "uz": [
+   "Masofa, oʻrta nuqta va kesmani berilgan nisbatda boʻluvchi nuqtani hisoblash.",
+   "Toʻgʻri chiziq va aylana tenglamasini yozish, parallellik va perpendikulyarlikni tekshirish.",
+   "Nuqtadan toʻgʻri chiziqqacha masofani va koordinatalar boʻyicha uchburchak yuzasini topish.",
+   "Qulay sanoq sistemasini tanlab, geometrik faktlarni hisoblash bilan isbotlash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Точки, расстояния, середины",
-    "en": "Points, distances, midpoints"
+    "en": "Points, distances, midpoints",
+    "uz": "Nuqtalar, masofalar, oʻrta nuqtalar"
    },
    "blocks": [
     {
@@ -127,7 +136,8 @@ window.LESSONS[12] = {
   {
    "h": {
     "ru": "Прямая",
-    "en": "The line"
+    "en": "The line",
+    "uz": "Toʻgʻri chiziq"
    },
    "blocks": [
     {
@@ -214,7 +224,8 @@ window.LESSONS[12] = {
   {
    "h": {
     "ru": "Прямая: все формы уравнения",
-    "en": "The line: every form of its equation"
+    "en": "The line: every form of its equation",
+    "uz": "Toʻgʻri chiziq: tenglamasining barcha koʻrinishlari"
    },
    "blocks": [
     {
@@ -370,7 +381,8 @@ window.LESSONS[12] = {
   {
    "h": {
     "ru": "Площадь и окружность",
-    "en": "Area and the circle"
+    "en": "Area and the circle",
+    "uz": "Yuza va aylana"
    },
    "blocks": [
     {
@@ -466,7 +478,8 @@ window.LESSONS[12] = {
   {
    "h": {
     "ru": "Векторы и скалярное произведение",
-    "en": "Vectors and the dot product"
+    "en": "Vectors and the dot product",
+    "uz": "Vektorlar va skalyar koʻpaytma"
    },
    "blocks": [
     {
@@ -569,7 +582,8 @@ window.LESSONS[12] = {
   {
    "h": {
     "ru": "Координатный метод как приём",
-    "en": "Coordinates as a technique"
+    "en": "Coordinates as a technique",
+    "uz": "Koordinatalar usul sifatida"
    },
    "blocks": [
     {
@@ -629,7 +643,8 @@ window.LESSONS[12] = {
   {
    "h": {
     "ru": "Геометрические места точек в координатах",
-    "en": "Loci in coordinates"
+    "en": "Loci in coordinates",
+    "uz": "Koordinatalarda geometrik oʻrinlar"
    },
    "blocks": [
     {

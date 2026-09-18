@@ -17,7 +17,7 @@
   /* ---------------- interface strings ---------------- */
   var UI = {
     ru: {
-      home: 'Главная', topics: 'Темы', library: 'Библиотека', lessons: 'Уроки',
+      menuOpen: 'Открыть меню', home: 'Главная', topics: 'Темы', library: 'Библиотека', lessons: 'Уроки',
       crumbTopics: 'Уроки',
       goals: 'Чему вы научитесь',
       contents: 'Содержание',
@@ -43,7 +43,7 @@
       readingTime: function (m) { return '≈ ' + m + ' мин чтения'; }
     },
     en: {
-      home: 'Home', topics: 'Topics', library: 'Library', lessons: 'Lessons',
+      menuOpen: 'Open menu', home: 'Home', topics: 'Topics', library: 'Library', lessons: 'Lessons',
       crumbTopics: 'Lessons',
       goals: 'What you will learn',
       contents: 'Contents',
@@ -69,7 +69,7 @@
       readingTime: function (m) { return '≈ ' + m + ' min read'; }
     },
     uz: {
-      home: 'Bosh sahifa', topics: 'Mavzular', library: 'Kutubxona', lessons: 'Darslar',
+      menuOpen: 'Menyuni ochish', home: 'Bosh sahifa', topics: 'Mavzular', library: 'Kutubxona', lessons: 'Darslar',
       crumbTopics: 'Darslar',
       goals: 'Nimalarni oʻrganasiz',
       contents: 'Mundarija',
@@ -210,9 +210,26 @@
     return '';
   }
 
+  /* The static chrome of lesson.html — the top nav and the burger label — is
+     written in the mark-up and carries data-i18n keys. Those keys live in the
+     UI dictionary above, so translating them is a two-line pass rather than a
+     second copy of the shared i18n layer. */
+  function applyStatic(t) {
+    Array.prototype.forEach.call(d.querySelectorAll('[data-i18n]'), function (el) {
+      var v = t[el.getAttribute('data-i18n')];
+      if (typeof v === 'string') el.textContent = v;
+    });
+    Array.prototype.forEach.call(d.querySelectorAll('[data-i18n-attr]'), function (el) {
+      var parts = el.getAttribute('data-i18n-attr').split(':');
+      var v = t[parts[1]];
+      if (typeof v === 'string') el.setAttribute(parts[0], v);
+    });
+  }
+
   /* ---------------- the page ---------------- */
   function render(L, lang) {
     var t = UI[lang];
+    applyStatic(t);
     var idx = (w.LESSON_INDEX || []).map(function (e) { return e.n; }).sort(function (a, b) { return a - b; });
     var pos = idx.indexOf(L.n);
     var prevN = idx[pos - 1], nextN = idx[pos + 1];

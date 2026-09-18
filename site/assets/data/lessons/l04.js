@@ -5,11 +5,13 @@ window.LESSONS[4] = {
  "cat": "nt",
  "title": {
   "ru": "Диофантовы уравнения",
-  "en": "Diophantine equations"
+  "en": "Diophantine equations",
+  "uz": "Diofant tenglamalari"
  },
  "sub": {
   "ru": "Уравнения, у которых ответ обязан быть целым: линейный случай, разложение на множители, оценки, остатки и бесконечный спуск.",
-  "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent."
+  "en": "Equations whose answers must be whole numbers: the linear case, factoring, bounding, remainders and infinite descent.",
+  "uz": "Javobi butun son boʻlishi shart tenglamalar: chiziqli hol, koʻpaytuvchilarga ajratish, baholash, qoldiqlar va cheksiz tushish."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[4] = {
    "Turn an equation into \"a product equals a number\" and run through the divisors.",
    "Bound the variables so that only finitely many cases are left.",
    "Prove that no solutions exist, using remainders and infinite descent."
+  ],
+  "uz": [
+   "$ax+by=c$ chiziqli tenglamasini butun sonlarda yechish va barcha yechimlarni yozish.",
+   "Tenglamani «koʻpaytma songa teng» koʻrinishiga keltirish va boʻluvchilarni saralash.",
+   "Oʻzgaruvchilarni shunday baholash kerakki, faqat chekli sondagi hol qolsin.",
+   "Qoldiqlar va cheksiz tushish usuli bilan yechim yoʻqligini isbotlash."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Что это за уравнения",
-    "en": "What these equations are"
+    "en": "What these equations are",
+    "uz": "Bu tenglamalar nima"
    },
    "blocks": [
     {
@@ -76,7 +85,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Линейное уравнение $ax+by=c$",
-    "en": "The linear equation $ax+by=c$"
+    "en": "The linear equation $ax+by=c$",
+    "uz": "$ax+by=c$ chiziqli tenglamasi"
    },
    "blocks": [
     {
@@ -170,7 +180,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Разложение на множители",
-    "en": "Factoring"
+    "en": "Factoring",
+    "uz": "Koʻpaytuvchilarga ajratish"
    },
    "blocks": [
     {
@@ -277,7 +288,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Оценки: как загнать переменные в клетку",
-    "en": "Bounding: caging the variables"
+    "en": "Bounding: caging the variables",
+    "uz": "Baholash: oʻzgaruvchilarni qamab qoʻyish"
    },
    "blocks": [
     {
@@ -359,7 +371,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Остатки как сито",
-    "en": "Remainders as a sieve"
+    "en": "Remainders as a sieve",
+    "uz": "Qoldiqlar elak sifatida"
    },
    "blocks": [
     {
@@ -546,7 +559,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Пифагоровы тройки",
-    "en": "Pythagorean triples"
+    "en": "Pythagorean triples",
+    "uz": "Pifagor uchliklari"
    },
    "blocks": [
     {
@@ -739,7 +753,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Суммы двух квадратов",
-    "en": "Sums of two squares"
+    "en": "Sums of two squares",
+    "uz": "Ikkita kvadrat yigʻindisi"
    },
    "blocks": [
     {
@@ -853,7 +868,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Уравнение Пелля",
-    "en": "The Pell equation"
+    "en": "The Pell equation",
+    "uz": "Pell tenglamasi"
    },
    "blocks": [
     {
@@ -958,7 +974,8 @@ window.LESSONS[4] = {
   {
    "h": {
     "ru": "Бесконечный спуск",
-    "en": "Infinite descent"
+    "en": "Infinite descent",
+    "uz": "Cheksiz tushish"
    },
    "blocks": [
     {

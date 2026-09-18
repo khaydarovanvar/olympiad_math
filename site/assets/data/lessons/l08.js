@@ -5,11 +5,13 @@ window.LESSONS[8] = {
  "cat": "alg",
  "title": {
   "ru": "Текстовые задачи и системы",
-  "en": "Word problems and systems"
+  "en": "Word problems and systems",
+  "uz": "Matnli masalalar va sistemalar"
  },
  "sub": {
   "ru": "Движение, работа, смеси и проценты: как перевести условие в уравнения и как решать получившиеся системы.",
-  "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out."
+  "en": "Motion, work, mixtures and percentages: how to turn a story into equations, and how to solve the systems that come out.",
+  "uz": "Harakat, ish, aralashmalar va foizlar: hikoyani tenglamaga aylantirish va chiqqan sistemani yechish."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[8] = {
    "Solve problems on motion, joint work, mixtures and percentages.",
    "Solve systems by substitution, by adding, and by changing variables.",
    "Recognise symmetric systems and reduce them to $s=x+y$ and $p=xy$."
+  ],
+  "uz": [
+   "Nomaʼlumlarni toʻgʻri tanlash va tenglamalarni hikoyadan qurish.",
+   "Harakat, birgalikda ishlash, aralashma va foizlarga oid masalalarni yechish.",
+   "Sistemalarni oʻrniga qoʻyish, qoʻshish va oʻzgaruvchini almashtirish bilan yechish.",
+   "Simmetrik sistemalarni tanib, ularni $s=x+y$ va $p=xy$ ga keltirish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Как переводить условие в уравнения",
-    "en": "Turning a story into equations"
+    "en": "Turning a story into equations",
+    "uz": "Hikoyani tenglamalarga aylantirish"
    },
    "blocks": [
     {
@@ -189,7 +198,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Задачи на движение",
-    "en": "Motion problems"
+    "en": "Motion problems",
+    "uz": "Harakatga oid masalalar"
    },
    "blocks": [
     {
@@ -257,7 +267,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Относительное движение: правила и формулы",
-    "en": "Relative motion: the rules and the formulas"
+    "en": "Relative motion: the rules and the formulas",
+    "uz": "Nisbiy harakat: qoidalar va formulalar"
    },
    "blocks": [
     {
@@ -456,7 +467,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Задачи на совместную работу",
-    "en": "Joint work problems"
+    "en": "Joint work problems",
+    "uz": "Birgalikda ishlashga oid masalalar"
    },
    "blocks": [
     {
@@ -591,7 +603,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Смеси, растворы и проценты",
-    "en": "Mixtures, solutions and percentages"
+    "en": "Mixtures, solutions and percentages",
+    "uz": "Aralashmalar, eritmalar va foizlar"
    },
    "blocks": [
     {
@@ -694,7 +707,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Смеси и проценты: правило креста и повторные операции",
-    "en": "Mixtures and percentages: alligation and repeated operations"
+    "en": "Mixtures and percentages: alligation and repeated operations",
+    "uz": "Aralashma va foizlar: aralashtirish qoidasi va takroriy amallar"
    },
    "blocks": [
     {
@@ -831,7 +845,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Системы уравнений",
-    "en": "Systems of equations"
+    "en": "Systems of equations",
+    "uz": "Tenglamalar sistemalari"
    },
    "blocks": [
     {
@@ -910,7 +925,8 @@ window.LESSONS[8] = {
   {
    "h": {
     "ru": "Системы: теория и приёмы",
-    "en": "Systems: theory and techniques"
+    "en": "Systems: theory and techniques",
+    "uz": "Sistemalar: nazariya va usullar"
    },
    "blocks": [
     {

@@ -5,11 +5,13 @@ window.LESSONS[5] = {
  "cat": "alg",
  "title": {
   "ru": "Тождества и разложение на множители",
-  "en": "Identities and factoring"
+  "en": "Identities and factoring",
+  "uz": "Ayniyatlar va koʻpaytuvchilarga ajratish"
  },
  "sub": {
   "ru": "Формулы сокращённого умножения, группировка, симметричные суммы и теорема Безу — инструменты, которые превращают выражение в произведение.",
-  "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product."
+  "en": "The standard identities, grouping, symmetric sums and the factor theorem — the tools that turn an expression into a product.",
+  "uz": "Standart ayniyatlar, guruhlash, simmetrik yigʻindilar va Bezu teoremasi — ifodani koʻpaytmaga aylantiradigan qurollar."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[5] = {
    "Factor polynomials by grouping and by the \"add and subtract\" trick.",
    "Compute $a^2+b^2$, $a^3+b^3$ and the like knowing only $a+b$ and $ab$.",
    "Find the roots of a polynomial and factor it using the factor theorem."
+  ],
+  "uz": [
+   "Asosiy ayniyatlarni yoddan bilish va ularni yashiringan koʻrinishda ham tanish.",
+   "Koʻphadlarni guruhlash va «qoʻshib-ayirish» usuli bilan ajratish.",
+   "Faqat $a+b$ va $ab$ ni bilgan holda $a^2+b^2$, $a^3+b^3$ va shunga oʻxshashlarni hisoblash.",
+   "Koʻphadning ildizlarini topish va Bezu teoremasi yordamida uni ajratish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Зачем вообще раскладывать",
-    "en": "Why factoring is the whole game"
+    "en": "Why factoring is the whole game",
+    "uz": "Nega koʻpaytuvchilarga ajratish hamma narsani hal qiladi"
    },
    "blocks": [
     {
@@ -58,7 +67,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Тождества, которые надо знать наизусть",
-    "en": "The identities to know by heart"
+    "en": "The identities to know by heart",
+    "uz": "Yoddan bilish kerak boʻlgan ayniyatlar"
    },
    "blocks": [
     {
@@ -260,7 +270,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Разложение $a^{n}\\pm b^{n}$",
-    "en": "Factoring $a^{n}\\pm b^{n}$"
+    "en": "Factoring $a^{n}\\pm b^{n}$",
+    "uz": "$a^{n}\\pm b^{n}$ ni ajratish"
    },
    "blocks": [
     {
@@ -420,7 +431,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Группировка и приём «добавить и вычесть»",
-    "en": "Grouping, and the add-and-subtract trick"
+    "en": "Grouping, and the add-and-subtract trick",
+    "uz": "Guruhlash va qoʻshib-ayirish usuli"
    },
    "blocks": [
     {
@@ -516,7 +528,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Симметричные суммы: всё через $a+b$ и $ab$",
-    "en": "Symmetric sums: everything from $a+b$ and $ab$"
+    "en": "Symmetric sums: everything from $a+b$ and $ab$",
+    "uz": "Simmetrik yigʻindilar: hammasi $a+b$ va $ab$ dan"
    },
    "blocks": [
     {
@@ -594,7 +607,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Теорема Безу: искать корни",
-    "en": "The factor theorem: hunt for roots"
+    "en": "The factor theorem: hunt for roots",
+    "uz": "Bezu teoremasi: ildizlarni qidirish"
    },
    "blocks": [
     {
@@ -670,7 +684,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Бином Ньютона",
-    "en": "The binomial theorem"
+    "en": "The binomial theorem",
+    "uz": "Nyuton binomi"
    },
    "blocks": [
     {
@@ -804,7 +819,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Симметрические многочлены и формулы Ньютона",
-    "en": "Symmetric polynomials and Newton’s identities"
+    "en": "Symmetric polynomials and Newton’s identities",
+    "uz": "Simmetrik koʻphadlar va Nyuton ayniyatlari"
    },
    "blocks": [
     {
@@ -909,7 +925,8 @@ window.LESSONS[5] = {
   {
    "h": {
     "ru": "Три приёма, которые решают задачи целиком",
-    "en": "Three moves that finish whole problems"
+    "en": "Three moves that finish whole problems",
+    "uz": "Butun boshli masalani yechadigan uchta usul"
    },
    "blocks": [
     {

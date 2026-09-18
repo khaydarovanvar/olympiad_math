@@ -5,11 +5,13 @@ window.LESSONS[9] = {
  "cat": "geo",
  "title": {
   "ru": "Треугольники и равенство",
-  "en": "Triangles and congruence"
+  "en": "Triangles and congruence",
+  "uz": "Uchburchaklar va tenglik"
  },
  "sub": {
   "ru": "Углы, три признака равенства, равнобедренный треугольник, средняя линия, подобие и медианы.",
-  "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians."
+  "en": "Angles, the three congruence criteria, isosceles triangles, midlines, similarity and medians.",
+  "uz": "Burchaklar, uchta tenglik alomati, teng yonli uchburchaklar, oʻrta chiziqlar, oʻxshashlik va medianalar."
  },
  "goals": {
   "ru": [
@@ -23,13 +25,20 @@ window.LESSONS[9] = {
    "Prove triangles congruent by the three criteria, and write such a proof properly.",
    "Use the properties of isosceles triangles, midlines and similarity.",
    "Master the median-doubling trick and know the centroid property."
+  ],
+  "uz": [
+   "Burchaklar yigʻindisi va tashqi burchak teoremasi yordamida burchaklarni ketma-ket topish.",
+   "Uchburchaklar tengligini uchta alomat bilan isbotlash va bunday isbotni tartibli yozish.",
+   "Teng yonli uchburchak, oʻrta chiziq va oʻxshashlik xossalaridan foydalanish.",
+   "Medianani ikkilantirish usulini egallash va medianalar kesishish nuqtasi xossasini bilish."
   ]
  },
  "sections": [
   {
    "h": {
     "ru": "Углы: с чего всё начинается",
-    "en": "Angles: where it all starts"
+    "en": "Angles: where it all starts",
+    "uz": "Burchaklar: hamma narsa shundan boshlanadi"
    },
    "blocks": [
     {
@@ -184,7 +193,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Признаки равенства: полный список",
-    "en": "The congruence criteria in full"
+    "en": "The congruence criteria in full",
+    "uz": "Tenglik alomatlarining toʻliq roʻyxati"
    },
    "blocks": [
     {
@@ -289,7 +299,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Три признака равенства",
-    "en": "The three congruence criteria"
+    "en": "The three congruence criteria",
+    "uz": "Uchta tenglik alomati"
    },
    "blocks": [
     {
@@ -372,7 +383,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Равнобедренный треугольник",
-    "en": "The isosceles triangle"
+    "en": "The isosceles triangle",
+    "uz": "Teng yonli uchburchak"
    },
    "blocks": [
     {
@@ -438,7 +450,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Средняя линия и подобие",
-    "en": "Midlines and similarity"
+    "en": "Midlines and similarity",
+    "uz": "Oʻrta chiziqlar va oʻxshashlik"
    },
    "blocks": [
     {
@@ -525,7 +538,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Подобие: признаки и следствия",
-    "en": "Similarity: criteria and consequences"
+    "en": "Similarity: criteria and consequences",
+    "uz": "Oʻxshashlik: alomatlari va natijalari"
    },
    "blocks": [
     {
@@ -655,7 +669,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Медианы и приём удвоения",
-    "en": "Medians and the doubling trick"
+    "en": "Medians and the doubling trick",
+    "uz": "Medianalar va ikkilantirish usuli"
    },
    "blocks": [
     {
@@ -735,7 +750,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Четыре замечательные точки",
-    "en": "The four classical centres"
+    "en": "The four classical centres",
+    "uz": "Toʻrtta ajoyib nuqta"
    },
    "blocks": [
     {
@@ -836,7 +852,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Прямоугольный треугольник",
-    "en": "The right triangle"
+    "en": "The right triangle",
+    "uz": "Toʻgʻri burchakli uchburchak"
    },
    "blocks": [
     {
@@ -888,7 +905,8 @@ window.LESSONS[9] = {
   {
    "h": {
     "ru": "Метрические соотношения",
-    "en": "Metric relations"
+    "en": "Metric relations",
+    "uz": "Metrik munosabatlar"
    },
    "blocks": [
     {
