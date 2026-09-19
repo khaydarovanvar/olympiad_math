@@ -45,21 +45,24 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "Сумма почти ничего не говорит о числе. Произведение говорит всё. Если вы знаете, что $N=7\\cdot13$, вы сразу знаете делители $N$, знаете, что $N$ составное, знаете, при каких значениях переменной выражение обращается в ноль. Поэтому первое, что делают с любым выражением, — пытаются разложить его на множители.",
-      "en": "A sum tells you almost nothing about a number. A product tells you everything. If you know $N=7\\cdot13$, you immediately know the divisors of $N$, you know $N$ is composite, and you know exactly when the expression vanishes. That is why the first thing done to any expression is an attempt to factor it."
+      "en": "A sum tells you almost nothing about a number. A product tells you everything. If you know $N=7\\cdot13$, you immediately know the divisors of $N$, you know $N$ is composite, and you know exactly when the expression vanishes. That is why the first thing done to any expression is an attempt to factor it.",
+      "uz": "Yigʻindi son haqida deyarli hech narsa aytmaydi. Koʻpaytma esa hamma narsani aytadi. $N=7\\cdot13$ ekanini bilsangiz, $N$ ning boʻluvchilarini darhol bilasiz, $N$ murakkab ekanini bilasiz va ifoda qachon nolga aylanishini aniq bilasiz. Shuning uchun har qanday ifoda bilan qilinadigan birinchi ish — uni koʻpaytuvchilarga ajratishga urinish."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Три задачи, которые решает разложение:\n\n**Делимость.** «Докажите, что $n^{3}-n$ делится на $6$» — разложите: $n^{3}-n=(n-1)n(n+1)$, произведение трёх подряд идущих чисел.\n\n**Простота и составность.** «Докажите, что $n^{4}+4$ составное при $n>1$» — разложите на два множителя, каждый больше единицы.\n\n**Уравнения.** «Решите $x^{3}=x$» — переносим всё влево: $x(x-1)(x+1)=0$, корни видны.",
-      "en": "Three kinds of problem that factoring solves:\n\n**Divisibility.** \"Prove that $n^{3}-n$ is divisible by $6$\" — factor it: $n^{3}-n=(n-1)n(n+1)$, a product of three consecutive integers.\n\n**Primality.** \"Prove that $n^{4}+4$ is composite for $n>1$\" — split it into two factors, each bigger than one.\n\n**Equations.** \"Solve $x^{3}=x$\" — move everything left: $x(x-1)(x+1)=0$, and the roots are visible."
+      "en": "Three kinds of problem that factoring solves:\n\n**Divisibility.** \"Prove that $n^{3}-n$ is divisible by $6$\" — factor it: $n^{3}-n=(n-1)n(n+1)$, a product of three consecutive integers.\n\n**Primality.** \"Prove that $n^{4}+4$ is composite for $n>1$\" — split it into two factors, each bigger than one.\n\n**Equations.** \"Solve $x^{3}=x$\" — move everything left: $x(x-1)(x+1)=0$, and the roots are visible.",
+      "uz": "Koʻpaytuvchilarga ajratish hal qiladigan uch xil masala:\n\n**Boʻlinuvchanlik.** «$n^{3}-n$ soni $6$ ga boʻlinishini isbotlang» — ajrating: $n^{3}-n=(n-1)n(n+1)$, ketma-ket kelgan uchta sonning koʻpaytmasi.\n\n**Tublik.** «$n>1$ da $n^{4}+4$ murakkab ekanini isbotlang» — uni har biri birdan katta ikkita koʻpaytuvchiga ajrating.\n\n**Tenglamalar.** «$x^{3}=x$ ni yeching» — hamma narsani chapga oʻtkazing: $x(x-1)(x+1)=0$, ildizlar koʻrinib turadi."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "В олимпиадной задаче разложение почти никогда не бывает очевидным. Поэтому дальше — весь набор приёмов, от самых простых формул до теоремы Безу.",
-      "en": "In an olympiad problem the factorisation is almost never obvious. So what follows is the full set of moves, from the simplest identities to the factor theorem."
+      "en": "In an olympiad problem the factorisation is almost never obvious. So what follows is the full set of moves, from the simplest identities to the factor theorem.",
+      "uz": "Olimpiada masalasida ajratma deyarli hech qachon koʻrinib turmaydi. Shuning uchun quyida usullarning toʻliq toʻplami keltirilgan — eng oddiy ayniyatlardan Bezu teoremasigacha."
      }
     }
    ]
@@ -75,7 +78,8 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "Эти формулы должны узнаваться мгновенно и в обе стороны — и слева направо, и справа налево. Именно чтение справа налево и есть разложение на множители.",
-      "en": "These must be recognised instantly and in both directions — left to right and right to left. Reading them right to left is exactly what factoring is."
+      "en": "These must be recognised instantly and in both directions — left to right and right to left. Reading them right to left is exactly what factoring is.",
+      "uz": "Bularni bir zumda va ikkala yoʻnalishda ham — chapdan oʻngga va oʻngdan chapga — tanish kerak. Oʻngdan chapga oʻqish aynan koʻpaytuvchilarga ajratish degani."
      }
     },
     {
@@ -88,6 +92,10 @@ window.LESSONS[5] = {
       "en": [
        "Identity",
        "Where it turns up"
+      ],
+      "uz": [
+       "Ayniyat",
+       "Qayerda uchraydi"
       ]
      },
      "rows": {
@@ -174,6 +182,48 @@ window.LESSONS[5] = {
         "$a^{4}+4b^{4}=(a^{2}-2ab+2b^{2})(a^{2}+2ab+2b^{2})$",
         "the Sophie Germain identity"
        ]
+      ],
+      "uz": [
+       [
+        "$(a\\pm b)^{2}=a^{2}\\pm2ab+b^{2}$",
+        "hamma joyda"
+       ],
+       [
+        "$a^{2}-b^{2}=(a-b)(a+b)$",
+        "sonlar nazariyasidagi eng foydali yagona formula"
+       ],
+       [
+        "$(a\\pm b)^{3}=a^{3}\\pm3a^{2}b+3ab^{2}\\pm b^{3}$",
+        "kublar, binom"
+       ],
+       [
+        "$a^{3}+b^{3}=(a+b)(a^{2}-ab+b^{2})$",
+        "darajalar yigʻindisining boʻlinuvchanligi"
+       ],
+       [
+        "$a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})$",
+        "xuddi shu"
+       ],
+       [
+        "$a^{n}-b^{n}=(a-b)(a^{n-1}+a^{n-2}b+\\dots+b^{n-1})$",
+        "$a-b$ har doim $a^n-b^n$ ni boʻladi"
+       ],
+       [
+        "toq $n$ uchun $a^{n}+b^{n}=(a+b)(a^{n-1}-a^{n-2}b+\\dots+b^{n-1})$",
+        "$a+b$ soni $a^n+b^n$ ni boʻladi"
+       ],
+       [
+        "$(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2(ab+bc+ca)$",
+        "simmetrik masalalar"
+       ],
+       [
+        "$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)$",
+        "$a+b+c=0$ sharti"
+       ],
+       [
+        "$a^{4}+4b^{4}=(a^{2}-2ab+2b^{2})(a^{2}+2ab+2b^{2})$",
+        "Sofi Jermen ayniyati"
+       ]
       ]
      }
     },
@@ -181,14 +231,16 @@ window.LESSONS[5] = {
      "t": "note",
      "text": {
       "ru": "Две строки с $a^{n}\\pm b^{n}$ стоит понимать как **утверждения о делимости**: $a-b$ делит $a^{n}-b^{n}$ при любом $n$, а $a+b$ делит $a^{n}+b^{n}$ при нечётном $n$. Отсюда, например, сразу видно, что $10^{k}-1$ делится на $9$, а $3^{105}+4^{105}$ делится на $7$.",
-      "en": "The two rows with $a^{n}\\pm b^{n}$ are best read as **divisibility statements**: $a-b$ divides $a^{n}-b^{n}$ for every $n$, and $a+b$ divides $a^{n}+b^{n}$ for odd $n$. From this it is immediate that $10^{k}-1$ is divisible by $9$, and that $3^{105}+4^{105}$ is divisible by $7$."
+      "en": "The two rows with $a^{n}\\pm b^{n}$ are best read as **divisibility statements**: $a-b$ divides $a^{n}-b^{n}$ for every $n$, and $a+b$ divides $a^{n}+b^{n}$ for odd $n$. From this it is immediate that $10^{k}-1$ is divisible by $9$, and that $3^{105}+4^{105}$ is divisible by $7$.",
+      "uz": "$a^{n}\\pm b^{n}$ qatnashgan ikkita satrni **boʻlinuvchanlik tasdiqlari** sifatida oʻqigan maʼqul: $a-b$ har bir $n$ uchun $a^{n}-b^{n}$ ni boʻladi, $a+b$ esa toq $n$ uchun $a^{n}+b^{n}$ ni boʻladi. Bundan darhol $10^{k}-1$ ning $9$ ga va $3^{105}+4^{105}$ ning $7$ ga boʻlinishi kelib chiqadi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Вычислите $\\dfrac{2024^{3}+1}{2024^{2}-2023}$ без калькулятора.",
-      "en": "Evaluate $\\dfrac{2024^{3}+1}{2024^{2}-2023}$ without a calculator."
+      "en": "Evaluate $\\dfrac{2024^{3}+1}{2024^{2}-2023}$ without a calculator.",
+      "uz": "Kalkulyatorsiz $\\dfrac{2024^{3}+1}{2024^{2}-2023}$ ni hisoblang."
      },
      "steps": {
       "ru": [
@@ -204,6 +256,13 @@ window.LESSONS[5] = {
        "Denominator: $a^{2}-(a-1)=a^{2}-a+1$.",
        "The common factor $a^{2}-a+1$ cancels (it is positive, hence non-zero).",
        "What is left is $a+1=2025$."
+      ],
+      "uz": [
+       "$a=2024$ deb olamiz. U holda $2023=a-1$.",
+       "Surat: $a^{3}+1=(a+1)(a^{2}-a+1)$.",
+       "Maxraj: $a^{2}-(a-1)=a^{2}-a+1$.",
+       "Umumiy $a^{2}-a+1$ koʻpaytuvchi qisqaradi (u musbat, demak noldan farqli).",
+       "Qolgani $a+1=2025$."
       ]
      },
      "ans": {
@@ -215,18 +274,21 @@ window.LESSONS[5] = {
      "t": "idea",
      "name": {
       "ru": "Замена буквы на букву",
-      "en": "Rename the awkward number"
+      "en": "Rename the awkward number",
+      "uz": "Noqulay sonni qayta nomlang"
      },
      "text": {
       "ru": "Обратите внимание на самый первый шаг примера: громоздкое число заменили буквой. Это стоит делать **всегда**, когда в задаче фигурирует большое число вместе с соседними: $2023,2024,2025$ — это $a-1,a,a+1$. После замены задача обычно становится школьной.",
-      "en": "Notice the very first step of the example: an awkward number was renamed by a letter. Do this **whenever** a problem features a large number together with its neighbours: $2023,2024,2025$ are $a-1,a,a+1$. After the rename the problem usually becomes routine."
+      "en": "Notice the very first step of the example: an awkward number was renamed by a letter. Do this **whenever** a problem features a large number together with its neighbours: $2023,2024,2025$ are $a-1,a,a+1$. After the rename the problem usually becomes routine.",
+      "uz": "Misolning eng birinchi qadamiga eʼtibor bering: noqulay son harf bilan qayta nomlandi. Masalada katta son qoʻshnilari bilan birga uchrasa, **har doim** shunday qiling: $2023,2024,2025$ — bu $a-1,a,a+1$. Qayta nomlashdan keyin masala odatda odatiy boʻlib qoladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Тождество Софи Жермен",
-      "en": "The Sophie Germain identity"
+      "en": "The Sophie Germain identity",
+      "uz": "Sofi Jermen ayniyati"
      },
      "text": {
       "ru": "$$a^{4}+4b^{4}=\\left(a^{2}-2ab+2b^{2}\\right)\\left(a^{2}+2ab+2b^{2}\\right).$$",
@@ -237,21 +299,24 @@ window.LESSONS[5] = {
      "t": "proof",
      "text": {
       "ru": "Дополним до полного квадрата, прибавив и вычтя $4a^{2}b^{2}$: $$a^{4}+4b^{4}=a^{4}+4a^{2}b^{2}+4b^{4}-4a^{2}b^{2}=\\left(a^{2}+2b^{2}\\right)^{2}-(2ab)^{2} .$$\n\nТеперь это разность квадратов: $$\\left(a^{2}+2b^{2}-2ab\\right)\\left(a^{2}+2b^{2}+2ab\\right). \\qquad\\blacksquare$$",
-      "en": "Complete the square by adding and subtracting $4a^{2}b^{2}$: $$a^{4}+4b^{4}=\\left(a^{2}+2b^{2}\\right)^{2}-(2ab)^{2} ,$$ a difference of squares, hence $$\\left(a^{2}+2b^{2}-2ab\\right)\\left(a^{2}+2b^{2}+2ab\\right). \\qquad\\blacksquare$$"
+      "en": "Complete the square by adding and subtracting $4a^{2}b^{2}$: $$a^{4}+4b^{4}=\\left(a^{2}+2b^{2}\\right)^{2}-(2ab)^{2} ,$$ a difference of squares, hence $$\\left(a^{2}+2b^{2}-2ab\\right)\\left(a^{2}+2b^{2}+2ab\\right). \\qquad\\blacksquare$$",
+      "uz": "$4a^{2}b^{2}$ ni qoʻshib va ayirib toʻliq kvadratga toʻldiramiz: $$a^{4}+4b^{4}=\\left(a^{2}+2b^{2}\\right)^{2}-(2ab)^{2} ,$$ bu kvadratlar ayirmasi, demak $$\\left(a^{2}+2b^{2}-2ab\\right)\\left(a^{2}+2b^{2}+2ab\\right). \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Приём **«прибавить и вычесть»** — главный в этом разделе. Выражение не раскладывается? Добавьте недостающий член до полного квадрата и тут же вычтите его: часто получается разность квадратов.\n\nЧастный случай $b=1$ даёт $a^{4}+4$ и объясняет, почему это число составное при $a>1$.",
-      "en": "The **add-and-subtract** move is the heart of this section. An expression will not factor? Add the term missing from a perfect square and subtract it again: a difference of squares often appears.\n\nThe case $b=1$ gives $a^{4}+4$ and explains why that number is composite for $a>1$."
+      "en": "The **add-and-subtract** move is the heart of this section. An expression will not factor? Add the term missing from a perfect square and subtract it again: a difference of squares often appears.\n\nThe case $b=1$ gives $a^{4}+4$ and explains why that number is composite for $a>1$.",
+      "uz": "**Qoʻshib-ayirish** usuli — bu boʻlimning yuragi. Ifoda ajralmayaptimi? Toʻliq kvadratga yetishmaydigan hadni qoʻshing va darhol qaytarib ayiring: koʻpincha kvadratlar ayirmasi paydo boʻladi.\n\n$b=1$ holi $a^{4}+4$ ni beradi va $a>1$ da bu son nega murakkab ekanini tushuntiradi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Тождество для трёх кубов",
-      "en": "The three-cube identity"
+      "en": "The three-cube identity",
+      "uz": "Uchta kub ayniyati"
      },
      "text": {
       "ru": "$$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right).$$",
@@ -262,7 +327,8 @@ window.LESSONS[5] = {
      "t": "proof",
      "text": {
       "ru": "Раскроем правую часть, умножая каждое слагаемое первой скобки на вторую.\n\nЧлены с $a$: $$a^{3}+ab^{2}+ac^{2}-a^{2}b-abc-a^{2}c .$$ Аналогично для $b$ и $c$. Сложим все девять групп.\n\nКубы дают $a^{3}+b^{3}+c^{3}$. Смешанные члены вида $a^{2}b$ встречаются дважды с противоположными знаками (один раз из группы $a$, другой из группы $b$) и уничтожаются — и так для всех шести таких членов. Остаются три члена $-abc$, по одному из каждой группы: $$-3abc .$$\n\nИтого правая часть равна $a^{3}+b^{3}+c^{3}-3abc$ ✓ $\\blacksquare$\n\n**Два важных следствия.** Если $a+b+c=0$, то $a^{3}+b^{3}+c^{3}=3abc$. А поскольку вторая скобка равна $\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ge0$, при неотрицательных $a,b,c$ получаем $a^{3}+b^{3}+c^{3}\\ge3abc$ — это неравенство о среднем для трёх чисел.",
-      "en": "Expand the right-hand side, multiplying each term of the first bracket by the second.\n\nThe terms containing $a$ are $$a^{3}+ab^{2}+ac^{2}-a^{2}b-abc-a^{2}c ,$$ and similarly for $b$ and $c$. Add all nine groups.\n\nThe cubes give $a^{3}+b^{3}+c^{3}$. Mixed terms such as $a^{2}b$ occur twice with opposite signs (once from the $a$ group, once from the $b$ group) and cancel — likewise for all six of them. What remains is three copies of $-abc$: $$-3abc .$$\n\nSo the right side equals $a^{3}+b^{3}+c^{3}-3abc$ ✓ $\\blacksquare$\n\n**Two important consequences.** If $a+b+c=0$ then $a^{3}+b^{3}+c^{3}=3abc$. And since the second bracket equals $\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ge0$, for non-negative $a,b,c$ we get $a^{3}+b^{3}+c^{3}\\ge3abc$ — the AM–GM inequality for three numbers."
+      "en": "Expand the right-hand side, multiplying each term of the first bracket by the second.\n\nThe terms containing $a$ are $$a^{3}+ab^{2}+ac^{2}-a^{2}b-abc-a^{2}c ,$$ and similarly for $b$ and $c$. Add all nine groups.\n\nThe cubes give $a^{3}+b^{3}+c^{3}$. Mixed terms such as $a^{2}b$ occur twice with opposite signs (once from the $a$ group, once from the $b$ group) and cancel — likewise for all six of them. What remains is three copies of $-abc$: $$-3abc .$$\n\nSo the right side equals $a^{3}+b^{3}+c^{3}-3abc$ ✓ $\\blacksquare$\n\n**Two important consequences.** If $a+b+c=0$ then $a^{3}+b^{3}+c^{3}=3abc$. And since the second bracket equals $\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ge0$, for non-negative $a,b,c$ we get $a^{3}+b^{3}+c^{3}\\ge3abc$ — the AM–GM inequality for three numbers.",
+      "uz": "Oʻng tomonni birinchi qavsning har bir hadini ikkinchisiga koʻpaytirib ochamiz.\n\n$a$ qatnashgan hadlar: $$a^{3}+ab^{2}+ac^{2}-a^{2}b-abc-a^{2}c ,$$ $b$ va $c$ uchun ham shunday. Toʻqqizala guruhni qoʻshamiz.\n\nKublar $a^{3}+b^{3}+c^{3}$ ni beradi. $a^{2}b$ kabi aralash hadlar qarama-qarshi ishoralar bilan ikki marta uchraydi (bir marta $a$ guruhidan, bir marta $b$ guruhidan) va qisqaradi — oltala shunday had uchun ham shunday. Qoladigani $-abc$ ning uchta nusxasi: $$-3abc .$$\n\nDemak oʻng tomon $a^{3}+b^{3}+c^{3}-3abc$ ga teng ✓ $\\blacksquare$\n\n**Ikkita muhim natija.** Agar $a+b+c=0$ boʻlsa, $a^{3}+b^{3}+c^{3}=3abc$. Ikkinchi qavs esa $\\tfrac12\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right]\\ge0$ ga teng boʻlgani uchun, manfiy boʻlmagan $a,b,c$ da $a^{3}+b^{3}+c^{3}\\ge3abc$ chiqadi — bu uchta son uchun oʻrta arifmetik va oʻrta geometrik tengsizligi."
      }
     }
    ]
@@ -278,43 +344,50 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "Разность квадратов и сумма кубов — частные случаи двух общих формул. Стоит выучить их в общем виде: именно они превращают вопросы о делимости больших степеней в устные.",
-      "en": "The difference of squares and the sum of cubes are special cases of two general formulas. They are worth learning in full: they turn questions about divisibility of large powers into one-liners."
+      "en": "The difference of squares and the sum of cubes are special cases of two general formulas. They are worth learning in full: they turn questions about divisibility of large powers into one-liners.",
+      "uz": "Kvadratlar ayirmasi va kublar yigʻindisi — ikkita umumiy formulaning xususiy hollari. Ularni toʻliq koʻrinishda oʻrganishga arziydi: aynan ular katta darajalarning boʻlinuvchanligi haqidagi savollarni bir qatorlik qiladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Разность одинаковых степеней",
-      "en": "Difference of equal powers"
+      "en": "Difference of equal powers",
+      "uz": "Bir xil darajalar ayirmasi"
      },
      "text": {
       "ru": "Для любого натурального $n$ $$a^{n}-b^{n}=(a-b)\\left(a^{\\,n-1}+a^{\\,n-2}b+a^{\\,n-3}b^{2}+\\dots+ab^{\\,n-2}+b^{\\,n-1}\\right).$$ В частности, $a-b$ **всегда** делит $a^{n}-b^{n}$.",
-      "en": "For every positive integer $n$ $$a^{n}-b^{n}=(a-b)\\left(a^{\\,n-1}+a^{\\,n-2}b+\\dots+ab^{\\,n-2}+b^{\\,n-1}\\right).$$ In particular $a-b$ **always** divides $a^{n}-b^{n}$."
+      "en": "For every positive integer $n$ $$a^{n}-b^{n}=(a-b)\\left(a^{\\,n-1}+a^{\\,n-2}b+\\dots+ab^{\\,n-2}+b^{\\,n-1}\\right).$$ In particular $a-b$ **always** divides $a^{n}-b^{n}$.",
+      "uz": "Har bir musbat butun $n$ uchun $$a^{n}-b^{n}=(a-b)\\left(a^{\\,n-1}+a^{\\,n-2}b+\\dots+ab^{\\,n-2}+b^{\\,n-1}\\right).$$ Xususan, $a-b$ **har doim** $a^{n}-b^{n}$ ni boʻladi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Обозначим вторую скобку через $S=\\sum_{k=0}^{n-1}a^{\\,n-1-k}b^{k}$ и раскроем произведение.\n\nУмножение на $a$ даёт $$aS=a^{n}+a^{\\,n-1}b+a^{\\,n-2}b^{2}+\\dots+ab^{\\,n-1} .$$\n\nУмножение на $-b$ даёт $$-bS=-a^{\\,n-1}b-a^{\\,n-2}b^{2}-\\dots-ab^{\\,n-1}-b^{n} .$$\n\nСложим: все средние слагаемые встречаются дважды с противоположными знаками и уничтожаются, остаётся $$aS-bS=a^{n}-b^{n} . \\qquad\\blacksquare$$\n\nЭто «телескопическое» сокращение — та же идея, что и в телескопических суммах.",
-      "en": "Write the second bracket as $S=\\sum_{k=0}^{n-1}a^{\\,n-1-k}b^{k}$ and expand the product.\n\nMultiplying by $a$: $$aS=a^{n}+a^{\\,n-1}b+\\dots+ab^{\\,n-1} .$$\n\nMultiplying by $-b$: $$-bS=-a^{\\,n-1}b-\\dots-ab^{\\,n-1}-b^{n} .$$\n\nAdd: every middle term appears twice with opposite signs and cancels, leaving $$aS-bS=a^{n}-b^{n} . \\qquad\\blacksquare$$\n\nThis \"telescoping\" cancellation is the same idea as in telescoping sums."
+      "en": "Write the second bracket as $S=\\sum_{k=0}^{n-1}a^{\\,n-1-k}b^{k}$ and expand the product.\n\nMultiplying by $a$: $$aS=a^{n}+a^{\\,n-1}b+\\dots+ab^{\\,n-1} .$$\n\nMultiplying by $-b$: $$-bS=-a^{\\,n-1}b-\\dots-ab^{\\,n-1}-b^{n} .$$\n\nAdd: every middle term appears twice with opposite signs and cancels, leaving $$aS-bS=a^{n}-b^{n} . \\qquad\\blacksquare$$\n\nThis \"telescoping\" cancellation is the same idea as in telescoping sums.",
+      "uz": "Ikkinchi qavsni $S=\\sum_{k=0}^{n-1}a^{\\,n-1-k}b^{k}$ deb belgilaymiz va koʻpaytmani ochamiz.\n\n$a$ ga koʻpaytirish: $$aS=a^{n}+a^{\\,n-1}b+\\dots+ab^{\\,n-1} .$$\n\n$-b$ ga koʻpaytirish: $$-bS=-a^{\\,n-1}b-\\dots-ab^{\\,n-1}-b^{n} .$$\n\nQoʻshamiz: har bir oʻrta had qarama-qarshi ishoralar bilan ikki marta uchraydi va qisqaradi, $$aS-bS=a^{n}-b^{n}$$ qoladi. $\\blacksquare$\n\nBu «teleskopik» qisqarish — teleskopik yigʻindilardagi bilan bir xil gʻoya."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Сумма нечётных степеней",
-      "en": "Sum of odd powers"
+      "en": "Sum of odd powers",
+      "uz": "Toq darajalar yigʻindisi"
      },
      "text": {
       "ru": "Если $n$ **нечётно**, то $$a^{n}+b^{n}=(a+b)\\left(a^{\\,n-1}-a^{\\,n-2}b+a^{\\,n-3}b^{2}-\\dots-ab^{\\,n-2}+b^{\\,n-1}\\right),$$ то есть $a+b$ делит $a^{n}+b^{n}$. При **чётном** $n$ это неверно.",
-      "en": "If $n$ is **odd** then $$a^{n}+b^{n}=(a+b)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots-ab^{\\,n-2}+b^{\\,n-1}\\right),$$ so $a+b$ divides $a^{n}+b^{n}$. For **even** $n$ this fails."
+      "en": "If $n$ is **odd** then $$a^{n}+b^{n}=(a+b)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots-ab^{\\,n-2}+b^{\\,n-1}\\right),$$ so $a+b$ divides $a^{n}+b^{n}$. For **even** $n$ this fails.",
+      "uz": "Agar $n$ **toq** boʻlsa, $$a^{n}+b^{n}=(a+b)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots-ab^{\\,n-2}+b^{\\,n-1}\\right),$$ demak $a+b$ soni $a^{n}+b^{n}$ ni boʻladi. **Juft** $n$ uchun bu oʻrinli emas."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Подставим $-b$ вместо $b$ в предыдущую формулу: $$a^{n}-(-b)^{n}=\\left(a-(-b)\\right)\\left(a^{\\,n-1}+a^{\\,n-2}(-b)+\\dots+(-b)^{\\,n-1}\\right).$$\n\nПри нечётном $n$ имеем $(-b)^{n}=-b^{n}$, значит слева стоит $a^{n}+b^{n}$, а первая скобка справа равна $a+b$. Знаки во второй скобке чередуются, а последний член $(-b)^{\\,n-1}=b^{\\,n-1}$ положителен, потому что $n-1$ чётно ✓\n\n**Почему для чётного $n$ не работает.** При чётном $n$ подстановка даёт $a^{n}-b^{n}$, а не сумму. И действительно, $a+b$ обычно не делит $a^{n}+b^{n}$: например, $2+1=3$ не делит $2^{2}+1^{2}=5$. $\\blacksquare$",
-      "en": "Substitute $-b$ for $b$ in the previous formula: $$a^{n}-(-b)^{n}=\\left(a+b\\right)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots+(-b)^{\\,n-1}\\right).$$\n\nFor odd $n$ we have $(-b)^{n}=-b^{n}$, so the left side is $a^{n}+b^{n}$ and the first bracket is $a+b$. The signs alternate, and the last term $(-b)^{\\,n-1}=b^{\\,n-1}$ is positive because $n-1$ is even ✓\n\n**Why even $n$ fails.** For even $n$ the substitution produces $a^{n}-b^{n}$, not the sum. And indeed $a+b$ usually does not divide $a^{n}+b^{n}$: $2+1=3$ does not divide $2^{2}+1^{2}=5$. $\\blacksquare$"
+      "en": "Substitute $-b$ for $b$ in the previous formula: $$a^{n}-(-b)^{n}=\\left(a+b\\right)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots+(-b)^{\\,n-1}\\right).$$\n\nFor odd $n$ we have $(-b)^{n}=-b^{n}$, so the left side is $a^{n}+b^{n}$ and the first bracket is $a+b$. The signs alternate, and the last term $(-b)^{\\,n-1}=b^{\\,n-1}$ is positive because $n-1$ is even ✓\n\n**Why even $n$ fails.** For even $n$ the substitution produces $a^{n}-b^{n}$, not the sum. And indeed $a+b$ usually does not divide $a^{n}+b^{n}$: $2+1=3$ does not divide $2^{2}+1^{2}=5$. $\\blacksquare$",
+      "uz": "Oldingi formulada $b$ ni $-b$ bilan almashtiramiz: $$a^{n}-(-b)^{n}=\\left(a+b\\right)\\left(a^{\\,n-1}-a^{\\,n-2}b+\\dots+(-b)^{\\,n-1}\\right).$$\n\nToq $n$ uchun $(-b)^{n}=-b^{n}$, demak chap tomon $a^{n}+b^{n}$, birinchi qavs esa $a+b$. Ishoralar almashinadi, oxirgi had $(-b)^{\\,n-1}=b^{\\,n-1}$ esa musbat, chunki $n-1$ juft ✓\n\n**Juft $n$ nega ishlamaydi.** Juft $n$ da almashtirish yigʻindini emas, $a^{n}-b^{n}$ ni beradi. Va haqiqatan $a+b$ odatda $a^{n}+b^{n}$ ni boʻlmaydi: $2+1=3$ soni $2^{2}+1^{2}=5$ ni boʻlmaydi. $\\blacksquare$"
      }
     },
     {
@@ -329,6 +402,11 @@ window.LESSONS[5] = {
        "Expression",
        "Divisible by",
        "Condition"
+      ],
+      "uz": [
+       "Ifoda",
+       "Nimaga boʻlinadi",
+       "Shart"
       ]
      },
      "rows": {
@@ -375,6 +453,28 @@ window.LESSONS[5] = {
         "$a-b$",
         "never (for $a\\ne b$)"
        ]
+      ],
+      "uz": [
+       [
+        "$a^{n}-b^{n}$",
+        "$a-b$",
+        "har doim"
+       ],
+       [
+        "$a^{n}-b^{n}$",
+        "$a+b$",
+        "$n$ juft"
+       ],
+       [
+        "$a^{n}+b^{n}$",
+        "$a+b$",
+        "$n$ toq"
+       ],
+       [
+        "$a^{n}+b^{n}$",
+        "$a-b$",
+        "hech qachon ($a\\ne b$ da)"
+       ]
       ]
      }
     },
@@ -382,7 +482,8 @@ window.LESSONS[5] = {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $3^{105}+4^{105}$ делится на $7$.",
-      "en": "Prove that $3^{105}+4^{105}$ is divisible by $7$."
+      "en": "Prove that $3^{105}+4^{105}$ is divisible by $7$.",
+      "uz": "$3^{105}+4^{105}$ soni $7$ ga boʻlinishini isbotlang."
      },
      "steps": {
       "ru": [
@@ -394,36 +495,46 @@ window.LESSONS[5] = {
        "The exponent $105$ is odd, so the sum-of-odd-powers formula applies.",
        "It gives divisibility by $a+b=3+4=7$ ✓",
        "A small check: $3^{3}+4^{3}=27+64=91=7\\cdot13$ ✓"
+      ],
+      "uz": [
+       "$105$ koʻrsatkichi toq, demak toq darajalar yigʻindisi formulasi qoʻllanadi.",
+       "U $a+b=3+4=7$ ga boʻlinishni beradi ✓",
+       "Kichik tekshirish: $3^{3}+4^{3}=27+64=91=7\\cdot13$ ✓"
       ]
      },
      "ans": {
       "ru": "Делится, поскольку $7=3+4$.",
-      "en": "It is divisible, because $7=3+4$."
+      "en": "It is divisible, because $7=3+4$.",
+      "uz": "Boʻlinadi, chunki $7=3+4$."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Критерий делимости степеней",
-      "en": "When one power difference divides another"
+      "en": "When one power difference divides another",
+      "uz": "Bir daraja ayirmasi ikkinchisini qachon boʻladi"
      },
      "text": {
       "ru": "Для целого $a>1$ и натуральных $m,n$ $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{m}-1\\right)\\quad\\Longleftrightarrow\\quad n\\mid m .$$",
-      "en": "For an integer $a>1$ and positive integers $m,n$ $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{m}-1\\right)\\quad\\Longleftrightarrow\\quad n\\mid m .$$"
+      "en": "For an integer $a>1$ and positive integers $m,n$ $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{m}-1\\right)\\quad\\Longleftrightarrow\\quad n\\mid m .$$",
+      "uz": "Butun $a>1$ va musbat butun $m,n$ uchun $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{m}-1\\right)\\quad\\Longleftrightarrow\\quad n\\mid m .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Если $n\\mid m$,** скажем $m=nq$, то по формуле разности степеней с основанием $x=a^{n}$ $$a^{m}-1=\\left(a^{n}\\right)^{q}-1=\\left(a^{n}-1\\right)\\left(\\dots\\right) \\quad\\checkmark$$\n\n**Обратно.** Разделим с остатком: $m=nq+r$, $0\\le r<n$. Тогда $$a^{m}-1=a^{r}\\left(a^{nq}-1\\right)+\\left(a^{r}-1\\right).$$ Первое слагаемое делится на $a^{n}-1$ по уже доказанному. Значит из $\\left(a^{n}-1\\right)\\mid\\left(a^{m}-1\\right)$ следует $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{r}-1\\right).$$ Но $0\\le a^{r}-1<a^{n}-1$, поэтому это возможно лишь при $a^{r}-1=0$, то есть $r=0$ ✓ $\\blacksquare$",
-      "en": "**If $n\\mid m$,** say $m=nq$, apply the difference formula with base $x=a^{n}$: $$a^{m}-1=\\left(a^{n}\\right)^{q}-1=\\left(a^{n}-1\\right)\\left(\\dots\\right) \\quad\\checkmark$$\n\n**Conversely.** Divide with remainder: $m=nq+r$, $0\\le r<n$. Then $$a^{m}-1=a^{r}\\left(a^{nq}-1\\right)+\\left(a^{r}-1\\right),$$ and the first term is divisible by $a^{n}-1$ by the above. So $\\left(a^{n}-1\\right)\\mid\\left(a^{m}-1\\right)$ forces $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{r}-1\\right).$$ But $0\\le a^{r}-1<a^{n}-1$, which is possible only if $a^{r}-1=0$, i.e. $r=0$ ✓ $\\blacksquare$"
+      "en": "**If $n\\mid m$,** say $m=nq$, apply the difference formula with base $x=a^{n}$: $$a^{m}-1=\\left(a^{n}\\right)^{q}-1=\\left(a^{n}-1\\right)\\left(\\dots\\right) \\quad\\checkmark$$\n\n**Conversely.** Divide with remainder: $m=nq+r$, $0\\le r<n$. Then $$a^{m}-1=a^{r}\\left(a^{nq}-1\\right)+\\left(a^{r}-1\\right),$$ and the first term is divisible by $a^{n}-1$ by the above. So $\\left(a^{n}-1\\right)\\mid\\left(a^{m}-1\\right)$ forces $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{r}-1\\right).$$ But $0\\le a^{r}-1<a^{n}-1$, which is possible only if $a^{r}-1=0$, i.e. $r=0$ ✓ $\\blacksquare$",
+      "uz": "**Agar $n\\mid m$ boʻlsa,** masalan $m=nq$, ayirma formulasini $x=a^{n}$ asos bilan qoʻllaymiz: $$a^{m}-1=\\left(a^{n}\\right)^{q}-1=\\left(a^{n}-1\\right)\\left(\\dots\\right) \\quad\\checkmark$$\n\n**Aksincha.** Qoldiqli boʻlamiz: $m=nq+r$, $0\\le r<n$. U holda $$a^{m}-1=a^{r}\\left(a^{nq}-1\\right)+\\left(a^{r}-1\\right),$$ birinchi had esa yuqoridagiga koʻra $a^{n}-1$ ga boʻlinadi. Demak $\\left(a^{n}-1\\right)\\mid\\left(a^{m}-1\\right)$ dan $$\\left(a^{n}-1\\right)\\ \\big|\\ \\left(a^{r}-1\\right)$$ kelib chiqadi. Ammo $0\\le a^{r}-1<a^{n}-1$, bu esa faqat $a^{r}-1=0$, yaʼni $r=0$ boʻlgandagina mumkin ✓ $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Отсюда мгновенно следует, что число $2^{k}-1$ может быть простым только при простом $k$: составное $k=mn$ давало бы делитель $2^{m}-1$. Это первый шаг в охоте за простыми Мерсенна.",
-      "en": "This instantly shows $2^{k}-1$ can be prime only for prime $k$: a composite $k=mn$ would produce the divisor $2^{m}-1$. It is the first step in the hunt for Mersenne primes."
+      "en": "This instantly shows $2^{k}-1$ can be prime only for prime $k$: a composite $k=mn$ would produce the divisor $2^{m}-1$. It is the first step in the hunt for Mersenne primes.",
+      "uz": "Bundan darhol koʻrinadiki, $2^{k}-1$ faqat tub $k$ da tub boʻlishi mumkin: murakkab $k=mn$ $2^{m}-1$ boʻluvchini hosil qilar edi. Bu Mersenn tub sonlarini ovlashdagi birinchi qadam."
      }
     }
    ]
@@ -439,14 +550,16 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "**Группировка** — самый простой приём: разбейте слагаемые на группы так, чтобы в каждой нашёлся общий множитель, а после вынесения общим оказалось выражение в скобках.",
-      "en": "**Grouping** is the simplest move: split the terms into groups so that each group has a common factor, and after taking those out the bracket itself becomes the common factor."
+      "en": "**Grouping** is the simplest move: split the terms into groups so that each group has a common factor, and after taking those out the bracket itself becomes the common factor.",
+      "uz": "**Guruhlash** — eng oddiy usul: hadlarni har bir guruhda umumiy koʻpaytuvchi boʻladigan qilib guruhlarga ajrating, ularni qavsdan tashqariga chiqargandan keyin qavsning oʻzi umumiy koʻpaytuvchiga aylanadi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Разложите на множители $x^{3}-4x^{2}-x+4$.",
-      "en": "Factor $x^{3}-4x^{2}-x+4$."
+      "en": "Factor $x^{3}-4x^{2}-x+4$.",
+      "uz": "$x^{3}-4x^{2}-x+4$ ni koʻpaytuvchilarga ajrating."
      },
      "steps": {
       "ru": [
@@ -460,6 +573,12 @@ window.LESSONS[5] = {
        "Take $x^{2}$ out of the first bracket: $x^{2}(x-4)-(x-4)$.",
        "Now $(x-4)$ is common: this gives $(x-4)(x^{2}-1)$.",
        "And a difference of squares remains: $x^{2}-1=(x-1)(x+1)$."
+      ],
+      "uz": [
+       "Juftlab guruhlaymiz: $(x^{3}-4x^{2})-(x-4)$.",
+       "Birinchi qavsdan $x^{2}$ ni chiqaramiz: $x^{2}(x-4)-(x-4)$.",
+       "Endi $(x-4)$ umumiy: bu $(x-4)(x^{2}-1)$ ni beradi.",
+       "Va kvadratlar ayirmasi qoladi: $x^{2}-1=(x-1)(x+1)$."
       ]
      },
      "ans": {
@@ -471,18 +590,21 @@ window.LESSONS[5] = {
      "t": "idea",
      "name": {
       "ru": "Добавить и вычесть",
-      "en": "Add and subtract"
+      "en": "Add and subtract",
+      "uz": "Qoʻshib-ayirish"
      },
      "text": {
       "ru": "Если группировка не идёт, попробуйте **прибавить и тут же вычесть** одно и то же слагаемое так, чтобы получился полный квадрат. Выражение не изменится, а вид станет удобным. Классика: $$x^{4}+x^{2}+1=\\underbrace{x^{4}+2x^{2}+1}_{(x^{2}+1)^{2}}-x^{2}=(x^{2}+1)^{2}-x^{2}.$$ Дальше — разность квадратов.",
-      "en": "If grouping stalls, try **adding and immediately subtracting** the same term so that a complete square appears. The expression is unchanged but its shape becomes useful. The classic case: $$x^{4}+x^{2}+1=\\underbrace{x^{4}+2x^{2}+1}_{(x^{2}+1)^{2}}-x^{2}=(x^{2}+1)^{2}-x^{2}.$$ A difference of squares then finishes it."
+      "en": "If grouping stalls, try **adding and immediately subtracting** the same term so that a complete square appears. The expression is unchanged but its shape becomes useful. The classic case: $$x^{4}+x^{2}+1=\\underbrace{x^{4}+2x^{2}+1}_{(x^{2}+1)^{2}}-x^{2}=(x^{2}+1)^{2}-x^{2}.$$ A difference of squares then finishes it.",
+      "uz": "Agar guruhlash toʻxtab qolsa, toʻliq kvadrat paydo boʻladigan qilib bir xil hadni **qoʻshib, darhol ayirishga** urining. Ifoda oʻzgarmaydi, ammo uning koʻrinishi foydali boʻladi. Klassik hol: $$x^{4}+x^{2}+1=\\underbrace{x^{4}+2x^{2}+1}_{(x^{2}+1)^{2}}-x^{2}=(x^{2}+1)^{2}-x^{2}.$$ Keyin kvadratlar ayirmasi ishni bitiradi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Разложите $x^{4}+x^{2}+1$ и выведите отсюда, что $n^{4}+n^{2}+1$ составное при всех натуральных $n>1$.",
-      "en": "Factor $x^{4}+x^{2}+1$, and deduce that $n^{4}+n^{2}+1$ is composite for every integer $n>1$."
+      "en": "Factor $x^{4}+x^{2}+1$, and deduce that $n^{4}+n^{2}+1$ is composite for every integer $n>1$.",
+      "uz": "$x^{4}+x^{2}+1$ ni ajrating va bundan har bir butun $n>1$ uchun $n^{4}+n^{2}+1$ murakkab ekanini keltirib chiqaring."
      },
      "steps": {
       "ru": [
@@ -498,18 +620,27 @@ window.LESSONS[5] = {
        "So $x^{4}+x^{2}+1=(x^{2}-x+1)(x^{2}+x+1)$.",
        "For $n>1$ the first factor is $n(n-1)+1\\ge3$, and the second is larger still.",
        "Both factors exceed $1$, so the number is composite."
+      ],
+      "uz": [
+       "$x^{4}+x^{2}+1=(x^{2}+1)^{2}-x^{2}$.",
+       "Kvadratlar ayirmasi: $=(x^{2}+1-x)(x^{2}+1+x)$.",
+       "Demak $x^{4}+x^{2}+1=(x^{2}-x+1)(x^{2}+x+1)$.",
+       "$n>1$ da birinchi koʻpaytuvchi $n(n-1)+1\\ge3$, ikkinchisi esa undan ham katta.",
+       "Ikkala koʻpaytuvchi ham $1$ dan katta, demak son murakkab."
       ]
      },
      "ans": {
       "ru": "$(x^{2}-x+1)(x^{2}+x+1)$; при $n>1$ число составное. $\\blacksquare$",
-      "en": "$(x^{2}-x+1)(x^{2}+x+1)$; for $n>1$ the number is composite. $\\blacksquare$"
+      "en": "$(x^{2}-x+1)(x^{2}+x+1)$; for $n>1$ the number is composite. $\\blacksquare$",
+      "uz": "$(x^{2}-x+1)(x^{2}+x+1)$; $n>1$ da son murakkab. $\\blacksquare$"
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Тот же приём даёт тождество Софи Жермен — прибавим и вычтем $4a^{2}b^{2}$:",
-      "en": "The same trick produces the Sophie Germain identity — add and subtract $4a^{2}b^{2}$:"
+      "en": "The same trick produces the Sophie Germain identity — add and subtract $4a^{2}b^{2}$:",
+      "uz": "Xuddi shu usul Sofi Jermen ayniyatini beradi — $4a^{2}b^{2}$ ni qoʻshib-ayiring:"
      }
     },
     {
@@ -520,7 +651,8 @@ window.LESSONS[5] = {
      "t": "note",
      "text": {
       "ru": "Проверьте первое равенство раскрытием: $(a^{2}+2b^{2})^{2}=a^{4}+4a^{2}b^{2}+4b^{4}$, и вычитание $4a^{2}b^{2}$ возвращает нас к $a^{4}+4b^{4}$. Это тождество — готовый ответ на целое семейство олимпиадных задач вида «докажите, что число составное».",
-      "en": "Check the first equality by expanding: $(a^{2}+2b^{2})^{2}=a^{4}+4a^{2}b^{2}+4b^{4}$, and subtracting $4a^{2}b^{2}$ brings back $a^{4}+4b^{4}$. This identity is a ready-made answer to a whole family of \"prove this number is composite\" problems."
+      "en": "Check the first equality by expanding: $(a^{2}+2b^{2})^{2}=a^{4}+4a^{2}b^{2}+4b^{4}$, and subtracting $4a^{2}b^{2}$ brings back $a^{4}+4b^{4}$. This identity is a ready-made answer to a whole family of \"prove this number is composite\" problems.",
+      "uz": "Birinchi tenglikni ochib tekshiring: $(a^{2}+2b^{2})^{2}=a^{4}+4a^{2}b^{2}+4b^{4}$, undan $4a^{2}b^{2}$ ni ayirsak $a^{4}+4b^{4}$ qaytadi. Bu ayniyat «bu son murakkab ekanini isbotlang» turidagi butun bir oila masalalarga tayyor javob."
      }
     }
    ]
@@ -536,7 +668,8 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "Пусть $s=a+b$ и $p=ab$. Тогда **любое** симметричное выражение от $a$ и $b$ выражается через $s$ и $p$ — и обычно за две строки. Вот рабочий набор:",
-      "en": "Put $s=a+b$ and $p=ab$. Then **every** symmetric expression in $a$ and $b$ can be written in terms of $s$ and $p$ — usually in two lines. Here is the working set:"
+      "en": "Put $s=a+b$ and $p=ab$. Then **every** symmetric expression in $a$ and $b$ can be written in terms of $s$ and $p$ — usually in two lines. Here is the working set:",
+      "uz": "$s=a+b$ va $p=ab$ deb olamiz. U holda $a$ va $b$ ga nisbatan **har bir** simmetrik ifodani $s$ va $p$ orqali yozish mumkin — odatda ikki qatorda. Mana ishchi toʻplam:"
      }
     },
     {
@@ -547,14 +680,16 @@ window.LESSONS[5] = {
      "t": "proof",
      "text": {
       "ru": "Первая строка: $(a+b)^{2}=a^{2}+2ab+b^{2}$, вычитаем $2ab$. Вторая: $(a+b)^{3}=a^{3}+3a^{2}b+3ab^{2}+b^{3}=a^{3}+b^{3}+3ab(a+b)$, переносим. Третья: $a^{4}+b^{4}=(a^{2}+b^{2})^{2}-2a^{2}b^{2}$, подставляем первую строку. Четвёртая: $(a-b)^{2}=(a+b)^{2}-4ab$. $\\blacksquare$",
-      "en": "First line: $(a+b)^{2}=a^{2}+2ab+b^{2}$, subtract $2ab$. Second: $(a+b)^{3}=a^{3}+3a^{2}b+3ab^{2}+b^{3}=a^{3}+b^{3}+3ab(a+b)$, rearrange. Third: $a^{4}+b^{4}=(a^{2}+b^{2})^{2}-2a^{2}b^{2}$, substitute the first line. Fourth: $(a-b)^{2}=(a+b)^{2}-4ab$. $\\blacksquare$"
+      "en": "First line: $(a+b)^{2}=a^{2}+2ab+b^{2}$, subtract $2ab$. Second: $(a+b)^{3}=a^{3}+3a^{2}b+3ab^{2}+b^{3}=a^{3}+b^{3}+3ab(a+b)$, rearrange. Third: $a^{4}+b^{4}=(a^{2}+b^{2})^{2}-2a^{2}b^{2}$, substitute the first line. Fourth: $(a-b)^{2}=(a+b)^{2}-4ab$. $\\blacksquare$",
+      "uz": "Birinchi qator: $(a+b)^{2}=a^{2}+2ab+b^{2}$, $2ab$ ni ayiring. Ikkinchisi: $(a+b)^{3}=a^{3}+3a^{2}b+3ab^{2}+b^{3}=a^{3}+b^{3}+3ab(a+b)$, oʻrnini almashtiring. Uchinchisi: $a^{4}+b^{4}=(a^{2}+b^{2})^{2}-2a^{2}b^{2}$, birinchi qatorni qoʻying. Toʻrtinchisi: $(a-b)^{2}=(a+b)^{2}-4ab$. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Числа $a$ и $b$ удовлетворяют условиям $a+b=4$ и $ab=3$. Найдите $a^{3}+b^{3}$ и $a^{4}+b^{4}$, не находя самих $a$ и $b$.",
-      "en": "Numbers $a$ and $b$ satisfy $a+b=4$ and $ab=3$. Find $a^{3}+b^{3}$ and $a^{4}+b^{4}$ without finding $a$ and $b$."
+      "en": "Numbers $a$ and $b$ satisfy $a+b=4$ and $ab=3$. Find $a^{3}+b^{3}$ and $a^{4}+b^{4}$ without finding $a$ and $b$.",
+      "uz": "$a$ va $b$ sonlari $a+b=4$ va $ab=3$ ni qanoatlantiradi. $a$ va $b$ ni topmasdan $a^{3}+b^{3}$ va $a^{4}+b^{4}$ ni toping."
      },
      "steps": {
       "ru": [
@@ -570,6 +705,13 @@ window.LESSONS[5] = {
        "$a^{3}+b^{3}=s^{3}-3ps=64-3\\cdot3\\cdot4=64-36=28$.",
        "$a^{4}+b^{4}=(a^{2}+b^{2})^{2}-2p^{2}=100-18=82$.",
        "*Check:* the roots of $t^{2}-4t+3=0$ are $1$ and $3$; indeed $1+27=28$ and $1+81=82$ ✓"
+      ],
+      "uz": [
+       "$s=4$, $p=3$.",
+       "$a^{2}+b^{2}=s^{2}-2p=16-6=10$.",
+       "$a^{3}+b^{3}=s^{3}-3ps=64-3\\cdot3\\cdot4=64-36=28$.",
+       "$a^{4}+b^{4}=(a^{2}+b^{2})^{2}-2p^{2}=100-18=82$.",
+       "*Tekshirish:* $t^{2}-4t+3=0$ ning ildizlari $1$ va $3$; haqiqatan $1+27=28$ va $1+81=82$ ✓"
       ]
      },
      "ans": {
@@ -581,25 +723,29 @@ window.LESSONS[5] = {
      "t": "thm",
      "name": {
       "ru": "Теорема Виета",
-      "en": "Vieta’s theorem"
+      "en": "Vieta’s theorem",
+      "uz": "Viyet teoremasi"
      },
      "text": {
       "ru": "Если $t_1,t_2$ — корни уравнения $t^{2}+pt+q=0$, то $t_1+t_2=-p$ и $t_1t_2=q$. Обратно, числа с суммой $s$ и произведением $m$ — это в точности корни уравнения $t^{2}-st+m=0$.",
-      "en": "If $t_1,t_2$ are the roots of $t^{2}+pt+q=0$ then $t_1+t_2=-p$ and $t_1t_2=q$. Conversely, two numbers with sum $s$ and product $m$ are exactly the roots of $t^{2}-st+m=0$."
+      "en": "If $t_1,t_2$ are the roots of $t^{2}+pt+q=0$ then $t_1+t_2=-p$ and $t_1t_2=q$. Conversely, two numbers with sum $s$ and product $m$ are exactly the roots of $t^{2}-st+m=0$.",
+      "uz": "Agar $t_1,t_2$ — $t^{2}+pt+q=0$ ning ildizlari boʻlsa, $t_1+t_2=-p$ va $t_1t_2=q$. Aksincha, yigʻindisi $s$ va koʻpaytmasi $m$ boʻlgan ikkita son aynan $t^{2}-st+m=0$ ning ildizlari."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Обратная часть — рабочий приём. Систему $$x+y=5,\\qquad x^{3}+y^{3}=35$$ решают так: $x^{3}+y^{3}=s^{3}-3ps$ даёт $125-15p=35$, то есть $p=6$. Значит $x$ и $y$ — корни $t^{2}-5t+6=0$, то есть $2$ и $3$.",
-      "en": "The converse is a working technique. To solve the system $$x+y=5,\\qquad x^{3}+y^{3}=35$$ write $x^{3}+y^{3}=s^{3}-3ps$, so $125-15p=35$ and $p=6$. Hence $x$ and $y$ are the roots of $t^{2}-5t+6=0$, namely $2$ and $3$."
+      "en": "The converse is a working technique. To solve the system $$x+y=5,\\qquad x^{3}+y^{3}=35$$ write $x^{3}+y^{3}=s^{3}-3ps$, so $125-15p=35$ and $p=6$. Hence $x$ and $y$ are the roots of $t^{2}-5t+6=0$, namely $2$ and $3$.",
+      "uz": "Teskarisi ishchi usul. $$x+y=5,\\qquad x^{3}+y^{3}=35$$ sistemasini yechish uchun $x^{3}+y^{3}=s^{3}-3ps$ deb yozamiz, demak $125-15p=35$ va $p=6$. Shuning uchun $x$ va $y$ — $t^{2}-5t+6=0$ ning ildizlari, yaʼni $2$ va $3$."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Для трёх переменных роль $s$ и $p$ играют три величины $$\\sigma_1=a+b+c,\\qquad\\sigma_2=ab+bc+ca,\\qquad\\sigma_3=abc,$$ и снова любое симметричное выражение выражается через них. Самая нужная формула: $$a^{2}+b^{2}+c^{2}=\\sigma_1^{2}-2\\sigma_2 .$$",
-      "en": "For three variables the roles of $s$ and $p$ are played by $$\\sigma_1=a+b+c,\\qquad\\sigma_2=ab+bc+ca,\\qquad\\sigma_3=abc,$$ and again every symmetric expression is built from them. The formula you will need most is $$a^{2}+b^{2}+c^{2}=\\sigma_1^{2}-2\\sigma_2 .$$"
+      "en": "For three variables the roles of $s$ and $p$ are played by $$\\sigma_1=a+b+c,\\qquad\\sigma_2=ab+bc+ca,\\qquad\\sigma_3=abc,$$ and again every symmetric expression is built from them. The formula you will need most is $$a^{2}+b^{2}+c^{2}=\\sigma_1^{2}-2\\sigma_2 .$$",
+      "uz": "Uchta oʻzgaruvchi uchun $s$ va $p$ ning rolini $$\\sigma_1=a+b+c,\\qquad\\sigma_2=ab+bc+ca,\\qquad\\sigma_3=abc$$ oʻynaydi va yana har bir simmetrik ifoda ulardan quriladi. Sizga eng koʻp kerak boʻladigan formula: $$a^{2}+b^{2}+c^{2}=\\sigma_1^{2}-2\\sigma_2 .$$"
      }
     }
    ]
@@ -615,43 +761,50 @@ window.LESSONS[5] = {
      "t": "thm",
      "name": {
       "ru": "Теорема Безу",
-      "en": "The factor theorem"
+      "en": "The factor theorem",
+      "uz": "Bezu teoremasi"
      },
      "text": {
       "ru": "Остаток от деления многочлена $f(x)$ на $x-c$ равен $f(c)$. В частности, $$(x-c)\\mid f(x)\\quad\\Longleftrightarrow\\quad f(c)=0 .$$",
-      "en": "The remainder on dividing a polynomial $f(x)$ by $x-c$ equals $f(c)$. In particular, $$(x-c)\\mid f(x)\\quad\\Longleftrightarrow\\quad f(c)=0 .$$"
+      "en": "The remainder on dividing a polynomial $f(x)$ by $x-c$ equals $f(c)$. In particular, $$(x-c)\\mid f(x)\\quad\\Longleftrightarrow\\quad f(c)=0 .$$",
+      "uz": "$f(x)$ koʻphadni $x-c$ ga boʻlgandagi qoldiq $f(c)$ ga teng. Xususan, $$(x-c)\\mid f(x)\\quad\\Longleftrightarrow\\quad f(c)=0 .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Разделим $f$ на $x-c$ с остатком: $f(x)=(x-c)q(x)+r$, где $r$ — константа, потому что степень остатка меньше степени делителя, а она равна единице. Подставим $x=c$: правая часть даёт $0\\cdot q(c)+r=r$, значит $r=f(c)$. Если $f(c)=0$, то остаток нулевой и $x-c$ делит $f$; обратное очевидно. $\\blacksquare$",
-      "en": "Divide $f$ by $x-c$ with remainder: $f(x)=(x-c)q(x)+r$ where $r$ is a constant, since the remainder has degree less than the divisor, which has degree one. Put $x=c$: the right side becomes $0\\cdot q(c)+r=r$, so $r=f(c)$. If $f(c)=0$ the remainder vanishes and $x-c$ divides $f$; the converse is clear. $\\blacksquare$"
+      "en": "Divide $f$ by $x-c$ with remainder: $f(x)=(x-c)q(x)+r$ where $r$ is a constant, since the remainder has degree less than the divisor, which has degree one. Put $x=c$: the right side becomes $0\\cdot q(c)+r=r$, so $r=f(c)$. If $f(c)=0$ the remainder vanishes and $x-c$ divides $f$; the converse is clear. $\\blacksquare$",
+      "uz": "$f$ ni $x-c$ ga qoldiqli boʻlamiz: $f(x)=(x-c)q(x)+r$, bunda $r$ — oʻzgarmas, chunki qoldiqning darajasi boʻluvchinikidan kichik, boʻluvchining darajasi esa bir. $x=c$ qoʻyamiz: oʻng tomon $0\\cdot q(c)+r=r$ ga aylanadi, demak $r=f(c)$. Agar $f(c)=0$ boʻlsa, qoldiq yoʻqoladi va $x-c$ soni $f$ ni boʻladi; teskarisi ravshan. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема о рациональных корнях",
-      "en": "The rational root theorem"
+      "en": "The rational root theorem",
+      "uz": "Ratsional ildiz haqidagi teorema"
      },
      "text": {
       "ru": "Пусть $f(x)=a_nx^{n}+\\dots+a_1x+a_0$ — многочлен с целыми коэффициентами и $\\dfrac{u}{v}$ — его корень, где дробь несократима. Тогда $u\\mid a_0$ и $v\\mid a_n$. В частности, целые корни многочлена со старшим коэффициентом $1$ — это делители свободного члена.",
-      "en": "Let $f(x)=a_nx^{n}+\\dots+a_1x+a_0$ have integer coefficients and let $\\dfrac{u}{v}$ be a root in lowest terms. Then $u\\mid a_0$ and $v\\mid a_n$. In particular, the integer roots of a monic polynomial are divisors of its constant term."
+      "en": "Let $f(x)=a_nx^{n}+\\dots+a_1x+a_0$ have integer coefficients and let $\\dfrac{u}{v}$ be a root in lowest terms. Then $u\\mid a_0$ and $v\\mid a_n$. In particular, the integer roots of a monic polynomial are divisors of its constant term.",
+      "uz": "$f(x)=a_nx^{n}+\\dots+a_1x+a_0$ butun koeffitsiyentli boʻlsin va $\\dfrac{u}{v}$ — uning qisqarmas koʻrinishdagi ildizi boʻlsin. U holda $u\\mid a_0$ va $v\\mid a_n$. Xususan, keltirilgan koʻphadning butun ildizlari uning ozod hadining boʻluvchilari."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Отсюда рецепт: чтобы разложить многочлен с целыми коэффициентами, **переберите делители свободного члена**. Их немного, и каждый проверяется подстановкой за секунду.",
-      "en": "Hence the recipe: to factor a polynomial with integer coefficients, **run through the divisors of the constant term**. There are few of them, and each takes a second to test."
+      "en": "Hence the recipe: to factor a polynomial with integer coefficients, **run through the divisors of the constant term**. There are few of them, and each takes a second to test.",
+      "uz": "Demak tartib shunday: butun koeffitsiyentli koʻphadni ajratish uchun **ozod hadning boʻluvchilarini saralang**. Ular kam, har birini tekshirish esa bir soniya."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Разложите на множители $x^{3}-4x^{2}+x+6$.",
-      "en": "Factor $x^{3}-4x^{2}+x+6$."
+      "en": "Factor $x^{3}-4x^{2}+x+6$.",
+      "uz": "$x^{3}-4x^{2}+x+6$ ni koʻpaytuvchilarga ajrating."
      },
      "steps": {
       "ru": [
@@ -665,6 +818,12 @@ window.LESSONS[5] = {
        "$f(1)=1-4+1+6=4\\ne0$. $f(-1)=-1-4-1+6=0$ — a root!",
        "By the factor theorem $f(x)=(x+1)\\,q(x)$. Long division gives $x^{3}-4x^{2}+x+6=(x+1)(x^{2}-5x+6)$.",
        "Factor the quadratic by Vieta: the roots sum to $5$ and multiply to $6$, so they are $2$ and $3$."
+      ],
+      "uz": [
+       "Ozod had $6$, demak butun ildizlarni $\\pm1,\\pm2,\\pm3,\\pm6$ orasidan qidiramiz.",
+       "$f(1)=1-4+1+6=4\\ne0$. $f(-1)=-1-4-1+6=0$ — ildiz!",
+       "Bezu teoremasiga koʻra $f(x)=(x+1)\\,q(x)$. Ustun boʻlish $x^{3}-4x^{2}+x+6=(x+1)(x^{2}-5x+6)$ ni beradi.",
+       "Kvadrat uchhadni Viyet boʻyicha ajratamiz: ildizlarning yigʻindisi $5$, koʻpaytmasi $6$, demak ular $2$ va $3$."
       ]
      },
      "ans": {
@@ -676,7 +835,8 @@ window.LESSONS[5] = {
      "t": "warn",
      "text": {
       "ru": "Теорема о рациональных корнях ищет только **рациональные** корни. Многочлен $x^{2}-2$ не имеет ни одного рационального корня, но это не значит, что он «не раскладывается» — просто не раскладывается на множители с рациональными коэффициентами. В олимпиадных задачах, где ответ обязан быть целым, это как раз то, что нужно.",
-      "en": "The rational root theorem finds only **rational** roots. The polynomial $x^{2}-2$ has no rational root at all, which does not mean it \"does not factor\" — only that it does not factor over the rationals. In olympiad problems where the answer must be an integer, that is exactly what you want."
+      "en": "The rational root theorem finds only **rational** roots. The polynomial $x^{2}-2$ has no rational root at all, which does not mean it \"does not factor\" — only that it does not factor over the rationals. In olympiad problems where the answer must be an integer, that is exactly what you want.",
+      "uz": "Ratsional ildiz haqidagi teorema faqat **ratsional** ildizlarni topadi. $x^{2}-2$ koʻphadining ratsional ildizi umuman yoʻq, bu esa u «ajralmaydi» degani emas — faqat ratsional sonlar ustida ajralmaydi. Javob butun son boʻlishi kerak boʻlgan olimpiada masalalarida aynan shu kerak."
      }
     }
    ]
@@ -692,25 +852,29 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "Формулы $(a+b)^{2}$ и $(a+b)^{3}$ — начало бесконечного списка. Общая формула не только избавляет от заучивания, но и объясняет, почему коэффициенты образуют треугольник Паскаля.",
-      "en": "The formulas for $(a+b)^{2}$ and $(a+b)^{3}$ start an infinite list. The general formula saves memorisation and explains why the coefficients form Pascal’s triangle."
+      "en": "The formulas for $(a+b)^{2}$ and $(a+b)^{3}$ start an infinite list. The general formula saves memorisation and explains why the coefficients form Pascal’s triangle.",
+      "uz": "$(a+b)^{2}$ va $(a+b)^{3}$ formulalari cheksiz roʻyxatni boshlaydi. Umumiy formula yodlashdan qutqaradi va koeffitsiyentlar nega Paskal uchburchagini hosil qilishini tushuntiradi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Биномиальный коэффициент",
-      "en": "Binomial coefficient"
+      "en": "Binomial coefficient",
+      "uz": "Binomial koeffitsiyent"
      },
      "text": {
       "ru": "$$\\binom nk=\\frac{n!}{k!\\,(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!}$$ — число способов выбрать $k$ предметов из $n$ без учёта порядка. По соглашению $\\binom n0=\\binom nn=1$.",
-      "en": "$$\\binom nk=\\frac{n!}{k!\\,(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!}$$ — the number of ways to choose $k$ objects from $n$ without regard to order. By convention $\\binom n0=\\binom nn=1$."
+      "en": "$$\\binom nk=\\frac{n!}{k!\\,(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!}$$ — the number of ways to choose $k$ objects from $n$ without regard to order. By convention $\\binom n0=\\binom nn=1$.",
+      "uz": "$$\\binom nk=\\frac{n!}{k!\\,(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!}$$ — $n$ ta obyektdan tartibga eʼtibor bermay $k$ tasini tanlash usullari soni. Kelishuvga koʻra $\\binom n0=\\binom nn=1$."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Правило Паскаля",
-      "en": "Pascal’s rule"
+      "en": "Pascal’s rule",
+      "uz": "Paskal qoidasi"
      },
      "text": {
       "ru": "$$\\binom nk=\\binom{n-1}{k-1}+\\binom{n-1}{k}\\qquad(1\\le k\\le n-1).$$",
@@ -721,14 +885,16 @@ window.LESSONS[5] = {
      "t": "proof",
      "text": {
       "ru": "**Комбинаторно.** Выделим один предмет — скажем, первый. Всякий выбор $k$ предметов из $n$ либо содержит его, либо нет.\n\nЕсли содержит, остаётся выбрать $k-1$ предмет из остальных $n-1$: это $\\binom{n-1}{k-1}$ способов.\n\nЕсли не содержит, надо выбрать все $k$ предметов из остальных $n-1$: это $\\binom{n-1}{k}$ способов.\n\nСлучаи не пересекаются и покрывают всё, значит их количества складываются. $\\blacksquare$\n\n**Именно это правило** порождает треугольник Паскаля: каждое число равно сумме двух стоящих над ним.",
-      "en": "**Combinatorially.** Single out one object — say the first. Every choice of $k$ objects from $n$ either contains it or not.\n\nIf it does, we still choose $k-1$ from the other $n-1$: that is $\\binom{n-1}{k-1}$ ways.\n\nIf it does not, we choose all $k$ from the other $n-1$: that is $\\binom{n-1}{k}$ ways.\n\nThe cases are disjoint and exhaustive, so the counts add. $\\blacksquare$\n\n**This rule** is what generates Pascal’s triangle: each entry is the sum of the two above it."
+      "en": "**Combinatorially.** Single out one object — say the first. Every choice of $k$ objects from $n$ either contains it or not.\n\nIf it does, we still choose $k-1$ from the other $n-1$: that is $\\binom{n-1}{k-1}$ ways.\n\nIf it does not, we choose all $k$ from the other $n-1$: that is $\\binom{n-1}{k}$ ways.\n\nThe cases are disjoint and exhaustive, so the counts add. $\\blacksquare$\n\n**This rule** is what generates Pascal’s triangle: each entry is the sum of the two above it.",
+      "uz": "**Kombinator isbot.** Bitta obyektni — masalan birinchisini — ajratamiz. $n$ tadan $k$ ta obyektni har qanday tanlash yo uni oʻz ichiga oladi, yo olmaydi.\n\nAgar olsa, qolgan $n-1$ tadan yana $k-1$ tasini tanlaymiz: bu $\\binom{n-1}{k-1}$ usul.\n\nAgar olmasa, qolgan $n-1$ tadan barcha $k$ tasini tanlaymiz: bu $\\binom{n-1}{k}$ usul.\n\nHollar kesishmaydi va hammasini qamraydi, demak sonlar qoʻshiladi. $\\blacksquare$\n\n**Aynan shu qoida** Paskal uchburchagini hosil qiladi: har bir katak ustidagi ikkita katakning yigʻindisi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формула бинома Ньютона",
-      "en": "The binomial theorem"
+      "en": "The binomial theorem",
+      "uz": "Nyuton binomi"
      },
      "text": {
       "ru": "$$(a+b)^{n}=\\sum_{k=0}^{n}\\binom nk a^{\\,n-k}b^{k}=a^{n}+\\binom n1a^{\\,n-1}b+\\binom n2a^{\\,n-2}b^{2}+\\dots+b^{n} .$$",
@@ -739,32 +905,37 @@ window.LESSONS[5] = {
      "t": "proof",
      "text": {
       "ru": "**Комбинаторное доказательство.** Запишем $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{скобок}} .$$\n\nРаскрывая скобки, мы из каждой берём либо $a$, либо $b$, и перемножаем взятое. Каждый выбор даёт одночлен $a^{\\,n-k}b^{k}$, где $k$ — число скобок, из которых взяли $b$.\n\n**Сколько раз возникает $a^{\\,n-k}b^{k}$?** Ровно столько, сколькими способами можно выбрать $k$ скобок из $n$, то есть $\\binom nk$ раз. Собирая подобные, получаем формулу. $\\blacksquare$\n\n**Через индукцию** доказательство тоже короткое: умножая $(a+b)^{n}$ на $(a+b)$ и собирая коэффициент при $a^{\\,n+1-k}b^{k}$, получаем $\\binom nk+\\binom n{k-1}=\\binom{n+1}{k}$ — то есть в точности правило Паскаля.",
-      "en": "**Combinatorial proof.** Write $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{brackets}} .$$\n\nExpanding, from each bracket we take either $a$ or $b$ and multiply. Each choice gives a monomial $a^{\\,n-k}b^{k}$, where $k$ is the number of brackets contributing $b$.\n\n**How often does $a^{\\,n-k}b^{k}$ arise?** Exactly as often as one can choose $k$ brackets out of $n$, i.e. $\\binom nk$ times. Collecting like terms gives the formula. $\\blacksquare$\n\n**By induction** it is short too: multiplying $(a+b)^{n}$ by $(a+b)$ and collecting the coefficient of $a^{\\,n+1-k}b^{k}$ gives $\\binom nk+\\binom n{k-1}=\\binom{n+1}{k}$ — precisely Pascal’s rule."
+      "en": "**Combinatorial proof.** Write $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{brackets}} .$$\n\nExpanding, from each bracket we take either $a$ or $b$ and multiply. Each choice gives a monomial $a^{\\,n-k}b^{k}$, where $k$ is the number of brackets contributing $b$.\n\n**How often does $a^{\\,n-k}b^{k}$ arise?** Exactly as often as one can choose $k$ brackets out of $n$, i.e. $\\binom nk$ times. Collecting like terms gives the formula. $\\blacksquare$\n\n**By induction** it is short too: multiplying $(a+b)^{n}$ by $(a+b)$ and collecting the coefficient of $a^{\\,n+1-k}b^{k}$ gives $\\binom nk+\\binom n{k-1}=\\binom{n+1}{k}$ — precisely Pascal’s rule.",
+      "uz": "**Kombinator isbot.** $$(a+b)^{n}=\\underbrace{(a+b)(a+b)\\cdots(a+b)}_{n\\ \\text{qavs}}$$ deb yozamiz.\n\nOchganda har bir qavsdan yo $a$ ni, yo $b$ ni olib koʻpaytiramiz. Har bir tanlov $a^{\\,n-k}b^{k}$ bir hadni beradi, bunda $k$ — $b$ bergan qavslar soni.\n\n**$a^{\\,n-k}b^{k}$ necha marta paydo boʻladi?** $n$ ta qavsdan $k$ tasini tanlash mumkin boʻlgan marta, yaʼni $\\binom nk$ marta. Oʻxshash hadlarni birlashtirsak formula chiqadi. $\\blacksquare$\n\n**Induksiya bilan** ham qisqa: $(a+b)^{n}$ ni $(a+b)$ ga koʻpaytirib $a^{\\,n+1-k}b^{k}$ oldidagi koeffitsiyentni yigʻsak, $\\binom nk+\\binom n{k-1}=\\binom{n+1}{k}$ chiqadi — aynan Paskal qoidasi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Три следствия из бинома",
-      "en": "Three consequences"
+      "en": "Three consequences",
+      "uz": "Uchta natija"
      },
      "text": {
       "ru": "(1) $\\displaystyle\\sum_{k=0}^{n}\\binom nk=2^{n}$; $\\;$ (2) $\\displaystyle\\sum_{k=0}^{n}(-1)^{k}\\binom nk=0$ при $n\\ge1$; $\\;$ (3) $\\displaystyle\\sum_{k\\ \\text{чётн}}\\binom nk=\\sum_{k\\ \\text{нечётн}}\\binom nk=2^{\\,n-1}$ при $n\\ge1$.",
-      "en": "(1) $\\displaystyle\\sum_{k=0}^{n}\\binom nk=2^{n}$; $\\;$ (2) $\\displaystyle\\sum_{k=0}^{n}(-1)^{k}\\binom nk=0$ for $n\\ge1$; $\\;$ (3) $\\displaystyle\\sum_{k\\ \\text{even}}\\binom nk=\\sum_{k\\ \\text{odd}}\\binom nk=2^{\\,n-1}$ for $n\\ge1$."
+      "en": "(1) $\\displaystyle\\sum_{k=0}^{n}\\binom nk=2^{n}$; $\\;$ (2) $\\displaystyle\\sum_{k=0}^{n}(-1)^{k}\\binom nk=0$ for $n\\ge1$; $\\;$ (3) $\\displaystyle\\sum_{k\\ \\text{even}}\\binom nk=\\sum_{k\\ \\text{odd}}\\binom nk=2^{\\,n-1}$ for $n\\ge1$.",
+      "uz": "(1) $\\displaystyle\\sum_{k=0}^{n}\\binom nk=2^{n}$; $\\;$ (2) $n\\ge1$ uchun $\\displaystyle\\sum_{k=0}^{n}(-1)^{k}\\binom nk=0$; $\\;$ (3) $n\\ge1$ uchun $\\displaystyle\\sum_{k\\ \\text{juft}}\\binom nk=\\sum_{k\\ \\text{toq}}\\binom nk=2^{\\,n-1}$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**(1)** Подставим $a=b=1$: слева $(1+1)^{n}=2^{n}$, справа сумма коэффициентов ✓ (Комбинаторно: подмножеств у $n$-элементного множества ровно $2^{n}$.)\n\n**(2)** Подставим $a=1$, $b=-1$: слева $(1-1)^{n}=0$ при $n\\ge1$ ✓\n\n**(3)** Сложив равенства (1) и (2), получаем удвоенную сумму по чётным $k$, то есть $2^{n}$; значит она равна $2^{\\,n-1}$. Вычитая — то же для нечётных. $\\blacksquare$",
-      "en": "**(1)** Put $a=b=1$: the left side is $2^{n}$, the right the sum of the coefficients ✓ (Combinatorially: an $n$-element set has $2^{n}$ subsets.)\n\n**(2)** Put $a=1$, $b=-1$: the left side is $(1-1)^{n}=0$ for $n\\ge1$ ✓\n\n**(3)** Adding (1) and (2) gives twice the sum over even $k$, namely $2^{n}$; so that sum is $2^{\\,n-1}$. Subtracting gives the same for odd $k$. $\\blacksquare$"
+      "en": "**(1)** Put $a=b=1$: the left side is $2^{n}$, the right the sum of the coefficients ✓ (Combinatorially: an $n$-element set has $2^{n}$ subsets.)\n\n**(2)** Put $a=1$, $b=-1$: the left side is $(1-1)^{n}=0$ for $n\\ge1$ ✓\n\n**(3)** Adding (1) and (2) gives twice the sum over even $k$, namely $2^{n}$; so that sum is $2^{\\,n-1}$. Subtracting gives the same for odd $k$. $\\blacksquare$",
+      "uz": "**(1)** $a=b=1$ qoʻyamiz: chap tomon $2^{n}$, oʻng tomon esa koeffitsiyentlar yigʻindisi ✓ (Kombinator maʼnoda: $n$ elementli toʻplamning $2^{n}$ ta qism toʻplami bor.)\n\n**(2)** $a=1$, $b=-1$ qoʻyamiz: chap tomon $n\\ge1$ da $(1-1)^{n}=0$ ✓\n\n**(3)** (1) va (2) ni qoʻshsak juft $k$ boʻyicha yigʻindining ikki barobari, yaʼni $2^{n}$ chiqadi; demak u yigʻindi $2^{\\,n-1}$. Ayirsak toq $k$ uchun shu natija chiqadi. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите коэффициент при $x^{5}$ в разложении $\\left(2x-3\\right)^{8}$.",
-      "en": "Find the coefficient of $x^{5}$ in the expansion of $\\left(2x-3\\right)^{8}$."
+      "en": "Find the coefficient of $x^{5}$ in the expansion of $\\left(2x-3\\right)^{8}$.",
+      "uz": "$\\left(2x-3\\right)^{8}$ yoyilmasida $x^{5}$ oldidagi koeffitsiyentni toping."
      },
      "steps": {
       "ru": [
@@ -780,6 +951,13 @@ window.LESSONS[5] = {
        "The coefficient is $\\binom83\\cdot2^{5}\\cdot(-3)^{3}$.",
        "$\\binom83=56$, $2^{5}=32$, $(-3)^{3}=-27$.",
        "Altogether $56\\cdot32\\cdot(-27)=-48\\,384$."
+      ],
+      "uz": [
+       "Umumiy had $\\binom8k(2x)^{\\,8-k}(-3)^{k}$.",
+       "$x$ ning darajasi $8-k$, demak bizga $8-k=5$, yaʼni $k=3$ kerak.",
+       "Koeffitsiyent $\\binom83\\cdot2^{5}\\cdot(-3)^{3}$.",
+       "$\\binom83=56$, $2^{5}=32$, $(-3)^{3}=-27$.",
+       "Jami $56\\cdot32\\cdot(-27)=-48\\,384$."
       ]
      },
      "ans": {
@@ -791,7 +969,8 @@ window.LESSONS[5] = {
      "t": "ex",
      "q": {
       "ru": "Докажите, что при простом $p$ и $0<k<p$ коэффициент $\\binom pk$ делится на $p$, и выведите отсюда малую теорему Ферма.",
-      "en": "Prove that $\\binom pk$ is divisible by a prime $p$ for $0<k<p$, and deduce Fermat’s little theorem."
+      "en": "Prove that $\\binom pk$ is divisible by a prime $p$ for $0<k<p$, and deduce Fermat’s little theorem.",
+      "uz": "$0<k<p$ uchun $\\binom pk$ tub $p$ ga boʻlinishini isbotlang va bundan Ferma kichik teoremasini keltirib chiqaring."
      },
      "steps": {
       "ru": [
@@ -807,11 +986,19 @@ window.LESSONS[5] = {
        "Hence $p$ must divide $\\binom pk$ ✓",
        "**Consequence.** Expand $(a+1)^{p}$: every middle term is a multiple of $p$, so $(a+1)^{p}\\equiv a^{p}+1\\pmod p$.",
        "Induction on $a$ (the base $a=0$ is clear) gives $a^{p}\\equiv a\\pmod p$ for all integers $a\\ge0$."
+      ],
+      "uz": [
+       "Taʼrifdan $k!\\,(p-k)!\\cdot\\binom pk=p!$, oʻng tomon esa $p$ ga boʻlinadi.",
+       "$k!$ va $(p-k)!$ dagi barcha koʻpaytuvchilar $p$ dan qatʼiy kichik, demak $p$ ularning koʻpaytmasini boʻlmaydi (Yevklid lemmasi).",
+       "Shuning uchun $p$ soni $\\binom pk$ ni boʻlishi kerak ✓",
+       "**Natija.** $(a+1)^{p}$ ni ochamiz: har bir oʻrta had $p$ ga karrali, demak $(a+1)^{p}\\equiv a^{p}+1\\pmod p$.",
+       "$a$ boʻyicha induksiya ($a=0$ bazasi ravshan) barcha butun $a\\ge0$ uchun $a^{p}\\equiv a\\pmod p$ ni beradi."
       ]
      },
      "ans": {
       "ru": "$p\\mid\\binom pk$, и отсюда $a^{p}\\equiv a\\pmod p$.",
-      "en": "$p\\mid\\binom pk$, and hence $a^{p}\\equiv a\\pmod p$."
+      "en": "$p\\mid\\binom pk$, and hence $a^{p}\\equiv a\\pmod p$.",
+      "uz": "$p\\mid\\binom pk$, demak $a^{p}\\equiv a\\pmod p$."
      }
     }
    ]
@@ -827,61 +1014,71 @@ window.LESSONS[5] = {
      "t": "p",
      "text": {
       "ru": "Выражение вида $a^{5}+b^{5}+c^{5}$ выглядит устрашающе — пока не заметить, что оно **симметрично**. Любое симметрическое выражение выражается через три базовых, и есть рекуррентная формула, которая это делает автоматически.",
-      "en": "An expression like $a^{5}+b^{5}+c^{5}$ looks forbidding — until one notices it is **symmetric**. Every symmetric expression can be written through three basic ones, and a recursion does the work automatically."
+      "en": "An expression like $a^{5}+b^{5}+c^{5}$ looks forbidding — until one notices it is **symmetric**. Every symmetric expression can be written through three basic ones, and a recursion does the work automatically.",
+      "uz": "$a^{5}+b^{5}+c^{5}$ kabi ifoda qoʻrqinchli koʻrinadi — u **simmetrik** ekanini sezmaguningizcha. Har bir simmetrik ifodani uchta asosiy ifoda orqali yozish mumkin, rekurrensiya esa ishni avtomatik bajaradi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Элементарные симметрические многочлены",
-      "en": "Elementary symmetric polynomials"
+      "en": "Elementary symmetric polynomials",
+      "uz": "Elementar simmetrik koʻphadlar"
      },
      "text": {
       "ru": "Для трёх переменных $$e_1=a+b+c,\\qquad e_2=ab+bc+ca,\\qquad e_3=abc .$$ Степенными суммами называют $$p_k=a^{k}+b^{k}+c^{k} .$$",
-      "en": "For three variables $$e_1=a+b+c,\\qquad e_2=ab+bc+ca,\\qquad e_3=abc ,$$ and the power sums are $$p_k=a^{k}+b^{k}+c^{k} .$$"
+      "en": "For three variables $$e_1=a+b+c,\\qquad e_2=ab+bc+ca,\\qquad e_3=abc ,$$ and the power sums are $$p_k=a^{k}+b^{k}+c^{k} .$$",
+      "uz": "Uchta oʻzgaruvchi uchun $$e_1=a+b+c,\\qquad e_2=ab+bc+ca,\\qquad e_3=abc ,$$ daraja yigʻindilari esa $$p_k=a^{k}+b^{k}+c^{k} .$$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема Виета для кубического уравнения",
-      "en": "Vieta for a cubic"
+      "en": "Vieta for a cubic",
+      "uz": "Kub tenglama uchun Viyet"
      },
      "text": {
       "ru": "Если $a,b,c$ — корни многочлена $t^{3}+pt^{2}+qt+r$, то $$e_1=-p,\\qquad e_2=q,\\qquad e_3=-r .$$ Обратно, по любым трём числам $e_1,e_2,e_3$ многочлен восстанавливается: $$t^{3}-e_1t^{2}+e_2t-e_3 .$$",
-      "en": "If $a,b,c$ are the roots of $t^{3}+pt^{2}+qt+r$ then $$e_1=-p,\\qquad e_2=q,\\qquad e_3=-r .$$ Conversely, from any $e_1,e_2,e_3$ the polynomial is recovered as $$t^{3}-e_1t^{2}+e_2t-e_3 .$$"
+      "en": "If $a,b,c$ are the roots of $t^{3}+pt^{2}+qt+r$ then $$e_1=-p,\\qquad e_2=q,\\qquad e_3=-r .$$ Conversely, from any $e_1,e_2,e_3$ the polynomial is recovered as $$t^{3}-e_1t^{2}+e_2t-e_3 .$$",
+      "uz": "Agar $a,b,c$ — $t^{3}+pt^{2}+qt+r$ ning ildizlari boʻlsa, u holda $$e_1=-p,\\qquad e_2=q,\\qquad e_3=-r .$$ Aksincha, istalgan $e_1,e_2,e_3$ dan koʻphad $$t^{3}-e_1t^{2}+e_2t-e_3$$ koʻrinishida tiklanadi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Многочлен с корнями $a,b,c$ и старшим коэффициентом $1$ раскладывается как $$(t-a)(t-b)(t-c).$$\n\nРаскроем скобки шаг за шагом: $$(t-a)(t-b)=t^{2}-(a+b)t+ab ,$$ и умножая на $(t-c)$: $$t^{3}-(a+b)t^{2}+abt-ct^{2}+(a+b)ct-abc .$$\n\nСобирая по степеням, $$t^{3}-(a+b+c)t^{2}+(ab+bc+ca)t-abc=t^{3}-e_1t^{2}+e_2t-e_3 .$$\n\nСравнение с $t^{3}+pt^{2}+qt+r$ даёт объявленные равенства. $\\blacksquare$",
-      "en": "A monic polynomial with roots $a,b,c$ factors as $$(t-a)(t-b)(t-c).$$\n\nExpand step by step: $$(t-a)(t-b)=t^{2}-(a+b)t+ab ,$$ and multiplying by $(t-c)$ and collecting powers, $$t^{3}-(a+b+c)t^{2}+(ab+bc+ca)t-abc=t^{3}-e_1t^{2}+e_2t-e_3 .$$\n\nComparing with $t^{3}+pt^{2}+qt+r$ gives the stated identities. $\\blacksquare$"
+      "en": "A monic polynomial with roots $a,b,c$ factors as $$(t-a)(t-b)(t-c).$$\n\nExpand step by step: $$(t-a)(t-b)=t^{2}-(a+b)t+ab ,$$ and multiplying by $(t-c)$ and collecting powers, $$t^{3}-(a+b+c)t^{2}+(ab+bc+ca)t-abc=t^{3}-e_1t^{2}+e_2t-e_3 .$$\n\nComparing with $t^{3}+pt^{2}+qt+r$ gives the stated identities. $\\blacksquare$",
+      "uz": "Ildizlari $a,b,c$ boʻlgan keltirilgan koʻphad $$(t-a)(t-b)(t-c)$$ koʻrinishida ajraladi.\n\nQadamma-qadam ochamiz: $$(t-a)(t-b)=t^{2}-(a+b)t+ab ,$$ buni $(t-c)$ ga koʻpaytirib darajalar boʻyicha yigʻsak, $$t^{3}-(a+b+c)t^{2}+(ab+bc+ca)t-abc=t^{3}-e_1t^{2}+e_2t-e_3 .$$\n\n$t^{3}+pt^{2}+qt+r$ bilan solishtirish keltirilgan ayniyatlarni beradi. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формулы Ньютона",
-      "en": "Newton’s identities"
+      "en": "Newton’s identities",
+      "uz": "Nyuton ayniyatlari"
      },
      "text": {
       "ru": "Для трёх переменных степенные суммы удовлетворяют рекуррентности $$p_k=e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}\\qquad(k\\ge3),$$ с начальными значениями $$p_0=3,\\qquad p_1=e_1,\\qquad p_2=e_1^{2}-2e_2 .$$",
-      "en": "For three variables the power sums satisfy the recursion $$p_k=e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}\\qquad(k\\ge3),$$ with initial values $$p_0=3,\\qquad p_1=e_1,\\qquad p_2=e_1^{2}-2e_2 .$$"
+      "en": "For three variables the power sums satisfy the recursion $$p_k=e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}\\qquad(k\\ge3),$$ with initial values $$p_0=3,\\qquad p_1=e_1,\\qquad p_2=e_1^{2}-2e_2 .$$",
+      "uz": "Uchta oʻzgaruvchi uchun daraja yigʻindilari $$p_k=e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}\\qquad(k\\ge3)$$ rekurrensiyasini qanoatlantiradi, boshlangʻich qiymatlar esa $$p_0=3,\\qquad p_1=e_1,\\qquad p_2=e_1^{2}-2e_2 .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Рекуррентность.** Числа $a,b,c$ — корни многочлена $t^{3}-e_1t^{2}+e_2t-e_3$, значит каждое из них удовлетворяет $$t^{3}=e_1t^{2}-e_2t+e_3 .$$\n\nУмножим это равенство на $t^{\\,k-3}$: $$t^{k}=e_1t^{\\,k-1}-e_2t^{\\,k-2}+e_3t^{\\,k-3} .$$\n\nПодставим по очереди $t=a$, $t=b$, $t=c$ и сложим три полученных равенства. Слева получится $p_k$, справа — $e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}$ ✓\n\n**Начальные значения.** $p_0=1+1+1=3$ и $p_1=e_1$ очевидны. Для $p_2$ возведём $e_1$ в квадрат: $$e_1^{2}=(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2(ab+bc+ca)=p_2+2e_2 ,$$ откуда $p_2=e_1^{2}-2e_2$. $\\blacksquare$",
-      "en": "**The recursion.** The numbers $a,b,c$ are roots of $t^{3}-e_1t^{2}+e_2t-e_3$, so each satisfies $$t^{3}=e_1t^{2}-e_2t+e_3 .$$\n\nMultiply by $t^{\\,k-3}$: $$t^{k}=e_1t^{\\,k-1}-e_2t^{\\,k-2}+e_3t^{\\,k-3} .$$\n\nSubstitute $t=a$, $t=b$, $t=c$ in turn and add the three. The left side gives $p_k$, the right $e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}$ ✓\n\n**Initial values.** $p_0=3$ and $p_1=e_1$ are clear. For $p_2$ square $e_1$: $$e_1^{2}=p_2+2e_2 ,$$ hence $p_2=e_1^{2}-2e_2$. $\\blacksquare$"
+      "en": "**The recursion.** The numbers $a,b,c$ are roots of $t^{3}-e_1t^{2}+e_2t-e_3$, so each satisfies $$t^{3}=e_1t^{2}-e_2t+e_3 .$$\n\nMultiply by $t^{\\,k-3}$: $$t^{k}=e_1t^{\\,k-1}-e_2t^{\\,k-2}+e_3t^{\\,k-3} .$$\n\nSubstitute $t=a$, $t=b$, $t=c$ in turn and add the three. The left side gives $p_k$, the right $e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}$ ✓\n\n**Initial values.** $p_0=3$ and $p_1=e_1$ are clear. For $p_2$ square $e_1$: $$e_1^{2}=p_2+2e_2 ,$$ hence $p_2=e_1^{2}-2e_2$. $\\blacksquare$",
+      "uz": "**Rekurrensiya.** $a,b,c$ sonlari $t^{3}-e_1t^{2}+e_2t-e_3$ ning ildizlari, demak ularning har biri $$t^{3}=e_1t^{2}-e_2t+e_3$$ ni qanoatlantiradi.\n\n$t^{\\,k-3}$ ga koʻpaytiramiz: $$t^{k}=e_1t^{\\,k-1}-e_2t^{\\,k-2}+e_3t^{\\,k-3} .$$\n\nNavbat bilan $t=a$, $t=b$, $t=c$ qoʻyamiz va uchalasini qoʻshamiz. Chap tomon $p_k$ ni, oʻng tomon $e_1p_{k-1}-e_2p_{k-2}+e_3p_{k-3}$ ni beradi ✓\n\n**Boshlangʻich qiymatlar.** $p_0=3$ va $p_1=e_1$ ravshan. $p_2$ uchun $e_1$ ni kvadratga koʻtaramiz: $$e_1^{2}=p_2+2e_2 ,$$ demak $p_2=e_1^{2}-2e_2$. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Числа $a,b,c$ удовлетворяют $a+b+c=2$, $ab+bc+ca=-1$, $abc=-2$. Найдите $a^{4}+b^{4}+c^{4}$.",
-      "en": "Numbers $a,b,c$ satisfy $a+b+c=2$, $ab+bc+ca=-1$, $abc=-2$. Find $a^{4}+b^{4}+c^{4}$."
+      "en": "Numbers $a,b,c$ satisfy $a+b+c=2$, $ab+bc+ca=-1$, $abc=-2$. Find $a^{4}+b^{4}+c^{4}$.",
+      "uz": "$a,b,c$ sonlari $a+b+c=2$, $ab+bc+ca=-1$, $abc=-2$ ni qanoatlantiradi. $a^{4}+b^{4}+c^{4}$ ni toping."
      },
      "steps": {
       "ru": [
@@ -899,6 +1096,14 @@ window.LESSONS[5] = {
        "$p_4=e_1p_3-e_2p_2+e_3p_1=16+6-4=18$.",
        "**Check.** The polynomial $t^{3}-2t^{2}-t+2=(t-1)(t+1)(t-2)$, so the roots are $1,-1,2$.",
        "And indeed $1+1+16=18$ ✓"
+      ],
+      "uz": [
+       "Bu yerda $e_1=2$, $e_2=-1$, $e_3=-2$.",
+       "$p_0=3$, $p_1=2$, $p_2=e_1^{2}-2e_2=6$.",
+       "$p_3=e_1p_2-e_2p_1+e_3p_0=12+2-6=8$.",
+       "$p_4=e_1p_3-e_2p_2+e_3p_1=16+6-4=18$.",
+       "**Tekshirish.** $t^{3}-2t^{2}-t+2=(t-1)(t+1)(t-2)$ koʻphadining ildizlari $1,-1,2$.",
+       "Va haqiqatan $1+1+16=18$ ✓"
       ]
      },
      "ans": {
@@ -910,14 +1115,16 @@ window.LESSONS[5] = {
      "t": "idea",
      "text": {
       "ru": "**Когда $a+b+c=0$**, рекуррентность резко упрощается: $e_1=0$, значит $$p_k=-e_2p_{k-2}+e_3p_{k-3} .$$ Отсюда мгновенно получаются знаменитые тождества $$p_3=3e_3=3abc,\\qquad \\frac{p_5}{5}=\\frac{p_2}{2}\\cdot\\frac{p_3}{3},\\qquad \\frac{p_7}{7}=\\frac{p_2}{2}\\cdot\\frac{p_5}{5} .$$ Если в задаче дано условие $a+b+c=0$ — почти наверняка нужны формулы Ньютона.",
-      "en": "**When $a+b+c=0$** the recursion collapses: $e_1=0$, so $$p_k=-e_2p_{k-2}+e_3p_{k-3} .$$ The famous identities follow at once: $$p_3=3abc,\\qquad \\frac{p_5}{5}=\\frac{p_2}{2}\\cdot\\frac{p_3}{3},\\qquad \\frac{p_7}{7}=\\frac{p_2}{2}\\cdot\\frac{p_5}{5} .$$ If a problem hands you $a+b+c=0$, Newton’s identities are almost certainly the tool."
+      "en": "**When $a+b+c=0$** the recursion collapses: $e_1=0$, so $$p_k=-e_2p_{k-2}+e_3p_{k-3} .$$ The famous identities follow at once: $$p_3=3abc,\\qquad \\frac{p_5}{5}=\\frac{p_2}{2}\\cdot\\frac{p_3}{3},\\qquad \\frac{p_7}{7}=\\frac{p_2}{2}\\cdot\\frac{p_5}{5} .$$ If a problem hands you $a+b+c=0$, Newton’s identities are almost certainly the tool.",
+      "uz": "**$a+b+c=0$ boʻlganda** rekurrensiya soddalashadi: $e_1=0$, demak $$p_k=-e_2p_{k-2}+e_3p_{k-3} .$$ Mashhur ayniyatlar darhol kelib chiqadi: $$p_3=3abc,\\qquad \\frac{p_5}{5}=\\frac{p_2}{2}\\cdot\\frac{p_3}{3},\\qquad \\frac{p_7}{7}=\\frac{p_2}{2}\\cdot\\frac{p_5}{5} .$$ Agar masala sizga $a+b+c=0$ ni bersa, Nyuton ayniyatlari deyarli aniq kerakli qurol."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Основная теорема о симметрических многочленах** утверждает: любой симметрический многочлен от $a,b,c$ с целыми коэффициентами единственным образом записывается как многочлен от $e_1,e_2,e_3$ — тоже с целыми коэффициентами. Именно поэтому «страшные» симметрические выражения всегда поддаются: они лишь замаскированные комбинации трёх базовых величин.",
-      "en": "**The fundamental theorem on symmetric polynomials** says: every symmetric polynomial in $a,b,c$ with integer coefficients is uniquely a polynomial in $e_1,e_2,e_3$ — again with integer coefficients. That is why frightening symmetric expressions always yield: they are disguised combinations of the three basic quantities."
+      "en": "**The fundamental theorem on symmetric polynomials** says: every symmetric polynomial in $a,b,c$ with integer coefficients is uniquely a polynomial in $e_1,e_2,e_3$ — again with integer coefficients. That is why frightening symmetric expressions always yield: they are disguised combinations of the three basic quantities.",
+      "uz": "**Simmetrik koʻphadlar haqidagi asosiy teorema** aytadi: $a,b,c$ ga nisbatan butun koeffitsiyentli har bir simmetrik koʻphad $e_1,e_2,e_3$ ning koʻphadi sifatida yagona tarzda — yana butun koeffitsiyentlar bilan — yoziladi. Shuning uchun qoʻrqinchli simmetrik ifodalar har doim taslim boʻladi: ular uchta asosiy kattalikning niqoblangan kombinatsiyasi."
      }
     }
    ]
@@ -933,40 +1140,47 @@ window.LESSONS[5] = {
      "t": "idea",
      "name": {
       "ru": "Приём 1: условие $a+b+c=0$",
-      "en": "Move 1: the condition $a+b+c=0$"
+      "en": "Move 1: the condition $a+b+c=0$",
+      "uz": "1-usul: $a+b+c=0$ sharti"
      },
      "text": {
       "ru": "Если в задаче дано $a+b+c=0$, немедленно вспоминайте тождество $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca).$$ Правая часть обнуляется, и остаётся $a^{3}+b^{3}+c^{3}=3abc$ — сильное и очень полезное равенство.",
-      "en": "If a problem hands you $a+b+c=0$, recall at once the identity $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca).$$ The right side vanishes and $a^{3}+b^{3}+c^{3}=3abc$ remains — a strong and very useful equality."
+      "en": "If a problem hands you $a+b+c=0$, recall at once the identity $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca).$$ The right side vanishes and $a^{3}+b^{3}+c^{3}=3abc$ remains — a strong and very useful equality.",
+      "uz": "Agar masala sizga $a+b+c=0$ ni bersa, darhol $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)$$ ayniyatini eslang. Oʻng tomon nolga aylanadi va $a^{3}+b^{3}+c^{3}=3abc$ qoladi — kuchli va juda foydali tenglik."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Приём 2: сумма квадратов равна нулю",
-      "en": "Move 2: a sum of squares equals zero"
+      "en": "Move 2: a sum of squares equals zero",
+      "uz": "2-usul: kvadratlar yigʻindisi nolga teng"
      },
      "text": {
       "ru": "Тождество $$2\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=(a-b)^{2}+(b-c)^{2}+(c-a)^{2}$$ переводит алгебраическое условие в геометрическое. Сумма квадратов равна нулю только если каждое слагаемое ноль, поэтому из $a^{2}+b^{2}+c^{2}=ab+bc+ca$ немедленно следует $a=b=c$.",
-      "en": "The identity $$2\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=(a-b)^{2}+(b-c)^{2}+(c-a)^{2}$$ turns an algebraic condition into a rigid one. A sum of squares is zero only when every term is zero, so $a^{2}+b^{2}+c^{2}=ab+bc+ca$ forces $a=b=c$ immediately."
+      "en": "The identity $$2\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=(a-b)^{2}+(b-c)^{2}+(c-a)^{2}$$ turns an algebraic condition into a rigid one. A sum of squares is zero only when every term is zero, so $a^{2}+b^{2}+c^{2}=ab+bc+ca$ forces $a=b=c$ immediately.",
+      "uz": "$$2\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=(a-b)^{2}+(b-c)^{2}+(c-a)^{2}$$ ayniyati algebraik shartni qatʼiy shartga aylantiradi. Kvadratlar yigʻindisi faqat har bir had nol boʻlgandagina nolga teng, demak $a^{2}+b^{2}+c^{2}=ab+bc+ca$ darhol $a=b=c$ ni majbur qiladi."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Приём 3: перенести всё в одну часть",
-      "en": "Move 3: move everything to one side"
+      "en": "Move 3: move everything to one side",
+      "uz": "3-usul: hamma narsani bir tomonga oʻtkazing"
      },
      "text": {
       "ru": "Уравнение вида $A=B$ почти бесполезно; уравнение вида $(\\dots)(\\dots)=0$ решается устно. Поэтому первое действие в любой задаче на уравнение — перенести всё влево и попытаться разложить.",
-      "en": "An equation $A=B$ is almost useless; an equation $(\\dots)(\\dots)=0$ solves itself. So the first action in any equation problem is to move everything to one side and try to factor."
+      "en": "An equation $A=B$ is almost useless; an equation $(\\dots)(\\dots)=0$ solves itself. So the first action in any equation problem is to move everything to one side and try to factor.",
+      "uz": "$A=B$ tenglamasi deyarli foydasiz; $(\\dots)(\\dots)=0$ tenglamasi esa oʻzini oʻzi yechadi. Shuning uchun tenglamaga oid har qanday masaladagi birinchi harakat — hamma narsani bir tomonga oʻtkazib, koʻpaytuvchilarga ajratishga urinish."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Известно, что $\\dfrac1a+\\dfrac1b+\\dfrac1c=\\dfrac1{a+b+c}$ для ненулевых $a,b,c$ с $a+b+c\\ne0$. Докажите, что какие-то два из этих чисел противоположны.",
-      "en": "Suppose $\\dfrac1a+\\dfrac1b+\\dfrac1c=\\dfrac1{a+b+c}$ for non-zero $a,b,c$ with $a+b+c\\ne0$. Prove that two of them are opposite."
+      "en": "Suppose $\\dfrac1a+\\dfrac1b+\\dfrac1c=\\dfrac1{a+b+c}$ for non-zero $a,b,c$ with $a+b+c\\ne0$. Prove that two of them are opposite.",
+      "uz": "Noldan farqli $a,b,c$ va $a+b+c\\ne0$ uchun $\\dfrac1a+\\dfrac1b+\\dfrac1c=\\dfrac1{a+b+c}$ boʻlsin. Ulardan ikkitasi qarama-qarshi ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -982,11 +1196,19 @@ window.LESSONS[5] = {
        "Take out $a+b$: $$(a+b)\\left(\\frac1{ab}+\\frac1{c(a+b+c)}\\right)=0.$$",
        "Put the bracket over a common denominator: $$\\frac{c(a+b+c)+ab}{ab\\,c(a+b+c)}=\\frac{ca+cb+c^{2}+ab}{ab\\,c(a+b+c)}=\\frac{(c+a)(c+b)}{ab\\,c(a+b+c)}.$$",
        "So $(a+b)(b+c)(c+a)=0$, and one of the brackets vanishes."
+      ],
+      "uz": [
+       "Hamma narsani chapga oʻtkazamiz: $\\dfrac1a+\\dfrac1b+\\dfrac1c-\\dfrac1{a+b+c}=0$.",
+       "Dastlabki ikkita kasrni, soʻng oxirgi ikkitasini qoʻshamiz: $$\\frac{a+b}{ab}+\\frac{(a+b+c)-c}{c(a+b+c)}=\\frac{a+b}{ab}+\\frac{a+b}{c(a+b+c)}=0.$$",
+       "$a+b$ ni qavsdan chiqaramiz: $$(a+b)\\left(\\frac1{ab}+\\frac1{c(a+b+c)}\\right)=0.$$",
+       "Qavsni umumiy maxrajga keltiramiz: $$\\frac{c(a+b+c)+ab}{ab\\,c(a+b+c)}=\\frac{ca+cb+c^{2}+ab}{ab\\,c(a+b+c)}=\\frac{(c+a)(c+b)}{ab\\,c(a+b+c)}.$$",
+       "Demak $(a+b)(b+c)(c+a)=0$ va qavslardan biri nolga aylanadi."
       ]
      },
      "ans": {
       "ru": "$a=-b$, или $b=-c$, или $c=-a$. $\\blacksquare$",
-      "en": "$a=-b$, or $b=-c$, or $c=-a$. $\\blacksquare$"
+      "en": "$a=-b$, or $b=-c$, or $c=-a$. $\\blacksquare$",
+      "uz": "$a=-b$, yoki $b=-c$, yoki $c=-a$. $\\blacksquare$"
      }
     }
    ]

@@ -45,7 +45,8 @@ window.LESSONS[6] = {
      "t": "p",
      "text": {
       "ru": "Доказать неравенство — значит вывести его из уже известных, применяя разрешённые действия. Разрешённых действий немного, и одно из них — с ловушкой.",
-      "en": "To prove an inequality means to derive it from known ones using permitted moves. There are few permitted moves, and one of them has a trap."
+      "en": "To prove an inequality means to derive it from known ones using permitted moves. There are few permitted moves, and one of them has a trap.",
+      "uz": "Tengsizlikni isbotlash — bu uni maʼlum tengsizliklardan ruxsat etilgan usullar bilan keltirib chiqarish. Ruxsat etilgan usullar kam, ulardan birida esa tuzoq bor."
      }
     },
     {
@@ -66,6 +67,14 @@ window.LESSONS[6] = {
        "**Multiplying by a negative number flips the sign.** If $a>b$ and $c<0$ then $ac<bc$.",
        "**Transitivity.** From $a>b$ and $b>c$ it follows that $a>c$.",
        "**Squaring — only for non-negative numbers.** If $a>b\\ge0$ then $a^{2}>b^{2}$."
+      ],
+      "uz": [
+       "**Qoʻshish.** Agar $a>b$ boʻlsa, istalgan $c$ uchun $a+c>b+c$.",
+       "**Bir xil yoʻnalishdagi tengsizliklarni qoʻshish.** $a>b$ va $c>d$ dan $a+c>b+d$ kelib chiqadi.",
+       "**Musbat songa koʻpaytirish.** Agar $a>b$ va $c>0$ boʻlsa, $ac>bc$.",
+       "**Manfiy songa koʻpaytirish ishorani almashtiradi.** Agar $a>b$ va $c<0$ boʻlsa, $ac<bc$.",
+       "**Tranzitivlik.** $a>b$ va $b>c$ dan $a>c$ kelib chiqadi.",
+       "**Kvadratga koʻtarish — faqat manfiy boʻlmagan sonlar uchun.** Agar $a>b\\ge0$ boʻlsa, $a^{2}>b^{2}$."
       ]
      }
     },
@@ -73,50 +82,58 @@ window.LESSONS[6] = {
      "t": "warn",
      "text": {
       "ru": "**Вычитать неравенства нельзя.** Из $5>3$ и $10>1$ не следует $5-10>3-1$. Если нужно вычесть, разверните второе неравенство и складывайте: из $c>d$ следует $-c<-d$, и тогда $a-d>b-c$. Точно так же нельзя делить неравенства друг на друга.",
-      "en": "**You may not subtract inequalities.** From $5>3$ and $10>1$ it does not follow that $5-10>3-1$. If you need to subtract, flip the second one and add: $c>d$ gives $-c<-d$, and then $a-d>b-c$. Likewise you may not divide one inequality by another."
+      "en": "**You may not subtract inequalities.** From $5>3$ and $10>1$ it does not follow that $5-10>3-1$. If you need to subtract, flip the second one and add: $c>d$ gives $-c<-d$, and then $a-d>b-c$. Likewise you may not divide one inequality by another.",
+      "uz": "**Tengsizliklarni ayirish mumkin emas.** $5>3$ va $10>1$ dan $5-10>3-1$ kelib chiqmaydi. Ayirish kerak boʻlsa, ikkinchisini agʻdaring va qoʻshing: $c>d$ dan $-c<-d$, soʻng $a-d>b-c$. Xuddi shunday, bir tengsizlikni ikkinchisiga boʻlish ham mumkin emas."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Главный приём всей темы",
-      "en": "The one move behind everything"
+      "en": "The one move behind everything",
+      "uz": "Hamma narsa ortidagi yagona usul"
      },
      "text": {
       "ru": "Чтобы доказать $A\\ge B$, перенесите всё в одну часть и покажите, что $A-B\\ge0$. А чтобы показать, что выражение неотрицательно, представьте его **суммой квадратов** — возможно, умноженной на что-то положительное. Почти все школьные неравенства доказываются именно так.",
-      "en": "To prove $A\\ge B$, move everything to one side and show $A-B\\ge0$. And to show an expression is non-negative, write it as a **sum of squares** — possibly multiplied by something positive. Almost every school-level inequality is proved exactly this way."
+      "en": "To prove $A\\ge B$, move everything to one side and show $A-B\\ge0$. And to show an expression is non-negative, write it as a **sum of squares** — possibly multiplied by something positive. Almost every school-level inequality is proved exactly this way.",
+      "uz": "$A\\ge B$ ni isbotlash uchun hamma narsani bir tomonga oʻtkazing va $A-B\\ge0$ ekanini koʻrsating. Ifodaning manfiy emasligini koʻrsatish uchun esa uni **kvadratlar yigʻindisi** koʻrinishida — ehtimol biror musbat songa koʻpaytirilgan holda — yozing. Maktab darajasidagi deyarli har bir tengsizlik aynan shunday isbotlanadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Базовое неравенство",
-      "en": "The base inequality"
+      "en": "The base inequality",
+      "uz": "Asosiy tengsizlik"
      },
      "text": {
       "ru": "Для любых вещественных $a$ и $b$ выполнено $$a^{2}+b^{2}\\ge2ab,$$ причём равенство достигается тогда и только тогда, когда $a=b$.",
-      "en": "For all real $a$ and $b$, $$a^{2}+b^{2}\\ge2ab,$$ with equality if and only if $a=b$."
+      "en": "For all real $a$ and $b$, $$a^{2}+b^{2}\\ge2ab,$$ with equality if and only if $a=b$.",
+      "uz": "Barcha haqiqiy $a$ va $b$ uchun $$a^{2}+b^{2}\\ge2ab,$$ tenglik esa faqat $a=b$ boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Перенесём всё влево: $a^{2}-2ab+b^{2}\\ge0$, то есть $(a-b)^{2}\\ge0$. Квадрат вещественного числа неотрицателен, значит неравенство верно. Равенство достигается ровно тогда, когда $(a-b)^{2}=0$, то есть $a=b$. $\\blacksquare$",
-      "en": "Move everything left: $a^{2}-2ab+b^{2}\\ge0$, that is $(a-b)^{2}\\ge0$. The square of a real number is non-negative, so the inequality holds. Equality occurs exactly when $(a-b)^{2}=0$, that is $a=b$. $\\blacksquare$"
+      "en": "Move everything left: $a^{2}-2ab+b^{2}\\ge0$, that is $(a-b)^{2}\\ge0$. The square of a real number is non-negative, so the inequality holds. Equality occurs exactly when $(a-b)^{2}=0$, that is $a=b$. $\\blacksquare$",
+      "uz": "Hamma narsani chapga oʻtkazamiz: $a^{2}-2ab+b^{2}\\ge0$, yaʼni $(a-b)^{2}\\ge0$. Haqiqiy sonning kvadrati manfiy emas, demak tengsizlik oʻrinli. Tenglik aynan $(a-b)^{2}=0$, yaʼni $a=b$ boʻlganda. $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Из этого одного неравенства получаются десятки других. Подставьте $a=\\sqrt{x}$, $b=\\sqrt{y}$ при $x,y\\ge0$ — получите $x+y\\ge2\\sqrt{xy}$. Подставьте $a=\\sqrt{x}$, $b=\\tfrac1{\\sqrt{x}}$ — получите $x+\\tfrac1x\\ge2$ при $x>0$. Разделите обе части на $ab>0$ — получите $\\tfrac ab+\\tfrac ba\\ge2$.",
-      "en": "Dozens of other inequalities come out of this one. Substitute $a=\\sqrt{x}$, $b=\\sqrt{y}$ with $x,y\\ge0$ to get $x+y\\ge2\\sqrt{xy}$. Substitute $a=\\sqrt{x}$, $b=\\tfrac1{\\sqrt{x}}$ to get $x+\\tfrac1x\\ge2$ for $x>0$. Divide both sides by $ab>0$ to get $\\tfrac ab+\\tfrac ba\\ge2$."
+      "en": "Dozens of other inequalities come out of this one. Substitute $a=\\sqrt{x}$, $b=\\sqrt{y}$ with $x,y\\ge0$ to get $x+y\\ge2\\sqrt{xy}$. Substitute $a=\\sqrt{x}$, $b=\\tfrac1{\\sqrt{x}}$ to get $x+\\tfrac1x\\ge2$ for $x>0$. Divide both sides by $ab>0$ to get $\\tfrac ab+\\tfrac ba\\ge2$.",
+      "uz": "Shu bittasidan oʻnlab boshqa tengsizlik chiqadi. $x,y\\ge0$ uchun $a=\\sqrt{x}$, $b=\\sqrt{y}$ qoʻysak $x+y\\ge2\\sqrt{xy}$ chiqadi. $a=\\sqrt{x}$, $b=\\tfrac1{\\sqrt{x}}$ qoʻysak $x>0$ uchun $x+\\tfrac1x\\ge2$ chiqadi. Ikkala tomonni $ab>0$ ga boʻlsak $\\tfrac ab+\\tfrac ba\\ge2$ chiqadi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ для любых вещественных $a,b,c$.",
-      "en": "Prove that $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ for all real $a,b,c$."
+      "en": "Prove that $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ for all real $a,b,c$.",
+      "uz": "Barcha haqiqiy $a,b,c$ uchun $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -130,43 +147,55 @@ window.LESSONS[6] = {
        "Share each square equally between its two neighbours: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$",
        "This is exactly $(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\ge0$.",
        "Equality holds when all three squares vanish, that is $a=b=c$."
+      ],
+      "uz": [
+       "Hamma narsani chapga oʻtkazamiz va $2$ ga koʻpaytiramiz (bu yoʻnalishni oʻzgartirmaydi): $$2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca\\ge0 .$$",
+       "Har bir kvadratni ikki qoʻshnisi oʻrtasida teng taqsimlaymiz: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$",
+       "Bu aynan $(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\ge0$.",
+       "Tenglik uchala kvadrat ham nolga aylanganda, yaʼni $a=b=c$ boʻlganda."
       ]
      },
      "ans": {
       "ru": "Неравенство доказано; равенство при $a=b=c$. $\\blacksquare$",
-      "en": "Proved; equality when $a=b=c$. $\\blacksquare$"
+      "en": "Proved; equality when $a=b=c$. $\\blacksquare$",
+      "uz": "Isbotlandi; tenglik $a=b=c$ boʻlganda. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Неравенство треугольника для модулей",
-      "en": "The triangle inequality for absolute values"
+      "en": "The triangle inequality for absolute values",
+      "uz": "Modullar uchun uchburchak tengsizligi"
      },
      "text": {
       "ru": "Для любых вещественных $a,b$ $$\\left|a+b\\right|\\ \\le\\ \\left|a\\right|+\\left|b\\right| ,$$ и, как следствие, $$\\bigl|\\,\\left|a\\right|-\\left|b\\right|\\,\\bigr|\\ \\le\\ \\left|a-b\\right| .$$",
-      "en": "For all reals $a,b$ $$\\left|a+b\\right|\\ \\le\\ \\left|a\\right|+\\left|b\\right| ,$$ and consequently $$\\bigl|\\,\\left|a\\right|-\\left|b\\right|\\,\\bigr|\\ \\le\\ \\left|a-b\\right| .$$"
+      "en": "For all reals $a,b$ $$\\left|a+b\\right|\\ \\le\\ \\left|a\\right|+\\left|b\\right| ,$$ and consequently $$\\bigl|\\,\\left|a\\right|-\\left|b\\right|\\,\\bigr|\\ \\le\\ \\left|a-b\\right| .$$",
+      "uz": "Barcha haqiqiy $a,b$ uchun $$\\left|a+b\\right|\\ \\le\\ \\left|a\\right|+\\left|b\\right| ,$$ demak $$\\bigl|\\,\\left|a\\right|-\\left|b\\right|\\,\\bigr|\\ \\le\\ \\left|a-b\\right| .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Обе части неотрицательны, поэтому неравенство равносильно неравенству квадратов: $$\\left(a+b\\right)^{2}\\ \\le\\ \\left(\\left|a\\right|+\\left|b\\right|\\right)^{2}.$$\n\nСлева $a^{2}+2ab+b^{2}$, справа $a^{2}+2\\left|a\\right|\\left|b\\right|+b^{2}$. После сокращения остаётся $$ab\\ \\le\\ \\left|a\\right|\\left|b\\right|=\\left|ab\\right| ,$$ что верно всегда: число не превосходит своего модуля ✓\n\nВторое неравенство: применим первое к $a=\\left(a-b\\right)+b$, получаем $\\left|a\\right|\\le\\left|a-b\\right|+\\left|b\\right|$, то есть $\\left|a\\right|-\\left|b\\right|\\le\\left|a-b\\right|$. Поменяв $a$ и $b$ местами, получаем ту же оценку для $\\left|b\\right|-\\left|a\\right|$ ✓ $\\blacksquare$",
-      "en": "Both sides are non-negative, so the inequality is equivalent to the one between the squares: $$\\left(a+b\\right)^{2}\\ \\le\\ \\left(\\left|a\\right|+\\left|b\\right|\\right)^{2}.$$\n\nThe left side is $a^{2}+2ab+b^{2}$, the right $a^{2}+2\\left|a\\right|\\left|b\\right|+b^{2}$. Cancelling leaves $$ab\\ \\le\\ \\left|a\\right|\\left|b\\right|=\\left|ab\\right| ,$$ which always holds: a number never exceeds its absolute value ✓\n\nFor the second inequality apply the first to $a=\\left(a-b\\right)+b$, giving $\\left|a\\right|\\le\\left|a-b\\right|+\\left|b\\right|$, i.e. $\\left|a\\right|-\\left|b\\right|\\le\\left|a-b\\right|$. Swapping $a$ and $b$ gives the same bound for $\\left|b\\right|-\\left|a\\right|$ ✓ $\\blacksquare$"
+      "en": "Both sides are non-negative, so the inequality is equivalent to the one between the squares: $$\\left(a+b\\right)^{2}\\ \\le\\ \\left(\\left|a\\right|+\\left|b\\right|\\right)^{2}.$$\n\nThe left side is $a^{2}+2ab+b^{2}$, the right $a^{2}+2\\left|a\\right|\\left|b\\right|+b^{2}$. Cancelling leaves $$ab\\ \\le\\ \\left|a\\right|\\left|b\\right|=\\left|ab\\right| ,$$ which always holds: a number never exceeds its absolute value ✓\n\nFor the second inequality apply the first to $a=\\left(a-b\\right)+b$, giving $\\left|a\\right|\\le\\left|a-b\\right|+\\left|b\\right|$, i.e. $\\left|a\\right|-\\left|b\\right|\\le\\left|a-b\\right|$. Swapping $a$ and $b$ gives the same bound for $\\left|b\\right|-\\left|a\\right|$ ✓ $\\blacksquare$",
+      "uz": "Ikkala tomon ham manfiy emas, demak tengsizlik kvadratlar orasidagi tengsizlikka teng kuchli: $$\\left(a+b\\right)^{2}\\ \\le\\ \\left(\\left|a\\right|+\\left|b\\right|\\right)^{2}.$$\n\nChap tomon $a^{2}+2ab+b^{2}$, oʻng tomon $a^{2}+2\\left|a\\right|\\left|b\\right|+b^{2}$. Qisqartirgach $$ab\\ \\le\\ \\left|a\\right|\\left|b\\right|=\\left|ab\\right|$$ qoladi, bu esa har doim oʻrinli: son oʻz moduli dan oshmaydi ✓\n\nIkkinchi tengsizlik uchun birinchisini $a=\\left(a-b\\right)+b$ ga qoʻllaymiz, bu $\\left|a\\right|\\le\\left|a-b\\right|+\\left|b\\right|$, yaʼni $\\left|a\\right|-\\left|b\\right|\\le\\left|a-b\\right|$ ni beradi. $a$ va $b$ ni almashtirsak $\\left|b\\right|-\\left|a\\right|$ uchun shu baho chiqadi ✓ $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Равенство достигается ровно тогда, когда $a$ и $b$ **одного знака** (или одно из них равно нулю) — именно в этом случае $ab=\\left|ab\\right|$.",
-      "en": "Equality holds exactly when $a$ and $b$ have the **same sign** (or one of them is zero) — precisely the case $ab=\\left|ab\\right|$."
+      "en": "Equality holds exactly when $a$ and $b$ have the **same sign** (or one of them is zero) — precisely the case $ab=\\left|ab\\right|$.",
+      "uz": "Tenglik aynan $a$ va $b$ **bir xil ishorali** boʻlganda (yoki ulardan biri nol boʻlganda) — aynan $ab=\\left|ab\\right|$ boʻlgan holda — oʻrinli."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "**Три способа доказать $X\\ge Y$.**\n\n1. Перенести всё в одну сторону и разложить: $X-Y=\\left(\\dots\\right)^{2}$ или произведение неотрицательных множителей.\n2. Свести к известному неравенству (о средних, Коши–Буняковского, Йенсена).\n3. Доказать цепочку $X\\ge Z\\ge Y$ через промежуточную величину.\n\nПервый способ работает почти всегда в школьных задачах и не требует никаких ссылок.",
-      "en": "**Three ways to prove $X\\ge Y$.**\n\n1. Move everything to one side and factor: $X-Y=\\left(\\dots\\right)^{2}$ or a product of non-negative factors.\n2. Reduce it to a named inequality (AM–GM, Cauchy–Schwarz, Jensen).\n3. Prove a chain $X\\ge Z\\ge Y$ through an intermediate quantity.\n\nThe first route works for nearly every school problem and needs no citation at all."
+      "en": "**Three ways to prove $X\\ge Y$.**\n\n1. Move everything to one side and factor: $X-Y=\\left(\\dots\\right)^{2}$ or a product of non-negative factors.\n2. Reduce it to a named inequality (AM–GM, Cauchy–Schwarz, Jensen).\n3. Prove a chain $X\\ge Z\\ge Y$ through an intermediate quantity.\n\nThe first route works for nearly every school problem and needs no citation at all.",
+      "uz": "**$X\\ge Y$ ni isbotlashning uchta yoʻli.**\n\n1. Hamma narsani bir tomonga oʻtkazib ajrating: $X-Y=\\left(\\dots\\right)^{2}$ yoki manfiy boʻlmagan koʻpaytuvchilar koʻpaytmasi.\n2. Nomli tengsizlikka keltiring (oʻrta qiymatlar, Koshi–Bunyakovskiy, Yensen).\n3. Oraliq kattalik orqali $X\\ge Z\\ge Y$ zanjirini isbotlang.\n\nBirinchi yoʻl deyarli har bir maktab masalasida ishlaydi va hech qanday havolani talab qilmaydi."
      }
     }
    ]
@@ -182,65 +211,76 @@ window.LESSONS[6] = {
      "t": "thm",
      "name": {
       "ru": "AM–GM для двух чисел",
-      "en": "AM–GM for two numbers"
+      "en": "AM–GM for two numbers",
+      "uz": "Ikki son uchun oʻrta arifmetik va oʻrta geometrik tengsizligi"
      },
      "text": {
       "ru": "Для неотрицательных $x,y$ $$\\frac{x+y}{2}\\ \\ge\\ \\sqrt{xy},$$ и равенство достигается только при $x=y$.",
-      "en": "For non-negative $x,y$, $$\\frac{x+y}{2}\\ \\ge\\ \\sqrt{xy},$$ with equality only when $x=y$."
+      "en": "For non-negative $x,y$, $$\\frac{x+y}{2}\\ \\ge\\ \\sqrt{xy},$$ with equality only when $x=y$.",
+      "uz": "Manfiy boʻlmagan $x,y$ uchun $$\\frac{x+y}{2}\\ \\ge\\ \\sqrt{xy},$$ tenglik esa faqat $x=y$ boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Положим $a=\\sqrt{x}$, $b=\\sqrt{y}$ (это законно, так как $x,y\\ge0$). Тогда $(a-b)^{2}\\ge0$ даёт $a^{2}+b^{2}\\ge2ab$, то есть $x+y\\ge2\\sqrt{xy}$. Делим на $2$. $\\blacksquare$",
-      "en": "Put $a=\\sqrt{x}$, $b=\\sqrt{y}$ (legitimate since $x,y\\ge0$). Then $(a-b)^{2}\\ge0$ gives $a^{2}+b^{2}\\ge2ab$, that is $x+y\\ge2\\sqrt{xy}$. Divide by $2$. $\\blacksquare$"
+      "en": "Put $a=\\sqrt{x}$, $b=\\sqrt{y}$ (legitimate since $x,y\\ge0$). Then $(a-b)^{2}\\ge0$ gives $a^{2}+b^{2}\\ge2ab$, that is $x+y\\ge2\\sqrt{xy}$. Divide by $2$. $\\blacksquare$",
+      "uz": "$a=\\sqrt{x}$, $b=\\sqrt{y}$ qoʻyamiz ($x,y\\ge0$ boʻlgani uchun bu oʻrinli). U holda $(a-b)^{2}\\ge0$ dan $a^{2}+b^{2}\\ge2ab$, yaʼni $x+y\\ge2\\sqrt{xy}$ chiqadi. $2$ ga boʻlamiz. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "AM–GM для трёх чисел",
-      "en": "AM–GM for three numbers"
+      "en": "AM–GM for three numbers",
+      "uz": "Uch son uchun oʻrta arifmetik va oʻrta geometrik tengsizligi"
      },
      "text": {
       "ru": "Для неотрицательных $x,y,z$ $$\\frac{x+y+z}{3}\\ \\ge\\ \\sqrt[3]{xyz},$$ и равенство достигается только при $x=y=z$.",
-      "en": "For non-negative $x,y,z$, $$\\frac{x+y+z}{3}\\ \\ge\\ \\sqrt[3]{xyz},$$ with equality only when $x=y=z$."
+      "en": "For non-negative $x,y,z$, $$\\frac{x+y+z}{3}\\ \\ge\\ \\sqrt[3]{xyz},$$ with equality only when $x=y=z$.",
+      "uz": "Manfiy boʻlmagan $x,y,z$ uchun $$\\frac{x+y+z}{3}\\ \\ge\\ \\sqrt[3]{xyz},$$ tenglik esa faqat $x=y=z$ boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Воспользуемся тождеством из темы о разложении: $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=\\tfrac12(a+b+c)\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right].$$ Если $a,b,c\\ge0$, то оба сомножителя справа неотрицательны, значит $$a^{3}+b^{3}+c^{3}\\ge3abc .$$ Теперь подставим $a=\\sqrt[3]{x}$, $b=\\sqrt[3]{y}$, $c=\\sqrt[3]{z}$: получаем $x+y+z\\ge3\\sqrt[3]{xyz}$. Равенство требует $a=b=c$, то есть $x=y=z$. $\\blacksquare$",
-      "en": "Use the identity from the factoring topic: $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=\\tfrac12(a+b+c)\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right].$$ If $a,b,c\\ge0$ then both factors on the right are non-negative, so $$a^{3}+b^{3}+c^{3}\\ge3abc .$$ Now substitute $a=\\sqrt[3]{x}$, $b=\\sqrt[3]{y}$, $c=\\sqrt[3]{z}$ to get $x+y+z\\ge3\\sqrt[3]{xyz}$. Equality needs $a=b=c$, that is $x=y=z$. $\\blacksquare$"
+      "en": "Use the identity from the factoring topic: $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=\\tfrac12(a+b+c)\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right].$$ If $a,b,c\\ge0$ then both factors on the right are non-negative, so $$a^{3}+b^{3}+c^{3}\\ge3abc .$$ Now substitute $a=\\sqrt[3]{x}$, $b=\\sqrt[3]{y}$, $c=\\sqrt[3]{z}$ to get $x+y+z\\ge3\\sqrt[3]{xyz}$. Equality needs $a=b=c$, that is $x=y=z$. $\\blacksquare$",
+      "uz": "Ajratish mavzusidagi ayniyatdan foydalanamiz: $$a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-ab-bc-ca\\right)=\\tfrac12(a+b+c)\\left[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\\right].$$ Agar $a,b,c\\ge0$ boʻlsa, oʻngdagi ikkala koʻpaytuvchi ham manfiy emas, demak $$a^{3}+b^{3}+c^{3}\\ge3abc .$$ Endi $a=\\sqrt[3]{x}$, $b=\\sqrt[3]{y}$, $c=\\sqrt[3]{z}$ qoʻysak $x+y+z\\ge3\\sqrt[3]{xyz}$ chiqadi. Tenglik uchun $a=b=c$, yaʼni $x=y=z$ kerak. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "AM–GM для $n$ чисел",
-      "en": "AM–GM for $n$ numbers"
+      "en": "AM–GM for $n$ numbers",
+      "uz": "$n$ ta son uchun oʻrta arifmetik va oʻrta geometrik tengsizligi"
      },
      "text": {
       "ru": "Для неотрицательных $x_1,\\dots,x_n$ $$\\frac{x_1+x_2+\\dots+x_n}{n}\\ \\ge\\ \\sqrt[n]{x_1x_2\\cdots x_n},$$ и равенство достигается только тогда, когда все числа равны.",
-      "en": "For non-negative $x_1,\\dots,x_n$, $$\\frac{x_1+x_2+\\dots+x_n}{n}\\ \\ge\\ \\sqrt[n]{x_1x_2\\cdots x_n},$$ with equality only when all the numbers are equal."
+      "en": "For non-negative $x_1,\\dots,x_n$, $$\\frac{x_1+x_2+\\dots+x_n}{n}\\ \\ge\\ \\sqrt[n]{x_1x_2\\cdots x_n},$$ with equality only when all the numbers are equal.",
+      "uz": "Manfiy boʻlmagan $x_1,\\dots,x_n$ uchun $$\\frac{x_1+x_2+\\dots+x_n}{n}\\ \\ge\\ \\sqrt[n]{x_1x_2\\cdots x_n},$$ tenglik esa faqat barcha sonlar teng boʻlganda."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Как этим пользоваться",
-      "en": "How to use it"
+      "en": "How to use it",
+      "uz": "Qanday ishlatiladi"
      },
      "text": {
       "ru": "AM–GM превращает **сумму** в **произведение** и обратно. Поэтому она особенно хороша, когда произведение — константа. Например, если $xy=16$, то $x+y\\ge2\\sqrt{16}=8$: сумма минимальна при $x=y=4$.\n\nИ наоборот: если сумма фиксирована, максимально произведение при равных слагаемых. Отсюда классический факт: среди всех прямоугольников данного периметра наибольшую площадь имеет квадрат.",
-      "en": "AM–GM turns a **sum** into a **product** and back. So it is at its best when the product is a constant. For instance, if $xy=16$ then $x+y\\ge2\\sqrt{16}=8$: the sum is smallest when $x=y=4$.\n\nAnd conversely: with a fixed sum the product is largest when the terms are equal. Hence the classical fact that among all rectangles of a given perimeter the square has the largest area."
+      "en": "AM–GM turns a **sum** into a **product** and back. So it is at its best when the product is a constant. For instance, if $xy=16$ then $x+y\\ge2\\sqrt{16}=8$: the sum is smallest when $x=y=4$.\n\nAnd conversely: with a fixed sum the product is largest when the terms are equal. Hence the classical fact that among all rectangles of a given perimeter the square has the largest area.",
+      "uz": "Bu tengsizlik **yigʻindini** **koʻpaytmaga** va aksincha aylantiradi. Shuning uchun u koʻpaytma oʻzgarmas boʻlganda eng yaxshi ishlaydi. Masalan, agar $xy=16$ boʻlsa, $x+y\\ge2\\sqrt{16}=8$: yigʻindi $x=y=4$ da eng kichik.\n\nVa aksincha: yigʻindi qatʼiy boʻlganda koʻpaytma hadlar teng boʻlganda eng katta. Shuning uchun berilgan perimetrli barcha toʻgʻri toʻrtburchaklar ichida kvadratning yuzasi eng katta."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $x^{2}+\\dfrac{2}{x}\\ge3$ при всех $x>0$, и найдите, когда достигается равенство.",
-      "en": "Prove that $x^{2}+\\dfrac{2}{x}\\ge3$ for every $x>0$, and find when equality holds."
+      "en": "Prove that $x^{2}+\\dfrac{2}{x}\\ge3$ for every $x>0$, and find when equality holds.",
+      "uz": "Har bir $x>0$ uchun $x^{2}+\\dfrac{2}{x}\\ge3$ ekanini isbotlang va tenglik qachon boʻlishini toping."
      },
      "steps": {
       "ru": [
@@ -256,43 +296,56 @@ window.LESSONS[6] = {
        "Apply AM–GM to the three positive numbers: $$x^{2}+\\frac1x+\\frac1x\\ \\ge\\ 3\\sqrt[3]{x^{2}\\cdot\\frac1x\\cdot\\frac1x}=3\\sqrt[3]{1}=3 .$$",
        "Equality needs all three terms equal: $x^{2}=\\tfrac1x$, that is $x^{3}=1$ and $x=1$.",
        "Check: at $x=1$ the left side is $1+2=3$ ✓"
+      ],
+      "uz": [
+       "Usul: koʻpaytma toza chiqishi uchun $\\tfrac2x$ ni ikkita teng hadga ajrating.",
+       "$$x^{2}+\\frac{2}{x}=x^{2}+\\frac1x+\\frac1x .$$",
+       "Uchta musbat songa tengsizlikni qoʻllaymiz: $$x^{2}+\\frac1x+\\frac1x\\ \\ge\\ 3\\sqrt[3]{x^{2}\\cdot\\frac1x\\cdot\\frac1x}=3\\sqrt[3]{1}=3 .$$",
+       "Tenglik uchun uchala had teng boʻlishi kerak: $x^{2}=\\tfrac1x$, yaʼni $x^{3}=1$ va $x=1$.",
+       "Tekshirish: $x=1$ da chap tomon $1+2=3$ ✓"
       ]
      },
      "ans": {
       "ru": "Неравенство доказано; равенство только при $x=1$. $\\blacksquare$",
-      "en": "Proved; equality only at $x=1$. $\\blacksquare$"
+      "en": "Proved; equality only at $x=1$. $\\blacksquare$",
+      "uz": "Isbotlandi; tenglik faqat $x=1$ da. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Разбивать слагаемые надо так, чтобы **произведение оказалось константой**. Если бы мы применили AM–GM к двум слагаемым $x^{2}$ и $\\tfrac2x$, получилось бы $2\\sqrt{2x}$ — выражение с переменной, из которого ничего не следует. Умение выбрать правильное разбиение и есть главный навык в этой теме.",
-      "en": "The split must make the **product a constant**. Applying AM–GM to the two terms $x^{2}$ and $\\tfrac2x$ would give $2\\sqrt{2x}$ — an expression still containing the variable, from which nothing follows. Choosing the right split is the real skill here."
+      "en": "The split must make the **product a constant**. Applying AM–GM to the two terms $x^{2}$ and $\\tfrac2x$ would give $2\\sqrt{2x}$ — an expression still containing the variable, from which nothing follows. Choosing the right split is the real skill here.",
+      "uz": "Ajratish **koʻpaytmani oʻzgarmas** qilishi kerak. Tengsizlikni $x^{2}$ va $\\tfrac2x$ hadlariga qoʻllash $2\\sqrt{2x}$ ni berar edi — hanuz oʻzgaruvchi qatnashgan ifoda, undan esa hech narsa kelib chiqmaydi. Toʻgʻri ajratishni tanlash bu yerdagi haqiqiy mahorat."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Доказательство неравенства о средних (индукция Коши)",
-      "en": "Proof of AM–GM (Cauchy induction)"
+      "en": "Proof of AM–GM (Cauchy induction)",
+      "uz": "Tengsizlikning isboti (Koshi induksiyasi)"
      },
      "text": {
       "ru": "Для любых $n$ и любых $a_1,\\dots,a_n\\ge0$ $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n},$$ с равенством тогда и только тогда, когда все числа равны.",
-      "en": "For every $n$ and all $a_1,\\dots,a_n\\ge0$ $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n},$$ with equality if and only if all the numbers are equal."
+      "en": "For every $n$ and all $a_1,\\dots,a_n\\ge0$ $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n},$$ with equality if and only if all the numbers are equal.",
+      "uz": "Har bir $n$ va barcha $a_1,\\dots,a_n\\ge0$ uchun $$\\frac{a_1+a_2+\\dots+a_n}{n}\\ \\ge\\ \\sqrt[n]{a_1a_2\\cdots a_n},$$ tenglik esa faqat barcha sonlar teng boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Классическое доказательство Коши идёт «вперёд по степеням двойки, назад по одному».\n\n**Шаг 1: случай $n=2$.** $$\\frac{a+b}{2}-\\sqrt{ab}=\\frac{a-2\\sqrt{ab}+b}{2}=\\frac{\\left(\\sqrt{a}-\\sqrt{b}\\right)^{2}}{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Шаг 2: от $n$ к $2n$.** Пусть неравенство верно для $n$ чисел. Возьмём $2n$ чисел и разобьём их на две половины: $$\\frac{a_1+\\dots+a_{2n}}{2n}=\\frac12\\left(\\frac{a_1+\\dots+a_n}{n}+\\frac{a_{n+1}+\\dots+a_{2n}}{n}\\right)\\ \\ge\\ \\frac12\\left(G_1+G_2\\right),$$ где $G_1,G_2$ — средние геометрические половин. По случаю $n=2$ $$\\frac{G_1+G_2}{2}\\ \\ge\\ \\sqrt{G_1G_2}=\\sqrt[2n]{a_1\\cdots a_{2n}} \\quad\\checkmark$$\n\nЗначит неравенство верно для $n=2,4,8,16,\\dots$ — всех степеней двойки.\n\n**Шаг 3: от $n$ к $n-1$.** Пусть неравенство верно для $n$ чисел, и даны $a_1,\\dots,a_{n-1}$. Обозначим их среднее арифметическое $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1}$$ и применим неравенство для $n$ чисел к набору $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}A}.$$ Числитель слева равен $\\left(n-1\\right)A+A=nA$, поэтому слева стоит просто $A$. Возведём в $n$-ю степень: $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}A .$$ Если $A=0$, то все числа нули и утверждение очевидно; иначе делим на $A$: $$A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ то есть $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓\n\n**Заключение.** Любое $n$ не превосходит некоторой степени двойки $2^{k}$; неравенство верно для $2^{k}$ по шагу 2 и спускается до $n$ повторением шага 3 ✓ $\\blacksquare$",
-      "en": "The classical proof of Cauchy runs \"forward along powers of two, backward one at a time\".\n\n**Step 1: the case $n=2$.** $$\\frac{a+b}{2}-\\sqrt{ab}=\\frac{\\left(\\sqrt{a}-\\sqrt{b}\\right)^{2}}{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Step 2: from $n$ to $2n$.** Assume the inequality for $n$ numbers. Take $2n$ numbers and split them into halves: $$\\frac{a_1+\\dots+a_{2n}}{2n}=\\frac12\\left(\\frac{a_1+\\dots+a_n}{n}+\\frac{a_{n+1}+\\dots+a_{2n}}{n}\\right)\\ \\ge\\ \\frac12\\left(G_1+G_2\\right),$$ where $G_1,G_2$ are the geometric means of the halves. By the case $n=2$ $$\\frac{G_1+G_2}{2}\\ \\ge\\ \\sqrt{G_1G_2}=\\sqrt[2n]{a_1\\cdots a_{2n}} \\quad\\checkmark$$\n\nSo the inequality holds for $n=2,4,8,16,\\dots$ — every power of two.\n\n**Step 3: from $n$ to $n-1$.** Assume it for $n$ numbers and let $a_1,\\dots,a_{n-1}$ be given. Write their arithmetic mean $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1}$$ and apply the $n$-number case to the list $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}A}.$$ The numerator is $\\left(n-1\\right)A+A=nA$, so the left side is just $A$. Raise to the $n$-th power: $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}A .$$ If $A=0$ all numbers are zero and the claim is clear; otherwise divide by $A$: $$A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ i.e. $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓\n\n**Conclusion.** Every $n$ is at most some power of two $2^{k}$; the inequality holds for $2^{k}$ by Step 2 and descends to $n$ by repeating Step 3 ✓ $\\blacksquare$"
+      "en": "The classical proof of Cauchy runs \"forward along powers of two, backward one at a time\".\n\n**Step 1: the case $n=2$.** $$\\frac{a+b}{2}-\\sqrt{ab}=\\frac{\\left(\\sqrt{a}-\\sqrt{b}\\right)^{2}}{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Step 2: from $n$ to $2n$.** Assume the inequality for $n$ numbers. Take $2n$ numbers and split them into halves: $$\\frac{a_1+\\dots+a_{2n}}{2n}=\\frac12\\left(\\frac{a_1+\\dots+a_n}{n}+\\frac{a_{n+1}+\\dots+a_{2n}}{n}\\right)\\ \\ge\\ \\frac12\\left(G_1+G_2\\right),$$ where $G_1,G_2$ are the geometric means of the halves. By the case $n=2$ $$\\frac{G_1+G_2}{2}\\ \\ge\\ \\sqrt{G_1G_2}=\\sqrt[2n]{a_1\\cdots a_{2n}} \\quad\\checkmark$$\n\nSo the inequality holds for $n=2,4,8,16,\\dots$ — every power of two.\n\n**Step 3: from $n$ to $n-1$.** Assume it for $n$ numbers and let $a_1,\\dots,a_{n-1}$ be given. Write their arithmetic mean $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1}$$ and apply the $n$-number case to the list $a_1,\\dots,a_{n-1},A$: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}A}.$$ The numerator is $\\left(n-1\\right)A+A=nA$, so the left side is just $A$. Raise to the $n$-th power: $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}A .$$ If $A=0$ all numbers are zero and the claim is clear; otherwise divide by $A$: $$A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ i.e. $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓\n\n**Conclusion.** Every $n$ is at most some power of two $2^{k}$; the inequality holds for $2^{k}$ by Step 2 and descends to $n$ by repeating Step 3 ✓ $\\blacksquare$",
+      "uz": "Koshining klassik isboti «ikkining darajalari boʻyicha oldinga, bittalab orqaga» tarzida boradi.\n\n**1-qadam: $n=2$ holi.** $$\\frac{a+b}{2}-\\sqrt{ab}=\\frac{\\left(\\sqrt{a}-\\sqrt{b}\\right)^{2}}{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**2-qadam: $n$ dan $2n$ ga.** Tengsizlik $n$ ta son uchun oʻrinli deb faraz qilamiz. $2n$ ta sonni olamiz va ikki yarmiga ajratamiz: $$\\frac{a_1+\\dots+a_{2n}}{2n}=\\frac12\\left(\\frac{a_1+\\dots+a_n}{n}+\\frac{a_{n+1}+\\dots+a_{2n}}{n}\\right)\\ \\ge\\ \\frac12\\left(G_1+G_2\\right),$$ bunda $G_1,G_2$ — yarmlarning oʻrta geometriklari. $n=2$ holiga koʻra $$\\frac{G_1+G_2}{2}\\ \\ge\\ \\sqrt{G_1G_2}=\\sqrt[2n]{a_1\\cdots a_{2n}} \\quad\\checkmark$$\n\nDemak tengsizlik $n=2,4,8,16,\\dots$ — ikkining har bir darajasi uchun oʻrinli.\n\n**3-qadam: $n$ dan $n-1$ ga.** Tengsizlik $n$ ta son uchun oʻrinli boʻlsin va $a_1,\\dots,a_{n-1}$ berilgan boʻlsin. Ularning oʻrta arifmetigini $$A=\\frac{a_1+\\dots+a_{n-1}}{n-1}$$ deb yozamiz va $n$ ta son uchun tengsizlikni $a_1,\\dots,a_{n-1},A$ roʻyxatiga qoʻllaymiz: $$\\frac{a_1+\\dots+a_{n-1}+A}{n}\\ \\ge\\ \\sqrt[n]{a_1\\cdots a_{n-1}A}.$$ Surat $\\left(n-1\\right)A+A=nA$, demak chap tomon shunchaki $A$. $n$-darajaga koʻtaramiz: $$A^{n}\\ \\ge\\ a_1\\cdots a_{n-1}A .$$ Agar $A=0$ boʻlsa, barcha sonlar nol va tasdiq ravshan; aks holda $A$ ga boʻlamiz: $$A^{\\,n-1}\\ \\ge\\ a_1\\cdots a_{n-1} ,$$ yaʼni $A\\ge\\sqrt[n-1]{a_1\\cdots a_{n-1}}$ ✓\n\n**Xulosa.** Har bir $n$ biror $2^{k}$ darajadan oshmaydi; $2^{k}$ uchun tengsizlik 2-qadamga koʻra oʻrinli va 3-qadamni takrorlash bilan $n$ gacha tushadi ✓ $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Эта схема — «доказать для степеней двойки, затем спуститься» — называется **индукцией Коши** и полезна далеко за пределами неравенств.",
-      "en": "This scheme — prove it for powers of two, then descend — is called **Cauchy induction** and is useful far beyond inequalities."
+      "en": "This scheme — prove it for powers of two, then descend — is called **Cauchy induction** and is useful far beyond inequalities.",
+      "uz": "Bu sxema — ikkining darajalari uchun isbotlab, soʻng tushish — **Koshi induksiyasi** deyiladi va tengsizliklardan ancha nariga foydali."
      }
     }
    ]
@@ -308,7 +361,8 @@ window.LESSONS[6] = {
      "t": "p",
      "text": {
       "ru": "У набора положительных чисел есть четыре классических «средних». Для двух чисел $a,b>0$ они выглядят так:",
-      "en": "A set of positive numbers has four classical \"means\". For two numbers $a,b>0$ they look like this:"
+      "en": "A set of positive numbers has four classical \"means\". For two numbers $a,b>0$ they look like this:",
+      "uz": "Musbat sonlar toʻplamining toʻrtta klassik «oʻrtasi» bor. Ikkita $a,b>0$ son uchun ular shunday koʻrinadi:"
      }
     },
     {
@@ -323,6 +377,11 @@ window.LESSONS[6] = {
        "Mean",
        "Symbol",
        "Formula for two numbers"
+      ],
+      "uz": [
+       "Oʻrta",
+       "Belgi",
+       "Ikki son uchun formula"
       ]
      },
      "rows": {
@@ -369,6 +428,28 @@ window.LESSONS[6] = {
         "HM",
         "$\\dfrac{2}{\\frac1a+\\frac1b}=\\dfrac{2ab}{a+b}$"
        ]
+      ],
+      "uz": [
+       [
+        "kvadratik",
+        "QM",
+        "$\\sqrt{\\dfrac{a^{2}+b^{2}}{2}}$"
+       ],
+       [
+        "arifmetik",
+        "AM",
+        "$\\dfrac{a+b}{2}$"
+       ],
+       [
+        "geometrik",
+        "GM",
+        "$\\sqrt{ab}$"
+       ],
+       [
+        "garmonik",
+        "HM",
+        "$\\dfrac{2}{\\frac1a+\\frac1b}=\\dfrac{2ab}{a+b}$"
+       ]
       ]
      }
     },
@@ -376,25 +457,29 @@ window.LESSONS[6] = {
      "t": "thm",
      "name": {
       "ru": "Цепочка неравенств",
-      "en": "The chain"
+      "en": "The chain",
+      "uz": "Zanjir"
      },
      "text": {
       "ru": "Для положительных чисел всегда $$\\mathrm{QM}\\ \\ge\\ \\mathrm{AM}\\ \\ge\\ \\mathrm{GM}\\ \\ge\\ \\mathrm{HM},$$ и все четыре совпадают тогда и только тогда, когда все числа равны.",
-      "en": "For positive numbers we always have $$\\mathrm{QM}\\ \\ge\\ \\mathrm{AM}\\ \\ge\\ \\mathrm{GM}\\ \\ge\\ \\mathrm{HM},$$ and all four coincide if and only if all the numbers are equal."
+      "en": "For positive numbers we always have $$\\mathrm{QM}\\ \\ge\\ \\mathrm{AM}\\ \\ge\\ \\mathrm{GM}\\ \\ge\\ \\mathrm{HM},$$ and all four coincide if and only if all the numbers are equal.",
+      "uz": "Musbat sonlar uchun har doim $$\\mathrm{QM}\\ \\ge\\ \\mathrm{AM}\\ \\ge\\ \\mathrm{GM}\\ \\ge\\ \\mathrm{HM},$$ toʻrtalasi esa faqat barcha sonlar teng boʻlgandagina ustma-ust tushadi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Докажем для двух чисел; общий случай доказывается теми же приёмами.\n\n**QM $\\ge$ AM.** Обе части положительны, поэтому можно возвести в квадрат: надо проверить $\\tfrac{a^{2}+b^{2}}{2}\\ge\\tfrac{(a+b)^{2}}{4}$, то есть $2(a^{2}+b^{2})\\ge(a+b)^{2}$, то есть $a^{2}-2ab+b^{2}\\ge0$ — снова $(a-b)^{2}\\ge0$.\n\n**AM $\\ge$ GM.** Доказано выше.\n\n**GM $\\ge$ HM.** Заметим, что $\\mathrm{HM}=\\dfrac{ab}{\\mathrm{AM}}$ и $\\mathrm{GM}^{2}=ab$, поэтому $$\\frac{\\mathrm{GM}}{\\mathrm{HM}}=\\frac{\\mathrm{GM}\\cdot\\mathrm{AM}}{ab}=\\frac{\\mathrm{AM}}{\\mathrm{GM}}\\ \\ge\\ 1 .$$ $\\blacksquare$",
-      "en": "We prove it for two numbers; the general case uses the same moves.\n\n**QM $\\ge$ AM.** Both sides are positive, so we may square: we must check $\\tfrac{a^{2}+b^{2}}{2}\\ge\\tfrac{(a+b)^{2}}{4}$, that is $2(a^{2}+b^{2})\\ge(a+b)^{2}$, that is $a^{2}-2ab+b^{2}\\ge0$ — once again $(a-b)^{2}\\ge0$.\n\n**AM $\\ge$ GM.** Proved above.\n\n**GM $\\ge$ HM.** Note that $\\mathrm{HM}=\\dfrac{ab}{\\mathrm{AM}}$ and $\\mathrm{GM}^{2}=ab$, so $$\\frac{\\mathrm{GM}}{\\mathrm{HM}}=\\frac{\\mathrm{GM}\\cdot\\mathrm{AM}}{ab}=\\frac{\\mathrm{AM}}{\\mathrm{GM}}\\ \\ge\\ 1 .$$ $\\blacksquare$"
+      "en": "We prove it for two numbers; the general case uses the same moves.\n\n**QM $\\ge$ AM.** Both sides are positive, so we may square: we must check $\\tfrac{a^{2}+b^{2}}{2}\\ge\\tfrac{(a+b)^{2}}{4}$, that is $2(a^{2}+b^{2})\\ge(a+b)^{2}$, that is $a^{2}-2ab+b^{2}\\ge0$ — once again $(a-b)^{2}\\ge0$.\n\n**AM $\\ge$ GM.** Proved above.\n\n**GM $\\ge$ HM.** Note that $\\mathrm{HM}=\\dfrac{ab}{\\mathrm{AM}}$ and $\\mathrm{GM}^{2}=ab$, so $$\\frac{\\mathrm{GM}}{\\mathrm{HM}}=\\frac{\\mathrm{GM}\\cdot\\mathrm{AM}}{ab}=\\frac{\\mathrm{AM}}{\\mathrm{GM}}\\ \\ge\\ 1 .$$ $\\blacksquare$",
+      "uz": "Ikki son uchun isbotlaymiz; umumiy holda xuddi shu usullar ishlatiladi.\n\n**QM $\\ge$ AM.** Ikkala tomon ham musbat, demak kvadratga koʻtarish mumkin: $\\tfrac{a^{2}+b^{2}}{2}\\ge\\tfrac{(a+b)^{2}}{4}$, yaʼni $2(a^{2}+b^{2})\\ge(a+b)^{2}$, yaʼni $a^{2}-2ab+b^{2}\\ge0$ — yana $(a-b)^{2}\\ge0$.\n\n**AM $\\ge$ GM.** Yuqorida isbotlandi.\n\n**GM $\\ge$ HM.** $\\mathrm{HM}=\\dfrac{ab}{\\mathrm{AM}}$ va $\\mathrm{GM}^{2}=ab$ ekanini eʼtiborga olsak, $$\\frac{\\mathrm{GM}}{\\mathrm{HM}}=\\frac{\\mathrm{GM}\\cdot\\mathrm{AM}}{ab}=\\frac{\\mathrm{AM}}{\\mathrm{GM}}\\ \\ge\\ 1 .$$ $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Неравенство AM $\\ge$ HM для $n$ чисел удобнее помнить в виде $$(x_1+\\dots+x_n)\\left(\\frac1{x_1}+\\dots+\\frac1{x_n}\\right)\\ \\ge\\ n^{2}.$$ При $n=2$ это $(a+b)\\left(\\tfrac1a+\\tfrac1b\\right)\\ge4$, при $n=3$ — $\\ge9$. Встречается на олимпиадах постоянно.",
-      "en": "The AM $\\ge$ HM inequality for $n$ numbers is easier to remember as $$(x_1+\\dots+x_n)\\left(\\frac1{x_1}+\\dots+\\frac1{x_n}\\right)\\ \\ge\\ n^{2}.$$ For $n=2$ this is $(a+b)\\left(\\tfrac1a+\\tfrac1b\\right)\\ge4$, for $n=3$ it is $\\ge9$. It comes up constantly."
+      "en": "The AM $\\ge$ HM inequality for $n$ numbers is easier to remember as $$(x_1+\\dots+x_n)\\left(\\frac1{x_1}+\\dots+\\frac1{x_n}\\right)\\ \\ge\\ n^{2}.$$ For $n=2$ this is $(a+b)\\left(\\tfrac1a+\\tfrac1b\\right)\\ge4$, for $n=3$ it is $\\ge9$. It comes up constantly.",
+      "uz": "$n$ ta son uchun AM $\\ge$ HM tengsizligini $$(x_1+\\dots+x_n)\\left(\\frac1{x_1}+\\dots+\\frac1{x_n}\\right)\\ \\ge\\ n^{2}$$ koʻrinishida eslash osonroq. $n=2$ da bu $(a+b)\\left(\\tfrac1a+\\tfrac1b\\right)\\ge4$, $n=3$ da esa $\\ge9$. U doimo uchrab turadi."
      }
     }
    ]
@@ -410,18 +495,21 @@ window.LESSONS[6] = {
      "t": "p",
      "text": {
       "ru": "Среднее арифметическое, среднее геометрическое, среднее квадратичное и среднее гармоническое — не четыре разные конструкции, а четыре точки одной непрерывной шкалы. Увидев эту шкалу один раз, вы перестанете запоминать цепочку неравенств: она станет очевидной.",
-      "en": "The arithmetic, geometric, quadratic and harmonic means are not four separate constructions but four points on one continuous scale. Once you see the scale you stop memorising the chain of inequalities: it becomes obvious."
+      "en": "The arithmetic, geometric, quadratic and harmonic means are not four separate constructions but four points on one continuous scale. Once you see the scale you stop memorising the chain of inequalities: it becomes obvious.",
+      "uz": "Oʻrta arifmetik, oʻrta geometrik, oʻrta kvadratik va oʻrta garmonik — bu toʻrtta alohida qurilma emas, balki bitta uzluksiz shkalaning toʻrtta nuqtasi. Bu shkalani bir marta koʻrsangiz, tengsizliklar zanjirini yodlashni bas qilasiz: u oʻz-oʻzidan ravshan boʻlib qoladi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Степенное среднее",
-      "en": "Power mean"
+      "en": "Power mean",
+      "uz": "Darajali oʻrta"
      },
      "text": {
       "ru": "Пусть $a_1,\\dots,a_n>0$ и $t\\ne0$ — вещественное число. **Степенным средним порядка $t$** называется $$M_t=\\left(\\frac{a_1^{\\,t}+a_2^{\\,t}+\\dots+a_n^{\\,t}}{n}\\right)^{1/t}.$$ Для $t=0$ определение доопределяют по непрерывности: $$M_0=\\sqrt[n]{a_1a_2\\cdots a_n}.$$",
-      "en": "Let $a_1,\\dots,a_n>0$ and let $t\\ne0$ be a real number. The **power mean of order $t$** is $$M_t=\\left(\\frac{a_1^{\\,t}+a_2^{\\,t}+\\dots+a_n^{\\,t}}{n}\\right)^{1/t}.$$ For $t=0$ the definition is extended by continuity: $$M_0=\\sqrt[n]{a_1a_2\\cdots a_n}.$$"
+      "en": "Let $a_1,\\dots,a_n>0$ and let $t\\ne0$ be a real number. The **power mean of order $t$** is $$M_t=\\left(\\frac{a_1^{\\,t}+a_2^{\\,t}+\\dots+a_n^{\\,t}}{n}\\right)^{1/t}.$$ For $t=0$ the definition is extended by continuity: $$M_0=\\sqrt[n]{a_1a_2\\cdots a_n}.$$",
+      "uz": "$a_1,\\dots,a_n>0$ va $t\\ne0$ haqiqiy son boʻlsin. **$t$-tartibli darajali oʻrta** — bu $$M_t=\\left(\\frac{a_1^{\\,t}+a_2^{\\,t}+\\dots+a_n^{\\,t}}{n}\\right)^{1/t}.$$ $t=0$ uchun taʼrif uzluksizlik boʻyicha kengaytiriladi: $$M_0=\\sqrt[n]{a_1a_2\\cdots a_n}.$$"
      }
     },
     {
@@ -435,6 +523,11 @@ window.LESSONS[6] = {
       "en": [
        "$t$",
        "Name",
+       "Formula"
+      ],
+      "uz": [
+       "$t$",
+       "Nomi",
        "Formula"
       ]
      },
@@ -502,6 +595,38 @@ window.LESSONS[6] = {
         "minimum",
         "$\\min a_i$"
        ]
+      ],
+      "uz": [
+       [
+        "$-1$",
+        "garmonik $H$",
+        "$\\dfrac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}$"
+       ],
+       [
+        "$0$",
+        "geometrik $G$",
+        "$\\sqrt[n]{a_1\\cdots a_n}$"
+       ],
+       [
+        "$1$",
+        "arifmetik $A$",
+        "$\\dfrac{a_1+\\dots+a_n}{n}$"
+       ],
+       [
+        "$2$",
+        "kvadratik $Q$",
+        "$\\sqrt{\\dfrac{a_1^{2}+\\dots+a_n^{2}}{n}}$"
+       ],
+       [
+        "$\\to+\\infty$",
+        "maksimum",
+        "$\\max a_i$"
+       ],
+       [
+        "$\\to-\\infty$",
+        "minimum",
+        "$\\min a_i$"
+       ]
       ]
      }
     },
@@ -509,25 +634,29 @@ window.LESSONS[6] = {
      "t": "thm",
      "name": {
       "ru": "Неравенство о степенных средних",
-      "en": "The power mean inequality"
+      "en": "The power mean inequality",
+      "uz": "Darajali oʻrtalar tengsizligi"
      },
      "text": {
       "ru": "Если $s<t$, то для любых положительных $a_1,\\dots,a_n$ $$M_s\\le M_t,$$ причём равенство достигается тогда и только тогда, когда $a_1=a_2=\\dots=a_n$.",
-      "en": "If $s<t$ then for all positive $a_1,\\dots,a_n$ $$M_s\\le M_t,$$ with equality if and only if $a_1=a_2=\\dots=a_n$."
+      "en": "If $s<t$ then for all positive $a_1,\\dots,a_n$ $$M_s\\le M_t,$$ with equality if and only if $a_1=a_2=\\dots=a_n$.",
+      "uz": "Agar $s<t$ boʻlsa, barcha musbat $a_1,\\dots,a_n$ uchun $$M_s\\le M_t,$$ tenglik esa faqat $a_1=a_2=\\dots=a_n$ boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Общий случай выводится из неравенства Йенсена (см. следующий раздел): функция $x\\mapsto x^{t/s}$ выпукла при $t/s>1$. Здесь разберём три школьных случая, которых хватает почти всегда.\n\n**$Q\\ge A$.** По неравенству Коши–Буняковского с наборами $(a_1,\\dots,a_n)$ и $(1,\\dots,1)$ $$\\left(a_1+\\dots+a_n\\right)^{2}\\le n\\left(a_1^{2}+\\dots+a_n^{2}\\right).$$ Разделим на $n^{2}$ и извлечём корень ✓\n\n**$A\\ge G$.** Это неравенство о средних, доказанное выше ✓\n\n**$G\\ge H$.** Применим $A\\ge G$ к числам $\\frac1{a_1},\\dots,\\frac1{a_n}$: $$\\frac{\\frac1{a_1}+\\dots+\\frac1{a_n}}{n}\\ \\ge\\ \\sqrt[n]{\\frac1{a_1\\cdots a_n}}=\\frac1{G}.$$ Перевернём обе части (они положительны, знак меняется): $$H=\\frac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}\\le G \\quad\\checkmark$$\n\nВо всех трёх случаях равенство в использованных неравенствах равносильно равенству всех $a_i$. $\\blacksquare$",
-      "en": "The general case follows from Jensen (next section): the map $x\\mapsto x^{t/s}$ is convex when $t/s>1$. Here we prove the three school cases, which cover almost everything.\n\n**$Q\\ge A$.** Cauchy–Schwarz with the vectors $(a_1,\\dots,a_n)$ and $(1,\\dots,1)$ gives $$\\left(a_1+\\dots+a_n\\right)^{2}\\le n\\left(a_1^{2}+\\dots+a_n^{2}\\right).$$ Divide by $n^{2}$ and take square roots ✓\n\n**$A\\ge G$.** This is the AM–GM inequality proved above ✓\n\n**$G\\ge H$.** Apply $A\\ge G$ to the numbers $\\frac1{a_1},\\dots,\\frac1{a_n}$: $$\\frac{\\frac1{a_1}+\\dots+\\frac1{a_n}}{n}\\ \\ge\\ \\sqrt[n]{\\frac1{a_1\\cdots a_n}}=\\frac1{G}.$$ Invert both sides (they are positive, so the sign flips): $$H=\\frac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}\\le G \\quad\\checkmark$$\n\nIn all three cases equality in the tool used is equivalent to all $a_i$ being equal. $\\blacksquare$"
+      "en": "The general case follows from Jensen (next section): the map $x\\mapsto x^{t/s}$ is convex when $t/s>1$. Here we prove the three school cases, which cover almost everything.\n\n**$Q\\ge A$.** Cauchy–Schwarz with the vectors $(a_1,\\dots,a_n)$ and $(1,\\dots,1)$ gives $$\\left(a_1+\\dots+a_n\\right)^{2}\\le n\\left(a_1^{2}+\\dots+a_n^{2}\\right).$$ Divide by $n^{2}$ and take square roots ✓\n\n**$A\\ge G$.** This is the AM–GM inequality proved above ✓\n\n**$G\\ge H$.** Apply $A\\ge G$ to the numbers $\\frac1{a_1},\\dots,\\frac1{a_n}$: $$\\frac{\\frac1{a_1}+\\dots+\\frac1{a_n}}{n}\\ \\ge\\ \\sqrt[n]{\\frac1{a_1\\cdots a_n}}=\\frac1{G}.$$ Invert both sides (they are positive, so the sign flips): $$H=\\frac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}\\le G \\quad\\checkmark$$\n\nIn all three cases equality in the tool used is equivalent to all $a_i$ being equal. $\\blacksquare$",
+      "uz": "Umumiy hol Yensen tengsizligidan chiqadi (keyingi boʻlim): $t/s>1$ boʻlganda $x\\mapsto x^{t/s}$ akslantirish qavariq. Bu yerda deyarli hamma narsani qamrab oladigan uchta maktab holini isbotlaymiz.\n\n**$Q\\ge A$.** $(a_1,\\dots,a_n)$ va $(1,\\dots,1)$ vektorlari bilan Koshi–Bunyakovskiy $$\\left(a_1+\\dots+a_n\\right)^{2}\\le n\\left(a_1^{2}+\\dots+a_n^{2}\\right)$$ ni beradi. $n^{2}$ ga boʻlib kvadrat ildiz olamiz ✓\n\n**$A\\ge G$.** Bu yuqorida isbotlangan tengsizlik ✓\n\n**$G\\ge H$.** $A\\ge G$ ni $\\frac1{a_1},\\dots,\\frac1{a_n}$ sonlariga qoʻllaymiz: $$\\frac{\\frac1{a_1}+\\dots+\\frac1{a_n}}{n}\\ \\ge\\ \\sqrt[n]{\\frac1{a_1\\cdots a_n}}=\\frac1{G}.$$ Ikkala tomonni agʻdaramiz (ular musbat, demak ishora almashadi): $$H=\\frac{n}{\\frac1{a_1}+\\dots+\\frac1{a_n}}\\le G \\quad\\checkmark$$\n\nUchala holda ham ishlatilgan qurolda tenglik barcha $a_i$ larning tengligiga teng kuchli. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Пусть $a+b+c=3$ и $a,b,c>0$. Докажите, что $a^{2}+b^{2}+c^{2}\\ge3$ и $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$.",
-      "en": "Let $a+b+c=3$ with $a,b,c>0$. Prove that $a^{2}+b^{2}+c^{2}\\ge3$ and $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$."
+      "en": "Let $a+b+c=3$ with $a,b,c>0$. Prove that $a^{2}+b^{2}+c^{2}\\ge3$ and $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$.",
+      "uz": "$a,b,c>0$ va $a+b+c=3$ boʻlsin. $a^{2}+b^{2}+c^{2}\\ge3$ va $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -541,36 +670,47 @@ window.LESSONS[6] = {
        "The first inequality is $Q\\ge A$: $\\sqrt{\\dfrac{a^{2}+b^{2}+c^{2}}{3}}\\ge1$, hence $a^{2}+b^{2}+c^{2}\\ge3$ ✓",
        "The second is $A\\ge H$: $1\\ge\\dfrac{3}{\\frac1a+\\frac1b+\\frac1c}$, i.e. $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$ ✓",
        "Equality in both cases at $a=b=c=1$."
+      ],
+      "uz": [
+       "Shart $A=\\dfrac{a+b+c}{3}=1$ ekanini bildiradi.",
+       "Birinchi tengsizlik — bu $Q\\ge A$: $\\sqrt{\\dfrac{a^{2}+b^{2}+c^{2}}{3}}\\ge1$, demak $a^{2}+b^{2}+c^{2}\\ge3$ ✓",
+       "Ikkinchisi — $A\\ge H$: $1\\ge\\dfrac{3}{\\frac1a+\\frac1b+\\frac1c}$, yaʼni $\\dfrac1a+\\dfrac1b+\\dfrac1c\\ge3$ ✓",
+       "Ikkala holda ham tenglik $a=b=c=1$ da."
       ]
      },
      "ans": {
       "ru": "Оба следуют из шкалы средних при $A=1$.",
-      "en": "Both follow from the mean scale with $A=1$."
+      "en": "Both follow from the mean scale with $A=1$.",
+      "uz": "Ikkalasi ham $A=1$ boʻlgan oʻrtalar shkalasidan kelib chiqadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Взвешенное неравенство о средних",
-      "en": "Weighted AM–GM"
+      "en": "Weighted AM–GM",
+      "uz": "Vaznli oʻrta qiymatlar tengsizligi"
      },
      "text": {
       "ru": "Пусть $w_1,\\dots,w_n>0$ и $w_1+\\dots+w_n=1$. Тогда для положительных $a_i$ $$w_1a_1+w_2a_2+\\dots+w_na_n\\ \\ge\\ a_1^{\\,w_1}a_2^{\\,w_2}\\cdots a_n^{\\,w_n},$$ с равенством лишь при $a_1=\\dots=a_n$.",
-      "en": "Let $w_1,\\dots,w_n>0$ with $w_1+\\dots+w_n=1$. Then for positive $a_i$ $$w_1a_1+w_2a_2+\\dots+w_na_n\\ \\ge\\ a_1^{\\,w_1}a_2^{\\,w_2}\\cdots a_n^{\\,w_n},$$ with equality only when $a_1=\\dots=a_n$."
+      "en": "Let $w_1,\\dots,w_n>0$ with $w_1+\\dots+w_n=1$. Then for positive $a_i$ $$w_1a_1+w_2a_2+\\dots+w_na_n\\ \\ge\\ a_1^{\\,w_1}a_2^{\\,w_2}\\cdots a_n^{\\,w_n},$$ with equality only when $a_1=\\dots=a_n$.",
+      "uz": "$w_1,\\dots,w_n>0$ va $w_1+\\dots+w_n=1$ boʻlsin. U holda musbat $a_i$ lar uchun $$w_1a_1+w_2a_2+\\dots+w_na_n\\ \\ge\\ a_1^{\\,w_1}a_2^{\\,w_2}\\cdots a_n^{\\,w_n},$$ tenglik esa faqat $a_1=\\dots=a_n$ boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Для рациональных весов доказательство чисто школьное. Запишем $w_i=\\dfrac{k_i}{N}$ с целыми $k_i$ и $k_1+\\dots+k_n=N$. Применим обычное неравенство о средних к $N$ числам, среди которых $a_1$ повторено $k_1$ раз, $a_2$ повторено $k_2$ раз и так далее: $$\\frac{k_1a_1+\\dots+k_na_n}{N}\\ \\ge\\ \\sqrt[N]{a_1^{\\,k_1}\\cdots a_n^{\\,k_n}}=a_1^{\\,k_1/N}\\cdots a_n^{\\,k_n/N}.$$ Это в точности требуемое ✓\n\nПроизвольные вещественные веса получаются предельным переходом: любое вещественное число приближается рациональными, а обе части непрерывны по $w_i$. $\\blacksquare$",
-      "en": "For rational weights the proof is elementary. Write $w_i=\\dfrac{k_i}{N}$ with integers $k_i$ summing to $N$. Apply ordinary AM–GM to the $N$ numbers in which $a_1$ is repeated $k_1$ times, $a_2$ repeated $k_2$ times, and so on: $$\\frac{k_1a_1+\\dots+k_na_n}{N}\\ \\ge\\ \\sqrt[N]{a_1^{\\,k_1}\\cdots a_n^{\\,k_n}}=a_1^{\\,k_1/N}\\cdots a_n^{\\,k_n/N}.$$ That is exactly the claim ✓\n\nArbitrary real weights follow by a limit: every real is approximated by rationals and both sides are continuous in the $w_i$. $\\blacksquare$"
+      "en": "For rational weights the proof is elementary. Write $w_i=\\dfrac{k_i}{N}$ with integers $k_i$ summing to $N$. Apply ordinary AM–GM to the $N$ numbers in which $a_1$ is repeated $k_1$ times, $a_2$ repeated $k_2$ times, and so on: $$\\frac{k_1a_1+\\dots+k_na_n}{N}\\ \\ge\\ \\sqrt[N]{a_1^{\\,k_1}\\cdots a_n^{\\,k_n}}=a_1^{\\,k_1/N}\\cdots a_n^{\\,k_n/N}.$$ That is exactly the claim ✓\n\nArbitrary real weights follow by a limit: every real is approximated by rationals and both sides are continuous in the $w_i$. $\\blacksquare$",
+      "uz": "Ratsional vaznlar uchun isbot elementar. $w_i=\\dfrac{k_i}{N}$ deb yozamiz, bunda $k_i$ butun va yigʻindisi $N$. Oddiy tengsizlikni $a_1$ $k_1$ marta, $a_2$ $k_2$ marta va hokazo takrorlangan $N$ ta songa qoʻllaymiz: $$\\frac{k_1a_1+\\dots+k_na_n}{N}\\ \\ge\\ \\sqrt[N]{a_1^{\\,k_1}\\cdots a_n^{\\,k_n}}=a_1^{\\,k_1/N}\\cdots a_n^{\\,k_n/N}.$$ Bu aynan talab qilingani ✓\n\nIxtiyoriy haqiqiy vaznlar limit orqali chiqadi: har bir haqiqiy son ratsionallar bilan yaqinlashtiriladi, ikkala tomon esa $w_i$ boʻyicha uzluksiz. $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Взвешенная версия — это способ **прицелиться в нужную точку равенства**. Обычное неравенство о средних даёт равенство только при равных числах; если задача требует равенства, скажем, при $a=2b$, подберите веса так, чтобы это выполнялось.",
-      "en": "The weighted version is how you **aim at the required equality point**. Plain AM–GM forces equality only when the numbers are equal; if a problem needs equality at, say, $a=2b$, choose weights that make it happen."
+      "en": "The weighted version is how you **aim at the required equality point**. Plain AM–GM forces equality only when the numbers are equal; if a problem needs equality at, say, $a=2b$, choose weights that make it happen.",
+      "uz": "Vaznli koʻrinish — bu **kerakli tenglik nuqtasiga moʻljal olish** usuli. Oddiy tengsizlik tenglikni faqat sonlar teng boʻlganda beradi; agar masalada tenglik, aytaylik, $a=2b$ da kerak boʻlsa, shunga olib keladigan vaznlarni tanlang."
      }
     }
    ]
@@ -586,43 +726,50 @@ window.LESSONS[6] = {
      "t": "thm",
      "name": {
       "ru": "Коши–Буняковский",
-      "en": "Cauchy–Schwarz"
+      "en": "Cauchy–Schwarz",
+      "uz": "Koshi–Bunyakovskiy"
      },
      "text": {
       "ru": "Для любых вещественных чисел $$\\left(a_1^{2}+\\dots+a_n^{2}\\right)\\left(b_1^{2}+\\dots+b_n^{2}\\right)\\ \\ge\\ \\left(a_1b_1+\\dots+a_nb_n\\right)^{2},$$ и равенство достигается тогда и только тогда, когда наборы пропорциональны.",
-      "en": "For all real numbers $$\\left(a_1^{2}+\\dots+a_n^{2}\\right)\\left(b_1^{2}+\\dots+b_n^{2}\\right)\\ \\ge\\ \\left(a_1b_1+\\dots+a_nb_n\\right)^{2},$$ with equality if and only if the two lists are proportional."
+      "en": "For all real numbers $$\\left(a_1^{2}+\\dots+a_n^{2}\\right)\\left(b_1^{2}+\\dots+b_n^{2}\\right)\\ \\ge\\ \\left(a_1b_1+\\dots+a_nb_n\\right)^{2},$$ with equality if and only if the two lists are proportional.",
+      "uz": "Barcha haqiqiy sonlar uchun $$\\left(a_1^{2}+\\dots+a_n^{2}\\right)\\left(b_1^{2}+\\dots+b_n^{2}\\right)\\ \\ge\\ \\left(a_1b_1+\\dots+a_nb_n\\right)^{2},$$ tenglik esa faqat ikkala roʻyxat proporsional boʻlganda."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Рассмотрим функцию $$f(t)=\\sum_{i=1}^{n}\\left(a_i t-b_i\\right)^{2}\\ \\ge\\ 0\\qquad\\text{при всех }t .$$ Раскроем скобки: $$f(t)=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\sum b_i^{2}=At^{2}-2Bt+C .$$ Это квадратный трёхчлен с $A\\ge0$, неотрицательный при всех $t$. Если $A>0$, то его дискриминант неположителен: $$4B^{2}-4AC\\le0\\quad\\Longrightarrow\\quad B^{2}\\le AC,$$ что и требовалось. Если же $A=0$, то все $a_i=0$ и обе части нулевые.\n\nРавенство означает, что дискриминант равен нулю, то есть $f$ имеет корень $t_0$; тогда $a_it_0=b_i$ при всех $i$ — наборы пропорциональны. $\\blacksquare$",
-      "en": "Consider the function $$f(t)=\\sum_{i=1}^{n}\\left(a_i t-b_i\\right)^{2}\\ \\ge\\ 0\\qquad\\text{for every }t .$$ Expanding, $$f(t)=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\sum b_i^{2}=At^{2}-2Bt+C .$$ This is a quadratic with $A\\ge0$, non-negative for all $t$. If $A>0$ its discriminant is non-positive: $$4B^{2}-4AC\\le0\\quad\\Longrightarrow\\quad B^{2}\\le AC,$$ which is the claim. If $A=0$ then every $a_i=0$ and both sides vanish.\n\nEquality means the discriminant is zero, so $f$ has a root $t_0$; then $a_it_0=b_i$ for all $i$ — the lists are proportional. $\\blacksquare$"
+      "en": "Consider the function $$f(t)=\\sum_{i=1}^{n}\\left(a_i t-b_i\\right)^{2}\\ \\ge\\ 0\\qquad\\text{for every }t .$$ Expanding, $$f(t)=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\sum b_i^{2}=At^{2}-2Bt+C .$$ This is a quadratic with $A\\ge0$, non-negative for all $t$. If $A>0$ its discriminant is non-positive: $$4B^{2}-4AC\\le0\\quad\\Longrightarrow\\quad B^{2}\\le AC,$$ which is the claim. If $A=0$ then every $a_i=0$ and both sides vanish.\n\nEquality means the discriminant is zero, so $f$ has a root $t_0$; then $a_it_0=b_i$ for all $i$ — the lists are proportional. $\\blacksquare$",
+      "uz": "$$f(t)=\\sum_{i=1}^{n}\\left(a_i t-b_i\\right)^{2}\\ \\ge\\ 0\\qquad\\text{har bir }t \\text{ uchun}$$ funksiyani koʻramiz. Ochsak, $$f(t)=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\sum b_i^{2}=At^{2}-2Bt+C .$$ Bu $A\\ge0$ boʻlgan, barcha $t$ larda manfiy boʻlmagan kvadrat uchhad. Agar $A>0$ boʻlsa, uning diskriminanti musbat emas: $$4B^{2}-4AC\\le0\\quad\\Longrightarrow\\quad B^{2}\\le AC,$$ bu esa talab qilingani. Agar $A=0$ boʻlsa, har bir $a_i=0$ va ikkala tomon ham nolga aylanadi.\n\nTenglik diskriminant nolga teng ekanini bildiradi, demak $f$ ning $t_0$ ildizi bor; u holda barcha $i$ uchun $a_it_0=b_i$ — roʻyxatlar proporsional. $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Форма Энгеля (лемма о дробях)",
-      "en": "Engel form (the fractions lemma)"
+      "en": "Engel form (the fractions lemma)",
+      "uz": "Engel shakli (kasrlar lemmasi)"
      },
      "text": {
       "ru": "Для вещественных $x_i$ и **положительных** $p_i$ $$\\frac{x_1^{2}}{p_1}+\\frac{x_2^{2}}{p_2}+\\dots+\\frac{x_n^{2}}{p_n}\\ \\ge\\ \\frac{\\left(x_1+x_2+\\dots+x_n\\right)^{2}}{p_1+p_2+\\dots+p_n}.$$",
-      "en": "For real $x_i$ and **positive** $p_i$, $$\\frac{x_1^{2}}{p_1}+\\frac{x_2^{2}}{p_2}+\\dots+\\frac{x_n^{2}}{p_n}\\ \\ge\\ \\frac{\\left(x_1+x_2+\\dots+x_n\\right)^{2}}{p_1+p_2+\\dots+p_n}.$$"
+      "en": "For real $x_i$ and **positive** $p_i$, $$\\frac{x_1^{2}}{p_1}+\\frac{x_2^{2}}{p_2}+\\dots+\\frac{x_n^{2}}{p_n}\\ \\ge\\ \\frac{\\left(x_1+x_2+\\dots+x_n\\right)^{2}}{p_1+p_2+\\dots+p_n}.$$",
+      "uz": "Haqiqiy $x_i$ va **musbat** $p_i$ lar uchun $$\\frac{x_1^{2}}{p_1}+\\frac{x_2^{2}}{p_2}+\\dots+\\frac{x_n^{2}}{p_n}\\ \\ge\\ \\frac{\\left(x_1+x_2+\\dots+x_n\\right)^{2}}{p_1+p_2+\\dots+p_n}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Сначала случай $n=2$. Требуется $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{(x+y)^{2}}{p+q}.$$ Умножим обе части на положительное число $pq(p+q)$: $$x^{2}q(p+q)+y^{2}p(p+q)\\ \\ge\\ pq(x+y)^{2}.$$ Раскроем и перенесём всё влево: $$x^{2}pq+x^{2}q^{2}+y^{2}p^{2}+y^{2}pq-pqx^{2}-2pqxy-pqy^{2}=x^{2}q^{2}-2pqxy+y^{2}p^{2}=(xq-yp)^{2}\\ \\ge\\ 0 .$$\n\nОбщий случай — индукция: применяя доказанное дважды, объединяем первые две дроби, затем результат с третьей, и так далее. $\\blacksquare$",
-      "en": "First the case $n=2$. We need $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{(x+y)^{2}}{p+q}.$$ Multiply both sides by the positive number $pq(p+q)$: $$x^{2}q(p+q)+y^{2}p(p+q)\\ \\ge\\ pq(x+y)^{2}.$$ Expand and move everything left: $$x^{2}pq+x^{2}q^{2}+y^{2}p^{2}+y^{2}pq-pqx^{2}-2pqxy-pqy^{2}=x^{2}q^{2}-2pqxy+y^{2}p^{2}=(xq-yp)^{2}\\ \\ge\\ 0 .$$\n\nThe general case follows by induction: apply the two-term case to merge the first two fractions, then merge the result with the third, and so on. $\\blacksquare$"
+      "en": "First the case $n=2$. We need $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{(x+y)^{2}}{p+q}.$$ Multiply both sides by the positive number $pq(p+q)$: $$x^{2}q(p+q)+y^{2}p(p+q)\\ \\ge\\ pq(x+y)^{2}.$$ Expand and move everything left: $$x^{2}pq+x^{2}q^{2}+y^{2}p^{2}+y^{2}pq-pqx^{2}-2pqxy-pqy^{2}=x^{2}q^{2}-2pqxy+y^{2}p^{2}=(xq-yp)^{2}\\ \\ge\\ 0 .$$\n\nThe general case follows by induction: apply the two-term case to merge the first two fractions, then merge the result with the third, and so on. $\\blacksquare$",
+      "uz": "Avval $n=2$ holi. Bizga $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{(x+y)^{2}}{p+q}$$ kerak. Ikkala tomonni musbat $pq(p+q)$ songa koʻpaytiramiz: $$x^{2}q(p+q)+y^{2}p(p+q)\\ \\ge\\ pq(x+y)^{2}.$$ Ochamiz va hamma narsani chapga oʻtkazamiz: $$x^{2}pq+x^{2}q^{2}+y^{2}p^{2}+y^{2}pq-pqx^{2}-2pqxy-pqy^{2}=x^{2}q^{2}-2pqxy+y^{2}p^{2}=(xq-yp)^{2}\\ \\ge\\ 0 .$$\n\nUmumiy hol induksiya bilan chiqadi: ikki hadli holni dastlabki ikkita kasrni birlashtirish uchun qoʻllang, soʻng natijani uchinchisi bilan birlashtiring va hokazo. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что для положительных $a,b,c$ $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32 .$$",
-      "en": "Prove that for positive $a,b,c$ $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32 .$$"
+      "en": "Prove that for positive $a,b,c$ $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32 .$$",
+      "uz": "Musbat $a,b,c$ uchun $$\\frac{a}{b+c}+\\frac{b}{c+a}+\\frac{c}{a+b}\\ \\ge\\ \\frac32$$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -638,25 +785,35 @@ window.LESSONS[6] = {
        "The denominator equals $2(ab+bc+ca)$.",
        "It remains to check $(a+b+c)^{2}\\ge3(ab+bc+ca)$: expanding, this is $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$, already proved.",
        "Therefore $$\\frac{(a+b+c)^{2}}{2(ab+bc+ca)}\\ \\ge\\ \\frac{3(ab+bc+ca)}{2(ab+bc+ca)}=\\frac32 .$$"
+      ],
+      "uz": [
+       "Har bir kasrni $\\tfrac{a}{a}$ ga koʻpaytiramiz, shunda suratda kvadrat paydo boʻladi: $$\\frac{a}{b+c}=\\frac{a^{2}}{a(b+c)} .$$",
+       "Engel shaklini qoʻllaymiz: $$\\sum\\frac{a^{2}}{a(b+c)}\\ \\ge\\ \\frac{(a+b+c)^{2}}{a(b+c)+b(c+a)+c(a+b)} .$$",
+       "Maxraj $2(ab+bc+ca)$ ga teng.",
+       "$(a+b+c)^{2}\\ge3(ab+bc+ca)$ ni tekshirish qoladi: ochsak, bu $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$, u esa allaqachon isbotlangan.",
+       "Shuning uchun $$\\frac{(a+b+c)^{2}}{2(ab+bc+ca)}\\ \\ge\\ \\frac{3(ab+bc+ca)}{2(ab+bc+ca)}=\\frac32 .$$"
       ]
      },
      "ans": {
       "ru": "Неравенство Несбитта доказано; равенство при $a=b=c$. $\\blacksquare$",
-      "en": "Nesbitt’s inequality is proved; equality when $a=b=c$. $\\blacksquare$"
+      "en": "Nesbitt’s inequality is proved; equality when $a=b=c$. $\\blacksquare$",
+      "uz": "Nesbitt tengsizligi isbotlandi; tenglik $a=b=c$ da. $\\blacksquare$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Доказательство неравенства Коши–Буняковского через дискриминант.** Рассмотрим квадратный трёхчлен от переменной $t$: $$P(t)=\\sum_{i=1}^{n}\\left(a_it-b_i\\right)^{2}=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\left(\\sum b_i^{2}\\right).$$\n\nКак сумма квадратов, $P(t)\\ge0$ при всех вещественных $t$. Если старший коэффициент $\\sum a_i^{2}$ равен нулю, то все $a_i=0$ и доказывать нечего. Иначе парабола не опускается ниже оси, значит её дискриминант неположителен: $$4\\left(\\sum a_ib_i\\right)^{2}-4\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)\\ \\le\\ 0 ,$$ то есть $$\\left(\\sum a_ib_i\\right)^{2}\\ \\le\\ \\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right) \\quad\\checkmark$$\n\nРавенство означает, что дискриминант равен нулю, то есть $P(t_0)=0$ для некоторого $t_0$, а значит $b_i=t_0a_i$ для всех $i$ — наборы пропорциональны ✓ $\\blacksquare$",
-      "en": "**Proof of Cauchy–Schwarz by the discriminant.** Consider the quadratic in a variable $t$: $$P(t)=\\sum_{i=1}^{n}\\left(a_it-b_i\\right)^{2}=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\left(\\sum b_i^{2}\\right).$$\n\nBeing a sum of squares, $P(t)\\ge0$ for every real $t$. If the leading coefficient $\\sum a_i^{2}$ is zero then all $a_i=0$ and there is nothing to prove. Otherwise the parabola never dips below the axis, so its discriminant is non-positive: $$4\\left(\\sum a_ib_i\\right)^{2}-4\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)\\ \\le\\ 0 ,$$ that is $$\\left(\\sum a_ib_i\\right)^{2}\\ \\le\\ \\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right) \\quad\\checkmark$$\n\nEquality means the discriminant vanishes, so $P(t_0)=0$ for some $t_0$, hence $b_i=t_0a_i$ for all $i$ — the two lists are proportional ✓ $\\blacksquare$"
+      "en": "**Proof of Cauchy–Schwarz by the discriminant.** Consider the quadratic in a variable $t$: $$P(t)=\\sum_{i=1}^{n}\\left(a_it-b_i\\right)^{2}=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\left(\\sum b_i^{2}\\right).$$\n\nBeing a sum of squares, $P(t)\\ge0$ for every real $t$. If the leading coefficient $\\sum a_i^{2}$ is zero then all $a_i=0$ and there is nothing to prove. Otherwise the parabola never dips below the axis, so its discriminant is non-positive: $$4\\left(\\sum a_ib_i\\right)^{2}-4\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)\\ \\le\\ 0 ,$$ that is $$\\left(\\sum a_ib_i\\right)^{2}\\ \\le\\ \\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right) \\quad\\checkmark$$\n\nEquality means the discriminant vanishes, so $P(t_0)=0$ for some $t_0$, hence $b_i=t_0a_i$ for all $i$ — the two lists are proportional ✓ $\\blacksquare$",
+      "uz": "**Koshi–Bunyakovskiyning diskriminant orqali isboti.** $t$ oʻzgaruvchiga nisbatan kvadrat uchhadni koʻramiz: $$P(t)=\\sum_{i=1}^{n}\\left(a_it-b_i\\right)^{2}=\\left(\\sum a_i^{2}\\right)t^{2}-2\\left(\\sum a_ib_i\\right)t+\\left(\\sum b_i^{2}\\right).$$\n\nKvadratlar yigʻindisi boʻlgani uchun har bir haqiqiy $t$ da $P(t)\\ge0$. Agar bosh koeffitsiyent $\\sum a_i^{2}$ nolga teng boʻlsa, barcha $a_i=0$ va isbotlashga hech narsa yoʻq. Aks holda parabola oʻqdan pastga tushmaydi, demak uning diskriminanti musbat emas: $$4\\left(\\sum a_ib_i\\right)^{2}-4\\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right)\\ \\le\\ 0 ,$$ yaʼni $$\\left(\\sum a_ib_i\\right)^{2}\\ \\le\\ \\left(\\sum a_i^{2}\\right)\\left(\\sum b_i^{2}\\right) \\quad\\checkmark$$\n\nTenglik diskriminant nolga aylanishini bildiradi, demak biror $t_0$ uchun $P(t_0)=0$, shuning uchun barcha $i$ uchun $b_i=t_0a_i$ — ikkala roʻyxat proporsional ✓ $\\blacksquare$"
      }
     },
     {
      "t": "lemma",
      "name": {
       "ru": "Тождество Лагранжа",
-      "en": "Lagrange identity"
+      "en": "Lagrange identity",
+      "uz": "Lagranj ayniyati"
      },
      "text": {
       "ru": "$$\\left(\\sum_{i=1}^{n}a_i^{2}\\right)\\left(\\sum_{i=1}^{n}b_i^{2}\\right)-\\left(\\sum_{i=1}^{n}a_ib_i\\right)^{2}=\\sum_{1\\le i<j\\le n}\\left(a_ib_j-a_jb_i\\right)^{2}.$$",
@@ -667,14 +824,16 @@ window.LESSONS[6] = {
      "t": "note",
      "text": {
       "ru": "Тождество Лагранжа даёт неравенство Коши–Буняковского мгновенно: правая часть — сумма квадратов, значит она неотрицательна. Более того, оно показывает **точную величину зазора**, а равенство сразу читается как $a_ib_j=a_jb_i$ для всех пар, то есть пропорциональность. При $n=2$ это знакомое тождество $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=\\left(ac+bd\\right)^{2}+\\left(ad-bc\\right)^{2}.$$",
-      "en": "Lagrange identity gives Cauchy–Schwarz instantly: the right side is a sum of squares, hence non-negative. Better, it exhibits the **exact size of the gap**, and equality reads off as $a_ib_j=a_jb_i$ for all pairs, i.e. proportionality. For $n=2$ it is the familiar identity $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=\\left(ac+bd\\right)^{2}+\\left(ad-bc\\right)^{2}.$$"
+      "en": "Lagrange identity gives Cauchy–Schwarz instantly: the right side is a sum of squares, hence non-negative. Better, it exhibits the **exact size of the gap**, and equality reads off as $a_ib_j=a_jb_i$ for all pairs, i.e. proportionality. For $n=2$ it is the familiar identity $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=\\left(ac+bd\\right)^{2}+\\left(ad-bc\\right)^{2}.$$",
+      "uz": "Lagranj ayniyati Koshi–Bunyakovskiyni bir zumda beradi: oʻng tomon kvadratlar yigʻindisi, demak manfiy emas. Bundan ham yaxshisi, u **zaxiraning aniq kattaligini** koʻrsatadi, tenglik esa barcha juftliklar uchun $a_ib_j=a_jb_i$, yaʼni proporsionallik sifatida oʻqiladi. $n=2$ da bu tanish ayniyat: $$\\left(a^{2}+b^{2}\\right)\\left(c^{2}+d^{2}\\right)=\\left(ac+bd\\right)^{2}+\\left(ad-bc\\right)^{2}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Доказательство формы Энгеля.** Достаточно разобрать случай двух дробей, дальше — индукция.\n\nПри $x,y\\in\\mathbb{R}$ и $p,q>0$ утверждается $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{\\left(x+y\\right)^{2}}{p+q}.$$ Умножим обе части на положительное число $pq\\left(p+q\\right)$: $$qx^{2}\\left(p+q\\right)+py^{2}\\left(p+q\\right)\\ \\ge\\ pq\\left(x+y\\right)^{2}.$$ Раскроем и сократим общие члены $pqx^{2}+pqy^{2}$: слева останется $q^{2}x^{2}+p^{2}y^{2}$, справа $2pqxy$. А это $$\\left(qx-py\\right)^{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Индукция.** Для $n$ дробей объединяем первые две по доказанному, получая $n-1$ дробь, и повторяем. Равенство на каждом шаге требует $\\dfrac{x}{p}=\\dfrac{y}{q}$, поэтому в общем случае равенство равносильно $$\\frac{x_1}{p_1}=\\frac{x_2}{p_2}=\\dots=\\frac{x_n}{p_n} \\quad\\checkmark\\qquad\\blacksquare$$",
-      "en": "**Proof of the Engel form.** It suffices to handle two fractions; induction does the rest.\n\nFor $x,y\\in\\mathbb{R}$ and $p,q>0$ the claim is $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{\\left(x+y\\right)^{2}}{p+q}.$$ Multiply by the positive number $pq\\left(p+q\\right)$: $$qx^{2}\\left(p+q\\right)+py^{2}\\left(p+q\\right)\\ \\ge\\ pq\\left(x+y\\right)^{2}.$$ Expand and cancel the common $pqx^{2}+pqy^{2}$: the left side keeps $q^{2}x^{2}+p^{2}y^{2}$, the right keeps $2pqxy$. That is $$\\left(qx-py\\right)^{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Induction.** For $n$ fractions merge the first two by the above, leaving $n-1$ fractions, and repeat. Equality at each step needs $\\dfrac{x}{p}=\\dfrac{y}{q}$, so in general equality is equivalent to $$\\frac{x_1}{p_1}=\\frac{x_2}{p_2}=\\dots=\\frac{x_n}{p_n} \\quad\\checkmark\\qquad\\blacksquare$$"
+      "en": "**Proof of the Engel form.** It suffices to handle two fractions; induction does the rest.\n\nFor $x,y\\in\\mathbb{R}$ and $p,q>0$ the claim is $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{\\left(x+y\\right)^{2}}{p+q}.$$ Multiply by the positive number $pq\\left(p+q\\right)$: $$qx^{2}\\left(p+q\\right)+py^{2}\\left(p+q\\right)\\ \\ge\\ pq\\left(x+y\\right)^{2}.$$ Expand and cancel the common $pqx^{2}+pqy^{2}$: the left side keeps $q^{2}x^{2}+p^{2}y^{2}$, the right keeps $2pqxy$. That is $$\\left(qx-py\\right)^{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Induction.** For $n$ fractions merge the first two by the above, leaving $n-1$ fractions, and repeat. Equality at each step needs $\\dfrac{x}{p}=\\dfrac{y}{q}$, so in general equality is equivalent to $$\\frac{x_1}{p_1}=\\frac{x_2}{p_2}=\\dots=\\frac{x_n}{p_n} \\quad\\checkmark\\qquad\\blacksquare$$",
+      "uz": "**Engel shaklining isboti.** Ikkita kasrni koʻrish yetarli; qolganini induksiya qiladi.\n\n$x,y\\in\\mathbb{R}$ va $p,q>0$ uchun tasdiq: $$\\frac{x^{2}}{p}+\\frac{y^{2}}{q}\\ \\ge\\ \\frac{\\left(x+y\\right)^{2}}{p+q}.$$ Musbat $pq\\left(p+q\\right)$ songa koʻpaytiramiz: $$qx^{2}\\left(p+q\\right)+py^{2}\\left(p+q\\right)\\ \\ge\\ pq\\left(x+y\\right)^{2}.$$ Ochamiz va umumiy $pqx^{2}+pqy^{2}$ ni qisqartiramiz: chap tomonda $q^{2}x^{2}+p^{2}y^{2}$, oʻngda $2pqxy$ qoladi. Bu esa $$\\left(qx-py\\right)^{2}\\ \\ge\\ 0 \\quad\\checkmark$$\n\n**Induksiya.** $n$ ta kasr uchun dastlabki ikkitasini yuqoridagidek birlashtiring, $n-1$ ta kasr qoladi, va takrorlang. Har bir qadamda tenglik uchun $\\dfrac{x}{p}=\\dfrac{y}{q}$ kerak, demak umumiy holda tenglik $$\\frac{x_1}{p_1}=\\frac{x_2}{p_2}=\\dots=\\frac{x_n}{p_n} \\quad\\checkmark\\qquad\\blacksquare$$ ga teng kuchli."
      }
     }
    ]
@@ -690,32 +849,37 @@ window.LESSONS[6] = {
      "t": "p",
      "text": {
       "ru": "Следующее неравенство почти не встречается в школьных учебниках, но на олимпиадах оно работает как отмычка: оно объясняет, почему одинаково упорядоченные наборы «дружат», а противоположно упорядоченные — «спорят».",
-      "en": "The next inequality is almost absent from school textbooks, yet at olympiads it works like a master key: it explains why similarly sorted lists cooperate and oppositely sorted lists fight."
+      "en": "The next inequality is almost absent from school textbooks, yet at olympiads it works like a master key: it explains why similarly sorted lists cooperate and oppositely sorted lists fight.",
+      "uz": "Keyingi tengsizlik maktab darsliklarida deyarli uchramaydi, ammo olimpiadalarda u kalit kabi ishlaydi: u bir xil tartiblangan roʻyxatlar nega «doʻstlashishini», qarama-qarshi tartiblanganlari esa nega «janjallashishini» tushuntiradi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Неравенство о перестановках",
-      "en": "The rearrangement inequality"
+      "en": "The rearrangement inequality",
+      "uz": "Qayta tartiblash tengsizligi"
      },
      "text": {
       "ru": "Пусть $a_1\\le a_2\\le\\dots\\le a_n$ и $b_1\\le b_2\\le\\dots\\le b_n$ — два упорядоченных набора вещественных чисел, а $\\sigma$ — произвольная перестановка индексов. Тогда $$\\underbrace{a_1b_n+a_2b_{n-1}+\\dots+a_nb_1}_{\\text{обратный порядок}}\\ \\le\\ \\sum_{i=1}^{n}a_ib_{\\sigma(i)}\\ \\le\\ \\underbrace{a_1b_1+a_2b_2+\\dots+a_nb_n}_{\\text{прямой порядок}}.$$",
-      "en": "Let $a_1\\le a_2\\le\\dots\\le a_n$ and $b_1\\le b_2\\le\\dots\\le b_n$ be two sorted lists of reals and let $\\sigma$ be any permutation of the indices. Then $$\\underbrace{a_1b_n+a_2b_{n-1}+\\dots+a_nb_1}_{\\text{reversed order}}\\ \\le\\ \\sum_{i=1}^{n}a_ib_{\\sigma(i)}\\ \\le\\ \\underbrace{a_1b_1+a_2b_2+\\dots+a_nb_n}_{\\text{same order}}.$$"
+      "en": "Let $a_1\\le a_2\\le\\dots\\le a_n$ and $b_1\\le b_2\\le\\dots\\le b_n$ be two sorted lists of reals and let $\\sigma$ be any permutation of the indices. Then $$\\underbrace{a_1b_n+a_2b_{n-1}+\\dots+a_nb_1}_{\\text{reversed order}}\\ \\le\\ \\sum_{i=1}^{n}a_ib_{\\sigma(i)}\\ \\le\\ \\underbrace{a_1b_1+a_2b_2+\\dots+a_nb_n}_{\\text{same order}}.$$",
+      "uz": "$a_1\\le a_2\\le\\dots\\le a_n$ va $b_1\\le b_2\\le\\dots\\le b_n$ — haqiqiy sonlarning ikkita tartiblangan roʻyxati, $\\sigma$ esa indekslarning istalgan oʻrin almashtirishi boʻlsin. U holda $$\\underbrace{a_1b_n+a_2b_{n-1}+\\dots+a_nb_1}_{\\text{teskari tartib}}\\ \\le\\ \\sum_{i=1}^{n}a_ib_{\\sigma(i)}\\ \\le\\ \\underbrace{a_1b_1+a_2b_2+\\dots+a_nb_n}_{\\text{bir xil tartib}}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Докажем верхнюю оценку; нижняя получается заменой $b_i$ на $-b_i$.\n\nПерестановок конечное число, значит сумма $S(\\sigma)=\\sum a_ib_{\\sigma(i)}$ достигает максимума на какой-то перестановке. Возьмём такую $\\sigma$ и предположим, что она **не** прямой порядок. Тогда найдутся индексы $i<j$ с $\\sigma(i)>\\sigma(j)$, то есть $$b_{\\sigma(i)}\\ge b_{\\sigma(j)}\\quad\\text{при}\\quad a_i\\le a_j .$$\n\nПоменяем местами два значения: пусть $\\tau$ совпадает с $\\sigma$ всюду, кроме $\\tau(i)=\\sigma(j)$, $\\tau(j)=\\sigma(i)$. Разность сумм равна $$S(\\tau)-S(\\sigma)=a_ib_{\\sigma(j)}+a_jb_{\\sigma(i)}-a_ib_{\\sigma(i)}-a_jb_{\\sigma(j)} =\\left(a_j-a_i\\right)\\left(b_{\\sigma(i)}-b_{\\sigma(j)}\\right)\\ \\ge\\ 0 ,$$ потому что оба множителя неотрицательны.\n\nЗначит перестановка $\\tau$ не хуже, а она ближе к прямому порядку (число «инверсий» уменьшилось хотя бы на одну). Повторяя такие обмены конечное число раз, мы придём к прямому порядку, ни разу не уменьшив сумму ✓ $\\blacksquare$",
-      "en": "We prove the upper bound; the lower one follows by replacing $b_i$ with $-b_i$.\n\nThere are finitely many permutations, so $S(\\sigma)=\\sum a_ib_{\\sigma(i)}$ attains a maximum at some $\\sigma$. Take such a $\\sigma$ and suppose it is **not** the sorted order. Then there are indices $i<j$ with $\\sigma(i)>\\sigma(j)$, that is $$b_{\\sigma(i)}\\ge b_{\\sigma(j)}\\quad\\text{while}\\quad a_i\\le a_j .$$\n\nSwap the two values: let $\\tau$ agree with $\\sigma$ except $\\tau(i)=\\sigma(j)$, $\\tau(j)=\\sigma(i)$. The difference of the sums is $$S(\\tau)-S(\\sigma)=\\left(a_j-a_i\\right)\\left(b_{\\sigma(i)}-b_{\\sigma(j)}\\right)\\ \\ge\\ 0 ,$$ since both factors are non-negative.\n\nSo $\\tau$ is no worse, and it is closer to the sorted order (one inversion fewer). Repeating such swaps finitely many times reaches the sorted order without ever decreasing the sum ✓ $\\blacksquare$"
+      "en": "We prove the upper bound; the lower one follows by replacing $b_i$ with $-b_i$.\n\nThere are finitely many permutations, so $S(\\sigma)=\\sum a_ib_{\\sigma(i)}$ attains a maximum at some $\\sigma$. Take such a $\\sigma$ and suppose it is **not** the sorted order. Then there are indices $i<j$ with $\\sigma(i)>\\sigma(j)$, that is $$b_{\\sigma(i)}\\ge b_{\\sigma(j)}\\quad\\text{while}\\quad a_i\\le a_j .$$\n\nSwap the two values: let $\\tau$ agree with $\\sigma$ except $\\tau(i)=\\sigma(j)$, $\\tau(j)=\\sigma(i)$. The difference of the sums is $$S(\\tau)-S(\\sigma)=\\left(a_j-a_i\\right)\\left(b_{\\sigma(i)}-b_{\\sigma(j)}\\right)\\ \\ge\\ 0 ,$$ since both factors are non-negative.\n\nSo $\\tau$ is no worse, and it is closer to the sorted order (one inversion fewer). Repeating such swaps finitely many times reaches the sorted order without ever decreasing the sum ✓ $\\blacksquare$",
+      "uz": "Yuqori bahoni isbotlaymiz; quyidagisi $b_i$ ni $-b_i$ bilan almashtirish orqali chiqadi.\n\nOʻrin almashtirishlar chekli sonda, demak $S(\\sigma)=\\sum a_ib_{\\sigma(i)}$ biror $\\sigma$ da maksimumga erishadi. Shunday $\\sigma$ ni olamiz va u tartiblangan tartib **emas** deb faraz qilamiz. U holda $\\sigma(i)>\\sigma(j)$ boʻlgan $i<j$ indekslar bor, yaʼni $$b_{\\sigma(i)}\\ge b_{\\sigma(j)}\\quad\\text{va shu bilan birga}\\quad a_i\\le a_j .$$\n\nIkkala qiymatni almashtiramiz: $\\tau$ $\\sigma$ bilan $\\tau(i)=\\sigma(j)$, $\\tau(j)=\\sigma(i)$ dan tashqari mos tushsin. Yigʻindilar ayirmasi $$S(\\tau)-S(\\sigma)=\\left(a_j-a_i\\right)\\left(b_{\\sigma(i)}-b_{\\sigma(j)}\\right)\\ \\ge\\ 0 ,$$ chunki ikkala koʻpaytuvchi ham manfiy emas.\n\nDemak $\\tau$ yomonroq emas, u esa tartiblangan tartibga yaqinroq (inversiyalar soni bittaga kamaydi). Bunday almashtirishlarni chekli marta takrorlab, yigʻindini hech qachon kamaytirmasdan tartiblangan tartibga yetamiz ✓ $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что для положительных $a,b,c$ $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3 .$$",
-      "en": "Prove that for positive $a,b,c$ $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3 .$$"
+      "en": "Prove that for positive $a,b,c$ $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3 .$$",
+      "uz": "Musbat $a,b,c$ uchun $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3$$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -731,43 +895,56 @@ window.LESSONS[6] = {
        "The sorted pairing gives $\\dfrac{a}{c}+1+\\dfrac{c}{a}$; every other pairing, our sum included, is no larger — so rearrangement bounds the sum from above, not below.",
        "The clean route is AM–GM applied directly: $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3\\sqrt[3]{\\frac{a}{b}\\cdot\\frac{b}{c}\\cdot\\frac{c}{a}}=3\\sqrt[3]{1}=3 .$$",
        "Equality when $\\dfrac{a}{b}=\\dfrac{b}{c}=\\dfrac{c}{a}$, i.e. $a=b=c$ ✓"
+      ],
+      "uz": [
+       "Umumiylikni buzmagan holda $a\\ge b\\ge c>0$ deb faraz qilamiz.",
+       "$\\left(a,b,c\\right)$ va $\\left(\\dfrac1c,\\dfrac1b,\\dfrac1a\\right)$ roʻyxatlarini olamiz: ular bir xil tartiblangan, chunki $a\\ge b\\ge c$ dan $\\dfrac1c\\ge\\dfrac1b\\ge\\dfrac1a$.",
+       "Tartiblangan juftlash $\\dfrac{a}{c}+1+\\dfrac{c}{a}$ ni beradi; boshqa har qanday juftlash, jumladan bizning yigʻindimiz, undan katta emas — demak qayta tartiblash yigʻindini yuqoridan chegaralaydi, quyidan emas.",
+       "Toza yoʻl — tengsizlikni bevosita qoʻllash: $$\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{a}\\ \\ge\\ 3\\sqrt[3]{\\frac{a}{b}\\cdot\\frac{b}{c}\\cdot\\frac{c}{a}}=3\\sqrt[3]{1}=3 .$$",
+       "Tenglik $\\dfrac{a}{b}=\\dfrac{b}{c}=\\dfrac{c}{a}$, yaʼni $a=b=c$ da ✓"
       ]
      },
      "ans": {
       "ru": "$\\ge3$, равенство при $a=b=c$.",
-      "en": "$\\ge3$, equality at $a=b=c$."
+      "en": "$\\ge3$, equality at $a=b=c$.",
+      "uz": "$\\ge3$, tenglik $a=b=c$ da."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Обратите внимание на третий шаг: неравенство о перестановках даёт **верхнюю** границу для перемешанной суммы, а нам нужна нижняя. Всегда проверяйте, в какую сторону работает инструмент, прежде чем ссылаться на него.",
-      "en": "Notice step three: rearrangement bounds a shuffled sum from **above**, but here we needed a lower bound. Always check which way a tool points before quoting it."
+      "en": "Notice step three: rearrangement bounds a shuffled sum from **above**, but here we needed a lower bound. Always check which way a tool points before quoting it.",
+      "uz": "Uchinchi qadamga eʼtibor bering: qayta tartiblash aralashtirilgan yigʻindini **yuqoridan** chegaralaydi, bizga esa quyidan baho kerak edi. Qurolga havola qilishdan oldin har doim u qaysi tomonga ishlashini tekshiring."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Неравенство Чебышёва о суммах",
-      "en": "Chebyshev sum inequality"
+      "en": "Chebyshev sum inequality",
+      "uz": "Chebishyovning yigʻindilar tengsizligi"
      },
      "text": {
       "ru": "Если $a_1\\le\\dots\\le a_n$ и $b_1\\le\\dots\\le b_n$ (одинаково упорядочены), то $$\\frac1n\\sum_{i=1}^{n}a_ib_i\\ \\ge\\ \\left(\\frac1n\\sum_{i=1}^{n}a_i\\right)\\left(\\frac1n\\sum_{i=1}^{n}b_i\\right).$$ Если наборы упорядочены противоположно, неравенство меняет знак.",
-      "en": "If $a_1\\le\\dots\\le a_n$ and $b_1\\le\\dots\\le b_n$ (similarly sorted) then $$\\frac1n\\sum_{i=1}^{n}a_ib_i\\ \\ge\\ \\left(\\frac1n\\sum_{i=1}^{n}a_i\\right)\\left(\\frac1n\\sum_{i=1}^{n}b_i\\right).$$ For oppositely sorted lists the inequality reverses."
+      "en": "If $a_1\\le\\dots\\le a_n$ and $b_1\\le\\dots\\le b_n$ (similarly sorted) then $$\\frac1n\\sum_{i=1}^{n}a_ib_i\\ \\ge\\ \\left(\\frac1n\\sum_{i=1}^{n}a_i\\right)\\left(\\frac1n\\sum_{i=1}^{n}b_i\\right).$$ For oppositely sorted lists the inequality reverses.",
+      "uz": "Agar $a_1\\le\\dots\\le a_n$ va $b_1\\le\\dots\\le b_n$ (bir xil tartiblangan) boʻlsa, u holda $$\\frac1n\\sum_{i=1}^{n}a_ib_i\\ \\ge\\ \\left(\\frac1n\\sum_{i=1}^{n}a_i\\right)\\left(\\frac1n\\sum_{i=1}^{n}b_i\\right).$$ Qarama-qarshi tartiblangan roʻyxatlar uchun tengsizlik ishorasi almashadi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Выпишем $n$ неравенств из предыдущей теоремы — по одному на каждый «циклический сдвиг» второго набора: $$\\begin{aligned} a_1b_1+a_2b_2+\\dots+a_nb_n&\\ \\ge\\ a_1b_1+a_2b_2+\\dots+a_nb_n,\\\\ a_1b_1+a_2b_2+\\dots+a_nb_n&\\ \\ge\\ a_1b_2+a_2b_3+\\dots+a_nb_1,\\\\ &\\ \\ \\vdots\\\\ a_1b_1+a_2b_2+\\dots+a_nb_n&\\ \\ge\\ a_1b_n+a_2b_1+\\dots+a_nb_{n-1}. \\end{aligned}$$\n\nСложим все $n$ строк. Слева получится $n\\sum a_ib_i$. Справа каждое произведение $a_ib_j$ встречается ровно один раз (сдвиги пробегают все пары ровно по разу), поэтому сумма правых частей равна $$\\left(\\sum_i a_i\\right)\\left(\\sum_j b_j\\right).$$\n\nИтак $n\\sum a_ib_i\\ \\ge\\ \\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$; делим на $n^{2}$ ✓ $\\blacksquare$",
-      "en": "Write down the $n$ inequalities given by the previous theorem, one for each cyclic shift of the second list: $$\\begin{aligned} a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_1+a_2b_2+\\dots+a_nb_n,\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_2+a_2b_3+\\dots+a_nb_1,\\\\ &\\ \\ \\vdots\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_n+a_2b_1+\\dots+a_nb_{n-1}. \\end{aligned}$$\n\nAdd all $n$ rows. The left side becomes $n\\sum a_ib_i$. On the right every product $a_ib_j$ occurs exactly once (the shifts run through all pairs once each), so the right side totals $$\\left(\\sum_i a_i\\right)\\left(\\sum_j b_j\\right).$$\n\nHence $n\\sum a_ib_i\\ \\ge\\ \\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$; divide by $n^{2}$ ✓ $\\blacksquare$"
+      "en": "Write down the $n$ inequalities given by the previous theorem, one for each cyclic shift of the second list: $$\\begin{aligned} a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_1+a_2b_2+\\dots+a_nb_n,\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_2+a_2b_3+\\dots+a_nb_1,\\\\ &\\ \\ \\vdots\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_n+a_2b_1+\\dots+a_nb_{n-1}. \\end{aligned}$$\n\nAdd all $n$ rows. The left side becomes $n\\sum a_ib_i$. On the right every product $a_ib_j$ occurs exactly once (the shifts run through all pairs once each), so the right side totals $$\\left(\\sum_i a_i\\right)\\left(\\sum_j b_j\\right).$$\n\nHence $n\\sum a_ib_i\\ \\ge\\ \\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$; divide by $n^{2}$ ✓ $\\blacksquare$",
+      "uz": "Oldingi teorema beradigan $n$ ta tengsizlikni yozamiz — ikkinchi roʻyxatning har bir siklik siljishi uchun bittadan: $$\\begin{aligned} a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_1+a_2b_2+\\dots+a_nb_n,\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_2+a_2b_3+\\dots+a_nb_1,\\\\ &\\ \\ \\vdots\\\\ a_1b_1+\\dots+a_nb_n&\\ \\ge\\ a_1b_n+a_2b_1+\\dots+a_nb_{n-1}. \\end{aligned}$$\n\nBarcha $n$ ta satrni qoʻshamiz. Chap tomon $n\\sum a_ib_i$ boʻladi. Oʻngda har bir $a_ib_j$ koʻpaytma roppa-rosa bir marta uchraydi (siljishlar barcha juftliklardan bir martadan oʻtadi), demak oʻng tomon $$\\left(\\sum_i a_i\\right)\\left(\\sum_j b_j\\right)$$ ga teng.\n\nDemak $n\\sum a_ib_i\\ \\ge\\ \\left(\\sum a_i\\right)\\left(\\sum b_i\\right)$; $n^{2}$ ga boʻlamiz ✓ $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что для положительных $a,b,c$ $$\\frac{a^{3}+b^{3}+c^{3}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$",
-      "en": "Prove that for positive $a,b,c$ $$\\frac{a^{3}+b^{3}+c^{3}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$"
+      "en": "Prove that for positive $a,b,c$ $$\\frac{a^{3}+b^{3}+c^{3}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$",
+      "uz": "Musbat $a,b,c$ uchun $$\\frac{a^{3}+b^{3}+c^{3}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}$$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -781,18 +958,26 @@ window.LESSONS[6] = {
        "Then $(a,b,c)$ and $(a^{2},b^{2},c^{2})$ are similarly sorted: squaring preserves the order of positive numbers.",
        "Chebyshev gives $$\\frac{a\\cdot a^{2}+b\\cdot b^{2}+c\\cdot c^{2}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}.$$",
        "The left side is $\\dfrac{a^{3}+b^{3}+c^{3}}{3}$ ✓ Equality at $a=b=c$."
+      ],
+      "uz": [
+       "$a\\le b\\le c$ deb faraz qilamiz (tasdiq simmetrik).",
+       "U holda $(a,b,c)$ va $(a^{2},b^{2},c^{2})$ bir xil tartiblangan: kvadratga koʻtarish musbat sonlarning tartibini saqlaydi.",
+       "Chebishyov $$\\frac{a\\cdot a^{2}+b\\cdot b^{2}+c\\cdot c^{2}}{3}\\ \\ge\\ \\frac{a+b+c}{3}\\cdot\\frac{a^{2}+b^{2}+c^{2}}{3}$$ ni beradi.",
+       "Chap tomon $\\dfrac{a^{3}+b^{3}+c^{3}}{3}$ ✓ Tenglik $a=b=c$ da."
       ]
      },
      "ans": {
       "ru": "Прямое применение Чебышёва к $(a,b,c)$ и $(a^{2},b^{2},c^{2})$.",
-      "en": "A direct application of Chebyshev to $(a,b,c)$ and $(a^{2},b^{2},c^{2})$."
+      "en": "A direct application of Chebyshev to $(a,b,c)$ and $(a^{2},b^{2},c^{2})$.",
+      "uz": "Chebishyovni $(a,b,c)$ va $(a^{2},b^{2},c^{2})$ ga bevosita qoʻllash."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "**Как распознать задачу «на Чебышёва».** В неравенстве встречается произведение суммы на сумму, а слева — сумма произведений одинаково растущих величин. Типичные признаки: степени $a^{k}$ и $a^{m}$ в одном выражении, или дроби вида $\\dfrac{a}{b+c}$, где числитель растёт вместе со знаменателем-дополнением.",
-      "en": "**Recognising a Chebyshev problem.** A product of two sums appears on one side and a sum of products of quantities that grow together on the other. Typical signals: powers $a^{k}$ and $a^{m}$ in the same expression, or fractions $\\dfrac{a}{b+c}$ where the numerator grows as its complementary denominator shrinks."
+      "en": "**Recognising a Chebyshev problem.** A product of two sums appears on one side and a sum of products of quantities that grow together on the other. Typical signals: powers $a^{k}$ and $a^{m}$ in the same expression, or fractions $\\dfrac{a}{b+c}$ where the numerator grows as its complementary denominator shrinks.",
+      "uz": "**Chebishyov masalasini tanish.** Bir tomonda ikkita yigʻindining koʻpaytmasi, ikkinchisida esa birga oʻsadigan kattaliklar koʻpaytmalarining yigʻindisi paydo boʻladi. Odatdagi belgilar: bitta ifodada $a^{k}$ va $a^{m}$ darajalari, yoki surati toʻldiruvchi maxraji kichrayganda oʻsadigan $\\dfrac{a}{b+c}$ kasrlari."
      }
     }
    ]
@@ -808,25 +993,29 @@ window.LESSONS[6] = {
      "t": "p",
      "text": {
       "ru": "Все неравенства о средних — частные случаи одного геометрического факта: **хорда графика выпуклой функции лежит не ниже самого графика**. Понимание этого превращает набор разрозненных формул в одну идею.",
-      "en": "Every inequality between means is a special case of one geometric fact: **a chord of the graph of a convex function lies on or above the graph**. Seeing this turns a pile of separate formulas into a single idea."
+      "en": "Every inequality between means is a special case of one geometric fact: **a chord of the graph of a convex function lies on or above the graph**. Seeing this turns a pile of separate formulas into a single idea.",
+      "uz": "Oʻrtalar orasidagi har bir tengsizlik bitta geometrik faktning xususiy holi: **qavariq funksiya grafigining vatari grafikdan pastda yotmaydi**. Buni koʻrish alohida formulalar uyumini bitta gʻoyaga aylantiradi."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Выпуклая функция",
-      "en": "Convex function"
+      "en": "Convex function",
+      "uz": "Qavariq funksiya"
      },
      "text": {
       "ru": "Функция $f$, определённая на промежутке $I$, называется **выпуклой** (выпуклой вниз), если для любых $x,y\\in I$ и любого $\\lambda\\in[0,1]$ $$f\\left(\\lambda x+(1-\\lambda)y\\right)\\ \\le\\ \\lambda f(x)+(1-\\lambda)f(y).$$ Если неравенство всегда строгое при $x\\ne y$ и $0<\\lambda<1$, функция **строго выпукла**. При обратном знаке функция называется **вогнутой** (выпуклой вверх).",
-      "en": "A function $f$ on an interval $I$ is **convex** if for all $x,y\\in I$ and every $\\lambda\\in[0,1]$ $$f\\left(\\lambda x+(1-\\lambda)y\\right)\\ \\le\\ \\lambda f(x)+(1-\\lambda)f(y).$$ If the inequality is strict whenever $x\\ne y$ and $0<\\lambda<1$, the function is **strictly convex**. With the reversed sign the function is called **concave**."
+      "en": "A function $f$ on an interval $I$ is **convex** if for all $x,y\\in I$ and every $\\lambda\\in[0,1]$ $$f\\left(\\lambda x+(1-\\lambda)y\\right)\\ \\le\\ \\lambda f(x)+(1-\\lambda)f(y).$$ If the inequality is strict whenever $x\\ne y$ and $0<\\lambda<1$, the function is **strictly convex**. With the reversed sign the function is called **concave**.",
+      "uz": "$I$ oraliqda aniqlangan $f$ funksiya, agar barcha $x,y\\in I$ va har bir $\\lambda\\in[0,1]$ uchun $$f\\left(\\lambda x+(1-\\lambda)y\\right)\\ \\le\\ \\lambda f(x)+(1-\\lambda)f(y)$$ boʻlsa, **qavariq** deyiladi. Agar $x\\ne y$ va $0<\\lambda<1$ da tengsizlik qatʼiy boʻlsa, funksiya **qatʼiy qavariq** deyiladi. Ishora teskari boʻlganda funksiya **botiq** deyiladi."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Геометрически: точка $\\lambda x+(1-\\lambda)y$ пробегает отрезок от $x$ до $y$, левая часть — значение функции в этой точке, правая — высота хорды над ней. Выпуклость означает «график провисает под хордой».\n\nЕсли $f$ дважды дифференцируема, признак прост: $f$ выпукла на $I$ ⟺ $f^{\\prime\\prime}(x)\\ge0$ на $I$. Так $x^{2}$, $e^{x}$, $-\\ln x$ и $\\dfrac1x$ (при $x>0$) выпуклы, а $\\ln x$, $\\sqrt{x}$ и $\\sin x$ (на $[0,\\pi]$) вогнуты.",
-      "en": "Geometrically: the point $\\lambda x+(1-\\lambda)y$ sweeps the segment from $x$ to $y$, the left side is the height of the graph there, the right side the height of the chord. Convexity says the graph sags below the chord.\n\nIf $f$ is twice differentiable the test is easy: $f$ is convex on $I$ ⟺ $f^{\\prime\\prime}(x)\\ge0$ there. So $x^{2}$, $e^{x}$, $-\\ln x$ and $\\dfrac1x$ (for $x>0$) are convex, while $\\ln x$, $\\sqrt{x}$ and $\\sin x$ (on $[0,\\pi]$) are concave."
+      "en": "Geometrically: the point $\\lambda x+(1-\\lambda)y$ sweeps the segment from $x$ to $y$, the left side is the height of the graph there, the right side the height of the chord. Convexity says the graph sags below the chord.\n\nIf $f$ is twice differentiable the test is easy: $f$ is convex on $I$ ⟺ $f^{\\prime\\prime}(x)\\ge0$ there. So $x^{2}$, $e^{x}$, $-\\ln x$ and $\\dfrac1x$ (for $x>0$) are convex, while $\\ln x$, $\\sqrt{x}$ and $\\sin x$ (on $[0,\\pi]$) are concave.",
+      "uz": "Geometrik maʼnoda: $\\lambda x+(1-\\lambda)y$ nuqtasi $x$ dan $y$ gacha kesmadan oʻtadi, chap tomon — grafikning oʻsha yerdagi balandligi, oʻng tomon — vatarning balandligi. Qavariqlik grafik vatar ostiga botishini bildiradi.\n\nAgar $f$ ikki marta differensiallanuvchi boʻlsa, mezon oddiy: $f$ $I$ da qavariq ⟺ u yerda $f^{\\prime\\prime}(x)\\ge0$. Demak $x^{2}$, $e^{x}$, $-\\ln x$ va $\\dfrac1x$ ($x>0$ da) qavariq, $\\ln x$, $\\sqrt{x}$ va $\\sin x$ ($[0,\\pi]$ da) esa botiq."
      }
     },
     {
@@ -834,32 +1023,37 @@ window.LESSONS[6] = {
      "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\" aria-label=\"a chord lying above a convex graph\"><path d=\"M30 50 Q160 190 290 60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"95\" y1=\"103\" x2=\"238\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><line x1=\"167\" y1=\"102\" x2=\"167\" y2=\"123\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"95\" cy=\"103\" r=\"4\" fill=\"currentColor\"/><circle cx=\"238\" cy=\"101\" r=\"4\" fill=\"currentColor\"/><circle cx=\"167\" cy=\"123\" r=\"4\" fill=\"currentColor\"/><circle cx=\"167\" cy=\"102\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"110\" font-size=\"13\" fill=\"currentColor\">f(x)</text><text x=\"246\" y=\"124\" font-size=\"13\" fill=\"currentColor\">f(y)</text><text x=\"182\" y=\"94\" font-size=\"12\" fill=\"currentColor\">chord</text><text x=\"182\" y=\"141\" font-size=\"12\" fill=\"currentColor\">graph</text></svg>",
      "cap": {
       "ru": "Выпуклая функция: хорда лежит выше графика, поэтому среднее значений не меньше значения в среднем.",
-      "en": "A convex function: the chord lies above the graph, so the mean of the values is at least the value at the mean."
+      "en": "A convex function: the chord lies above the graph, so the mean of the values is at least the value at the mean.",
+      "uz": "Qavariq funksiya: vatar grafikdan yuqorida yotadi, shuning uchun qiymatlarning oʻrtasi oʻrtadagi qiymatdan kam emas."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Неравенство Йенсена",
-      "en": "Jensen inequality"
+      "en": "Jensen inequality",
+      "uz": "Yensen tengsizligi"
      },
      "text": {
       "ru": "Пусть $f$ выпукла на $I$, точки $x_1,\\dots,x_n\\in I$, а веса $w_1,\\dots,w_n\\ge0$ дают в сумме $1$. Тогда $$f\\left(\\sum_{i=1}^{n}w_ix_i\\right)\\ \\le\\ \\sum_{i=1}^{n}w_if(x_i).$$ В частности, при равных весах $w_i=\\frac1n$ $$f\\left(\\frac{x_1+\\dots+x_n}{n}\\right)\\ \\le\\ \\frac{f(x_1)+\\dots+f(x_n)}{n}.$$ Для вогнутой $f$ знаки меняются на противоположные.",
-      "en": "Let $f$ be convex on $I$, let $x_1,\\dots,x_n\\in I$ and let $w_1,\\dots,w_n\\ge0$ sum to $1$. Then $$f\\left(\\sum_{i=1}^{n}w_ix_i\\right)\\ \\le\\ \\sum_{i=1}^{n}w_if(x_i).$$ With equal weights $w_i=\\frac1n$ this reads $$f\\left(\\frac{x_1+\\dots+x_n}{n}\\right)\\ \\le\\ \\frac{f(x_1)+\\dots+f(x_n)}{n}.$$ For concave $f$ both signs reverse."
+      "en": "Let $f$ be convex on $I$, let $x_1,\\dots,x_n\\in I$ and let $w_1,\\dots,w_n\\ge0$ sum to $1$. Then $$f\\left(\\sum_{i=1}^{n}w_ix_i\\right)\\ \\le\\ \\sum_{i=1}^{n}w_if(x_i).$$ With equal weights $w_i=\\frac1n$ this reads $$f\\left(\\frac{x_1+\\dots+x_n}{n}\\right)\\ \\le\\ \\frac{f(x_1)+\\dots+f(x_n)}{n}.$$ For concave $f$ both signs reverse.",
+      "uz": "$f$ $I$ da qavariq, $x_1,\\dots,x_n\\in I$ va $w_1,\\dots,w_n\\ge0$ yigʻindisi $1$ boʻlsin. U holda $$f\\left(\\sum_{i=1}^{n}w_ix_i\\right)\\ \\le\\ \\sum_{i=1}^{n}w_if(x_i).$$ Teng vaznlar $w_i=\\frac1n$ da bu $$f\\left(\\frac{x_1+\\dots+x_n}{n}\\right)\\ \\le\\ \\frac{f(x_1)+\\dots+f(x_n)}{n}$$ koʻrinishini oladi. Botiq $f$ uchun ikkala ishora ham almashadi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Индукция по $n$.\n\n**База $n=2$** — это в точности определение выпуклости ✓\n\n**Шаг.** Пусть утверждение верно для $n-1$ точек. Возьмём $n$ точек с весами $w_i$; можно считать $w_n<1$ (иначе всё тривиально). Обозначим $W=w_1+\\dots+w_{n-1}=1-w_n>0$ и введём точку $$z=\\frac{w_1x_1+\\dots+w_{n-1}x_{n-1}}{W}\\in I ,$$ которая лежит в $I$ как взвешенное среднее точек из $I$.\n\nТогда $\\sum_{i=1}^{n}w_ix_i=Wz+w_nx_n$, и по определению выпуклости (случай двух точек) $$f\\left(Wz+w_nx_n\\right)\\ \\le\\ W f(z)+w_nf(x_n).$$\n\nК $f(z)$ применим предположение индукции с весами $\\dfrac{w_i}{W}$, дающими в сумме $1$: $$f(z)\\ \\le\\ \\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i).$$\n\nПодставим: $$f\\left(\\sum w_ix_i\\right)\\le W\\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i)+w_nf(x_n)=\\sum_{i=1}^{n}w_if(x_i) \\quad\\checkmark\\qquad\\blacksquare$$\n\nПри строгой выпуклости равенство возможно лишь когда все $x_i$ с ненулевыми весами совпадают.",
-      "en": "Induction on $n$.\n\n**Base $n=2$** is exactly the definition of convexity ✓\n\n**Step.** Suppose the claim holds for $n-1$ points. Take $n$ points with weights $w_i$; we may assume $w_n<1$ (otherwise it is trivial). Put $W=w_1+\\dots+w_{n-1}=1-w_n>0$ and $$z=\\frac{w_1x_1+\\dots+w_{n-1}x_{n-1}}{W}\\in I ,$$ which lies in $I$ as a weighted average of points of $I$.\n\nThen $\\sum_{i=1}^{n}w_ix_i=Wz+w_nx_n$, and the two-point definition gives $$f\\left(Wz+w_nx_n\\right)\\ \\le\\ W f(z)+w_nf(x_n).$$\n\nApply the induction hypothesis to $f(z)$ with the weights $\\dfrac{w_i}{W}$, which sum to $1$: $$f(z)\\ \\le\\ \\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i).$$\n\nSubstituting, $$f\\left(\\sum w_ix_i\\right)\\le W\\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i)+w_nf(x_n)=\\sum_{i=1}^{n}w_if(x_i) \\quad\\checkmark\\qquad\\blacksquare$$\n\nWhen $f$ is strictly convex, equality forces all $x_i$ with non-zero weight to coincide."
+      "en": "Induction on $n$.\n\n**Base $n=2$** is exactly the definition of convexity ✓\n\n**Step.** Suppose the claim holds for $n-1$ points. Take $n$ points with weights $w_i$; we may assume $w_n<1$ (otherwise it is trivial). Put $W=w_1+\\dots+w_{n-1}=1-w_n>0$ and $$z=\\frac{w_1x_1+\\dots+w_{n-1}x_{n-1}}{W}\\in I ,$$ which lies in $I$ as a weighted average of points of $I$.\n\nThen $\\sum_{i=1}^{n}w_ix_i=Wz+w_nx_n$, and the two-point definition gives $$f\\left(Wz+w_nx_n\\right)\\ \\le\\ W f(z)+w_nf(x_n).$$\n\nApply the induction hypothesis to $f(z)$ with the weights $\\dfrac{w_i}{W}$, which sum to $1$: $$f(z)\\ \\le\\ \\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i).$$\n\nSubstituting, $$f\\left(\\sum w_ix_i\\right)\\le W\\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i)+w_nf(x_n)=\\sum_{i=1}^{n}w_if(x_i) \\quad\\checkmark\\qquad\\blacksquare$$\n\nWhen $f$ is strictly convex, equality forces all $x_i$ with non-zero weight to coincide.",
+      "uz": "$n$ boʻyicha induksiya.\n\n**Baza $n=2$** — bu aynan qavariqlik taʼrifi ✓\n\n**Qadam.** Tasdiq $n-1$ nuqta uchun oʻrinli boʻlsin. Vaznlari $w_i$ boʻlgan $n$ ta nuqtani olamiz; $w_n<1$ deb faraz qilishimiz mumkin (aks holda hammasi trivial). $W=w_1+\\dots+w_{n-1}=1-w_n>0$ va $$z=\\frac{w_1x_1+\\dots+w_{n-1}x_{n-1}}{W}\\in I$$ deb olamiz, u $I$ nuqtalarining vaznli oʻrtasi sifatida $I$ da yotadi.\n\nU holda $\\sum_{i=1}^{n}w_ix_i=Wz+w_nx_n$, ikki nuqtali taʼrif esa $$f\\left(Wz+w_nx_n\\right)\\ \\le\\ W f(z)+w_nf(x_n)$$ ni beradi.\n\nYigʻindisi $1$ boʻlgan $\\dfrac{w_i}{W}$ vaznlar bilan $f(z)$ ga induksiya farazini qoʻllaymiz: $$f(z)\\ \\le\\ \\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i).$$\n\nOʻrniga qoʻysak, $$f\\left(\\sum w_ix_i\\right)\\le W\\sum_{i=1}^{n-1}\\frac{w_i}{W}f(x_i)+w_nf(x_n)=\\sum_{i=1}^{n}w_if(x_i) \\quad\\checkmark\\qquad\\blacksquare$$\n\n$f$ qatʼiy qavariq boʻlganda tenglik nolga teng boʻlmagan vaznli barcha $x_i$ larning ustma-ust tushishini majbur qiladi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Выведите неравенство о средних $\\dfrac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$ из неравенства Йенсена.",
-      "en": "Derive AM–GM, $\\dfrac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$, from Jensen inequality."
+      "en": "Derive AM–GM, $\\dfrac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$, from Jensen inequality.",
+      "uz": "Yensen tengsizligidan $\\dfrac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$ tengsizligini keltirib chiqaring."
      },
      "steps": {
       "ru": [
@@ -875,18 +1069,27 @@ window.LESSONS[6] = {
        "The right side equals $\\ln\\sqrt[n]{a_1\\cdots a_n}$ by the logarithm laws.",
        "The logarithm is strictly increasing, so $\\ln A\\ge\\ln G$ gives $A\\ge G$ ✓",
        "Strict concavity makes equality possible only when $a_1=\\dots=a_n$."
+      ],
+      "uz": [
+       "$(0,+\\infty)$ da $f(x)=\\ln x$ ni olamiz. U **botiq**: $f^{\\prime\\prime}(x)=-\\dfrac1{x^{2}}<0$.",
+       "Botiq funksiya uchun teng vaznli Yensen: $$\\ln\\!\\left(\\frac{a_1+\\dots+a_n}{n}\\right)\\ \\ge\\ \\frac{\\ln a_1+\\dots+\\ln a_n}{n}.$$",
+       "Logarifm xossalariga koʻra oʻng tomon $\\ln\\sqrt[n]{a_1\\cdots a_n}$ ga teng.",
+       "Logarifm qatʼiy oʻsuvchi, demak $\\ln A\\ge\\ln G$ dan $A\\ge G$ ✓",
+       "Qatʼiy botiqlik tenglikni faqat $a_1=\\dots=a_n$ da mumkin qiladi."
       ]
      },
      "ans": {
       "ru": "Йенсен для $\\ln x$ — это в точности $A\\ge G$.",
-      "en": "Jensen for $\\ln x$ is exactly $A\\ge G$."
+      "en": "Jensen for $\\ln x$ is exactly $A\\ge G$.",
+      "uz": "$\\ln x$ uchun Yensen — bu aynan $A\\ge G$."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "В треугольнике докажите, что $\\sin A+\\sin B+\\sin C\\le\\dfrac{3\\sqrt3}{2}$.",
-      "en": "In a triangle prove that $\\sin A+\\sin B+\\sin C\\le\\dfrac{3\\sqrt3}{2}$."
+      "en": "In a triangle prove that $\\sin A+\\sin B+\\sin C\\le\\dfrac{3\\sqrt3}{2}$.",
+      "uz": "Uchburchakda $\\sin A+\\sin B+\\sin C\\le\\dfrac{3\\sqrt3}{2}$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -900,29 +1103,39 @@ window.LESSONS[6] = {
        "Jensen for a concave function: $$\\frac{\\sin A+\\sin B+\\sin C}{3}\\ \\le\\ \\sin\\!\\left(\\frac{A+B+C}{3}\\right).$$",
        "In a triangle $A+B+C=\\pi$, so the right side is $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt3}{2}$.",
        "Multiply by $3$: the sum is at most $\\dfrac{3\\sqrt3}{2}$ ✓ Equality for the equilateral triangle."
+      ],
+      "uz": [
+       "Burchaklar $(0,\\pi)$ da yotadi, u yerda $\\sin$ botiq: $(\\sin x)^{\\prime\\prime}=-\\sin x\\le0$.",
+       "Botiq funksiya uchun Yensen: $$\\frac{\\sin A+\\sin B+\\sin C}{3}\\ \\le\\ \\sin\\!\\left(\\frac{A+B+C}{3}\\right).$$",
+       "Uchburchakda $A+B+C=\\pi$, demak oʻng tomon $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt3}{2}$.",
+       "$3$ ga koʻpaytiramiz: yigʻindi $\\dfrac{3\\sqrt3}{2}$ dan oshmaydi ✓ Tenglik teng tomonli uchburchakda."
       ]
      },
      "ans": {
       "ru": "$\\le\\dfrac{3\\sqrt3}{2}$, равенство при $A=B=C=60^{\\circ}$.",
-      "en": "$\\le\\dfrac{3\\sqrt3}{2}$, equality when $A=B=C=60^{\\circ}$."
+      "en": "$\\le\\dfrac{3\\sqrt3}{2}$, equality when $A=B=C=60^{\\circ}$.",
+      "uz": "$\\le\\dfrac{3\\sqrt3}{2}$, tenglik $A=B=C=60^{\\circ}$ da."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Касательная как оценка",
-      "en": "The tangent line trick"
+      "en": "The tangent line trick",
+      "uz": "Urinma orqali baholash"
      },
      "text": {
       "ru": "Если $f$ выпукла и дифференцируема на $I$, то её график лежит **не ниже любой касательной**: $$f(x)\\ \\ge\\ f(t)+f^{\\prime}(t)\\left(x-t\\right)\\qquad\\text{для всех }x,t\\in I .$$",
-      "en": "If $f$ is convex and differentiable on $I$ then its graph lies **on or above every tangent line**: $$f(x)\\ \\ge\\ f(t)+f^{\\prime}(t)\\left(x-t\\right)\\qquad\\text{for all }x,t\\in I .$$"
+      "en": "If $f$ is convex and differentiable on $I$ then its graph lies **on or above every tangent line**: $$f(x)\\ \\ge\\ f(t)+f^{\\prime}(t)\\left(x-t\\right)\\qquad\\text{for all }x,t\\in I .$$",
+      "uz": "Agar $f$ $I$ da qavariq va differensiallanuvchi boʻlsa, uning grafigi **har bir urinmadan pastda yotmaydi**: $$f(x)\\ \\ge\\ f(t)+f^{\\prime}(t)\\left(x-t\\right)\\qquad\\text{barcha }x,t\\in I \\text{ uchun}.$$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Это самый практичный приём во всей теме. Пусть требуется доказать $\\sum f(x_i)\\ge C$ при условии $\\sum x_i=S$. Найдите предполагаемую точку равенства $t=\\dfrac{S}{n}$, проведите касательную в ней и докажите поточечную оценку $$f(x)\\ \\ge\\ \\alpha x+\\beta$$ обычной алгеброй. Просуммировав её по всем $i$, получаем $\\sum f(x_i)\\ge\\alpha S+n\\beta$ — и задача решена одной строкой.",
-      "en": "This is the most practical technique in the whole topic. Suppose you must prove $\\sum f(x_i)\\ge C$ subject to $\\sum x_i=S$. Guess the equality point $t=\\dfrac{S}{n}$, draw the tangent there, and prove the pointwise bound $$f(x)\\ \\ge\\ \\alpha x+\\beta$$ by ordinary algebra. Summing over $i$ gives $\\sum f(x_i)\\ge\\alpha S+n\\beta$, and the problem is finished in one line."
+      "en": "This is the most practical technique in the whole topic. Suppose you must prove $\\sum f(x_i)\\ge C$ subject to $\\sum x_i=S$. Guess the equality point $t=\\dfrac{S}{n}$, draw the tangent there, and prove the pointwise bound $$f(x)\\ \\ge\\ \\alpha x+\\beta$$ by ordinary algebra. Summing over $i$ gives $\\sum f(x_i)\\ge\\alpha S+n\\beta$, and the problem is finished in one line.",
+      "uz": "Bu butun mavzudagi eng amaliy usul. Aytaylik, $\\sum x_i=S$ sharti ostida $\\sum f(x_i)\\ge C$ ni isbotlash kerak. Tenglik nuqtasini $t=\\dfrac{S}{n}$ deb taxmin qiling, oʻsha yerda urinma oʻtkazing va oddiy algebra bilan nuqtaviy bahoni $$f(x)\\ \\ge\\ \\alpha x+\\beta$$ isbotlang. Uni $i$ boʻyicha yigʻsak $\\sum f(x_i)\\ge\\alpha S+n\\beta$ chiqadi va masala bir qatorda tugaydi."
      }
     }
    ]
@@ -938,40 +1151,47 @@ window.LESSONS[6] = {
      "t": "idea",
      "name": {
       "ru": "Приём 1: угадайте точку равенства",
-      "en": "Move 1: guess the equality point"
+      "en": "Move 1: guess the equality point",
+      "uz": "1-usul: tenglik nuqtasini taxmin qiling"
      },
      "text": {
       "ru": "Прежде чем что-то доказывать, найдите, при каких значениях достигается равенство. Обычно это $a=b=c$ или значения, подсказанные условием. Точка равенства говорит, **какое** неравенство применять: любое ваше промежуточное неравенство должно обращаться в равенство в той же точке, иначе оценка будет слишком грубой.",
-      "en": "Before proving anything, find where equality is attained. Usually that is $a=b=c$, or values suggested by the hypothesis. The equality point tells you **which** inequality to use: every intermediate step must become an equality at the same point, otherwise the bound is too weak."
+      "en": "Before proving anything, find where equality is attained. Usually that is $a=b=c$, or values suggested by the hypothesis. The equality point tells you **which** inequality to use: every intermediate step must become an equality at the same point, otherwise the bound is too weak.",
+      "uz": "Biror narsani isbotlashdan oldin tenglik qayerda erishilishini toping. Odatda bu $a=b=c$ yoki shartdan kelib chiqadigan qiymatlar. Tenglik nuqtasi **qaysi** tengsizlikni ishlatish kerakligini aytadi: har bir oraliq qadam xuddi shu nuqtada tenglikka aylanishi kerak, aks holda baho juda kuchsiz boʻladi."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Приём 2: используйте условие до конца",
-      "en": "Move 2: spend the hypothesis"
+      "en": "Move 2: spend the hypothesis",
+      "uz": "2-usul: shartni sarflang"
      },
      "text": {
       "ru": "Если дано $abc=1$ или $a+b+c=1$, это не украшение, а инструмент. Условие $a+b+c=1$ позволяет заменить единицу на $a+b+c$ в любом месте — и наоборот. Условие $abc=1$ позволяет писать $\\tfrac1a=bc$.",
-      "en": "A hypothesis like $abc=1$ or $a+b+c=1$ is not decoration, it is a tool. The condition $a+b+c=1$ lets you replace $1$ by $a+b+c$ anywhere — and back. The condition $abc=1$ lets you write $\\tfrac1a=bc$."
+      "en": "A hypothesis like $abc=1$ or $a+b+c=1$ is not decoration, it is a tool. The condition $a+b+c=1$ lets you replace $1$ by $a+b+c$ anywhere — and back. The condition $abc=1$ lets you write $\\tfrac1a=bc$.",
+      "uz": "$abc=1$ yoki $a+b+c=1$ kabi shart bezak emas, qurol. $a+b+c=1$ sharti istalgan joyda $1$ ni $a+b+c$ bilan — va aksincha — almashtirishga imkon beradi. $abc=1$ sharti esa $\\tfrac1a=bc$ deb yozishga imkon beradi."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Приём 3: складывайте однотипные неравенства",
-      "en": "Move 3: add up parallel inequalities"
+      "en": "Move 3: add up parallel inequalities",
+      "uz": "3-usul: parallel tengsizliklarni qoʻshing"
      },
      "text": {
       "ru": "Симметричное неравенство часто разбивается на три одинаковых куска. Например, из $a^{2}+b^{2}\\ge2ab$, $b^{2}+c^{2}\\ge2bc$, $c^{2}+a^{2}\\ge2ca$ сложением получаем $2(a^{2}+b^{2}+c^{2})\\ge2(ab+bc+ca)$ — то самое неравенство из первого раздела, но за одну строку.",
-      "en": "A symmetric inequality often splits into three identical pieces. From $a^{2}+b^{2}\\ge2ab$, $b^{2}+c^{2}\\ge2bc$, $c^{2}+a^{2}\\ge2ca$, adding gives $2(a^{2}+b^{2}+c^{2})\\ge2(ab+bc+ca)$ — the inequality from the first section, in one line."
+      "en": "A symmetric inequality often splits into three identical pieces. From $a^{2}+b^{2}\\ge2ab$, $b^{2}+c^{2}\\ge2bc$, $c^{2}+a^{2}\\ge2ca$, adding gives $2(a^{2}+b^{2}+c^{2})\\ge2(ab+bc+ca)$ — the inequality from the first section, in one line.",
+      "uz": "Simmetrik tengsizlik koʻpincha uchta bir xil boʻlakka ajraladi. $a^{2}+b^{2}\\ge2ab$, $b^{2}+c^{2}\\ge2bc$, $c^{2}+a^{2}\\ge2ca$ ni qoʻshsak $2(a^{2}+b^{2}+c^{2})\\ge2(ab+bc+ca)$ chiqadi — birinchi boʻlimdagi tengsizlik, bir qatorda."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $(a+b)(b+c)(c+a)\\ge8abc$ для положительных $a,b,c$.",
-      "en": "Prove that $(a+b)(b+c)(c+a)\\ge8abc$ for positive $a,b,c$."
+      "en": "Prove that $(a+b)(b+c)(c+a)\\ge8abc$ for positive $a,b,c$.",
+      "uz": "Musbat $a,b,c$ uchun $(a+b)(b+c)(c+a)\\ge8abc$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -985,18 +1205,26 @@ window.LESSONS[6] = {
        "By AM–GM for two numbers: $a+b\\ge2\\sqrt{ab}$, $b+c\\ge2\\sqrt{bc}$, $c+a\\ge2\\sqrt{ca}$.",
        "All parts are positive, so the three may be multiplied: $$(a+b)(b+c)(c+a)\\ \\ge\\ 8\\sqrt{ab}\\cdot\\sqrt{bc}\\cdot\\sqrt{ca}=8\\sqrt{a^{2}b^{2}c^{2}}=8abc .$$",
        "Equality needs $a=b$, $b=c$ and $c=a$ at once, that is $a=b=c$."
+      ],
+      "uz": [
+       "Tenglikni $a=b=c$ da kutamiz — tekshiring: $2a\\cdot2a\\cdot2a=8a^{3}$ ✓",
+       "Ikki son uchun tengsizlikka koʻra: $a+b\\ge2\\sqrt{ab}$, $b+c\\ge2\\sqrt{bc}$, $c+a\\ge2\\sqrt{ca}$.",
+       "Barcha qismlar musbat, demak uchtasini koʻpaytirish mumkin: $$(a+b)(b+c)(c+a)\\ \\ge\\ 8\\sqrt{ab}\\cdot\\sqrt{bc}\\cdot\\sqrt{ca}=8\\sqrt{a^{2}b^{2}c^{2}}=8abc .$$",
+       "Tenglik uchun bir vaqtda $a=b$, $b=c$ va $c=a$, yaʼni $a=b=c$ kerak."
       ]
      },
      "ans": {
       "ru": "Доказано; равенство при $a=b=c$. $\\blacksquare$",
-      "en": "Proved; equality when $a=b=c$. $\\blacksquare$"
+      "en": "Proved; equality when $a=b=c$. $\\blacksquare$",
+      "uz": "Isbotlandi; tenglik $a=b=c$ da. $\\blacksquare$"
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Перемножать неравенства можно **только когда все части положительны**. Из $-5>-7$ и $2>1$ перемножением получилось бы $-10>-7$ — неверно. В олимпиадных задачах об этом почти всегда сказано («для положительных $a,b,c$»), но написать «все части положительны, поэтому перемножаем» стоит: это строчка, за которую дают балл.",
-      "en": "Inequalities may be multiplied **only when all parts are positive**. From $-5>-7$ and $2>1$, multiplying would give $-10>-7$, which is false. Olympiad problems almost always say \"for positive $a,b,c$\", but write out \"all parts are positive, so we may multiply\" — that is a line worth a mark."
+      "en": "Inequalities may be multiplied **only when all parts are positive**. From $-5>-7$ and $2>1$, multiplying would give $-10>-7$, which is false. Olympiad problems almost always say \"for positive $a,b,c$\", but write out \"all parts are positive, so we may multiply\" — that is a line worth a mark.",
+      "uz": "Tengsizliklarni **faqat barcha qismlar musbat boʻlgandagina** koʻpaytirish mumkin. $-5>-7$ va $2>1$ ni koʻpaytirsak $-10>-7$ chiqar edi, bu esa notoʻgʻri. Olimpiada masalalarida deyarli har doim «musbat $a,b,c$ uchun» deyiladi, ammo «barcha qismlar musbat, demak koʻpaytirishimiz mumkin» deb yozing — bu ballga arzigulik qator."
      }
     }
    ]
@@ -1012,25 +1240,29 @@ window.LESSONS[6] = {
      "t": "p",
      "text": {
       "ru": "Ниже собраны приёмы, которые отличают уверенное решение олимпиадного неравенства от долгого перебора. Каждый из них стоит один раз разобрать до конца — дальше они узнаются мгновенно.",
-      "en": "The techniques below separate a confident solution of an olympiad inequality from a long search. Each is worth working through once; after that you recognise them instantly."
+      "en": "The techniques below separate a confident solution of an olympiad inequality from a long search. Each is worth working through once; after that you recognise them instantly.",
+      "uz": "Quyidagi usullar olimpiada tengsizligining ishonchli yechimini uzoq qidiruvdan ajratadi. Har birini bir marta oxirigacha koʻrib chiqishga arziydi; keyin siz ularni bir zumda tanib olasiz."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Метод SOS (сумма квадратов)",
-      "en": "The SOS (sum of squares) method"
+      "en": "The SOS (sum of squares) method",
+      "uz": "SOS (kvadratlar yigʻindisi) usuli"
      },
      "text": {
       "ru": "Многие симметричные неравенства для трёх переменных приводятся к виду $$S_a\\left(b-c\\right)^{2}+S_b\\left(c-a\\right)^{2}+S_c\\left(a-b\\right)^{2}\\ \\ge\\ 0 ,$$ где $S_a,S_b,S_c$ — выражения от $a,b,c$. Если все три коэффициента неотрицательны, неравенство доказано.",
-      "en": "Many symmetric three-variable inequalities can be brought to the form $$S_a\\left(b-c\\right)^{2}+S_b\\left(c-a\\right)^{2}+S_c\\left(a-b\\right)^{2}\\ \\ge\\ 0 ,$$ where $S_a,S_b,S_c$ are expressions in $a,b,c$. If all three coefficients are non-negative, the inequality is proved."
+      "en": "Many symmetric three-variable inequalities can be brought to the form $$S_a\\left(b-c\\right)^{2}+S_b\\left(c-a\\right)^{2}+S_c\\left(a-b\\right)^{2}\\ \\ge\\ 0 ,$$ where $S_a,S_b,S_c$ are expressions in $a,b,c$. If all three coefficients are non-negative, the inequality is proved.",
+      "uz": "Uch oʻzgaruvchili koʻp simmetrik tengsizlikni $$S_a\\left(b-c\\right)^{2}+S_b\\left(c-a\\right)^{2}+S_c\\left(a-b\\right)^{2}\\ \\ge\\ 0$$ koʻrinishiga keltirish mumkin, bunda $S_a,S_b,S_c$ — $a,b,c$ ga bogʻliq ifodalar. Agar uchala koeffitsiyent ham manfiy boʻlmasa, tengsizlik isbotlangan."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$, и найдите точную величину разности.",
-      "en": "Prove that $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ and identify the exact size of the gap."
+      "en": "Prove that $a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ and identify the exact size of the gap.",
+      "uz": "$a^{2}+b^{2}+c^{2}\\ge ab+bc+ca$ ekanini isbotlang va zaxiraning aniq kattaligini aniqlang."
      },
      "steps": {
       "ru": [
@@ -1044,61 +1276,76 @@ window.LESSONS[6] = {
        "Group in pairs: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$",
        "This is exactly $\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\ \\ge\\ 0$ ✓",
        "So the gap equals $\\tfrac12\\left[\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\right]$ — the SOS form with $S_a=S_b=S_c=\\tfrac12$."
+      ],
+      "uz": [
+       "$2$ ga koʻpaytiramiz va hamma narsani chapga oʻtkazamiz: $$2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca\\ \\ge\\ 0 .$$",
+       "Juftlab guruhlaymiz: $$\\left(a^{2}-2ab+b^{2}\\right)+\\left(b^{2}-2bc+c^{2}\\right)+\\left(c^{2}-2ca+a^{2}\\right).$$",
+       "Bu aynan $\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\ \\ge\\ 0$ ✓",
+       "Demak zaxira $\\tfrac12\\left[\\left(a-b\\right)^{2}+\\left(b-c\\right)^{2}+\\left(c-a\\right)^{2}\\right]$ ga teng — bu $S_a=S_b=S_c=\\tfrac12$ boʻlgan SOS shakli."
       ]
      },
      "ans": {
       "ru": "Разность равна $\\tfrac12\\sum\\left(a-b\\right)^{2}$.",
-      "en": "The gap equals $\\tfrac12\\sum\\left(a-b\\right)^{2}$."
+      "en": "The gap equals $\\tfrac12\\sum\\left(a-b\\right)^{2}$.",
+      "uz": "Zaxira $\\tfrac12\\sum\\left(a-b\\right)^{2}$ ga teng."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Неравенство Шура",
-      "en": "Schur inequality"
+      "en": "Schur inequality",
+      "uz": "Shur tengsizligi"
      },
      "text": {
       "ru": "Для неотрицательных $a,b,c$ и любого $t>0$ $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)+c^{t}\\left(c-a\\right)\\left(c-b\\right)\\ \\ge\\ 0 .$$ Случай $t=1$ после раскрытия скобок даёт $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b .$$",
-      "en": "For non-negative $a,b,c$ and any $t>0$ $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)+c^{t}\\left(c-a\\right)\\left(c-b\\right)\\ \\ge\\ 0 .$$ The case $t=1$ expands to $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b .$$"
+      "en": "For non-negative $a,b,c$ and any $t>0$ $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)+c^{t}\\left(c-a\\right)\\left(c-b\\right)\\ \\ge\\ 0 .$$ The case $t=1$ expands to $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b .$$",
+      "uz": "Manfiy boʻlmagan $a,b,c$ va istalgan $t>0$ uchun $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)+c^{t}\\left(c-a\\right)\\left(c-b\\right)\\ \\ge\\ 0 .$$ $t=1$ holi ochilganda $$a^{3}+b^{3}+c^{3}+3abc\\ \\ge\\ a^{2}b+a^{2}c+b^{2}a+b^{2}c+c^{2}a+c^{2}b$$ ni beradi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Неравенство симметрично, поэтому можно считать $a\\ge b\\ge c\\ge0$. Сгруппируем первые два слагаемых, вынеся общий множитель $\\left(a-b\\right)$: $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)=\\left(a-b\\right)\\left[a^{t}\\left(a-c\\right)-b^{t}\\left(b-c\\right)\\right].$$\n\nИз $a\\ge b$ следует $a^{t}\\ge b^{t}$ и $a-c\\ge b-c\\ge0$, поэтому квадратная скобка неотрицательна, а множитель $\\left(a-b\\right)$ неотрицателен. Значит сумма первых двух слагаемых $\\ge0$.\n\nТретье слагаемое равно $c^{t}\\left(c-a\\right)\\left(c-b\\right)$; оба множителя $\\left(c-a\\right)$ и $\\left(c-b\\right)$ неположительны, значит их произведение неотрицательно, и всё слагаемое $\\ge0$.\n\nСумма двух неотрицательных величин неотрицательна ✓ $\\blacksquare$",
-      "en": "The expression is symmetric, so assume $a\\ge b\\ge c\\ge0$. Group the first two terms, pulling out $\\left(a-b\\right)$: $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)=\\left(a-b\\right)\\left[a^{t}\\left(a-c\\right)-b^{t}\\left(b-c\\right)\\right].$$\n\nFrom $a\\ge b$ we get $a^{t}\\ge b^{t}$ and $a-c\\ge b-c\\ge0$, so the bracket is non-negative, and $\\left(a-b\\right)\\ge0$. Hence the first two terms together are $\\ge0$.\n\nThe third term is $c^{t}\\left(c-a\\right)\\left(c-b\\right)$; both factors $\\left(c-a\\right)$ and $\\left(c-b\\right)$ are non-positive, so their product is non-negative and the term is $\\ge0$.\n\nA sum of two non-negative quantities is non-negative ✓ $\\blacksquare$"
+      "en": "The expression is symmetric, so assume $a\\ge b\\ge c\\ge0$. Group the first two terms, pulling out $\\left(a-b\\right)$: $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)=\\left(a-b\\right)\\left[a^{t}\\left(a-c\\right)-b^{t}\\left(b-c\\right)\\right].$$\n\nFrom $a\\ge b$ we get $a^{t}\\ge b^{t}$ and $a-c\\ge b-c\\ge0$, so the bracket is non-negative, and $\\left(a-b\\right)\\ge0$. Hence the first two terms together are $\\ge0$.\n\nThe third term is $c^{t}\\left(c-a\\right)\\left(c-b\\right)$; both factors $\\left(c-a\\right)$ and $\\left(c-b\\right)$ are non-positive, so their product is non-negative and the term is $\\ge0$.\n\nA sum of two non-negative quantities is non-negative ✓ $\\blacksquare$",
+      "uz": "Ifoda simmetrik, shuning uchun $a\\ge b\\ge c\\ge0$ deb faraz qilamiz. Dastlabki ikki hadni guruhlab $\\left(a-b\\right)$ ni chiqaramiz: $$a^{t}\\left(a-b\\right)\\left(a-c\\right)+b^{t}\\left(b-a\\right)\\left(b-c\\right)=\\left(a-b\\right)\\left[a^{t}\\left(a-c\\right)-b^{t}\\left(b-c\\right)\\right].$$\n\n$a\\ge b$ dan $a^{t}\\ge b^{t}$ va $a-c\\ge b-c\\ge0$, demak kvadrat qavs manfiy emas, $\\left(a-b\\right)\\ge0$ ham. Shuning uchun dastlabki ikki had birgalikda $\\ge0$.\n\nUchinchi had $c^{t}\\left(c-a\\right)\\left(c-b\\right)$; $\\left(c-a\\right)$ va $\\left(c-b\\right)$ koʻpaytuvchilarining ikkalasi ham musbat emas, demak ularning koʻpaytmasi manfiy emas va had $\\ge0$.\n\nIkkita manfiy boʻlmagan kattalikning yigʻindisi manfiy emas ✓ $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Подстановка Рави",
-      "en": "The Ravi substitution"
+      "en": "The Ravi substitution",
+      "uz": "Ravi almashtirishi"
      },
      "text": {
       "ru": "Числа $a,b,c$ являются сторонами треугольника тогда и только тогда, когда существуют $x,y,z>0$ с $$a=y+z,\\qquad b=z+x,\\qquad c=x+y .$$",
-      "en": "Numbers $a,b,c$ are the sides of a triangle if and only if there exist $x,y,z>0$ with $$a=y+z,\\qquad b=z+x,\\qquad c=x+y .$$"
+      "en": "Numbers $a,b,c$ are the sides of a triangle if and only if there exist $x,y,z>0$ with $$a=y+z,\\qquad b=z+x,\\qquad c=x+y .$$",
+      "uz": "$a,b,c$ sonlari uchburchak tomonlari boʻlishi uchun $$a=y+z,\\qquad b=z+x,\\qquad c=x+y$$ boʻladigan $x,y,z>0$ mavjud boʻlishi zarur va yetarli."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Если такие $x,y,z$ есть,** то $$b+c=\\left(z+x\\right)+\\left(x+y\\right)=a+2x>a ,$$ и аналогично для двух других неравенств треугольника ✓\n\n**Обратно.** Пусть $a,b,c$ — стороны треугольника, положим $$x=\\frac{b+c-a}{2},\\qquad y=\\frac{c+a-b}{2},\\qquad z=\\frac{a+b-c}{2}.$$ Все три положительны в точности по неравенствам треугольника, и прямая проверка даёт $y+z=a$, $z+x=b$, $x+y=c$ ✓ $\\blacksquare$\n\n(Геометрически $x,y,z$ — это отрезки от вершин до точек касания вписанной окружности.)",
-      "en": "**If such $x,y,z$ exist** then $$b+c=\\left(z+x\\right)+\\left(x+y\\right)=a+2x>a ,$$ and similarly for the other two triangle inequalities ✓\n\n**Conversely,** if $a,b,c$ are the sides of a triangle, set $$x=\\frac{b+c-a}{2},\\qquad y=\\frac{c+a-b}{2},\\qquad z=\\frac{a+b-c}{2}.$$ All three are positive exactly by the triangle inequalities, and a direct check gives $y+z=a$, $z+x=b$, $x+y=c$ ✓ $\\blacksquare$\n\n(Geometrically $x,y,z$ are the tangent lengths from the vertices to the incircle.)"
+      "en": "**If such $x,y,z$ exist** then $$b+c=\\left(z+x\\right)+\\left(x+y\\right)=a+2x>a ,$$ and similarly for the other two triangle inequalities ✓\n\n**Conversely,** if $a,b,c$ are the sides of a triangle, set $$x=\\frac{b+c-a}{2},\\qquad y=\\frac{c+a-b}{2},\\qquad z=\\frac{a+b-c}{2}.$$ All three are positive exactly by the triangle inequalities, and a direct check gives $y+z=a$, $z+x=b$, $x+y=c$ ✓ $\\blacksquare$\n\n(Geometrically $x,y,z$ are the tangent lengths from the vertices to the incircle.)",
+      "uz": "**Agar shunday $x,y,z$ mavjud boʻlsa,** $$b+c=\\left(z+x\\right)+\\left(x+y\\right)=a+2x>a ,$$ qolgan ikkita uchburchak tengsizligi uchun ham shunday ✓\n\n**Aksincha,** agar $a,b,c$ uchburchak tomonlari boʻlsa, $$x=\\frac{b+c-a}{2},\\qquad y=\\frac{c+a-b}{2},\\qquad z=\\frac{a+b-c}{2}$$ deb olamiz. Uchalasi ham aynan uchburchak tengsizliklari tufayli musbat, bevosita tekshirish esa $y+z=a$, $z+x=b$, $x+y=c$ ni beradi ✓ $\\blacksquare$\n\n(Geometrik maʼnoda $x,y,z$ — uchlardan ichki chizilgan aylanaga urinma kesmalar.)"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Подстановка Рави **снимает условие треугольника**: неудобное «$a,b,c$ — стороны треугольника» превращается в удобное «$x,y,z>0$», после чего работают обычные неравенство о средних и Коши–Буняковского.",
-      "en": "The Ravi substitution **removes the triangle condition**: the awkward hypothesis \"$a,b,c$ are sides of a triangle\" becomes the comfortable \"$x,y,z>0$\", after which ordinary AM–GM and Cauchy–Schwarz apply."
+      "en": "The Ravi substitution **removes the triangle condition**: the awkward hypothesis \"$a,b,c$ are sides of a triangle\" becomes the comfortable \"$x,y,z>0$\", after which ordinary AM–GM and Cauchy–Schwarz apply.",
+      "uz": "Ravi almashtirishi **uchburchak shartini olib tashlaydi**: noqulay «$a,b,c$ — uchburchak tomonlari» sharti qulay «$x,y,z>0$» ga aylanadi, shundan keyin odatdagi oʻrta qiymatlar va Koshi–Bunyakovskiy tengsizliklari ishlaydi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Пусть $a,b,c$ — стороны треугольника. Докажите, что $$a^{2}+b^{2}+c^{2}\\ <\\ 2\\left(ab+bc+ca\\right).$$",
-      "en": "Let $a,b,c$ be the sides of a triangle. Prove that $$a^{2}+b^{2}+c^{2}\\ <\\ 2\\left(ab+bc+ca\\right).$$"
+      "en": "Let $a,b,c$ be the sides of a triangle. Prove that $$a^{2}+b^{2}+c^{2}\\ <\\ 2\\left(ab+bc+ca\\right).$$",
+      "uz": "$a,b,c$ — uchburchak tomonlari boʻlsin. $$a^{2}+b^{2}+c^{2}\\ <\\ 2\\left(ab+bc+ca\\right)$$ ekanini isbotlang."
      },
      "steps": {
       "ru": [
@@ -1114,29 +1361,40 @@ window.LESSONS[6] = {
        "Right side: $ab+bc+ca=\\left(x^{2}+y^{2}+z^{2}\\right)+3\\left(xy+yz+zx\\right)$, so twice it is $2\\left(x^{2}+y^{2}+z^{2}\\right)+6\\left(xy+yz+zx\\right)$.",
        "The difference is $4\\left(xy+yz+zx\\right)>0$ because $x,y,z>0$ ✓",
        "The inequality is strict: degenerate triangles are excluded by $x,y,z>0$."
+      ],
+      "uz": [
+       "$x,y,z>0$ bilan $a=y+z$, $b=z+x$, $c=x+y$ qoʻyamiz.",
+       "Chap tomon: $$\\sum\\left(y+z\\right)^{2}=2\\left(x^{2}+y^{2}+z^{2}\\right)+2\\left(xy+yz+zx\\right).$$",
+       "Oʻng tomon: $ab+bc+ca=\\left(x^{2}+y^{2}+z^{2}\\right)+3\\left(xy+yz+zx\\right)$, demak uning ikki barobari $2\\left(x^{2}+y^{2}+z^{2}\\right)+6\\left(xy+yz+zx\\right)$.",
+       "Ayirma $4\\left(xy+yz+zx\\right)>0$, chunki $x,y,z>0$ ✓",
+       "Tengsizlik qatʼiy: $x,y,z>0$ sharti aynigan uchburchaklarni istisno qiladi."
       ]
      },
      "ans": {
       "ru": "Разность равна $4\\left(xy+yz+zx\\right)>0$.",
-      "en": "The gap equals $4\\left(xy+yz+zx\\right)>0$."
+      "en": "The gap equals $4\\left(xy+yz+zx\\right)>0$.",
+      "uz": "Zaxira $4\\left(xy+yz+zx\\right)>0$ ga teng."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Однородизация и нормировка",
-      "en": "Homogenisation and normalisation"
+      "en": "Homogenisation and normalisation",
+      "uz": "Bir jinslilashtirish va normallashtirish"
      },
      "text": {
       "ru": "Неравенство называется **однородным степени $d$**, если замена $\\left(a,b,c\\right)\\to\\left(ta,tb,tc\\right)$ умножает обе части на $t^{d}$. Однородное неравенство можно доказывать при любом удобном дополнительном условии вида $a+b+c=3$ или $abc=1$: масштабирование сводит общий случай к нему.\n\nОбратно, если в условии дано, например, $a+b+c=1$, а неравенство неоднородно, его можно **однородизировать**, домножая слагаемые на подходящие степени $\\left(a+b+c\\right)$.",
-      "en": "An inequality is **homogeneous of degree $d$** if replacing $\\left(a,b,c\\right)$ by $\\left(ta,tb,tc\\right)$ multiplies both sides by $t^{d}$. A homogeneous inequality may be proved under any convenient extra condition such as $a+b+c=3$ or $abc=1$: scaling reduces the general case to it.\n\nConversely, if the hypothesis is $a+b+c=1$ and the inequality is not homogeneous, you can **homogenise** it by multiplying terms by suitable powers of $\\left(a+b+c\\right)$."
+      "en": "An inequality is **homogeneous of degree $d$** if replacing $\\left(a,b,c\\right)$ by $\\left(ta,tb,tc\\right)$ multiplies both sides by $t^{d}$. A homogeneous inequality may be proved under any convenient extra condition such as $a+b+c=3$ or $abc=1$: scaling reduces the general case to it.\n\nConversely, if the hypothesis is $a+b+c=1$ and the inequality is not homogeneous, you can **homogenise** it by multiplying terms by suitable powers of $\\left(a+b+c\\right)$.",
+      "uz": "Agar $\\left(a,b,c\\right)$ ni $\\left(ta,tb,tc\\right)$ bilan almashtirish ikkala tomonni ham $t^{d}$ ga koʻpaytirsa, tengsizlik **$d$-darajali bir jinsli** deyiladi. Bir jinsli tengsizlikni $a+b+c=3$ yoki $abc=1$ kabi istalgan qulay qoʻshimcha shart ostida isbotlash mumkin: masshtablash umumiy holni shunga keltiradi.\n\nAksincha, agar shart $a+b+c=1$ boʻlib, tengsizlik bir jinsli boʻlmasa, hadlarni $\\left(a+b+c\\right)$ ning mos darajalariga koʻpaytirib uni **bir jinslilashtirish** mumkin."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Неравенство Мюрхеда.** Для симметричных сумм одночленов существует общий критерий: если последовательность показателей $\\left(p_1,\\dots,p_n\\right)$ мажорирует $\\left(q_1,\\dots,q_n\\right)$ (упорядочив обе по убыванию, частичные суммы первой не меньше, а полные суммы равны), то соответствующая симметричная сумма не меньше. Так $\\sum_{\\text{sym}}a^{3}\\ \\ge\\ \\sum_{\\text{sym}}a^{2}b\\ \\ge\\ \\sum_{\\text{sym}}abc$. На олимпиаде ссылку на Мюрхеда обычно стоит сопровождать прямым доказательством через неравенство о средних.",
-      "en": "**Muirhead inequality.** For symmetric sums of monomials there is a general criterion: if the exponent sequence $\\left(p_1,\\dots,p_n\\right)$ majorises $\\left(q_1,\\dots,q_n\\right)$ (sorted decreasingly, the partial sums of the first are at least those of the second, and the totals are equal) then the corresponding symmetric sum is at least as large. Thus $\\sum_{\\text{sym}}a^{3}\\ \\ge\\ \\sum_{\\text{sym}}a^{2}b\\ \\ge\\ \\sum_{\\text{sym}}abc$. At an olympiad it is wise to back a citation of Muirhead with a direct AM–GM argument."
+      "en": "**Muirhead inequality.** For symmetric sums of monomials there is a general criterion: if the exponent sequence $\\left(p_1,\\dots,p_n\\right)$ majorises $\\left(q_1,\\dots,q_n\\right)$ (sorted decreasingly, the partial sums of the first are at least those of the second, and the totals are equal) then the corresponding symmetric sum is at least as large. Thus $\\sum_{\\text{sym}}a^{3}\\ \\ge\\ \\sum_{\\text{sym}}a^{2}b\\ \\ge\\ \\sum_{\\text{sym}}abc$. At an olympiad it is wise to back a citation of Muirhead with a direct AM–GM argument.",
+      "uz": "**Myurxed tengsizligi.** Bir hadlarning simmetrik yigʻindilari uchun umumiy mezon bor: agar $\\left(p_1,\\dots,p_n\\right)$ koʻrsatkichlar ketma-ketligi $\\left(q_1,\\dots,q_n\\right)$ ni mayoratsiya qilsa (kamayish tartibida saralanganda birinchisining qismiy yigʻindilari ikkinchisinikidan kam emas, toʻliq yigʻindilari esa teng), u holda mos simmetrik yigʻindi ham kam emas. Shunday qilib $\\sum_{\\text{sym}}a^{3}\\ \\ge\\ \\sum_{\\text{sym}}a^{2}b\\ \\ge\\ \\sum_{\\text{sym}}abc$. Olimpiadada Myurxedga havolani bevosita oʻrta qiymatlar mulohazasi bilan mustahkamlagan maʼqul."
      }
     },
     {
@@ -1149,6 +1407,10 @@ window.LESSONS[6] = {
       "en": [
        "What you see",
        "What to try"
+      ],
+      "uz": [
+       "Nima koʻrinadi",
+       "Nimani sinash kerak"
       ]
      },
      "rows": {
@@ -1210,6 +1472,36 @@ window.LESSONS[6] = {
        [
         "different powers of one variable",
         "power means"
+       ]
+      ],
+      "uz": [
+       [
+        "$\\frac{x_i^{2}}{y_i}$ kasrlar yigʻindisi",
+        "Koshi, Engel shaklida"
+       ],
+       [
+        "qatʼiy koʻpaytma yoki qatʼiy yigʻindi",
+        "oʻrta qiymatlar, normallashtirish"
+       ],
+       [
+        "simmetriya, tenglik $a=b=c$ da",
+        "SOS, Shur"
+       ],
+       [
+        "$a,b,c$ — uchburchak tomonlari",
+        "Ravi almashtirishi"
+       ],
+       [
+        "har bir oʻzgaruvchidan bitta funksiya",
+        "Yensen yoki urinma"
+       ],
+       [
+        "bir xil tartiblangan ikkita yigʻindi",
+        "Chebishyov, qayta tartiblash"
+       ],
+       [
+        "bitta oʻzgaruvchining turli darajalari",
+        "darajali oʻrtalar"
        ]
       ]
      }

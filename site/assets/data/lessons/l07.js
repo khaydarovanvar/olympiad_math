@@ -45,25 +45,29 @@ window.LESSONS[7] = {
      "t": "def",
      "name": {
       "ru": "Последовательность",
-      "en": "Sequence"
+      "en": "Sequence",
+      "uz": "Ketma-ketlik"
      },
      "text": {
       "ru": "**Последовательность** — это занумерованный набор чисел $a_1,a_2,a_3,\\dots$ Задать её можно двумя способами: **формулой общего члена** (например, $a_n=n^{2}$) или **рекуррентно** — указав первые члены и правило, по которому каждый следующий получается из предыдущих (например, $a_1=1$, $a_{n+1}=2a_n+1$).",
-      "en": "A **sequence** is a numbered list of numbers $a_1,a_2,a_3,\\dots$ It can be given in two ways: by a **closed formula** (for example $a_n=n^{2}$) or **recursively** — by naming the first terms and the rule producing each next one from the previous ones (for example $a_1=1$, $a_{n+1}=2a_n+1$)."
+      "en": "A **sequence** is a numbered list of numbers $a_1,a_2,a_3,\\dots$ It can be given in two ways: by a **closed formula** (for example $a_n=n^{2}$) or **recursively** — by naming the first terms and the rule producing each next one from the previous ones (for example $a_1=1$, $a_{n+1}=2a_n+1$).",
+      "uz": "**Ketma-ketlik** — bu nomerlangan sonlar roʻyxati $a_1,a_2,a_3,\\dots$ Uni ikki usulda berish mumkin: **yopiq formula** bilan (masalan, $a_n=n^{2}$) yoki **rekurrent** usulda — dastlabki hadlarni va har bir keyingi hadni oldingilaridan hosil qiluvchi qoidani koʻrsatib (masalan, $a_1=1$, $a_{n+1}=2a_n+1$)."
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Рекуррентное задание считать легко, но неудобно: чтобы узнать $a_{100}$, придётся пройти сто шагов. Поэтому типичная задача звучит так: **дана рекуррента — найдите формулу общего члена**. Иногда её удаётся угадать по первым членам, а затем доказать индукцией.",
-      "en": "A recursive definition is easy to compute with but awkward: to reach $a_{100}$ you must take a hundred steps. So the typical problem reads: **given a recurrence, find the closed formula**. Often it can be guessed from the first few terms and then proved by induction."
+      "en": "A recursive definition is easy to compute with but awkward: to reach $a_{100}$ you must take a hundred steps. So the typical problem reads: **given a recurrence, find the closed formula**. Often it can be guessed from the first few terms and then proved by induction.",
+      "uz": "Rekurrent taʼrif bilan hisoblash oson, lekin u noqulay: $a_{100}$ ga yetish uchun yuz qadam qilish kerak. Shuning uchun odatdagi masala shunday yangraydi: **rekurrent munosabat berilgan, yopiq formulani toping**. Koʻpincha uni dastlabki bir necha haddan taxmin qilib, soʻng induksiya bilan isbotlash mumkin."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Последовательность задана условиями $a_1=1$ и $a_{n+1}=2a_n+1$. Найдите формулу общего члена.",
-      "en": "A sequence is given by $a_1=1$ and $a_{n+1}=2a_n+1$. Find a closed formula."
+      "en": "A sequence is given by $a_1=1$ and $a_{n+1}=2a_n+1$. Find a closed formula.",
+      "uz": "Ketma-ketlik $a_1=1$ va $a_{n+1}=2a_n+1$ bilan berilgan. Yopiq formulani toping."
      },
      "steps": {
       "ru": [
@@ -81,6 +85,14 @@ window.LESSONS[7] = {
        "**Base.** $a_1=2^{1}-1=1$ ✓",
        "**Step.** Suppose $a_n=2^{n}-1$. Then $$a_{n+1}=2\\left(2^{n}-1\\right)+1=2^{n+1}-2+1=2^{n+1}-1,$$ so the formula holds for $n+1$ too.",
        "By induction it holds for every $n$."
+      ],
+      "uz": [
+       "Dastlabki hadlarni yozamiz: $1,\\ 3,\\ 7,\\ 15,\\ 31,\\ 63,\\dots$",
+       "Har biri ikkining darajasidan bir kam: $2-1,\\ 4-1,\\ 8-1,\\ 16-1,\\dots$",
+       "Taxmin: $a_n=2^{n}-1$.",
+       "**Baza.** $a_1=2^{1}-1=1$ ✓",
+       "**Qadam.** $a_n=2^{n}-1$ deb faraz qilamiz. Unda $$a_{n+1}=2\\left(2^{n}-1\\right)+1=2^{n+1}-2+1=2^{n+1}-1,$$ yaʼni formula $n+1$ uchun ham toʻgʻri.",
+       "Induksiya boʻyicha u har bir $n$ uchun bajariladi."
       ]
      },
      "ans": {
@@ -92,43 +104,50 @@ window.LESSONS[7] = {
      "t": "idea",
      "name": {
       "ru": "Схема индукции",
-      "en": "The shape of an induction"
+      "en": "The shape of an induction",
+      "uz": "Induksiyaning tuzilishi"
      },
      "text": {
       "ru": "Доказательство по индукции всегда состоит ровно из двух частей.\n\n**База.** Проверяем утверждение при наименьшем $n$ (обычно $n=1$).\n\n**Переход.** Предполагаем, что утверждение верно при $n$, и **выводим** его для $n+1$.\n\nЕсли оба шага сделаны, утверждение верно для всех $n$. Пропуск базы — самая частая ошибка: без неё «доказать» можно и заведомо ложное.",
-      "en": "An induction proof always has exactly two parts.\n\n**Base.** Check the statement at the smallest $n$ (usually $n=1$).\n\n**Step.** Assume it holds for $n$ and **derive** it for $n+1$.\n\nWith both parts done, the statement holds for every $n$. Skipping the base is the commonest mistake: without it one can \"prove\" something plainly false."
+      "en": "An induction proof always has exactly two parts.\n\n**Base.** Check the statement at the smallest $n$ (usually $n=1$).\n\n**Step.** Assume it holds for $n$ and **derive** it for $n+1$.\n\nWith both parts done, the statement holds for every $n$. Skipping the base is the commonest mistake: without it one can \"prove\" something plainly false.",
+      "uz": "Induksion isbot har doim aynan ikki qismdan iborat.\n\n**Baza.** Tasdiqni eng kichik $n$ da (odatda $n=1$) tekshiramiz.\n\n**Qadam.** U $n$ uchun toʻgʻri deb faraz qilib, $n+1$ uchun **keltirib chiqaramiz**.\n\nIkkala qism bajarilgach, tasdiq har bir $n$ uchun toʻgʻri boʻladi. Bazani tashlab ketish — eng koʻp uchraydigan xato: usiz mutlaqo yolgʻon narsani ham «isbotlash» mumkin."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Принцип математической индукции",
-      "en": "The principle of mathematical induction"
+      "en": "The principle of mathematical induction",
+      "uz": "Matematik induksiya prinsipi"
      },
      "text": {
       "ru": "Пусть $P(n)$ — утверждение, зависящее от натурального $n$. Если\n\n1. $P(1)$ истинно, и\n2. из истинности $P(k)$ следует истинность $P(k+1)$ для любого $k\\ge1$,\n\nто $P(n)$ истинно для всех натуральных $n$.",
-      "en": "Let $P(n)$ be a statement about a positive integer $n$. If\n\n1. $P(1)$ is true, and\n2. the truth of $P(k)$ implies the truth of $P(k+1)$ for every $k\\ge1$,\n\nthen $P(n)$ is true for every positive integer $n$."
+      "en": "Let $P(n)$ be a statement about a positive integer $n$. If\n\n1. $P(1)$ is true, and\n2. the truth of $P(k)$ implies the truth of $P(k+1)$ for every $k\\ge1$,\n\nthen $P(n)$ is true for every positive integer $n$.",
+      "uz": "$P(n)$ — natural $n$ haqidagi tasdiq boʻlsin. Agar\n\n1. $P(1)$ toʻgʻri boʻlsa va\n2. har bir $k\\ge1$ uchun $P(k)$ ning toʻgʻriligi $P(k+1)$ ning toʻgʻriligini keltirib chiqarsa,\n\nu holda $P(n)$ har bir natural $n$ uchun toʻgʻri."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Индукция равносильна **принципу наименьшего числа**: всякое непустое множество натуральных чисел имеет наименьший элемент.\n\nПредположим противное: пусть выполнены условия 1 и 2, но множество $$M=\\left\\{n:\\ P(n)\\ \\text{ложно}\\right\\}$$ непусто. Тогда в $M$ есть наименьший элемент $m$.\n\nПо условию 1 имеем $m\\ne1$, значит $m\\ge2$ и число $m-1$ натуральное. Оно меньше $m$, а $m$ — наименьшее в $M$, поэтому $m-1\\notin M$, то есть $P(m-1)$ истинно.\n\nНо тогда по условию 2 истинно и $P(m)$ — противоречие с $m\\in M$ ✓ Значит $M$ пусто $\\blacksquare$",
-      "en": "Induction is equivalent to the **least element principle**: every non-empty set of positive integers has a smallest member.\n\nSuppose not: conditions 1 and 2 hold but $$M=\\left\\{n:\\ P(n)\\ \\text{is false}\\right\\}$$ is non-empty. Then $M$ has a least element $m$.\n\nBy condition 1, $m\\ne1$, so $m\\ge2$ and $m-1$ is a positive integer. It is smaller than $m$, and $m$ is least in $M$, so $m-1\\notin M$, i.e. $P(m-1)$ is true.\n\nBut then condition 2 makes $P(m)$ true — contradicting $m\\in M$ ✓ So $M$ is empty $\\blacksquare$"
+      "en": "Induction is equivalent to the **least element principle**: every non-empty set of positive integers has a smallest member.\n\nSuppose not: conditions 1 and 2 hold but $$M=\\left\\{n:\\ P(n)\\ \\text{is false}\\right\\}$$ is non-empty. Then $M$ has a least element $m$.\n\nBy condition 1, $m\\ne1$, so $m\\ge2$ and $m-1$ is a positive integer. It is smaller than $m$, and $m$ is least in $M$, so $m-1\\notin M$, i.e. $P(m-1)$ is true.\n\nBut then condition 2 makes $P(m)$ true — contradicting $m\\in M$ ✓ So $M$ is empty $\\blacksquare$",
+      "uz": "Induksiya **eng kichik element prinsipi** bilan teng kuchli: natural sonlarning har bir boʻsh boʻlmagan toʻplamida eng kichik element bor.\n\nTeskarisini faraz qilamiz: 1 va 2 shartlar bajariladi, lekin $P(n)$ yolgʻon boʻlgan $n$ larning $M$ toʻplami boʻsh emas. Unda $M$ da eng kichik element $m$ bor.\n\n1-shartga koʻra $m\\ne1$, demak $m\\ge2$ va $m-1$ natural son. U $m$ dan kichik, $m$ esa $M$ da eng kichik, shuning uchun $m-1\\notin M$, yaʼni $P(m-1)$ toʻgʻri.\n\nLekin unda 2-shart $P(m)$ ni toʻgʻri qiladi — bu $m\\in M$ ga qarama-qarshi ✓ Demak $M$ boʻsh $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "**Сильная индукция.** Иногда шаг требует не только $P(k)$, но всех предыдущих утверждений сразу. Формулировка: если $P(1)$ истинно и из истинности $P(1),\\dots,P(k)$ следует $P(k+1)$, то $P(n)$ истинно всегда. Доказательство то же самое. Сильная индукция незаменима для рекуррент, где $a_{n+2}$ зависит от двух предыдущих членов.",
-      "en": "**Strong induction.** Sometimes the step needs not just $P(k)$ but all earlier statements at once. The statement: if $P(1)$ holds and $P(1),\\dots,P(k)$ together imply $P(k+1)$, then $P(n)$ holds for every $n$. The proof is identical. Strong induction is indispensable for recurrences where $a_{n+2}$ depends on two earlier terms."
+      "en": "**Strong induction.** Sometimes the step needs not just $P(k)$ but all earlier statements at once. The statement: if $P(1)$ holds and $P(1),\\dots,P(k)$ together imply $P(k+1)$, then $P(n)$ holds for every $n$. The proof is identical. Strong induction is indispensable for recurrences where $a_{n+2}$ depends on two earlier terms.",
+      "uz": "**Kuchli induksiya.** Baʼzan qadamda faqat $P(k)$ emas, balki barcha oldingi tasdiqlar birdan kerak boʻladi. Tasdiq: agar $P(1)$ bajarilsa va $P(1),\\dots,P(k)$ birgalikda $P(k+1)$ ni keltirib chiqarsa, u holda $P(n)$ har bir $n$ uchun bajariladi. Isbot aynan shunday. Kuchli induksiya $a_{n+2}$ ikki oldingi hadga bogʻliq boʻlgan rekurrent munosabatlar uchun almashtirib boʻlmaydigan vositadir."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Две классические ошибки.\n\n**Забытая база.** Из «$P(k)\\Rightarrow P(k+1)$» без базы не следует ничего: утверждение «$n=n+1$» прекрасно наследуется, но ложно.\n\n**Шаг, не работающий с малых значений.** В знаменитом «доказательстве», что все лошади одного цвета, переход от $k$ к $k+1$ опирается на пересечение двух групп по $k$ лошадей — а при $k=1$ это пересечение пусто. Всегда проверяйте, что шаг корректен уже при наименьшем $k$.",
-      "en": "Two classic mistakes.\n\n**A missing base.** From \"$P(k)\\Rightarrow P(k+1)$\" alone nothing follows: the statement \"$n=n+1$\" is inherited perfectly and is false.\n\n**A step that fails at small values.** In the famous \"proof\" that all horses have the same colour, the passage from $k$ to $k+1$ uses the overlap of two groups of $k$ horses — and for $k=1$ that overlap is empty. Always check that the step is valid already at the smallest $k$."
+      "en": "Two classic mistakes.\n\n**A missing base.** From \"$P(k)\\Rightarrow P(k+1)$\" alone nothing follows: the statement \"$n=n+1$\" is inherited perfectly and is false.\n\n**A step that fails at small values.** In the famous \"proof\" that all horses have the same colour, the passage from $k$ to $k+1$ uses the overlap of two groups of $k$ horses — and for $k=1$ that overlap is empty. Always check that the step is valid already at the smallest $k$.",
+      "uz": "Ikkita klassik xato.\n\n**Baza yoʻqolgani.** Faqat «$P(k)\\Rightarrow P(k+1)$» dan hech narsa kelib chiqmaydi: «$n=n+1$» tasdiqi mukammal irsiylanadi, lekin yolgʻon.\n\n**Kichik qiymatlarda buziladigan qadam.** Barcha otlar bir rangda ekani haqidagi mashhur «isbot»da $k$ dan $k+1$ ga oʻtish $k$ ta otdan iborat ikki guruhning kesishmasidan foydalanadi — $k=1$ da esa bu kesishma boʻsh. Qadam eng kichik $k$ da ham oʻrinli ekanini har doim tekshiring."
      }
     }
    ]
@@ -144,18 +163,21 @@ window.LESSONS[7] = {
      "t": "def",
      "name": {
       "ru": "Арифметическая прогрессия",
-      "en": "Arithmetic progression"
+      "en": "Arithmetic progression",
+      "uz": "Arifmetik progressiya"
      },
      "text": {
       "ru": "Последовательность, в которой каждый следующий член получается прибавлением одного и того же числа $d$ — **разности** прогрессии: $$a_{n+1}=a_n+d .$$",
-      "en": "A sequence in which each term is obtained from the previous one by adding the same number $d$, the **common difference**: $$a_{n+1}=a_n+d .$$"
+      "en": "A sequence in which each term is obtained from the previous one by adding the same number $d$, the **common difference**: $$a_{n+1}=a_n+d .$$",
+      "uz": "Har bir hadi oldingisiga bir xil $d$ sonini — **ayirmani** — qoʻshish bilan hosil qilinadigan ketma-ketlik: $$a_{n+1}=a_n+d .$$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формулы прогрессии",
-      "en": "The progression formulas"
+      "en": "The progression formulas",
+      "uz": "Progressiya formulalari"
      },
      "text": {
       "ru": "$$a_n=a_1+(n-1)d,\\qquad S_n=a_1+a_2+\\dots+a_n=\\frac{a_1+a_n}{2}\\cdot n=\\frac{2a_1+(n-1)d}{2}\\cdot n .$$",
@@ -166,32 +188,37 @@ window.LESSONS[7] = {
      "t": "proof",
      "text": {
       "ru": "Первая формула очевидна: от $a_1$ до $a_n$ сделано $n-1$ шагов по $d$.\n\nВторую доказывают приёмом Гаусса: запишем сумму дважды, во второй раз в обратном порядке, и сложим по столбцам: $$\\begin{aligned} S_n&=a_1+a_2+\\dots+a_{n-1}+a_n\\\\ S_n&=a_n+a_{n-1}+\\dots+a_2+a_1 \\end{aligned}$$ В каждом столбце стоит пара вида $a_k+a_{n+1-k}$. Но $$a_k+a_{n+1-k}=\\bigl(a_1+(k-1)d\\bigr)+\\bigl(a_1+(n-k)d\\bigr)=2a_1+(n-1)d=a_1+a_n$$ — одно и то же число для всех столбцов. Столбцов $n$, поэтому $2S_n=n(a_1+a_n)$. $\\blacksquare$",
-      "en": "The first formula is clear: getting from $a_1$ to $a_n$ takes $n-1$ steps of size $d$.\n\nThe second is proved by Gauss’s trick: write the sum twice, the second time backwards, and add column by column: $$\\begin{aligned} S_n&=a_1+a_2+\\dots+a_{n-1}+a_n\\\\ S_n&=a_n+a_{n-1}+\\dots+a_2+a_1 \\end{aligned}$$ Each column is a pair $a_k+a_{n+1-k}$. But $$a_k+a_{n+1-k}=\\bigl(a_1+(k-1)d\\bigr)+\\bigl(a_1+(n-k)d\\bigr)=2a_1+(n-1)d=a_1+a_n$$ — the same number in every column. There are $n$ columns, so $2S_n=n(a_1+a_n)$. $\\blacksquare$"
+      "en": "The first formula is clear: getting from $a_1$ to $a_n$ takes $n-1$ steps of size $d$.\n\nThe second is proved by Gauss’s trick: write the sum twice, the second time backwards, and add column by column: $$\\begin{aligned} S_n&=a_1+a_2+\\dots+a_{n-1}+a_n\\\\ S_n&=a_n+a_{n-1}+\\dots+a_2+a_1 \\end{aligned}$$ Each column is a pair $a_k+a_{n+1-k}$. But $$a_k+a_{n+1-k}=\\bigl(a_1+(k-1)d\\bigr)+\\bigl(a_1+(n-k)d\\bigr)=2a_1+(n-1)d=a_1+a_n$$ — the same number in every column. There are $n$ columns, so $2S_n=n(a_1+a_n)$. $\\blacksquare$",
+      "uz": "Birinchi formula tushunarli: $a_1$ dan $a_n$ ga yetish uchun $d$ oʻlchamli $n-1$ qadam kerak.\n\nIkkinchisi Gauss usuli bilan isbotlanadi: yigʻindini ikki marta, ikkinchi marta teskari tartibda yozib, ustunlar boʻyicha qoʻshamiz: $$\\begin{aligned} S_n&=a_1+a_2+\\dots+a_{n-1}+a_n\\\\ S_n&=a_n+a_{n-1}+\\dots+a_2+a_1 \\end{aligned}$$ Har bir ustun $a_k+a_{n+1-k}$ juftligidir. Lekin $$a_k+a_{n+1-k}=\\bigl(a_1+(k-1)d\\bigr)+\\bigl(a_1+(n-k)d\\bigr)=2a_1+(n-1)d=a_1+a_n$$ — har bir ustunda bir xil son. Ustunlar $n$ ta, shuning uchun $2S_n=n(a_1+a_n)$. $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Самый нужный частный случай: при $a_1=1$, $d=1$ получаем $$1+2+3+\\dots+n=\\frac{n(n+1)}{2}.$$ Эту формулу надо знать так же твёрдо, как таблицу умножения.",
-      "en": "The case you will use most: $a_1=1$, $d=1$ gives $$1+2+3+\\dots+n=\\frac{n(n+1)}{2}.$$ Know this as solidly as the multiplication table."
+      "en": "The case you will use most: $a_1=1$, $d=1$ gives $$1+2+3+\\dots+n=\\frac{n(n+1)}{2}.$$ Know this as solidly as the multiplication table.",
+      "uz": "Eng koʻp foydalanadigan holat: $a_1=1$, $d=1$ boʻlganda $$1+2+3+\\dots+n=\\frac{n(n+1)}{2}.$$ Buni koʻpaytirish jadvali kabi mustahkam bilish kerak."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Характеристическое свойство",
-      "en": "The characteristic property"
+      "en": "The characteristic property",
+      "uz": "Xarakteristik xossa"
      },
      "text": {
       "ru": "Последовательность является арифметической прогрессией тогда и только тогда, когда каждый её член (кроме крайних) — среднее арифметическое соседей: $$a_n=\\frac{a_{n-1}+a_{n+1}}{2}.$$",
-      "en": "A sequence is an arithmetic progression if and only if every term (except the end ones) is the average of its neighbours: $$a_n=\\frac{a_{n-1}+a_{n+1}}{2}.$$"
+      "en": "A sequence is an arithmetic progression if and only if every term (except the end ones) is the average of its neighbours: $$a_n=\\frac{a_{n-1}+a_{n+1}}{2}.$$",
+      "uz": "Ketma-ketlik arifmetik progressiya boʻlishi uchun har bir hadi (chetkilaridan tashqari) qoʻshnilarining oʻrta arifmetigiga teng boʻlishi zarur va yetarli: $$a_n=\\frac{a_{n-1}+a_{n+1}}{2}.$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Сколько трёхзначных чисел делится на $7$, и чему равна их сумма?",
-      "en": "How many three-digit numbers are divisible by $7$, and what is their sum?"
+      "en": "How many three-digit numbers are divisible by $7$, and what is their sum?",
+      "uz": "$7$ ga boʻlinadigan uch xonali sonlar nechta va ularning yigʻindisi qancha?"
      },
      "steps": {
       "ru": [
@@ -207,11 +234,19 @@ window.LESSONS[7] = {
        "The numbers $105,112,\\dots,994$ form an arithmetic progression with $d=7$.",
        "Count: from $994=105+(n-1)\\cdot7$ we get $n-1=\\tfrac{889}{7}=127$, so $n=128$.",
        "Sum: $S=\\dfrac{105+994}{2}\\cdot128=\\dfrac{1099}{2}\\cdot128=1099\\cdot64=70\\,336$."
+      ],
+      "uz": [
+       "Yettiga boʻlinadigan eng kichik uch xonali son: $100=7\\cdot14+2$, demak u $7\\cdot15=105$.",
+       "Eng kattasi: $999=7\\cdot142+5$, demak u $7\\cdot142=994$.",
+       "$105,112,\\dots,994$ sonlari $d=7$ ayirmali arifmetik progressiya tashkil qiladi.",
+       "Sonini topamiz: $994=105+(n-1)\\cdot7$ dan $n-1=\\tfrac{889}{7}=127$, demak $n=128$.",
+       "Yigʻindi: $S=\\dfrac{105+994}{2}\\cdot128=\\dfrac{1099}{2}\\cdot128=1099\\cdot64=70\\,336$."
       ]
      },
      "ans": {
       "ru": "$128$ чисел, их сумма равна $70\\,336$.",
-      "en": "$128$ numbers, with sum $70\\,336$."
+      "en": "$128$ numbers, with sum $70\\,336$.",
+      "uz": "$128$ ta son, yigʻindisi $70\\,336$."
      }
     }
    ]
@@ -227,36 +262,42 @@ window.LESSONS[7] = {
      "t": "def",
      "name": {
       "ru": "Геометрическая прогрессия",
-      "en": "Geometric progression"
+      "en": "Geometric progression",
+      "uz": "Geometrik progressiya"
      },
      "text": {
       "ru": "Последовательность, в которой каждый следующий член получается умножением на одно и то же число $q\\ne0$ — **знаменатель** прогрессии: $$b_{n+1}=b_n\\cdot q .$$",
-      "en": "A sequence in which each term comes from the previous one by multiplying by the same number $q\\ne0$, the **common ratio**: $$b_{n+1}=b_n\\cdot q .$$"
+      "en": "A sequence in which each term comes from the previous one by multiplying by the same number $q\\ne0$, the **common ratio**: $$b_{n+1}=b_n\\cdot q .$$",
+      "uz": "Har bir hadi oldingisini bir xil $q\\ne0$ soniga — **maxrajga** — koʻpaytirish bilan hosil qilinadigan ketma-ketlik: $$b_{n+1}=b_n\\cdot q .$$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формулы прогрессии",
-      "en": "The progression formulas"
+      "en": "The progression formulas",
+      "uz": "Progressiya formulalari"
      },
      "text": {
       "ru": "$$b_n=b_1q^{\\,n-1},\\qquad S_n=b_1\\cdot\\frac{q^{n}-1}{q-1}\\quad(q\\ne1),$$ а при $|q|<1$ сумма всех членов бесконечной прогрессии равна $$S=\\frac{b_1}{1-q}.$$",
-      "en": "$$b_n=b_1q^{\\,n-1},\\qquad S_n=b_1\\cdot\\frac{q^{n}-1}{q-1}\\quad(q\\ne1),$$ and when $|q|<1$ the sum of the whole infinite progression is $$S=\\frac{b_1}{1-q}.$$"
+      "en": "$$b_n=b_1q^{\\,n-1},\\qquad S_n=b_1\\cdot\\frac{q^{n}-1}{q-1}\\quad(q\\ne1),$$ and when $|q|<1$ the sum of the whole infinite progression is $$S=\\frac{b_1}{1-q}.$$",
+      "uz": "$$b_n=b_1q^{\\,n-1},\\qquad S_n=b_1\\cdot\\frac{q^{n}-1}{q-1}\\quad(q\\ne1),$$ va $|q|<1$ boʻlganda butun cheksiz progressiyaning yigʻindisi $$S=\\frac{b_1}{1-q}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Умножим сумму на $q$ и вычтем: $$\\begin{aligned} S_n&=b_1+b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1},\\\\ qS_n&=\\hphantom{b_1+{}}b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1}+b_1q^{n}. \\end{aligned}$$ Почти все слагаемые совпадают, поэтому $$qS_n-S_n=b_1q^{n}-b_1,\\qquad S_n(q-1)=b_1\\left(q^{n}-1\\right),$$ откуда и получается формула. При $|q|<1$ величина $q^{n}$ становится сколь угодно малой с ростом $n$, и сумма стремится к $\\dfrac{b_1}{1-q}$. $\\blacksquare$",
-      "en": "Multiply the sum by $q$ and subtract: $$\\begin{aligned} S_n&=b_1+b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1},\\\\ qS_n&=\\hphantom{b_1+{}}b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1}+b_1q^{n}. \\end{aligned}$$ Almost every term matches, so $$qS_n-S_n=b_1q^{n}-b_1,\\qquad S_n(q-1)=b_1\\left(q^{n}-1\\right),$$ which gives the formula. When $|q|<1$ the quantity $q^{n}$ becomes arbitrarily small as $n$ grows, and the sum tends to $\\dfrac{b_1}{1-q}$. $\\blacksquare$"
+      "en": "Multiply the sum by $q$ and subtract: $$\\begin{aligned} S_n&=b_1+b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1},\\\\ qS_n&=\\hphantom{b_1+{}}b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1}+b_1q^{n}. \\end{aligned}$$ Almost every term matches, so $$qS_n-S_n=b_1q^{n}-b_1,\\qquad S_n(q-1)=b_1\\left(q^{n}-1\\right),$$ which gives the formula. When $|q|<1$ the quantity $q^{n}$ becomes arbitrarily small as $n$ grows, and the sum tends to $\\dfrac{b_1}{1-q}$. $\\blacksquare$",
+      "uz": "Yigʻindini $q$ ga koʻpaytirib, ayiramiz: $$\\begin{aligned} S_n&=b_1+b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1},\\\\ qS_n&=\\hphantom{b_1+{}}b_1q+b_1q^{2}+\\dots+b_1q^{\\,n-1}+b_1q^{n}. \\end{aligned}$$ Deyarli har bir had mos tushadi, shuning uchun $$qS_n-S_n=b_1q^{n}-b_1,\\qquad S_n(q-1)=b_1\\left(q^{n}-1\\right),$$ bu esa formulani beradi. $|q|<1$ boʻlganda $n$ oʻsishi bilan $q^{n}$ miqdori xohlagancha kichik boʻladi va yigʻindi $\\dfrac{b_1}{1-q}$ ga intiladi. $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Переведите бесконечную десятичную дробь $0{,}(27)=0{,}272727\\dots$ в обыкновенную.",
-      "en": "Convert the repeating decimal $0.(27)=0.272727\\dots$ into a fraction."
+      "en": "Convert the repeating decimal $0.(27)=0.272727\\dots$ into a fraction.",
+      "uz": "$0.(27)=0.272727\\dots$ davriy oʻnli kasrni oddiy kasrga aylantiring."
      },
      "steps": {
       "ru": [
@@ -270,6 +311,12 @@ window.LESSONS[7] = {
        "This is an infinite geometric progression with $b_1=\\tfrac{27}{100}$ and $q=\\tfrac1{100}$, and $|q|<1$.",
        "$$S=\\frac{b_1}{1-q}=\\frac{\\frac{27}{100}}{1-\\frac1{100}}=\\frac{\\frac{27}{100}}{\\frac{99}{100}}=\\frac{27}{99}=\\frac{3}{11}.$$",
        "Check by division: $3:11=0.2727\\dots$ ✓"
+      ],
+      "uz": [
+       "Kasrni yigʻindi shaklida yozamiz: $$0.272727\\dots=\\frac{27}{100}+\\frac{27}{100^{2}}+\\frac{27}{100^{3}}+\\dots$$",
+       "Bu $b_1=\\tfrac{27}{100}$ va $q=\\tfrac1{100}$ boʻlgan cheksiz geometrik progressiya, hamda $|q|<1$.",
+       "$$S=\\frac{b_1}{1-q}=\\frac{\\frac{27}{100}}{1-\\frac1{100}}=\\frac{\\frac{27}{100}}{\\frac{99}{100}}=\\frac{27}{99}=\\frac{3}{11}.$$",
+       "Boʻlish bilan tekshiramiz: $3:11=0.2727\\dots$ ✓"
       ]
      },
      "ans": {
@@ -281,32 +328,37 @@ window.LESSONS[7] = {
      "t": "note",
      "text": {
       "ru": "Тот же счёт объясняет знаменитое равенство $0{,}(9)=1$: это прогрессия с $b_1=\\tfrac9{10}$ и $q=\\tfrac1{10}$, её сумма равна $\\tfrac{9/10}{9/10}=1$.",
-      "en": "The same computation explains the famous equality $0.(9)=1$: it is a progression with $b_1=\\tfrac9{10}$ and $q=\\tfrac1{10}$, whose sum is $\\tfrac{9/10}{9/10}=1$."
+      "en": "The same computation explains the famous equality $0.(9)=1$: it is a progression with $b_1=\\tfrac9{10}$ and $q=\\tfrac1{10}$, whose sum is $\\tfrac{9/10}{9/10}=1$.",
+      "uz": "Xuddi shu hisob mashhur $0.(9)=1$ tenglikni tushuntiradi: bu $b_1=\\tfrac9{10}$ va $q=\\tfrac1{10}$ boʻlgan progressiya, uning yigʻindisi $\\tfrac{9/10}{9/10}=1$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Вывод формулы суммы геометрической прогрессии.** Пусть $$S_n=b_1+b_1q+\\dots+b_1q^{\\,n-1}.$$ Умножим на $q$: $$qS_n=b_1q+b_1q^{2}+\\dots+b_1q^{\\,n}.$$\n\nВычтем второе равенство из первого. Все средние члены уничтожаются, остаются только крайние: $$S_n-qS_n=b_1-b_1q^{\\,n}.$$\n\nПри $q\\ne1$ делим на $1-q$: $$S_n=b_1\\frac{1-q^{\\,n}}{1-q} \\quad\\checkmark$$\n\nПри $q=1$ формула неприменима, но и не нужна: все члены равны $b_1$, поэтому $S_n=nb_1$ ✓ $\\blacksquare$",
-      "en": "**Deriving the sum of a geometric progression.** Let $$S_n=b_1+b_1q+\\dots+b_1q^{\\,n-1}.$$ Multiply by $q$: $$qS_n=b_1q+b_1q^{2}+\\dots+b_1q^{\\,n}.$$\n\nSubtract the second from the first. Every middle term cancels and only the ends survive: $$S_n-qS_n=b_1-b_1q^{\\,n}.$$\n\nFor $q\\ne1$ divide by $1-q$: $$S_n=b_1\\frac{1-q^{\\,n}}{1-q} \\quad\\checkmark$$\n\nFor $q=1$ the formula does not apply and is not needed: all terms equal $b_1$, so $S_n=nb_1$ ✓ $\\blacksquare$"
+      "en": "**Deriving the sum of a geometric progression.** Let $$S_n=b_1+b_1q+\\dots+b_1q^{\\,n-1}.$$ Multiply by $q$: $$qS_n=b_1q+b_1q^{2}+\\dots+b_1q^{\\,n}.$$\n\nSubtract the second from the first. Every middle term cancels and only the ends survive: $$S_n-qS_n=b_1-b_1q^{\\,n}.$$\n\nFor $q\\ne1$ divide by $1-q$: $$S_n=b_1\\frac{1-q^{\\,n}}{1-q} \\quad\\checkmark$$\n\nFor $q=1$ the formula does not apply and is not needed: all terms equal $b_1$, so $S_n=nb_1$ ✓ $\\blacksquare$",
+      "uz": "**Geometrik progressiya yigʻindisini keltirib chiqarish.** $$S_n=b_1+b_1q+\\dots+b_1q^{\\,n-1}$$ boʻlsin. $q$ ga koʻpaytiramiz: $$qS_n=b_1q+b_1q^{2}+\\dots+b_1q^{\\,n}.$$\n\nIkkinchisini birinchisidan ayiramiz. Barcha oʻrta hadlar qisqaradi va faqat chetlari qoladi: $$S_n-qS_n=b_1-b_1q^{\\,n}.$$\n\n$q\\ne1$ boʻlganda $1-q$ ga boʻlamiz: $$S_n=b_1\\frac{1-q^{\\,n}}{1-q} \\quad\\checkmark$$\n\n$q=1$ boʻlganda formula qoʻllanmaydi va kerak ham emas: barcha hadlar $b_1$ ga teng, shuning uchun $S_n=nb_1$ ✓ $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Характеристическое свойство",
-      "en": "The characteristic property"
+      "en": "The characteristic property",
+      "uz": "Xarakteristik xossa"
      },
      "text": {
       "ru": "Последовательность ненулевых чисел является геометрической прогрессией тогда и только тогда, когда каждый её член, кроме крайних, равен по модулю среднему геометрическому соседей: $$b_n^{2}=b_{n-1}b_{n+1}.$$",
-      "en": "A sequence of non-zero numbers is a geometric progression if and only if every term other than the ends satisfies $$b_n^{2}=b_{n-1}b_{n+1}.$$"
+      "en": "A sequence of non-zero numbers is a geometric progression if and only if every term other than the ends satisfies $$b_n^{2}=b_{n-1}b_{n+1}.$$",
+      "uz": "Nolga teng boʻlmagan sonlar ketma-ketligi geometrik progressiya boʻlishi uchun chetkilaridan tashqari har bir hadi $$b_n^{2}=b_{n-1}b_{n+1}$$ shartini qanoatlantirishi zarur va yetarli."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Если прогрессия,** то $b_{n-1}=\\dfrac{b_n}{q}$ и $b_{n+1}=b_nq$, значит их произведение равно $b_n^{2}$ ✓\n\n**Обратно.** Из $b_n^{2}=b_{n-1}b_{n+1}$ и $b_n\\ne0$ следует $$\\frac{b_{n+1}}{b_n}=\\frac{b_n}{b_{n-1}},$$ то есть отношение соседних членов одно и то же на каждом шаге. Обозначив его через $q$, получаем прогрессию ✓ $\\blacksquare$",
-      "en": "**If it is a progression** then $b_{n-1}=\\dfrac{b_n}{q}$ and $b_{n+1}=b_nq$, so their product is $b_n^{2}$ ✓\n\n**Conversely,** from $b_n^{2}=b_{n-1}b_{n+1}$ with $b_n\\ne0$ we get $$\\frac{b_{n+1}}{b_n}=\\frac{b_n}{b_{n-1}},$$ so the ratio of consecutive terms is the same at every step. Calling it $q$ gives a progression ✓ $\\blacksquare$"
+      "en": "**If it is a progression** then $b_{n-1}=\\dfrac{b_n}{q}$ and $b_{n+1}=b_nq$, so their product is $b_n^{2}$ ✓\n\n**Conversely,** from $b_n^{2}=b_{n-1}b_{n+1}$ with $b_n\\ne0$ we get $$\\frac{b_{n+1}}{b_n}=\\frac{b_n}{b_{n-1}},$$ so the ratio of consecutive terms is the same at every step. Calling it $q$ gives a progression ✓ $\\blacksquare$",
+      "uz": "**Agar bu progressiya boʻlsa,** $b_{n-1}=\\dfrac{b_n}{q}$ va $b_{n+1}=b_nq$, demak ularning koʻpaytmasi $b_n^{2}$ ✓\n\n**Teskarisi,** $b_n\\ne0$ boʻlganda $b_n^{2}=b_{n-1}b_{n+1}$ dan $$\\frac{b_{n+1}}{b_n}=\\frac{b_n}{b_{n-1}},$$ yaʼni ketma-ket hadlarning nisbati har bir qadamda bir xil. Uni $q$ deb belgilash progressiyani beradi ✓ $\\blacksquare$"
      }
     }
    ]
@@ -322,14 +374,16 @@ window.LESSONS[7] = {
      "t": "idea",
      "text": {
       "ru": "Самый сильный приём для сумм. Если каждое слагаемое удаётся записать как **разность** соседних значений одной и той же величины, $$c_k=f(k)-f(k+1),$$ то при сложении всё внутри сокращается: $$\\sum_{k=1}^{n}c_k=f(1)-f(n+1).$$ Сумма из $n$ слагаемых считается за одну строку.",
-      "en": "The most powerful move for sums. If each term can be written as a **difference** of neighbouring values of one quantity, $$c_k=f(k)-f(k+1),$$ then everything in the middle cancels on adding: $$\\sum_{k=1}^{n}c_k=f(1)-f(n+1).$$ A sum of $n$ terms collapses to one line."
+      "en": "The most powerful move for sums. If each term can be written as a **difference** of neighbouring values of one quantity, $$c_k=f(k)-f(k+1),$$ then everything in the middle cancels on adding: $$\\sum_{k=1}^{n}c_k=f(1)-f(n+1).$$ A sum of $n$ terms collapses to one line.",
+      "uz": "Yigʻindilar uchun eng kuchli usul. Agar har bir hadni bitta miqdorning qoʻshni qiymatlari **ayirmasi** shaklida yozish mumkin boʻlsa, $$c_k=f(k)-f(k+1),$$ u holda qoʻshishda oʻrtadagi hamma narsa qisqaradi: $$\\sum_{k=1}^{n}c_k=f(1)-f(n+1).$$ $n$ hadli yigʻindi bitta satrga siqiladi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Вычислите $\\dfrac1{1\\cdot2}+\\dfrac1{2\\cdot3}+\\dots+\\dfrac1{n(n+1)}$.",
-      "en": "Evaluate $\\dfrac1{1\\cdot2}+\\dfrac1{2\\cdot3}+\\dots+\\dfrac1{n(n+1)}$."
+      "en": "Evaluate $\\dfrac1{1\\cdot2}+\\dfrac1{2\\cdot3}+\\dots+\\dfrac1{n(n+1)}$.",
+      "uz": "$\\dfrac1{1\\cdot2}+\\dfrac1{2\\cdot3}+\\dots+\\dfrac1{n(n+1)}$ ni hisoblang."
      },
      "steps": {
       "ru": [
@@ -343,6 +397,12 @@ window.LESSONS[7] = {
        "Add them up: $$\\left(\\frac11-\\frac12\\right)+\\left(\\frac12-\\frac13\\right)+\\dots+\\left(\\frac1n-\\frac1{n+1}\\right).$$",
        "Every interior term appears twice with opposite signs and cancels.",
        "Only the ends survive: $1-\\dfrac1{n+1}=\\dfrac{n}{n+1}$."
+      ],
+      "uz": [
+       "Umumiy hadni ajratamiz: $$\\frac1{k(k+1)}=\\frac{(k+1)-k}{k(k+1)}=\\frac1k-\\frac1{k+1}.$$",
+       "Ularni qoʻshamiz: $$\\left(\\frac11-\\frac12\\right)+\\left(\\frac12-\\frac13\\right)+\\dots+\\left(\\frac1n-\\frac1{n+1}\\right).$$",
+       "Har bir ichki had qarama-qarshi ishoralar bilan ikki marta kelib, qisqaradi.",
+       "Faqat chetlari qoladi: $1-\\dfrac1{n+1}=\\dfrac{n}{n+1}$."
       ]
      },
      "ans": {
@@ -354,7 +414,8 @@ window.LESSONS[7] = {
      "t": "p",
      "text": {
       "ru": "Три суммы степеней стоит просто помнить. Все они доказываются индукцией (или телескопированием подходящего выражения):",
-      "en": "Three power sums are worth memorising. All are proved by induction (or by telescoping a suitable expression):"
+      "en": "Three power sums are worth memorising. All are proved by induction (or by telescoping a suitable expression):",
+      "uz": "Uchta darajalar yigʻindisini yodda saqlash foydali. Hammasi induksiya bilan (yoki mos ifodani teleskoplash bilan) isbotlanadi:"
      }
     },
     {
@@ -365,18 +426,21 @@ window.LESSONS[7] = {
      "t": "note",
      "text": {
       "ru": "Третья формула — красивый факт: **сумма кубов равна квадрату суммы**. Например, $1+8+27+64=100=(1+2+3+4)^{2}$.",
-      "en": "The third one is a beautiful fact: **the sum of cubes is the square of the sum**. For example $1+8+27+64=100=(1+2+3+4)^{2}$."
+      "en": "The third one is a beautiful fact: **the sum of cubes is the square of the sum**. For example $1+8+27+64=100=(1+2+3+4)^{2}$.",
+      "uz": "Uchinchisi goʻzal fakt: **kublar yigʻindisi — yigʻindining kvadrati**. Masalan, $1+8+27+64=100=(1+2+3+4)^{2}$."
      }
     },
     {
      "t": "idea",
      "name": {
       "ru": "Как искать разложение",
-      "en": "How to find the splitting"
+      "en": "How to find the splitting",
+      "uz": "Ajratishni qanday topish kerak"
      },
      "text": {
       "ru": "Если слагаемое — дробь вида $\\dfrac{1}{k(k+m)}$, помогает тождество $$\\frac1{k(k+m)}=\\frac1m\\left(\\frac1k-\\frac1{k+m}\\right).$$ Если слагаемое содержит корни, помогает домножение на сопряжённое: $$\\frac1{\\sqrt{k}+\\sqrt{k+1}}=\\frac{\\sqrt{k+1}-\\sqrt{k}}{\\left(\\sqrt{k+1}+\\sqrt k\\right)\\left(\\sqrt{k+1}-\\sqrt k\\right)}=\\sqrt{k+1}-\\sqrt{k}.$$",
-      "en": "If the term is a fraction $\\dfrac{1}{k(k+m)}$, use $$\\frac1{k(k+m)}=\\frac1m\\left(\\frac1k-\\frac1{k+m}\\right).$$ If the term contains roots, multiply by the conjugate: $$\\frac1{\\sqrt{k}+\\sqrt{k+1}}=\\frac{\\sqrt{k+1}-\\sqrt{k}}{\\left(\\sqrt{k+1}+\\sqrt k\\right)\\left(\\sqrt{k+1}-\\sqrt k\\right)}=\\sqrt{k+1}-\\sqrt{k}.$$"
+      "en": "If the term is a fraction $\\dfrac{1}{k(k+m)}$, use $$\\frac1{k(k+m)}=\\frac1m\\left(\\frac1k-\\frac1{k+m}\\right).$$ If the term contains roots, multiply by the conjugate: $$\\frac1{\\sqrt{k}+\\sqrt{k+1}}=\\frac{\\sqrt{k+1}-\\sqrt{k}}{\\left(\\sqrt{k+1}+\\sqrt k\\right)\\left(\\sqrt{k+1}-\\sqrt k\\right)}=\\sqrt{k+1}-\\sqrt{k}.$$",
+      "uz": "Agar had $\\dfrac{1}{k(k+m)}$ kasri boʻlsa, $$\\frac1{k(k+m)}=\\frac1m\\left(\\frac1k-\\frac1{k+m}\\right)$$ dan foydalanamiz. Agar hadda ildizlar boʻlsa, qoʻshmasiga koʻpaytiramiz: $$\\frac1{\\sqrt{k}+\\sqrt{k+1}}=\\frac{\\sqrt{k+1}-\\sqrt{k}}{\\left(\\sqrt{k+1}+\\sqrt k\\right)\\left(\\sqrt{k+1}-\\sqrt k\\right)}=\\sqrt{k+1}-\\sqrt{k}.$$"
      }
     }
    ]
@@ -392,14 +456,16 @@ window.LESSONS[7] = {
      "t": "p",
      "text": {
       "ru": "Четыре суммы ниже встречаются в задачах постоянно. Их стоит не только запомнить, но и уметь выводить: приём вывода важнее самой формулы, потому что он работает и для сумм, которых нет в справочнике.",
-      "en": "The four sums below appear constantly. They are worth not only memorising but being able to derive: the derivation matters more than the formula, because it also handles sums no reference book lists."
+      "en": "The four sums below appear constantly. They are worth not only memorising but being able to derive: the derivation matters more than the formula, because it also handles sums no reference book lists.",
+      "uz": "Quyidagi toʻrt yigʻindi doimo uchraydi. Ularni nafaqat yodlash, balki keltirib chiqarishni bilish kerak: keltirib chiqarish formuladan koʻra muhimroq, chunki u hech bir maʼlumotnomada yoʻq yigʻindilarni ham hal qiladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Сумма первых $n$ натуральных чисел",
-      "en": "Sum of the first $n$ integers"
+      "en": "Sum of the first $n$ integers",
+      "uz": "Birinchi $n$ ta natural son yigʻindisi"
      },
      "text": {
       "ru": "$$1+2+3+\\dots+n=\\frac{n\\left(n+1\\right)}{2}.$$",
@@ -410,14 +476,16 @@ window.LESSONS[7] = {
      "t": "proof",
      "text": {
       "ru": "Обозначим сумму через $S$ и выпишем её дважды — в прямом и в обратном порядке: $$\\begin{aligned} S&=1+2+\\dots+\\left(n-1\\right)+n,\\\\ S&=n+\\left(n-1\\right)+\\dots+2+1. \\end{aligned}$$\n\nСложим почленно. В каждом из $n$ столбцов сумма равна $n+1$, поэтому $$2S=n\\left(n+1\\right)\\quad\\Longrightarrow\\quad S=\\frac{n\\left(n+1\\right)}{2} \\quad\\checkmark\\qquad\\blacksquare$$\n\nЭто тот самый приём, которым, по легенде, девятилетний Гаусс сложил числа от $1$ до $100$ за несколько секунд: пятьдесят пар по $101$.",
-      "en": "Write the sum $S$ twice, forwards and backwards: $$\\begin{aligned} S&=1+2+\\dots+\\left(n-1\\right)+n,\\\\ S&=n+\\left(n-1\\right)+\\dots+2+1. \\end{aligned}$$\n\nAdd column by column. Each of the $n$ columns totals $n+1$, so $$2S=n\\left(n+1\\right)\\quad\\Longrightarrow\\quad S=\\frac{n\\left(n+1\\right)}{2} \\quad\\checkmark\\qquad\\blacksquare$$\n\nThis is the trick with which, according to the story, the nine-year-old Gauss added the numbers from $1$ to $100$ in seconds: fifty pairs of $101$."
+      "en": "Write the sum $S$ twice, forwards and backwards: $$\\begin{aligned} S&=1+2+\\dots+\\left(n-1\\right)+n,\\\\ S&=n+\\left(n-1\\right)+\\dots+2+1. \\end{aligned}$$\n\nAdd column by column. Each of the $n$ columns totals $n+1$, so $$2S=n\\left(n+1\\right)\\quad\\Longrightarrow\\quad S=\\frac{n\\left(n+1\\right)}{2} \\quad\\checkmark\\qquad\\blacksquare$$\n\nThis is the trick with which, according to the story, the nine-year-old Gauss added the numbers from $1$ to $100$ in seconds: fifty pairs of $101$.",
+      "uz": "$S$ yigʻindini ikki marta — toʻgʻri va teskari tartibda — yozamiz: $$\\begin{aligned} S&=1+2+\\dots+\\left(n-1\\right)+n,\\\\ S&=n+\\left(n-1\\right)+\\dots+2+1. \\end{aligned}$$\n\nUstunlar boʻyicha qoʻshamiz. $n$ ta ustunning har biri $n+1$ ni beradi, shuning uchun $$2S=n\\left(n+1\\right)\\quad\\Longrightarrow\\quad S=\\frac{n\\left(n+1\\right)}{2} \\quad\\checkmark\\qquad\\blacksquare$$\n\nRivoyatga koʻra, toʻqqiz yashar Gauss $1$ dan $100$ gacha sonlarni bir necha soniyada shu usul bilan qoʻshgan: $101$ ning ellik juftligi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Сумма квадратов",
-      "en": "Sum of squares"
+      "en": "Sum of squares",
+      "uz": "Kvadratlar yigʻindisi"
      },
      "text": {
       "ru": "$$1^{2}+2^{2}+\\dots+n^{2}=\\frac{n\\left(n+1\\right)\\left(2n+1\\right)}{6}.$$",
@@ -428,14 +496,16 @@ window.LESSONS[7] = {
      "t": "proof",
      "text": {
       "ru": "Используем телескопирование. Раскроем куб разности соседних чисел: $$\\left(k+1\\right)^{3}-k^{3}=3k^{2}+3k+1 .$$\n\nПросуммируем это равенство по $k=1,2,\\dots,n$. Слева получается телескопическая сумма, от которой остаются только крайние члены: $$\\left(n+1\\right)^{3}-1^{3}=3\\sum_{k=1}^{n}k^{2}+3\\sum_{k=1}^{n}k+n .$$\n\nВторую сумму мы уже знаем: $\\sum k=\\dfrac{n\\left(n+1\\right)}{2}$. Подставим и выразим искомое: $$3\\sum k^{2}=\\left(n+1\\right)^{3}-1-\\frac{3n\\left(n+1\\right)}{2}-n .$$\n\nПриведём правую часть к общему знаменателю $2$: $$3\\sum k^{2}=\\frac{2\\left(n+1\\right)^{3}-2-3n\\left(n+1\\right)-2n}{2}=\\frac{2n^{3}+3n^{2}+n}{2}=\\frac{n\\left(n+1\\right)\\left(2n+1\\right)}{2}.$$\n\nДелим на $3$ ✓ $\\blacksquare$",
-      "en": "Use telescoping. Expand the cube of a step: $$\\left(k+1\\right)^{3}-k^{3}=3k^{2}+3k+1 .$$\n\nSum this over $k=1,2,\\dots,n$. The left side telescopes, leaving only the endpoints: $$\\left(n+1\\right)^{3}-1^{3}=3\\sum_{k=1}^{n}k^{2}+3\\sum_{k=1}^{n}k+n .$$\n\nThe second sum is already known: $\\sum k=\\dfrac{n\\left(n+1\\right)}{2}$. Substitute and solve: $$3\\sum k^{2}=\\left(n+1\\right)^{3}-1-\\frac{3n\\left(n+1\\right)}{2}-n .$$\n\nOver the common denominator $2$ the right side becomes $$\\frac{2n^{3}+3n^{2}+n}{2}=\\frac{n\\left(n+1\\right)\\left(2n+1\\right)}{2}.$$\n\nDivide by $3$ ✓ $\\blacksquare$"
+      "en": "Use telescoping. Expand the cube of a step: $$\\left(k+1\\right)^{3}-k^{3}=3k^{2}+3k+1 .$$\n\nSum this over $k=1,2,\\dots,n$. The left side telescopes, leaving only the endpoints: $$\\left(n+1\\right)^{3}-1^{3}=3\\sum_{k=1}^{n}k^{2}+3\\sum_{k=1}^{n}k+n .$$\n\nThe second sum is already known: $\\sum k=\\dfrac{n\\left(n+1\\right)}{2}$. Substitute and solve: $$3\\sum k^{2}=\\left(n+1\\right)^{3}-1-\\frac{3n\\left(n+1\\right)}{2}-n .$$\n\nOver the common denominator $2$ the right side becomes $$\\frac{2n^{3}+3n^{2}+n}{2}=\\frac{n\\left(n+1\\right)\\left(2n+1\\right)}{2}.$$\n\nDivide by $3$ ✓ $\\blacksquare$",
+      "uz": "Teleskoplashdan foydalanamiz. Qadamning kubini yoyamiz: $$\\left(k+1\\right)^{3}-k^{3}=3k^{2}+3k+1 .$$\n\nBuni $k=1,2,\\dots,n$ boʻyicha qoʻshamiz. Chap tomon teleskoplanadi va faqat chetki qiymatlar qoladi: $$\\left(n+1\\right)^{3}-1^{3}=3\\sum_{k=1}^{n}k^{2}+3\\sum_{k=1}^{n}k+n .$$\n\nIkkinchi yigʻindi allaqachon maʼlum: $\\sum k=\\dfrac{n\\left(n+1\\right)}{2}$. Oʻrniga qoʻyib, yechamiz: $$3\\sum k^{2}=\\left(n+1\\right)^{3}-1-\\frac{3n\\left(n+1\\right)}{2}-n .$$\n\nUmumiy maxraj $2$ da oʻng tomon $$\\frac{2n^{3}+3n^{2}+n}{2}=\\frac{n\\left(n+1\\right)\\left(2n+1\\right)}{2}$$ ga aylanadi.\n\n$3$ ga boʻlamiz ✓ $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Сумма кубов",
-      "en": "Sum of cubes"
+      "en": "Sum of cubes",
+      "uz": "Kublar yigʻindisi"
      },
      "text": {
       "ru": "$$1^{3}+2^{3}+\\dots+n^{3}=\\left(\\frac{n\\left(n+1\\right)}{2}\\right)^{2}=\\left(1+2+\\dots+n\\right)^{2}.$$",
@@ -446,32 +516,37 @@ window.LESSONS[7] = {
      "t": "proof",
      "text": {
       "ru": "Индукция по $n$.\n\n**База $n=1$:** $1^{3}=1=\\left(\\tfrac{1\\cdot2}{2}\\right)^{2}$ ✓\n\n**Шаг.** Пусть $\\sum_{k=1}^{n}k^{3}=\\dfrac{n^{2}\\left(n+1\\right)^{2}}{4}$. Прибавим следующий куб: $$\\sum_{k=1}^{n+1}k^{3}=\\frac{n^{2}\\left(n+1\\right)^{2}}{4}+\\left(n+1\\right)^{3}=\\left(n+1\\right)^{2}\\cdot\\frac{n^{2}+4\\left(n+1\\right)}{4}.$$\n\nЧислитель равен $n^{2}+4n+4=\\left(n+2\\right)^{2}$, поэтому сумма равна $$\\frac{\\left(n+1\\right)^{2}\\left(n+2\\right)^{2}}{4},$$ то есть формула для $n+1$ ✓ $\\blacksquare$\n\nСовпадение с квадратом суммы не случайно: существует красивое доказательство «без слов», в котором куб $k^{3}$ разрезается на $k$ квадратов со стороной $k$, а все они укладываются в один большой квадрат со стороной $1+2+\\dots+n$.",
-      "en": "Induction on $n$.\n\n**Base $n=1$:** $1^{3}=1=\\left(\\tfrac{1\\cdot2}{2}\\right)^{2}$ ✓\n\n**Step.** Suppose $\\sum_{k=1}^{n}k^{3}=\\dfrac{n^{2}\\left(n+1\\right)^{2}}{4}$. Add the next cube: $$\\sum_{k=1}^{n+1}k^{3}=\\frac{n^{2}\\left(n+1\\right)^{2}}{4}+\\left(n+1\\right)^{3}=\\left(n+1\\right)^{2}\\cdot\\frac{n^{2}+4\\left(n+1\\right)}{4}.$$\n\nThe numerator is $n^{2}+4n+4=\\left(n+2\\right)^{2}$, so the sum equals $$\\frac{\\left(n+1\\right)^{2}\\left(n+2\\right)^{2}}{4},$$ which is the formula for $n+1$ ✓ $\\blacksquare$\n\nThe coincidence with a square is not an accident: there is a lovely proof without words in which each cube $k^{3}$ is cut into $k$ squares of side $k$ and all of them tile one big square of side $1+2+\\dots+n$."
+      "en": "Induction on $n$.\n\n**Base $n=1$:** $1^{3}=1=\\left(\\tfrac{1\\cdot2}{2}\\right)^{2}$ ✓\n\n**Step.** Suppose $\\sum_{k=1}^{n}k^{3}=\\dfrac{n^{2}\\left(n+1\\right)^{2}}{4}$. Add the next cube: $$\\sum_{k=1}^{n+1}k^{3}=\\frac{n^{2}\\left(n+1\\right)^{2}}{4}+\\left(n+1\\right)^{3}=\\left(n+1\\right)^{2}\\cdot\\frac{n^{2}+4\\left(n+1\\right)}{4}.$$\n\nThe numerator is $n^{2}+4n+4=\\left(n+2\\right)^{2}$, so the sum equals $$\\frac{\\left(n+1\\right)^{2}\\left(n+2\\right)^{2}}{4},$$ which is the formula for $n+1$ ✓ $\\blacksquare$\n\nThe coincidence with a square is not an accident: there is a lovely proof without words in which each cube $k^{3}$ is cut into $k$ squares of side $k$ and all of them tile one big square of side $1+2+\\dots+n$.",
+      "uz": "$n$ boʻyicha induksiya.\n\n**Baza $n=1$:** $1^{3}=1=\\left(\\tfrac{1\\cdot2}{2}\\right)^{2}$ ✓\n\n**Qadam.** $\\sum_{k=1}^{n}k^{3}=\\dfrac{n^{2}\\left(n+1\\right)^{2}}{4}$ deb faraz qilamiz. Keyingi kubni qoʻshamiz: $$\\sum_{k=1}^{n+1}k^{3}=\\frac{n^{2}\\left(n+1\\right)^{2}}{4}+\\left(n+1\\right)^{3}=\\left(n+1\\right)^{2}\\cdot\\frac{n^{2}+4\\left(n+1\\right)}{4}.$$\n\nSuratda $n^{2}+4n+4=\\left(n+2\\right)^{2}$, shuning uchun yigʻindi $$\\frac{\\left(n+1\\right)^{2}\\left(n+2\\right)^{2}}{4}$$ ga teng, bu esa $n+1$ uchun formula ✓ $\\blacksquare$\n\nKvadrat bilan mos tushish tasodif emas: soʻzsiz goʻzal isbot bor — unda har bir $k^{3}$ kub tomoni $k$ boʻlgan $k$ ta kvadratga kesiladi va hammasi tomoni $1+2+\\dots+n$ boʻlgan bitta katta kvadratni qoplaydi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Арифметико-геометрическая сумма",
-      "en": "An arithmetic–geometric sum"
+      "en": "An arithmetic–geometric sum",
+      "uz": "Arifmetik-geometrik yigʻindi"
      },
      "text": {
       "ru": "Для $q\\ne1$ $$\\sum_{k=1}^{n}kq^{\\,k-1}=\\frac{1-\\left(n+1\\right)q^{\\,n}+nq^{\\,n+1}}{\\left(1-q\\right)^{2}}.$$",
-      "en": "For $q\\ne1$ $$\\sum_{k=1}^{n}kq^{\\,k-1}=\\frac{1-\\left(n+1\\right)q^{\\,n}+nq^{\\,n+1}}{\\left(1-q\\right)^{2}}.$$"
+      "en": "For $q\\ne1$ $$\\sum_{k=1}^{n}kq^{\\,k-1}=\\frac{1-\\left(n+1\\right)q^{\\,n}+nq^{\\,n+1}}{\\left(1-q\\right)^{2}}.$$",
+      "uz": "$q\\ne1$ boʻlganda $$\\sum_{k=1}^{n}kq^{\\,k-1}=\\frac{1-\\left(n+1\\right)q^{\\,n}+nq^{\\,n+1}}{\\left(1-q\\right)^{2}}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Приём тот же, что и для геометрической прогрессии: **умножить на знаменатель и вычесть**.\n\nПусть $S=1+2q+3q^{2}+\\dots+nq^{\\,n-1}$. Тогда $$qS=q+2q^{2}+\\dots+\\left(n-1\\right)q^{\\,n-1}+nq^{\\,n}.$$\n\nВычтем: коэффициент при $q^{\\,k}$ слева равен $\\left(k+1\\right)-k=1$ для $k=1,\\dots,n-1$, поэтому $$S-qS=1+q+q^{2}+\\dots+q^{\\,n-1}-nq^{\\,n}=\\frac{1-q^{\\,n}}{1-q}-nq^{\\,n}.$$\n\nОстаётся разделить на $1-q$ и привести к общему знаменателю ✓ $\\blacksquare$",
-      "en": "The trick is the one used for a geometric progression: **multiply by the ratio and subtract**.\n\nLet $S=1+2q+3q^{2}+\\dots+nq^{\\,n-1}$. Then $$qS=q+2q^{2}+\\dots+\\left(n-1\\right)q^{\\,n-1}+nq^{\\,n}.$$\n\nSubtract: the coefficient of $q^{\\,k}$ is $\\left(k+1\\right)-k=1$ for $k=1,\\dots,n-1$, so $$S-qS=1+q+q^{2}+\\dots+q^{\\,n-1}-nq^{\\,n}=\\frac{1-q^{\\,n}}{1-q}-nq^{\\,n}.$$\n\nDivide by $1-q$ and combine over a common denominator ✓ $\\blacksquare$"
+      "en": "The trick is the one used for a geometric progression: **multiply by the ratio and subtract**.\n\nLet $S=1+2q+3q^{2}+\\dots+nq^{\\,n-1}$. Then $$qS=q+2q^{2}+\\dots+\\left(n-1\\right)q^{\\,n-1}+nq^{\\,n}.$$\n\nSubtract: the coefficient of $q^{\\,k}$ is $\\left(k+1\\right)-k=1$ for $k=1,\\dots,n-1$, so $$S-qS=1+q+q^{2}+\\dots+q^{\\,n-1}-nq^{\\,n}=\\frac{1-q^{\\,n}}{1-q}-nq^{\\,n}.$$\n\nDivide by $1-q$ and combine over a common denominator ✓ $\\blacksquare$",
+      "uz": "Usul geometrik progressiya uchun ishlatilgani bilan bir xil: **maxrajga koʻpaytirib, ayirish**.\n\n$S=1+2q+3q^{2}+\\dots+nq^{\\,n-1}$ boʻlsin. Unda $$qS=q+2q^{2}+\\dots+\\left(n-1\\right)q^{\\,n-1}+nq^{\\,n}.$$\n\nAyiramiz: $k=1,\\dots,n-1$ uchun $q^{\\,k}$ ning koeffitsiyenti $\\left(k+1\\right)-k=1$, shuning uchun $$S-qS=1+q+q^{2}+\\dots+q^{\\,n-1}-nq^{\\,n}=\\frac{1-q^{\\,n}}{1-q}-nq^{\\,n}.$$\n\n$1-q$ ga boʻlib, umumiy maxrajga keltiramiz ✓ $\\blacksquare$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Вычислите $\\dfrac1{2}+\\dfrac2{4}+\\dfrac3{8}+\\dots+\\dfrac{n}{2^{n}}$ и найдите предел этой суммы при $n\\to\\infty$.",
-      "en": "Evaluate $\\dfrac1{2}+\\dfrac2{4}+\\dfrac3{8}+\\dots+\\dfrac{n}{2^{n}}$ and find its limit as $n\\to\\infty$."
+      "en": "Evaluate $\\dfrac1{2}+\\dfrac2{4}+\\dfrac3{8}+\\dots+\\dfrac{n}{2^{n}}$ and find its limit as $n\\to\\infty$.",
+      "uz": "$\\dfrac1{2}+\\dfrac2{4}+\\dfrac3{8}+\\dots+\\dfrac{n}{2^{n}}$ ni hisoblang va $n\\to\\infty$ da limitini toping."
      },
      "steps": {
       "ru": [
@@ -485,18 +560,26 @@ window.LESSONS[7] = {
        "Substituting, $\\left(1-q\\right)^{2}=\\tfrac14$, so the sum equals $$\\frac12\\cdot4\\left(1-\\frac{n+1}{2^{n}}+\\frac{n}{2^{n+1}}\\right)=2-\\frac{n+2}{2^{n}}.$$",
        "Check at $n=3$: the formula gives $2-\\tfrac58=\\tfrac{11}{8}$, and direct addition gives $\\tfrac12+\\tfrac12+\\tfrac38=\\tfrac{11}{8}$ ✓",
        "As $n\\to\\infty$ the fraction $\\dfrac{n+2}{2^{n}}\\to0$, since exponentials beat linear growth. The limit is $2$."
+      ],
+      "uz": [
+       "Bu $\\dfrac12\\sum_{k=1}^{n}k\\left(\\tfrac12\\right)^{k-1}$, yaʼni oldingi formula $q=\\tfrac12$ da.",
+       "Oʻrniga qoʻysak, $\\left(1-q\\right)^{2}=\\tfrac14$, shuning uchun yigʻindi $$\\frac12\\cdot4\\left(1-\\frac{n+1}{2^{n}}+\\frac{n}{2^{n+1}}\\right)=2-\\frac{n+2}{2^{n}}$$ ga teng.",
+       "$n=3$ da tekshiramiz: formula $2-\\tfrac58=\\tfrac{11}{8}$ ni beradi, bevosita qoʻshish esa $\\tfrac12+\\tfrac12+\\tfrac38=\\tfrac{11}{8}$ ✓",
+       "$n\\to\\infty$ da $\\dfrac{n+2}{2^{n}}\\to0$, chunki koʻrsatkichli oʻsish chiziqlisidan tez. Limit $2$ ga teng."
       ]
      },
      "ans": {
       "ru": "$2-\\dfrac{n+2}{2^{n}}$; предел равен $2$.",
-      "en": "$2-\\dfrac{n+2}{2^{n}}$; the limit is $2$."
+      "en": "$2-\\dfrac{n+2}{2^{n}}$; the limit is $2$.",
+      "uz": "$2-\\dfrac{n+2}{2^{n}}$; limiti $2$."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "**Метод конечных разностей.** Если $a_n$ задаётся многочленом степени $d$, то сумма $\\sum_{k\\le n}a_k$ — многочлен степени $d+1$. Отсюда быстрый способ найти формулу: предположить многочлен нужной степени с неизвестными коэффициентами, подставить $n=0,1,\\dots,d+1$ и решить линейную систему. Доказательство всё равно потребуется — обычно индукцией.",
-      "en": "**The method of finite differences.** If $a_n$ is given by a polynomial of degree $d$ then $\\sum_{k\\le n}a_k$ is a polynomial of degree $d+1$. This gives a fast way to find the formula: assume a polynomial of that degree with unknown coefficients, plug in $n=0,1,\\dots,d+1$ and solve the linear system. A proof is still needed — usually by induction."
+      "en": "**The method of finite differences.** If $a_n$ is given by a polynomial of degree $d$ then $\\sum_{k\\le n}a_k$ is a polynomial of degree $d+1$. This gives a fast way to find the formula: assume a polynomial of that degree with unknown coefficients, plug in $n=0,1,\\dots,d+1$ and solve the linear system. A proof is still needed — usually by induction.",
+      "uz": "**Chekli ayirmalar usuli.** Agar $a_n$ darajasi $d$ boʻlgan koʻphad bilan berilgan boʻlsa, $\\sum_{k\\le n}a_k$ darajasi $d+1$ boʻlgan koʻphad boʻladi. Bu formulani tez topish yoʻlini beradi: shu darajali koʻphadni nomaʼlum koeffitsiyentlar bilan olib, $n=0,1,\\dots,d+1$ ni qoʻyamiz va chiziqli tenglamalar sistemasini yechamiz. Isbot baribir kerak — odatda induksiya bilan."
      }
     }
    ]
@@ -512,68 +595,79 @@ window.LESSONS[7] = {
      "t": "p",
      "text": {
       "ru": "Рекуррентное задание удобно для вычислений, но неудобно для рассуждений: чтобы узнать $a_{100}$, приходится пройти все предыдущие члены. Для целого класса последовательностей — линейных рекуррент — существует общий способ получить **явную формулу**.",
-      "en": "A recurrence is convenient for computing but awkward for reasoning: to learn $a_{100}$ you must walk through every earlier term. For a whole class of sequences — the linear recurrences — there is a general way to obtain an **explicit formula**."
+      "en": "A recurrence is convenient for computing but awkward for reasoning: to learn $a_{100}$ you must walk through every earlier term. For a whole class of sequences — the linear recurrences — there is a general way to obtain an **explicit formula**.",
+      "uz": "Rekurrent munosabat hisoblash uchun qulay, lekin fikrlash uchun noqulay: $a_{100}$ ni bilish uchun barcha oldingi hadlarni bosib oʻtish kerak. Ketma-ketliklarning butun bir sinfi — chiziqli rekurrent munosabatlar — uchun **oshkor formula** olishning umumiy yoʻli bor."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Линейная рекуррента второго порядка",
-      "en": "Second-order linear recurrence"
+      "en": "Second-order linear recurrence",
+      "uz": "Ikkinchi tartibli chiziqli rekurrent munosabat"
      },
      "text": {
       "ru": "Последовательность задана **линейной рекуррентой второго порядка с постоянными коэффициентами**, если $$a_{n+2}=p\\,a_{n+1}+q\\,a_n\\qquad\\left(q\\ne0\\right)$$ для всех $n$, а $a_0,a_1$ заданы. Многочлен $$x^{2}-px-q$$ называется её **характеристическим многочленом**.",
-      "en": "A sequence satisfies a **second-order linear recurrence with constant coefficients** if $$a_{n+2}=p\\,a_{n+1}+q\\,a_n\\qquad\\left(q\\ne0\\right)$$ for all $n$, with $a_0,a_1$ given. The polynomial $$x^{2}-px-q$$ is its **characteristic polynomial**."
+      "en": "A sequence satisfies a **second-order linear recurrence with constant coefficients** if $$a_{n+2}=p\\,a_{n+1}+q\\,a_n\\qquad\\left(q\\ne0\\right)$$ for all $n$, with $a_0,a_1$ given. The polynomial $$x^{2}-px-q$$ is its **characteristic polynomial**.",
+      "uz": "Agar barcha $n$ uchun $$a_{n+2}=p\\,a_{n+1}+q\\,a_n\\qquad\\left(q\\ne0\\right)$$ bajarilsa va $a_0,a_1$ berilgan boʻlsa, ketma-ketlik **oʻzgarmas koeffitsiyentli ikkinchi tartibli chiziqli rekurrent munosabatni** qanoatlantiradi deyiladi. $$x^{2}-px-q$$ koʻphadi uning **xarakteristik koʻphadi** deyiladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Общий вид решения",
-      "en": "The general solution"
+      "en": "The general solution",
+      "uz": "Umumiy yechim"
      },
      "text": {
       "ru": "Пусть $x_1,x_2$ — корни характеристического многочлена.\n\n**Если $x_1\\ne x_2$,** то существуют константы $A,B$, для которых $$a_n=A\\,x_1^{\\,n}+B\\,x_2^{\\,n}\\qquad\\text{при всех }n\\ge0 .$$\n\n**Если $x_1=x_2=x$,** то существуют $A,B$ с $$a_n=\\left(A+Bn\\right)x^{\\,n}.$$\n\nКонстанты однозначно определяются двумя начальными условиями.",
-      "en": "Let $x_1,x_2$ be the roots of the characteristic polynomial.\n\n**If $x_1\\ne x_2$** there are constants $A,B$ with $$a_n=A\\,x_1^{\\,n}+B\\,x_2^{\\,n}\\qquad\\text{for all }n\\ge0 .$$\n\n**If $x_1=x_2=x$** there are $A,B$ with $$a_n=\\left(A+Bn\\right)x^{\\,n}.$$\n\nThe constants are uniquely determined by the two initial values."
+      "en": "Let $x_1,x_2$ be the roots of the characteristic polynomial.\n\n**If $x_1\\ne x_2$** there are constants $A,B$ with $$a_n=A\\,x_1^{\\,n}+B\\,x_2^{\\,n}\\qquad\\text{for all }n\\ge0 .$$\n\n**If $x_1=x_2=x$** there are $A,B$ with $$a_n=\\left(A+Bn\\right)x^{\\,n}.$$\n\nThe constants are uniquely determined by the two initial values.",
+      "uz": "$x_1,x_2$ — xarakteristik koʻphadning ildizlari boʻlsin.\n\n**Agar $x_1\\ne x_2$** boʻlsa, shunday $A,B$ oʻzgarmaslar bor: $$a_n=A\\,x_1^{\\,n}+B\\,x_2^{\\,n}\\qquad\\text{barcha }n\\ge0\\text{ uchun} .$$\n\n**Agar $x_1=x_2=x$** boʻlsa, shunday $A,B$ bor: $$a_n=\\left(A+Bn\\right)x^{\\,n}.$$\n\nOʻzgarmaslar ikkita boshlangʻich qiymat bilan yagona tarzda aniqlanadi."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "**Шаг 1: геометрические прогрессии — решения.** Подставим $a_n=x^{\\,n}$ в рекурренту: $$x^{\\,n+2}=p\\,x^{\\,n+1}+q\\,x^{\\,n}.$$ Разделив на $x^{\\,n}\\ne0$, получаем ровно $x^{2}=px+q$. Значит $x^{\\,n}$ удовлетворяет рекурренте тогда и только тогда, когда $x$ — корень характеристического многочлена ✓\n\n**Шаг 2: сумма решений — решение.** Рекуррента линейна: если последовательности $u_n$ и $v_n$ ей удовлетворяют, то и $Au_n+Bv_n$ удовлетворяет, потому что $$A u_{n+2}+B v_{n+2}=p\\left(Au_{n+1}+Bv_{n+1}\\right)+q\\left(Au_n+Bv_n\\right) \\quad\\checkmark$$\n\n**Шаг 3: подбор констант.** Нужно решить систему $$\\begin{cases}A+B=a_0,\\\\ Ax_1+Bx_2=a_1.\\end{cases}$$ Её определитель равен $x_2-x_1\\ne0$, поэтому решение существует и единственно ✓\n\n**Шаг 4: единственность.** Два члена $a_0,a_1$ вместе с рекуррентой однозначно задают всю последовательность (индукция). Наша формула даёт правильные $a_0,a_1$ и удовлетворяет рекурренте, значит совпадает с $a_n$ при всех $n$ ✓\n\n**Случай кратного корня.** Здесь $x_1=x_2=x=\\tfrac{p}{2}$ и $q=-x^{2}$. Проверим, что $n x^{\\,n}$ — тоже решение: $$\\left(n+2\\right)x^{\\,n+2}\\ \\overset{?}{=}\\ p\\left(n+1\\right)x^{\\,n+1}+q\\,n x^{\\,n}.$$ Подставим $p=2x$ и $q=-x^{2}$ и сократим $x^{\\,n+2}$: справа получается $2\\left(n+1\\right)-n=n+2$ ✓ Дальше рассуждение то же самое, а система для $A,B$ принимает вид $A=a_0$, $\\left(A+B\\right)x=a_1$ и снова однозначно разрешима (напомним, $x\\ne0$, так как $q\\ne0$) ✓ $\\blacksquare$",
-      "en": "**Step 1: geometric sequences are solutions.** Substitute $a_n=x^{\\,n}$: $$x^{\\,n+2}=p\\,x^{\\,n+1}+q\\,x^{\\,n}.$$ Dividing by $x^{\\,n}\\ne0$ gives exactly $x^{2}=px+q$. So $x^{\\,n}$ satisfies the recurrence iff $x$ is a root of the characteristic polynomial ✓\n\n**Step 2: sums of solutions are solutions.** The recurrence is linear: if $u_n$ and $v_n$ satisfy it so does $Au_n+Bv_n$, since $$A u_{n+2}+B v_{n+2}=p\\left(Au_{n+1}+Bv_{n+1}\\right)+q\\left(Au_n+Bv_n\\right) \\quad\\checkmark$$\n\n**Step 3: fitting the constants.** Solve $$\\begin{cases}A+B=a_0,\\\\ Ax_1+Bx_2=a_1.\\end{cases}$$ Its determinant is $x_2-x_1\\ne0$, so a unique solution exists ✓\n\n**Step 4: uniqueness.** The two values $a_0,a_1$ together with the recurrence determine the whole sequence (induction). Our formula reproduces $a_0,a_1$ and satisfies the recurrence, so it agrees with $a_n$ for every $n$ ✓\n\n**The repeated root.** Here $x_1=x_2=x=\\tfrac{p}{2}$ and $q=-x^{2}$. Check that $n x^{\\,n}$ is also a solution: $$\\left(n+2\\right)x^{\\,n+2}\\ \\overset{?}{=}\\ p\\left(n+1\\right)x^{\\,n+1}+q\\,n x^{\\,n}.$$ Substituting $p=2x$, $q=-x^{2}$ and cancelling $x^{\\,n+2}$, the right side is $2\\left(n+1\\right)-n=n+2$ ✓ The rest is identical, and the system becomes $A=a_0$, $\\left(A+B\\right)x=a_1$, again uniquely solvable since $x\\ne0$ (because $q\\ne0$) ✓ $\\blacksquare$"
+      "en": "**Step 1: geometric sequences are solutions.** Substitute $a_n=x^{\\,n}$: $$x^{\\,n+2}=p\\,x^{\\,n+1}+q\\,x^{\\,n}.$$ Dividing by $x^{\\,n}\\ne0$ gives exactly $x^{2}=px+q$. So $x^{\\,n}$ satisfies the recurrence iff $x$ is a root of the characteristic polynomial ✓\n\n**Step 2: sums of solutions are solutions.** The recurrence is linear: if $u_n$ and $v_n$ satisfy it so does $Au_n+Bv_n$, since $$A u_{n+2}+B v_{n+2}=p\\left(Au_{n+1}+Bv_{n+1}\\right)+q\\left(Au_n+Bv_n\\right) \\quad\\checkmark$$\n\n**Step 3: fitting the constants.** Solve $$\\begin{cases}A+B=a_0,\\\\ Ax_1+Bx_2=a_1.\\end{cases}$$ Its determinant is $x_2-x_1\\ne0$, so a unique solution exists ✓\n\n**Step 4: uniqueness.** The two values $a_0,a_1$ together with the recurrence determine the whole sequence (induction). Our formula reproduces $a_0,a_1$ and satisfies the recurrence, so it agrees with $a_n$ for every $n$ ✓\n\n**The repeated root.** Here $x_1=x_2=x=\\tfrac{p}{2}$ and $q=-x^{2}$. Check that $n x^{\\,n}$ is also a solution: $$\\left(n+2\\right)x^{\\,n+2}\\ \\overset{?}{=}\\ p\\left(n+1\\right)x^{\\,n+1}+q\\,n x^{\\,n}.$$ Substituting $p=2x$, $q=-x^{2}$ and cancelling $x^{\\,n+2}$, the right side is $2\\left(n+1\\right)-n=n+2$ ✓ The rest is identical, and the system becomes $A=a_0$, $\\left(A+B\\right)x=a_1$, again uniquely solvable since $x\\ne0$ (because $q\\ne0$) ✓ $\\blacksquare$",
+      "uz": "**1-qadam: geometrik ketma-ketliklar yechim boʻladi.** $a_n=x^{\\,n}$ ni qoʻyamiz: $$x^{\\,n+2}=p\\,x^{\\,n+1}+q\\,x^{\\,n}.$$ $x^{\\,n}\\ne0$ ga boʻlish aynan $x^{2}=px+q$ ni beradi. Demak $x^{\\,n}$ rekurrent munosabatni qanoatlantirishi uchun $x$ xarakteristik koʻphadning ildizi boʻlishi zarur va yetarli ✓\n\n**2-qadam: yechimlar yigʻindisi ham yechim.** Munosabat chiziqli: agar $u_n$ va $v_n$ uni qanoatlantirsa, $Au_n+Bv_n$ ham qanoatlantiradi, chunki $$A u_{n+2}+B v_{n+2}=p\\left(Au_{n+1}+Bv_{n+1}\\right)+q\\left(Au_n+Bv_n\\right) \\quad\\checkmark$$\n\n**3-qadam: oʻzgarmaslarni moslash.** $$\\begin{cases}A+B=a_0,\\\\ Ax_1+Bx_2=a_1.\\end{cases}$$ sistemasini yechamiz. Uning determinanti $x_2-x_1\\ne0$, shuning uchun yagona yechim mavjud ✓\n\n**4-qadam: yagonalik.** $a_0,a_1$ qiymatlari rekurrent munosabat bilan birga butun ketma-ketlikni aniqlaydi (induksiya). Bizning formula $a_0,a_1$ ni qayta hosil qiladi va munosabatni qanoatlantiradi, demak u har bir $n$ uchun $a_n$ bilan mos tushadi ✓\n\n**Karrali ildiz.** Bu holda $x_1=x_2=x=\\tfrac{p}{2}$ va $q=-x^{2}$. $n x^{\\,n}$ ham yechim ekanini tekshiramiz: $$\\left(n+2\\right)x^{\\,n+2}\\ \\overset{?}{=}\\ p\\left(n+1\\right)x^{\\,n+1}+q\\,n x^{\\,n}.$$ $p=2x$, $q=-x^{2}$ ni qoʻyib, $x^{\\,n+2}$ ni qisqartirsak, oʻng tomon $2\\left(n+1\\right)-n=n+2$ boʻladi ✓ Qolgani aynan shunday, sistema esa $A=a_0$, $\\left(A+B\\right)x=a_1$ ga aylanadi va $x\\ne0$ ($q\\ne0$ boʻlgani uchun) sababli yana yagona yechimga ega ✓ $\\blacksquare$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формула Бине",
-      "en": "Binet formula"
+      "en": "Binet formula",
+      "uz": "Bine formulasi"
      },
      "text": {
       "ru": "Для чисел Фибоначчи $F_1=F_2=1$, $F_{n+2}=F_{n+1}+F_n$ $$F_n=\\frac1{\\sqrt5}\\left(\\varphi^{\\,n}-\\psi^{\\,n}\\right),\\qquad \\varphi=\\frac{1+\\sqrt5}{2},\\quad \\psi=\\frac{1-\\sqrt5}{2}.$$",
-      "en": "For the Fibonacci numbers $F_1=F_2=1$, $F_{n+2}=F_{n+1}+F_n$ $$F_n=\\frac1{\\sqrt5}\\left(\\varphi^{\\,n}-\\psi^{\\,n}\\right),\\qquad \\varphi=\\frac{1+\\sqrt5}{2},\\quad \\psi=\\frac{1-\\sqrt5}{2}.$$"
+      "en": "For the Fibonacci numbers $F_1=F_2=1$, $F_{n+2}=F_{n+1}+F_n$ $$F_n=\\frac1{\\sqrt5}\\left(\\varphi^{\\,n}-\\psi^{\\,n}\\right),\\qquad \\varphi=\\frac{1+\\sqrt5}{2},\\quad \\psi=\\frac{1-\\sqrt5}{2}.$$",
+      "uz": "$F_1=F_2=1$, $F_{n+2}=F_{n+1}+F_n$ Fibonachchi sonlari uchun $$F_n=\\frac1{\\sqrt5}\\left(\\varphi^{\\,n}-\\psi^{\\,n}\\right),\\qquad \\varphi=\\frac{1+\\sqrt5}{2},\\quad \\psi=\\frac{1-\\sqrt5}{2}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Здесь $p=q=1$, характеристический многочлен равен $$x^{2}-x-1 ,$$ его корни — $\\varphi$ и $\\psi$ (это «золотое сечение» и сопряжённое к нему число). Они различны, поэтому $$F_n=A\\varphi^{\\,n}+B\\psi^{\\,n}.$$\n\nУдобно доопределить $F_0=0$ (рекуррента это позволяет: $F_2=F_1+F_0$ даёт $F_0=0$). Тогда система такова: $$\\begin{cases}A+B=F_0=0,\\\\ A\\varphi+B\\psi=F_1=1.\\end{cases}$$ Из первого уравнения $B=-A$, подставляем во второе: $$A\\left(\\varphi-\\psi\\right)=1 .$$ Но $\\varphi-\\psi=\\sqrt5$, значит $A=\\dfrac1{\\sqrt5}$, $B=-\\dfrac1{\\sqrt5}$ ✓ $\\blacksquare$",
-      "en": "Here $p=q=1$, so the characteristic polynomial is $$x^{2}-x-1 ,$$ whose roots are $\\varphi$ and $\\psi$ (the golden ratio and its conjugate). They are distinct, so $$F_n=A\\varphi^{\\,n}+B\\psi^{\\,n}.$$\n\nIt is convenient to set $F_0=0$ (the recurrence forces it: $F_2=F_1+F_0$). The system is then $$\\begin{cases}A+B=F_0=0,\\\\ A\\varphi+B\\psi=F_1=1.\\end{cases}$$ The first gives $B=-A$; substituting into the second, $$A\\left(\\varphi-\\psi\\right)=1 .$$ But $\\varphi-\\psi=\\sqrt5$, so $A=\\dfrac1{\\sqrt5}$ and $B=-\\dfrac1{\\sqrt5}$ ✓ $\\blacksquare$"
+      "en": "Here $p=q=1$, so the characteristic polynomial is $$x^{2}-x-1 ,$$ whose roots are $\\varphi$ and $\\psi$ (the golden ratio and its conjugate). They are distinct, so $$F_n=A\\varphi^{\\,n}+B\\psi^{\\,n}.$$\n\nIt is convenient to set $F_0=0$ (the recurrence forces it: $F_2=F_1+F_0$). The system is then $$\\begin{cases}A+B=F_0=0,\\\\ A\\varphi+B\\psi=F_1=1.\\end{cases}$$ The first gives $B=-A$; substituting into the second, $$A\\left(\\varphi-\\psi\\right)=1 .$$ But $\\varphi-\\psi=\\sqrt5$, so $A=\\dfrac1{\\sqrt5}$ and $B=-\\dfrac1{\\sqrt5}$ ✓ $\\blacksquare$",
+      "uz": "Bu yerda $p=q=1$, shuning uchun xarakteristik koʻphad $$x^{2}-x-1 ,$$ uning ildizlari $\\varphi$ va $\\psi$ (oltin nisbat va uning qoʻshmasi). Ular turlicha, shuning uchun $$F_n=A\\varphi^{\\,n}+B\\psi^{\\,n}.$$\n\n$F_0=0$ deb olish qulay (rekurrent munosabat buni majbur qiladi: $F_2=F_1+F_0$). Unda sistema $$\\begin{cases}A+B=F_0=0,\\\\ A\\varphi+B\\psi=F_1=1.\\end{cases}$$ Birinchisi $B=-A$ ni beradi; ikkinchisiga qoʻysak, $$A\\left(\\varphi-\\psi\\right)=1 .$$ Lekin $\\varphi-\\psi=\\sqrt5$, shuning uchun $A=\\dfrac1{\\sqrt5}$ va $B=-\\dfrac1{\\sqrt5}$ ✓ $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Формула Бине выглядит парадоксально: справа стоят иррациональные числа, а слева — всегда целое. Иррациональности взаимно уничтожаются, потому что при раскрытии по формуле бинома все члены с нечётными степенями $\\sqrt5$ входят дважды с противоположными знаками.\n\nПрактическое следствие: $\\left|\\psi\\right|=\\dfrac{\\sqrt5-1}{2}\\approx0{,}618<1$, поэтому $\\psi^{\\,n}\\to0$, и $$F_n=\\left[\\frac{\\varphi^{\\,n}}{\\sqrt5}\\right]\\ \\text{(ближайшее целое)} .$$ Отсюда же видно, что отношение $\\dfrac{F_{n+1}}{F_n}$ стремится к золотому сечению $\\varphi\\approx1{,}618$.",
-      "en": "Binet formula looks paradoxical: the right side is built from irrational numbers, the left side is always an integer. The irrational parts cancel, because on expanding by the binomial theorem every term with an odd power of $\\sqrt5$ appears twice with opposite signs.\n\nA practical consequence: $\\left|\\psi\\right|=\\dfrac{\\sqrt5-1}{2}\\approx0.618<1$, so $\\psi^{\\,n}\\to0$ and $$F_n=\\left[\\frac{\\varphi^{\\,n}}{\\sqrt5}\\right]\\ \\text{(nearest integer)} .$$ It also shows that the ratio $\\dfrac{F_{n+1}}{F_n}$ tends to the golden ratio $\\varphi\\approx1.618$."
+      "en": "Binet formula looks paradoxical: the right side is built from irrational numbers, the left side is always an integer. The irrational parts cancel, because on expanding by the binomial theorem every term with an odd power of $\\sqrt5$ appears twice with opposite signs.\n\nA practical consequence: $\\left|\\psi\\right|=\\dfrac{\\sqrt5-1}{2}\\approx0.618<1$, so $\\psi^{\\,n}\\to0$ and $$F_n=\\left[\\frac{\\varphi^{\\,n}}{\\sqrt5}\\right]\\ \\text{(nearest integer)} .$$ It also shows that the ratio $\\dfrac{F_{n+1}}{F_n}$ tends to the golden ratio $\\varphi\\approx1.618$.",
+      "uz": "Bine formulasi paradoksal koʻrinadi: oʻng tomon irratsional sonlardan tuzilgan, chap tomon esa har doim butun son. Irratsional qismlar qisqaradi, chunki Nyuton binomi boʻyicha yoyganda $\\sqrt5$ ning toq darajasi bor har bir had qarama-qarshi ishoralar bilan ikki marta paydo boʻladi.\n\nAmaliy natija: $\\left|\\psi\\right|=\\dfrac{\\sqrt5-1}{2}\\approx0.618<1$, shuning uchun $\\psi^{\\,n}\\to0$ va $$F_n=\\left[\\frac{\\varphi^{\\,n}}{\\sqrt5}\\right]\\ \\text{(eng yaqin butun son)} .$$ Shu bilan birga $\\dfrac{F_{n+1}}{F_n}$ nisbati oltin nisbat $\\varphi\\approx1.618$ ga intilishi ham koʻrinadi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Найдите явную формулу для $a_0=0$, $a_1=1$, $a_{n+2}=4a_{n+1}-4a_n$.",
-      "en": "Find an explicit formula for $a_0=0$, $a_1=1$, $a_{n+2}=4a_{n+1}-4a_n$."
+      "en": "Find an explicit formula for $a_0=0$, $a_1=1$, $a_{n+2}=4a_{n+1}-4a_n$.",
+      "uz": "$a_0=0$, $a_1=1$, $a_{n+2}=4a_{n+1}-4a_n$ uchun oshkor formulani toping."
      },
      "steps": {
       "ru": [
@@ -589,6 +683,13 @@ window.LESSONS[7] = {
        "From $a_0=0$: $A=0$. From $a_1=1$: $\\left(0+B\\right)\\cdot2=1$, so $B=\\tfrac12$.",
        "Hence $a_n=\\dfrac{n}{2}\\cdot2^{\\,n}=n\\,2^{\\,n-1}$.",
        "Check: $a_2=2\\cdot2=4$, and the recurrence gives $4\\cdot1-4\\cdot0=4$ ✓"
+      ],
+      "uz": [
+       "Xarakteristik koʻphad: $x^{2}-4x+4=\\left(x-2\\right)^{2}$ — $x=2$ karrali ildiz.",
+       "Demak $a_n=\\left(A+Bn\\right)2^{\\,n}$.",
+       "$a_0=0$ dan: $A=0$. $a_1=1$ dan: $\\left(0+B\\right)\\cdot2=1$, demak $B=\\tfrac12$.",
+       "Shunday qilib, $a_n=\\dfrac{n}{2}\\cdot2^{\\,n}=n\\,2^{\\,n-1}$.",
+       "Tekshiramiz: $a_2=2\\cdot2=4$, rekurrent munosabat esa $4\\cdot1-4\\cdot0=4$ ni beradi ✓"
       ]
      },
      "ans": {
@@ -600,25 +701,29 @@ window.LESSONS[7] = {
      "t": "thm",
      "name": {
       "ru": "Неоднородная рекуррента",
-      "en": "Inhomogeneous recurrences"
+      "en": "Inhomogeneous recurrences",
+      "uz": "Bir jinsli boʻlmagan rekurrent munosabatlar"
      },
      "text": {
       "ru": "Для рекурренты вида $$a_{n+1}=c\\,a_n+d\\qquad\\left(c\\ne1\\right)$$ существует **неподвижная точка** $t=\\dfrac{d}{1-c}$, и последовательность $b_n=a_n-t$ является геометрической прогрессией со знаменателем $c$. Отсюда $$a_n=\\left(a_0-t\\right)c^{\\,n}+t .$$",
-      "en": "For a recurrence of the form $$a_{n+1}=c\\,a_n+d\\qquad\\left(c\\ne1\\right)$$ there is a **fixed point** $t=\\dfrac{d}{1-c}$, and the sequence $b_n=a_n-t$ is a geometric progression with ratio $c$. Hence $$a_n=\\left(a_0-t\\right)c^{\\,n}+t .$$"
+      "en": "For a recurrence of the form $$a_{n+1}=c\\,a_n+d\\qquad\\left(c\\ne1\\right)$$ there is a **fixed point** $t=\\dfrac{d}{1-c}$, and the sequence $b_n=a_n-t$ is a geometric progression with ratio $c$. Hence $$a_n=\\left(a_0-t\\right)c^{\\,n}+t .$$",
+      "uz": "$$a_{n+1}=c\\,a_n+d\\qquad\\left(c\\ne1\\right)$$ koʻrinishidagi munosabat uchun **qoʻzgʻalmas nuqta** $t=\\dfrac{d}{1-c}$ mavjud va $b_n=a_n-t$ ketma-ketligi $c$ maxrajli geometrik progressiya boʻladi. Demak $$a_n=\\left(a_0-t\\right)c^{\\,n}+t .$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Неподвижная точка — это решение уравнения $t=ct+d$, откуда $t\\left(1-c\\right)=d$ и $t=\\dfrac{d}{1-c}$ (здесь и нужно $c\\ne1$).\n\nВычтем это равенство из рекурренты: $$a_{n+1}-t=c\\,a_n+d-\\left(ct+d\\right)=c\\left(a_n-t\\right),$$ то есть $b_{n+1}=c\\,b_n$ — геометрическая прогрессия ✓ Значит $b_n=b_0c^{\\,n}$, и остаётся вернуться к $a_n=b_n+t$ ✓ $\\blacksquare$",
-      "en": "The fixed point solves $t=ct+d$, giving $t\\left(1-c\\right)=d$ and $t=\\dfrac{d}{1-c}$ (this is where $c\\ne1$ is needed).\n\nSubtract that equation from the recurrence: $$a_{n+1}-t=c\\,a_n+d-\\left(ct+d\\right)=c\\left(a_n-t\\right),$$ i.e. $b_{n+1}=c\\,b_n$, a geometric progression ✓ So $b_n=b_0c^{\\,n}$, and $a_n=b_n+t$ ✓ $\\blacksquare$"
+      "en": "The fixed point solves $t=ct+d$, giving $t\\left(1-c\\right)=d$ and $t=\\dfrac{d}{1-c}$ (this is where $c\\ne1$ is needed).\n\nSubtract that equation from the recurrence: $$a_{n+1}-t=c\\,a_n+d-\\left(ct+d\\right)=c\\left(a_n-t\\right),$$ i.e. $b_{n+1}=c\\,b_n$, a geometric progression ✓ So $b_n=b_0c^{\\,n}$, and $a_n=b_n+t$ ✓ $\\blacksquare$",
+      "uz": "Qoʻzgʻalmas nuqta $t=ct+d$ tenglamasini yechadi, bundan $t\\left(1-c\\right)=d$ va $t=\\dfrac{d}{1-c}$ (aynan shu yerda $c\\ne1$ kerak).\n\nBu tenglamani rekurrent munosabatdan ayiramiz: $$a_{n+1}-t=c\\,a_n+d-\\left(ct+d\\right)=c\\left(a_n-t\\right),$$ yaʼni $b_{n+1}=c\\,b_n$ — geometrik progressiya ✓ Demak $b_n=b_0c^{\\,n}$ va $a_n=b_n+t$ ✓ $\\blacksquare$"
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Приём с неподвижной точкой универсален: **сдвиньте начало отсчёта туда, где последовательность стояла бы на месте**, и останется чистая геометрическая прогрессия. Так задача про $a_{n+1}=2a_n+1$ из первого раздела решается в две строки: $t=-1$, значит $a_n+1=\\left(a_1+1\\right)2^{\\,n-1}=2^{\\,n}$, то есть $a_n=2^{\\,n}-1$.",
-      "en": "The fixed-point trick is universal: **move the origin to where the sequence would stand still** and a pure geometric progression remains. The problem $a_{n+1}=2a_n+1$ from the first section then takes two lines: $t=-1$, so $a_n+1=\\left(a_1+1\\right)2^{\\,n-1}=2^{\\,n}$, that is $a_n=2^{\\,n}-1$."
+      "en": "The fixed-point trick is universal: **move the origin to where the sequence would stand still** and a pure geometric progression remains. The problem $a_{n+1}=2a_n+1$ from the first section then takes two lines: $t=-1$, so $a_n+1=\\left(a_1+1\\right)2^{\\,n-1}=2^{\\,n}$, that is $a_n=2^{\\,n}-1$.",
+      "uz": "Qoʻzgʻalmas nuqta usuli universal: **koordinata boshini ketma-ketlik joyida turib qoladigan nuqtaga koʻchirsak**, sof geometrik progressiya qoladi. Birinchi boʻlimdagi $a_{n+1}=2a_n+1$ masalasi shunda ikki satrga sigʻadi: $t=-1$, demak $a_n+1=\\left(a_1+1\\right)2^{\\,n-1}=2^{\\,n}$, yaʼni $a_n=2^{\\,n}-1$."
      }
     }
    ]
@@ -634,25 +739,29 @@ window.LESSONS[7] = {
      "t": "def",
      "name": {
       "ru": "Числа Фибоначчи",
-      "en": "Fibonacci numbers"
+      "en": "Fibonacci numbers",
+      "uz": "Fibonachchi sonlari"
      },
      "text": {
       "ru": "$$F_0=0,\\qquad F_1=1,\\qquad F_{n+1}=F_n+F_{n-1}.$$ Первые члены: $0,1,1,2,3,5,8,13,21,34,55,89,144,\\dots$",
-      "en": "$$F_0=0,\\qquad F_1=1,\\qquad F_{n+1}=F_n+F_{n-1}.$$ The first terms are $0,1,1,2,3,5,8,13,21,34,55,89,144,\\dots$"
+      "en": "$$F_0=0,\\qquad F_1=1,\\qquad F_{n+1}=F_n+F_{n-1}.$$ The first terms are $0,1,1,2,3,5,8,13,21,34,55,89,144,\\dots$",
+      "uz": "$$F_0=0,\\qquad F_1=1,\\qquad F_{n+1}=F_n+F_{n-1}.$$ Dastlabki hadlar: $0,1,1,2,3,5,8,13,21,34,55,89,144,\\dots$"
      }
     },
     {
      "t": "p",
      "text": {
       "ru": "Эти числа появляются в олимпиадах постоянно — в задачах о разбиениях, о путях по клеткам, о делимости. Полезно знать несколько их свойств.",
-      "en": "These numbers appear constantly in competitions — in problems about tilings, lattice paths and divisibility. A few of their properties are worth knowing."
+      "en": "These numbers appear constantly in competitions — in problems about tilings, lattice paths and divisibility. A few of their properties are worth knowing.",
+      "uz": "Bu sonlar olimpiadalarda doimo uchraydi — qoplashlar, toʻrdagi yoʻllar va boʻlinish haqidagi masalalarda. Ularning bir necha xossasini bilish foydali."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Сумма первых чисел Фибоначчи",
-      "en": "The sum of the first Fibonacci numbers"
+      "en": "The sum of the first Fibonacci numbers",
+      "uz": "Dastlabki Fibonachchi sonlari yigʻindisi"
      },
      "text": {
       "ru": "$$F_1+F_2+\\dots+F_n=F_{n+2}-1 .$$",
@@ -663,32 +772,37 @@ window.LESSONS[7] = {
      "t": "proof",
      "text": {
       "ru": "Телескопирование. Из рекурренты $F_{k+2}=F_{k+1}+F_k$ получаем $$F_k=F_{k+2}-F_{k+1}.$$ Складываем по $k$ от $1$ до $n$: $$\\sum_{k=1}^{n}F_k=\\sum_{k=1}^{n}\\left(F_{k+2}-F_{k+1}\\right)=F_{n+2}-F_{2}=F_{n+2}-1 . \\qquad\\blacksquare$$",
-      "en": "Telescoping. The recurrence $F_{k+2}=F_{k+1}+F_k$ gives $$F_k=F_{k+2}-F_{k+1}.$$ Summing over $k$ from $1$ to $n$: $$\\sum_{k=1}^{n}F_k=\\sum_{k=1}^{n}\\left(F_{k+2}-F_{k+1}\\right)=F_{n+2}-F_{2}=F_{n+2}-1 . \\qquad\\blacksquare$$"
+      "en": "Telescoping. The recurrence $F_{k+2}=F_{k+1}+F_k$ gives $$F_k=F_{k+2}-F_{k+1}.$$ Summing over $k$ from $1$ to $n$: $$\\sum_{k=1}^{n}F_k=\\sum_{k=1}^{n}\\left(F_{k+2}-F_{k+1}\\right)=F_{n+2}-F_{2}=F_{n+2}-1 . \\qquad\\blacksquare$$",
+      "uz": "Teleskoplash. $F_{k+2}=F_{k+1}+F_k$ munosabati $$F_k=F_{k+2}-F_{k+1}$$ ni beradi. $k$ ni $1$ dan $n$ gacha qoʻshamiz: $$\\sum_{k=1}^{n}F_k=\\sum_{k=1}^{n}\\left(F_{k+2}-F_{k+1}\\right)=F_{n+2}-F_{2}=F_{n+2}-1 . \\qquad\\blacksquare$$"
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Соседние числа Фибоначчи взаимно просты",
-      "en": "Neighbouring Fibonacci numbers are coprime"
+      "en": "Neighbouring Fibonacci numbers are coprime",
+      "uz": "Qoʻshni Fibonachchi sonlari oʻzaro tub"
      },
      "text": {
       "ru": "$\\gcd\\left(F_n,F_{n+1}\\right)=1$ при всех $n\\ge1$.",
-      "en": "$\\gcd\\left(F_n,F_{n+1}\\right)=1$ for every $n\\ge1$."
+      "en": "$\\gcd\\left(F_n,F_{n+1}\\right)=1$ for every $n\\ge1$.",
+      "uz": "Har bir $n\\ge1$ uchun $\\gcd\\left(F_n,F_{n+1}\\right)=1$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Пусть $d$ делит и $F_n$, и $F_{n+1}$. Тогда $d$ делит их разность $F_{n+1}-F_n=F_{n-1}$. Повторяя, получаем, что $d$ делит $F_{n-2}$, затем $F_{n-3}$, и так до $F_1=1$. Значит $d=1$. $\\blacksquare$\n\nОбратите внимание: это в точности алгоритм Евклида, применённый к паре соседних чисел Фибоначчи. Именно на таких парах он работает **дольше всего** — это и есть худший случай алгоритма.",
-      "en": "Let $d$ divide both $F_n$ and $F_{n+1}$. Then $d$ divides their difference $F_{n+1}-F_n=F_{n-1}$. Repeating, $d$ divides $F_{n-2}$, then $F_{n-3}$, and so on down to $F_1=1$. Hence $d=1$. $\\blacksquare$\n\nNotice that this is precisely the Euclidean algorithm run on a pair of neighbouring Fibonacci numbers. On such pairs it takes the **longest** — they are its worst case."
+      "en": "Let $d$ divide both $F_n$ and $F_{n+1}$. Then $d$ divides their difference $F_{n+1}-F_n=F_{n-1}$. Repeating, $d$ divides $F_{n-2}$, then $F_{n-3}$, and so on down to $F_1=1$. Hence $d=1$. $\\blacksquare$\n\nNotice that this is precisely the Euclidean algorithm run on a pair of neighbouring Fibonacci numbers. On such pairs it takes the **longest** — they are its worst case.",
+      "uz": "$d$ ham $F_n$ ni, ham $F_{n+1}$ ni boʻlsin. Unda $d$ ularning $F_{n+1}-F_n=F_{n-1}$ ayirmasini ham boʻladi. Takrorlasak, $d$ soni $F_{n-2}$ ni, keyin $F_{n-3}$ ni va shu tarzda $F_1=1$ gacha boʻladi. Demak $d=1$. $\\blacksquare$\n\nEʼtibor bering, bu aynan qoʻshni Fibonachchi sonlari juftligiga qoʻllangan Yevklid algoritmidir. Bunday juftliklarda u **eng uzun** ishlaydi — ular uning eng yomon holatidir."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Сколькими способами можно подняться по лестнице из $n$ ступенек, если за один шаг разрешено подниматься на одну или на две ступеньки?",
-      "en": "In how many ways can one climb a staircase of $n$ steps if each move goes up either one step or two?"
+      "en": "In how many ways can one climb a staircase of $n$ steps if each move goes up either one step or two?",
+      "uz": "Agar har bir qadamda bir yoki ikki pogʻona yuqoriga chiqilsa, $n$ pogʻonali zinapoyaga necha xil usulda chiqish mumkin?"
      },
      "steps": {
       "ru": [
@@ -706,68 +820,86 @@ window.LESSONS[7] = {
        "Initial values: $c_1=1$ (one move), $c_2=2$ (two singles, or one double).",
        "So $c_n$ is the Fibonacci sequence shifted: $c_n=F_{n+1}$.",
        "Check: $c_3=3$, $c_4=5$, $c_5=8$ — indeed $F_4=3$, $F_5=5$, $F_6=8$ ✓"
+      ],
+      "uz": [
+       "Javobni $c_n$ deb belgilaymiz.",
+       "Oxirgi qadam yo bir pogʻona boʻlgan — unda biz $n-1$ pogʻonada turgan edik, yoki ikki pogʻona — unda $n-2$ da.",
+       "Ikki hol kesishmaydi va hammasini qamrab oladi, shuning uchun $c_n=c_{n-1}+c_{n-2}$.",
+       "Boshlangʻich qiymatlar: $c_1=1$ (bitta qadam), $c_2=2$ (ikki bittalik yoki bitta ikkilik).",
+       "Demak $c_n$ — surilgan Fibonachchi ketma-ketligi: $c_n=F_{n+1}$.",
+       "Tekshiramiz: $c_3=3$, $c_4=5$, $c_5=8$ — haqiqatan $F_4=3$, $F_5=5$, $F_6=8$ ✓"
       ]
      },
      "ans": {
       "ru": "$c_n=F_{n+1}$ способов.",
-      "en": "$c_n=F_{n+1}$ ways."
+      "en": "$c_n=F_{n+1}$ ways.",
+      "uz": "$c_n=F_{n+1}$ usul."
      }
     },
     {
      "t": "idea",
      "text": {
       "ru": "Приём из примера — **разбор по последнему шагу** — универсален для рекуррент. Спрашивайте себя: «каким мог быть последний ход, и что осталось до него?» Ответ и даёт рекуррентную формулу.",
-      "en": "The move used in the example — **split by the last step** — is the universal way to build a recurrence. Ask: \"what could the last move have been, and what was left before it?\" The answer is the recurrence."
+      "en": "The move used in the example — **split by the last step** — is the universal way to build a recurrence. Ask: \"what could the last move have been, and what was left before it?\" The answer is the recurrence.",
+      "uz": "Misolda ishlatilgan usul — **oxirgi qadam boʻyicha ajratish** — rekurrent munosabat tuzishning universal yoʻlidir. Soʻrang: «oxirgi qadam nima boʻlishi mumkin edi va undan oldin nima qolgan edi?» Javob — rekurrent munosabat."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Тождество Кассини",
-      "en": "Cassini identity"
+      "en": "Cassini identity",
+      "uz": "Kassini ayniyati"
      },
      "text": {
       "ru": "Для всех $n\\ge1$ $$F_{n-1}F_{n+1}-F_n^{2}=\\left(-1\\right)^{n}.$$",
-      "en": "For all $n\\ge1$ $$F_{n-1}F_{n+1}-F_n^{2}=\\left(-1\\right)^{n}.$$"
+      "en": "For all $n\\ge1$ $$F_{n-1}F_{n+1}-F_n^{2}=\\left(-1\\right)^{n}.$$",
+      "uz": "Barcha $n\\ge1$ uchun $$F_{n-1}F_{n+1}-F_n^{2}=\\left(-1\\right)^{n}.$$"
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Индукция по $n$. Обозначим $D_n=F_{n-1}F_{n+1}-F_n^{2}$.\n\n**База $n=1$:** $F_0F_2-F_1^{2}=0\\cdot1-1=-1=\\left(-1\\right)^{1}$ ✓\n\n**Шаг.** Подставим $F_{n+2}=F_{n+1}+F_n$: $$D_{n+1}=F_nF_{n+2}-F_{n+1}^{2}=F_n\\left(F_{n+1}+F_n\\right)-F_{n+1}^{2}.$$\n\nТеперь заменим один множитель $F_{n+1}$ во втором слагаемом на $F_n+F_{n-1}$: $$D_{n+1}=F_nF_{n+1}+F_n^{2}-F_{n+1}\\left(F_n+F_{n-1}\\right)=F_n^{2}-F_{n-1}F_{n+1}=-D_n .$$\n\nТак что знак меняется на каждом шаге, а по базе $D_1=-1$, значит $D_n=\\left(-1\\right)^{n}$ ✓ $\\blacksquare$",
-      "en": "Induction on $n$. Write $D_n=F_{n-1}F_{n+1}-F_n^{2}$.\n\n**Base $n=1$:** $F_0F_2-F_1^{2}=0\\cdot1-1=-1=\\left(-1\\right)^{1}$ ✓\n\n**Step.** Substitute $F_{n+2}=F_{n+1}+F_n$: $$D_{n+1}=F_nF_{n+2}-F_{n+1}^{2}=F_n\\left(F_{n+1}+F_n\\right)-F_{n+1}^{2}.$$\n\nNow replace one factor $F_{n+1}$ in the last term by $F_n+F_{n-1}$: $$D_{n+1}=F_nF_{n+1}+F_n^{2}-F_{n+1}\\left(F_n+F_{n-1}\\right)=F_n^{2}-F_{n-1}F_{n+1}=-D_n .$$\n\nSo the sign flips at every step, and $D_1=-1$ gives $D_n=\\left(-1\\right)^{n}$ ✓ $\\blacksquare$"
+      "en": "Induction on $n$. Write $D_n=F_{n-1}F_{n+1}-F_n^{2}$.\n\n**Base $n=1$:** $F_0F_2-F_1^{2}=0\\cdot1-1=-1=\\left(-1\\right)^{1}$ ✓\n\n**Step.** Substitute $F_{n+2}=F_{n+1}+F_n$: $$D_{n+1}=F_nF_{n+2}-F_{n+1}^{2}=F_n\\left(F_{n+1}+F_n\\right)-F_{n+1}^{2}.$$\n\nNow replace one factor $F_{n+1}$ in the last term by $F_n+F_{n-1}$: $$D_{n+1}=F_nF_{n+1}+F_n^{2}-F_{n+1}\\left(F_n+F_{n-1}\\right)=F_n^{2}-F_{n-1}F_{n+1}=-D_n .$$\n\nSo the sign flips at every step, and $D_1=-1$ gives $D_n=\\left(-1\\right)^{n}$ ✓ $\\blacksquare$",
+      "uz": "$n$ boʻyicha induksiya. $D_n=F_{n-1}F_{n+1}-F_n^{2}$ deb yozamiz.\n\n**Baza $n=1$:** $F_0F_2-F_1^{2}=0\\cdot1-1=-1=\\left(-1\\right)^{1}$ ✓\n\n**Qadam.** $F_{n+2}=F_{n+1}+F_n$ ni qoʻyamiz: $$D_{n+1}=F_nF_{n+2}-F_{n+1}^{2}=F_n\\left(F_{n+1}+F_n\\right)-F_{n+1}^{2}.$$\n\nEndi oxirgi haddagi bitta $F_{n+1}$ koʻpaytuvchini $F_n+F_{n-1}$ ga almashtiramiz: $$D_{n+1}=F_nF_{n+1}+F_n^{2}-F_{n+1}\\left(F_n+F_{n-1}\\right)=F_n^{2}-F_{n-1}F_{n+1}=-D_n .$$\n\nDemak har bir qadamda ishora almashadi va $D_1=-1$ dan $D_n=\\left(-1\\right)^{n}$ ✓ $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Тождество Кассини стоит за известной «геометрической иллюзией»: квадрат $8\\times8$ разрезают на четыре части и складывают из них прямоугольник $5\\times13$. Площади отличаются на $64-65=-1$ — ровно на $F_5F_7-F_6^{2}$. Недостающая площадь спрятана в тонкой щели вдоль диагонали.",
-      "en": "Cassini identity is behind the famous dissection paradox: an $8\\times8$ square is cut into four pieces which reassemble into a $5\\times13$ rectangle. The areas differ by $64-65=-1$ — exactly $F_5F_7-F_6^{2}$. The missing area hides in a thin sliver along the diagonal."
+      "en": "Cassini identity is behind the famous dissection paradox: an $8\\times8$ square is cut into four pieces which reassemble into a $5\\times13$ rectangle. The areas differ by $64-65=-1$ — exactly $F_5F_7-F_6^{2}$. The missing area hides in a thin sliver along the diagonal.",
+      "uz": "Kassini ayniyati mashhur kesish paradoksi ortida turadi: $8\\times8$ kvadrat toʻrt boʻlakka kesiladi va ular $5\\times13$ toʻrtburchakka yigʻiladi. Yuzlar $64-65=-1$ ga farq qiladi — aynan $F_5F_7-F_6^{2}$. Yoʻqolgan yuza diagonal boʻylab ingichka yoriqda yashiringan."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Формула сложения",
-      "en": "The addition formula"
+      "en": "The addition formula",
+      "uz": "Qoʻshish formulasi"
      },
      "text": {
       "ru": "Для всех $m,n\\ge1$ $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$ В частности, при $m=n$ получается $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$.",
-      "en": "For all $m,n\\ge1$ $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$ In particular $m=n$ gives $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$."
+      "en": "For all $m,n\\ge1$ $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$ In particular $m=n$ gives $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$.",
+      "uz": "Barcha $m,n\\ge1$ uchun $$F_{m+n}=F_mF_{n+1}+F_{m-1}F_n .$$ Xususan, $m=n$ boʻlganda $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Зафиксируем $m$ и проведём индукцию по $n$.\n\n**База $n=1$:** правая часть равна $F_mF_2+F_{m-1}F_1=F_m+F_{m-1}=F_{m+1}$ ✓\n\n**База $n=2$:** $F_mF_3+F_{m-1}F_2=2F_m+F_{m-1}=F_m+\\left(F_m+F_{m-1}\\right)=F_m+F_{m+1}=F_{m+2}$ ✓\n\n**Шаг.** Пусть формула верна для $n$ и $n+1$. Сложим два равенства: $$F_{m+n}+F_{m+n+1}=F_m\\left(F_{n+1}+F_{n+2}\\right)+F_{m-1}\\left(F_n+F_{n+1}\\right).$$ Слева стоит $F_{m+n+2}$, а в скобках справа — $F_{n+3}$ и $F_{n+2}$ ✓ Это формула для $n+2$ $\\blacksquare$\n\n**Следствие.** При $m=n$ получаем $F_{2n}=F_nF_{n+1}+F_{n-1}F_n=F_n\\left(F_{n+1}+F_{n-1}\\right)$, значит $F_n\\mid F_{2n}$. Индукцией отсюда следует $F_n\\mid F_{kn}$ — ключевой шаг в доказательстве равенства $\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)}$.",
-      "en": "Fix $m$ and induct on $n$.\n\n**Base $n=1$:** the right side is $F_mF_2+F_{m-1}F_1=F_m+F_{m-1}=F_{m+1}$ ✓\n\n**Base $n=2$:** $F_mF_3+F_{m-1}F_2=2F_m+F_{m-1}=F_m+F_{m+1}=F_{m+2}$ ✓\n\n**Step.** Assume the formula for $n$ and $n+1$ and add the two equalities: $$F_{m+n}+F_{m+n+1}=F_m\\left(F_{n+1}+F_{n+2}\\right)+F_{m-1}\\left(F_n+F_{n+1}\\right).$$ The left side is $F_{m+n+2}$, and the brackets on the right are $F_{n+3}$ and $F_{n+2}$ ✓ That is the formula for $n+2$ $\\blacksquare$\n\n**Corollary.** With $m=n$ we get $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$, so $F_n\\mid F_{2n}$. Induction then gives $F_n\\mid F_{kn}$ — the key step towards $\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)}$."
+      "en": "Fix $m$ and induct on $n$.\n\n**Base $n=1$:** the right side is $F_mF_2+F_{m-1}F_1=F_m+F_{m-1}=F_{m+1}$ ✓\n\n**Base $n=2$:** $F_mF_3+F_{m-1}F_2=2F_m+F_{m-1}=F_m+F_{m+1}=F_{m+2}$ ✓\n\n**Step.** Assume the formula for $n$ and $n+1$ and add the two equalities: $$F_{m+n}+F_{m+n+1}=F_m\\left(F_{n+1}+F_{n+2}\\right)+F_{m-1}\\left(F_n+F_{n+1}\\right).$$ The left side is $F_{m+n+2}$, and the brackets on the right are $F_{n+3}$ and $F_{n+2}$ ✓ That is the formula for $n+2$ $\\blacksquare$\n\n**Corollary.** With $m=n$ we get $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$, so $F_n\\mid F_{2n}$. Induction then gives $F_n\\mid F_{kn}$ — the key step towards $\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)}$.",
+      "uz": "$m$ ni qatʼiy olib, $n$ boʻyicha induksiya qilamiz.\n\n**Baza $n=1$:** oʻng tomon $F_mF_2+F_{m-1}F_1=F_m+F_{m-1}=F_{m+1}$ ✓\n\n**Baza $n=2$:** $F_mF_3+F_{m-1}F_2=2F_m+F_{m-1}=F_m+F_{m+1}=F_{m+2}$ ✓\n\n**Qadam.** Formulani $n$ va $n+1$ uchun faraz qilib, ikki tenglikni qoʻshamiz: $$F_{m+n}+F_{m+n+1}=F_m\\left(F_{n+1}+F_{n+2}\\right)+F_{m-1}\\left(F_n+F_{n+1}\\right).$$ Chap tomon $F_{m+n+2}$, oʻngdagi qavslar esa $F_{n+3}$ va $F_{n+2}$ ✓ Bu $n+2$ uchun formula $\\blacksquare$\n\n**Natija.** $m=n$ da $F_{2n}=F_n\\left(F_{n+1}+F_{n-1}\\right)$, demak $F_n\\mid F_{2n}$. Induksiya keyin $F_n\\mid F_{kn}$ ni beradi — bu $\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)}$ ga qaratilgan asosiy qadam."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Наибольший общий делитель чисел Фибоначчи",
-      "en": "The gcd of Fibonacci numbers"
+      "en": "The gcd of Fibonacci numbers",
+      "uz": "Fibonachchi sonlarining EKUBi"
      },
      "text": {
       "ru": "$$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)}.$$",
@@ -778,14 +910,16 @@ window.LESSONS[7] = {
      "t": "proof",
      "text": {
       "ru": "Пусть $m>n$ и $m=n+r$. По формуле сложения $$F_m=F_{n+r}=F_rF_{n+1}+F_{r-1}F_n .$$\n\nВторое слагаемое делится на $F_n$, поэтому $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_rF_{n+1},\\,F_n\\right).$$ Но соседние числа Фибоначчи взаимно просты, значит $\\gcd\\left(F_{n+1},F_n\\right)=1$, и множитель $F_{n+1}$ можно отбросить: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_r,F_n\\right).$$\n\nПереход от пары $\\left(m,n\\right)$ к паре $\\left(r,n\\right)=\\left(m-n,\\,n\\right)$ — это в точности шаг алгоритма Евклида на индексах. Повторяя его, придём к паре $\\left(\\gcd\\left(m,n\\right),0\\right)$, а $F_0=0$, поэтому $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)} \\quad\\checkmark\\qquad\\blacksquare$$",
-      "en": "Let $m>n$ and $m=n+r$. The addition formula gives $$F_m=F_{n+r}=F_rF_{n+1}+F_{r-1}F_n .$$\n\nThe second term is divisible by $F_n$, so $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_rF_{n+1},\\,F_n\\right).$$ But consecutive Fibonacci numbers are coprime, so $\\gcd\\left(F_{n+1},F_n\\right)=1$ and the factor $F_{n+1}$ may be dropped: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_r,F_n\\right).$$\n\nPassing from $\\left(m,n\\right)$ to $\\left(m-n,\\,n\\right)$ is exactly one step of the Euclidean algorithm on the indices. Repeating it reaches $\\left(\\gcd\\left(m,n\\right),0\\right)$, and $F_0=0$, so $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)} \\quad\\checkmark\\qquad\\blacksquare$$"
+      "en": "Let $m>n$ and $m=n+r$. The addition formula gives $$F_m=F_{n+r}=F_rF_{n+1}+F_{r-1}F_n .$$\n\nThe second term is divisible by $F_n$, so $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_rF_{n+1},\\,F_n\\right).$$ But consecutive Fibonacci numbers are coprime, so $\\gcd\\left(F_{n+1},F_n\\right)=1$ and the factor $F_{n+1}$ may be dropped: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_r,F_n\\right).$$\n\nPassing from $\\left(m,n\\right)$ to $\\left(m-n,\\,n\\right)$ is exactly one step of the Euclidean algorithm on the indices. Repeating it reaches $\\left(\\gcd\\left(m,n\\right),0\\right)$, and $F_0=0$, so $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)} \\quad\\checkmark\\qquad\\blacksquare$$",
+      "uz": "$m>n$ va $m=n+r$ boʻlsin. Qoʻshish formulasi $$F_m=F_{n+r}=F_rF_{n+1}+F_{r-1}F_n$$ ni beradi.\n\nIkkinchi had $F_n$ ga boʻlinadi, shuning uchun $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_rF_{n+1},\\,F_n\\right).$$ Lekin ketma-ket Fibonachchi sonlari oʻzaro tub, yaʼni $\\gcd\\left(F_{n+1},F_n\\right)=1$ va $F_{n+1}$ koʻpaytuvchini tashlab yuborish mumkin: $$\\gcd\\left(F_m,F_n\\right)=\\gcd\\left(F_r,F_n\\right).$$\n\n$\\left(m,n\\right)$ dan $\\left(m-n,\\,n\\right)$ ga oʻtish — bu indekslarga qoʻllangan Yevklid algoritmining aynan bitta qadami. Uni takrorlab, $\\left(\\gcd\\left(m,n\\right),0\\right)$ ga yetamiz, $F_0=0$ boʻlgani uchun $$\\gcd\\left(F_m,F_n\\right)=F_{\\gcd\\left(m,n\\right)} \\quad\\checkmark\\qquad\\blacksquare$$"
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Докажите, что $\\gcd\\left(F_{100},F_{60}\\right)=F_{20}$, и найдите $F_{20}$.",
-      "en": "Prove that $\\gcd\\left(F_{100},F_{60}\\right)=F_{20}$ and compute $F_{20}$."
+      "en": "Prove that $\\gcd\\left(F_{100},F_{60}\\right)=F_{20}$ and compute $F_{20}$.",
+      "uz": "$\\gcd\\left(F_{100},F_{60}\\right)=F_{20}$ ekanini isbotlang va $F_{20}$ ni hisoblang."
      },
      "steps": {
       "ru": [
@@ -799,6 +933,12 @@ window.LESSONS[7] = {
        "Euclid: $100=1\\cdot60+40$, $60=1\\cdot40+20$, $40=2\\cdot20$. So $\\gcd=20$ ✓",
        "List the Fibonacci numbers up to the twentieth: $1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765$.",
        "Hence $\\gcd\\left(F_{100},F_{60}\\right)=F_{20}=6765$."
+      ],
+      "uz": [
+       "Teoremaga koʻra $\\gcd\\left(100,60\\right)$ ni topish kifoya.",
+       "Yevklid: $100=1\\cdot60+40$, $60=1\\cdot40+20$, $40=2\\cdot20$. Demak $\\gcd=20$ ✓",
+       "Yigirmanchisigacha Fibonachchi sonlarini yozamiz: $1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765$.",
+       "Demak $\\gcd\\left(F_{100},F_{60}\\right)=F_{20}=6765$."
       ]
      },
      "ans": {
@@ -810,7 +950,8 @@ window.LESSONS[7] = {
      "t": "note",
      "text": {
       "ru": "**Теорема Цекендорфа.** Всякое натуральное число единственным образом представляется как сумма различных чисел Фибоначчи, среди которых нет двух соседних. Например, $$100=89+8+3=F_{11}+F_6+F_4 .$$ Представление находится жадным алгоритмом: каждый раз вычитаем наибольшее подходящее число Фибоначчи.",
-      "en": "**Zeckendorf theorem.** Every positive integer is uniquely a sum of distinct Fibonacci numbers no two of which are consecutive. For instance $$100=89+8+3=F_{11}+F_6+F_4 .$$ The representation is found greedily: repeatedly subtract the largest Fibonacci number that fits."
+      "en": "**Zeckendorf theorem.** Every positive integer is uniquely a sum of distinct Fibonacci numbers no two of which are consecutive. For instance $$100=89+8+3=F_{11}+F_6+F_4 .$$ The representation is found greedily: repeatedly subtract the largest Fibonacci number that fits.",
+      "uz": "**Zekendorf teoremasi.** Har bir natural son hech ikkitasi ketma-ket boʻlmagan turli Fibonachchi sonlari yigʻindisi shaklida yagona tarzda yoziladi. Masalan, $$100=89+8+3=F_{11}+F_6+F_4 .$$ Bu yoyilma jadal usulda topiladi: sigʻadigan eng katta Fibonachchi sonini ketma-ket ayirib boramiz."
      }
     }
    ]
@@ -826,43 +967,50 @@ window.LESSONS[7] = {
      "t": "p",
      "text": {
       "ru": "Многие олимпиадные задачи спрашивают не про конкретный член, а про поведение последовательности «в конце концов». Для аккуратного ответа достаточно двух понятий и одной теоремы.",
-      "en": "Many olympiad problems ask not about a particular term but about what a sequence does in the long run. Two notions and one theorem are enough to answer carefully."
+      "en": "Many olympiad problems ask not about a particular term but about what a sequence does in the long run. Two notions and one theorem are enough to answer carefully.",
+      "uz": "Koʻp olimpiada masalalari alohida had haqida emas, balki ketma-ketlik uzoq muddatda nima qilishi haqida soʻraydi. Ehtiyotkorlik bilan javob berish uchun ikki tushuncha va bitta teorema kifoya."
      }
     },
     {
      "t": "def",
      "name": {
       "ru": "Ограниченность и монотонность",
-      "en": "Boundedness and monotonicity"
+      "en": "Boundedness and monotonicity",
+      "uz": "Chegaralanganlik va monotonlik"
      },
      "text": {
       "ru": "Последовательность $\\left(a_n\\right)$ **возрастает**, если $a_{n+1}\\ge a_n$ при всех $n$, и **убывает**, если $a_{n+1}\\le a_n$. Она **ограничена сверху**, если существует число $M$ с $a_n\\le M$ при всех $n$, и **ограничена снизу**, если существует $m$ с $a_n\\ge m$.",
-      "en": "A sequence $\\left(a_n\\right)$ is **increasing** if $a_{n+1}\\ge a_n$ for every $n$ and **decreasing** if $a_{n+1}\\le a_n$. It is **bounded above** if some $M$ satisfies $a_n\\le M$ for all $n$, and **bounded below** if some $m$ satisfies $a_n\\ge m$."
+      "en": "A sequence $\\left(a_n\\right)$ is **increasing** if $a_{n+1}\\ge a_n$ for every $n$ and **decreasing** if $a_{n+1}\\le a_n$. It is **bounded above** if some $M$ satisfies $a_n\\le M$ for all $n$, and **bounded below** if some $m$ satisfies $a_n\\ge m$.",
+      "uz": "$\\left(a_n\\right)$ ketma-ketlik har bir $n$ uchun $a_{n+1}\\ge a_n$ boʻlsa **oʻsuvchi**, $a_{n+1}\\le a_n$ boʻlsa **kamayuvchi** deyiladi. Agar biror $M$ uchun barcha $n$ da $a_n\\le M$ boʻlsa, u **yuqoridan chegaralangan**, agar biror $m$ uchun $a_n\\ge m$ boʻlsa, **pastdan chegaralangan** deyiladi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Теорема о монотонной последовательности",
-      "en": "The monotone convergence theorem"
+      "en": "The monotone convergence theorem",
+      "uz": "Monoton ketma-ketlik haqidagi teorema"
      },
      "text": {
       "ru": "Возрастающая ограниченная сверху последовательность имеет предел, и этот предел равен её точной верхней грани. Симметрично для убывающей, ограниченной снизу.",
-      "en": "An increasing sequence that is bounded above has a limit, equal to its least upper bound. Symmetrically for a decreasing sequence bounded below."
+      "en": "An increasing sequence that is bounded above has a limit, equal to its least upper bound. Symmetrically for a decreasing sequence bounded below.",
+      "uz": "Yuqoridan chegaralangan oʻsuvchi ketma-ketlik limitga ega va u oʻzining aniq yuqori chegarasiga teng. Pastdan chegaralangan kamayuvchi ketma-ketlik uchun ham shunday."
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Эта теорема — форма **полноты** множества вещественных чисел; она неверна в рациональных числах. Например, последовательность десятичных приближений $1;\\ 1{,}4;\\ 1{,}41;\\ 1{,}414;\\dots$ возрастает и ограничена, но её предел $\\sqrt2$ не рационален.\n\nНа олимпиаде теорему обычно применяют как готовый инструмент: доказать монотонность (разностью или отношением соседних членов) и ограниченность (индукцией), после чего предел существует и находится из уравнения.",
-      "en": "This theorem is a form of the **completeness** of the reals; it fails inside the rationals. The decimal approximations $1;\\ 1.4;\\ 1.41;\\ 1.414;\\dots$ increase and are bounded, yet their limit $\\sqrt2$ is not rational.\n\nAt an olympiad the theorem is used as a ready-made tool: prove monotonicity (from the difference or the ratio of consecutive terms) and boundedness (by induction); the limit then exists and is found from an equation."
+      "en": "This theorem is a form of the **completeness** of the reals; it fails inside the rationals. The decimal approximations $1;\\ 1.4;\\ 1.41;\\ 1.414;\\dots$ increase and are bounded, yet their limit $\\sqrt2$ is not rational.\n\nAt an olympiad the theorem is used as a ready-made tool: prove monotonicity (from the difference or the ratio of consecutive terms) and boundedness (by induction); the limit then exists and is found from an equation.",
+      "uz": "Bu teorema haqiqiy sonlarning **toʻliqligi**ning bir shakli; ratsional sonlar ichida u bajarilmaydi. $1;\\ 1.4;\\ 1.41;\\ 1.414;\\dots$ oʻnli yaqinlashishlar oʻsadi va chegaralangan, lekin ularning limiti $\\sqrt2$ ratsional emas.\n\nOlimpiadada teorema tayyor vosita sifatida ishlatiladi: monotonlikni (ketma-ket hadlarning ayirmasi yoki nisbatidan) va chegaralanganlikni (induksiya bilan) isbotlaymiz; shundan keyin limit mavjud boʻladi va tenglamadan topiladi."
      }
     },
     {
      "t": "ex",
      "q": {
       "ru": "Пусть $a_1=\\sqrt2$ и $a_{n+1}=\\sqrt{2+a_n}$. Докажите, что предел существует, и найдите его.",
-      "en": "Let $a_1=\\sqrt2$ and $a_{n+1}=\\sqrt{2+a_n}$. Prove that the limit exists and find it."
+      "en": "Let $a_1=\\sqrt2$ and $a_{n+1}=\\sqrt{2+a_n}$. Prove that the limit exists and find it.",
+      "uz": "$a_1=\\sqrt2$ va $a_{n+1}=\\sqrt{2+a_n}$ boʻlsin. Limit mavjudligini isbotlang va uni toping."
      },
      "steps": {
       "ru": [
@@ -878,43 +1026,56 @@ window.LESSONS[7] = {
        "The sequence increases and is bounded above, so a limit $L$ exists.",
        "**Equation for the limit.** Pass to the limit in the recurrence: $L=\\sqrt{2+L}$, hence $L^{2}-L-2=0$ and $L\\in\\left\\{2,-1\\right\\}$.",
        "All terms are positive, so $L=2$ ✓"
+      ],
+      "uz": [
+       "**Chegaralanganlik.** Induksiya bilan $a_n<2$. Baza: $a_1=\\sqrt2<2$ ✓ Qadam: agar $a_n<2$ boʻlsa, $a_{n+1}=\\sqrt{2+a_n}<\\sqrt{4}=2$ ✓",
+       "**Monotonlik.** $a_{n+1}$ ni $a_n$ bilan solishtiramiz: $a_n>0$ boʻlganda $\\sqrt{2+a_n}>a_n$ tengsizligi $2+a_n>a_n^{2}$ ga, yaʼni $\\left(a_n-2\\right)\\left(a_n+1\\right)<0$ ga teng kuchli, bu esa $0<a_n<2$ boʻlgani uchun bajariladi ✓",
+       "Ketma-ketlik oʻsadi va yuqoridan chegaralangan, demak $L$ limiti mavjud.",
+       "**Limit uchun tenglama.** Rekurrent munosabatda limitga oʻtamiz: $L=\\sqrt{2+L}$, bundan $L^{2}-L-2=0$ va $L\\in\\left\\{2,-1\\right\\}$.",
+       "Barcha hadlar musbat, shuning uchun $L=2$ ✓"
       ]
      },
      "ans": {
       "ru": "Предел равен $2$.",
-      "en": "The limit is $2$."
+      "en": "The limit is $2$.",
+      "uz": "Limit $2$ ga teng."
      }
     },
     {
      "t": "warn",
      "text": {
       "ru": "Порядок шагов принципиален. Уравнение $L=\\sqrt{2+L}$ имеет смысл **только после того, как доказано существование предела**. Если написать его сразу, можно «найти предел» у расходящейся последовательности: например, для $a_{n+1}=2a_n$ уравнение $L=2L$ даёт $L=0$, хотя последовательность (при $a_1=1$) уходит в бесконечность.",
-      "en": "The order of the steps is essential. The equation $L=\\sqrt{2+L}$ is meaningful **only after the limit is known to exist**. Writing it straight away lets you \"find the limit\" of a divergent sequence: for $a_{n+1}=2a_n$ the equation $L=2L$ gives $L=0$, although the sequence (with $a_1=1$) runs off to infinity."
+      "en": "The order of the steps is essential. The equation $L=\\sqrt{2+L}$ is meaningful **only after the limit is known to exist**. Writing it straight away lets you \"find the limit\" of a divergent sequence: for $a_{n+1}=2a_n$ the equation $L=2L$ gives $L=0$, although the sequence (with $a_1=1$) runs off to infinity.",
+      "uz": "Qadamlarning tartibi juda muhim. $L=\\sqrt{2+L}$ tenglamasi **faqat limit mavjudligi maʼlum boʻlgandan keyin** maʼnoga ega. Uni darhol yozish uzoqlashuvchi ketma-ketlikning ham «limitini topish» ga imkon beradi: $a_{n+1}=2a_n$ uchun $L=2L$ tenglamasi $L=0$ ni beradi, holbuki ketma-ketlik ($a_1=1$ da) cheksizlikka ketadi."
      }
     },
     {
      "t": "thm",
      "name": {
       "ru": "Сумма бесконечной геометрической прогрессии",
-      "en": "Sum of an infinite geometric progression"
+      "en": "Sum of an infinite geometric progression",
+      "uz": "Cheksiz geometrik progressiya yigʻindisi"
      },
      "text": {
       "ru": "Если $\\left|q\\right|<1$, то $$b_1+b_1q+b_1q^{2}+\\dots=\\frac{b_1}{1-q}.$$ При $\\left|q\\right|\\ge1$ и $b_1\\ne0$ сумма не существует.",
-      "en": "If $\\left|q\\right|<1$ then $$b_1+b_1q+b_1q^{2}+\\dots=\\frac{b_1}{1-q}.$$ For $\\left|q\\right|\\ge1$ and $b_1\\ne0$ the sum does not exist."
+      "en": "If $\\left|q\\right|<1$ then $$b_1+b_1q+b_1q^{2}+\\dots=\\frac{b_1}{1-q}.$$ For $\\left|q\\right|\\ge1$ and $b_1\\ne0$ the sum does not exist.",
+      "uz": "Agar $\\left|q\\right|<1$ boʻlsa, $$b_1+b_1q+b_1q^{2}+\\dots=\\frac{b_1}{1-q}.$$ $\\left|q\\right|\\ge1$ va $b_1\\ne0$ boʻlganda yigʻindi mavjud emas."
      }
     },
     {
      "t": "proof",
      "text": {
       "ru": "Частичная сумма равна $$S_n=b_1\\frac{1-q^{\\,n}}{1-q}=\\frac{b_1}{1-q}-\\frac{b_1q^{\\,n}}{1-q}.$$\n\nПри $\\left|q\\right|<1$ имеем $q^{\\,n}\\to0$, поэтому второе слагаемое стремится к нулю, и $S_n\\to\\dfrac{b_1}{1-q}$ ✓\n\nПри $\\left|q\\right|\\ge1$ члены прогрессии не стремятся к нулю ($\\left|b_1q^{\\,n}\\right|\\ge\\left|b_1\\right|>0$), а это необходимое условие сходимости ряда: если ряд сходится, то $S_n$ и $S_{n-1}$ имеют один предел, значит их разность — очередной член — стремится к нулю ✓ $\\blacksquare$",
-      "en": "The partial sum is $$S_n=b_1\\frac{1-q^{\\,n}}{1-q}=\\frac{b_1}{1-q}-\\frac{b_1q^{\\,n}}{1-q}.$$\n\nIf $\\left|q\\right|<1$ then $q^{\\,n}\\to0$, the second term vanishes, and $S_n\\to\\dfrac{b_1}{1-q}$ ✓\n\nIf $\\left|q\\right|\\ge1$ the terms do not tend to zero ($\\left|b_1q^{\\,n}\\right|\\ge\\left|b_1\\right|>0$), and that is a necessary condition for a series to converge: if it converges then $S_n$ and $S_{n-1}$ share a limit, so their difference — the next term — tends to zero ✓ $\\blacksquare$"
+      "en": "The partial sum is $$S_n=b_1\\frac{1-q^{\\,n}}{1-q}=\\frac{b_1}{1-q}-\\frac{b_1q^{\\,n}}{1-q}.$$\n\nIf $\\left|q\\right|<1$ then $q^{\\,n}\\to0$, the second term vanishes, and $S_n\\to\\dfrac{b_1}{1-q}$ ✓\n\nIf $\\left|q\\right|\\ge1$ the terms do not tend to zero ($\\left|b_1q^{\\,n}\\right|\\ge\\left|b_1\\right|>0$), and that is a necessary condition for a series to converge: if it converges then $S_n$ and $S_{n-1}$ share a limit, so their difference — the next term — tends to zero ✓ $\\blacksquare$",
+      "uz": "Xususiy yigʻindi $$S_n=b_1\\frac{1-q^{\\,n}}{1-q}=\\frac{b_1}{1-q}-\\frac{b_1q^{\\,n}}{1-q}.$$\n\nAgar $\\left|q\\right|<1$ boʻlsa, $q^{\\,n}\\to0$, ikkinchi had yoʻqoladi va $S_n\\to\\dfrac{b_1}{1-q}$ ✓\n\nAgar $\\left|q\\right|\\ge1$ boʻlsa, hadlar nolga intilmaydi ($\\left|b_1q^{\\,n}\\right|\\ge\\left|b_1\\right|>0$), bu esa qator yaqinlashishi uchun zaruriy shart: agar qator yaqinlashsa, $S_n$ va $S_{n-1}$ bir xil limitga ega boʻladi, demak ularning ayirmasi — keyingi had — nolga intiladi ✓ $\\blacksquare$"
      }
     },
     {
      "t": "note",
      "text": {
       "ru": "Условие «члены стремятся к нулю» необходимо, но **не достаточно**. Классический контрпример — гармонический ряд $$1+\\frac12+\\frac13+\\frac14+\\dots ,$$ который расходится, хотя его члены убывают к нулю. Доказательство Орема: сгруппируем члены по блокам длины $1,2,4,8,\\dots$; каждый блок не меньше $\\tfrac12$, поэтому сумма растёт неограниченно.",
-      "en": "The condition \"terms tend to zero\" is necessary but **not sufficient**. The classic counterexample is the harmonic series $$1+\\frac12+\\frac13+\\frac14+\\dots ,$$ which diverges although its terms shrink to zero. The proof of Oresme: group the terms into blocks of lengths $1,2,4,8,\\dots$; every block is at least $\\tfrac12$, so the sum grows without bound."
+      "en": "The condition \"terms tend to zero\" is necessary but **not sufficient**. The classic counterexample is the harmonic series $$1+\\frac12+\\frac13+\\frac14+\\dots ,$$ which diverges although its terms shrink to zero. The proof of Oresme: group the terms into blocks of lengths $1,2,4,8,\\dots$; every block is at least $\\tfrac12$, so the sum grows without bound.",
+      "uz": "«Hadlar nolga intiladi» sharti zaruriy, lekin **yetarli emas**. Klassik qarshi misol — garmonik qator $$1+\\frac12+\\frac13+\\frac14+\\dots ,$$ u hadlari nolga kichrayishiga qaramay uzoqlashadi. Oremning isboti: hadlarni uzunliklari $1,2,4,8,\\dots$ boʻlgan bloklarga guruhlaymiz; har bir blok kamida $\\tfrac12$, shuning uchun yigʻindi chegarasiz oʻsadi."
      }
     }
    ]
