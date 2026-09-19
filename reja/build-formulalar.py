@@ -73,20 +73,20 @@ CSS = r"""
   --ground:#eceff2; --surface:#ffffff; --surface-2:#f5f7f9;
   --ink:#0f1a21; --muted:#5a6b76; --rule:#d5dde2; --rule-soft:#e4eaee;
   --accent:#0f5c72;
-  --alg:#0f5c72; --nt:#8a5a00; --geo:#2a6a3f; --comb:#8a3a52; --rev:#48555f;
-  --alg-bg:#e0edf1; --nt-bg:#f6ecd8; --geo-bg:#e2eee6; --comb-bg:#f6e6ea; --rev-bg:#e8ecef;
+  --alg:#0f5c72; --nt:#8a5a00; --geo:#2a6a3f; --comb:#8a3a52; --trig:#7a4b9c; --rev:#48555f;
+  --alg-bg:#e0edf1; --nt-bg:#f6ecd8; --geo-bg:#e2eee6; --comb-bg:#f6e6ea; --trig-bg:#efe8f5; --rev-bg:#e8ecef;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --ground:#0d1317; --surface:#141c21; --surface-2:#1a242a;
   --ink:#e4ecf1; --muted:#93a5b0; --rule:#27343b; --rule-soft:#1f2b31; --accent:#56b4cc;
-  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --rev:#9fb0bb;
-  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --rev-bg:#1d262b;
+  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --trig:#b795d9; --rev:#9fb0bb;
+  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --trig-bg:#2a1f38; --rev-bg:#1d262b;
 }}
 :root[data-theme="dark"]{
   --ground:#0d1317; --surface:#141c21; --surface-2:#1a242a;
   --ink:#e4ecf1; --muted:#93a5b0; --rule:#27343b; --rule-soft:#1f2b31; --accent:#56b4cc;
-  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --rev:#9fb0bb;
-  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --rev-bg:#1d262b;
+  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --trig:#b795d9; --rev:#9fb0bb;
+  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --trig-bg:#2a1f38; --rev-bg:#1d262b;
 }
 :root[data-l="uz"] [data-l="ru"],
 :root[data-l="ru"] [data-l="uz"]{display:none}
@@ -222,3 +222,10 @@ TITLE = C.get('title', (C['h1'][0], C['h1'][1]))[0]
 print('items', TOTAL, '| with examples', WITH_EX)
 for f in (OUT + '.html', OUT + '-standalone.html'):
     print(f, '%.0f KB' % ((HERE / f).stat().st_size / 1024))
+
+
+# --- fragment mode for the merged page -------------------------------------
+if len(sys.argv) > 3 and sys.argv[3] == '--frag':
+    (HERE / (OUT + '.frag.html')).write_text(BODY, encoding='utf-8')
+    (HERE / (OUT + '.frag.css')).write_text(CSS, encoding='utf-8')
+    print('frag', OUT)

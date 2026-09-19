@@ -731,7 +731,7 @@ I(nom=T('Invariant va juftlik', 'Инвариант и чётность'), tur='
   ref='2024/25 №18'),
 ]))
 
-SECTIONS.append(dict(key='rev', kod='F', ulush='6,6 %',
+SECTIONS.append(dict(key='trig', kod='F', ulush='6,6 %',
  nom=T('Trigonometriya va matn masalalari', 'Тригонометрия и текстовые задачи'),
  izoh=T('Trigonometriya 9-sinfdagidan $4$ barobar koʻp. Asosan soddalashtirish va '
         '$\\tan$ orqali hisoblash.',

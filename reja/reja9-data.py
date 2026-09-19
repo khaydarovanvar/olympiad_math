@@ -3,8 +3,9 @@
 T = lambda uz, ru: (uz, ru)
 
 CHROME = dict(
- eyebrow=T('Fan olimpiadalari · tuman (shahar) bosqichi',
-           'Предметные олимпиады · районный (городской) этап'),
+ title=T('20 kunda tuman bosqichiga · 9-sinf', 'К районному этапу за 20 дней · 9 класс'),
+ eyebrow=T('Fan olimpiadalari · tuman (shahar) bosqichi · 9-sinf',
+           'Предметные олимпиады · районный (городской) этап · 9 класс'),
  h1=T('20 kunda tuman bosqichiga', 'К районному этапу за 20 дней'),
  sub=T('9-sinf matematika — kun-ba-kun tayyorgarlik rejasi, mavzular izohi va '
        'oʻtgan yillar savollari.',

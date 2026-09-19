@@ -1,24 +1,24 @@
-<!doctype html><html lang="uz" data-l="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>20 kunda tuman bosqichiga · К районному этапу за 20 дней</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><style>
+<!doctype html><html lang="uz" data-l="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>20 kunda tuman bosqichiga · 9-sinf · К районному этапу за 20 дней · 9 класс</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><style></style><style>
 :root{
   --ground:#eceff2; --surface:#ffffff; --surface-2:#f5f7f9;
   --ink:#0f1a21; --muted:#5a6b76; --rule:#d5dde2; --rule-soft:#e4eaee;
   --accent:#0f5c72; --accent-soft:#e0edf1;
-  --alg:#0f5c72; --nt:#8a5a00; --geo:#2a6a3f; --comb:#8a3a52; --rev:#48555f;
-  --alg-bg:#e0edf1; --nt-bg:#f6ecd8; --geo-bg:#e2eee6; --comb-bg:#f6e6ea; --rev-bg:#e8ecef;
+  --alg:#0f5c72; --nt:#8a5a00; --geo:#2a6a3f; --comb:#8a3a52; --trig:#7a4b9c; --rev:#48555f;
+  --alg-bg:#e0edf1; --nt-bg:#f6ecd8; --geo-bg:#e2eee6; --comb-bg:#f6e6ea; --trig-bg:#efe8f5; --rev-bg:#e8ecef;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --ground:#0d1317; --surface:#141c21; --surface-2:#1a242a;
   --ink:#e4ecf1; --muted:#93a5b0; --rule:#27343b; --rule-soft:#1f2b31;
   --accent:#56b4cc; --accent-soft:#14323c;
-  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --rev:#9fb0bb;
-  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --rev-bg:#1d262b;
+  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --trig:#b795d9; --rev:#9fb0bb;
+  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --trig-bg:#2a1f38; --rev-bg:#1d262b;
 }}
 :root[data-theme="dark"]{
   --ground:#0d1317; --surface:#141c21; --surface-2:#1a242a;
   --ink:#e4ecf1; --muted:#93a5b0; --rule:#27343b; --rule-soft:#1f2b31;
   --accent:#56b4cc; --accent-soft:#14323c;
-  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --rev:#9fb0bb;
-  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --rev-bg:#1d262b;
+  --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --trig:#b795d9; --rev:#9fb0bb;
+  --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --trig-bg:#2a1f38; --rev-bg:#1d262b;
 }
 /* language switch */
 :root[data-l="uz"] [data-l="ru"],
@@ -101,13 +101,14 @@ ul.gap li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height
 .src{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);
   font-size:13px;color:var(--muted)}
 .src b{color:var(--ink);font-weight:600}
+.katex{font-size:1.02em}
 @media (max-width:420px){
   .day{padding:14px 13px 12px} .num{font-size:22px} .day-head h4{font-size:16px}
 }
 </style></head><body><div class="wrap">
 <header class="mast">
   <div class="topline">
-    <p class="eyebrow"><span data-l="uz">Fan olimpiadalari · tuman (shahar) bosqichi</span><span data-l="ru">Предметные олимпиады · районный (городской) этап</span></p>
+    <p class="eyebrow"><span data-l="uz">Fan olimpiadalari · tuman (shahar) bosqichi · 9-sinf</span><span data-l="ru">Предметные олимпиады · районный (городской) этап · 9 класс</span></p>
     <div class="lang" role="group" aria-label="Til · Язык">
       <button id="btn-uz" type="button" aria-pressed="true">OʻZB</button>
       <button id="btn-ru" type="button" aria-pressed="false">РУС</button>
@@ -130,6 +131,9 @@ ul.gap li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height
 
 <p class="src"><span data-l="uz"><b>Manbalar:</b> 9-sinf tuman (shahar) bosqichi variantlari — 2025/2026, 2024/2025 va 2024-yil. Savol raqamlari shu variantlarga tegishli. Reja: Anvarbek Xaydarov.</span><span data-l="ru"><b>Источники:</b> варианты районного (городского) этапа, 9 класс — 2025/2026, 2024/2025 и 2024 год. Номера задач относятся к этим вариантам. План: Анварбек Хайдаров.</span></p>
 </div><script>
+document.querySelectorAll(".k").forEach(function(e){
+  try{katex.render(e.textContent,e,{throwOnError:false});}catch(x){}
+});
 (function(){
   var root=document.documentElement, b={uz:document.getElementById("btn-uz"),
       ru:document.getElementById("btn-ru")};

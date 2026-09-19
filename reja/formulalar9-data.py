@@ -3,6 +3,7 @@ T = lambda uz, ru: (uz, ru)
 I = lambda **k: k
 
 CHROME = dict(
+ title=T('Olimpiada formulalari · 9-sinf', 'Формулы олимпиады · 9 класс'),
  eyebrow=T('9-sinf · tuman (shahar) bosqichi', '9 класс · районный (городской) этап'),
  h1=T('Olimpiada formulalari va teoremalari', 'Формулы и теоремы олимпиады'),
  sub=T('20 kunlik rejaning nazariy qismi: kerak boʻladigan formulalar, teoremalar va '
@@ -694,7 +695,7 @@ I(nom=T('Funksional almashtirish', 'Функциональная замена'),
   ref='2025/26 №12'),
 ]))
 
-SECTIONS.append(dict(key='rev', kod='E', ulush='4,5 %',
+SECTIONS.append(dict(key='trig', kod='E', ulush='4,5 %',
  nom=T('Kichik mavzular', 'Мелкие темы'),
  izoh=T('Alohida-alohida kam uchraydi, lekin birgalikda 2 ballgacha beradi — arzon ballar.',
         'По отдельности встречаются редко, но вместе дают до 2 баллов — дешёвые очки.'),
