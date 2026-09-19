@@ -56,6 +56,13 @@ hr.rule{border:0;border-top:1.6pt solid #0E5C63;margin:0 0 5mm}
 .qh .num{font-weight:bold;color:#0E5C63;font-size:11pt}
 .qh .ball{font-size:8pt;color:#8b9899}
 .qh .ans{margin-left:auto;font-size:9.4pt;font-weight:bold;color:#A34430;text-align:right;max-width:62%}
+.ask{margin:0 0 2.6mm;padding:2.4mm 3mm;background:#f6f9f9;
+     border:.6pt solid #cfdadb;border-radius:1.6mm;break-inside:avoid-page}
+.ask .tag{color:#0E5C63;font-weight:bold}
+.ask p{margin:0 0 1.2mm}
+.ask p.qru{margin:0;padding-top:1.4mm;border-top:.5pt dotted #c3d0d1;color:#37474a}
+.solh{font-size:7.4pt;letter-spacing:.12em;color:#8b9899;text-transform:uppercase;
+      display:block;margin:0 0 1.2mm}
 .lang{margin:0 0 2mm;padding-left:3.2mm;border-left:1.8pt solid #B0801F;break-inside:avoid-page}
 .lang.ru{border-left-color:#2B4C7E}
 .tag{font-size:7.4pt;letter-spacing:.12em;color:#8b9899;text-transform:uppercase;
@@ -69,6 +76,19 @@ hr.rule{border:0;border-top:1.6pt solid #0E5C63;margin:0 0 5mm}
 .katex{font-size:1.02em}
 '''
 
+def ask(p):
+    """The problem statement, shown above its solution (both languages)."""
+    if not p.get('q_uz') and not p.get('q_ru'):
+        return ''
+    parts = ['<div class="ask"><span class="tag">Savol · \u0412\u043e\u043f\u0440\u043e\u0441</span>']
+    if p.get('q_uz'):
+        parts.append(body(p['q_uz']))
+    if p.get('q_ru'):
+        parts.append(body(p['q_ru']).replace('<p>', '<p class="qru">', 1))
+    parts.append('</div><span class="solh">Yechim · \u0420\u0435\u0448\u0435\u043d\u0438\u0435</span>')
+    return ''.join(parts)
+
+
 def build(mod, out_html):
     rows = []
     for p in mod.P:
@@ -76,11 +96,12 @@ def build(mod, out_html):
           '<div class="q"><div class="qh"><span class="num">%d.</span>'
           '%s'
           '<span class="ans">%s</span></div>'
+          '%s'
           '<div class="lang uz"><span class="tag">Oʻzbekcha</span>%s</div>'
           '<div class="lang ru"><span class="tag">По-русски</span>%s</div></div>'
           % (p['n'],
              ('<span class="ball">[%s ball]</span>' % p['pts']) if p.get('pts') else '',
-             body(p['ans']), body(p['uz']), body(p['ru'])))
+             body(p['ans']), ask(p), body(p['uz']), body(p['ru'])))
     key = ''.join('<td class="n">%d</td><td>%s</td>' % (p['n'], body(p['ans']))
                   for p in mod.P)
     cells = ['<td class="n">%d</td><td>%s</td>' % (p['n'], body(p['ans'])) for p in mod.P]
