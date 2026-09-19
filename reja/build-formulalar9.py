@@ -2,7 +2,7 @@
 import html, importlib.util, pathlib, re
 
 HERE = pathlib.Path(__file__).resolve().parent
-spec = importlib.util.spec_from_file_location('data', HERE / 'data.py')
+spec = importlib.util.spec_from_file_location('data', HERE / 'data_ru.py')
 D = importlib.util.module_from_spec(spec); spec.loader.exec_module(D)
 
 MATH = re.compile(r'\$(.+?)\$', re.S)
@@ -16,39 +16,51 @@ def rich(t):
     return re.sub(r'\x00(\d+)\x00',
                   lambda m: '<span class="k">%s</span>' % html.escape(slots[int(m.group(1))]), t)
 
-BADGE = {'teorema': 'Teorema', 'lemma': 'Lemma'}
+C = D.CHROME
+
+def L(pair, tag='span'):
+    uz, ru = pair
+    return '<%s data-l="uz">%s</%s><%s data-l="ru">%s</%s>' % (tag, uz, tag, tag, ru, tag)
+
+def LR(pair):
+    return L((rich(pair[0]), rich(pair[1])))
 
 def item(sec, i, it):
     kod = '%s%d' % (sec['kod'], i)
-    badge = ('<span class="badge %s">%s</span>' % (it['tur'], BADGE[it['tur']])
+    badge = ('<span class="badge %s">%s</span>' % (it['tur'], L(D.BADGE[it['tur']]))
              ) if it.get('tur') else ''
-    texes = ''.join('<div class="kd">%s</div>' % html.escape(it[k])
-                    for k in ('tex', 'tex2') if it.get(k))
-    nega = '<p class="nega">%s</p>' % rich(it['nega']) if it.get('nega') else ''
+    def kd(v):
+        if isinstance(v, tuple):
+            return ('<div class="kd" data-l="uz">%s</div><div class="kd" data-l="ru">%s</div>'
+                    % (html.escape(v[0]), html.escape(v[1])))
+        return '<div class="kd">%s</div>' % html.escape(v)
+    texes = ''.join(kd(it[k]) for k in ('tex', 'tex2') if it.get(k))
+    nega = '<p class="nega">%s</p>' % LR(it['nega']) if it.get('nega') else ''
     mis = ''
     if it.get('misol'):
         ref = ('<span class="ref">%s</span>' % html.escape(it['ref'])) if it.get('ref') else ''
-        mis = ('<div class="misol"><span class="lab">Misol %s</span>%s</div>'
-               % (ref, rich(it['misol'])))
+        mis = ('<div class="misol"><span class="lab">%s %s</span>%s</div>'
+               % (L(C['misol']), ref, LR(it['misol'])))
     elif it.get('ref'):
-        mis = ('<div class="misol"><span class="lab">Uchragan '
-               '<span class="ref">%s</span></span></div>' % html.escape(it['ref']))
+        mis = ('<div class="misol"><span class="lab">%s '
+               '<span class="ref">%s</span></span></div>'
+               % (L(C['uchragan']), html.escape(it['ref'])))
     return ('<article class="it" id="%s"><div class="ih"><span class="kod">%s</span>'
             '<h3>%s</h3>%s</div>%s%s%s</article>'
-            % (kod, kod, html.escape(it['nom']), badge, texes, nega, mis))
+            % (kod, kod, L(it['nom']), badge, texes, nega, mis))
 
 secs, nav = [], []
 for s in D.SECTIONS:
     nav.append('<a class="chip" style="--hue:var(--%s)" href="#s-%s">'
-               '<b>%s</b> %s</a>' % (s['key'], s['kod'], s['kod'], html.escape(s['nom'])))
+               '<b>%s</b> %s</a>' % (s['key'], s['kod'], s['kod'], L(s['nom'])))
     body = ''.join(item(s, i, it) for i, it in enumerate(s['items'], 1))
     secs.append(
       '<section class="sec" id="s-%s" style="--hue:var(--%s);--hue-bg:var(--%s-bg)">'
       '<div class="sh"><span class="letter">%s</span><div>'
-      '<h2>%s</h2><p class="meta"><span class="pc">%s</span> · %d ta formula va teorema</p>'
+      '<h2>%s</h2><p class="meta"><span class="pc">%s</span> · %d %s</p>'
       '</div></div><p class="sizoh">%s</p>%s</section>'
-      % (s['kod'], s['key'], s['key'], s['kod'], html.escape(s['nom']),
-         s['ulush'], len(s['items']), rich(s['izoh']), body))
+      % (s['kod'], s['key'], s['key'], s['kod'], L(s['nom']),
+         s['ulush'], len(s['items']), L(C['formula']), LR(s['izoh']), body))
 
 TOTAL = sum(len(s['items']) for s in D.SECTIONS)
 WITH_EX = sum(1 for s in D.SECTIONS for i in s['items'] if i.get('misol'))
@@ -73,6 +85,16 @@ CSS = r"""
   --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --rev:#9fb0bb;
   --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --rev-bg:#1d262b;
 }
+:root[data-l="uz"] [data-l="ru"],
+:root[data-l="ru"] [data-l="uz"]{display:none}
+.topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+  margin-bottom:8px}
+.lang{display:flex;flex:0 0 auto;border:1px solid var(--rule);border-radius:2px;
+  overflow:hidden;background:var(--surface)}
+.lang button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+  padding:4px 9px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+.lang button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);
   font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-size:16px;line-height:1.6;
@@ -137,23 +159,23 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--
 
 BODY = f'''<div class="wrap">
 <header class="mast">
-  <p class="eyebrow">9-sinf · tuman (shahar) bosqichi</p>
-  <h1>Olimpiada formulalari va teoremalari</h1>
-  <p class="sub">20 kunlik rejaning nazariy qismi: kerak boʻladigan formulalar, teoremalar va
-     lemmalar — har biri qayerda uchraganiga havola bilan.</p>
-  <ul class="spec">
-    <li><b>{TOTAL}</b> ta formula</li><li><b>{WITH_EX}</b> tasi misol bilan</li>
-    <li>5 boʻlim</li><li>manba: 3 ta variant</li>
-  </ul>
+  <div class="topline">
+    <p class="eyebrow">{L(C["eyebrow"])}</p>
+    <div class="lang" role="group" aria-label="Til · Язык">
+      <button id="btn-uz" type="button" aria-pressed="true">OʻZB</button>
+      <button id="btn-ru" type="button" aria-pressed="false">РУС</button>
+    </div>
+  </div>
+  <h1>{L(C["h1"])}</h1>
+  <p class="sub">{L(C["sub"])}</p>
+  <ul class="spec">{''.join('<li>%s</li>' % L(x) for x in C['spec'])}</ul>
 </header>
 
 <nav>{''.join(nav)}</nav>
 
 {''.join(secs)}
 
-<p class="src"><b>Misollar manbasi:</b> 9-sinf tuman bosqichi variantlari — 2025/2026,
-  2024/2025, 2024. Boshqa sinf varianti ishlatilgan joyda qavs ichida koʻrsatilgan.
-  Tuzuvchi: Anvarbek Xaydarov.</p>
+<p class="src">{L(C["src"])}</p>
 </div>'''
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
@@ -164,7 +186,17 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 RENDER = ('<script>document.querySelectorAll(".kd,.k").forEach(function(e){'
  'try{katex.render(e.textContent,e,{throwOnError:false,'
- 'displayMode:e.classList.contains("kd")});}catch(x){}});</script>')
+ 'displayMode:e.classList.contains("kd")});}catch(x){}});'
+ '(function(){var r=document.documentElement,'
+ 'u=document.getElementById("btn-uz"),v=document.getElementById("btn-ru");'
+ 'function set(l,save){r.setAttribute("data-l",l);'
+ 'u.setAttribute("aria-pressed",String(l==="uz"));'
+ 'v.setAttribute("aria-pressed",String(l==="ru"));'
+ 'if(save){try{localStorage.setItem("reja-lang",l);}catch(e){}}}'
+ 'var s=null;try{s=localStorage.getItem("reja-lang");}catch(e){}'
+ 'set(s==="ru"?"ru":"uz",false);'
+ 'u.addEventListener("click",function(){set("uz",true);});'
+ 'v.addEventListener("click",function(){set("ru",true);});})();</script>')
 
 KCSS = (HERE / 'katex-inline.css').read_text()
 KJS_CDN = ('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/'
@@ -179,7 +211,7 @@ TITLE = 'Olimpiada formulalari va teoremalari'
   f'{KJS_CDN}\n{BODY}\n{RENDER}\n', encoding='utf-8')
 
 (HERE / 'ref9-standalone.html').write_text(
-  '<!doctype html><html lang="uz"><head><meta charset="utf-8">'
+  '<!doctype html><html lang="uz" data-l="uz"><head><meta charset="utf-8">'
   '<meta name="viewport" content="width=device-width,initial-scale=1">'
   f'<title>{TITLE} — 9-sinf</title>{FONTS}<style>{KCSS}</style><style>{CSS}</style>'
   f'{KJS_LOCAL}</head><body>{BODY}{RENDER}</body></html>', encoding='utf-8')

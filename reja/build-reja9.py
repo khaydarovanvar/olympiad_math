@@ -1,259 +1,43 @@
 # -*- coding: utf-8 -*-
-"""20 kunlik tayyorgarlik rejasi — 9-sinf. Generates the artifact fragment + a standalone file."""
-import html, pathlib
+import importlib.util, pathlib
+HERE = pathlib.Path(__file__).resolve().parent
+sp = importlib.util.spec_from_file_location('d', HERE / 'data_ru.py')
+D = importlib.util.module_from_spec(sp); sp.loader.exec_module(D)
+C = D.CHROME
 
-WEIGHTS = [  # (strand, n, pct, hue-token)
-    ('Algebra va ayniyatlar', 28, 31.5, 'alg'),
-    ('Sonlar nazariyasi',     22, 24.7, 'nt'),
-    ('Geometriya',            18, 20.2, 'geo'),
-    ('Kombinatorika',          9, 10.1, 'comb'),
-    ('Ketma-ketliklar',        5,  5.6, 'comb'),
-    ('Funksiyalar',            3,  3.4, 'comb'),
-    ('Matn masalalari, foiz',  3,  3.4, 'rev'),
-    ('Trigonometriya',         1,  1.1, 'rev'),
-]
+def L(pair, tag='span'):
+    """emit both languages; CSS hides the inactive one"""
+    uz, ru = pair
+    return ('<%s data-l="uz">%s</%s><%s data-l="ru">%s</%s>' % (tag, uz, tag, tag, ru, tag))
 
-PHASES = [
- dict(key='alg', nom='1-bosqich · Algebra poydevori', kunlar='1–6-kun',
-      izoh='Uch yillik savollarning <b>31,5 %</b> i shu yerdan. Koʻpaytuvchilarga ajratish va '
-           'Viyet formulalari boshqa mavzularda ham qayta-qayta ishlatiladi, shuning uchun '
-           'birinchi boʻlib shu blok beriladi.'),
- dict(key='nt', nom='2-bosqich · Sonlar nazariyasi', kunlar='7–11-kun',
-      izoh='<b>24,7 %</b>. Oxirgi ikki yilda bu blok algebradan ham koʻproq savol bergan '
-           '(2025/26 da 9 ta, 2024/25 da 9 ta) — eʼtiborni kamaytirmang.'),
- dict(key='geo', nom='3-bosqich · Geometriya', kunlar='12–15-kun',
-      izoh='<b>20,2 %</b>. Deyarli barcha savollar planimetriya: uchburchak, toʻrtburchak, '
-           'aylana. Fazoviy geometriya tuman bosqichida uchramadi.'),
- dict(key='comb', nom='4-bosqich · Kombinatorika va ketma-ketliklar', kunlar='16–17-kun',
-      izoh='<b>15,1 %</b> (kombinatorika 10,1 % + ketma-ketlik va funksiya 9 %). Bu savollar '
-           'koʻpincha ochiq turdagi 21–30 blokida — ball ogʻirligi yuqori.'),
- dict(key='rev', nom='5-bosqich · Yakuniy takror va sinov', kunlar='18–20-kun',
-      izoho='', izoh='Kichik mavzular yopiladi, soʻng ikkita toʻliq sinov imtihoni 90 daqiqada '
-           'oʻtkaziladi. Xato daftari shu kunlarda eng katta foyda beradi.'),
-]
+def day(d):
+    hue, bg = 'var(--%s)' % d['ph'], 'var(--%s-bg)' % d['ph']
+    gaps = ''.join('<li>%s</li>' % L(g) for g in d['gap'])
+    ex = ('<div class="ex"><span class="lab">%s</span>%s</div>'
+          % (L(C['namuna']), L(d['misol']))) if d['misol'][0] else ''
+    refs = ''.join('<span class="ref">%s</span>' % r for r in d['mashq'])
+    return ('<article class="day" style="--hue:%s;--hue-bg:%s">'
+            '<div class="day-head"><span class="num">%02d</span><div>'
+            '<h4>%s</h4><p class="why">%s</p></div></div>'
+            '<div class="body"><ul class="gap">%s</ul>%s'
+            '<div class="refs"><span class="lab">%s</span>%s</div></div></article>'
+            % (hue, bg, d['n'], L(d['mavzu']), L(d['nega']), gaps, ex, L(C['mashq']), refs))
 
-D = lambda **kw: kw
-KUNLAR = [
+bars = ''.join(
+  '<li><span class="nm">%s</span><span class="pc">%s%% · %d</span>'
+  '<span class="track"><span class="fill" style="width:%.1f%%;background:var(--%s)"></span></span></li>'
+  % (L(nm), ('%.1f' % pc).replace('.', ','), n, pc / 31.5 * 100, hue)
+  for nm, n, pc, hue in D.WEIGHTS)
 
-D(n=1, ph='alg', mavzu='Ayniyatlar va koʻpaytuvchilarga ajratish',
-  nega='Har uchala yilda ham 1–8-savollar orasida albatta uchraydi.',
-  gap=['<b>Qisqa koʻpaytirish:</b> (a±b)², a²−b², (a±b)³, a³±b³',
-       '<b>Uch had:</b> a³+b³+c³−3abc = (a+b+c)(a²+b²+c²−ab−bc−ca)',
-       '<b>Guruhlash va Simon hiylasi:</b> xy+ax+by+ab = (x+b)(y+a) — nomaʼlumni qavsga yigʻib, '
-       'oʻng tomonni koʻpaytuvchilarga ajratish',
-       '<b>Butun qism ajratish:</b> (n²−3)/(n−2) = n+2 + 1/(n−2)'],
-  misol=('<b>2024/25 №9.</b> 4a − 7b + 28ab = 2020. Simon hiylasi: 4a(7b+1) − (7b+1) = 2019, '
-         'yaʼni (4a−1)(7b+1) = 2019 = 3·673. 4a−1 = 3 → a = 1, 7b+1 = 673 → b = 96, ab = <b>96</b>.'),
-  mashq=['2024 №1', '2024 №4', '2024 №8', '2025/26 №4', '2024/25 №9', '2024/25 №29']),
+phases = ''.join(
+  '<section class="phase"><div class="phase-head"><h3>%s</h3><span class="rng">%s</span></div>'
+  '<p class="phase-why">%s</p>%s</section>'
+  % (L(p['nom']), L(p['kunlar']), L(p['izoh']),
+     ''.join(day(d) for d in D.KUNLAR if d['ph'] == p['key']))
+  for p in D.PHASES)
 
-D(n=2, ph='alg', mavzu='Kvadrat tenglama, Viyet teoremasi, parametr',
-  nega='Viyet uch yilda 5 marta: ildizlar yigʻindisi/koʻpaytmasi orqali simmetrik ifodalar.',
-  gap=['x₁+x₂ = −b/a, x₁x₂ = c/a',
-       'x₁²+x₂² = (x₁+x₂)² − 2x₁x₂; x₁⁴+x₂⁴ = (x₁²+x₂²)² − 2(x₁x₂)²',
-       '<b>Umumiy ildiz:</b> ikki tenglamani ayirib, chiziqli tenglama hosil qilish',
-       '<b>Parametr:</b> D &gt; 0, D = 0, D &lt; 0 hollari; «yagona yechim» — ODZ ni unutmang'],
-  misol=('<b>2025/26 №13.</b> x²+2x−1 = 0 uchun x₁+x₂ = −2, x₁x₂ = −1. '
-         'x₁²+x₂² = 4+2 = 6, soʻng x₁⁴+x₂⁴ = 6² − 2·1 = <b>34</b>.'),
-  mashq=['2025/26 №13', '2024 №2', '2024 №14', '2024 №29', '2024/25 №10']),
-
-D(n=3, ph='alg', mavzu='Modul va irratsional ifodalar',
-  nega='Modul va ildiz har yili 2–3 savol; koʻpi oson, lekin ODZ da xato qilinadi.',
-  gap=['|u| = |v| ⟺ u = ±v; |x−a| — sonlar oʻqidagi masofa',
-       '<b>Ichma-ich ildiz:</b> √(a ± 2√b) = √x ± √y, bunda x+y = a, xy = b',
-       '<b>Qoʻshmaga koʻpaytirish:</b> 1/(√a+√b) = (√a−√b)/(a−b)',
-       'Ildizli tengsizlikda ODZ + ikkala tomon manfiy emasligini tekshirish'],
-  misol=('<b>2025/26 №10.</b> √(4+2√3) = √3+1 va √(49+8√3) = 1+4√3, '
-         'demak (4(√3+1) − (1+4√3))² = 3² = <b>9</b>.'),
-  mashq=['2025/26 №6', '2025/26 №10', '2024 №5', '2024 №18', '2024 №25', '2024/25 №13']),
-
-D(n=4, ph='alg', mavzu='Nisbat, proporsiya va simmetrik ifodalar',
-  nega='«a/b = c/d = k» tipidagi savol uch yilda 6 marta uchradi.',
-  gap=['a/b = c/d = k ⟹ a = kb, c = kd — hammasini bitta harfga keltiring',
-       '<b>Har bir kasrga 1 qoʻshish hiylasi:</b> (a+b+c)/d + 1 = S/d, bunda S = a+b+c+d',
-       'S = 0 holi alohida tekshiriladi — koʻpincha ikkinchi javobni shu beradi',
-       'Geometrik progressiya: a/b = b/c = c/d ⟹ b² = ac, bc = ad'],
-  misol=('<b>2025/26 №15.</b> Har bir nisbatga 1 qoʻshsak S/a = S/b = S/c = S/d = r+1. '
-         'S ≠ 0 da a = b = c = d va r = 3; S = 0 da r = −1. Yigʻindi <b>2</b>.'),
-  mashq=['2025/26 №7', '2025/26 №15', '2025/26 №20', '2024 №6', '2024 №27', '2024/25 №17']),
-
-D(n=5, ph='alg', mavzu='Tengsizliklar va eng katta/kichik qiymat',
-  nega='Har yili 1–2 savol; ayniqsa kvadrat uchhadning minimumi.',
-  gap=['Kvadrat tengsizlik: ildizlarni topib, oraliqlar usuli bilan ishora jadvali',
-       'Kasrli tengsizlikda maxrajni <b>koʻpaytirmang</b> — ishorani yoʻqotasiz',
-       '<b>AM–GM:</b> a+b ≥ 2√(ab), tenglik a = b da',
-       'Kvadrat uchhadning minimumi: t = −b/(2a); almashtirish (t = x²) bilan darajani tushiring'],
-  misol=('<b>2024 №7.</b> x − 1 ≥ 2024/(x+1). Maxrajni shunchaki koʻpaytirib boʻlmaydi: '
-         'x+1 &gt; 0 da x² ≥ 2025 ⟹ x ≥ 45, x+1 &lt; 0 da esa ishora almashib x² ≤ 2025 ⟹ '
-         '−45 ≤ x &lt; −1. Eng kichik butun yechim — <b>−45</b>.'),
-  mashq=['2024 №7', '2024 №18', '2024/25 №22', '2025/26 №1']),
-
-D(n=6, ph='alg', mavzu='Algebra — aralash mashq va xato tahlili',
-  nega='Blokni mustahkamlash: 1–5-kun mavzulari aralash tartibda beriladi.',
-  gap=['60 daqiqada 20 ta aralash algebra savoli (vaqt nazorati bilan)',
-       'Har bir xato uchun <b>xato daftari</b>ga yozuv: qaysi gʻoya yetishmadi',
-       'Notoʻgʻri javoblar qayta yechiladi — ertasi kuni emas, oʻsha kuni',
-       'Tez hisob mashqi: 2, 3, 5, 9, 11 ga boʻlinish alomatlari ogʻzaki'],
-  misol='',
-  mashq=['2024 №1–8', '2025/26 №1, 6, 7, 10, 13, 14, 15', '2024/25 №1, 13, 17, 22']),
-
-D(n=7, ph='nt', mavzu='Boʻlinish alomatlari va raqamlar bilan ishlash',
-  nega='Raqamli savollar («abcd» koʻrinishidagi) har yili 2–3 ta.',
-  gap=['Sonni yoyib yozish: <span class="m">abc</span> = 100a + 10b + c',
-       '3 va 9 ga — raqamlar yigʻindisi; 11 ga — navbatlashuvchi yigʻindi',
-       '7 ga: 10ᵏ ning qoldiqlari 1, 3, 2, 6, 4, 5 davr bilan takrorlanadi',
-       '4 va 8 ga — oxirgi ikki/uch raqam; 5 va 25 ga — oxirgi raqamlar'],
-  misol=('<b>2025/26 №23.</b> 10ᵏ ning 7 ga qoldiqlarini qoʻyib, '
-         'N ≡ 3A + 5 (mod 7) chiqadi → A = 3, B ning eng kichigi 1, A+B = <b>4</b>.'),
-  mashq=['2025/26 №5', '2025/26 №23', '2025/26 №28', '2024 №11', '2024 №24', '2024/25 №15']),
-
-D(n=8, ph='nt', mavzu='Qoldiqlar va modular arifmetika',
-  nega='Darajaning oxirgi raqamlari — eng barqaror mavzu, har yili bor.',
-  gap=['a ≡ b (mod m) bilan ishlash: qoʻshish, koʻpaytirish, daraja',
-       'Oxirgi raqam — mod 10, davri 4; oxirgi ikki raqam — mod 100, davri 20',
-       'Katta darajani bosqichma-bosqich kvadratga koʻtarish',
-       'Faktoriallar yigʻindisi: 10! dan keyin oxirgi ikki raqam oʻzgarmaydi'],
-  misol=('<b>2025/26 №18.</b> 3²⁰ ≡ 1 (mod 100) va 2025 = 20·101 + 5, '
-         'demak 3²⁰²⁵ ≡ 3⁵ = 243 ≡ <b>43</b>.'),
-  mashq=['2025/26 №8', '2025/26 №18', '2025/26 №22', '2024 №12', '2024/25 №8']),
-
-D(n=9, ph='nt', mavzu='Tub sonlar, boʻluvchilar soni, Lежandr formulasi',
-  nega='«Nechta boʻluvchisi bor» va «n! nechta nolga tugaydi» — takrorlanuvchi juftlik.',
-  gap=['n = p₁<sup>α₁</sup>···p<sub>k</sub><sup>α<sub>k</sub></sup> ⟹ boʻluvchilar soni (α₁+1)···(α<sub>k</sub>+1)',
-       'Aynan 3 ta boʻluvchi ⟺ n = p² (tub sonning kvadrati)',
-       '<b>Lежandr:</b> v<sub>p</sub>(n!) = ⌊n/p⌋ + ⌊n/p²⌋ + ⌊n/p³⌋ + ···',
-       'Nollar soni = min(v₂, v₅), odatda v₅ ga teng'],
-  misol=('<b>2025/26 №17.</b> Ikki xonali sonlar koʻpaytmasi = 99!/9!. '
-         'v₃(99!) = 33+11+3+1 = 48, v₃(9!) = 4, demak n = <b>44</b>.'),
-  mashq=['2025/26 №4', '2025/26 №17', '2024 №12', '2024/25 №2', '2024/25 №11', '2024/25 №23']),
-
-D(n=10, ph='nt', mavzu='Diofant tenglamalari',
-  nega='Har yili 1–2 ta, koʻpincha ochiq (2,6 ball) blokida.',
-  gap=['Koʻpaytuvchilarga ajratib, (·)(·) = N shaklga keltirish va N ning boʻluvchilarini saralash',
-       '<b>Juftlik va qoldiq bilan cheklash:</b> mod 3, mod 4, mod 8 boʻyicha qarama-qarshilik',
-       'ax + by = c: yechim bor ⟺ EKUB(a,b) | c; umumiy yechim a→a+b/d, b→b−a/d',
-       'Chicken McNugget: 2a+3b, 13a+31b tipidagi «ifodalab boʻlmaydigan sonlar»'],
-  misol=('<b>2025/26 №19.</b> p²−1 = 2q² → (p−1)(p+1) = 2q². p toq boʻlgani uchun chap tomon '
-         '8 ga boʻlinadi ⟹ q juft ⟹ q = 2, p = 3. Yagona juftlik — <b>1 ta</b>.'),
-  mashq=['2025/26 №19', '2025/26 №24', '2024/25 №7', '2024/25 №9', '2024/25 №18']),
-
-D(n=11, ph='nt', mavzu='Sonlar nazariyasi — aralash mashq',
-  nega='Blokni mustahkamlash; ochiq savollarga urgʻu.',
-  gap=['50 daqiqada 15 ta aralash savol',
-       'Har bir savolda avval <b>qaysi vosita</b> kerakligini aytish — keyin yechish',
-       'Xato daftaridagi 7–10-kun xatolari qayta ishlanadi',
-       'Ogʻzaki: 100 gacha tub sonlar, 2–15 ning kvadratlari, 2 ning darajalari 2¹⁰ gacha'],
-  misol='',
-  mashq=['2025/26 №2, 5, 8, 17, 18, 19, 23, 28', '2024/25 №2, 7, 8, 9, 11, 15, 18']),
-
-D(n=12, ph='geo', mavzu='Uchburchak: burchak, mediana, bissektrisa, balandlik',
-  nega='Geometriya savollarining yarmi uchburchakka oid.',
-  gap=['Burchaklar yigʻindisi 180°; tashqi burchak = qoʻshni boʻlmagan ikkitasining yigʻindisi',
-       '<b>Gipotenuzaga mediana</b> = gipotenuzaning yarmi',
-       '<b>Bissektrisa xossasi:</b> AL/LB = CA/CB',
-       'Teng yonli uchburchakda asosga tushirilgan balandlik — mediana ham, bissektrisa ham'],
-  misol=('<b>2024 №15.</b> Balandliklar kesishmasi H uchun CH = 2R·cos C, '
-         'va AB = 2R·sin C. √3·AB = CH shartidan √3·sin C = cos C, '
-         'yaʼni tg C = 1/√3 ⟹ ∠ACB = <b>30°</b>.'),
-  mashq=['2024 №15', '2024 №17', '2024/25 №3', '2024/25 №6', '2024/25 №14', '2024/25 №16']),
-
-D(n=13, ph='geo', mavzu='Toʻrtburchaklar va yuzalar',
-  nega='Trapetsiya va toʻgʻri toʻrtburchak — har yili 1–2 savol.',
-  gap=['Trapetsiya oʻrta chizigʻi = (a+b)/2; yuzi = oʻrta chiziq × balandlik',
-       '<b>Diagonallari perpendikulyar teng yonli trapetsiya:</b> h = (a+b)/2, S = ((a+b)/2)²',
-       '<b>Diagonallar boʻlgan 4 uchburchak:</b> [AOB]·[COD] = [BOC]·[AOD]',
-       'Varinyon: tomonlar oʻrtalari parallelogramm, yuzi asl figuraning yarmi'],
-  misol=('<b>2025/26 №9.</b> Asoslari 12 va 8, diagonallari perpendikulyar teng yonli '
-         'trapetsiya: h = (12+8)/2 = 10, S = 10·10 = <b>100</b>.'),
-  mashq=['2025/26 №9', '2025/26 №27', '2024 №23', '2024 №28', '2024/25 №24']),
-
-D(n=14, ph='geo', mavzu='Aylana: ichki burchak, urinma, urinuvchi aylanalar',
-  nega='Aylana savollari koʻpincha ochiq blokda (2,6 ball) turadi.',
-  gap=['Ichki chizilgan burchak = tayanch yoyning yarmi; diametrga tayansa 90° (Fales)',
-       '<b>Urinma–vatar burchagi</b> ham yoyning yarmiga teng',
-       'Nuqtaning aylanaga nisbatan darajasi: PA·PB = PC·PD',
-       'Burchakka ichki chizilgan aylana: markazdan uchgacha masofa r/sin(α/2)'],
-  misol=('<b>2025/26 №21.</b> Yoylarni 12x, 4x, 6x, 162° deb belgilab, yigʻindisi 360° dan '
-         'x = 9°. Keyin ∠ABC = (54° + 162°)/2 = <b>108°</b>.'),
-  mashq=['2025/26 №11', '2025/26 №21', '2025/26 №27', '2024 №19', '2024 №26']),
-
-D(n=15, ph='geo', mavzu='Koordinata usuli, burish va aralash mashq',
-  nega='Qiyin geometriya savolini koordinata yoki burish bilan «algebraga» aylantirish.',
-  gap=['Koordinata kiritish: toʻgʻri burchakni (0;0) ga qoʻying, tomonlarni oʻqlarga',
-       '<b>Burish hiylasi:</b> kvadrat ichidagi nuqta masalalari 90° burish bilan yechiladi',
-       'Pifagor teoremasiga teskari teorema bilan toʻgʻri burchakni aniqlash',
-       'Stuart teoremasi: cheviana uzunligi (aylana va uchburchak masalalarida)'],
-  misol=('<b>2025/26 №30.</b> M kvadrat ichida, MA=1, MB=2, MC=3. B atrofida 90° burib, '
-         'MM′ = 2√2, M′C = 1, MC = 3 → 8+1 = 9 ⟹ toʻgʻri burchak; ∠AMB = 45°+90° = <b>135°</b>.'),
-  mashq=['2025/26 №3', '2025/26 №30', '2024 №16', '2024 №19', '2024 №28']),
-
-D(n=16, ph='comb', mavzu='Sanash: koʻpaytirish qoidasi, oʻrin almashtirish, tanlash',
-  nega='Kombinatorika 10,1 %, va deyarli hammasi ochiq blokda.',
-  gap=['Koʻpaytirish va qoʻshish qoidalari; <b>teskarisini sanash</b> (dopolnenie)',
-       'P<sub>n</sub> = n!, C(n,k) = n!/(k!(n−k)!)',
-       '<b>Toʻsiqlar va sharlar:</b> x₁+···+x<sub>k</sub> = n ning yechimlari C(n+k−1, k−1)',
-       'Boʻluvchilarni taqsimlash: xyz = 2⁸·3⁴ ⟹ C(10,2)·C(6,2)'],
-  misol=('<b>2025/26 №24.</b> xyz = 12⁴ = 2⁸·3⁴. Ikkilik darajani 3 ga taqsimlash C(10,2) = 45, '
-         'uchlik C(6,2) = 15, jami 45·15 = <b>675</b>.'),
-  mashq=['2025/26 №24', '2025/26 №26', '2025/26 №29', '2024 №30', '2024/25 №21', '2024/25 №25']),
-
-D(n=17, ph='comb', mavzu='Ketma-ketliklar, progressiyalar va funksiyalar',
-  nega='Progressiya + rekurrent + funksional almashtirish = 9 % savol.',
-  gap=['AP: a<sub>n</sub> = a₁+(n−1)d, S<sub>n</sub> = (a₁+a<sub>n</sub>)n/2; chetdan teng '
-       'uzoqlikdagi hadlar yigʻindisi bir xil',
-       'GP: b<sub>n</sub> = b₁qⁿ⁻¹, |q| &lt; 1 da S = b₁/(1−q)',
-       '<b>Davriylik:</b> rekurrent munosabatda dastlabki 6–7 hadni yozing — davr koʻrinadi',
-       '<b>Funksional almashtirish:</b> f(x)+f(−x) yoki f(x)+f(1/x) yigʻindisini oling'],
-  misol=('<b>2025/26 №12.</b> u = 2ˣ belgilansa f(x)+f(−x) = 6 — x ga bogʻliq emas. '
-         'f(t) = 3 boʻlsa f(−t) = 6−3 = <b>3</b>.'),
-  mashq=['2025/26 №12', '2025/26 №16', '2025/26 №20', '2024 №10', '2024 №13',
-         '2024/25 №5', '2024/25 №26', '2024/25 №27']),
-
-D(n=18, ph='rev', mavzu='Kichik mavzular: trigonometriya, foiz, matn masalalari',
-  nega='Alohida-alohida kam, lekin birgalikda 8 % — arzon ballar.',
-  gap=['sin²α+cos²α = 1, sin2α = 2 sin α cos α, tg α = sin α / cos α',
-       '<b>Ketma-ket chegirma:</b> 15 % va 5 % = 0,85·0,95 — qoʻshib 20 % <b>emas</b>',
-       'Ish unumdorligi: butun ishni 1 deb oling, 1/t — bir soatlik unum',
-       'Aralashma: oʻrtacha narx chetlardan teng uzoqlikda boʻlsa — teng miqdorda'],
-  misol=('<b>2025/26 №25.</b> tg α + sin α = 1 dan c = s/(1−s); qaytma tenglamaga keltirib '
-         'sin 2α = 2(√2−1), demak (sin 2α + 2)² = (2√2)² = <b>8</b>.'),
-  mashq=['2025/26 №25', '2024 №3', '2024 №20', '2024/25 №12', '20 masala varaqasi: 5, 7, 8, 13, 14']),
-
-D(n=19, ph='rev', mavzu='Sinov imtihoni №1 — 2024-yil varianti',
-  nega='Birinchi toʻliq repetitsiya: vaqt, tartib va javoblar varaqasi bilan.',
-  gap=['<b>90 daqiqa, 30 savol, 50 ball</b> — haqiqiy sharoitda, telefonsiz',
-       'Vaqt taqsimoti: 1–10 (20 daq) → 11–20 (30 daq) → 21–30 (35 daq) → 5 daq tekshirish',
-       'Imtihondan soʻng darhol tahlil: har bir xato qaysi kun mavzusiga tegishli',
-       'Ball hisoblanadi va 20-kundagi natija bilan solishtiriladi'],
-  misol='',
-  mashq=['2024 varianti — toʻliq 30 savol']),
-
-D(n=20, ph='rev', mavzu='Sinov imtihoni №2 va zaif nuqtalarni yopish',
-  nega='Oxirgi kun: ikkinchi repetitsiya va faqat zaif mavzular takrori.',
-  gap=['2024/25 varianti — yana 90 daqiqa',
-       'Xato daftaridagi eng koʻp takrorlangan <b>3 ta</b> mavzu qayta koʻriladi',
-       'Formulalar varaqasi: bir betga sigʻadigan 25 ta formula yozib chiqiladi',
-       'Imtihon kuni: uyqu, soat, qora ruchka, doirachani <b>toʻliq</b> boʻyash'],
-  misol='',
-  mashq=['2024/25 varianti — toʻliq 30 savol', '2025/26 varianti — uy sharoitida tahlil uchun']),
-]
-
-TACTICS = [
- ('Ball taqsimoti', 'Savollar kitobiga koʻra: 1–10 — 0,9 balldan (9 ball), 11–20 — 1,5 balldan '
-  '(15 ball), 21–30 — 2,6 balldan (26 ball). Jami 50 ball, 90 daqiqa.'),
- ('Ochiq savollar — ballning yarmidan koʻpi', '21–30 bloki 26 ball beradi, yaʼni '
-  '<b>52 %</b>. Faqat 1–20 ni mukammal ishlagan oʻquvchi 24 balldan oshmaydi. '
-  'Shuning uchun oxirgi 10 savolga kamida 35 daqiqa qoldiring.'),
- ('Birinchi oʻtish — faqat «koʻrgan zahoti» yechiladiganlar', 'Birinchi 20 daqiqada 1–10 ni '
-  'oling. Bitta savolga 2 daqiqadan koʻp ketsa — belgilab qoʻying va oʻting.'),
- ('Yopiq savolda boʻsh qoldirmang', 'Kitobda notoʻgʻri javob uchun ball ayirish '
-  'koʻrsatilmagan, shuning uchun 1–20 da har bir doiracha boʻyalgan boʻlsin. '
-  'Variantlarni oʻrniga qoʻyib tekshirish — koʻpincha yechishdan tez.'),
- ('Ochiq savolda faqat javob yoziladi', 'Qisqa javob talab qilinadi, shuning uchun '
-  'yechim chiroyli boʻlishi shart emas — son toʻgʻri boʻlsa yetarli. Kasr javoblarni '
-  'qisqartirib yozing.'),
- ('Oxirgi 5 daqiqa — faqat tekshirish', 'Javoblar varaqasidagi raqamlar mos tushganini, '
-  'doirachalar toʻliq boʻyalganini va oʻlchov birliklarini tekshiring.'),
-]
+tac = ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (L(t), L(b)) for t, b in D.TACTICS)
+spec = ''.join('<li>%s</li>' % L(s) for s in C['spec'])
 
 CSS = r"""
 :root{
@@ -277,19 +61,27 @@ CSS = r"""
   --alg:#56b4cc; --nt:#d3a54e; --geo:#6cc08a; --comb:#dd8fa2; --rev:#9fb0bb;
   --alg-bg:#12303a; --nt-bg:#332713; --geo-bg:#16301f; --comb-bg:#331d24; --rev-bg:#1d262b;
 }
+/* language switch */
+:root[data-l="uz"] [data-l="ru"],
+:root[data-l="ru"] [data-l="uz"]{display:none}
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);
   font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
   font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
 .wrap{max-width:780px;margin:0 auto;padding-inline:16px;padding-block:28px 56px}
 h1,h2,h3,.ui{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
-.mono{font-family:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
-  font-variant-numeric:tabular-nums}
 
-/* masthead */
 .mast{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:10px}
+.topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+  margin-bottom:8px}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+  text-transform:uppercase;color:var(--accent);margin:0}
+.lang{display:flex;flex:0 0 auto;border:1px solid var(--rule);border-radius:2px;
+  overflow:hidden;background:var(--surface)}
+.lang button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+  padding:4px 9px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+.lang button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 h1{font-size:clamp(28px,7vw,42px);line-height:1.08;margin:0;font-weight:700;
   letter-spacing:-.015em;text-wrap:balance}
 .sub{color:var(--muted);margin:8px 0 0;font-size:16px}
@@ -297,11 +89,9 @@ h1{font-size:clamp(28px,7vw,42px);line-height:1.08;margin:0;font-weight:700;
   font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted)}
 .spec b{color:var(--ink);font-weight:500}
 
-/* section headers */
 h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
   font-weight:600;margin:44px 0 14px;padding-bottom:7px;border-bottom:1px solid var(--rule)}
 
-/* evidence bars */
 .bars{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
 .bars li{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:baseline}
 .bars .nm{font-family:Archivo,sans-serif;font-size:14.5px;font-weight:500}
@@ -313,7 +103,6 @@ h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute
 .note{font-size:14px;color:var(--muted);margin:16px 0 0;padding-left:13px;
   border-left:2px solid var(--rule)}
 
-/* phases */
 .phase{margin-top:34px}
 .phase-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:4px}
 .phase-head h3{font-size:19px;margin:0;font-weight:700;letter-spacing:-.01em}
@@ -321,12 +110,11 @@ h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute
   padding:2px 7px;border:1px solid var(--rule);border-radius:2px}
 .phase-why{font-size:14.5px;color:var(--muted);margin:0 0 14px}
 
-/* day rows */
 .day{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--hue);
   padding:16px 16px 14px;margin-bottom:10px}
 .day-head{display:flex;gap:14px;align-items:flex-start}
 .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:600;line-height:1;
-  color:var(--hue);min-width:2.1ch;padding-top:1px}
+  color:var(--hue);min-width:2.1ch;padding-top:1px;font-variant-numeric:tabular-nums}
 .day-head h4{font-family:Archivo,sans-serif;font-size:17px;font-weight:600;margin:0;
   line-height:1.3;letter-spacing:-.005em;text-wrap:balance}
 .why{font-size:14px;color:var(--muted);margin:3px 0 0}
@@ -337,94 +125,71 @@ ul.gap li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height
   background:var(--hue)}
 .ex{margin:13px 0 0;padding:11px 13px;background:var(--surface-2);
   border-left:2px solid var(--hue);font-size:14.5px}
-.ex .lab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+.ex .lab,.refs .lab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
 .refs{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0 0;padding:11px 0 0;
   border-top:1px dashed var(--rule)}
-.refs .lab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--muted);width:100%;margin-bottom:1px}
+.refs .lab{width:100%;margin-bottom:1px}
 .ref{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:3px 7px;
   background:var(--hue-bg);color:var(--hue);border-radius:2px;white-space:nowrap}
 
-/* tactics */
 .tac{margin:0;padding:0}
 .tac div{padding:13px 0;border-bottom:1px solid var(--rule-soft)}
 .tac div:last-child{border-bottom:0}
 .tac dt{font-family:Archivo,sans-serif;font-weight:600;font-size:15.5px;margin-bottom:3px}
 .tac dd{margin:0;font-size:15px;color:var(--muted)}
 
-/* misc */
-.m{font-style:italic;border-top:1px solid currentColor;padding-top:0}
-sup,sub{font-size:.72em}
 .src{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);
   font-size:13px;color:var(--muted)}
 .src b{color:var(--ink);font-weight:600}
 @media (max-width:420px){
-  .day{padding:14px 13px 12px}
-  .num{font-size:22px}
-  .day-head h4{font-size:16px}
+  .day{padding:14px 13px 12px} .num{font-size:22px} .day-head h4{font-size:16px}
 }
 """
 
-def esc(s): return s
-
-def day_html(d):
-    hue, bg = 'var(--%s)' % d['ph'], 'var(--%s-bg)' % d['ph']
-    gaps = ''.join('<li>%s</li>' % g for g in d['gap'])
-    ex = ('<div class="ex"><span class="lab">Namuna</span>%s</div>' % d['misol']) if d['misol'] else ''
-    refs = ''.join('<span class="ref">%s</span>' % r for r in d['mashq'])
-    return (
-      '<article class="day" style="--hue:%s;--hue-bg:%s">'
-      '<div class="day-head"><span class="num">%02d</span><div>'
-      '<h4>%s</h4><p class="why">%s</p></div></div>'
-      '<div class="body"><ul class="gap">%s</ul>%s'
-      '<div class="refs"><span class="lab">Mashq uchun savollar</span>%s</div>'
-      '</div></article>' % (hue, bg, d['n'], d['mavzu'], d['nega'], gaps, ex, refs))
-
-bars = ''.join(
-  '<li><span class="nm">%s</span><span class="pc">%s%% · %d ta</span>'
-  '<span class="track"><span class="fill" style="width:%.1f%%;background:var(--%s)"></span></span></li>'
-  % (nm, ('%.1f' % pc).replace('.', ','), n, pc / 31.5 * 100, hue)
-  for nm, n, pc, hue in WEIGHTS)
-
-phases = []
-for ph in PHASES:
-    days = ''.join(day_html(d) for d in KUNLAR if d['ph'] == ph['key'])
-    phases.append(
-      '<section class="phase"><div class="phase-head"><h3>%s</h3>'
-      '<span class="rng">%s</span></div><p class="phase-why">%s</p>%s</section>'
-      % (ph['nom'], ph['kunlar'], ph['izoh'], days))
-
-tac = ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (t, b) for t, b in TACTICS)
-
 BODY = f'''<div class="wrap">
 <header class="mast">
-  <p class="eyebrow">Fan olimpiadalari · tuman (shahar) bosqichi</p>
-  <h1>20 kunda tuman bosqichiga</h1>
-  <p class="sub">9-sinf matematika — kun-ba-kun tayyorgarlik rejasi, mavzular izohi va
-     oʻtgan yillar savollari.</p>
-  <ul class="spec">
-    <li><b>30</b> savol</li><li><b>90</b> daqiqa</li><li><b>50</b> ball</li>
-    <li>1–20 yopiq · 21–30 ochiq</li>
-  </ul>
+  <div class="topline">
+    <p class="eyebrow">{L(C["eyebrow"])}</p>
+    <div class="lang" role="group" aria-label="Til · Язык">
+      <button id="btn-uz" type="button" aria-pressed="true">OʻZB</button>
+      <button id="btn-ru" type="button" aria-pressed="false">РУС</button>
+    </div>
+  </div>
+  <h1>{L(C["h1"])}</h1>
+  <p class="sub">{L(C["sub"])}</p>
+  <ul class="spec">{spec}</ul>
 </header>
 
-<h2>Imtihon aslida nimani soʻraydi</h2>
+<h2>{L(C["h2a"])}</h2>
 <ul class="bars">{bars}</ul>
-<p class="note">Uchta haqiqiy variantdagi <b>89 ta savol</b> mavzu boʻyicha ajratildi:
-  2025/26, 2024/25 va 2024-yil tuman bosqichi. Reja shu nisbatga qarab tuzilgan —
-  algebra va sonlar nazariyasi birgalikda savollarning yarmidan koʻpini beradi. Chiziq rangi mavzu qaysi bosqichda oʻtilishini koʻrsatadi.</p>
+<p class="note">{L(C["note"])}</p>
 
-<h2>Kun-ba-kun reja</h2>
-{''.join(phases)}
+<h2>{L(C["h2b"])}</h2>
+{phases}
 
-<h2>Imtihon kuni taktikasi</h2>
+<h2>{L(C["h2c"])}</h2>
 <dl class="tac">{tac}</dl>
 
-<p class="src"><b>Manbalar:</b> 9-sinf tuman (shahar) bosqichi variantlari — 2025/2026,
-  2024/2025 va 2024-yil. Savol raqamlari shu variantlarga tegishli.
-  Reja: Anvarbek Xaydarov.</p>
+<p class="src">{L(C["src"])}</p>
 </div>'''
+
+JS = '''<script>
+(function(){
+  var root=document.documentElement, b={uz:document.getElementById("btn-uz"),
+      ru:document.getElementById("btn-ru")};
+  function set(l,save){
+    root.setAttribute("data-l",l);
+    b.uz.setAttribute("aria-pressed",String(l==="uz"));
+    b.ru.setAttribute("aria-pressed",String(l==="ru"));
+    if(save){try{localStorage.setItem("reja-lang",l);}catch(e){}}
+  }
+  var saved=null; try{saved=localStorage.getItem("reja-lang");}catch(e){}
+  set(saved==="ru"?"ru":"uz",false);
+  b.uz.addEventListener("click",function(){set("uz",true);});
+  b.ru.addEventListener("click",function(){set("ru",true);});
+})();
+</script>'''
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
  '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -433,19 +198,11 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
  'family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">')
 
 TITLE = '20 kunda tuman bosqichiga'
-here = pathlib.Path(__file__).resolve().parent
-
-# artifact fragment — no doctype/html/head/body of its own
-(here / 'plan9.html').write_text(
-  f'<title>{TITLE}</title>\n{FONTS}\n<style>{CSS}</style>\n{BODY}\n', encoding='utf-8')
-
-# standalone, downloadable
-(here / 'plan9-standalone.html').write_text(
-  '<!doctype html><html lang="uz"><head><meta charset="utf-8">'
+(HERE / 'plan9.html').write_text(
+  f'<title>{TITLE}</title>\n{FONTS}\n<style>{CSS}</style>\n{BODY}\n{JS}\n', encoding='utf-8')
+(HERE / 'plan9-standalone.html').write_text(
+  '<!doctype html><html lang="uz" data-l="uz"><head><meta charset="utf-8">'
   '<meta name="viewport" content="width=device-width,initial-scale=1">'
-  f'<title>{TITLE} — 9-sinf</title>{FONTS}<style>{CSS}</style></head><body>{BODY}</body></html>',
-  encoding='utf-8')
-
-print('days:', len(KUNLAR), '| refs:', sum(len(d['mashq']) for d in KUNLAR))
-for p in ('plan9.html', 'plan9-standalone.html'):
-    print(p, (here / p).stat().st_size, 'bytes')
+  f'<title>{TITLE} · К районному этапу за 20 дней</title>{FONTS}<style>{CSS}</style>'
+  f'</head><body>{BODY}{JS}</body></html>', encoding='utf-8')
+print('ok', (HERE/'plan9.html').stat().st_size//1024, 'KB')
