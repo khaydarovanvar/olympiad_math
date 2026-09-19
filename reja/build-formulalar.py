@@ -2,7 +2,10 @@
 import html, importlib.util, pathlib, re
 
 HERE = pathlib.Path(__file__).resolve().parent
-spec = importlib.util.spec_from_file_location('data', HERE / 'data_ru.py')
+import sys
+DATA = sys.argv[1] if len(sys.argv) > 1 else 'data_ru.py'
+OUT = sys.argv[2] if len(sys.argv) > 2 else 'ref9'
+spec = importlib.util.spec_from_file_location('data', HERE / DATA)
 D = importlib.util.module_from_spec(spec); spec.loader.exec_module(D)
 
 MATH = re.compile(r'\$(.+?)\$', re.S)
@@ -204,18 +207,18 @@ KJS_CDN = ('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/'
 KJS_LOCAL = ('<script>%s</script>'
   % pathlib.Path('/home/user/olympiad_math/site/assets/vendor/katex/katex.min.js').read_text())
 
-TITLE = 'Olimpiada formulalari va teoremalari'
+TITLE = C.get('title', (C['h1'][0], C['h1'][1]))[0]
 
-(HERE / 'ref9.html').write_text(
+(HERE / (OUT + '.html')).write_text(
   f'<title>{TITLE}</title>\n{FONTS}\n<style>{KCSS}</style>\n<style>{CSS}</style>\n'
   f'{KJS_CDN}\n{BODY}\n{RENDER}\n', encoding='utf-8')
 
-(HERE / 'ref9-standalone.html').write_text(
+(HERE / (OUT + '-standalone.html')).write_text(
   '<!doctype html><html lang="uz" data-l="uz"><head><meta charset="utf-8">'
   '<meta name="viewport" content="width=device-width,initial-scale=1">'
-  f'<title>{TITLE} — 9-sinf</title>{FONTS}<style>{KCSS}</style><style>{CSS}</style>'
+  f'<title>{TITLE}</title>{FONTS}<style>{KCSS}</style><style>{CSS}</style>'
   f'{KJS_LOCAL}</head><body>{BODY}{RENDER}</body></html>', encoding='utf-8')
 
 print('items', TOTAL, '| with examples', WITH_EX)
-for f in ('ref9.html', 'ref9-standalone.html'):
+for f in (OUT + '.html', OUT + '-standalone.html'):
     print(f, '%.0f KB' % ((HERE / f).stat().st_size / 1024))

@@ -1,14 +1,26 @@
 # -*- coding: utf-8 -*-
 import importlib.util, pathlib
 HERE = pathlib.Path(__file__).resolve().parent
-sp = importlib.util.spec_from_file_location('d', HERE / 'data_ru.py')
+import sys
+DATA = sys.argv[1] if len(sys.argv) > 1 else 'data_ru.py'
+OUT = sys.argv[2] if len(sys.argv) > 2 else 'plan9'
+sp = importlib.util.spec_from_file_location('d', HERE / DATA)
 D = importlib.util.module_from_spec(sp); sp.loader.exec_module(D)
 C = D.CHROME
+
+import html as _h, re as _re
+_MATH = _re.compile(r'\$(.+?)\$', _re.S)
+
+def M(t):
+    """wrap $...$ for KaTeX; the rest is authored HTML and passes through"""
+    return _MATH.sub(lambda m: '<span class="k">%s</span>' % _h.escape(m.group(1)), t)
+
 
 def L(pair, tag='span'):
     """emit both languages; CSS hides the inactive one"""
     uz, ru = pair
-    return ('<%s data-l="uz">%s</%s><%s data-l="ru">%s</%s>' % (tag, uz, tag, tag, ru, tag))
+    return ('<%s data-l="uz">%s</%s><%s data-l="ru">%s</%s>'
+            % (tag, M(uz), tag, tag, M(ru), tag))
 
 def day(d):
     hue, bg = 'var(--%s)' % d['ph'], 'var(--%s-bg)' % d['ph']
@@ -142,6 +154,7 @@ ul.gap li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height
 .src{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);
   font-size:13px;color:var(--muted)}
 .src b{color:var(--ink);font-weight:600}
+.katex{font-size:1.02em}
 @media (max-width:420px){
   .day{padding:14px 13px 12px} .num{font-size:22px} .day-head h4{font-size:16px}
 }
@@ -175,6 +188,9 @@ BODY = f'''<div class="wrap">
 </div>'''
 
 JS = '''<script>
+document.querySelectorAll(".k").forEach(function(e){
+  try{katex.render(e.textContent,e,{throwOnError:false});}catch(x){}
+});
 (function(){
   var root=document.documentElement, b={uz:document.getElementById("btn-uz"),
       ru:document.getElementById("btn-ru")};
@@ -191,18 +207,25 @@ JS = '''<script>
 })();
 </script>'''
 
+KCSS = (HERE / 'katex-inline.css').read_text()
+KJS_CDN = ('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/'
+           'katex.min.js"></script>')
+KJS_LOCAL = ('<script>%s</script>'
+  % pathlib.Path('/home/user/olympiad_math/site/assets/vendor/katex/katex.min.js').read_text())
+
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
  '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
  '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
  'family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&'
  'family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">')
 
-TITLE = '20 kunda tuman bosqichiga'
-(HERE / 'plan9.html').write_text(
-  f'<title>{TITLE}</title>\n{FONTS}\n<style>{CSS}</style>\n{BODY}\n{JS}\n', encoding='utf-8')
-(HERE / 'plan9-standalone.html').write_text(
+TITLE = C['title'][0]
+(HERE / (OUT + '.html')).write_text(
+  f'<title>{TITLE}</title>\n{FONTS}\n<style>{KCSS}</style>\n<style>{CSS}</style>\n'
+  f'{KJS_CDN}\n{BODY}\n{JS}\n', encoding='utf-8')
+(HERE / (OUT + '-standalone.html')).write_text(
   '<!doctype html><html lang="uz" data-l="uz"><head><meta charset="utf-8">'
   '<meta name="viewport" content="width=device-width,initial-scale=1">'
-  f'<title>{TITLE} · К районному этапу за 20 дней</title>{FONTS}<style>{CSS}</style>'
-  f'</head><body>{BODY}{JS}</body></html>', encoding='utf-8')
-print('ok', (HERE/'plan9.html').stat().st_size//1024, 'KB')
+  f'<title>{TITLE} · {C["title"][1]}</title>{FONTS}<style>{KCSS}</style>'
+  f'<style>{CSS}</style>{KJS_LOCAL}</head><body>{BODY}{JS}</body></html>', encoding='utf-8')
+print(OUT, (HERE/(OUT+'.html')).stat().st_size//1024, 'KB')
