@@ -17,19 +17,20 @@ CHROME = dict(
  h2c=T('Imtihon kuni taktikasi', 'Тактика в день экзамена'),
  note=T('Ikkita haqiqiy variantdagi <b>60 ta savol</b> mavzu boʻyicha ajratildi: '
         '2025/26 va 2024-yil tuman bosqichi. <b>Diqqat:</b> 9- va 10-sinfdan farqli '
-        'oʻlaroq, bu yerda 2024/25 varianti qoʻlda yoʻq — shuning uchun tahlil ikki yilga '
+        'oʻlaroq, bu yerda 2025/26 ning B varianti qoʻlda yoʻq — shuning uchun tahlil ikki '
+        'variantga '
         'asoslangan va nisbatlar biroz kengroq tebranishi mumkin. '
         '<b>11-sinfning oʻziga xosligi:</b> trigonometriya $8{,}3\\,\\%$ — uch sinf ichida '
         'eng yuqorisi, va logarifm deyarli har variantda uchraydi.',
         '<b>60 задач</b> из двух реальных вариантов (2025/26 и 2024) разбиты по темам. '
-        '<b>Внимание:</b> в отличие от 9 и 10 классов, варианта 2024/25 под рукой нет — '
+        '<b>Внимание:</b> в отличие от 9 и 10 классов, варианта B 2025/26 под рукой нет — '
         'поэтому анализ опирается на два года, и доли могут колебаться шире. '
         '<b>Особенность 11 класса:</b> тригонометрия $8{,}3\\,\\%$ — больше, чем в 9 и 10, '
         'а логарифмы встречаются почти в каждом варианте.'),
  mashq=T('Mashq uchun savollar', 'Задачи для отработки'),
  namuna=T('Namuna', 'Пример'),
  src=T('<b>Manbalar:</b> 11-sinf tuman (shahar) bosqichi variantlari — 2025/2026 va '
-       '2024-yil. Reja: Anvarbek Xaydarov.',
+       '2024-yil. Reja: Anvarbek Khaydarov.',
        '<b>Источники:</b> варианты районного (городского) этапа, 11 класс — 2025/2026 '
        'и 2024 год. План: Анварбек Хайдаров.'),
 )
@@ -108,7 +109,7 @@ D(n=1, ph='alg',
          '$=\\tfrac{3-9+9}{\\sqrt2}\\cdot\\!$ — hammasi $\\sqrt2$ orqali, natija $1{,}5\\sqrt2$.',
          '<b>2024 №1.</b> $2\\sqrt{1{,}125}-5\\sqrt{1{,}62}+3\\sqrt{4{,}5}$. '
          'Переведя в дроби, всё выражается через $\\sqrt2$, и получается $1{,}5\\sqrt2$.'),
- mashq=['2024 №1', '2024 №21', '2024 №22', '2025/26 №13']),
+ mashq=['2024 №1', '2024 №21', '2024 №22', '2025/26-A №13']),
 
 D(n=2, ph='alg',
  mavzu=T('Logarifm: xossalar, tenglama va tengsizlik',
@@ -134,7 +135,7 @@ D(n=2, ph='alg',
          '<b>2024 №6.</b> $\\log_x\\tfrac{19}{8}<\\log_x\\tfrac{11}{5}$. '
          'Так как $\\tfrac{19}{8}=2{,}375>\\tfrac{11}{5}=2{,}2$, логарифм большего числа '
          'меньше — это возможно лишь при $0<x<1$. Ответ $(0;1)$.'),
- mashq=['2024 №6', '2024 №10', '2024 №11', '2025/26 №26']),
+ mashq=['2024 №6', '2024 №10', '2024 №11', '2025/26-A №26']),
 
 D(n=3, ph='alg',
  mavzu=T('Tengsizliklar: kasrli va irratsional', 'Неравенства: дробные и иррациональные'),
@@ -156,7 +157,7 @@ D(n=3, ph='alg',
          '<b>2024 №18.</b> $\\sqrt{28-x^2}+\\sqrt{-x}\\ge4$. ОДЗ: $-x\\ge0$ и '
          '$28-x^2\\ge0$, то есть $-\\sqrt{28}\\le x\\le0$ — целые $x$: $-5\\dots0$. '
          'Прямая подстановка каждого быстрее всего.'),
- mashq=['2024 №18', '2024 №3', '2025/26 №13', '2025/26 №10']),
+ mashq=['2024 №18', '2024 №3', '2025/26-A №13', '2025/26-A №10']),
 
 D(n=4, ph='alg',
  mavzu=T('Simmetrik sistemalar va ayniyatlar', 'Симметричные системы и тождества'),
@@ -176,7 +177,7 @@ D(n=4, ph='alg',
          '<b>2024 №22.</b> $a^2+a+11=6\\sqrt{a^2+a+2}$. '
          'Положив $t=\\sqrt{a^2+a+2}$, получаем $t^2+9=6t$, то есть $(t-3)^2=0$, $t=3$. '
          'Тогда $a^2+a-7=0$, значит $a-\\tfrac7a=\\tfrac{a^2-7}{a}=-1$.'),
- mashq=['2024 №22', '2024 №13', '2025/26 №1', '2025/26 №22']),
+ mashq=['2024 №22', '2024 №13', '2025/26-A №1', '2025/26-A №22']),
 
 D(n=5, ph='alg',
  mavzu=T('Butun qism va parametr', 'Целая часть и параметр'),
@@ -201,7 +202,7 @@ D(n=5, ph='alg',
          '<b>2024 №29.</b> $20[u]=24\\{u\\}$. При $[u]=n$ имеем $\\{u\\}=\\tfrac{5n}{6}$, '
          'и из $0\\le\\tfrac{5n}{6}<1$ находим допустимые $n$; для каждого '
          '$u=n+\\tfrac{5n}{6}=\\tfrac{11n}{6}$.'),
- mashq=['2024 №29', '2024 №28', '2025/26 №29', '2025/26 №17']),
+ mashq=['2024 №29', '2024 №28', '2025/26-A №29', '2025/26-A №17']),
 
 D(n=6, ph='alg',
  mavzu=T('Algebra — aralash mashq va xato tahlili',
@@ -214,7 +215,7 @@ D(n=6, ph='alg',
       T('Ogʻzaki: logarifm qiymatlari, $2$ va $3$ ning darajalari',
         'Устно: значения логарифмов, степени $2$ и $3$')],
  misol=T('', ''),
- mashq=['2024 №1, 3, 6, 10, 11, 13, 18, 21, 22', '2025/26 №1, 5, 13, 17, 22, 26, 29']),
+ mashq=['2024 №1, 3, 6, 10, 11, 13, 18, 21, 22', '2025/26-A №1, 5, 13, 17, 22, 26, 29']),
 
 D(n=7, ph='nt',
  mavzu=T('Qoldiqlar va katta darajalar', 'Остатки и большие степени'),
@@ -237,7 +238,7 @@ D(n=7, ph='nt',
          '<b>2024 №17.</b> В $9\\cdot99\\cdot999\\cdots$ начиная с четвёртого множителя '
          'каждый $\\equiv-1\\ (\\mathrm{mod}\\ 1000)$. Остаются только первые три '
          'и степень $(-1)$.'),
- mashq=['2024 №17', '2024 №20', '2025/26 №21', '2025/26 №30']),
+ mashq=['2024 №17', '2024 №20', '2025/26-A №21', '2025/26-A №30']),
 
 D(n=8, ph='nt',
  mavzu=T('Raqamli masalalar va tub sonlar', 'Задачи с цифрами и простые числа'),
@@ -261,7 +262,7 @@ D(n=8, ph='nt',
          '\\to3+13=16$ — davr $16,19,22,17,20,13$ (uzunligi $6$).',
          '<b>2024 №30.</b> $36\\to31\\to16\\to19\\to22\\to17\\to20\\to13\\to16$ — '
          'цикл $16,19,22,17,20,13$ длины $6$.'),
- mashq=['2024 №30', '2024 №26', '2024 №2', '2024 №9', '2025/26 №16', '2025/26 №15']),
+ mashq=['2024 №30', '2024 №26', '2024 №2', '2024 №9', '2025/26-A №16', '2025/26-A №15']),
 
 D(n=9, ph='nt',
  mavzu=T('Boʻluvchilar va sonlar nazariyasi — aralash',
@@ -276,7 +277,7 @@ D(n=9, ph='nt',
       T('Xato daftaridagi 7–8-kun xatolari qayta ishlanadi',
         'Прорабатываются ошибки дней 7–8')],
  misol=T('', ''),
- mashq=['2025/26 №3', '2025/26 №15', '2025/26 №16', '2024 №2', '2024 №9']),
+ mashq=['2025/26-A №3', '2025/26-A №15', '2025/26-A №16', '2024 №2', '2024 №9']),
 
 D(n=10, ph='geo',
  mavzu=T('Uchburchak: burchaklar va bissektrisa', 'Треугольник: углы и биссектриса'),
@@ -298,7 +299,7 @@ D(n=10, ph='geo',
          '<b>2024 №4.</b> $\\angle AKB=2\\angle ABK$ и $\\angle AKB=\\angle C+\\tfrac{B}{2}$, '
          '$\\angle ABK=\\tfrac{B}{2}$. Значит $\\angle C=\\tfrac{B}{2}$; '
          'из $A=180^\\circ-B-C$ находим $C-A$.'),
- mashq=['2024 №4', '2024 №8', '2024 №12', '2025/26 №25']),
+ mashq=['2024 №4', '2024 №8', '2024 №12', '2025/26-A №25']),
 
 D(n=11, ph='geo',
  mavzu=T('Aylana va ichki chizilgan toʻrtburchak', 'Окружность и вписанный четырёхугольник'),
@@ -320,7 +321,7 @@ D(n=11, ph='geo',
          '<b>2024 №25.</b> $R=16$, три стороны по $8$. Из $8=2\\cdot16\\sin\\tfrac{\\theta}{2}$ '
          'следует $\\sin\\tfrac{\\theta}{2}=\\tfrac14$ — каждая сторона стягивает одну дугу. '
          'Четвёртая дуга $=360^\\circ-3\\theta$, отсюда четвёртая сторона.'),
- mashq=['2024 №25', '2024 №12', '2024 №27', '2025/26 №27', '2025/26 №14']),
+ mashq=['2024 №25', '2024 №12', '2024 №27', '2025/26-A №27', '2025/26-A №14']),
 
 D(n=12, ph='geo',
  mavzu=T('Kvadrat, toʻgʻri toʻrtburchak va koordinata usuli',
@@ -337,13 +338,13 @@ D(n=12, ph='geo',
         'Теорема косинусов — даёт третью сторону по двум сторонам и углу'),
       T('Bissektrisa $45^\\circ$ ostida — $y=x$ toʻgʻri chizigʻi',
         'Биссектриса под $45^\\circ$ — это прямая $y=x$')],
- misol=T('<b>2025/26 №23.</b> $\\angle DCE=51^\\circ$, $\\angle CDE=78^\\circ$ dan '
+ misol=T('<b>2025/26-A №23.</b> $\\angle DCE=51^\\circ$, $\\angle CDE=78^\\circ$ dan '
          '$\\angle DEC=51^\\circ$, demak $DE=DC=AD$. $E$ kvadratdan tashqarida boʻlgani uchun '
          '$\\angle ADE=90^\\circ+78^\\circ=168^\\circ$, va $\\angle DAE=6^\\circ$.',
-         '<b>2025/26 №23.</b> Из $\\angle DCE=51^\\circ$, $\\angle CDE=78^\\circ$ следует '
+         '<b>2025/26-A №23.</b> Из $\\angle DCE=51^\\circ$, $\\angle CDE=78^\\circ$ следует '
          '$\\angle DEC=51^\\circ$, значит $DE=DC=AD$. Так как $E$ вне квадрата, '
          '$\\angle ADE=168^\\circ$, и $\\angle DAE=6^\\circ$.'),
- mashq=['2025/26 №23', '2025/26 №19', '2024 №15', '2024 №27']),
+ mashq=['2025/26-A №23', '2025/26-A №19', '2024 №15', '2024 №27']),
 
 D(n=13, ph='geo',
  mavzu=T('Vektorlar va yuzalar', 'Векторы и площади'),
@@ -367,7 +368,7 @@ D(n=13, ph='geo',
          '$\\vec{OA}+\\vec{OB}=\\vec{OC}$. Возведя в квадрат: '
          '$2R^2+2R^2\\cos\\angle AOB=R^2$, откуда $\\cos\\angle AOB=-\\tfrac12$, '
          'то есть $\\angle AOB=120^\\circ$.'),
- mashq=['2024 №19', '2024 №12', '2024 №27', '2025/26 №14']),
+ mashq=['2024 №19', '2024 №12', '2024 №27', '2025/26-A №14']),
 
 D(n=14, ph='trig',
  mavzu=T('Trigonometriya: keltirish va soddalashtirish',
@@ -395,7 +396,7 @@ D(n=14, ph='trig',
          '<b>2024 №5.</b> $\\cos130^\\circ=-\\sin40^\\circ$, $\\sin160^\\circ=\\sin20^\\circ$, '
          '$\\cos(-110^\\circ)=-\\sin20^\\circ$. Значит '
          '$2\\sin40^\\circ-2\\sin40^\\circ+\\sin20^\\circ+\\sin20^\\circ=2\\sin20^\\circ$.'),
- mashq=['2024 №5', '2024 №14', '2024 №8', '2025/26 №12']),
+ mashq=['2024 №5', '2024 №14', '2024 №8', '2025/26-A №12']),
 
 D(n=15, ph='trig',
  mavzu=T('Trigonometrik tenglamalar', 'Тригонометрические уравнения'),
@@ -411,13 +412,13 @@ D(n=15, ph='trig',
         'и сделайте замену $v=u+\\tfrac1u$'),
       T('Manfiy boʻlmagan ikki hadning yigʻindisi nol — <b>ikkalasi ham nol</b>',
         'Сумма двух неотрицательных равна нулю — <b>оба равны нулю</b>')],
- misol=T('<b>2025/26 №12.</b> $1-\\sin x+\\sqrt{3y-x}=0$: ikkala qoʻshiluvchi manfiy emas, '
+ misol=T('<b>2025/26-A №12.</b> $1-\\sin x+\\sqrt{3y-x}=0$: ikkala qoʻshiluvchi manfiy emas, '
          'demak $\\sin x=1$ va $3y=x$. $0\\le x\\le\\pi$ da $x=\\tfrac{\\pi}{2}$, '
          '$y=\\tfrac{\\pi}{6}$, va $\\tfrac{6(x-y)}{\\pi}=2$.',
-         '<b>2025/26 №12.</b> $1-\\sin x+\\sqrt{3y-x}=0$: оба слагаемых неотрицательны, '
+         '<b>2025/26-A №12.</b> $1-\\sin x+\\sqrt{3y-x}=0$: оба слагаемых неотрицательны, '
          'значит $\\sin x=1$ и $3y=x$. При $0\\le x\\le\\pi$: $x=\\tfrac{\\pi}{2}$, '
          '$y=\\tfrac{\\pi}{6}$, и $\\tfrac{6(x-y)}{\\pi}=2$.'),
- mashq=['2025/26 №12', '2024 №23', '2024 №8', '2024 №5']),
+ mashq=['2025/26-A №12', '2024 №23', '2024 №8', '2024 №5']),
 
 D(n=16, ph='comb',
  mavzu=T('Funksiyalar: juftlik, davriylik, almashtirish',
@@ -436,12 +437,12 @@ D(n=16, ph='comb',
          '$f(u)=1-(1-u)^2=2u-u^2$. Unda $f(-1)+f(0)+f(1)=(-3)+0+1=-2$.',
          '<b>2024 №16.</b> $f(1-x)=1-x^2$. Положив $u=1-x$, получим $x=1-u$ и '
          '$f(u)=1-(1-u)^2=2u-u^2$. Тогда $f(-1)+f(0)+f(1)=(-3)+0+1=-2$.'),
- mashq=['2024 №16', '2024 №7', '2025/26 №11', '2025/26 №5']),
+ mashq=['2024 №16', '2024 №7', '2025/26-A №11', '2025/26-A №5']),
 
 D(n=17, ph='comb',
  mavzu=T('Ketma-ketliklar va progressiyalar', 'Последовательности и прогрессии'),
  nega=T('Progressiya va rekurrent ketma-ketlik 2025/26 da $3$ ta savol berdi.',
-        'Прогрессии и рекуррентные последовательности дали $3$ задачи в 2025/26.'),
+        'Прогрессии и рекуррентные последовательности дали $3$ задачи в 2025/26-A.'),
  gap=[T('AP: $a_{m-k}+a_m+a_{m+k}=3a_m$ — uchta hadning yigʻindisi oʻrtadagisining uch barobari',
         'АП: $a_{m-k}+a_m+a_{m+k}=3a_m$ — сумма трёх членов равна утроенному среднему'),
       T('AP dan GP ga oʻtish: $(a+d)^2=a(a+2d+p)$ va oxirgi uchta had uchun ikkinchi tenglama',
@@ -454,13 +455,13 @@ D(n=17, ph='comb',
         'teleskoplanadi va faktorialga aylanadi',
         '$\\prod\\left(n-\\tfrac1n\\right)=\\prod\\tfrac{(n-1)(n+1)}{n}$ — '
         'телескопируется и сворачивается в факториал')],
- misol=T('<b>2025/26 №28.</b> $x_1=20$, $x_2=101$, $x_n=\\tfrac{x_{n-1}+1}{x_{n-2}}$. '
+ misol=T('<b>2025/26-A №28.</b> $x_1=20$, $x_2=101$, $x_n=\\tfrac{x_{n-1}+1}{x_{n-2}}$. '
          'Dastlabki hadlarni yozsak $x_6=x_1$ va $x_7=x_2$ — davr $5$. '
          '$2025=5\\cdot405$, demak $x_{2025}=x_5=\\tfrac{21}{101}$.',
-         '<b>2025/26 №28.</b> $x_1=20$, $x_2=101$, $x_n=\\tfrac{x_{n-1}+1}{x_{n-2}}$. '
+         '<b>2025/26-A №28.</b> $x_1=20$, $x_2=101$, $x_n=\\tfrac{x_{n-1}+1}{x_{n-2}}$. '
          'Выписав первые члены: $x_6=x_1$ и $x_7=x_2$ — период $5$. '
          '$2025=5\\cdot405$, значит $x_{2025}=x_5=\\tfrac{21}{101}$.'),
- mashq=['2025/26 №28', '2025/26 №6', '2025/26 №20', '2025/26 №26']),
+ mashq=['2025/26-A №28', '2025/26-A №6', '2025/26-A №20', '2025/26-A №26']),
 
 D(n=18, ph='comb',
  mavzu=T('Sanash va matn masalalari', 'Подсчёт и текстовые задачи'),
@@ -480,8 +481,8 @@ D(n=18, ph='comb',
          '<b>2024 №24.</b> Четырёхзначных чисел $9000$. Все цифры нечётные: первая $5$ '
          'вариантов, остальные три по $5$, итого $5^4=625$. '
          'Значит с хотя бы одной чётной цифрой $9000-625=8375$.'),
- mashq=['2024 №24', '2025/26 №8', '2025/26 №9', '2025/26 №18', '2025/26 №24',
-        '2025/26 №2', '2025/26 №7', '2025/26 №10']),
+ mashq=['2024 №24', '2025/26-A №8', '2025/26-A №9', '2025/26-A №18', '2025/26-A №24',
+        '2025/26-A №2', '2025/26-A №7', '2025/26-A №10']),
 
 D(n=19, ph='rev',
  mavzu=T('Sinov imtihoni №1 — 2024-yil varianti', 'Пробный экзамен №1 — вариант 2024 года'),

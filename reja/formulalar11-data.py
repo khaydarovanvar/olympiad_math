@@ -14,7 +14,7 @@ CHROME = dict(
  misol=T('Misol', 'Пример'), uchragan=T('Uchragan', 'Встречалась'),
  formula=T('ta formula va teorema', 'формул и теорем'),
  src=T('<b>Misollar manbasi:</b> 11-sinf tuman bosqichi variantlari — 2025/2026 va 2024. '
-       'Tuzuvchi: Anvarbek Xaydarov.',
+       'Tuzuvchi: Anvarbek Khaydarov.',
        '<b>Источник примеров:</b> варианты районного этапа, 11 класс — 2025/2026 и 2024. '
        'Составитель: Анварбек Хайдаров.'),
 )
@@ -98,7 +98,8 @@ I(nom=T('Koʻpaytma nolga teng', 'Произведение равно нулю')
   ref='2024 №11'),
 
 I(nom=T('Kasrli tengsizlik', 'Дробное неравенство'),
-  tex=r'\frac{A}{B}>c\ \Longrightarrow\ \text{ikki hol: }B>0\ \text{va}\ B<0',
+  tex=(r'\frac{A}{B}>c\ \Longrightarrow\ \text{ikki hol: }B>0\ \text{va}\ B<0',
+      r'\frac{A}{B}>c\ \Longrightarrow\ \text{два случая: }B>0\ \text{и}\ B<0'),
   nega=T('Maxrajni koʻpaytirmang — ishorani yoʻqotasiz. Ikki holni alohida yechib, '
          'javoblarni birlashtiring.',
          'Не умножайте на знаменатель — потеряете знак. Решайте два случая отдельно '
@@ -158,12 +159,13 @@ I(nom=T('Parametr: «yagona ildiz»', 'Параметр: «единственн�
   ref='2024 №28'),
 
 I(nom=T('Diskriminant va butun ildizlar', 'Дискриминант и целые корни'),
-  tex=r'D=b^2-4ac\ \text{---}\ \square\ \Longrightarrow\ \text{ildizlar ratsional}',
+  tex=(r'D=b^2-4ac\ \text{---}\ \square\ \Longrightarrow\ \text{ildizlar ratsional}',
+      r'D=b^2-4ac\ \text{---}\ \square\ \Longrightarrow\ \text{корни рациональны}'),
   nega=T('Ikki tenglama bir vaqtda butun ildizli boʻlsa, ularning diskriminantlari '
          'ayirmasi kichik son boʻladi — $m^2-n^2=k$ ni yeching.',
          'Если два уравнения одновременно имеют целые корни, разность их дискриминантов — '
          'малое число; решайте $m^2-n^2=k$.'),
-  ref='2025/26 №17'),
+  ref='2025/26-A №17'),
 
 I(nom=T('Teleskopik koʻpaytma', 'Телескопическое произведение'),
   tex=r'\prod_{n=2}^{N}\left(n-\frac1n\right)=\prod_{n=2}^{N}\frac{(n-1)(n+1)}{n}'
@@ -174,7 +176,7 @@ I(nom=T('Teleskopik koʻpaytma', 'Телескопическое произве�
          'которые сокращаются.'),
   misol=T('$N=60$ da natija $\\dfrac{61!}{120}=\\dfrac{61!}{5!}$, demak $a+b=66$.',
           'При $N=60$ результат $\\dfrac{61!}{120}=\\dfrac{61!}{5!}$, значит $a+b=66$.'),
-  ref='2025/26 №26'),
+  ref='2025/26-A №26'),
 
 I(nom=T('Koʻpaytuvchilarni qayta guruhlash', 'Перегруппировка множителей'),
   tex=r'(4-x)(2-x)(x+4)(x+2)=\left(16-x^2\right)\left(4-x^2\right)',
@@ -184,7 +186,7 @@ I(nom=T('Koʻpaytuvchilarni qayta guruhlash', 'Перегруппировка м
          'Затем заменой $t=x^2\\ge0$ находите вершину параболы.'),
   misol=T('$t^2-20t+64$ ning minimumi $t=10$ da $-36$.',
           'Минимум $t^2-20t+64$ при $t=10$ равен $-36$.'),
-  ref='2025/26 №22'),
+  ref='2025/26-A №22'),
 
 I(nom=T('Sonlarni tartiblash', 'Упорядочивание чисел'),
   tex=r'x<-1\ \Longrightarrow\ x^3<x<0<x^2',
@@ -192,7 +194,7 @@ I(nom=T('Sonlarni tartiblash', 'Упорядочивание чисел'),
          'oraliqni albatta tekshiring.',
          'Смотрите на знак $x^3-x=x(x-1)(x+1)$. При $-1<x<0$ порядок другой — '
          'обязательно проверяйте промежуток.'),
-  ref='2025/26 №5'),
+  ref='2025/26-A №5'),
 
 I(nom=T('Ratsional ifodani soddalashtirish', 'Упрощение рационального выражения'),
   tex=r'\frac{a+2b}{a-2b}=3\ \Longrightarrow\ a=4b\ \Longrightarrow\ \frac{a+3b}{a-3b}=7',
@@ -200,7 +202,7 @@ I(nom=T('Ratsional ifodani soddalashtirish', 'Упрощение рациона�
          'qolgan hamma narsa sonli boʻlib qoladi.',
          'Если дано одно отношение, выразите одну букву через другую — '
          'всё остальное станет числовым.'),
-  ref='2025/26 №1'),
+  ref='2025/26-A №1'),
 
 I(nom=T('Qoʻsh tengsizlikni teskarilash', 'Обращение двойного неравенства'),
   tex=r'\frac18<\frac{1}{\sqrt x}\le\frac13\ \Longrightarrow\ 3\le\sqrt x<8',
@@ -208,7 +210,7 @@ I(nom=T('Qoʻsh tengsizlikni teskarilash', 'Обращение двойного 
          'chegaralar oʻrin almashtiradi.',
          'Для положительных чисел при переходе к обратным величинам **знак меняется** '
          'и границы меняются местами.'),
-  ref='2025/26 №13'),
+  ref='2025/26-A №13'),
 ]),
 ]
 
@@ -276,7 +278,8 @@ I(nom=T('Kub va raqamlar yigʻindisi', 'Куб и сумма цифр'),
   ref='2024 №26'),
 
 I(nom=T('Raqamlar koʻpaytmasi bilan iteratsiya', 'Итерация с произведением цифр'), tur='lemma',
-  tex=r'n\mapsto P(n)+c\ \Longrightarrow\ \text{davriy}',
+  tex=(r'n\mapsto P(n)+c\ \Longrightarrow\ \text{davriy}',
+      r'n\mapsto P(n)+c\ \Longrightarrow\ \text{периодично}'),
   nega=T('Bunday jarayon albatta davrga tushadi, chunki qiymatlar chegaralangan. '
          'Dastlabki $6$–$8$ qadamni yozing, davrni toping va indeksni davrga boʻling.',
          'Такой процесс обязательно зацикливается, так как значения ограничены. '
@@ -293,7 +296,7 @@ I(nom=T('Boʻluvchilar soni', 'Количество делителей'), tur='t
          'Квадратные делители считаются ограничением всех $\\alpha_i$ чётными значениями.'),
   misol=T('$9800=2^3\\cdot5^2\\cdot7^2$: $2\\cdot2\\cdot2=8$ ta toʻla kvadrat boʻluvchi.',
           '$9800=2^3\\cdot5^2\\cdot7^2$: $2\\cdot2\\cdot2=8$ квадратных делителей.'),
-  ref='2025/26 №3'),
+  ref='2025/26-A №3'),
 
 I(nom=T('Kasr natural boʻlishi sharti', 'Условие натуральности дроби'),
   tex=r'\frac{6^a15^b}{9^b10^c}=2^{\,a-c}3^{\,a-b}5^{\,b-c}',
@@ -301,7 +304,7 @@ I(nom=T('Kasr natural boʻlishi sharti', 'Условие натуральнос�
          'tartiblash masalasi shu bilan yopiladi.',
          'Разложите по простым основаниям и потребуйте неотрицательности каждого показателя — '
          'задача на упорядочивание этим и закрывается.'),
-  ref='2025/26 №15'),
+  ref='2025/26-A №15'),
 
 I(nom=T('Maxsus tub sonlar', 'Особые простые числа'),
   tex=r'\overline{ab}\ \text{tub va}\ a\ \text{tub}',
@@ -311,15 +314,16 @@ I(nom=T('Maxsus tub sonlar', 'Особые простые числа'),
          'Для каждого перечислите двузначные простые.'),
   misol=T('$23,29,31,37,53,59,71,73,79$ — jami $9$ ta.',
           '$23,29,31,37,53,59,71,73,79$ — всего $9$.'),
-  ref='2025/26 №16'),
+  ref='2025/26-A №16'),
 
 I(nom=T('Barcha raqamlari juft sonlar', 'Числа со всеми чётными цифрами'), tur='lemma',
-  tex=r'\text{4 xonali}:\ 4\cdot5^3=500\ \text{ta}',
+  tex=(r'\text{4 xonali}:\ 4\cdot5^3=500\ \text{ta}',
+      r'\text{4-значных}:\ 4\cdot5^3=500'),
   nega=T('Ketma-ket sonlar orasidagi eng katta «boʻshliq» minglar xonasi oshganda '
          'paydo boʻladi: $\\overline{2888}$ dan $\\overline{4000}$ gacha $1111$ ta son.',
          'Наибольший «промежуток» между такими числами возникает при смене тысяч: '
          'от $\\overline{2888}$ до $\\overline{4000}$ — $1111$ чисел.'),
-  ref='2025/26 №30'),
+  ref='2025/26-A №30'),
 ]))
 
 SECTIONS.append(dict(key='geo', kod='C', ulush='18,3 %',
@@ -330,7 +334,8 @@ SECTIONS.append(dict(key='geo', kod='C', ulush='18,3 %',
  items=[
 
 I(nom=T('Uchburchak burchaklari va tashqi burchak', 'Углы треугольника и внешний угол'),
-  tex=r'\alpha+\beta+\gamma=180^\circ,\qquad \angle_{\text{tashqi}}=\alpha+\beta',
+  tex=(r'\alpha+\beta+\gamma=180^\circ,\qquad \angle_{\text{tashqi}}=\alpha+\beta',
+      r'\alpha+\beta+\gamma=180^\circ,\qquad \angle_{\text{внеш}}=\alpha+\beta'),
   nega=T('Bissektrisa bilan: $\\angle AKB$ — $\\triangle BKC$ ning tashqi burchagi, '
          'demak $\\angle AKB=\\angle C+\\tfrac{\\angle B}{2}$.',
          'С биссектрисой: $\\angle AKB$ — внешний угол $\\triangle BKC$, '
@@ -360,7 +365,8 @@ I(nom=T('Yuz formulalari', 'Формулы площади'),
          'Если даны угол и $R$, удобнее всего первые две.')),
 
 I(nom=T('Ichki chizilgan toʻrtburchak', 'Вписанный четырёхугольник'), tur='teorema',
-  tex=r'\alpha+\gamma=180^\circ,\qquad \text{vatar}=2R\sin\tfrac{\text{yoy}}{2}',
+  tex=(r'\alpha+\gamma=180^\circ,\qquad \text{vatar}=2R\sin\tfrac{\text{yoy}}{2}',
+      r'\alpha+\gamma=180^\circ,\qquad \text{хорда}=2R\sin\tfrac{\text{дуга}}{2}'),
   nega=T('Teng vatarlar teng yoylarga tayanadi. Yoylar yigʻindisi $360^\\circ$ — '
          'uchta tomon maʼlum boʻlsa, toʻrtinchi yoy shundan chiqadi.',
          'Равные хорды стягивают равные дуги. Сумма дуг $360^\\circ$ — если известны '
@@ -372,10 +378,11 @@ I(nom=T('Ichki chizilgan toʻrtburchak', 'Вписанный четырёхуг�
   ref='2024 №25'),
 
 I(nom=T('Ichki chizilgan burchak va Fales', 'Вписанный угол и Фалес'), tur='teorema',
-  tex=r'\angle ABC=\tfrac12\overset{\frown}{AC},\qquad \text{diametr}\Rightarrow90^\circ',
+  tex=(r'\angle ABC=\tfrac12\overset{\frown}{AC},\qquad \text{diametr}\Rightarrow90^\circ',
+      r'\angle ABC=\tfrac12\overset{\frown}{AC},\qquad \text{диаметр}\Rightarrow90^\circ'),
   nega=T('Diametrga tayangan burchak toʻgʻri — Pifagor bilan birga ishlatiladi.',
          'Угол, опирающийся на диаметр, прямой — работает вместе с Пифагором.'),
-  ref='2025/26 №27'),
+  ref='2025/26-A №27'),
 
 I(nom=T('Nuqtaning aylanaga nisbatan darajasi', 'Степень точки относительно окружности'),
   tur='teorema',
@@ -384,7 +391,7 @@ I(nom=T('Nuqtaning aylanaga nisbatan darajasi', 'Степень точки от�
          'koordinata usuli ham xuddi shunday tez ishlaydi.',
          'Для нахождения расстояния от точки на диаметре до хорды; '
          'координатный метод работает так же быстро.'),
-  ref='2025/26 №27'),
+  ref='2025/26-A №27'),
 
 I(nom=T('Vektorlar yigʻindisi', 'Сумма векторов'), tur='lemma',
   tex=r'\left|\vec u+\vec v\right|^2=|\vec u|^2+|\vec v|^2+2|\vec u||\vec v|\cos\varphi',
@@ -402,7 +409,7 @@ I(nom=T('Kvadrat va koordinata usuli', 'Квадрат и координатны
          'Bissektrisa $45^\\circ$ ostida — $y=x$.',
          'В задачах с квадратом ввод координат почти всегда самый быстрый путь. '
          'Биссектриса под $45^\\circ$ — прямая $y=x$.'),
-  ref='2025/26 №19'),
+  ref='2025/26-A №19'),
 
 I(nom=T('Teng yonli uchburchak hosil boʻlishi', 'Возникновение равнобедренного треугольника'),
   tur='lemma',
@@ -413,7 +420,7 @@ I(nom=T('Teng yonli uchburchak hosil boʻlishi', 'Возникновение р�
          'Вместе со стороной квадрата это даёт новый равнобедренный треугольник.'),
   misol=T('$DE=DC=AD$ va $\\angle ADE=168^\\circ$ dan $\\angle DAE=6^\\circ$.',
           'Из $DE=DC=AD$ и $\\angle ADE=168^\\circ$ следует $\\angle DAE=6^\\circ$.'),
-  ref='2025/26 №23'),
+  ref='2025/26-A №23'),
 
 I(nom=T('Aylanalar yuzalari nisbati', 'Отношение площадей кругов'),
   tex=r'\frac{S_1}{S_2}=\left(\frac{d_1}{d_2}\right)^2',
@@ -423,10 +430,11 @@ I(nom=T('Aylanalar yuzalari nisbati', 'Отношение площадей кр�
          'Закрашенную часть записывайте как разность.'),
   misol=T('$AB:BC=3:2$, $AC=5k$: boʻyalmagan $\\tfrac{9+4}{25}=52\\,\\%$.',
           '$AB:BC=3:2$, $AC=5k$: незакрашено $\\tfrac{9+4}{25}=52\\,\\%$.'),
-  ref='2025/26 №14'),
+  ref='2025/26-A №14'),
 
 I(nom=T('Segmentga ichki chizilgan kvadrat', 'Квадрат, вписанный в сегмент'),
-  tex=r'h=R-R\cos\tfrac{\alpha}{2},\qquad \text{yarim vatar}=R\sin\tfrac{\alpha}{2}',
+  tex=(r'h=R-R\cos\tfrac{\alpha}{2},\qquad \text{yarim vatar}=R\sin\tfrac{\alpha}{2}',
+      r'h=R-R\cos\tfrac{\alpha}{2},\qquad \text{полухорда}=R\sin\tfrac{\alpha}{2}'),
   nega=T('Markazdan kvadratning yuqori uchigacha masofani $R$ deb yozing va '
          'Pifagor bilan tomonni toping.',
          'Запишите расстояние от центра до верхней вершины квадрата как $R$ '
@@ -439,7 +447,7 @@ I(nom=T('Bissektrisa va nisbat', 'Биссектриса и отношение')
          'teng yonli toʻgʻri burchakli uchburchak hosil boʻladi.',
          'В прямоугольнике биссектриса угла $90^\\circ$ даёт $45^\\circ$ — '
          'возникает равнобедренный прямоугольный треугольник.'),
-  ref='2025/26 №19'),
+  ref='2025/26-A №19'),
 
 I(nom=T('Uchburchak tengsizligi', 'Неравенство треугольника'),
   tex=r'|b-c|<a<b+c',
@@ -528,7 +536,8 @@ I(nom=T('$\\tan t+\\sin t=1$ tipidagi tenglama', 'Уравнение вида $\
   ref='2024 №23'),
 
 I(nom=T('Manfiy boʻlmagan hadlar yigʻindisi', 'Сумма неотрицательных слагаемых'), tur='lemma',
-  tex=r'(1-\sin x)+\sqrt{3y-x}=0\ \Longrightarrow\ \text{ikkalasi ham}\ 0',
+  tex=(r'(1-\sin x)+\sqrt{3y-x}=0\ \Longrightarrow\ \text{ikkalasi ham}\ 0',
+      r'(1-\sin x)+\sqrt{3y-x}=0\ \Longrightarrow\ \text{оба равны}\ 0'),
   nega=T('$1-\\sin x\\ge0$ va ildiz $\\ge0$; yigʻindi nolga teng boʻlsa har biri nol. '
          'Bu tenglamani bir zumda yechadi.',
          '$1-\\sin x\\ge0$ и корень $\\ge0$; если сумма равна нулю, каждое равно нулю. '
@@ -537,7 +546,7 @@ I(nom=T('Manfiy boʻlmagan hadlar yigʻindisi', 'Сумма неотрицате
           '$y=\\tfrac{\\pi}{6}$, javob $2$.',
           '$\\sin x=1$ и $3y=x$; при $0\\le x\\le\\pi$: $x=\\tfrac{\\pi}{2}$, '
           '$y=\\tfrac{\\pi}{6}$, ответ $2$.'),
-  ref='2025/26 №12'),
+  ref='2025/26-A №12'),
 
 I(nom=T('Trigonometriya geometriyada', 'Тригонометрия в геометрии'),
   tex=r'S=\tfrac12ab\sin\gamma,\qquad a=2R\sin\alpha,\qquad c^2=a^2+b^2-2ab\cos\gamma',
@@ -555,7 +564,8 @@ SECTIONS.append(dict(key='comb', kod='E', ulush='10,0 %',
  items=[
 
 I(nom=T('Juft va toq funksiya', 'Чётная и нечётная функция'),
-  tex=r'\text{juft}:\ f(-x)=f(x)\ \Longrightarrow\ \text{toq darajalar koeffitsiyenti}=0',
+  tex=(r'\text{juft}:\ f(-x)=f(x)\ \Longrightarrow\ \text{toq darajalar koeffitsiyenti}=0',
+      r'\text{чёт}:\ f(-x)=f(x)\ \Longrightarrow\ \text{коэффиц. нечётных степеней}=0'),
   nega=T('$f(x)=2x^4+(a-11)x^3+1$ juft boʻlishi uchun $a-11=0$, yaʼni $a=11$. '
          'Shundan keyin $f(1)$ oson.',
          'Чтобы $f(x)=2x^4+(a-11)x^3+1$ была чётной, нужно $a-11=0$, то есть $a=11$. '
@@ -570,7 +580,7 @@ I(nom=T('Davriylik', 'Периодичность'), tur='lemma',
          'разности аргументов.'),
   misol=T('$f(4)=6$ va $10-4=6$ juft, demak $f(10)=6$.',
           '$f(4)=6$, а $10-4=6$ чётно, значит $f(10)=6$.'),
-  ref='2025/26 №11'),
+  ref='2025/26-A №11'),
 
 I(nom=T('Argumentni almashtirish', 'Замена аргумента'),
   tex=r'f(g(x))=h(x),\ u=g(x)\ \Longrightarrow\ f(u)=h\!\left(g^{-1}(u)\right)',
@@ -590,7 +600,7 @@ I(nom=T('Arifmetik progressiya', 'Арифметическая прогресс�
           'demak $d=1$.',
           '$a_5+a_8+a_{11}=12\\Rightarrow a_8=4$; $a_7+a_{10}+a_{13}=18\\Rightarrow a_{10}=6$, '
           'значит $d=1$.'),
-  ref='2025/26 №6'),
+  ref='2025/26-A №6'),
 
 I(nom=T('AP dan GP ga oʻtish', 'Переход от АП к ГП'),
   tex=r'a,\ a+d,\ a+2d+p,\ a+3d+q\ \text{--- GP}',
@@ -601,7 +611,7 @@ I(nom=T('AP dan GP ga oʻtish', 'Переход от АП к ГП'),
   misol=T('$d^2=3a$ va soddalashtirilgan ikkinchi tenglamadan $d=-9$, $a=27$; '
           'uchinchi had $9$.',
           'Из $d^2=3a$ и упрощённого второго уравнения $d=-9$, $a=27$; третий член $9$.'),
-  ref='2025/26 №20'),
+  ref='2025/26-A №20'),
 
 I(nom=T('Rekurrent ketma-ketlik davriyligi', 'Периодичность рекуррентной последовательности'),
   tur='lemma',
@@ -613,7 +623,7 @@ I(nom=T('Rekurrent ketma-ketlik davriyligi', 'Периодичность рек�
          'Затем делите индекс на $5$ и смотрите остаток.'),
   misol=T('$x_1=20$, $x_2=101$: $2025=5\\cdot405$, demak $x_{2025}=x_5=\\tfrac{21}{101}$.',
           '$x_1=20$, $x_2=101$: $2025=5\\cdot405$, значит $x_{2025}=x_5=\\tfrac{21}{101}$.'),
-  ref='2025/26 №28'),
+  ref='2025/26-A №28'),
 
 I(nom=T('Geometrik progressiya', 'Геометрическая прогрессия'),
   tex=r'b_n=b_1q^{\,n-1},\qquad b_n^2=b_{n-1}b_{n+1},\qquad |q|<1:\ S=\frac{b_1}{1-q}',
@@ -625,14 +635,14 @@ I(nom=T('Asosiy yigʻindilar', 'Основные суммы'),
   tex=r'\sum_{k=1}^{n}k=\frac{n(n+1)}{2},\qquad \sum_{k=1}^{n}(2k-1)=n^2',
   nega=T('Oxirgi raqam masalalarida uzun yigʻindini shu formulalar bilan qisqartiring.',
          'В задачах на последнюю цифру сворачивайте длинную сумму этими формулами.'),
-  ref='2025/26 №21'),
+  ref='2025/26-A №21'),
 
 I(nom=T('Teleskoplash', 'Телескопирование'),
   tex=r'\sum\bigl(f(k+1)-f(k)\bigr)=f(n+1)-f(1),\qquad '
       r'\prod\frac{(k-1)(k+1)}{k}',
   nega=T('Yigʻindi uchun ayirma, koʻpaytma uchun nisbat shaklini izlang.',
          'Для суммы ищите форму разности, для произведения — отношения.'),
-  ref='2025/26 №26'),
+  ref='2025/26-A №26'),
 
 I(nom=T('Funksiya qiymatlar sohasi', 'Область значений функции'),
   tex=r'y=\frac{k}{\sin x+c}\ \Longrightarrow\ \sin x\in[-1;1]',
@@ -650,7 +660,8 @@ SECTIONS.append(dict(key='comb', kod='F', ulush='15,0 %',
  items=[
 
 I(nom=T('Teskarisini sanash', 'Подсчёт дополнения'),
-  tex=r'N_{\text{kerakli}}=N_{\text{jami}}-N_{\text{teskari}}',
+  tex=(r'N_{\text{kerakli}}=N_{\text{jami}}-N_{\text{teskari}}',
+      r'N_{\text{нужных}}=N_{\text{всех}}-N_{\text{противоп.}}'),
   nega=T('«Kamida bitta» shartida «umuman yoʻq» ni sanash deyarli har doim tezroq.',
          'При условии «хотя бы один» считать «ни одного» почти всегда быстрее.'),
   misol=T('Toʻrt xonali sonlar $9000$ ta; barcha raqamlari toq boʻlganlari $5^4=625$, '
@@ -665,7 +676,7 @@ I(nom=T('Koʻpaytirish qoidasi', 'Правило произведения'),
          '«toʻsiqlar va sharlar»: $x_1+\\dots+x_k=n$ uchun $C_{n+k-1}^{\\,k-1}$.',
          'При подсчёте чисел с данной суммой цифр — «шары и перегородки»: '
          'для $x_1+\\dots+x_k=n$ это $C_{n+k-1}^{\\,k-1}$.'),
-  ref='2025/26 №8'),
+  ref='2025/26-A №8'),
 
 I(nom=T('Dirixle prinsipi', 'Принцип Дирихле'), tur='teorema',
   tex=T(r'\text{«kafolatlash»}\ \Longrightarrow\ \text{eng yomon hol}+1',
@@ -676,17 +687,18 @@ I(nom=T('Dirixle prinsipi', 'Принцип Дирихле'), tur='teorema',
          'цветов и прибавьте $1$.'),
   misol=T('$10+6+5$: eng yomoni $16$, demak $17$ ta shar kerak.',
           '$10+6+5$: худший случай $16$, значит нужно $17$ шаров.'),
-  ref='2025/26 №18'),
+  ref='2025/26-A №18'),
 
 I(nom=T('Qoʻshish-ayirish prinsipi', 'Принцип включений-исключений'), tur='teorema',
-  tex=r'2x+3y=\textstyle\sum\text{tanlovlar},\qquad x+y=N',
+  tex=(r'2x+3y=\textstyle\sum\text{tanlovlar},\qquad x+y=N',
+      r'2x+3y=\textstyle\sum\text{выборов},\qquad x+y=N'),
   nega=T('«Har bir oʻquvchi kamida ikkita» shartida tanlovlar sonini **ikki xil** sanang — '
          'sistema chiqadi.',
          'В условии «каждый выбрал не меньше двух» посчитайте выборы **двумя способами** — '
          'получится система.'),
   misol=T('$14+15+16=45$ va $x+y=20$ dan $y=5$.',
           'Из $14+15+16=45$ и $x+y=20$ следует $y=5$.'),
-  ref='2025/26 №24'),
+  ref='2025/26-A №24'),
 
 I(nom=T('Monoton jarayon', 'Монотонный процесс'), tur='lemma',
   tex=T(r'\text{hisob faqat ortadi}\ \Longrightarrow\ 0\le a\le A,\ 0\le b\le B',
@@ -697,7 +709,7 @@ I(nom=T('Monoton jarayon', 'Монотонный процесс'), tur='lemma',
          'не превосходит итогового — число вариантов даётся произведением.'),
   misol=T('$3{:}2$ uchun $4\\cdot3=12$ ta mumkin boʻlgan birinchi boʻlim hisobi.',
           'Для $3{:}2$ получается $4\\cdot3=12$ возможных счетов первого тайма.'),
-  ref='2025/26 №9'),
+  ref='2025/26-A №9'),
 
 I(nom=T('Ball tizimi va tengsizlik', 'Система баллов и неравенство'),
   tex=r'B=3c-(n-c)=4c-n',
@@ -707,21 +719,22 @@ I(nom=T('Ball tizimi va tengsizlik', 'Система баллов и нерав�
          'неравенство и возьмите целую часть.'),
   misol=T('$4c-15<17\\Rightarrow c<8$, demak eng koʻpi bilan $7$ ta.',
           '$4c-15<17\\Rightarrow c<8$, значит не более $7$.'),
-  ref='2025/26 №10'),
+  ref='2025/26-A №10'),
 
 I(nom=T('Hafta kunlari — $\\mathrm{mod}\\ 7$', 'Дни недели — $\\mathrm{mod}\\ 7$'),
-  tex=r'\text{haftalik norma}=25+6\cdot4=49',
+  tex=(r'\text{haftalik norma}=25+6\cdot4=49',
+      r'\text{недельная норма}=25+6\cdot4=49'),
   nega=T('Avval haftalik meʼyorni hisoblab toʻliq haftalar sonini toping, '
          'soʻng qolganini kun-ba-kun sanang.',
          'Сначала вычислите недельную норму и число полных недель, '
          'затем остаток считайте по дням.'),
-  ref='2025/26 №7'),
+  ref='2025/26-A №7'),
 
 I(nom=T('Chiziqli sistemalar', 'Линейные системы'),
   tex=r'\begin{cases}q+4k=10\\ q+6k=13\end{cases}\ \Longrightarrow\ 2k=3',
   nega=T('Savol faqat ayirma yoki yigʻindini soʻrasa, tenglamalarni **ayirish** kifoya.',
          'Если спрашивают только разность или сумму, достаточно **вычесть** уравнения.'),
-  ref='2025/26 №2'),
+  ref='2025/26-A №2'),
 
 I(nom=T('Ortiqcha va yetishmovchilik', 'Избыток и недостаток'),
   tex=r'A=n+7,\qquad 2n=A+16',
@@ -729,7 +742,7 @@ I(nom=T('Ortiqcha va yetishmovchilik', 'Избыток и недостаток')
          'bitta nomaʼlum yoʻqoladi.',
          '«По одному — остаётся, по два — не хватает» — два уравнения, одна неизвестная '
          'исключается.'),
-  ref='2025/26 №4'),
+  ref='2025/26-A №4'),
 ]))
 
 _N = sum(len(x['items']) for x in SECTIONS)

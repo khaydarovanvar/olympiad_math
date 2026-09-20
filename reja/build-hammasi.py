@@ -96,7 +96,7 @@ SHELL_CSS = r"""
 @media (max-width:420px){ .picker{gap:11px} .tabs button{padding:6px 11px;font-size:12.5px} }
 """
 
-NAME_UZ = 'Anvarbek Xaydarov'
+NAME_UZ = 'Anvarbek Khaydarov'
 NAME_RU = 'Анварбек Хайдаров'
 def letters(name):
     out, i = [], 0
@@ -121,7 +121,7 @@ BODY = f'''<div id="pre" aria-hidden="true"><div class="pre-in">
 <div class="shell">
 <header class="brand">
   <div class="brandtop">
-    <p class="who">{L("Anvarbek Xaydarov · matematika", "Анварбек Хайдаров · математика")}</p>
+    <p class="who">{L("Anvarbek Khaydarov · matematika", "Анварбек Хайдаров · математика")}</p>
     <div class="lang" role="group" aria-label="Til · Язык">
       <button id="btn-uz" type="button" aria-pressed="true">OʻZB</button>
       <button id="btn-ru" type="button" aria-pressed="false">РУС</button>
@@ -152,7 +152,7 @@ BODY = f'''<div id="pre" aria-hidden="true"><div class="pre-in">
 {''.join(docs)}
 
 <p class="foot">{L(
-  "Tuzuvchi: Anvarbek Xaydarov · manba: tuman (shahar) bosqichi variantlari, "
+  "Tuzuvchi: Anvarbek Khaydarov · manba: tuman (shahar) bosqichi variantlari, "
   "2024 – 2025/2026",
   "Составитель: Анварбек Хайдаров · источник: варианты районного (городского) этапа, "
   "2024 – 2025/2026")}</p>'''
@@ -204,7 +204,7 @@ JS = r'''<script>
     for(;i<end;i++){
       var e=nodes[i];
       try{katex.render(e.textContent,e,{throwOnError:false,
-        displayMode:e.classList.contains("kd")});}catch(x){}
+        displayMode:e.classList.contains("kd")||e.classList.contains("kdisp")});}catch(x){}
     }
     if(i<nodes.length) requestAnimationFrame(chunk);
     else dismiss();

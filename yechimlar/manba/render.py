@@ -115,7 +115,7 @@ def build(mod, out_html):
       '<div class="meta">%s</div><hr class="rule">'
       '<div class="key"><h3>Javoblar · Ответы</h3><table>%s</table></div>'
       '%s'
-      '<div class="foot">Yechimlar: Anvarbek Xaydarov · Решения: Анварбек Хайдаров</div>'
+      '<div class="foot">Yechimlar: Anvarbek Khaydarov · Решения: Анварбек Хайдаров</div>'
       '<script src="katex/katex.min.js"></script><script>'
       'document.querySelectorAll(".tex").forEach(function(e){'
       ' try{katex.render(e.textContent,e,{throwOnError:true,'

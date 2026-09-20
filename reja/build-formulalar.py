@@ -8,18 +8,42 @@ OUT = sys.argv[2] if len(sys.argv) > 2 else 'ref9'
 spec = importlib.util.spec_from_file_location('data', HERE / DATA)
 D = importlib.util.module_from_spec(spec); spec.loader.exec_module(D)
 
+DISP = re.compile(r'\$\$(.+?)\$\$', re.S)
 MATH = re.compile(r'\$(.+?)\$', re.S)
 
 def rich(t):
-    """inline math + **bold**, everything else escaped"""
+    """display math, inline math and **bold**; everything else escaped"""
     slots = []
-    t = MATH.sub(lambda m: slots.append(m.group(1)) or '\x00%d\x00' % (len(slots) - 1), t)
+    def stash(tex, cls):
+        slots.append((tex, cls))
+        return '\x00%d\x00' % (len(slots) - 1)
+    # $$...$$ first, so the inline pass cannot split it down the middle
+    t = DISP.sub(lambda m: stash(m.group(1), 'k kdisp'), t)
+    t = MATH.sub(lambda m: stash(m.group(1), 'k'), t)
     t = html.escape(t)
     t = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', t, flags=re.S)
-    return re.sub(r'\x00(\d+)\x00',
-                  lambda m: '<span class="k">%s</span>' % html.escape(slots[int(m.group(1))]), t)
+    def put(m):
+        tex, cls = slots[int(m.group(1))]
+        return '<span class="%s">%s</span>' % (cls, html.escape(tex))
+    return re.sub(r'\x00(\d+)\x00', put, t)
 
 C = D.CHROME
+
+# the grade this reference belongs to; a citation without a "(N-sinf)" suffix
+# means that grade's own paper
+SINF = int(re.search(r'(\d+)', DATA).group(1))
+
+_sp = importlib.util.spec_from_file_location('savollar', HERE / 'savollar-data.py')
+SAV = importlib.util.module_from_spec(_sp); _sp.loader.exec_module(SAV)
+_REF = re.compile(r'^(.*?) \u2116(\d+)(?: \((\d+)-sinf\))?$')
+
+def savol(ref):
+    """the cited problem, as it is printed on the paper"""
+    mo = _REF.match(ref or '')
+    if not mo:
+        return None
+    paper, n, other = mo.group(1), int(mo.group(2)), mo.group(3)
+    return SAV.q.get((paper, int(other) if other else SINF, n))
 
 def L(pair, tag='span'):
     uz, ru = pair
@@ -42,15 +66,18 @@ def item(sec, i, it):
     mis = ''
     if it.get('misol'):
         ref = ('<span class="ref">%s</span>' % html.escape(it['ref'])) if it.get('ref') else ''
-        mis = ('<div class="misol"><span class="lab">%s %s</span>%s</div>'
-               % (L(C['misol']), ref, LR(it['misol'])))
+        sav = savol(it.get('ref'))
+        ask = ('<div class="savol">%s</div><span class="lab ylab">%s</span>'
+               % (LR(sav), L(C.get('yechim', ('Yechim', 'Решение'))))) if sav else ''
+        mis = ('<div class="misol"><span class="lab">%s %s</span>%s%s</div>'
+               % (L(C['misol']), ref, ask, LR(it['misol'])))
     elif it.get('ref'):
         mis = ('<div class="misol"><span class="lab">%s '
                '<span class="ref">%s</span></span></div>'
                % (L(C['uchragan']), html.escape(it['ref'])))
     return ('<article class="it" id="%s"><div class="ih"><span class="kod">%s</span>'
             '<h3>%s</h3>%s</div>%s%s%s</article>'
-            % (kod, kod, L(it['nom']), badge, texes, nega, mis))
+            % (kod, kod, LR(it['nom']), badge, texes, nega, mis))
 
 secs, nav = [], []
 for s in D.SECTIONS:
@@ -149,6 +176,11 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--
   color:var(--muted)}
 .misol .lab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;
   text-transform:uppercase;display:block;margin-bottom:4px}
+.savol{background:var(--hue-bg);border-left:2px solid var(--hue);padding:9px 11px;
+  margin:0 0 9px;color:var(--ink);overflow-x:auto}
+.kdisp{display:block;margin:7px 0;overflow-x:auto;overflow-y:hidden}
+.kdisp .katex-display{margin:0}
+.misol .ylab{margin-top:9px;color:var(--hue)}
 .ref{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:0;
   background:var(--hue-bg);color:var(--hue);border-radius:2px;padding:1px 5px;
   text-transform:none;margin-left:3px}
@@ -189,7 +221,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 RENDER = ('<script>document.querySelectorAll(".kd,.k").forEach(function(e){'
  'try{katex.render(e.textContent,e,{throwOnError:false,'
- 'displayMode:e.classList.contains("kd")});}catch(x){}});'
+ 'displayMode:e.classList.contains("kd")||e.classList.contains("kdisp")});}catch(x){}});'
  '(function(){var r=document.documentElement,'
  'u=document.getElementById("btn-uz"),v=document.getElementById("btn-ru");'
  'function set(l,save){r.setAttribute("data-l",l);'
