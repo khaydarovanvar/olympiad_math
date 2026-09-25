@@ -177,7 +177,8 @@ def hub():
       ('yuklab/Geometriya-9-10-11-UZ-RU.pdf',
        ('Geometriya', 'Геометрия'), ('56 bet · UZ+RU', '56 страниц · UZ+RU')),
     ]
-    dls = ''.join('<li><a href="%s" download><span class="fn">%s</span>'
+    dls = ''.join('<li><a href="%s" target="_blank" rel="noopener">'
+                  '<span class="fn">%s</span>'
                   '<span class="fm">%s</span></a></li>' % (h, L(n), L(m))
                   for h, n, m in dl)
 
@@ -252,7 +253,7 @@ def savollar():
     return ('<header class="hero small"><p class="eyebrow">%s</p><h1>%s</h1>'
             '<p class="sub">%s</p>'
             '<p class="note"><a href="yuklab/Otgan-yillar-savollari-9-10-11.pdf" '
-            'download>%s</a> — %s</p></header>'
+            'target="_blank" rel="noopener">%s</a> — %s</p></header>'
             '<div class="filters"><div class="frow"><span class="fl">%s</span>'
             '<div class="fbtns" data-group="sinf">%s</div></div>'
             '<div class="frow"><span class="fl">%s</span>'
