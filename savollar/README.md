@@ -30,7 +30,39 @@ ikkalasining muqovasida ham 2025–2026-oʻquv yili yozilgan. A da 20 ta yopiq v
 uchun **30-savol tushib qolgan**. Qolgan yettita variant toʻliq.
 **11-sinf uchun B varianti umuman yoʻq.**
 
+## Mavzular xaritasi
+
+Sakkizta variantning **hamma savoli** (239 ta) oʻqib chiqilib mavzuga
+ajratildi: **Mavzular-xaritasi-9-10-11.html** (tilni almashtirgich bilan) va
+**Mavzular-xaritasi-9-10-11-UZ-RU.pdf** (31 bet, avval oʻzbekcha, keyin
+ruscha).
+
+| Mavzu | Savol | Ulush |
+|---|---|---|
+| Algebra va ayniyatlar | 67 | 28,0 % |
+| Sonlar nazariyasi | 56 | 23,4 % |
+| Geometriya | 44 | 18,4 % |
+| Kombinatorika va ehtimollik | 23 | 9,6 % |
+| Ketma-ketliklar | 16 | 6,7 % |
+| Funksiyalar | 14 | 5,9 % |
+| Trigonometriya | 10 | 4,2 % |
+| Matn masalalari | 9 | 3,8 % |
+
+Hujjatda: umumiy manzara (mavzu × sinf jadvali), eng koʻp takrorlangan 12 ta
+kichik mavzu, 42 ta kichik mavzu — har birida qaysi variantning qaysi savoli
+ekani va qanday yechilishi haqida bir qator maslahat, soʻngra sakkizta
+variantning savolma-savol xaritasi.
+
+**Sanoq qoidasi:** savol qaysi koʻnikma bilan yechilsa, oʻsha mavzuga
+kiritilgan. Shuning uchun `[x]`, `{x}` bilan tenglamalar — sonlar nazariyasida,
+“nechta toʻrt xonali sonda …” turidagi savollar — kombinatorikada.
+
+```
+python3 build-mavzular.py mavzular-data.py Mavzular-xaritasi-9-10-11
+```
+
 ## Qayta yigʻish · Пересборка
+
 
 ```
 python3 build.py
