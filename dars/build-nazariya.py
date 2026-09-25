@@ -104,6 +104,8 @@ def item(it):
     tur = '<span class="tur t-%s">%s</span>' % (it['tur'], L(D.TUR[it['tur']]))
     out = ['<article class="it"><div class="ih">%s<h4>%s</h4></div>' % (tur, L(it['nom']))]
     out.append('<div class="bayon">%s</div>' % L(it['bayon']))
+    if it.get('rasm'):
+        out.append('<div class="rasm">%s</div>' % it['rasm'])
     if it['isbot']:
         out.append('<div class="isbot"><span class="lab">%s</span>%s</div>'
                    % (L(('Isbot', 'Доказательство')), L(it['isbot'])))
@@ -156,9 +158,11 @@ def problems():
         for n, p, bb in NUM:
             if bb is not band:
                 continue
-            rows += ('<li id="m-%d"><div class="q">%s</div>'
+            rows += ('<li id="m-%d"><div class="q">%s</div>%s'
                      '<div class="meta">%s<a class="goto" href="#y-%d">%s</a></div></li>'
-                     % (n, L(p['savol']), tags(p), n,
+                     % (n, L(p['savol']),
+                        ('<div class="rasm">%s</div>' % p['rasm']) if p.get('rasm') else '',
+                        tags(p), n,
                         L(('yechim ↓', 'решение ↓'))))
         out.append('<section class="daraja" id="d-%s" '
                    'style="--hue:var(--%s);--hue-bg:var(--%s-bg)">'
@@ -180,12 +184,14 @@ def solutions():
                    'style="--hue:var(--%s);--hue-bg:var(--%s-bg)">'
                    '<div class="sh"><span class="num">%d</span>'
                    '<span class="lvl">%s</span>%s</div>'
-                   '<div class="qq">%s</div>'
+                   '<div class="qq">%s</div>%s'
                    '<div class="ans"><span class="lab">%s</span>%s</div>'
                    '<div class="body">%s</div>'
                    '<a class="back" href="#m-%d">%s</a></article>'
                    % (n, band['hue'], band['hue'], n, L(band['nom']), tags(p),
-                      L(p['savol']), L(('Javob', 'Ответ')), L(p['javob']),
+                      L(p['savol']),
+                      ('<div class="rasm">%s</div>' % p['rasm']) if p.get('rasm') else '',
+                      L(('Javob', 'Ответ')), L(p['javob']),
                       L(p['yechim']), n, L(('↑ masalaga', '↑ к задаче'))))
     out.append('</section>')
     return ''.join(out)
@@ -292,6 +298,10 @@ ol.tl .ct{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;
 .lab{display:block;font-family:"IBM Plex Mono",monospace;font-size:8.5px;
   letter-spacing:.13em;text-transform:uppercase;margin-bottom:3px;color:var(--hue)}
 .isbot .lab{color:var(--muted)}
+
+.rasm{margin:9px 0;text-align:center;break-inside:avoid}
+.rasm svg{max-width:100%;height:auto}
+.qq+.rasm,.body .rasm{margin-left:35px;text-align:left}
 
 /* problems */
 .daraja{margin-top:20px}

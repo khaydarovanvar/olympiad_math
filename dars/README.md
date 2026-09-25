@@ -43,11 +43,34 @@ Masalalarning 11 tasi haqiqiy variantlardan (manbasi yozib qoʻyilgan), qolgani
 shu maʼlumotnoma uchun yozilgan. Hamma javob yozilishidan oldin kompyuterda
 (sympy) tekshirilgan.
 
+## Maʼlumotnoma · Geometriya (9–11-sinf)
+
+Sakkizta variantda geometriya savollarning **18,4 %** ini beradi (44 ta savol).
+Shu maʼlumotnomada ularning hammasi uchun kerak boʻladigan nazariya bor: yetti
+boʻlim, 41 ta band — oʻn ikkitasi isbot bilan, har biri ishlangan misol bilan,
+muhimlari chizma bilan. Soʻngra toʻrt darajadagi 32 ta masala va batafsil
+yechim; 21 tasi haqiqiy variantlardan olingan.
+
+| Fayl | Nima |
+|---|---|
+| `Geometriya-9-10-11.html` | bitta sahifa, tilni almashtirgich bilan |
+| `Geometriya-9-10-11-UZ-RU.pdf` | 56 bet: avval oʻzbekcha, keyin ruscha |
+
+Boʻlimlar: **A** burchaklar va uchburchak · **B** bissektrisa, mediana,
+balandlik · **C** toʻgʻri burchakli uchburchak · **D** aylana · **E** yuz va
+oʻxshashlik · **F** toʻrtburchak va trapetsiya · **G** sinuslar va kosinuslar
+teoremasi, koordinata.
+
+Chizmalar — ichki SVG, hech qanday tashqi fayl yoʻq. Hamma javob yozilishidan
+oldin kompyuterda (sympy) tekshirilgan.
+
 ## Qayta yigʻish
+
 
 ```
 python3 build-dars.py dars01-data.py Birlashgan-dars-9-10-11
 python3 build-nazariya.py nazariya-data.py Sonlar-nazariyasi-9-10-11
+python3 build-nazariya.py geometriya-data.py Geometriya-9-10-11
 ```
 
 `reja/katex-inline.css` va `reja/topdf.js` dan foydalanadi.
