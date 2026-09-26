@@ -1495,50 +1495,43 @@ DARAJALAR += [
     'F', '10-sinf · 2024 №25'),
 
   P(T('$A$, $B$, $C$ nuqtalar bir toʻgʻri chiziqda yotadi va $AB:BC=3:2$. '
-      '$AB$, $BC$ va $AC$ kesmalar diametr boʻlgan uchta aylana chizilgan. '
-      '$AB$ ustidagi yarim aylana va $BC$ ostidagi yarim aylana katta '
-      'doirani ikkita qismga ajratadi; rasmda ulardan biri boʻyalgan. '
-      'Boʻyalmagan qism katta doiraning necha foizini tashkil qiladi?',
-      'Точки $A$, $B$, $C$ лежат на одной прямой и $AB:BC=3:2$. Построены '
-      'три окружности с диаметрами $AB$, $BC$ и $AC$. Полуокружность над '
-      '$AB$ и полуокружность под $BC$ делят большой круг на две части; '
-      'одна из них закрашена на рисунке. Сколько процентов большого круга '
-      'составляет незакрашенная часть?'),
-    T('$60\\,\\%$', '$60\\,\\%$'),
+      '$AB$, $BC$ va $AC$ kesmalar diametr boʻlgan uchta aylana chizilgan '
+      '(kichik ikkitasi kattasining ichida). Rasmda kichik ikkita doira '
+      'boʻyalmagan, qolgan qism boʻyalgan. Boʻyalmagan qism katta doiraning '
+      'necha foizini tashkil qiladi?',
+      'Точки $A$, $B$, $C$ лежат на одной прямой и $AB:BC=3:2$. Построены три '
+      'окружности с диаметрами $AB$, $BC$ и $AC$ (две меньшие лежат внутри '
+      'большей). На рисунке два меньших круга не закрашены, остальная часть '
+      'закрашена. Сколько процентов большого круга составляет незакрашенная '
+      'часть?'),
+    T('$52\\,\\%$', '$52\\,\\%$'),
     T('$AB=3k$, $BC=2k$ deb olamiz, demak $AC=5k$ va radiuslar '
       '$R=2{,}5k$, $r_1=1{,}5k$, $r_2=k$.<br>'
       'Katta doira yuzi $\\pi R^2=6{,}25\\pi k^2$.<br>'
-      '<b>Boʻyalgan qism</b> = katta yarim doira $-$ $AB$ ustidagi yarim '
-      'doira $+$ $BC$ ostidagi yarim doira:<br>'
-      '$\\dfrac{6{,}25\\pi k^2}{2}-\\dfrac{2{,}25\\pi k^2}{2}+'
-      '\\dfrac{\\pi k^2}{2}=\\big(3{,}125-1{,}125+0{,}5\\big)\\pi k^2='
-      '2{,}5\\pi k^2$.<br>'
-      'Bu katta doiraning $\\dfrac{2{,}5}{6{,}25}=40\\,\\%$ i.<br>'
-      'Demak boʻyalmagan qism $100\\,\\%-40\\,\\%=60\\,\\%$.<br>'
-      '<i>Diqqat:</i> javob $k$ ga bogʻliq emas — faqat $3:2$ nisbat '
-      'muhim.',
+      '<b>Boʻyalmagan qism</b> — ikkita kichik doira: '
+      '$\\pi r_1^2+\\pi r_2^2=2{,}25\\pi k^2+\\pi k^2=3{,}25\\pi k^2$.<br>'
+      'Ulush: $\\dfrac{3{,}25}{6{,}25}=0{,}52$, yaʼni $52\\,\\%$ '
+      '(boʻyalgan qism esa $48\\,\\%$).<br>'
+      '<i>Diqqat:</i> javob $k$ ga bogʻliq emas — faqat $3:2$ nisbat muhim. '
+      'Umumiy holda ulush $\\dfrac{p^2+q^2}{(p+q)^2}$ ga teng, bu yerda '
+      '$p:q$ — berilgan nisbat.',
       'Пусть $AB=3k$, $BC=2k$, тогда $AC=5k$ и радиусы равны $R=2{,}5k$, '
       '$r_1=1{,}5k$, $r_2=k$.<br>'
       'Площадь большого круга $\\pi R^2=6{,}25\\pi k^2$.<br>'
-      '<b>Закрашенная часть</b> = большой полукруг $-$ полукруг над $AB$ $+$ '
-      'полукруг под $BC$:<br>'
-      '$\\dfrac{6{,}25\\pi k^2}{2}-\\dfrac{2{,}25\\pi k^2}{2}+'
-      '\\dfrac{\\pi k^2}{2}=2{,}5\\pi k^2$.<br>'
-      'Это $\\dfrac{2{,}5}{6{,}25}=40\\,\\%$ большого круга.<br>'
-      'Значит незакрашенная часть составляет '
-      '$100\\,\\%-40\\,\\%=60\\,\\%$.<br>'
+      '<b>Незакрашенная часть</b> — два меньших круга: '
+      '$\\pi r_1^2+\\pi r_2^2=2{,}25\\pi k^2+\\pi k^2=3{,}25\\pi k^2$.<br>'
+      'Доля: $\\dfrac{3{,}25}{6{,}25}=0{,}52$, то есть $52\\,\\%$ '
+      '(закрашенная часть — $48\\,\\%$).<br>'
       '<i>Замечание:</i> ответ не зависит от $k$ — важно только отношение '
-      '$3:2$.'),
+      '$3:2$. В общем случае доля равна $\\dfrac{p^2+q^2}{(p+q)^2}$, где '
+      '$p:q$ — данное отношение.'),
     'D', '11-sinf · 2025/26-A №14',
     FIG('0 0 250 130',
-        '<path d="M 20 65 A 100 100 0 0 1 220 65 A 40 40 0 0 1 140 65 '
-        'A 60 60 0 0 0 20 65 Z" fill="#f1e3dd" stroke="none"/>'
-        + '<circle cx="120" cy="65" r="100"/>'
-        + '<path d="M 20 65 A 60 60 0 0 1 140 65" stroke="%s"/>' % ACC
-        + '<path d="M 140 65 A 40 40 0 0 1 220 65" stroke="%s"/>' % ACC
-        + '<line x1="20" y1="65" x2="220" y2="65" stroke="%s" '
-          'stroke-dasharray="4 3"/>' % SOFT
-        + txt(10, 80, 'A') + txt(136, 80, 'B') + txt(224, 80, 'C'), 250)),
+        '<circle cx="120" cy="65" r="100" fill="#e2dad6" stroke="%s"/>' % INK
+        + '<circle cx="80" cy="65" r="60" fill="#ffffff" stroke="%s"/>' % ACC
+        + '<circle cx="180" cy="65" r="40" fill="#ffffff" stroke="%s"/>' % ACC
+        + '<line x1="20" y1="65" x2="220" y2="65" stroke="%s"/>' % INK
+        + txt(8, 80, 'A') + txt(136, 80, 'B') + txt(224, 80, 'C'), 250)),
 
   P(T('Uzunligi $16$ ga teng $AC$ diametrda $P$ nuqta olingan, bunda '
       '$PC=3$. Aylanadagi $B$ nuqta uchun $AB=12$ boʻlsa, $BP$ kesmaning '

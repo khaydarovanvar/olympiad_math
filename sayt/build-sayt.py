@@ -237,6 +237,10 @@ def savollar():
             t, b = SUB[q['sub']]
             full = savol_matni(q)
             body = ('<div class="qfull">%s</div>' % L(full)) if full else ''
+            pic = getattr(SAV, 'rasm', {}).get((q['paper'], q['sinf'], q['n']))
+            if pic:
+                body += ('<div class="qrasm"><img src="assets/rasm/%s" alt="%s" '
+                         'loading="lazy"></div>' % (pic, 'chizma'))
             cards += ('<li class="qcard" data-sinf="%d" data-mavzu="%s" '
                       'style="--hue:var(--%s);--hue-bg:var(--%s-bg)">'
                       '<div class="qh"><span class="qn">%d</span>'
@@ -408,6 +412,8 @@ ul.qlist{list-style:none;padding:0;margin:0;display:grid;
 .qfull{margin-top:7px;padding-top:7px;border-top:1px dotted var(--rule);
   overflow-x:auto}
 .kdisp{display:block;margin:7px 0;text-align:center}
+.qrasm{margin-top:8px;text-align:center}
+.qrasm img{max-width:100%;height:auto;mix-blend-mode:multiply}
 .qcard.off{display:none}
 .variant.off{display:none}
 
