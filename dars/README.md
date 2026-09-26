@@ -64,13 +64,31 @@ teoremasi, koordinata.
 Chizmalar — ichki SVG, hech qanday tashqi fayl yoʻq. Hamma javob yozilishidan
 oldin kompyuterda (sympy) tekshirilgan.
 
+## Maʼlumotnoma · Algebra va ayniyatlar (9–11-sinf)
+
+Eng katta blok: sakkizta variantda algebra savollarning **28,0 %** ini beradi
+(67 ta savol). Yetti boʻlim, 42 ta band — oʻntasi isbot bilan, har biri
+ishlangan misol bilan — va toʻrt darajadagi 32 ta masala; 24 tasi haqiqiy
+variantlardan.
+
+| Fayl | Nima |
+|---|---|
+| `Algebra-9-10-11.html` | bitta sahifa, tilni almashtirgich bilan |
+| `Algebra-9-10-11-UZ-RU.pdf` | 47 bet: avval oʻzbekcha, keyin ruscha |
+
+Boʻlimlar: **A** ayniy almashtirishlar · **B** ildizlar va darajalar ·
+**C** kvadrat tenglama va Viyet · **D** tengsizliklar · **E** modul ·
+**F** sistemalar va simmetrik ifodalar · **G** nisbat, logarifm va teleskop.
+
 ## Qayta yigʻish
+
 
 
 ```
 python3 build-dars.py dars01-data.py Birlashgan-dars-9-10-11
 python3 build-nazariya.py nazariya-data.py Sonlar-nazariyasi-9-10-11
 python3 build-nazariya.py geometriya-data.py Geometriya-9-10-11
+python3 build-nazariya.py algebra-data.py Algebra-9-10-11
 ```
 
 `reja/katex-inline.css` va `reja/topdf.js` dan foydalanadi.

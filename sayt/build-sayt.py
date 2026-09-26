@@ -78,6 +78,7 @@ PAGES = [
  ('index.html', T('Bosh sahifa', 'Главная')),
  ('savollar.html', T('Savollar', 'Задачи')),
  ('mavzular.html', T('Mavzular', 'Темы')),
+ ('algebra.html', T('Algebra', 'Алгебра')),
  ('sonlar-nazariyasi.html', T('Sonlar nazariyasi', 'Теория чисел')),
  ('geometriya.html', T('Geometriya', 'Геометрия')),
 ]
@@ -141,6 +142,12 @@ def hub():
         'Сколько задач даёт каждая тема, что спрашивают в каждой подтеме и '
         'позадачная карта.'),
        ('8 mavzu · %d kichik mavzu' % len(SUB), '8 тем · %d подтем' % len(SUB))),
+      ('algebra.html', 'comb', ('Algebra va ayniyatlar', 'Алгебра и тождества'),
+       ('Eng katta blok: 42 ta ayniyat va usul, har biri misol bilan, soʻngra '
+        '32 ta masala va batafsil yechim.',
+        'Самый большой блок: 42 тождества и приёма, каждое с примером, затем '
+        '32 задачи с подробными решениями.'),
+       ('28,0 % savol', '28,0 % задач')),
       ('sonlar-nazariyasi.html', 'geo', ('Sonlar nazariyasi', 'Теория чисел'),
        ('Toʻliq maʼlumotnoma: 38 ta taʼrif va teorema, har biri misol bilan, '
         'soʻngra 32 ta masala va batafsil yechim.',
@@ -172,6 +179,9 @@ def hub():
        ('22 bet · 8 variant', '22 страницы · 8 вариантов')),
       ('yuklab/Mavzular-xaritasi-9-10-11-UZ-RU.pdf',
        ('Mavzular xaritasi', 'Карта тем'), ('31 bet · UZ+RU', '31 страница · UZ+RU')),
+      ('yuklab/Algebra-9-10-11-UZ-RU.pdf',
+       ('Algebra va ayniyatlar', 'Алгебра и тождества'),
+       ('47 bet · UZ+RU', '47 страниц · UZ+RU')),
       ('yuklab/Sonlar-nazariyasi-9-10-11-UZ-RU.pdf',
        ('Sonlar nazariyasi', 'Теория чисел'), ('40 bet · UZ+RU', '40 страниц · UZ+RU')),
       ('yuklab/Geometriya-9-10-11-UZ-RU.pdf',
@@ -339,6 +349,7 @@ a{color:inherit}
 
 /* kartochkalar */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.cards .card:first-child{grid-column:1/-1}
 .card{display:block;text-decoration:none;border:1px solid var(--rule);
   border-top:3px solid var(--hue);background:var(--surface);padding:14px 16px}
 .card:hover{background:var(--hue-bg)}
@@ -560,11 +571,15 @@ subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
 subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
                 'geometriya-data.py', 'Geometriya-9-10-11'],
                cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
+                'algebra-data.py', 'Algebra-9-10-11'],
+               cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
 subprocess.run([sys.executable, str(ROOT / 'savollar/build-mavzular.py'),
                 'mavzular-data.py', 'Mavzular-xaritasi-9-10-11'],
                cwd=str(ROOT / 'savollar'), check=True, stdout=subprocess.DEVNULL)
 
 SRC = {
+ 'algebra.html': ROOT / 'dars/Algebra-9-10-11.html',
  'sonlar-nazariyasi.html': ROOT / 'dars/Sonlar-nazariyasi-9-10-11.html',
  'geometriya.html': ROOT / 'dars/Geometriya-9-10-11.html',
  'mavzular.html': ROOT / 'savollar/Mavzular-xaritasi-9-10-11.html',
@@ -586,6 +601,7 @@ for name, src in SRC.items():
 (ASSETS / 'sayt.js').write_text(SITE_JS, encoding='utf-8')
 
 for src in (ROOT / 'savollar/Otgan-yillar-savollari-9-10-11.pdf',
+            ROOT / 'dars/Algebra-9-10-11-UZ-RU.pdf',
             ROOT / 'savollar/Mavzular-xaritasi-9-10-11-UZ-RU.pdf',
             ROOT / 'dars/Sonlar-nazariyasi-9-10-11-UZ-RU.pdf',
             ROOT / 'dars/Geometriya-9-10-11-UZ-RU.pdf'):

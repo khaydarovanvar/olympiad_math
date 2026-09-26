@@ -56,6 +56,7 @@ a{color:inherit}
 
 /* kartochkalar */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.cards .card:first-child{grid-column:1/-1}
 .card{display:block;text-decoration:none;border:1px solid var(--rule);
   border-top:3px solid var(--hue);background:var(--surface);padding:14px 16px}
 .card:hover{background:var(--hue-bg)}
