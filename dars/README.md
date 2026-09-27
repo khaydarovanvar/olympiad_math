@@ -80,7 +80,38 @@ Boʻlimlar: **A** ayniy almashtirishlar · **B** ildizlar va darajalar ·
 **C** kvadrat tenglama va Viyet · **D** tengsizliklar · **E** modul ·
 **F** sistemalar va simmetrik ifodalar · **G** nisbat, logarifm va teleskop.
 
+## Maʼlumotnoma · Kombinatorika va ehtimollik (9–11-sinf)
+
+Sakkizta variantda bu blok savollarning **9,6 %** ini beradi (23 ta savol) va
+oxirgi yili keskin oʻsdi: 2024-yilgi uchala variantda ikkita savol, 2025/26
+variantlarida yigirma bittasi. Yetti boʻlim, 30 ta band va toʻrt darajadagi
+28 ta masala; 21 tasi haqiqiy variantlardan.
+
+| Fayl | Nima |
+|---|---|
+| `Kombinatorika-9-10-11.html` | bitta sahifa, tilni almashtirgich bilan |
+| `Kombinatorika-9-10-11-UZ-RU.pdf` | 40 bet: avval oʻzbekcha, keyin ruscha |
+
+Boʻlimlar: **A** sanash qoidalari · **B** takrorlanish va cheklovlar ·
+**C** toʻldiruvchi va inklyuziya-eksklyuziya · **D** raqamli sanash ·
+**E** ehtimollik · **F** Dirixle va invariant · **G** rekursiya bilan sanash.
+
+## Maʼlumotnoma · Ketma-ketliklar (9–11-sinf)
+
+**6,7 %** (16 ta savol), deyarli har variantda kamida bittasi. Olti boʻlim,
+25 ta band va 28 ta masala; 16 tasi haqiqiy variantlardan.
+
+| Fayl | Nima |
+|---|---|
+| `Ketma-ketliklar-9-10-11.html` | bitta sahifa, tilni almashtirgich bilan |
+| `Ketma-ketliklar-9-10-11-UZ-RU.pdf` | 35 bet: avval oʻzbekcha, keyin ruscha |
+
+Boʻlimlar: **A** arifmetik progressiya · **B** geometrik progressiya ·
+**C** yigʻindilar · **D** rekurrent ketma-ketlik va davriylik · **E** raqamli
+ketma-ketliklar · **F** progressiya boshqa mavzular bilan.
+
 ## Qayta yigʻish
+
 
 
 
@@ -89,6 +120,8 @@ python3 build-dars.py dars01-data.py Birlashgan-dars-9-10-11
 python3 build-nazariya.py nazariya-data.py Sonlar-nazariyasi-9-10-11
 python3 build-nazariya.py geometriya-data.py Geometriya-9-10-11
 python3 build-nazariya.py algebra-data.py Algebra-9-10-11
+python3 build-nazariya.py kombinatorika-data.py Kombinatorika-9-10-11
+python3 build-nazariya.py ketma-ketlik-data.py Ketma-ketliklar-9-10-11
 ```
 
 `reja/katex-inline.css` va `reja/topdf.js` dan foydalanadi.

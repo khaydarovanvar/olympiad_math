@@ -81,6 +81,8 @@ PAGES = [
  ('algebra.html', T('Algebra', 'Алгебра')),
  ('sonlar-nazariyasi.html', T('Sonlar nazariyasi', 'Теория чисел')),
  ('geometriya.html', T('Geometriya', 'Геометрия')),
+ ('kombinatorika.html', T('Kombinatorika', 'Комбинаторика')),
+ ('ketma-ketliklar.html', T('Ketma-ketliklar', 'Последовательности')),
 ]
 
 
@@ -154,6 +156,19 @@ def hub():
         'Полный справочник: 38 определений и теорем, каждое с примером, затем '
         '32 задачи с подробными решениями.'),
        ('23,4 % savol', '23,4 % задач')),
+      ('kombinatorika.html', 'nt', ('Kombinatorika va ehtimollik',
+                                    'Комбинаторика и вероятность'),
+       ('Sanash qoidalari, Dirixle printsipi va ehtimollik — 30 ta band va '
+        '28 ta masala. Oxirgi yili eng tez oʻsgan blok.',
+        'Правила подсчёта, принцип Дирихле и вероятность — 30 пунктов и 28 '
+        'задач. Самый быстрорастущий блок последнего года.'),
+       ('9,6 % savol', '9,6 % задач')),
+      ('ketma-ketliklar.html', 'comb', ('Ketma-ketliklar', 'Последовательности'),
+       ('Progressiyalar, yigʻindilar va rekurrent ketma-ketliklar — 25 ta '
+        'band va 28 ta masala.',
+        'Прогрессии, суммы и рекуррентные последовательности — 25 пунктов и '
+        '28 задач.'),
+       ('6,7 % savol', '6,7 % задач')),
       ('geometriya.html', 'trig', ('Geometriya', 'Геометрия'),
        ('41 ta band — chizmalar bilan, oʻn ikkitasi isbot bilan — va toʻrt '
         'darajadagi 32 ta masala.',
@@ -186,6 +201,12 @@ def hub():
        ('Sonlar nazariyasi', 'Теория чисел'), ('40 bet · UZ+RU', '40 страниц · UZ+RU')),
       ('yuklab/Geometriya-9-10-11-UZ-RU.pdf',
        ('Geometriya', 'Геометрия'), ('56 bet · UZ+RU', '56 страниц · UZ+RU')),
+      ('yuklab/Kombinatorika-9-10-11-UZ-RU.pdf',
+       ('Kombinatorika va ehtimollik', 'Комбинаторика и вероятность'),
+       ('40 bet · UZ+RU', '40 страниц · UZ+RU')),
+      ('yuklab/Ketma-ketliklar-9-10-11-UZ-RU.pdf',
+       ('Ketma-ketliklar', 'Последовательности'),
+       ('35 bet · UZ+RU', '35 страниц · UZ+RU')),
     ]
     dls = ''.join('<li><a href="%s" target="_blank" rel="noopener">'
                   '<span class="fn">%s</span>'
@@ -574,6 +595,12 @@ subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
 subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
                 'algebra-data.py', 'Algebra-9-10-11'],
                cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
+                'kombinatorika-data.py', 'Kombinatorika-9-10-11'],
+               cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
+                'ketma-ketlik-data.py', 'Ketma-ketliklar-9-10-11'],
+               cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
 subprocess.run([sys.executable, str(ROOT / 'savollar/build-mavzular.py'),
                 'mavzular-data.py', 'Mavzular-xaritasi-9-10-11'],
                cwd=str(ROOT / 'savollar'), check=True, stdout=subprocess.DEVNULL)
@@ -582,6 +609,8 @@ SRC = {
  'algebra.html': ROOT / 'dars/Algebra-9-10-11.html',
  'sonlar-nazariyasi.html': ROOT / 'dars/Sonlar-nazariyasi-9-10-11.html',
  'geometriya.html': ROOT / 'dars/Geometriya-9-10-11.html',
+ 'kombinatorika.html': ROOT / 'dars/Kombinatorika-9-10-11.html',
+ 'ketma-ketliklar.html': ROOT / 'dars/Ketma-ketliklar-9-10-11.html',
  'mavzular.html': ROOT / 'savollar/Mavzular-xaritasi-9-10-11.html',
 }
 for name, src in SRC.items():
@@ -604,7 +633,9 @@ for src in (ROOT / 'savollar/Otgan-yillar-savollari-9-10-11.pdf',
             ROOT / 'dars/Algebra-9-10-11-UZ-RU.pdf',
             ROOT / 'savollar/Mavzular-xaritasi-9-10-11-UZ-RU.pdf',
             ROOT / 'dars/Sonlar-nazariyasi-9-10-11-UZ-RU.pdf',
-            ROOT / 'dars/Geometriya-9-10-11-UZ-RU.pdf'):
+            ROOT / 'dars/Geometriya-9-10-11-UZ-RU.pdf',
+            ROOT / 'dars/Kombinatorika-9-10-11-UZ-RU.pdf',
+            ROOT / 'dars/Ketma-ketliklar-9-10-11-UZ-RU.pdf'):
     shutil.copy2(src, YUK / src.name)
 
 total = 0
