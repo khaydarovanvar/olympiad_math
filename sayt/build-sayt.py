@@ -83,6 +83,9 @@ PAGES = [
  ('geometriya.html', T('Geometriya', 'Геометрия')),
  ('kombinatorika.html', T('Kombinatorika', 'Комбинаторика')),
  ('ketma-ketliklar.html', T('Ketma-ketliklar', 'Последовательности')),
+ ('funksiyalar.html', T('Funksiyalar', 'Функции')),
+ ('trigonometriya.html', T('Trigonometriya', 'Тригонометрия')),
+ ('matn-masalalari.html', T('Matn masalalari', 'Текстовые задачи')),
 ]
 
 
@@ -175,6 +178,24 @@ def hub():
         '41 пункт — с чертежами, двенадцать с доказательствами — и 32 задачи '
         'четырёх уровней.'),
        ('18,4 % savol', '18,4 % задач')),
+      ('funksiyalar.html', 'alg', ('Funksiyalar', 'Функции'),
+       ('Funksional tenglamalar, juftlik va toqlik, kompozitsiya va '
+        'rekurrent qadam — 30 ta band va 28 ta masala.',
+        'Функциональные уравнения, чётность, композиция и рекуррентный шаг — '
+        '30 пунктов и 28 задач.'),
+       ('5,9 % savol', '5,9 % задач')),
+      ('trigonometriya.html', 'trig', ('Trigonometriya', 'Тригонометрия'),
+       ('Birlik aylana, keltirish formulalari va soddalashtirish usullari — '
+        '28 ta band va 26 ta masala.',
+        'Единичная окружность, формулы приведения и приёмы упрощения — '
+        '28 пунктов и 26 задач.'),
+       ('4,2 % savol', '4,2 % задач')),
+      ('matn-masalalari.html', 'geo', ('Matn masalalari', 'Текстовые задачи'),
+       ('Nomaʼlumni tanlash, foiz, ish, harakat, aralashma, soat va '
+        'kalendar — 28 ta band va 26 ta masala.',
+        'Выбор неизвестного, проценты, работа, движение, смеси, часы и '
+        'календарь — 28 пунктов и 26 задач.'),
+       ('3,8 % savol', '3,8 % задач')),
     ]
     cc = ''.join(
       '<a class="card" href="%s" style="--hue:var(--%s);--hue-bg:var(--%s-bg)">'
@@ -207,6 +228,14 @@ def hub():
       ('yuklab/Ketma-ketliklar-9-10-11-UZ-RU.pdf',
        ('Ketma-ketliklar', 'Последовательности'),
        ('35 bet · UZ+RU', '35 страниц · UZ+RU')),
+      ('yuklab/Funksiyalar-9-10-11-UZ-RU.pdf',
+       ('Funksiyalar', 'Функции'), ('39 bet · UZ+RU', '39 страниц · UZ+RU')),
+      ('yuklab/Trigonometriya-9-10-11-UZ-RU.pdf',
+       ('Trigonometriya', 'Тригонометрия'),
+       ('38 bet · UZ+RU', '38 страниц · UZ+RU')),
+      ('yuklab/Matn-masalalari-9-10-11-UZ-RU.pdf',
+       ('Matn masalalari', 'Текстовые задачи'),
+       ('35 bet · UZ+RU', '35 страниц · UZ+RU')),
     ]
     dls = ''.join('<li><a href="%s" target="_blank" rel="noopener">'
                   '<span class="fn">%s</span>'
@@ -224,11 +253,12 @@ def hub():
                L(('Olimpiada matematikasi · 9–11-sinf',
                   'Олимпиадная математика · 9–11 классы')),
                L(('Oʻtgan yillar variantlari oʻqib chiqilib mavzuga ajratildi, '
-                  'va eng koʻp savol beradigan ikkita mavzu uchun toʻliq '
-                  'maʼlumotnoma yozildi. Hammasi oʻzbekcha va ruscha.',
-                  'Варианты прошлых лет разобраны по темам, а для двух самых '
-                  'частых тем написаны полные справочники. Всё на узбекском и '
-                  'русском.')),
+                  'va sakkizta mavzuning hammasi uchun toʻliq maʼlumotnoma '
+                  'yozildi — savollarning 100 % i qamrab olingan. Hammasi '
+                  'oʻzbekcha va ruscha.',
+                  'Варианты прошлых лет разобраны по темам, и для всех восьми '
+                  'тем написаны полные справочники — охвачено 100 % задач. '
+                  'Всё на узбекском и русском.')),
                chips, cc,
                L(('Mavzular ulushi', 'Доля тем')), rows,
                L(('Sanoq qoidasi: savol qaysi koʻnikma bilan yechilsa, oʻsha '
@@ -338,12 +368,12 @@ a{color:inherit}
 .brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
   font-family:Archivo,sans-serif;font-size:15px;white-space:nowrap}
 .brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
-.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px}
+.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px;flex:1 1 auto;min-width:0}
 .lnk a{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.04em;
   text-decoration:none;color:var(--muted);padding:5px 9px;border-radius:4px}
 .lnk a:hover{background:var(--surface-2);color:var(--ink)}
 .lnk a.on{background:var(--accent);color:#fff}
-.sitenav .lang{margin-left:auto;display:flex;border:1px solid var(--rule);
+.sitenav .lang{margin-left:auto;flex:0 0 auto;display:flex;border:1px solid var(--rule);
   border-radius:4px;overflow:hidden}
 .sitenav .lang button{font-family:"IBM Plex Mono",monospace;font-size:10px;
   padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer}
@@ -555,12 +585,12 @@ REF_CSS = r"""
 .brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
   font-family:Archivo,sans-serif;font-size:15px;white-space:nowrap;color:var(--ink)}
 .brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
-.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px}
+.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px;flex:1 1 auto;min-width:0}
 .lnk a{font-family:"IBM Plex Mono",monospace;font-size:10.5px;text-decoration:none;
   color:var(--muted);padding:5px 9px;border-radius:4px}
 .lnk a:hover{background:var(--surface-2);color:var(--ink)}
 .lnk a.on{background:var(--accent);color:#fff}
-.sitenav .lang{margin-left:auto;display:flex;border:1px solid var(--rule);
+.sitenav .lang{margin-left:auto;flex:0 0 auto;display:flex;border:1px solid var(--rule);
   border-radius:4px;overflow:hidden}
 .sitenav .lang button{font-family:"IBM Plex Mono",monospace;font-size:10px;
   padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer}
@@ -601,6 +631,15 @@ subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
 subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
                 'ketma-ketlik-data.py', 'Ketma-ketliklar-9-10-11'],
                cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
+                'funksiya-data.py', 'Funksiyalar-9-10-11'],
+               cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
+                'trigonometriya-data.py', 'Trigonometriya-9-10-11'],
+               cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable, str(ROOT / 'dars/build-nazariya.py'),
+                'matn-data.py', 'Matn-masalalari-9-10-11'],
+               cwd=str(ROOT / 'dars'), check=True, stdout=subprocess.DEVNULL)
 subprocess.run([sys.executable, str(ROOT / 'savollar/build-mavzular.py'),
                 'mavzular-data.py', 'Mavzular-xaritasi-9-10-11'],
                cwd=str(ROOT / 'savollar'), check=True, stdout=subprocess.DEVNULL)
@@ -611,6 +650,9 @@ SRC = {
  'geometriya.html': ROOT / 'dars/Geometriya-9-10-11.html',
  'kombinatorika.html': ROOT / 'dars/Kombinatorika-9-10-11.html',
  'ketma-ketliklar.html': ROOT / 'dars/Ketma-ketliklar-9-10-11.html',
+ 'funksiyalar.html': ROOT / 'dars/Funksiyalar-9-10-11.html',
+ 'trigonometriya.html': ROOT / 'dars/Trigonometriya-9-10-11.html',
+ 'matn-masalalari.html': ROOT / 'dars/Matn-masalalari-9-10-11.html',
  'mavzular.html': ROOT / 'savollar/Mavzular-xaritasi-9-10-11.html',
 }
 for name, src in SRC.items():
@@ -635,7 +677,10 @@ for src in (ROOT / 'savollar/Otgan-yillar-savollari-9-10-11.pdf',
             ROOT / 'dars/Sonlar-nazariyasi-9-10-11-UZ-RU.pdf',
             ROOT / 'dars/Geometriya-9-10-11-UZ-RU.pdf',
             ROOT / 'dars/Kombinatorika-9-10-11-UZ-RU.pdf',
-            ROOT / 'dars/Ketma-ketliklar-9-10-11-UZ-RU.pdf'):
+            ROOT / 'dars/Ketma-ketliklar-9-10-11-UZ-RU.pdf',
+            ROOT / 'dars/Funksiyalar-9-10-11-UZ-RU.pdf',
+            ROOT / 'dars/Trigonometriya-9-10-11-UZ-RU.pdf',
+            ROOT / 'dars/Matn-masalalari-9-10-11-UZ-RU.pdf'):
     shutil.copy2(src, YUK / src.name)
 
 total = 0

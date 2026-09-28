@@ -24,12 +24,12 @@ a{color:inherit}
 .brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
   font-family:Archivo,sans-serif;font-size:15px;white-space:nowrap}
 .brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
-.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px}
+.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px;flex:1 1 auto;min-width:0}
 .lnk a{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.04em;
   text-decoration:none;color:var(--muted);padding:5px 9px;border-radius:4px}
 .lnk a:hover{background:var(--surface-2);color:var(--ink)}
 .lnk a.on{background:var(--accent);color:#fff}
-.sitenav .lang{margin-left:auto;display:flex;border:1px solid var(--rule);
+.sitenav .lang{margin-left:auto;flex:0 0 auto;display:flex;border:1px solid var(--rule);
   border-radius:4px;overflow:hidden}
 .sitenav .lang button{font-family:"IBM Plex Mono",monospace;font-size:10px;
   padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer}
