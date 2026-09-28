@@ -1,24 +1,98 @@
 
-/* maʼlumotnoma sahifalarini sayt ramkasiga moslash */
-.sitenav{position:sticky;top:0;z-index:20;background:#fff;
-  border-bottom:1px solid var(--rule);font-family:"Source Serif 4",Georgia,serif}
-.nv{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:14px;
-  padding:9px 20px}
+/* menyu */
+.sitenav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.93);
+  -webkit-backdrop-filter:saturate(1.6) blur(8px);
+  backdrop-filter:saturate(1.6) blur(8px);border-bottom:1px solid var(--rule);
+  font-family:"Source Serif 4",Georgia,serif;
+  transition:box-shadow .25s ease}
+.sitenav.stuck{box-shadow:0 6px 20px rgba(15,26,33,.08)}
+.nv{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:12px;
+  padding:9px 20px;transition:padding .25s ease}
+.sitenav.stuck .nv{padding-top:5px;padding-bottom:5px}
 .brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
   font-family:Archivo,sans-serif;font-size:15px;white-space:nowrap;color:var(--ink)}
+.brand b{position:relative}
+.brand b::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.brand:hover b::after{transform:scaleX(1)}
 .brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
-.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px;flex:1 1 auto;min-width:0}
-.lnk a{font-family:"IBM Plex Mono",monospace;font-size:10.5px;text-decoration:none;
-  color:var(--muted);padding:5px 9px;border-radius:4px}
-.lnk a:hover{background:var(--surface-2);color:var(--ink)}
-.lnk a.on{background:var(--accent);color:#fff}
+
+.burger{display:none;width:31px;height:26px;border:1px solid var(--rule);
+  border-radius:4px;background:#fff;cursor:pointer;padding:0;position:relative}
+.burger i{position:absolute;left:7px;right:7px;height:1.5px;background:var(--ink);
+  transition:transform .28s cubic-bezier(.2,.7,.3,1),opacity .18s ease}
+.burger i:nth-child(1){top:8px}
+.burger i:nth-child(2){top:12.2px}
+.burger i:nth-child(3){top:16.4px}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(4.2px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-4.2px) rotate(-45deg)}
+
+.lnk{display:flex;align-items:center;gap:2px;margin-left:4px;flex:1 1 auto;min-width:0}
+.lnk>a,.dropb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.04em;text-decoration:none;color:var(--muted);padding:6px 9px;
+  border-radius:4px;border:0;background:none;cursor:pointer;white-space:nowrap;
+  position:relative;transition:color .2s ease,background .2s ease}
+.lnk>a::after,.dropb::after{content:"";position:absolute;left:9px;right:9px;bottom:3px;
+  height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;
+  transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.lnk>a:hover,.dropb:hover{color:var(--ink)}
+.lnk>a:hover::after,.dropb:hover::after{transform:scaleX(1)}
+.lnk>a.on,.dropb.on{background:var(--accent);color:#fff}
+.lnk>a.on::after,.dropb.on::after{display:none}
+
+.drop{position:relative}
+.dropb em{font-style:normal;margin-left:5px;font-size:8px;opacity:.75;
+  display:inline-block;transition:transform .25s ease}
+.dropb[aria-expanded="true"] em{transform:rotate(180deg)}
+.dropm{position:absolute;top:calc(100% + 7px);left:0;min-width:258px;background:#fff;
+  border:1px solid var(--rule);border-radius:6px;padding:5px;z-index:40;
+  box-shadow:0 14px 34px rgba(15,26,33,.13);opacity:0;visibility:hidden;
+  transform:translateY(-7px);
+  transition:opacity .2s ease,transform .22s cubic-bezier(.2,.7,.3,1),visibility .22s}
+.drop.open .dropm{opacity:1;visibility:visible;transform:none}
+.dropm a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);
+  font-size:12.5px;padding:6px 8px;border-radius:4px;
+  transition:background .18s ease,transform .18s ease}
+.dropm a:hover{background:var(--hue-bg);transform:translateX(2px)}
+.dropm a.on{background:var(--hue-bg);color:var(--hue);font-weight:600}
+.dropm i{width:7px;height:7px;border-radius:50%;background:var(--hue);flex:0 0 auto}
+.dropm em{margin-left:auto;font-style:normal;font-family:"IBM Plex Mono",monospace;
+  font-size:9px;color:var(--muted)}
+
 .sitenav .lang{margin-left:auto;flex:0 0 auto;display:flex;border:1px solid var(--rule);
   border-radius:4px;overflow:hidden}
 .sitenav .lang button{font-family:"IBM Plex Mono",monospace;font-size:10px;
-  padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer}
+  padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer;
+  transition:background .2s ease,color .2s ease}
 .sitenav .lang button+button{border-left:1px solid var(--rule)}
 :root[data-l="uz"] .sitenav .lang button[data-set="uz"],
 :root[data-l="ru"] .sitenav .lang button[data-set="ru"]{background:var(--accent);color:#fff}
+
+/* oʻqish chizigʻi */
+.navp{height:2px;background:transparent}
+.navp i{display:block;height:100%;width:0;background:var(--accent)}
+
+@media (max-width:760px){
+  .burger{display:block;order:2;margin-left:auto}
+  .sitenav .lang{order:3;margin-left:8px}
+  .nv{flex-wrap:wrap;padding:8px 14px;gap:8px}
+  .lnk{order:4;width:100%;flex:0 0 auto;margin:0;flex-direction:column;
+    align-items:stretch;gap:2px;max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .32s cubic-bezier(.2,.7,.3,1),opacity .25s ease}
+  .lnk.open{max-height:74vh;opacity:1;overflow-y:auto;padding:6px 0 4px}
+  .lnk>a,.dropb{width:100%;text-align:left;font-size:12px;padding:9px 10px}
+  .lnk>a::after,.dropb::after{display:none}
+  .drop{position:static}
+  .dropm{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+    border:0;border-left:2px solid var(--rule-soft);border-radius:0;
+    margin:2px 0 4px 10px;padding:0 0 0 4px;min-width:0;display:none}
+  .drop.open .dropm{display:block}
+}
+@media print{.sitenav,.sitefoot{display:none}}
+
+/* maʼlumotnoma sahifalarini sayt ramkasiga moslash */
 .mast .lang{display:none}          /* tilni almashtirish endi menyuda */
 .wrap{max-width:1000px}
 .sitefoot{max-width:1000px;margin:0 auto;padding:18px 30px 34px;color:var(--muted);
@@ -27,9 +101,6 @@
 .sitefoot .fsrc{font-family:"IBM Plex Mono",monospace;font-size:10px}
 @media print{.sitenav,.sitefoot{display:none}}
 @media (max-width:760px){
-  .nv{padding:8px 14px;gap:8px;flex-wrap:wrap}
-  .lnk{margin-left:0;order:3;width:100%}
-  .sitenav .lang{margin-left:auto}
   /* KaTeX satr ichida sinmaydi — shuning uchun blokni surib koʻrish mumkin */
   .bayon,.misol,.isbot,.qq,.body,.ans,.q,.izoh,.tnote,.masl,.vt td{overflow-x:auto}
   .it,.sol,.kb,ol.qs>li{min-width:0}

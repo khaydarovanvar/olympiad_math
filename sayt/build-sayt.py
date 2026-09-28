@@ -74,31 +74,57 @@ for k in VAR_Q:
     VAR_Q[k].sort(key=lambda q: q['n'])
 TRANSCRIBED = sum(1 for q in MV.SAVOLLAR if (q['paper'], q['sinf'], q['n']) in SAV.q)
 
-PAGES = [
+# Menyu ikki qismga boʻlingan: uchta asosiy sahifa doim koʻrinadi, sakkizta
+# maʼlumotnoma esa ochiluvchi roʻyxatda — shunda yozuvlar ikkinchi qatorga
+# tushmaydi va mavzuning ulushi darhol koʻrinadi.
+MAIN = [
  ('index.html', T('Bosh sahifa', 'Главная')),
  ('savollar.html', T('Savollar', 'Задачи')),
  ('mavzular.html', T('Mavzular', 'Темы')),
- ('algebra.html', T('Algebra', 'Алгебра')),
- ('sonlar-nazariyasi.html', T('Sonlar nazariyasi', 'Теория чисел')),
- ('geometriya.html', T('Geometriya', 'Геометрия')),
- ('kombinatorika.html', T('Kombinatorika', 'Комбинаторика')),
- ('ketma-ketliklar.html', T('Ketma-ketliklar', 'Последовательности')),
- ('funksiyalar.html', T('Funksiyalar', 'Функции')),
- ('trigonometriya.html', T('Trigonometriya', 'Тригонометрия')),
- ('matn-masalalari.html', T('Matn masalalari', 'Текстовые задачи')),
 ]
+HUE = {'alg': ('#0f5c72', '#e0edf1'), 'nt': ('#8a5a00', '#f6ecd8'),
+       'geo': ('#2a6a3f', '#e2eee6'), 'comb': ('#8a3a52', '#f6e6ea'),
+       'trig': ('#6b3e8f', '#f0e9f6')}
+REFS = [
+ ('algebra.html', T('Algebra va ayniyatlar', 'Алгебра и тождества'), 'alg', '28,0 %'),
+ ('sonlar-nazariyasi.html', T('Sonlar nazariyasi', 'Теория чисел'), 'nt', '23,4 %'),
+ ('geometriya.html', T('Geometriya', 'Геометрия'), 'geo', '18,4 %'),
+ ('kombinatorika.html', T('Kombinatorika', 'Комбинаторика'), 'comb', '9,6 %'),
+ ('ketma-ketliklar.html', T('Ketma-ketliklar', 'Последовательности'), 'comb', '6,7 %'),
+ ('funksiyalar.html', T('Funksiyalar', 'Функции'), 'alg', '5,9 %'),
+ ('trigonometriya.html', T('Trigonometriya', 'Тригонометрия'), 'trig', '4,2 %'),
+ ('matn-masalalari.html', T('Matn masalalari', 'Текстовые задачи'), 'geo', '3,8 %'),
+]
+PAGES = MAIN + [(f, nm) for f, nm, _h, _p in REFS]
 
 
 def nav(active):
     links = ''.join(
       '<a href="%s"%s>%s</a>' % (f, ' class="on"' if f == active else '', L(nm))
-      for f, nm in PAGES)
-    return ('<nav class="sitenav"><div class="nv"><a class="brand" href="index.html">'
-            '<b>Olimpiada</b><span>9–11</span></a><div class="lnk">%s</div>'
+      for f, nm in MAIN)
+    refs = ''.join(
+      '<a href="%s"%s style="--hue:var(--%s,%s);--hue-bg:var(--%s-bg,%s)">'
+      '<i></i>%s<em>%s</em></a>'
+      % (f, ' class="on"' if f == active else '', hue, HUE[hue][0],
+         hue, HUE[hue][1], L(nm), pc)
+      for f, nm, hue, pc in REFS)
+    on_ref = any(f == active for f, _nm, _h, _p in REFS)
+    return ('<nav class="sitenav"><div class="nv">'
+            '<a class="brand" href="index.html"><b>Olimpiada</b>'
+            '<span>9–11</span></a>'
+            '<button class="burger" type="button" aria-expanded="false" '
+            'aria-controls="menyu" aria-label="Menyu · Меню">'
+            '<i></i><i></i><i></i></button>'
+            '<div class="lnk" id="menyu">%s'
+            '<div class="drop"><button class="dropb%s" type="button" '
+            'aria-expanded="false">%s<em>▾</em></button>'
+            '<div class="dropm">%s</div></div></div>'
             '<div class="lang" role="group">'
             '<button type="button" data-set="uz">UZ</button>'
-            '<button type="button" data-set="ru">RU</button></div></div></nav>'
-            % links)
+            '<button type="button" data-set="ru">RU</button></div></div>'
+            '<div class="navp"><i></i></div></nav>'
+            % (links, ' on' if on_ref else '',
+               L(('Maʼlumotnomalar', 'Справочники')), refs))
 
 
 HEAD = ('<meta charset="utf-8">'
@@ -205,8 +231,9 @@ def hub():
     top = BY_TOPIC[TOPIC_ORDER[0]['kod']]
     rows = ''.join(
       '<tr style="--hue:var(--%s)"><td class="nm">%s</td><td class="num">%d</td>'
-      '<td class="pc">%.1f%%</td><td class="bar"><span style="width:%.1f%%"></span></td></tr>'
-      % (t['hue'], L(t['nom']), BY_TOPIC[t['kod']], BY_TOPIC[t['kod']] / TOTAL * 100,
+      '<td class="pc">%s %%</td><td class="bar"><span style="--w:%.1f%%"></span></td></tr>'
+      % (t['hue'], L(t['nom']), BY_TOPIC[t['kod']],
+         ('%.1f' % (BY_TOPIC[t['kod']] / TOTAL * 100)).replace('.', ','),
          BY_TOPIC[t['kod']] / top * 100) for t in TOPIC_ORDER)
 
     dl = [
@@ -242,8 +269,16 @@ def hub():
                   '<span class="fm">%s</span></a></li>' % (h, L(n), L(m))
                   for h, n, m in dl)
 
+    tick = ''.join(
+      '<span style="--hue:var(--%s)"><i></i>%s <b>%s %%</b></span>'
+      % (t['hue'], L(t['nom']),
+         ('%.1f' % (BY_TOPIC[t['kod']] / TOTAL * 100)).replace('.', ','))
+      for t in TOPIC_ORDER)
+    ticker = ('<div class="ticker" aria-hidden="true"><div class="tk">%s%s</div></div>'
+              % (tick, tick))
+
     return ('<header class="hero"><p class="eyebrow">%s</p><h1>%s</h1>'
-            '<p class="sub">%s</p><ul class="stats">%s</ul></header>'
+            '<p class="sub">%s</p><ul class="stats">%s</ul></header>%s'
             '<section class="cards">%s</section>'
             '<section class="blk"><h2>%s</h2><table class="ov">%s</table>'
             '<p class="note">%s</p></section>'
@@ -259,7 +294,7 @@ def hub():
                   'Варианты прошлых лет разобраны по темам, и для всех восьми '
                   'тем написаны полные справочники — охвачено 100 % задач. '
                   'Всё на узбекском и русском.')),
-               chips, cc,
+               chips, ticker, cc,
                L(('Mavzular ulushi', 'Доля тем')), rows,
                L(('Sanoq qoidasi: savol qaysi koʻnikma bilan yechilsa, oʻsha '
                   'mavzuga kiritilgan. Toʻliq izoh — mavzular sahifasida.',
@@ -342,6 +377,102 @@ def savollar():
 
 
 # =============================================================== uslublar ==
+NAV_CSS = r"""
+/* menyu */
+.sitenav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.93);
+  -webkit-backdrop-filter:saturate(1.6) blur(8px);
+  backdrop-filter:saturate(1.6) blur(8px);border-bottom:1px solid var(--rule);
+  font-family:"Source Serif 4",Georgia,serif;
+  transition:box-shadow .25s ease}
+.sitenav.stuck{box-shadow:0 6px 20px rgba(15,26,33,.08)}
+.nv{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:12px;
+  padding:9px 20px;transition:padding .25s ease}
+.sitenav.stuck .nv{padding-top:5px;padding-bottom:5px}
+.brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
+  font-family:Archivo,sans-serif;font-size:15px;white-space:nowrap;color:var(--ink)}
+.brand b{position:relative}
+.brand b::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.brand:hover b::after{transform:scaleX(1)}
+.brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
+
+.burger{display:none;width:31px;height:26px;border:1px solid var(--rule);
+  border-radius:4px;background:#fff;cursor:pointer;padding:0;position:relative}
+.burger i{position:absolute;left:7px;right:7px;height:1.5px;background:var(--ink);
+  transition:transform .28s cubic-bezier(.2,.7,.3,1),opacity .18s ease}
+.burger i:nth-child(1){top:8px}
+.burger i:nth-child(2){top:12.2px}
+.burger i:nth-child(3){top:16.4px}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(4.2px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-4.2px) rotate(-45deg)}
+
+.lnk{display:flex;align-items:center;gap:2px;margin-left:4px;flex:1 1 auto;min-width:0}
+.lnk>a,.dropb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.04em;text-decoration:none;color:var(--muted);padding:6px 9px;
+  border-radius:4px;border:0;background:none;cursor:pointer;white-space:nowrap;
+  position:relative;transition:color .2s ease,background .2s ease}
+.lnk>a::after,.dropb::after{content:"";position:absolute;left:9px;right:9px;bottom:3px;
+  height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;
+  transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.lnk>a:hover,.dropb:hover{color:var(--ink)}
+.lnk>a:hover::after,.dropb:hover::after{transform:scaleX(1)}
+.lnk>a.on,.dropb.on{background:var(--accent);color:#fff}
+.lnk>a.on::after,.dropb.on::after{display:none}
+
+.drop{position:relative}
+.dropb em{font-style:normal;margin-left:5px;font-size:8px;opacity:.75;
+  display:inline-block;transition:transform .25s ease}
+.dropb[aria-expanded="true"] em{transform:rotate(180deg)}
+.dropm{position:absolute;top:calc(100% + 7px);left:0;min-width:258px;background:#fff;
+  border:1px solid var(--rule);border-radius:6px;padding:5px;z-index:40;
+  box-shadow:0 14px 34px rgba(15,26,33,.13);opacity:0;visibility:hidden;
+  transform:translateY(-7px);
+  transition:opacity .2s ease,transform .22s cubic-bezier(.2,.7,.3,1),visibility .22s}
+.drop.open .dropm{opacity:1;visibility:visible;transform:none}
+.dropm a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);
+  font-size:12.5px;padding:6px 8px;border-radius:4px;
+  transition:background .18s ease,transform .18s ease}
+.dropm a:hover{background:var(--hue-bg);transform:translateX(2px)}
+.dropm a.on{background:var(--hue-bg);color:var(--hue);font-weight:600}
+.dropm i{width:7px;height:7px;border-radius:50%;background:var(--hue);flex:0 0 auto}
+.dropm em{margin-left:auto;font-style:normal;font-family:"IBM Plex Mono",monospace;
+  font-size:9px;color:var(--muted)}
+
+.sitenav .lang{margin-left:auto;flex:0 0 auto;display:flex;border:1px solid var(--rule);
+  border-radius:4px;overflow:hidden}
+.sitenav .lang button{font-family:"IBM Plex Mono",monospace;font-size:10px;
+  padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer;
+  transition:background .2s ease,color .2s ease}
+.sitenav .lang button+button{border-left:1px solid var(--rule)}
+:root[data-l="uz"] .sitenav .lang button[data-set="uz"],
+:root[data-l="ru"] .sitenav .lang button[data-set="ru"]{background:var(--accent);color:#fff}
+
+/* oʻqish chizigʻi */
+.navp{height:2px;background:transparent}
+.navp i{display:block;height:100%;width:0;background:var(--accent)}
+
+@media (max-width:760px){
+  .burger{display:block;order:2;margin-left:auto}
+  .sitenav .lang{order:3;margin-left:8px}
+  .nv{flex-wrap:wrap;padding:8px 14px;gap:8px}
+  .lnk{order:4;width:100%;flex:0 0 auto;margin:0;flex-direction:column;
+    align-items:stretch;gap:2px;max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .32s cubic-bezier(.2,.7,.3,1),opacity .25s ease}
+  .lnk.open{max-height:74vh;opacity:1;overflow-y:auto;padding:6px 0 4px}
+  .lnk>a,.dropb{width:100%;text-align:left;font-size:12px;padding:9px 10px}
+  .lnk>a::after,.dropb::after{display:none}
+  .drop{position:static}
+  .dropm{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+    border:0;border-left:2px solid var(--rule-soft);border-radius:0;
+    margin:2px 0 4px 10px;padding:0 0 0 4px;min-width:0;display:none}
+  .drop.open .dropm{display:block}
+}
+@media print{.sitenav,.sitefoot{display:none}}
+"""
+
+
 SITE_CSS = r"""
 :root{
   --ground:#eceff2; --surface:#ffffff; --surface-2:#f5f7f9;
@@ -360,9 +491,6 @@ body{margin:0;background:var(--ground);color:var(--ink);
 a{color:inherit}
 .k{font-size:1.02em}
 
-/* menyu */
-.sitenav{position:sticky;top:0;z-index:20;background:#fff;
-  border-bottom:1px solid var(--rule)}
 .nv{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:14px;
   padding:9px 20px}
 .brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
@@ -492,13 +620,66 @@ ul.qlist{list-style:none;padding:0;margin:0;display:grid;
   .wrap{padding:18px 14px 30px}
   .cards,ul.dl,ul.qlist{grid-template-columns:minmax(0,1fr)}
   .hero h1{font-size:25px}
-  .nv{padding:8px 14px;gap:8px;flex-wrap:wrap}
-  .lnk{margin-left:0;order:3;width:100%}
-  .sitenav .lang{margin-left:auto}
   .filters{position:static}
   .qs,.qfull,.note,.hero .sub{overflow-x:auto}
   .ov .bar{display:none}
 }
+/* ---------------------------------------------------------- harakatlar --
+   Hammasi CSS bilan; JS faqat `reveal`/`in` sinflarini qoʻyadi, shuning
+   uchun JS ishlamasa ham sahifa toʻliq koʻrinadi. */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero .eyebrow,.hero h1,.hero .sub,.hero .stats{
+  animation:rise .6s cubic-bezier(.2,.7,.3,1) both}
+.hero h1{animation-delay:.06s}
+.hero .sub{animation-delay:.13s}
+.hero .stats{animation-delay:.2s}
+
+.reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+.card{transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease,
+  background .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-3px);border-color:var(--hue);
+  box-shadow:0 10px 26px rgba(15,26,33,.09)}
+.card .tag{transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.card:hover .tag{transform:translateX(3px)}
+ul.dl a{transition:transform .2s ease,background .2s ease,border-color .2s ease}
+ul.dl a:hover{transform:translateX(3px);border-color:var(--accent)}
+.qcard{transition:box-shadow .2s ease,border-color .2s ease}
+.qcard:hover{box-shadow:0 6px 16px rgba(15,26,33,.07)}
+.fbtns button{transition:background .18s ease,color .18s ease,border-color .18s ease}
+.stats li{transition:transform .2s ease}
+.stats li:hover{transform:translateY(-2px)}
+
+/* ustunlar oʻz kengligiga oʻsadi */
+.ov .bar span{width:var(--w);transition:width .9s cubic-bezier(.2,.7,.3,1)}
+.ov.reveal:not(.in) .bar span{width:0}
+
+/* yuguruvchi satr — mavzular va ularning ulushi */
+.ticker{margin-top:16px;border-top:1px solid var(--rule-soft);
+  border-bottom:1px solid var(--rule-soft);overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.ticker .tk{display:flex;width:max-content;animation:slide 42s linear infinite}
+.ticker:hover .tk,.ticker:focus-within .tk{animation-play-state:paused}
+.ticker span{display:inline-flex;align-items:center;gap:7px;padding:7px 0;
+  margin-right:28px;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.ticker span i{width:6px;height:6px;border-radius:50%;background:var(--hue)}
+.ticker span b{color:var(--hue);font-weight:600}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* harakat kamaytirilgan boʻlsa — hech narsa qimirlamaydi */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    animation-iteration-count:1!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .ov.reveal:not(.in) .bar span{width:var(--w)}
+  .ticker .tk{animation:none}
+}
+
 """
 
 SITE_JS = r"""
@@ -515,7 +696,10 @@ SITE_JS = r"""
     b.addEventListener('click', function () { setLang(b.dataset.set); });
   });
 
+  // Maʼlumotnoma sahifalari formulalarni oʻz skripti bilan chizadi — ikkinchi
+  // marta chizilsa, KaTeX oʻz chiqishini manba deb oʻqib, buzib qoʻyadi.
   document.querySelectorAll('.k').forEach(function (e) {
+    if (e.querySelector('.katex')) return;
     try {
       katex.render(e.textContent, e, {
         throwOnError: false, displayMode: e.classList.contains('kdisp')
@@ -523,10 +707,99 @@ SITE_JS = r"""
     } catch (x) {}
   });
 
-  // savollar sahifasining filtri
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------------------------------------------------------------- menyu
+  var bar = document.querySelector('.sitenav');
+  var burger = document.querySelector('.burger');
+  var panel = document.getElementById('menyu');
+  var drop = document.querySelector('.drop');
+  var dropb = document.querySelector('.dropb');
+
+  if (burger && panel) {
+    burger.addEventListener('click', function () {
+      var open = panel.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open && drop) { drop.classList.remove('open'); dropb.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+  if (drop && dropb) {
+    dropb.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = drop.classList.toggle('open');
+      dropb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!drop.contains(e.target)) {
+        drop.classList.remove('open');
+        dropb.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      drop.classList.remove('open');
+      dropb.setAttribute('aria-expanded', 'false');
+      if (panel) { panel.classList.remove('open'); }
+      if (burger) { burger.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+
+  // yopishgan holat + oʻqish chizigʻi
+  var prog = document.querySelector('.navp i');
+  var tick = false;
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    if (bar) bar.classList.toggle('stuck', y > 24);
+    if (prog) {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? Math.min(100, y / h * 100) : 0) + '%';
+    }
+    tick = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!tick) { tick = true; window.requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  // --------------------------------------------------- koʻringanda chiqsin
+  var targets = document.querySelectorAll(
+    '.cards .card, .blk, ul.dl>li, .variant, .ticker, table.ov');
+  if (!still && 'IntersectionObserver' in window && targets.length) {
+    var io = new IntersectionObserver(function (rows) {
+      rows.forEach(function (r) {
+        if (!r.isIntersecting) return;
+        r.target.classList.add('in');
+        io.unobserve(r.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    targets.forEach(function (el, i) {
+      el.classList.add('reveal');
+      el.style.transitionDelay = Math.min(i, 6) * 45 + 'ms';
+      io.observe(el);
+    });
+  }
+
+  // --------------------------------------------------- raqamlar sanalsin
+  if (!still) {
+    document.querySelectorAll('.stats b').forEach(function (b) {
+      var end = parseInt(b.textContent.replace(/\D/g, ''), 10);
+      if (!end || end > 100000) return;
+      var t0 = null, dur = 900;
+      function step(t) {
+        if (t0 === null) t0 = t;
+        var k = Math.min(1, (t - t0) / dur);
+        b.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+        if (k < 1) window.requestAnimationFrame(step);
+      }
+      b.textContent = '0';
+      window.requestAnimationFrame(step);
+    });
+  }
+
+  // savollar sahifasining filtri — faqat savollar sahifasida
   var state = { sinf: 'all', mavzu: 'all' };
   var cards = document.querySelectorAll('.qcard');
-  if (!cards.length) return;
+  if (!cards.length) { return; }
   var shown = document.getElementById('shown');
 
   function apply() {
@@ -570,7 +843,9 @@ def strip_inline_katex(html, page_name):
     # sayt uslubi va menyu
     html = html.replace('</head>', '<link rel="stylesheet" href="assets/ref.css"></head>', 1)
     html = html.replace('<body>', '<body>' + nav(page_name), 1)
-    html = html.replace('</body>', FOOT + '</body>', 1)
+    # menyu endi JS talab qiladi, shuning uchun sayt skripti bu sahifalarga ham
+    html = html.replace('</body>',
+                        FOOT + '<script src="assets/sayt.js"></script></body>', 1)
     # bitta til kaliti butun sayt uchun
     html = html.replace('"nz-lang"', '"sayt-lang"').replace('"mv-lang"', '"sayt-lang"')
     return html
@@ -578,25 +853,6 @@ def strip_inline_katex(html, page_name):
 
 REF_CSS = r"""
 /* maʼlumotnoma sahifalarini sayt ramkasiga moslash */
-.sitenav{position:sticky;top:0;z-index:20;background:#fff;
-  border-bottom:1px solid var(--rule);font-family:"Source Serif 4",Georgia,serif}
-.nv{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:14px;
-  padding:9px 20px}
-.brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;
-  font-family:Archivo,sans-serif;font-size:15px;white-space:nowrap;color:var(--ink)}
-.brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
-.lnk{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px;flex:1 1 auto;min-width:0}
-.lnk a{font-family:"IBM Plex Mono",monospace;font-size:10.5px;text-decoration:none;
-  color:var(--muted);padding:5px 9px;border-radius:4px}
-.lnk a:hover{background:var(--surface-2);color:var(--ink)}
-.lnk a.on{background:var(--accent);color:#fff}
-.sitenav .lang{margin-left:auto;flex:0 0 auto;display:flex;border:1px solid var(--rule);
-  border-radius:4px;overflow:hidden}
-.sitenav .lang button{font-family:"IBM Plex Mono",monospace;font-size:10px;
-  padding:4px 8px;border:0;background:#fff;color:var(--muted);cursor:pointer}
-.sitenav .lang button+button{border-left:1px solid var(--rule)}
-:root[data-l="uz"] .sitenav .lang button[data-set="uz"],
-:root[data-l="ru"] .sitenav .lang button[data-set="ru"]{background:var(--accent);color:#fff}
 .mast .lang{display:none}          /* tilni almashtirish endi menyuda */
 .wrap{max-width:1000px}
 .sitefoot{max-width:1000px;margin:0 auto;padding:18px 30px 34px;color:var(--muted);
@@ -605,9 +861,6 @@ REF_CSS = r"""
 .sitefoot .fsrc{font-family:"IBM Plex Mono",monospace;font-size:10px}
 @media print{.sitenav,.sitefoot{display:none}}
 @media (max-width:760px){
-  .nv{padding:8px 14px;gap:8px;flex-wrap:wrap}
-  .lnk{margin-left:0;order:3;width:100%}
-  .sitenav .lang{margin-left:auto}
   /* KaTeX satr ichida sinmaydi — shuning uchun blokni surib koʻrish mumkin */
   .bayon,.misol,.isbot,.qq,.body,.ans,.q,.izoh,.tnote,.masl,.vt td{overflow-x:auto}
   .it,.sol,.kb,ol.qs>li{min-width:0}
@@ -667,8 +920,8 @@ for name, src in SRC.items():
 
 (ASSETS / 'katex.css').write_text(KATEX_CSS, encoding='utf-8')
 (ASSETS / 'katex.js').write_text(KATEX_JS, encoding='utf-8')
-(ASSETS / 'site.css').write_text(SITE_CSS, encoding='utf-8')
-(ASSETS / 'ref.css').write_text(REF_CSS, encoding='utf-8')
+(ASSETS / 'site.css').write_text(NAV_CSS + SITE_CSS, encoding='utf-8')
+(ASSETS / 'ref.css').write_text(NAV_CSS + REF_CSS, encoding='utf-8')
 (ASSETS / 'sayt.js').write_text(SITE_JS, encoding='utf-8')
 
 for src in (ROOT / 'savollar/Otgan-yillar-savollari-9-10-11.pdf',
