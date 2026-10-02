@@ -125,3 +125,26 @@ python3 build-nazariya.py ketma-ketlik-data.py Ketma-ketliklar-9-10-11
 ```
 
 `reja/katex-inline.css` va `reja/topdf.js` dan foydalanadi.
+
+## Bitta tilda, bitta kitob
+
+Har bir maʼlumotnoma `<Mavzu>-UZ-RU.pdf` koʻrinishida: avval toʻliq oʻzbekcha,
+keyin toʻliq ruscha. Sakkizta mavzuni tilga ajratib, ikkita kitobga yigʻish:
+
+```
+python3 build-kitob.py
+```
+
+| Fayl | Bet | Nima |
+|---|---|---|
+| `Olimpiada-9-10-11-UZ.pdf` | 171 | muqova, mundarija, sakkizta mavzu — faqat oʻzbekcha |
+| `Olimpiada-9-10-11-RU.pdf` | 163 | muqova, mundarija, sakkizta mavzu — faqat ruscha |
+
+Til chegarasi har bir betdagi kirill harflarining ulushi boʻyicha topiladi.
+Chegara toza boʻlishi shart: undan oldingi hamma betda kirill 10 % dan kam,
+keyingi hamma betda 50 % dan koʻp. Shart buzilsa, qurilish toʻxtaydi —
+chunki noto‘g‘ri joyda kesish ikkala kitobni ham buzadi.
+
+Mundarija betidagi raqamlar yigʻishdan oldin hisoblanadi va yigʻish paytida
+haqiqiy bet raqamiga solishtiriladi, shuning uchun ular hech qachon
+ajralib qolmaydi. Har bir mavzu PDF xatchoʻpi boʻlib ham qoʻshiladi.
