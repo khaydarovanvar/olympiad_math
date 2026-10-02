@@ -19,8 +19,12 @@ import pymupdf
 HERE = pathlib.Path(__file__).resolve().parent
 CYR = re.compile(r'[Ѐ-ӿ]')
 
-# fayl, hue, ulush, oʻzbekcha nom, ruscha nom
+# fayl (shu papkaga nisbatan), hue, ulush, oʻzbekcha nom, ruscha nom.
+# Mavzular xaritasi birinchi: u sakkizta mavzuning qaysi biri qancha savol
+# berishini koʻrsatadi, shuning uchun qolganidan oldin oʻqiladi.
 TOPICS = [
+ ('../savollar/Mavzular-xaritasi-9-10-11-UZ-RU.pdf', '#0f5c72', '—',
+  'Mavzular xaritasi',                'Карта тем'),
  ('Algebra-9-10-11-UZ-RU.pdf',          '#0f5c72', '28,0 %',
   'Algebra va ayniyatlar',            'Алгебра и тождества'),
  ('Sonlar-nazariyasi-9-10-11-UZ-RU.pdf', '#8a5a00', '23,4 %',
@@ -171,7 +175,8 @@ for fn, hue, share, uz, ru in TOPICS:
     k = split_point(d, fn)
     parts.append(dict(doc=d, cut=k, hue=hue, share=share, uz=uz, ru=ru,
                       n={'uz': k, 'ru': d.page_count - k}))
-    print('%-40s %3d bet  →  uz %3d  ru %3d' % (fn, d.page_count, k, d.page_count - k))
+    print('%-40s %3d bet  →  uz %3d  ru %3d'
+          % (pathlib.Path(fn).name, d.page_count, k, d.page_count - k))
 
 FRONT = 2   # muqova + mundarija
 

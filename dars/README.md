@@ -129,7 +129,7 @@ python3 build-nazariya.py ketma-ketlik-data.py Ketma-ketliklar-9-10-11
 ## Bitta tilda, bitta kitob
 
 Har bir maʼlumotnoma `<Mavzu>-UZ-RU.pdf` koʻrinishida: avval toʻliq oʻzbekcha,
-keyin toʻliq ruscha. Sakkizta mavzuni tilga ajratib, ikkita kitobga yigʻish:
+keyin toʻliq ruscha. Mavzular xaritasi va sakkizta mavzuni tilga ajratib, ikkita kitobga yigʻish:
 
 ```
 python3 build-kitob.py
@@ -137,8 +137,12 @@ python3 build-kitob.py
 
 | Fayl | Bet | Nima |
 |---|---|---|
-| `Olimpiada-9-10-11-UZ.pdf` | 171 | muqova, mundarija, sakkizta mavzu — faqat oʻzbekcha |
-| `Olimpiada-9-10-11-RU.pdf` | 163 | muqova, mundarija, sakkizta mavzu — faqat ruscha |
+| `Olimpiada-9-10-11-UZ.pdf` | 186 | muqova, mundarija, mavzular xaritasi, sakkizta mavzu — faqat oʻzbekcha |
+| `Olimpiada-9-10-11-RU.pdf` | 179 | muqova, mundarija, mavzular xaritasi, sakkizta mavzu — faqat ruscha |
+
+Mavzular xaritasi birinchi boʻlib turadi: qaysi mavzu qancha savol berishini u
+koʻrsatadi, shuning uchun qolgan boblardan oldin oʻqiladi. Mundarijada uning
+ulush ustuni boʻsh — u mavzu emas, mavzularning xaritasi.
 
 Til chegarasi har bir betdagi kirill harflarining ulushi boʻyicha topiladi.
 Chegara toza boʻlishi shart: undan oldingi hamma betda kirill 10 % dan kam,
